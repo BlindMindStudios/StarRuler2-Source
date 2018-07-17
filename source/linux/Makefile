@@ -84,11 +84,8 @@ CXXFLAGS += -I./source/libircclient/include
 CXXFLAGS += -I./source/util/include -I./source/network/include
 CXXFLAGS += -I./source/rapidjson/include
 
-ifdef NSTEAM
-	CXXFLAGS += -DNSTEAM
-else
-	CXXFLAGS += -I./source/steam
-endif
+NSTEAM=1
+CXXFLAGS += -DNSTEAM
 
 ifndef GCC48
 	CXXFLAGS += -fdiagnostics-color=auto
@@ -108,8 +105,6 @@ ifeq ($(UNAME), Darwin)
 	CXXFLAGS += -framework OpenGL -framework Cocoa -framework IOKit
 	CXXFLAGS += -framework OpenAL
 
-	STEAMLIBDIR = ./source/osx/lib
-
 	LDFLAGS += -lcurl
 else
 	ifndef DEBUG
@@ -117,21 +112,12 @@ else
 	endif
 	LDFLAGS += -lGL -lGLU -lX11 -lXrandr -lXxf86vm -lXi -lopenal -lcurl
 
-	ifeq ($(ARCH), 32)
-		STEAMLIBDIR = ./source/linux/lib32
-	else
-		STEAMLIBDIR = ./source/linux/lib64
-	endif
 endif
 
 #Libraries
 LDFLAGS += -lstdc++ -lGLEW -lpng -lz -lpthread
 LDFLAGS += -lm -lfreetype
 LDFLAGS += -lvorbisfile
-
-ifndef NSTEAM
-	LDFLAGS += -L$(STEAMLIBDIR) -lsteam_api
-endif
 
 LIB_FILES += $(LIBDIR)/libangelscript.a
 LIB_FILES += $(LIBDIR)/libglfw3.a
@@ -142,7 +128,8 @@ LIB_FILES += $(LIBDIR)/libos.a
 LIB_FILES += $(LIBDIR)/libnetwork.a
 LIB_FILES += $(LIBDIR)/libutil.a
 
-ifndef DEBUG
+NOCOPYLIBS=1
+ifndef NOCOPYLIBS
 ifeq ($(UNAME), Darwin)
 	COPY_LIBS += lib/libGLEW.1.10.0.dylib
 	COPY_LIBS += opt/libpng/lib/libpng16.16.dylib
@@ -195,7 +182,6 @@ SOURCES = \
 	main/tick.cpp \
 	main/console.cpp \
 	main/save_load.cpp \
-	main/steam_platform.cpp \
 	\
 	mods/mod_manager.cpp \
 	\
@@ -334,7 +320,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 #Complete binary compile
 $(BINDIR)/$(BIN): makelibs $(OBJ_FILES) $(LIB_FILES) $(COPY_LIBS)
 	@mkdir -p $(BINDIR)
-	@cp $(STEAMLIBDIR)/libsteam_api.* $(BINDIR)/
 	@$(CC) $(CXXFLAGS) $(LDFLAGS) $(OBJ_FILES) $(LIB_FILES) -o $@
 
 makelibs:
@@ -361,14 +346,14 @@ patcher: $(LIB_FILES)
 	@$(CC) $(CXXFLAGS) $(LDFLAGS) source/patcher/patcher/patcher.cpp $(LIB_FILES) -o $(BINDIR)/Patcher.bin
 
 version:
-	./source/linux/build.sh version
+	bash /source/linux/build.sh version
 
 #Library builds
 $(LIBDIR)/libangelscript.a:
-	./source/linux/build.sh $(ARCH) $(BUILDTYPE) angelscript
+	bash source/linux/build.sh $(ARCH) $(BUILDTYPE) angelscript
 
 $(LIBDIR)/libglfw3.a:
-	./source/linux/build.sh $(ARCH) $(BUILDTYPE) glfw
+	bash source/linux/build.sh $(ARCH) $(BUILDTYPE) glfw
 
 #$(LIBDIR)/libbreakpad_client.a:
 	#./source/linux/build.sh $(ARCH) $(BUILDTYPE) breakpad
@@ -395,12 +380,12 @@ $(LIBDIR)/libutil.a:
 clean_angelscript:
 	rm -f $(LIBDIR)/libangelscript.a
 angelscript: clean_angelscript
-	./source/linux/build.sh $(ARCH) $(BUILDTYPE) angelscript
+	bash source/linux/build.sh $(ARCH) $(BUILDTYPE) angelscript
 
 clean_glfw:
 	rm -f $(LIBDIR)/libglfw3.a
 glfw:
-	./source/linux/build.sh $(ARCH) $(BUILDTYPE) glfw
+	bash source/linux/build.sh $(ARCH) $(BUILDTYPE) glfw
 
 #clean_breakpad:
 	#rm -f $(LIBDIR)/libbreakpad_client.a

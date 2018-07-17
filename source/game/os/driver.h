@@ -64,11 +64,12 @@ struct DriverCallbacks_2 {
 	}
 
 	//Removes a callback previously added to the list
-	void remove(cb func) {
+	/*void remove(cb func) {
 		callbacks.remove_if([func](cb f) {
 			return func.template target<bool(Arg0,Arg1)>() == f.template target<bool(Arg0,Arg1)>();
 		});
-	}
+	}*/
+
 	//Calls each callback in order, stopping if true is returned
 	void operator()(Arg0 arg0, Arg1 arg1) {
 		for(auto i = callbacks.begin(), end = callbacks.end(); i != end; ++i)
@@ -91,11 +92,11 @@ struct DriverCallbacks_1 {
 	}
 
 	//Removes a callback previously added to the list
-	void remove(cb func) {
+	/*void remove(cb func) {
 		callbacks.remove_if([func](cb f) {
 			return func.template target<bool(Arg0)>() == f.template target<bool(Arg0)>();
 		});
-	}
+	}*/
 	//Calls each callback in order, stopping if true is returned
 	void operator()(Arg0 arg0) {
 		for(auto i = callbacks.begin(), end = callbacks.end(); i != end; ++i)
@@ -117,11 +118,11 @@ struct DriverCallbacks {
 	}
 
 	//Removes a callback previously added to the list
-	void remove(cb func) {
+	/*void remove(cb func) {
 		callbacks.remove_if([func](cb f) {
 			return func.template target<bool()>() == f.template target<bool()>();
 		});
-	}
+	}*/
 
 	//Calls each callback in order, stopping if true is returned
 	void operator()() {
