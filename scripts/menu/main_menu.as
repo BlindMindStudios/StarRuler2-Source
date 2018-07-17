@@ -28,6 +28,7 @@ enum MenuActions {
 	MA_Mods,
 };
 
+class MainMenu : MenuBox {
 	MenuNews news;
 
 	MainMenu() {
