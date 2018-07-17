@@ -5673,7 +5673,10 @@ asCTypeInfo *asCBuilder::GetType(const char *type, asSNameSpace *ns, asCObjectTy
 
 asCObjectType *asCBuilder::GetObjectType(const char *type, asSNameSpace *ns)
 {
-	return GetType(type, ns, 0)->CastToObjectType();
+	auto* typeInfo = GetType(type, ns, 0);
+	if(!typeInfo)
+		return nullptr;
+	return typeInfo->CastToObjectType();
 }
 
 #ifndef AS_NO_COMPILER

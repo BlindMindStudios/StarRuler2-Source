@@ -6269,7 +6269,7 @@ void asCScriptEngine::DestroySubList(asBYTE *&buffer, asSListPatternNode *&node)
 					dt = GetDataTypeFromTypeId(typeId);
 				}
 
-				asCObjectType *ot = dt.GetTypeInfo()->CastToObjectType();
+				asCObjectType *ot = (asCObjectType*)dt.GetTypeInfo();
 				if( ot && (ot->flags & asOBJ_ENUM) == 0 )
 				{
 					// Free all instances of this type

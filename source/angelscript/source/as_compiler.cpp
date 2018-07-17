@@ -6155,7 +6155,8 @@ asUINT asCCompiler::ImplicitConvObjectToPrimitive(asCExprContext *ctx, const asC
 	// Find matching value cast behaviours
 	// Here we're only interested in those that convert the type to a primitive type
 	asCArray<int> funcs;
-	asCObjectType *ot = ctx->type.dataType.GetTypeInfo()->CastToObjectType();
+	auto *typeInfo = ctx->type.dataType.GetTypeInfo();
+	asCObjectType *ot = typeInfo ? typeInfo->CastToObjectType() : 0;
 	if( ot == 0 )
 	{
 		if( convType != asIC_IMPLICIT_CONV && node )
@@ -6467,7 +6468,8 @@ asUINT asCCompiler::ImplicitConvObjectValue(asCExprContext *ctx, const asCDataTy
 	if( to.GetTypeInfo() != ctx->type.dataType.GetTypeInfo() )
 	{
 		// TODO: Implement support for implicit constructor/factory
-		asCObjectType *ot = ctx->type.dataType.GetTypeInfo()->CastToObjectType();
+		auto* typeInfo =ctx->type.dataType.GetTypeInfo();
+		asCObjectType *ot = typeInfo ? typeInfo->CastToObjectType() : 0;
 		if( ot == 0 )
 			return cost;
 
@@ -8827,7 +8829,7 @@ int asCCompiler::CompileVariableAccess(const asCString &name, const asCString &s
 			if( currScope != "" && currScope != "::" )
 			{
 				builder->GetNameSpaceByString(currScope, outFunc->objectType ? outFunc->objectType->nameSpace : outFunc->nameSpace, errNode, script, &scopeType, false);
-				if (scopeType->CastToEnumType() == 0)
+				if (scopeType && scopeType->CastToEnumType() == 0)
 					scopeType = 0;
 			}
 
