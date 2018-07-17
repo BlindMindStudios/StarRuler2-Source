@@ -87,19 +87,21 @@ bool hasDLC(const std::string& name) {
 }
 
 void checkDLC(const std::string& name, const std::string& hashname) {
-	std::string fname("data/dlc/");
-	fname += hashname;
-	if(fileExists(fname) || (devices.cloud && devices.cloud->hasDLC(name)))
-		dlcList.insert(name);
+	//std::string fname("data/dlc/");
+	//fname += hashname;
+	//if(fileExists(fname) || (devices.cloud && devices.cloud->hasDLC(name)))
+
+	// Open source version always has DLC
+	dlcList.insert(name);
 }
 
 void checkDLC() {
 	dlcList.clear();
-	checkDLC("Heralds", "bb8280a0fdc547ddbd8d3ae3f9242a14");
+	checkDLC("Heralds", "");
 }
 
 void checkCloudDLC(const std::string& name, const std::string& hashname) {
-	std::string fname("data/dlc/");
+	/*std::string fname("data/dlc/");
 	fname += hashname;
 
 	if(devices.cloud->hasDLC(name)) {
@@ -115,14 +117,17 @@ void checkCloudDLC(const std::string& name, const std::string& hashname) {
 		if(fileExists(fname))
 			remove(fname.c_str());
 		dlcList.erase(name);
-	}
+	}*/
+
+	// Open source version always has DLC
+	dlcList.insert(name);
 }
 
 void checkCloudDLC() {
 	if(!devices.cloud)
 		return;
 
-	checkCloudDLC("Heralds", "bb8280a0fdc547ddbd8d3ae3f9242a14");
+	checkCloudDLC("Heralds", "");
 }
 
 extern const render::Shader* fsShader;
