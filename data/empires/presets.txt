@@ -1,0 +1,116 @@
+Preset: Terrakin
+	Name: #RACE_TERRAKIN
+	Tagline: #RACE_TERRAKIN_TAGLINE
+	Lore: #RACE_TERRAKIN_LORE
+	Portrait: emp_portrait_harrian
+	Shipset: Moirai
+
+	Trait: Empire
+	Trait: Hyperdrive
+	Trait: Terrestial
+	Trait: Nimble
+
+Preset: Oko
+	Name: #RACE_OKO
+	Tagline: #RACE_OKO_TAGLINE
+	Lore: #RACE_OKO_LORE
+	Portrait: emp_portrait_oko
+	Shipset: Volkur
+	WeaponSkin: Skin3
+
+	Trait: Communism
+	Trait: Fling
+	Trait: Verdant
+	Trait: Prideful
+
+Preset: Hoonan
+	Name: #RACE_HOONAN
+	Tagline: #RACE_HOONAN_TAGLINE
+	Lore: #RACE_HOONAN_LORE
+	Portrait: emp_portrait_hoonan
+	Shipset: Mechanica
+
+	Trait: Empire
+	Trait: Hyperdrive
+	Trait: Linked
+	Trait: SpaceProgram
+
+Preset: Feyh
+	Name: #RACE_FEYH
+	Tagline: #RACE_FEYH_TAGLINE
+	Lore: #RACE_FEYH_LORE
+	Portrait: emp_portrait_feyh
+	Shipset: Moirai
+
+	Trait: Theocracy
+	Trait: Fling
+	Trait: Devout
+	Trait: Frugal
+
+Preset: Saar
+	Name: #RACE_SAAR
+	Tagline: #RACE_SAAR_TAGLINE
+	Lore: #RACE_SAAR_LORE
+	Portrait: emp_portrait_saar
+	Shipset: Gevron
+
+	Trait: Communism
+	Trait: Hyperdrive
+	Trait: Evangelical
+	Trait: Charismatic
+
+Preset: Mono
+	Name: #RACE_MONO
+	Tagline: #RACE_MONO_TAGLINE
+	Lore: #RACE_MONO_LORE
+	Portrait: emp_portrait_mono
+	Shipset: Mechanica
+	WeaponSkin: Skin1
+	Hard: True
+
+	Trait: Theocracy
+	Trait: Gate
+	Trait: Mechanoid
+	Trait: Workshop
+
+Preset: Nylli
+	Name: #RACE_NYLLI
+	Tagline: #RACE_NYLLI_TAGLINE
+	Lore: #RACE_NYLLI_LORE
+	Portrait: emp_portrait_nylli
+	Shipset: Volkur
+	WeaponSkin: Skin2
+	Hard: True
+
+	Trait: Capitalism
+	Trait: Slipstream
+	Trait: StarChildren
+	Trait: Innovative
+
+Preset: Heralds
+	Name: #RACE_HERALDS
+	Tagline: #RACE_HERALDS_TAGLINE
+	Lore: #RACE_HERALDS_LORE
+	Portrait: emp_portrait_heralds
+	Shipset: Vectur
+	WeaponSkin: Skin2
+	Hard: True
+	DLC: Heralds
+
+	Trait: Theocracy
+	Trait: Jumpdrive
+	Trait: Extragalactic
+	Trait: Animated
+
+Preset: First
+	Name: #RACE_FIRST
+	Tagline: #RACE_FIRST_TAGLINE
+	Lore: #RACE_FIRST_LORE
+	Portrait: emp_portrait_first
+	Shipset: Vectur
+	Hard: True
+	DLC: Heralds
+
+	Trait: Empire
+	Trait: Sublight
+	Trait: Ancient

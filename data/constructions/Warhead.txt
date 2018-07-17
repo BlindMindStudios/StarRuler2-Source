@@ -1,0 +1,21 @@
+Construction: Warhead
+	Name: #CONS_WARHEAD
+	Description: #CONS_WARHEAD_DESC
+
+	Category: Military
+
+	In Context: True
+
+	Target: targ = Object
+
+	RequireSubsystemUnlocked(Warhead)
+
+	TargetFilterSameRegion(targ)
+	TargetFilterType(targ, Ship)
+	TargetFilterDesignTag(targ, Warhead)
+	TargetFilterFewerStatusesThanVar(targ, Warhead, Sys.WarheadStorage)
+
+	AddBuildCostTargetVar(targ, Sys.WarheadCost)
+	AddLaborCostTargetVar(targ, Sys.WarheadLabor)
+
+	Trigger(targ, AddStatus(Warhead))

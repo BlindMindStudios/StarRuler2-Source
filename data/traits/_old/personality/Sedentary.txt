@@ -1,0 +1,12 @@
+Trait: Sedentary
+	Name: #TRAIT_SEDENTARY
+	Description: #TRAIT_SEDENTARY_DESC
+	Category: Personality
+
+	Color: #ffaaaa
+	Icon: ResourceIcon::7
+	Available: False
+
+	Gives Points: 1
+
+	ModAttribute(BuildingConstructRate, Add, -0.3)

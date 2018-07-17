@@ -1,0 +1,40 @@
+Camp: SmallCamp
+	Ship: Thereus [Remnant Thereus]
+	Ship: 5-25x Gunship
+	Ship: 3-28x Missile Boat
+	Ship: 4-20x Beamship
+	Ship: 2-14x Heavy Gunship
+
+	Pickup: Influence5__0
+		Name: #PICKUP_INFLUENCE
+		Description: #PICKUP_INFLUENCE_DESC
+
+		AddInfluencePoints(+4:+10)
+
+	Pickup: Research30__0
+		Name: #PICKUP_RESEARCH
+		Description: #PICKUP_RESEARCH_DESC
+
+		AddResearchPoints(500, Modified = False, Penalized = False)
+
+	Pickup: EnergySmall
+		Name: #PICKUP_ENERGY
+		Description: #PICKUP_ENERGY_DESC
+
+		AddEnergy(500, Modified = True)
+
+	Pickup: CardSmall
+		Name: #PICKUP_CARD
+		Description: #PICKUP_CARD_DESC
+
+		GainInfluenceCard(Negotiate, Uses=1:3, Quality=0:2)
+
+	Pickup: HPBoost
+		Name: #PICKUP_HPBOOST
+		Description: #PICKUP_HPBOOST_DESC
+
+		DLC: Heralds
+		
+		PermanentBonusHP(0.25)
+		TakeOnClear()
+

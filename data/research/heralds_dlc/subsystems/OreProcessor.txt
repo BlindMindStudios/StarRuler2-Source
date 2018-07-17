@@ -1,0 +1,16 @@
+Technology: OreProcessor
+	Name: #R_SYS_ORE_PROCESSOR
+	Description: #R_SYS_ORE_PROCESSOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: SupportCommand * #8870ac
+	Color: #8870ac
+	
+	UnlockSubsystem(OreProcessor)
+	SkipOnUnlockedSubsystem(OreProcessor)
+
+	SecondaryMoneyCost(750)

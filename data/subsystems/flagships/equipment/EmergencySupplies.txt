@@ -1,0 +1,30 @@
+Subsystem: EmergencySupplies
+	Name: #S_EMERGENCY_SUPPLIES
+	Description: #S_EMERGENCY_SUPPLIES_DESC
+	BaseColor: #b88b00
+	TypeColor: #b88b00
+	Elevation: 2
+	
+	Tags: BaseCost, Category:Equipment, HasInternals
+	Tags: Ability:EmergencySupplies
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	EnergyCost := 10 * max(1,round(Size*4))
+	Resupply := EnergyCost * 100
+
+	HaveStatus := 1
+	out Duration := HaveStatus * sqrt(Size / ShipSize) * 120
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	
+	Requires:
+		Command = 1
+
+	Module: Default
+	
+	Module: Core
+		Sprite: AntimatterReactor * #b8b800

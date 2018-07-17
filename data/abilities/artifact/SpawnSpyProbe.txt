@@ -1,0 +1,14 @@
+Ability: SpawnSpyProbe
+	Name: #ABL_SPAWN_SPY_PROBE
+	Description: #ABL_SPAWN_SPY_PROBE_DESC
+	Icon: VoteIcons::3 * #ff0000
+	Activate Sound: espionage_activate
+
+	Energy Cost: 750
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterRegion(targ)
+	TargetFilterRegionOtherEmpire(targ)
+
+	SpawnCreepShipFor(targ, Spy Probe, Status = SpyProbe)

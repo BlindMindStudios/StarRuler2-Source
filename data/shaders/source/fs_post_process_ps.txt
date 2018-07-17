@@ -1,0 +1,294 @@
+#version 120
+
+// expose these as tick boxes, suggested defaults are set to true
+// godrays from stars, scales with shader level setting
+bool lightShaftsOn = #{{bGodRays}};
+// bloom, scales with shader level setting
+bool bloomOn = #{{bBloom}};
+// darkend edges, brighten center on all zoom levels
+bool vignetteOn = #{{bVignette}};
+// sharpen function, on zoom out, to increase icon readability without and especially with bloom
+bool sharpen = #{{bBloom}};
+// "movie feel" radial color fringe effect, only up close in systems
+bool chromaticAberrationOn = #{{bChromaticAberration}};
+// "movie feel" grain everywhere
+bool filmGrain = #{{bFilmGrain}};
+
+//must be odds for bloom!
+const int bloomPasses = #{{level:extreme}} ? 9 : (#{{level:high}} ? 7 : 5);
+const int rayPasses = #{{level:extreme}} ? 24 : (#{{level:high}} ? 20 : 16);
+
+const int nLightCount = 2;
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+const float pi = 3.14159265358;
+const float tau = 6.28318530716;
+uniform sampler2D screen, depthTex;
+uniform vec2 texSize;
+uniform vec2 lightPos[nLightCount];
+uniform float lightActive[nLightCount]; // might need to implement a kill switch
+uniform float lightRadius[nLightCount];
+uniform float cycle;
+
+varying vec2 aspectRatio;
+varying vec2 uv;
+varying vec4 lightVec[nLightCount];
+varying vec2 radialAnimation[nLightCount];
+varying vec4 camVec, camDirection[nLightCount];
+varying vec3 lightColor[nLightCount];
+varying vec4 pos;
+
+varying float lightDepth[nLightCount], fallOffDepth[nLightCount];
+
+
+// none of these needs to be exposed
+const float sharpness = 0.25; // sharpen intensity
+const float chromaticPower = 1.0; // chromatic fringe intensity
+const float vignetteFactor = 0.5; // power of vignette on un-bloomed screen.
+const float bloomTreshold = 0.25; // how low a value does blooming start
+const float bloomIntensity = 1.5; // intensity of the blooming.
+const float bloomScale = 4.0; // scale of bloom!
+const float rayScale = 0.006;
+const float rayIntensity = 0.75;
+const float frameSize = 32.0; // fade power that reduces bloom near the edges to clean bad bloom from wrapping - less is more!
+const float filmGrainIntensity = 2.0;
+// random noise functions ahead
+const vec4 hashSeed = vec4(.16532,.17369,.15787, .14987);
+
+// sine stabilized rand for film grain
+float rand( vec2 n ){
+	return fract(sin(dot(n.xy, vec2(12.9898, 78.233)))* 43758.5453);
+}
+
+float hash12(vec2 p){
+	vec3 p3  = fract(vec3(p.xyx) * hashSeed.xyz);
+    p3 += dot(p3, p3.yzx + 19.19);
+    return fract((p3.x + p3.y) * p3.z);
+}
+
+float noise(vec2 n){
+    const vec2 d = vec2(0.0, 1.0);
+    vec2 b = floor(n), f = smoothstep(vec2(0.0), vec2(1.0), fract(n));
+    return mix(mix(hash12(b), hash12(b + d.yx), f.x), mix(hash12(b + d.xy), hash12(b + d.yy), f.x), f.y);
+}
+
+vec3 texture(vec2 uv){
+    return texture2D(screen,uv).rgb;
+}
+
+vec3 square(vec3 x){
+	return x*x;
+}
+
+float square(float x){
+	return x*x;
+}
+
+float pow4(float x){
+	x *= x;
+	return x*x;
+}
+
+float linearFalloff(vec2 x){
+	x *= x;
+	return pow(x.x + x.y, 0.5);
+}
+
+float pow32(float x){
+
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	return x;
+}
+
+vec3 toLinear(vec3 color){
+	return pow(color, vec3(2.2));
+}
+
+vec4 toGamma(vec4 color){
+	return pow(color, vec4(0.45));
+}
+
+vec4 toLinear(vec4 color){
+	return pow(color, vec4(2.2));
+}
+
+float toLinear(float color){
+	return pow(color, 2.2);
+}
+
+float toGamma(float color){
+	return pow(color, 0.45);
+}
+
+vec3 toGamma(vec3 color){
+	return pow(color, vec3(0.45));
+}
+
+float dotter(vec3 x){
+	return dot(x,x);
+}
+
+float dotter(vec2 x){
+	return dot(x,x);
+}
+
+float dotter(vec4 x){
+	return dot(x,x);
+}
+
+float normpdf(float x, float sigma){
+	return 0.39894*exp(-0.5 * x * x / (sigma * sigma)) / sigma;
+}
+
+vec3 vignette(vec3 color, float radialFade){
+    return color * ((1.0 - (1.0 - radialFade) * vignetteFactor) + vignetteFactor * 0.5 * vec3(0.9));
+}
+
+vec3 redShift(float t){
+    return 0.5 + 0.5 * cos( tau *(t+ vec3(0.0, 0.1, 0.2)) );
+}
+
+void main(){
+	vec2 centeredUV = uv - 0.5;
+	float frame = pow(abs(centeredUV.x)* 2.0, frameSize);
+	frame = clamp(mix(pow(abs(centeredUV.y)* 2.0, frameSize), frame, frame) * 2.0 - 0.5, 0.0,1.0);
+	float radialFade = 1.0 - min(1.0, dot(centeredUV, centeredUV) * 2.0);
+	
+	vec4 color = texture2D(screen, uv);	
+	vec3 sum = vec3(0.0);
+	vec3 rawColor = color.rgb;
+	vec3 linearColor = toLinear(rawColor);
+	float depth = texture2D(depthTex, uv).r;
+
+	// calculate falloff as it's needed in multiple places
+	float falloff[2] = float[2](float(0.0), float(0.0));	
+	for (int i = 0; i < nLightCount; i++){
+		falloff[i] = clamp((1.0 / fallOffDepth[i]) * (lightRadius[i] * 2.0), 0.0, 1.0);
+	}
+	
+	// kill mask for effects either in system only or galactic zoom only
+	float inSystemKill = square(1.0 - min(1.0, (falloff[0] + falloff[1]) * 10.0));
+	
+	if (sharpen == true){
+  
+		vec2 step = 1.0 / texSize.xy;
+		
+		vec3 sampA = toLinear(texture(uv + vec2(-step.x, -step.y) * 1.5 ));
+		vec3 sampB = toLinear(texture(uv + vec2( step.x, -step.y) * 1.5 ));
+		vec3 sampC = toLinear(texture(uv + vec2(-step.x,  step.y) * 1.5 ));
+		vec3 sampD = toLinear(texture(uv + vec2( step.x,  step.y) * 1.5 ));
+	
+		vec3 around = 0.25 * (sampA + sampB + sampC + sampD);
+		
+		color.rgb = toGamma(linearColor + (linearColor - around) * mix(0.0, sharpness, inSystemKill));
+	}
+	
+	if (chromaticAberrationOn == true)
+	{
+		vec3 refractiveIndex = 1.0 + vec3(0.002, 0.004, 0.006) * mix(chromaticPower, 0.0, inSystemKill) * min(1.0, square((1.0 - depth) * 1024));
+		vec3 texVec = vec3(uv * 2.0 - 1.0, 1.0);
+		vec3 normalVec = vec3(0.0, 0.0, -1.0);
+		vec3 redRefractionVec = refract(texVec, normalVec, refractiveIndex.r);
+		vec3 greenRefractionVec = refract(texVec, normalVec, refractiveIndex.g);
+		vec3 blueRefractionVec = refract(texVec, normalVec, refractiveIndex.b);
+		vec2 redTexCoord = clamp(((redRefractionVec / redRefractionVec.z).xy + vec2(1.0)) / vec2(2.0), vec2(0.0), vec2(1.0));
+		vec2 greenTexCoord = clamp(((greenRefractionVec / greenRefractionVec.z).xy + vec2(1.0)) / vec2(2.0), vec2(0.0), vec2(1.0));
+		vec2 blueTexCoord = clamp(((blueRefractionVec / blueRefractionVec.z).xy + vec2(1.0)) / vec2(2.0), vec2(0.0), vec2(1.0));
+
+		color.rgb =
+		mix(mix(vec3(
+			texture2D(screen, redTexCoord).r, 
+			texture2D(screen, greenTexCoord).g, 
+			texture2D(screen, blueTexCoord).b)
+		, color.rgb, radialFade), color.rgb, frame);
+	}
+
+	if (bloomOn == true){
+
+		const int mSize = bloomPasses;
+		const int kSize = (mSize-1)/2;
+
+		float kernel[mSize];		
+		float sigma = float(mSize);
+		
+		float divider = 0.0;
+		for (int j = 0; j <= kSize; ++j)
+		{
+			kernel[kSize+j] = kernel[kSize-j] = normpdf(float(j), sigma);
+		}
+		
+		for (int j = 0; j < mSize; ++j)
+		{
+			divider += kernel[j];
+		}
+		
+		for (int i=-kSize; i <= kSize; ++i)
+		{
+			for (int j=-kSize; j <= kSize; ++j)
+			{
+				sum += kernel[kSize+j] * kernel[kSize+i] * texture(uv +vec2(float(i),float(j)) / (texSize / (bloomScale)));	
+			}		
+		}
+		
+		sum /= square(divider);
+		
+		// kill bloom on the edges, where it will sample the other side from texture wrapping, and smoothstep
+		sum = mix(sum * sum * (3.0 - 2.0 * sum), color.rgb, frame);
+		// color correct and blend
+		sum = toGamma((toLinear(color.rgb) + toLinear(max(vec3(0.0), sum * bloomIntensity - bloomTreshold) * 0.5)));
+		color.rgb = sum;
+	}
+	
+	if (lightShaftsOn == true){
+
+		float rayValue = 0.0;
+
+	for (int i = 0; i < nLightCount; i++) {
+		int rayCount = rayPasses / (i + 1);
+		rayValue = float(rayCount);
+		// keep a raw non distorted samp for the noise to be filtereds
+		float rayRaw = step(lightDepth[i], depth);
+		
+		// ray part
+		float rays = (1.0 - rayRaw);
+		float rayFalloff = rayScale;
+		for (int j = 0; j < rayCount; j++) {
+	
+			float raySamp = step(lightDepth[i], texture2D(depthTex, uv + lightVec[i].xy * lightDepth[i] * rayFalloff).r);
+			rays += (1.0 - raySamp) * (float(rayCount - j) / rayValue);
+			rayFalloff += rayScale;
+		
+		}
+		rays /= rayValue;
+		rays *= rayIntensity;
+		
+		// radial noise part
+		vec2 radialPointCoords = uv - lightPos[i].xy;
+		vec2 radialNoiseCoords = vec2(128.0 * abs(vec2(atan(radialPointCoords.x, radialPointCoords.y), atan(radialPointCoords.x + radialPointCoords.y, -1.0 * radialPointCoords.x + radialPointCoords.y)) / tau));	
+	
+		float radialNoise = noise(radialNoiseCoords + camDirection[i].xy * 8.0 + radialAnimation[i] * 96.0) * rayRaw;
+		
+		float positionFade = square(clamp(lightVec[i].z, 0.0, 1.0));
+		radialNoise *= 0.25 * falloff[i];
+		rays = (1.0 - rays) * falloff[i];
+		vec3 rayColor = (redShift(linearFalloff(radialPointCoords * aspectRatio) + lightColor[i].b + 0.35 + radialNoise) * 0.25 + 0.75) * lightColor[i];
+		color.rgb += rays * rayColor * (1.0 + radialNoise) * positionFade;
+		}
+	}
+	
+	if (vignetteOn == true){
+		color.rgb = vignette(color.rgb, radialFade);	
+	}
+	
+	if (filmGrain == true){
+		float t = fract(cycle);
+		color.rgb += (rand(uv + 0.07 * t) + rand(uv + 0.11 * t) - 1.0) * 0.0078125 * filmGrainIntensity;
+	}
+	
+	gl_FragColor = vec4(color.rgb, 1.0);
+}

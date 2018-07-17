@@ -1,0 +1,11 @@
+Trait: Plantation
+	Name: #TRAIT_PLANTATION
+	Description: #TRAIT_PLANTATION_DESC
+	Category: Foundation
+
+	Color: #aaffaa
+	Icon: Plantation
+	Available: False
+
+	Costs Points: 1
+	OnHomeworld( AddPlanetResource(Grain) )

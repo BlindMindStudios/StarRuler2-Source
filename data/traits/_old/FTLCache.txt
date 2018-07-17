@@ -1,0 +1,11 @@
+Trait: FTLCache
+	Name: #TRAIT_FTLCACHE
+	Description: #TRAIT_FTLCACHE_DESC:1200
+	Category: FTL
+
+	Color: #00c0ff
+	Icon: ResourceIcon::3
+	Available: False
+
+	AddFTLIncome(-1)
+	AddStoredFTL(1200)

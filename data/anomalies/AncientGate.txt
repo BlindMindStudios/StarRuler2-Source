@@ -1,0 +1,32 @@
+Anomaly: AncientGate
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_ANCIENT_GATE
+
+		Model: Warpgate
+		Material: GenericPBR_Gate
+
+		Choice: Activate = 50%
+		Choice: Harvest
+		Choice: Repurpose
+
+	Option: Activate
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_GATE_ACTIVATE
+
+		SpawnOrbital(RemnantGateCore)
+
+
+	Option: Harvest
+		Icon: CardCategoryIcons::5
+		Description: #ANOMALY_GATE_HARVEST:1
+
+
+		AddEmpireResourceIncome(FTL, 1.0)
+	Option: Repurpose
+		Icon: CardCategoryIcons::1
+		Description: #ANOMALY_GATE_REPURPOSE:500
+
+		AddFTLStorage(500)

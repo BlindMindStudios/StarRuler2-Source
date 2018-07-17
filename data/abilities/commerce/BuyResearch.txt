@@ -1,0 +1,17 @@
+Ability: BuyResearch
+	Name: #ABL_BUY_RESEARCH
+	Description: #ABL_BUY_RESEARCH_DESC
+	Icon: ResourceIcon::4
+
+	Cooldown: 180
+
+	ShareCooldown(BuyInfluence)
+	ShareCooldown(BuyEnergy)
+	ShareCooldown(BuyLabor)
+	ShareCooldown(BuyResearch)
+
+	ConsumeMoney(300)
+	AddResearchPoints(600)
+
+	ShowMoneyValue(300, #COST)
+	ShowResearchValue(600)

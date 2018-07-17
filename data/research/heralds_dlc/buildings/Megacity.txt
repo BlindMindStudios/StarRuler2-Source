@@ -1,0 +1,14 @@
+Technology: Megacity
+	Name: #R_BLD_MEGACITY
+	Description: #R_BLD_MEGACITY_DESC:16
+	Class: Unlock
+	Category: Buildings
+
+	Point Cost: 800
+	Time Cost: 90
+
+	Icon: Megacity
+	Color: #00f3ff
+	
+	UnlockTag(MegacityUnlock)
+	SkipOnUnlockedTag(MegacityUnlock)

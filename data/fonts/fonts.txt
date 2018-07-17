@@ -1,0 +1,222 @@
+
+Font: Arial_10
+	File: data/fonts/arial.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: Arial_12
+	File: data/fonts/arial.ttf
+	Size: 12
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: Arial_16
+	File: data/fonts/arial.ttf
+	Size: 16
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: Debug
+	File: data/fonts/DroidSansMono.ttf
+	Size: 12
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: DroidSans_8
+	File: data/fonts/DroidSans.ttf
+	Size: 8
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	
+Font: DroidSans_10
+	File: data/fonts/DroidSans.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: DroidSans_11_Bold
+	File: data/fonts/DroidSans-Bold.ttf
+	Size: 11
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: OpenSans_11_Italic
+	File: data/fonts/OpenSans-Italic.ttf
+	Size: 11
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: DroidSans_11
+	File: data/fonts/DroidSans.ttf
+	Size: 11
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Bold: DroidSans_11_Bold
+	Italic: OpenSans_11_Italic
+
+Font: DroidSans_14
+	File: data/fonts/DroidSans.ttf
+	Size: 14
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: DroidSans_16
+	File: data/fonts/DroidSans.ttf
+	Size: 16
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: DroidSans_20
+	File: data/fonts/DroidSans.ttf
+	Size: 24
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+
+Font: GoodTimes_8
+	File: data/fonts/good_times_rg.ttf
+	Size: 8
+	Page1: 0000 - 024F
+
+Font: GoodTimes_9
+	File: data/fonts/good_times_rg.ttf
+	Size: 9
+	Page1: 0000 - 024F
+
+Font: GoodTimes_10
+	File: data/fonts/good_times_rg.ttf
+	Size: 10
+	Page1: 0000 - 024F
+
+Font: GoodTimes_18
+	File: data/fonts/good_times_rg.ttf
+	Size: 18
+	Page1: 0000 - 024F
+
+Font: JP_8
+	Locale: japanese
+	Replace: DroidSans_8
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: JP_10
+	Locale: japanese
+	Replace: DroidSans_10
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: JP_11
+	Locale: japanese
+	Replace: DroidSans_11
+	Replace: DroidSans_11_Bold
+	Replace: OpenSans_11_Italic
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 11
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: JP_14
+	Locale: japanese
+	Replace: DroidSans_14
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 14
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: JP_16
+	Locale: japanese
+	Replace: DroidSans_16
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 16
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: JP_20
+	Locale: japanese
+	Replace: DroidSans_20
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 20
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF

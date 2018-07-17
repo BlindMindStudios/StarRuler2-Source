@@ -1,0 +1,17 @@
+Ability: Colonizer
+	Name: #ABL_COLONIZER
+	Description: #ABL_COLONIZER_DESC
+	Icon: PlanetType::3
+
+	Range: 50
+	Target: targ = Object
+
+	TargetFilterType(targ, Planet)
+	TargetFilterNotQuarantined(targ)
+	TargetFilterSpace(targ)
+
+	Trigger(targ, GivePopulation(1))
+	Trigger(targ, TakeControl())
+	Destroy()
+
+	IsAutoColonize()

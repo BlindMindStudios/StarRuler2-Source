@@ -1,0 +1,25 @@
+Module: SolarSatellite
+	Name: #ORB_SOLAR_SATELLITE
+	Blurb: #ORB_SOLAR_SATELLITE_BLURB
+	Description: #ORB_SOLAR_SATELLITE_DESC
+	Icon: GuiOrbitalIcons::13
+	Distant Icon: OrbitalIcons::13
+
+	Health: 20000
+	Armor: 10000
+	Size: 8
+
+	Build Cost: 600
+	Labor Cost: 25
+
+	ConsumeEnergy(500)
+
+	RequireUnlockTag(SolarSatelliteUnlock)
+
+	Model: SolarEngine
+	Material: GenericPBR_SolarEngine
+
+	LimitInOrbitStatus(SolarSatellite)
+
+	AddStatusToOrbitingPlanet(SolarSatellite)
+	MatchOrbitingOwner(Destroy None = True)

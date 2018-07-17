@@ -1,0 +1,29 @@
+Empire.EnergyManager : components.EnergyManager::EnergyManager {
+restricted local:
+	safe uint get_abilityCount() const;
+	Ability@[] getAbilities() const;
+	Ability@[] getAbility(int id) const;
+	Ability@[] getAbilityOfType(uint id) const;
+	uint get_abilityTypes(int id) const;
+
+restricted remote:
+	async relocking void activateAbility(int id);
+	async relocking void activateAbility(int id, vec3d point);
+	async relocking void activateAbility(int id, Object@ target);
+	
+server:
+	void powerTick(double time);
+
+	int addAbility(uint id);
+	void removeAbility(int id);
+	void disableAbility(int id);
+	void enableAbility(int id);
+
+//Networking
+	void writeAbilities(Message& msg) const;
+	bool writeAbilityDelta(Message& msg) const;
+
+shadow:
+	void readAbilities(Message& msg);
+	void readAbilityDelta(Message& msg);
+}

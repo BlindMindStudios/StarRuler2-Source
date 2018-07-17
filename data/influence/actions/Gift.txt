@@ -1,0 +1,23 @@
+Card: Gift
+	Name: #CARD_GIFT
+	Description: #CARD_GIFT_DESC
+
+	Icon: CardIcons::13
+
+	Color: #00ff40
+	Class: Action
+	Rarity: Uncommon
+
+	Base Purchase Cost: 1
+
+	Target: toEmpire = Empire
+	TargetFilterNotWar(toEmpire)
+
+	Target: sendCard = Card
+	TargetFilterCardUses(sendCard, 1)
+
+	NotifyCardSubject(sendCard, toEmpire, #GIFT_NOTIFY)
+
+	GainCardCostLeverage(sendCard, toEmpire, Factor = 2)
+	CopyCardTo(sendCard, toEmpire, Uses = 1)
+	TakeCardUse(sendCard)

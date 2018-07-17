@@ -1,0 +1,14 @@
+Resource: NativeGold
+	Name: #NATIVE_GOLD
+	Description: #NATIVE_GOLD_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::30
+	Small Icon: ResourceIconsSmall::30
+
+	Level: 1
+	Rarity: Rare
+	Affinity: Money
+
+	Pressure: 3 Money
+	AddResource(Influence, 1)

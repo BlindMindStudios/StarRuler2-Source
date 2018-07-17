@@ -1,0 +1,21 @@
+Template: tag/Compressible
+	Module: QuantumCompressor
+		Name: #S_QUANTUM_COMPRESSOR
+		Description: #S_QUANTUM_COMPRESSOR_DESC
+
+		Tags: HeraldsDLC
+
+		Color: #69eaf2
+		Sprite: QuantumCompressor
+
+		Requires:
+			Power = HexSize * 60
+
+		OnCheckErrors: heralds_designs::checkSurroundedInSystem
+
+		EnergyBuildCost := EnergyBuildCost + ceil(sqrt(ShipSize) * 20)
+
+		Hex.BuildCost := Hex.BuildCost * 3.0
+		Hex.HP := Hex.HP * 0.25
+
+		AddModifier: Compress(6)

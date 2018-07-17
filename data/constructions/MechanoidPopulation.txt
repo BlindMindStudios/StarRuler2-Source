@@ -1,0 +1,23 @@
+Construction: MechanoidPopulation
+	Name: #MECH_BUILD_POPULATION
+	Description: #MECH_BUILD_POPULATION_DESC
+
+	Category: Infrastructure
+
+	Labor Cost: 5
+	Build Cost: 100
+	Always Borrowable: True
+
+	RequireTrait(Mechanoid)
+	RequirePlanet()
+
+	GivePopulation(1)
+	SlowDownDebtGrowthFactor() #version>=117
+
+	OnStart(ModAttribute(MechPopulationQueued, Add, 1))
+	OnCancel(ModAttribute(MechPopulationQueued, Add, -1))
+	ModAttribute(MechPopulationQueued, Add, -1)
+
+	AddBuildCostTotalPopulation(Add = -6, Add Attribute = MechPopulationQueued, Power = 0.5, Multiply = 10)
+	AddLaborCostTotalPopulation(Add = -6, Add Attribute = MechPopulationQueued, Power = 0.5, Multiply = 2)
+	AddLaborCostTotalPopulation(Add = -6, Add Attribute = MechPopulationQueued, Power = 0.33, Multiply = 2.5)

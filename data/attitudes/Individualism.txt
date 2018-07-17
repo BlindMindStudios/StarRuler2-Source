@@ -1,0 +1,44 @@
+Attitude: Individualism
+	Name: #ATT_INDIVIDUALISM
+	Progress: #ATT_INDIVIDUALISM_PROGRESS
+	Color: #c73491
+	Sort: 20
+
+	ProgressFromAttribute(ImperialBuildingsBuilt)
+	ProgressFromAttribute(OrbitalsBuilt)
+	Conflict(Collectivism)
+
+	Level:
+		Description: #ATT_INDIVIDUALISM_L1
+		Icon: AttributeIcons::0
+		Threshold: 2
+
+		AddStatusHomeworld(IndividualismHW)
+
+	Level:
+		Description: #ATT_INDIVIDUALISM_L2
+		Icon: BuildingSprites::0
+		Threshold: 4
+
+		ModEmpireAttribute(CityConstructRate, Multiply, 1000)
+
+	Level:
+		Description: #ATT_INDIVIDUALISM_L3
+		Icon: ResourceIcon::8
+		Threshold: 10
+
+		RepeatEmpirePopulation(15, AddInfluenceStake(1))
+
+	Level:
+		Description: #ATT_INDIVIDUALISM_L4
+		Icon: MissileLauncher::0
+		Threshold: 18
+
+		EnableModifier(tag/MissileBase::RangeFactor(1.5))
+
+	Level:
+		Description: #ATT_INDIVIDUALISM_L5
+		Icon: CardIcons::18
+		Threshold: 29
+
+		TriggerNewFleets(AddStatus(StartNamed), Give To Stations = False)

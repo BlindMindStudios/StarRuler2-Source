@@ -1,0 +1,20 @@
+Technology: PlasmaThrower
+	Name: #R_SYS_PLASMA_THROWER
+	Description: #R_SYS_PLASMA_THROWER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	DLC: Heralds
+	DLC Replace: Damage
+
+	Icon: RocketPod::0
+	Color: #ce815a
+	
+	UnlockSubsystem(PlasmaThrower)
+	UnlockSubsystem(SupportPlasmaThrower)
+	SkipOnUnlockedSubsystem(PlasmaThrower)
+
+	SecondaryMoneyCost(1000)

@@ -1,0 +1,15 @@
+Resource: DegenerateMatter
+	Name: #DEGENERATE_MATTER
+	Description: #DEGENERATE_MATTER_DESC
+	Native Biome: Oceanic
+
+	Icon: ResourceIcons::42
+	Small Icon: ResourceIconsSmall::42
+
+	Level: 2
+	Affinity: Research
+
+	Asteroid Frequency: 0.035
+	Asteroid Labor: 70
+
+	Pressure: 7 Research

@@ -1,0 +1,15 @@
+Template: var/PowerUse, !tag/NoQuantumBattery, !tag/SupportHull
+	Module: QuantumBattery
+		Name: #S_QUANTUM_BATTERY
+		Description: #S_QUANTUM_BATTERY_DESC
+		Vital: True
+
+		Color: #d8cc48
+		Sprite: QuantumBattery
+
+		PowerUse := PowerUse * 0.5
+		EnergyBuildCost := EnergyBuildCost + ceil(sqrt(Size) * 40)
+
+		Hex.BuildCost := Hex.BuildCost * 2.0
+		Hex.MaintainCost := Hex.MaintainCost * 3.0
+		Hex.HP := Hex.HP * 0.25

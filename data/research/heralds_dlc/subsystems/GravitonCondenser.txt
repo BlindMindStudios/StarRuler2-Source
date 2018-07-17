@@ -1,0 +1,14 @@
+Technology: GravitonCondenser
+	Name: #R_SYS_GRAVITON_CONDENSER
+	Description: #R_SYS_GRAVITON_CONDENSER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 1500
+	Time Cost: 140
+
+	Icon: TractorGun::0 * #e45500
+	Color: #e45500
+	
+	UnlockSubsystem(GravitonCondenser)
+	SkipOnUnlockedSubsystem(GravitonCondenser)

@@ -1,0 +1,11 @@
+Status: ExtraDefense
+	Name: #COND_EXTRA_DEFENSE
+	Description: #COND_EXTRA_DEFENSE_DESC
+
+	Icon: ConditionIcons::2
+	Color: #af7926
+
+	Condition Frequency: 0.25
+	
+	AddToNativeResource( AddPressure(Defense, 1) ) #version<147
+	AddToNativeResource( AddPressureEmpireAttribute(Defense, PlanetConditionMultiplier) ) #version>=147

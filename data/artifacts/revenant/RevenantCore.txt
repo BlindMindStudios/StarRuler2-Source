@@ -1,0 +1,17 @@
+Artifact: RevenantCore
+	Name: #ART_REVENANT_CORE
+	Description: #ART_REVENANT_CORE_DESC
+
+	Size: 20
+	Ability: RevenantCore
+	
+	Model: ArtifactAdvanced
+
+	Strategic Icon: SpecialArtifactIcon
+
+	Mass: 500
+
+	Spread Variable: ENABLE_REVENANT_PARTS
+	Require Contestation: 60
+
+	AI: RevenantPart()

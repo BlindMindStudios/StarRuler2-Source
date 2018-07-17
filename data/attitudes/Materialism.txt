@@ -1,0 +1,44 @@
+Attitude: Materialism
+	Name: #ATT_MATERIALISM
+	Progress: #ATT_MATERIALISM_PROGRESS
+	Color: #d1cb6a
+	Sort: 10
+
+	Conflict(Generosity)
+
+	TiedAbility(SpendAttitudeMoney)
+
+	Level:
+		Description: #ATT_MATERIALISM_L1
+		Icon: HullIcons::0
+		Threshold: 500
+
+		ModEmpireAttribute(ColonizerSpeed, Multiply, 1.5)
+
+	Level:
+		Description: #ATT_MATERIALISM_L2
+		Icon: ResourceIcon::0 * #80ff80
+		Threshold: 1000
+
+		ModEmpireAttribute(SpecialFundsFactor, Multiply, 1.25)
+
+	Level:
+		Description: #ATT_MATERIALISM_L3
+		Icon: ResourceIcon::0 * #ff8080
+		Threshold: 1500
+
+		MultBorrowPenalty(0.001)
+
+	Level:
+		Description: #ATT_MATERIALISM_L4
+		Icon: GuiOrbitalIcons::14
+		Threshold: 2500
+	
+		ModEmpireAttribute(OrbitalLaborCostFactor, Multiply, 0.67)
+
+	Level:
+		Description: #ATT_MATERIALISM_L5
+		Icon: AttributeIcons::0
+		Threshold: 4000
+
+		AddStatusOwnedPlanets(BoostResource, Level Requirement = 2)

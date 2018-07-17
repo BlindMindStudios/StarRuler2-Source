@@ -1,0 +1,14 @@
+Trait: PrivTwinned
+	Name: #PRIV_TRAIT_TWINNED
+	Description: #PRIV_TRAIT_TWINNED_DESC
+	Color: #ff8000
+
+	Category: Privilege
+	Available: False
+
+	Conflict: Extragalactic
+	Conflict: StarChildren
+	Conflict: Ancient
+
+	TriggerHomeworld(SpawnPlanet(Meat, Owned = True, Add Status = PrivTwinned, In System = True, Radius = 12))
+	TriggerHomeworld(AddRandomResource(RandomLevel:2))

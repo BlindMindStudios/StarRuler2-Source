@@ -1,0 +1,4 @@
+Status: StartingProtection
+	Name: #STATUS_STARTING_PROTECTION
+	Description: #STATUS_STARTING_PROTECTION_DESC
+	Icon: ResourceIcon::5 * #ff0000

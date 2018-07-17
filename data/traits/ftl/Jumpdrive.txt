@@ -1,0 +1,26 @@
+Trait: Jumpdrive
+	Name: #TRAIT_JUMPDRIVE
+	Description: #TRAIT_JUMPDRIVE_DESC
+	Category: FTL
+	Order: 4
+
+	DLC: Heralds
+
+	Icon: Jumpdrive
+	Color: #67ad85
+
+	Unique: FTL
+
+	UnlockSubsystem(Jumpdrive)
+
+	LoadDesigns(default)
+	LoadDesigns(jumpdrive)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/jumpdrive))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/jumpdrive))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/jumpdrive))

@@ -1,0 +1,6 @@
+Status: Barren
+	Name: #COND_BARREN
+	Description: #COND_BARREN_DESC
+
+	Icon: ConditionIcons::7
+	Color: #ff0000

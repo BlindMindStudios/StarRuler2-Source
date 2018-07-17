@@ -1,0 +1,10 @@
+Status: Energized
+	Name: #STATUS_PLANET_GROWTH
+	Description: #STATUS_PLANET_GROWTH_DESC
+	Icon: ResourceIcon::2
+
+	Unique: True
+
+	ModPopulationGrowth(+1.0)
+	ModTileDevelopRate(+1.0)
+	ModBuildingConstructRate(+1.0)

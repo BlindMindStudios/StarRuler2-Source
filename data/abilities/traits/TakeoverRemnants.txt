@@ -1,0 +1,12 @@
+Ability: TakeoverRemnants
+	Name: #ABL_TAKEOVER_REMNANTS
+	Description: #ABL_TAKEOVER_REMNANTS_DESC
+	Icon: ResourceIcon::2
+
+	Target: targ = Object
+	TargetFilterCreeps(targ)
+	TargetFilterFlagship(targ)
+	TargetFilterSameRegion(targ)
+
+	SizeEnergyCost(targ, Factor = 8)
+	Trigger(targ, TakeControl())

@@ -1,0 +1,37 @@
+Camp: MediumCamp
+	Frequency: 0.5
+
+	Ship: Kyllaros [Remnant Kyllaros]
+	Ship: 15-30x Gunship
+	Ship: 10-30x Missile Boat
+	Ship: 4-17x Beamship
+	Ship: 0-10x Heavy Gunship
+
+	Pickup: AncientKnowledge
+		Name: #PICKUP_ANCIENT_KNOWLEDGE
+		Description: #PICKUP_ANCIENT_KNOWLEDGE_DESC
+
+		GainInfluenceCard(AncientKnowledge)
+
+	Pickup: InfluenceMedium
+		Name: #PICKUP_INFLUENCE
+		Description: #PICKUP_INFLUENCE_DESC
+
+		AddInfluencePoints(+5:+15)
+
+	Pickup: DefenseMedium
+		Name: #PICKUP_DEFENSE_MEDIUM
+		Description: #PICKUP_DEFENSE_MEDIUM_DESC:5
+
+		DLC: Heralds
+		Frequency: 0.5
+
+		ModDefenseReserve(+5)
+		GenerateGlobalDefense(5)
+
+	Pickup: TheoreticalInsight
+		//Backwards compatibility
+		Name: #PICKUP_INFLUENCE
+		Description: #PICKUP_INFLUENCE_DESC
+		AddInfluencePoints(+5:+15)
+		Frequency: 0

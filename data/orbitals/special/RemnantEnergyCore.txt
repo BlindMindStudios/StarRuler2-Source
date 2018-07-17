@@ -1,0 +1,23 @@
+Module: RemnantEnergyCore
+	Name: #ORB_REMNANT_ENERGY_CORE
+	Blurb: #ORB_REMNANT_ENERGY_CORE_BLURB
+	Description: #ORB_REMNANT_ENERGY_CORE_DESC
+	Icon: GuiOrbitalIcons::12
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 400
+	Labor Cost: 25
+
+	Health: 5000
+	Armor: 2000
+
+	Model: Research_Station
+	Material: VolkurGenericPBR
+
+	CannotBuildManually()
+
+	Strategic Icon: OrbitalIcons::12
+
+	AddEnergyIncome(+0.6)

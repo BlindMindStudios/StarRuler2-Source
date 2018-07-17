@@ -1,0 +1,12 @@
+Trait: MoonBase
+	Name: #TRAIT_MOON_BASE
+	Description: #TRAIT_MOON_BASE_DESC
+	Category: Foundation
+	Order: 4
+
+	Color: #aaffaa
+	Icon: PlanetType::4
+
+	Costs Points: 1
+
+	TriggerHomeworld( AddSurfaceArea(Moon, (5, 5)) )

@@ -1,0 +1,50 @@
+Card: Investigate
+	Name: #CARD_INVESTIGATE
+	Description: #CARD_INVESTIGATE_DESC
+
+	Color: #ff4f00
+	Class: Vote
+	Rarity: Rare
+
+	Icon: CardIcons::2
+
+	Base Purchase Cost: 2
+	Base Play Cost: 2
+
+	Target: target = Empire
+	TargetFilterNotWar(target)
+
+	ShowDuration(600)
+	ShowUpkeep(0.15)
+	StartVote(Investigate, target)
+
+	AI: BuyAgainstEnemies(target)
+	AI: PlayOnEnemy(target, War Only = False)
+
+Vote: Investigate
+	Name: #VOTE_INVESTIGATE
+	Color: #ff4f00
+
+	Icon: CardIcons::2
+
+	Target: target = Empire
+
+	CreateEffect(Pass, Investigate, target)
+	CancelOnWar(target)
+
+	AI: GoodForNot(target, 1.5)
+	AI: BadFor(target)
+
+Effect: Investigate
+	Name: #EFFECT_INVESTIGATE
+	Color: #ff4f00
+
+	Icon: CardIcons::2
+
+	Target: target = Empire
+
+	Upkeep: 0.15
+	Default Duration: 600
+
+	GrantEveryoneVisionOver(target)
+	CancelOnWar(target)

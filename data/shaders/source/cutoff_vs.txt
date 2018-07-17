@@ -1,0 +1,10 @@
+varying vec2 uv;
+attribute vec2 in_uv;
+varying float renderpos;
+
+void main() {
+	uv = in_uv;
+	gl_Position = ftransform();
+
+	renderpos = gl_Vertex.x;
+}

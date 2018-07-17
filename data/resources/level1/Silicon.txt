@@ -1,0 +1,21 @@
+Resource: Silicon
+	Name: #R_SILICON
+	Description: #R_SILICON_DESC
+	Native Biome: Desert
+	DLC: Heralds
+
+	Small Icon: ResourceIconsSmall::76
+
+	Pressure: 1 Money
+	Pressure: 2 Research
+
+	Affinity: Research
+	Affinity: Money
+
+	Level: 1
+	Rarity: Rare
+
+	Asteroid Frequency: 0.02
+	Asteroid Labor: 50
+
+	ModPopulationGrowth(+0.3)

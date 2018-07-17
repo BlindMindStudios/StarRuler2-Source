@@ -1,0 +1,25 @@
+Subsystem: SupportSupplyStorage
+	Name: #SUPPORTSUPPLY_NAME
+	Description: #SUPPORTSUPPLY_DESC
+	BaseColor: #2fd6b3
+	Elevation: 3
+	
+	Tags: DefaultUnlock, NonContiguous, NoCore, HasInternals, Category:Support
+	Tags: HasMaintenanceCost
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	SupplyCapacity := Size * 2500
+	
+	Hex.LaborCost := 0.1 * HexSize + 0.8
+	Hex.BuildCost := 1.5 * HexSize + 2
+	Hex.MaintainCost := 4 * HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := HexSize
+
+	Hook: AddSupplyToFleet(SupplyCapacity, 0)
+	
+	Module: Default
+		Sprite: SupplyStorage

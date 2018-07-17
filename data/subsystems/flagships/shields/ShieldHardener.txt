@@ -1,0 +1,40 @@
+Subsystem: ShieldHardener
+	Name: #S_SHIELD_HARDENER
+	Description: #S_SHIELD_HARDENER_DESC
+	BaseColor: #681be3
+	Elevation: 1
+
+	EvaluationOrder: 100
+	DamageOrder: -200
+
+	Tags: BaseCost, HighPowerUse
+	Tags: Defense, Category:Defense, HasInternals
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	PowerUse := 15 * Size
+	Chance := pow(0.5, 1.0 / (Hexes / Sum.ShieldHexes))
+	HasShieldHardener := 1
+
+	Hex.Resistance := 0.5
+	Hex.HP := 12 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Requires:
+		Command = 1
+		Power = PowerUse
+
+	Effect: ShieldBlock
+		Chance = Chance
+
+	Assert: Sum.ShieldCapacity > 0
+		Unique: True
+		Message: #ERROR_NEED_SHIELD
+
+	Assert: Sum.HasShieldHardener <= 1
+		Unique: True
+		Message: #ERROR_ONLY_ONE
+	
+	Module: Core
+		Sprite: FissionReactor
+		Hex.BuildCost := 2 * Hex.BuildCost

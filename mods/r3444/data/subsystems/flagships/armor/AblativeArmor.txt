@@ -1,0 +1,27 @@
+Subsystem: AblativeArmor
+	Name: #ABLATIVEARMOR_NAME
+	Description: #ABLATIVEARMOR_DESC
+	BaseColor: #a9a9b9
+	Picture: SubsystemButtonArt::0 * #9999ff
+	Elevation: 1
+
+	Tags: LowMaint, Category:Armor
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, ResistArmor
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	ProjResist := HexSize * 1
+	EnergyResist := HexSize * 0.5
+	ExplosiveResist := HexSize * 2
+	Hex.Resistance := 0.4
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Effect: ReduceDamage
+		ProjResist = ProjResist
+		EnergyResist = EnergyResist
+		ExplResist = ExplosiveResist
+		MinimumPercent = 1 / 8
+
+	Module: Default
+		Sprite: HexagonSubsystems::0 * #9999ff

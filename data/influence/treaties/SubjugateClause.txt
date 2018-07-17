@@ -1,0 +1,25 @@
+Clause: SubjugateClause
+	Name: #CLAUSE_SUBJUGATE
+	Description: #CLAUSE_SUBJUGATE_DESC
+
+	Icon: LoyaltyIcon
+
+	CannotBreak()
+	CannotInvite()
+	CannotAlter()
+
+	ShareVision()
+	FreeTrade()
+	ForcePeace()
+
+	NotNormallyVisible()
+
+	SubjugateMembers()
+	DictateWar()
+	DictateTrade()
+	DictateVision()
+
+	GainPercentageMoney(0.1)
+	GainPercentageEnergy(0.1)
+	GainPercentageResearch(0.1)
+	GainPercentageInfluence(0.1)

@@ -1,0 +1,38 @@
+Subsystem: ShieldHarmonizer
+	Name: #S_SHIELD_HARMONIZER
+	Description: #S_SHIELD_HARMONIZER_DESC
+	BaseColor: #e2e676
+	Elevation: 1
+
+	EvaluationOrder: 100
+	DamageOrder: -200
+
+	Tags: HeraldsDLC, ShieldHarmonizer
+	Tags: Defense, Category:Defense, HasInternals
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+
+	Percentage := min(2.0 * Size / ShipSize, 1.0)
+	BonusShield := Size * 3.0
+
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 1.25 * HexSize
+	Hex.LaborCost := 0.10 * HexSize
+
+	Requires:
+		Command = 1
+
+	Effect: ShieldRedirect
+		Percentage = Percentage
+
+	State: int = 0
+	Effect: AddBonusShields
+		Amount = BonusShield
+
+	Module: Core
+		Sprite: ShieldHarmonizer
+		Hex.BuildCost := 2 * Hex.BuildCost

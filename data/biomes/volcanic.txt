@@ -1,0 +1,16 @@
+Biome: Volcanic
+	Name: #BIOME_VOLCANIC
+	
+	Temperature: 1
+	Humidity: 0
+	
+	UseWeight: 0.01
+	BuildCost: 4
+	BuildTime: 3
+	
+	Frequency: 10
+	
+	Color: #C70015
+
+	Picks: 0.0, 0.0
+	Lookup Range: 0.475

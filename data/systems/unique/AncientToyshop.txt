@@ -1,0 +1,16 @@
+System: AncientToyshop
+	Frequency: 0.01
+	Unique: Global
+
+	MakeStar(Temperature = 4520, Radius = 74)
+
+	Repeat(3)
+		MakePlanet()
+	
+	Repeat(2)
+		MakeCreepCamp()
+
+	Repeat(5)
+		MakeArtifact()
+		
+	AddAdjacentArtifacts(3)

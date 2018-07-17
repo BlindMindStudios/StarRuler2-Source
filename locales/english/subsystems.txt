@@ -1,0 +1,925 @@
+SC_Hulls: [hspace=4/][img=DesignationIcons::16;32x32/][hspace=6/]  [color=#cc6a3a]Hulls[/color]
+SC_Control: [vspace=-14][img=Bridge;42x42/][/vspace]  [color=#2fd6b3]Control[/color]
+SC_Weapons: [vspace=-18][hspace=-22/][img=Railgun::2;70x53/][/vspace][hspace=-10/]  [color=#f9464d]Weapons[/color]
+SC_Propulsion: [hspace=-10/][vspace=-56][img=RocketEngine;84x84/][/vspace][hspace=-32/]  [color=#f9e146]Propulsion[/color]
+SC_Defense: [vspace=-14][img=PlateArmor;42x42/][/vspace]  [color=#a9a9a9]Defense[/color]
+SC_FTL: [img=HexagonSubsystems::10;42x21;#f00/]  [color=#67a7ad]FTL[/color]
+SC_Modifiers: [img=HexagonSubsystems::0;42x21;#cf00ff/]  [color=#eda1ff]Modifiers[/color]
+SC_Support: [vspace=-14][img=SupportCommand;42x42/][/vspace]  [color=#eda1ff]Support[/color]
+SC_Equipment: [vspace=-22][hspace=-29/][img=TractorGun::2;100x76/][/vspace][hspace=-29/]  [color=#8bb800]Equipment[/color]
+SC_Misc: Misc
+
+CREWCONTROL_NAME: Bridge and Crew
+CREWCONTROL_DESC: <<
+	A bridge, crew quarters, and other facilities for a crew to command a vessel.
+
+	[img=ActionBarIcons::0;22;#00ff80]Provides [b][color=#00ff80]Control[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Slowly repairs the vessel.[/img]
+	[img=Minus]Ship is destroyed if no control remains.[/img]
+>>
+
+CREWDECK_NAME: Crew Deck
+CREWDECK_DESC: <<
+	Provides a minimal deck and facilities for the crew to command the support ship.
+
+	[img=ActionBarIcons::0;22;#00ff80]Provides [b][color=#00ff80]Control[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Slowly repairs the vessel.[/img]
+	[img=Minus]Ship is destroyed if no control remains.[/img]
+>>
+
+SHIPCOMPUTER_NAME: Control Computer
+SHIPCOMPUTER_DESC: <<
+	An autonomous computer capable of controlling numerous ship systems.
+	
+	[img=ActionBarIcons::0;22;#00ff80]Provides a lot of [b][color=#00ff80]Control[/color][/b] to operate other subsystems.[/img]
+	[img=QuickbarIcons::6;22]For the first 30 seconds of any combat, the strength of the entire fleet is boosted by a percentage dependent on the size of the Control Computer.[/img]
+	[img=Plus]Slowly repairs the vessel.[/img]
+	[img=Minus]Requires power to run.[/img]
+	[img=Minus]Ship is destroyed if no control remains.[/img]
+>>
+
+STATUS_COMPUTER_BOOST: Computer Boost
+STATUS_COMPUTER_BOOST_DESC: Heavy computation done by the flagship's control computer is increasing this fleet's efficiency and combat strength for the first 30 seconds of any combat.
+
+SUPPLYMODULE_NAME: Supply Storage
+SUPPLYMODULE_DESC: <<
+	Stores supplies and ammunition for use in combat and sieging planets.
+
+	[img=AttributeIcons::4;22]Provides [b][color=#fefc61]Supply Capacity[/color][/b].[/img]
+	[img=Minus]Destroyed supply storage hexes leak supplies over time.[/img]
+>>
+
+SUPPORTCAPMODULE_NAME: Support Command
+SUPPORTCAPMODULE_DESC: <<
+	Technical infrastructure for commanding a fleet of support ships.
+
+	[img=ActionBarIcons::2;22]Provides [b][color=#00cffe]Support Command[/color][/b].[/img]
+	[img=Minus]May lose control over support ships when destroyed.[/img]
+>>
+
+SHIELDGEN_NAME: Shield Generator
+SHIELDGEN_DESC: <<
+	Creates a shield around the vessel, blocking some incoming damage.
+
+	[img=Plus]Creates regenerating barrier against damage.[/img]
+	[img=Minus]Weakened shields allow some damage through.[/img]
+>>
+
+S_SHIELD_HARDENER: Shield Hardener
+S_SHIELD_HARDENER_DESC: <<
+	Supports and strengthens the ship's shield, allowing it to resist incoming damage without losing strength.
+
+	[img=Plus]While shields are up, grants a percentage chance to completely ignore any incoming hit of damage.[/img]
+	[img=Minus]When shields are at weakened strength, the block chance is lowered.[/img]
+>>
+
+FISSIONGEN_NAME: Fission Generator
+FISSIONGEN_DESC: <<
+	A power generator based on atomic fission.
+
+	[img=ResourceIcon::2;22]Provides [b][color=#42b4bd]Power[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Very cheap to build and maintain.[/img]
+	[img=Minus]Requires a lot of space to provide significant power.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Losing required power generation in combat reduces the ship's overall effectiveness.[/color][/i][/img]
+>>
+
+FUSIONGEN_NAME: Fusion Generator
+FUSIONGEN_DESC: <<
+	Generates power through nuclear fusion.
+
+	[img=ResourceIcon::2;22]Provides [b][color=#42b4bd]Power[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Provides a large amount of power in a small amount of space.[/img]
+	[img=Minus]Expensive to build and maintain.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Losing required power generation in combat reduces the ship's overall effectiveness.[/color][/i][/img]
+>>
+
+AMGEN_NAME: Antimatter Generator
+AMGEN_DESC: <<
+	A sustained matter-antimatter annihilation reaction provides continuous power for the ship.
+
+	[img=ResourceIcon::2;22]Provides [b][color=#42b4bd]Power[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Provides a very large amount of power in a small amount of space.[/img]
+	[img=Plus]Cheap to maintain.[/img]
+	[img=Minus]Expensive to build.[/img]
+	[img=Minus]If an antimatter generator core takes damage, the ship explodes.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Losing required power generation in combat reduces the ship's overall effectiveness.[/color][/i][/img]
+>>
+
+S_MARENIUMGEN: Marenium Generator
+S_MARENIUMGEN_DESC: <<
+	Generates power using solid-state marenium lattices found only on a specific planet.
+
+	[img=ResourceIcon::2;22]Provides [b][color=#42b4bd]Power[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Reactor does not take up any internal space.[/img]
+	[img=Plus]Increases the ship's combat strength dependent on the level of the Marenium planet.[/img]
+	[img=Plus]Increases the ship's acceleration dependent on the level of the Marenium planet.[/img]
+	[img=Minus]If the Marenium planet is lost, the ship loses almost all of its effectiveness and combat strength.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Losing required power generation in combat reduces the ship's overall effectiveness.[/color][/i][/img]
+>>
+
+RAILBATTERY_NAME: Railgun Battery
+RAILBATTERY_DESC: <<
+	A battery of magnetic cannons that fire relatively small projectiles at immense velocities.
+	
+	[img=Plus]Rapid fire rate.[/img]
+	[img=Minus]Inaccurate projectiles.[/img]
+	[img=Minus]Limited turret firing arc.[/img]
+>>
+
+MUONBATTERY_NAME: Muon Cannon Battery
+MUONBATTERY_DESC: <<
+	Fires batches of newly created muons at relativistic speeds.
+	
+	Benefits from technologies that improve railgun batteries.
+	
+	[img=Plus]Rapid fire rate.[/img]
+	[img=Plus]Pierces through armor and ignores damage resistance.[/img]
+	[img=Minus]Lower damage.[/img]
+	[img=Minus]Inaccurate projectiles.[/img]
+	[img=Minus]Limited turret firing arc.[/img]
+>>
+
+RAILGUN_NAME: Railgun
+RAILGUN_DESC: <<
+	A magnetic cannon that fires relatively small projectiles at immense velocities.
+	
+	[img=Plus]High damage per hit.[/img]
+	[img=Minus]Inaccurate projectiles.[/img]
+	[img=Minus]Limited turret firing arc.[/img]
+>>
+
+MUON_CANNON_NAME: Muon Cannon
+MUON_CANNON_DESC: <<
+	Fires batches of newly created muons at relativistic speeds.
+	
+	Benefits from technologies that improve railguns.
+	
+	[img=Plus]Rapid fire rate.[/img]
+	[img=Plus]Pierces through armor and ignores damage resistance.[/img]
+	[img=Minus]Lower damage.[/img]
+	[img=Minus]Inaccurate projectiles.[/img]
+	[img=Minus]Limited turret firing arc.[/img]
+>>
+
+LASER_NAME: Laser
+LASER_DESC: <<
+	A highly focused beam of light inflicts damage by burning holes through ship subsections.
+	
+	[img=Plus]Accurate and instant beam lock-on.[/img]
+	[img=Plus]Low [b][color=#fefc61]supply cost[/color][/b].[/img]
+	[img=Minus]Ineffective against armor.[/img]
+	[img=Minus]Very limited turret firing arc.[/img]
+>>
+
+MISSILELAUNCHER_NAME: Missile Launcher
+MISSILELAUNCHER_DESC: <<
+	Missiles loaded with explosives and sufficient propellant are lowered out of the ship and locked onto their primary target.
+	
+	[img=Plus]High [b][color=#ff8080]damage[/color][/b].[/img]
+	[img=Plus]No firing arc limitations.[/img]
+	[img=Plus]Very effective at piercing armor.[/img]
+	[img=Minus]Slow fire rate.[/img]
+	[img=Minus]Very high [b][color=#fefc61]supply cost[/color][/b].[/img]
+>>
+
+S_SELF_DESTRUCT: Self Destruct Device
+S_SELF_DESTRUCT_DESC: <<
+	A massive warhead designed to detonate when the host vessel becomes unstable.
+	
+	[img=Plus]Extreme damage in a large area.[/img]
+	[img=Minus]Dead.[/img]
+>>
+ABL_SELF_DESTRUCT: Active Self Destruct
+ABL_SELF_DESTRUCT_DESC: <<
+	Activate the self destruct device contained on this ship, detonating the ship in a fiery inferno.
+>>
+
+PLATEARMOR_NAME: Plate Armor
+PLATEARMOR_DESC: <<
+	Heavy, interlocked plates of metal that protect the ship from damage.
+	
+	[img=Plus]High [b][color=#80ff80]health[/color][/b].[/img]
+	[img=Plus]Resists and reduces incoming damage.[/img]
+	[img=Plus]Armor on the outside of the ship does not use up interior space.[/img]
+	[img=Minus]Heavy.[/img]
+>>
+
+NANOMESH_NAME: Nano Mesh
+NANOMESH_DESC: <<
+	A finely weaved mesh of nanobots strengthen the integrity of nearby subsystems.
+	
+	[img=Plus]Increases the [b][color=#80ff80]health[/color][/b] of surrounding hexes.[/img]
+	[img=Plus]Health bonus is improved by armor health research.[/img]
+	[img=Minus]Always uses internal space.[/img]
+	[img=Minus]The nano mesh itself has no health.[/img]
+>>
+
+S_CRYSTALARMOR: Crystalline Armor
+S_CRYSTALARMOR_DESC: <<
+	An armor plate constructed with layers of intricate crystalline microstructures that shatter when impacted, absorbing a large amount of damage. The complicated construction of the crystal plates disallows repair in the field, however.
+	
+	[img=Plus]Very high health.[/img]
+	[img=Plus]High [b][color=#c6c33a]damage resistance[/color][/b].[/img]
+	[img=Minus]Cannot be repaired.[/img]
+	[img=Minus]When a Crystalline Armor hex is destroyed, it is permanently removed from the ship.[/img]
+>>
+
+ABLATIVEARMOR_NAME: Ablative Armor
+ABLATIVEARMOR_DESC: <<
+	A stiff metal foam designed to absorb damage by ablating away.
+	
+	[img=Plus]High [b][color=#c6c33a]damage resistance[/color][/b].[/img]
+	[img=Plus]Armor on the outside of the ship does not use up interior space.[/img]
+	[img=MenuIcons::3;20]Effective against many small hits.[/img]
+>>
+
+REACTIVEARMOR_NAME: Reactive Armor
+REACTIVEARMOR_DESC: <<
+	A sheet of independent explosives that detonate nearly instantly in response to incoming weapon fire.
+
+	[img=Plus]Damage hits exceeding the [b][color=#c33ac6]damage threshold[/color][/b] are reduced significantly.[/img]
+	[img=Plus]Armor on the outside of the ship does not use up interior space.[/img]
+	[img=MenuIcons::3;20]Effective against massive single hits.[/img]
+>>
+
+S_NILINGARMOR: Niling Fiber Armor
+S_NILINGARMOR_DESC: <<
+	Strands of quantum-reactive fibre connect the outer plating to a zero-sized sink hole in spacetime, allowing incoming energy flows to be safely redirected and stored. When enough energy has been stored, it is channeled back into normal spacetime, creating a strong EM pulse to damage surrounding enemies.
+
+	[img=Plus]Completely negates the damage from any incoming energy-based weapons.[/img]
+	[img=Plus]After the threshold amount of damage is absorbed, an area-of-effect burst is released, damaging all nearby enemies relative to the stored amount.[/img]
+	[img=Minus]Provides absolutely no protection against other weapon types, and has no intrinsic Health.[/img]
+>>
+
+NEUTRONARMOR_NAME: Neutronium Armor
+NEUTRONARMOR_DESC: <<
+	Microscopic pellets of neutronium-doped metal are mixed with standard plate armor.
+	
+	[img=Plus]Very high [b][color=#80ff80]health[/color][/b].[/img]
+	[img=Plus]Armor on the outside of the ship does not use up interior space.[/img]
+	[img=Minus]Extremely heavy.[/img]
+	[img=Minus]Expensive build cost.[/img]
+>>
+
+ROCKETENGINE_NAME: Rocket Engine
+ROCKETENGINE_DESC: <<
+	Expels large amounts of mass at high speeds to produce thrust.
+
+	[img=Plus]Provides very high Thrust.[/img]
+	[img=Minus]Low turn rate.[/img]
+>>
+
+IONENGINE_NAME: Ion Engine
+IONENGINE_DESC: <<
+	Propels small amounts of fuel at extremely high speeds. Ion thruster exhausts are very small and can more easily be rotated slightly in order to provide angular thrust.
+
+	[img=Plus]Very high turn rate.[/img]
+	[img=Minus]Provides lower Thrust.[/img]
+	[img=Minus]Requires Power to run.[/img]
+>>
+
+GRAVITYENGINE_NAME: Graviton Engine
+GRAVITYENGINE_DESC: <<
+	A dense artificial gravity wave allows seemingly reactionless engines to propel spacecraft.
+
+	[img=Plus]Can be placed internally.[/img]
+	[img=Plus]If only graviton engines are present on the ship, the ship will not need to rotate at all to move.[/img]
+	[img=Minus]Provides lower Thrust.[/img]
+	[img=Minus]Expensive to build.[/img]
+	[img=Minus]Has high power needs.[/img]
+>>
+
+S_RAMJET: Bussard Ramjet
+S_RAMJET_DESC: <<
+	Collects stray particles from the vacuum while moving by means of an enormous magnetic field leading into a scoop at the front of the ship, then uses those particles to generate thrust.
+
+	[img=Plus]Greatly reduces the maintenance cost of the ship.[/img]
+	[img=Plus]Restores the ship's [b]Supply[/b] when at high velocity. The full indicated Supply Gain rate is reached at speeds of 100 u/s or more.[/img]
+	[img=Minus]Provides lower Thrust than conventional engines.[/img]
+
+	The Ramjet must contain at least one [color=#da8a9f][b]Ramscoop[/b][/color], pointing outwards at the front of the ship. You can find the Ramjet under the [color=#eda1ff][b]Modifiers[/b][/color] category.
+>>
+
+S_RAMJET_SCOOP: Ramscoop
+S_RAMJET_SCOOP_DESC: <<
+	Must be placed on a [b]Bussard Ramjet[/b] subsystem, pointing outwards at the front of the ship.
+
+	Increases the rate at which the ship regains [b]Supply[/b] when at high velocity.
+>>
+
+BULKHEAD_NAME: Bulkhead
+BULKHEAD_DESC: <<
+	Reinforced plating on the walls of a subsystem makes its internals significantly more resistant to incoming damage.
+
+	[img=Plus;22;#cf00ff]Can be placed on non-armor subsystems that have cores or turrets. Cannot be placed on bridges or core-less subsystems.[/img]
+	[img=Plus]Increases the health of all hexes of the subsystem.[/img]
+	[img=Minus]Increases the build cost of the subsystem.[/img]
+	[i][color=#aaa]Placing more than one bulkhead on a subsystem will continue to increase the health of all its hexes, but will skyrocket its build cost.[/color][/i]
+>>
+
+TARGETINGSENSOR_NAME: Targeting Sensor
+TARGETINGSENSOR_DESC: <<
+	Sophisticated targeting and tracking sensors allow a weapon to more accurately find its destination, increasing its effective range.
+
+	[img=Plus;22;#cf00ff]Can be placed on weapon subsystems.[/img]
+	[img=Plus]Increases the [b][color=#80ffea]range[/color][/b] of the weapon.[/img]
+	[img=Minus]Increases the build cost of the weapon.[/img]
+	[img=Minus]Increases the [b][color=#fefc61]supply cost[/color][/b] of firing the weapon.[/img]
+	[i][color=#aaa]Placing more than one targeting sensor on a weapon will continue to increase its range, but will also skyrocket its costs.[/color][/i]
+>>
+
+SUPPORTSUPPLY_NAME: Supply Crate
+SUPPORTSUPPLY_DESC: <<
+	A secondary supply storage facility may be placed on particular support ships, increasing the amount of ammunition and general combat materials available to the fleet.
+
+	[img=AttributeIcons::4;22]Provides [b][color=#fefc61]Supply Capacity[/color][/b] to the fleet.[/img]
+	[img=Minus]Adds maintenance cost to the support ships.[/img]
+	[img=Minus]Destroyed supply storage hexes leak supplies over time.[/img]
+	[img=MenuIcons::3;20;#f00][i][color=#faa]Support ships with maintenance costs will not be created by Defense.[/color][/i][/img]
+>>
+
+S_EMERGENCY_SUPPLIES: Emergency Supplies
+S_EMERGENCY_SUPPLIES_DESC: <<
+	An output node for the Empire's energy. Allows supplies to be produced instantly anywhere in the galaxy, at great cost.
+	
+	[img=AttributeIcons::4;22]Immediately generates supplies.[/img]
+	[img=Minus]Costs energy.[/img]
+	[img=Minus]30 Second Cooldown.[/img]
+>>
+ABL_EMERGENCY_SUPPLIES: Create Supplies
+ABL_EMERGENCY_SUPPLIES_DESC: Refill the vessel's supplies.
+
+S_HYPERLASER: Hyperdense Laser
+S_HYPERLASER_DESC: <<
+	A brief laser with energy densities nearly high enough to spontaneously generate matter.
+
+	[img=Plus]Accurate and instant beam lock-on.[/img]
+	[img=Plus]Deals damage quickly.[/img]
+	[img=Minus]Lower overall DPS.[/img]
+	[img=Minus]Very limited turret firing arc.[/img]
+>>
+
+S_TRACTOR_BEAM: Tractor Beam
+S_TRACTOR_BEAM_DESC: <<
+	Sophisticated graviton emitters combined with an inertial dampening field allow the ship to apply its thrust to other objects. The objects are kept suspended at the same relative position and velocity, letting the ship to move them.
+
+	[img=MenuIcons::3;20][color=#aaa]Can use tractor beam on artifacts, asteroids, orbitals and other ships.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]Other ships will us their own thrust to attempt to break away from the tractor beam.[/color][/img]
+	[img=ResourceIcon::3;20;#f00][color=#aaa]Ships under the effect of a tractor beam cannot use their FTL drives.[/color][/img]
+>>
+ABL_TRACTOR_BEAM: Toggle Tractor Beam
+ABL_TRACTOR_BEAM_DESC: Turn the ship's tractor beam on or off.
+ABL_TRACTOR_NO: Cannot Tractor
+
+S_BUSTER_BEAM: Buster Beam
+S_BUSTER_BEAM_DESC: An immense beam weapon capable of destroying entire planets.
+
+S_ION_CANNON: Ion Cannon
+S_ION_CANNON_DESC: <<
+	A highly charged energy beam temporarily overloads an enemy's drive systems.
+	
+	[img=Plus]Disables enemy sublight engines and FTL capabilities.[/img]
+	[img=ResourceIcon::2;22]Costs [b][color=#42b4bd]Energy[/color][/b] to fire.[/img]
+	[img=MenuIcons::3;20][color=#aaa]Can fire ion cannon on enemy ships.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]Duration of incapacitating effect is dependent on size of the ion cannon.[/color][/img]
+>>
+
+S_SKIP_DRIVE: Skip Drive
+S_SKIP_DRIVE_DESC: <<
+	A drive system that can expend raw energy to punch through quantum dimensions and achieve instant teleportation.
+	
+	[img=Plus]Instantly teleport to a nearby location.[/img]
+	[img=ResourceIcon::2;22]Costs [b][color=#42b4bd]Energy[/color][/b] to activate.[/img]
+	[img=MenuIcons::3;20][color=#aaa]The further away the ship teleports, the more energy is required.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]The larger the skip drive is on the ship, the lower the energy cost.[/color][/img]
+>>
+
+S_GRAVITON_CONDENSER: Graviton Condenser
+S_GRAVITON_CONDENSER_DESC: <<
+	An immense beam generator that collapses a celestial object's own gravity into itself, leading it to compress and eventually detonate.
+
+	[img=Plus]Beam can be activated to deal damage over time to stars and planets.[/img]
+>>
+ABL_GRAVITON_CONDENSER: Fire Graviton Condenser
+ABL_GRAVITON_CONDENSER_DESC: Fire a beam that collapses a celestial object's own gravity into itself, leading it to compress and eventually detonate.
+
+S_CLOAKPLATING: Cloaking Mesh
+S_CLOAKPLATING_DESC: <<
+	Fully covering a ship in a mesh of hyperabsorbant material allows it to avoid detection by enemies outside immediate visual range.
+
+	[img=Plus]When activated, fleet cannot be seen from a distance.[/img]
+	[img=ResourceIcon::2;22]Cloak slowly drains [b][color=#42b4bd]Energy[/color][/b] when active.[/img]
+	[img=Minus]Cloak is broken when the fleet enters combat.[/img]
+	[img=MenuIcons::3;20][color=#aaa]The ship's exterior must be fully covered in cloaking mesh in order to successfully cloak.[/color][/img]
+>>
+ABL_CLOAK: Toggle Cloak
+ABL_CLOAK_DESC: <<
+	Toggle whether the ship is currently cloaked.
+
+	Cloaking costs a small amount of energy per second to maintain and breaks as soon as the fleet enters combat.
+>>
+STATUS_CLOAKED: Cloaked
+STATUS_CLOAKED_DESC: <<
+	This fleet is currently cloaked.
+
+	Cloaking costs a small amount of energy per second to maintain and breaks as soon as the fleet enters combat.
+>>
+
+S_TITAN_HULL: Titan Hull
+S_TITAN_HULL_DESC: <<
+	An extremely heavy hull frame that allows larger ships to be constructed more efficiently.
+
+	[img=Plus]Much more internal space available.[/img]
+	[img=Plus]Reduces build costs by up to 50% as the ship size gets bigger.[/img]
+	[img=Plus]Rigorous construction increases turret potential firing arcs.[/img]
+	[img=Minus]Extreme mass increase.[/img]
+	[img=Minus]Much slower hyperdrive speed.[/img]
+	[img=Minus]Can only be used for ships of size 500 or greater.[/img]
+>>
+
+S_COLOSSUS_HULL: Colossus Hull
+S_COLOSSUS_HULL_DESC: <<
+	The pinnacle of giant ship construction, the colossus hull needs to use a sustained structural integrity field in order to prevent it from collapsing in on itself.
+
+	[img=Plus]Much much more internal space available.[/img]
+	[img=Minus]Requires a large amount of Control and Power.[/img]
+	[img=Minus]Can only be used for ships of size 3000 or greater.[/img]
+>>
+
+S_AMMOSTORAGE: Ammo Store
+S_AMMOSTORAGE_DESC: <<
+	Small ammo storage modules that can take and temporarily store supplies from the fleet while the support ship detaches from the fleet to do independent raids against the enemy.
+
+	[img=Plus]Allows support ships to leave the fleet for raids.[/img]
+	[img=Minus]Detached support ships without remaining stored supply cannot fire until they return to the fleet and resupply.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Support ships must be set to a raiding behavior in order to perform raiding in combat.[/color][/i][/img]
+>>
+
+S_GATE_MODULE: Gate
+S_GATE_MODULE_DESC: <<
+	An FTL gate module that can be added to a station.
+
+	[img=Plus]Allows ships to move from any gate to any other gate.[/img]
+	[img=Plus]Can be packed up and moved, then unpacked at a new location.[/img]
+	[img=Minus]Must cover at least a third of the entire station.[/img]
+	[img=$FTL]Costs 0.15 FTL/s upkeep. Gates get disabled when you run out of FTL.[/img]
+>>
+
+ABL_GATE_PACK: Pack Up Gate
+ABL_GATE_PACK_DESC: <<
+	Deactivate and pack up the gate. Packed gates are not active, but can be moved slowly by using their maneuvering thrusters.
+>>
+
+ABL_GATE_UNPACK: Unpack Gate
+ABL_GATE_UNPACK_DESC: <<
+	Unpack the gate at the targeted location. The gate will move there using its maneuvering thrusters, then unpack and reactivate itself. Activating a gate has a single-time FTL cost.
+>>
+
+S_MINING_LASER: Mining Laser
+S_MINING_LASER_DESC: <<
+	A precise cutting and drilling tool used to extract materials from asteroids.
+
+	[img=Plus]Mines special minerals from asteroids.[/img]
+	[img=MenuIcons::3;20]Only particular asteroids will have special minerals such as [b]Ore[/b]. Many asteroids have resources that cannot be mined by mining laser, but require a planet to construct a mining base on the asteroid instead.[/img]
+>>
+
+S_CARGO_STORAGE: Cargo Storage
+S_CARGO_STORAGE_DESC: <<
+	Specialized container crates and facilities to store materials mined from asteroids until they can be deposited or used.
+>>
+
+ABL_AUTO_MINE: Mine Asteroid (Automatic)
+ABL_AUTO_MINE_DESC: <<
+	Start mining from this asteroid and automatically return to mining it after depositing stored materials at the set drop off point.
+>>
+
+ABL_DROPOFF_POINT: Set Drop-off Point
+ABL_DROPOFF_POINT_DESC: <<
+	Toggle where this ship's drop-off point for mined materials is set. When the cargo storage is full from mining, automatically drop off all cargo at the indicated object.
+>>
+
+ABL_MINE_ASTEROID: Mine Asteroid (Once)
+ABL_MINE_ASTEROID_DESC: <<
+	Mine this asteroid for one full load of cargo, but do not return to it after dropping it off.
+>>
+
+ABL_TRANSFER_CARGO: Transfer Cargo
+ABL_TRANSFER_CARGO_DESC: <<
+	Order the ship to transfer all cargo in its stores.
+>>
+
+ABL_PICKUP_CARGO: Pickup Cargo
+ABL_PICKUP_CARGO_DESC: <<
+	Order the ship to pick up as much cargo from the target as possible.
+>>
+
+S_CONSTRUCTION_BAY: Construction Bay
+S_CONSTRUCTION_BAY_DESC: <<
+	Equipment and space for construction of new ships in the field.
+
+	[img=$Labor;22]Provides labor to construct new ships with.[/img]
+>>
+
+S_ORE_PROCESSOR: Ore Processor
+S_ORE_PROCESSOR_DESC: <<
+	Facilities to refine and smelt ore mined from asteroids into usable materials.
+	
+	[img=$Labor;22]Automatically turns Ore in cargo storage or being mined into stored labor.[/img]
+	[img=ComputerCore;22;#fca404]Requires Construction Bay to be present to feed labor into.[/img]
+>>
+
+S_LIQUIDARMOR: Liquid Armor
+S_LIQUIDARMOR_DESC: <<
+	A basin of liquid hydro-metal suspended on the hull of the ship absorbs impacts and spreads them evenly, filling any gaps that are created.
+
+	[img=Plus]High [b][color=#80ff80]health[/color][/b].[/img]
+	[img=Plus]Health flows from high health hexes to connected low health hexes to equalize density.[/img]
+	[img=Plus]Armor on the outside of the ship does not use up interior space.[/img]
+	[img=Minus]Does not provide any Damage Resistance.[/img]
+>>
+
+S_AUGMENT_RELOAD: Coolant System
+S_AUGMENT_RELOAD_DESC: <<
+	Augmenting the weapon's mechanism for reloading and cooling, faster fire rates can be achieved at the cost of fragility.
+
+	[img=Plus]Increases [b][color=#c680ff]reload speed[/color][/b] by 20%.[/img]
+	[img=Minus]Decreases [b][color=#80ff80]health[/color][/b] by 50%.[/img]
+>>
+
+S_AUGMENT_DAMAGE: Payload Amplifier
+S_AUGMENT_DAMAGE_DESC: <<
+	Augmenting the weapon's payload and energy allows for more damage to be dealt at the cost of range.
+
+	[img=Plus]Increases [b][color=#ff8000]damage[/color][/b] by 25%.[/img]
+	[img=Minus]Decreases [b][color=#c680ff]range[/color][/b] by 50%.[/img]
+>>
+
+S_AUGMENT_SUPPLY: Smoothed Mechanism
+S_AUGMENT_SUPPLY_DESC: <<
+	Augmenting the weapon's delivery and focusing systems decreases the supply cost of firing it at the cost of flexibilty and speed.
+
+	[img=Plus]Decreases [b][color=#fefc61]supply cost[/color][/b] to fire by 30%.[/img]
+	[img=Minus]Decreases [b]turret firing arc[/b] by 50%, where appropriate.[/img]
+	[img=Minus]Decreases [b]projectile speed[/b] by 50%, where appropriate.[/img]
+>>
+
+S_SHRINE: Shrine
+S_SHRINE_DESC: <<
+	A shrine to honor the Old Gods, constructed in accordance with the blueprints they bestowed upon us. Praying to the shrine protects the ship from harm.
+
+	[img=Plus]Adds a Shield to the ship.[/img]
+	[img=Minus]At least as much Prayer must be generated as the ship has Control.[/img]
+	[img=ResourceIconsSmall::53;22][b][color=#408fc1]Only available when the 'Devout' race option is chosen.[/color][/b][/img]
+>>
+
+S_QUANTUM_BATTERY: Quantum Battery
+S_QUANTUM_BATTERY_DESC: <<
+	Quantum batteries can store parts of the vast amount of energy collected by an empire in the zero-point energy of a tiny region of folded subspace. This energy is then slowly let out to supplement the power requirements of the subsystem.
+
+	[img=Plus]Halves the power requirements of the subsystem it is placed in.[/img]
+	[img=Minus]If a Quantum Battery is destroyed in combat, the subsystem is nonfunctional until it is repaired.[/img]
+	[img=$Energy;20]Costs [b]Energy[/b] from your empire's global stores to construct.[/img]
+>>
+
+S_QUANTUM_COMPRESSOR: Quantum Compressor
+S_QUANTUM_COMPRESSOR_DESC: <<
+	Uses a stabilized region of folded subspace to increase the size of the inside of the storage area without actually taking up more space on the outside.
+
+	[img=MenuIcons::3;20][i][color=#aaa]Can only be placed in Supply or Cargo Storage subsystems, and must be fully surrounded by storage hexes.[/color][/i][/img]
+	[img=Plus]Adds storage capacity equivalent to 6 extra hexes.[/img]
+	[img=$Energy;20]Costs [b]Energy[/b] from your empire's global stores to construct.[/img]
+>>
+
+S_DISRUPTOR: Disruptor
+S_DISRUPTOR_DESC: <<
+	Fire an EM disruptor pulse beam at an opposing flagship, creating overloads in its power generation reactors that damage surrounding subsystems. Support ships are unaffected by the pulse due to their low power requirements.
+
+	[img=Plus]Directly damages hexes surrounding the enemy's power generator subsystems.[/img]
+	[img=Minus]Low overall damage.[/img]
+	[img=Minus]Beam can only be fired at close range.[/img]
+	[img=Minus]Damage reduced significantly by shields.[/img]
+	[img=MenuIcons::3;20]Passes harmlessly through support ships.[/img]
+>>
+
+S_DRONELAUNCHER: Drone Launcher
+S_DRONELAUNCHER_DESC: <<
+	Launches a swarm of centrally controlled drones that track enemy ships, circling around ships in the enemy fleet while dealing damage to anything it passes through.
+
+	[img=Plus]Drones pierce through enemy ships, allowing damage to be dealt many times per drone.[/img]
+	[img=Plus]Very far engagement range.[/img]
+	[img=Minus]Drones move slowly.[/img]
+	[img=Minus]Significant amounts of [b][color=#00ff80]Control[/color][/b] are required to support the drones.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Drones have a limited lifetime before their power source fails and a new drone needs to be launched. The closer a drone is fired to its target, the more time it will have to assault enemy ships, increasing its effective damage output.[/color][/i][/img]
+>>
+
+S_PARTICLELANCE: Particle Lance
+S_PARTICLELANCE_DESC: <<
+	Fires a concentrated beam of charged particles at the enemy fleet, burning holes through anything it passes through.
+
+	[img=Plus]Deals damage to every hex the beam passes through.[/img]
+	[img=Plus]Passes through ships and can hit multiple ships.[/img]
+	[img=Minus]Low overall damage.[/img]
+	[img=Minus]Damage reduced significantly by shields.[/img]
+>>
+
+S_SHOCKMISSILES: Shock Missiles
+S_SHOCKMISSILES_DESC: <<
+	[color=#aaa][i]Shock Missiles can only be placed on support ships.[/i][/color]
+
+	Missiles equipped with shock dump charges are fired to impact on shields and destabilize the integrity of the plasma bubble.
+
+	[img=Plus]Deals heavy damage to shield strength of any shielded ship it hits.[/img]
+	[img=Minus]Deals no damage to ships without shields.[/img]
+>>
+
+S_TORPEDOLAUNCHER: Torpedo Launcher
+S_TORPEDOLAUNCHER_DESC: <<
+	Launches massive, slow-moving, guided bombs. These bombs explode in an area around their target.
+
+	[img=Plus]Extreme [b][color=#ff8080]damage[/color][/b].[/img]
+	[img=Plus]No firing arc limitations.[/img]
+	[img=Plus]Deals damage in an area.[/img]
+	[img=Minus]Very slow fire rate.[/img]
+	[img=Minus]Very low [b][color=#ff8080]DPS[/color][/b].[/img]
+>>
+
+S_HYPERDRIVE: Hyperdrive
+S_HYPERDRIVE_DESC: Allows for hyperdrive navigation. The larger the hyperdrive the faster the FTL speed.
+
+S_JUMPDRIVE: Jumpdrive
+S_JUMPDRIVE_DESC: <<
+	Allows the ship to make subspace jumps to other locations within range. Larger jump drive subsystems allow for larger safe jump distances.
+
+	Jumping outside of safe jump range is possible, but can cause damage to the ship and may drop the ship at an location away from the intended destination.
+
+	Jumpdrives require a large amount of [b]Control[/b] for the jump calculations.
+>>
+S_JUMP_RANGE: Safe Jump Range
+STT_JUMP_RANGE: <<
+	The maximum safe distance this ship can jump in FTL. Jumps beyond this range will be inaccurate and deal damage to the ship.
+>>
+
+S_SHIELD_HARMONIZER: Shield Harmonizer
+S_SHIELD_HARMONIZER_DESC: <<
+	[color=#aaa][i]Shield Harmonizers can only be placed on support ships.[/i][/color]
+
+	Harmonizes the support ship with the flagship's inherent shield frequency, contributing to its strength and allowing damage dealt to be partially redirected.
+
+	[img=Plus]Redirects a percentage of incoming damage to the flagship's shield when it is up.[/img]
+	[img=Plus]Increases the flagship's shield capacity.[/img]
+>>
+
+S_FLARE_BOMB: Flare Bomb
+S_FLARE_BOMB_DESC: <<
+	Trigger a star to emit a critical flare, wiping out all population in the solar system but leaving everything else intact.
+
+	The flare bomb is destroyed in the process.
+>>
+
+ABL_FLARE_BOMB: Bore Flare Bomb
+ABL_FLARE_BOMB_DESC: <<
+	After a 60 second channel period, trigger the star to emit a critical flare, wiping out all population in the solar system but leaving everything else intact. The planets in the system are irradiated for the next 5 minutes and cannot be colonized.
+
+	The flare bomb ship is destroyed in the process.
+>>
+
+STATUS_FLARE_RADIATION: Flare Radiation
+STATUS_FLARE_RADIATION_DESC: <<
+	This planet is being irradiated by a solar flare, disabling colonization.
+>>
+
+
+S_ANCIENT_CORE: Control Core
+S_ANCIENT_CORE_DESC: <<
+	Maintains the connection to the First network, provides power as well as control for the ship.
+
+	[img=AncientIcon;22][b][color=#8953f7]Only available when the 'Ancient' race option is chosen.[/color][/b][/img]
+>>
+
+S_WARHEAD: Warhead
+S_WARHEAD_DESC: <<
+	A heavily armed warhead that detonates in the enemy fleet, creating a blast of ultrahard radiation to bombard all the enemy ships in the area.
+
+	[img=Plus]Deals damage to every hex on affected ships.[/img]
+	[img=Minus]Limited storage of warheads.[/img]
+	[img=Minus]Warheads are expensive and must be constructed manually from a planet with labor.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Warhead storage can be expanded by adding extra Warhead Tube modifiers to the subsystem.[/color][/i][/img]
+>>
+STATUS_WARHEAD: Warheads
+STATUS_WARHEAD_DESC: <<
+	This ship currently has warheads in storage to fire.
+>>
+CONS_WARHEAD: Construct Warhead
+CONS_WARHEAD_DESC: <<
+	Construct a new warhead to replace one that was fired from a ship with warheads.
+>>
+S_WARHEAD_TUBE: Warhead Tube
+S_WARHEAD_TUBE_DESC: <<
+	Additional storage for a warhead. The ship will start with an extra warhead in storage, and can hold one more.
+
+	Must be placed inside the existing Warhead subsystem.
+>>
+
+S_TROOPPODS: Troop Pods
+S_TROOPPODS_DESC: <<
+	An array of troop drop pods that can be launched at an enemy planet in order to take it over without having to station a flagship in orbit.
+
+	[img=Plus]Can take over a planet without keeping a fleet in orbit or costing any supply.[/img]
+	[img=Minus]Only planets up to a certain amount of loyalty can be taken over, depending on the size of the ship and the amount of troop pods installed.[/img]
+	[img=Minus]Troops must be trained manually from a planet with labor, only one batch of troops can be taken at a time, enough to conquer a single planet.[/img]
+	[img=Minus]Significant amounts of [b][color=#00ff80]Control[/color][/b] are required to support the troops.[/img]
+	[img=Minus]Enemy can prevent the siege from progressing by stationing a fleet in orbit.[/img]
+>>
+STATUS_TROOPS: Carrying Troops
+STATUS_TROOPS_DESC: <<
+	This ship is carrying troops with it ready to invade an enemy planet.
+>>
+STATUS_TROOP_INVASION: Invasion in Progress
+STATUS_TROOP_INVASION_DESC: <<
+	An invasion from troops launched in troop pods is in progress on this planet. Station a flagship in orbit to halt its progress.
+>>
+CONS_TROOPS: Train Troops
+CONS_TROOPS_DESC: <<
+	Train a new batch of troops to occupy empty troop pods on the target flagship.
+>>
+S_MaxLoyalty: Maximum Loyalty
+ABL_TROOPPODS: Launch Troop Pods
+ABL_TROOPPODS_DESC: <<
+	Launch the troops occupying the troop pods on the flagship to invade the targeted enemy planet.
+>>
+
+S_CARRIER_HULL: Carrier Hull
+S_CARRIER_HULL_DESC: <<
+	A hull specifically designed to control and maintain a large fleet of support ships.
+
+	[img=Plus]Doubles any support capacity.[/img]
+	[img=Plus]Increases supply capacity by 50%.[/img]
+	[img=Minus]Cannot have any weapons on the flagship.[/img]
+	[img=Minus]Less internal space available.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Carrier Hulls can only be used on ships of size 300 or greater.[/color][/i][/img]
+>>
+ERROR_CANNOT_HAVE_WEAPONS: $1 cannot have weapons.
+
+S_DESTROYER_HULL: Destroyer Hull
+S_DESTROYER_HULL_DESC: <<
+	A hull optimized to fit many different weapon turrets at the cost of being unable to field a support fleet.
+
+	[img=Plus]Increases health by 500%.[/img]
+	[img=Plus]Increases armor resistance by 50%.[/img]
+	[img=Plus]Decreases mass by 50%.[/img]
+	[img=Plus]More internal space available.[/img]
+	[img=Minus]Cannot have any support command on the flagship.[/img]
+	[img=Minus]Weapon range reduced by 30%.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Destroyer Hulls can only be used on ships of size 300 or greater.[/color][/i][/img]
+>>
+ERROR_CANNOT_HAVE_SUPPORT: $1 cannot have support command.
+
+S_SPINAL_MOUNT_HULL: Spinal Mount Hull
+S_SPINAL_MOUNT_HULL_DESC: <<
+	A hull built completely around a single massive weapon turret, allowing its weapon to fire in any direction.
+
+	[img=Plus]Weapon turret can fire in any direction.[/img]
+	[img=Plus]Increases the health of weapon hexes by 50%.[/img]
+	[img=Plus]Massively increases the health of the weapon turret hex.[/img]
+	[img=Minus]Only one weapon is allowed.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Spinal Mount Hulls can only be used on ships of size 300 or greater.[/color][/i][/img]
+>>
+ERROR_WEAPON_LIMIT: $1 can only have 1 weapon.
+
+S_SUPERSTRUCTURE_HULL: Superstructure Hull
+S_SUPERSTRUCTURE_HULL_DESC: <<
+	A hull reinforced with superhard materials derived from asteroid ore in order to more easily construct and maintain the ship.
+
+	[img=Plus]Reduces the ship's build, labor and maintenance costs.[/img]
+	[img=Minus]Adds an Ore cost to building the ship.[/img]
+>>
+
+S_SIMULATOR: Simulator
+S_SIMULATOR_DESC: <<
+	A realistic combat simulator that the ship's crew can train at when not following any other orders.
+
+	[img=Plus]The ship slowly gains veterancy levels while stationed in a friendly system. The larger the simulator, the faster it gains experience.[/img]
+>>
+
+S_AICORE: AI Core
+S_AICORE_DESC: <<
+	Rigging the support ship to be controlled entirely by a smart AI removes the need for crew facilities and access hatches. This makes it easier to mass-produce the ship quickly, but uses more expensive parts.
+
+	[img=Plus]Reduces the [b]Labor[/b] cost of the support ship by 25%.[/img]
+	[img=Minus]Increases the [b]Build[/b] cost of the support ship by 25%.[/img]
+	[img=ActionBarIcons::0;22;#00ff80]Provides [b][color=#00ff80]Control[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Slowly repairs the vessel.[/img]
+	[img=Minus]Ship is destroyed if no control remains.[/img]
+>>
+
+S_FLEETCOMPUTER: Fleet Computer
+S_FLEETCOMPUTER_DESC: <<
+	Acts as a command and control center for the fleet's support coordination, allowing support ships to move independently further away from the flagship.
+
+	[img=Plus]Increases the range at which support ships can raid away from the flagship.[/img]
+	[img=Plus]Increases flagship repair rate.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Only support ships equipped with ammo stores and set to an appropriate behavior will raid.[/color][/i][/img]
+>>
+
+S_SOLARPANEL: Solar Panel
+S_SOLARPANEL_DESC: <<
+	Solar Panels are a cheap and efficient way to provide power for subsystems, but rely on being near a star to operate.
+
+	[img=ResourceIcon::2;22]Provides [b][color=#42b4bd]Power[/color][/b] to operate other subsystems.[/img]
+	[img=Plus]Increases combat strength when fighting closer to stars with high luminosity.[/img]
+	[img=Minus]Significantly decreases combat strength when fighting in deep space.[/img]
+	[img=Minus]Solar Panels must be placed on the exterior of the ship.[/img]
+>>
+
+S_ROCKETPOD: Rocket Pod
+S_ROCKETPOD_DESC: <<
+	A concealed tube of rockets rapidly extends, launches a volley of short range rockets, and receeds to reload.
+
+	[img=Plus]High [b][color=#ff8080]damage[/color][/b].[/img]
+	[img=Plus]No firing arc limitations.[/img]
+	[img=Plus]Very effective at piercing armor.[/img]
+	[img=Minus]Must reload after several shots.[/img]
+	[img=Minus]High [b][color=#fefc61]supply cost[/color][/b].[/img]
+>>
+
+S_PLASMATHROWER: Plasma Thrower
+S_PLASMATHROWER_DESC: <<
+	Launches concentrated clouds of dense plasma at enemy vessels. The plasma covers the outside of the ship, dealing damage in a wide area.
+
+	[img=Plus]Deals damage over time for a set duration on the side of the ship that was hit.[/img]
+	[img=Minus]Limited firing arc.[/img]
+	[img=Minus]Plasma projectiles may miss.[/img]
+>>
+
+S_BROADCAST_ANTENNA: Broadcast Antenna
+S_BROADCAST_ANTENNA_DESC: <<
+	Equips a ship with an enormous electronic broadcasting antenna that can hack into civilian communication channels to spread propaganda to nearby planets and ships.
+
+	[img=Plus]When stationed in a system, opposing planets gain the [b]Propaganda[/b] status over time.[/img]
+	[img=Plus]If there is [b]Support Capacity[/b] available, periodically converts an opposing support ship in the system to join this fleet instead.[/img]
+	[img=Minus]Requires [b][img=$Influence;22/][color=$Influence]Influence[/color][/b] to be spent when building the ship.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Planets affected by Propaganda produce 1 less point of Pressure on its native resource.[/i][/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Has no effect on planets and ships of empires you are in an active Alliance treaty with.[/color][/i][/img]
+>>
+STATUS_PROPAGANDA: Propaganda
+STATUS_PROPAGANDA_DESC: <<
+	This planet is affected by opposing [b]Propaganda[/b], and is providing 1 less point of Pressure on its native resource.
+>>
+
+S_BOOSTERENGINE: Booster Engine
+S_BOOSTERENGINE_DESC: <<
+	An advanced rocket engine that massively boosts the support ship's acceleration while raiding away from the main fleet.
+
+	[img=Plus]Adds a large amount of thrust when the ship is raiding.[/img]
+	[img=Minus]Does not affect acceleration out of combat.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Support ships have to be equipped with Ammo Stores and set to a raiding behavior in order to perform raiding in combat.[/color][/i][/img]
+>>
+
+S_PULSE_BOLT: Pulse Bolt
+S_PULSE_BOLT_DESC: <<
+	A modified beam weapon that forgoes any form of beam focusing in exchange for raw energy output.
+
+	[img=Plus]Very high Beam DPS when firing.[/img]
+	[img=Minus]Extremely short range.[/img]
+	[img=Minus]Uses up supplies at a fast rate.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Recommended for use on support ships with Ammo Stores and a Raiding behavior set.[/color][/i][/img]
+>>
+
+S_FLAK_BATTERY: Flak Battery
+S_FLAK_BATTERY_DESC: <<
+	A short range gun battery that can deal massive damage to raiding enemy support ships close to it.
+
+	[img=Plus]Fires fast, high damage projectiles at nearby enemy supports.[/img]
+	[img=Plus]Has no firing arc limitations.[/img]
+	[img=Minus]Very low range.[/img]
+	[img=Minus]Only marginally benefits from range upgrade research.[/img]
+>>
+
+S_DEFLECTOR_ARRAY: Deflector Array
+S_DEFLECTOR_ARRAY_DESC: <<
+	An array of deflector dishes aimed on a particular side of the ship can counter a limited amount of incoming weapons fire.
+
+	[img=Plus]Fully negates up to a limited amount of damage instances per second.[/img]
+	[img=Minus]Only negates damage coming in from the direction the array is aimed in.[/img]
+	[img=Minus]Uses a lot of [b]Power[/b].[/img]
+>>
+
+S_SUBSPACE_SHREDDER: Subspace Shredder
+S_SUBSPACE_SHREDDER_DESC: <<
+	Amplifies natural subspace microtears to dangerous levels and sends a large amount of energy through the created fault line.
+
+	[img=Plus]Tear deals massive damage to ships it passes through.[/img]
+	[img=Minus]Extremely short range.[/img]
+	[img=Plus]Tear continues to slowly move and damage ships for a time until it dissipates.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Recommended for use on support ships with Ammo Stores and a Raiding behavior set.[/color][/i][/img]
+>>
+
+S_SLIPSTREAM_GENERATOR: Slipstream Generator
+S_SLIPSTREAM_GENERATOR_DESC: <<
+	Grants the ability to generate slipstream portals.
+>>
+
+S_CARPETBOMB: Carpet Bomb
+S_CARPETBOMB_DESC: <<
+	A heavy, multiple warhead weapon designed to devastate a planet's surface and population.
+>>

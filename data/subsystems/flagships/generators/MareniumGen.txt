@@ -1,0 +1,52 @@
+Subsystem: MareniumGen
+	Name: #S_MARENIUMGEN
+	Description: #S_MARENIUMGEN_DESC
+	BaseColor: #704e78
+	Elevation: 3
+
+	Tags: IsReactor, Category:Control
+	Tags: DontList, HasInternals
+	Tags: HeraldsDLC
+	Tags: Important
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Power := 20 * Size
+	MareniumPower := Power
+
+	SupplyCapacity := Size * 300
+	SupplyRate := Size * 100
+
+	Hex.Resistance := 0.5
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 3.5 * HexSize
+	
+	Hex.LaborCost := 0.15 * HexSize + 0.18
+	Hex.BuildCost := 3 * HexSize + 0.8
+	Hex.MaintainCost := 4 * HexSize + 3
+
+	Ship.ExternalHexes := Ship.ExternalHexes + Hexes
+
+	Hook: AddStatus(Marenium)
+
+	Provides:
+		Power = Power
+	
+	Module: Core
+		Sprite: MareniumReactor
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+	Module: Default
+		Hex.BuildCost := 0.9 * Hex.BuildCost
+		Hex.Mass := 0.9 * Hex.Mass
+
+	Assert: Sum.Power == Sum.MareniumPower
+		Unique: True
+		Message: #ERROR_ALL_POWER
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor
+
+	Modifier: PowerFactor(factor)
+		Power := Power * factor

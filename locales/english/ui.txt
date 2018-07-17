@@ -1,0 +1,182 @@
+BLUEPRINTS: Blueprints
+OPTIONS: Options
+TAB: Tab
+RESEARCH_OVERVIEW: Research Overview
+DESIGN_OVERVIEW: Design Overview
+GALAXY_CAMERA: Galaxy Camera
+GALAXY: Galaxy
+STATS_TAB: Stats
+SYSTEM_TAB: Systems
+PLANETS_TAB: Planets
+PLANETS_MODE_NORMAL: Normal
+PLANETS_MODE_MONEY: Income
+PLANETS_MODE_PRODUCTION: Production
+PLANETS_MODE_REQS: Requirements
+PLANETS_MODE_TILES: Surface Tiles
+PLANETS_MODE_PRESSURE: Pressure
+NOTICE: Notice
+
+EMPIRE_ENERGY: "Energy: "
+EMPIRE_SOLARGENS: "Solar Generators: "
+EMPIRE_SUPPLY: $1/$2
+EMPIRE_SUPPLY_OUTPUT:$1%
+
+PLANET_INFO: $1 ($2B / $3B)
+PLANET_POPULATION: $1 Billion Colonists
+
+ANOMALY_FIELD: Anomaly
+SCAN_ANOMALY: Scan Anomaly
+INVESTIGATE_ANOMALY: Investigate Anomaly
+
+BACK_TO_OVERVIEW: Back to Overview
+
+CONCEPT: Concept
+CONSTRUCTION: Construction
+MISSION_GOALS: Mission Goals
+REVIEW: Review
+
+BUILT_NOTIFICATION: $1 has been built.
+BUILT_AT_NOTIFICATION: $1 has been built at $2.
+BUILT_ON_NOTIFICATION: $1 has been built on $2.
+
+QUEUE_SIZE: $1 more in queue.
+BUILDING_THING: Building $1 ($2%)
+BUILDING_NOTHING: Nothing being built
+
+DESIGN_SIZE: Size $1
+CREATE_DESIGN: Create Design
+CREATE_DESIGN_CLASS: Create Class
+IMPORT_DESIGNS: Import Designs
+SEARCH_DESIGNS: Search Designs...
+DESIGN_CLASS_NAME: Design Class Name:
+
+DESIGN_NAME_INPUT: Name:
+DESIGN_CLASS_INPUT: Class:
+DESIGN_SIZE_INPUT: Size:
+DESIGN_HULL_INPUT: Hull:
+MINSIZE_SUPPORT: Size $1+, Support
+MINSIZE_FLAGSHIP: Size $1+, Flagship
+MINSIZE_STATION: Size $1+, Station
+DESIGN_FLAGSHIP: Flagship
+DESIGN_SUPPORT: Support Ship
+DESIGN_STATION: Station
+DESIGN_SATELLITE: Support Satellite
+
+DESIGN_SHOW_ARCS: Toggle whether to show weapon turret [b]Firing Arcs[/b] at all times.
+DESIGN_SHOW_HULL: Toggle whether to show the hull model your design is approximated to under the blueprint.
+DESIGN_CENTER: Center the design on the grid.
+DESIGN_RANDOMIZE: Generate a completely random design for this ship type.
+DESIGN_RANDOMIZE_CONFIGURE: Configure parameters for random ship generation.
+DESIGN_CONFIGURE: Configure Randomizer
+DESIGN_UNDO: Undo last change. ($1)
+DESIGN_REDO: Redo last undone change. ($1)
+DESIGN_PAINT_TOOL: <<
+	[b]Paint Tool ($1)[/b]
+	[color=#0f0]Hold left click to paint hexes to the selected subsystem type.[/color]
+	[color=#f00]Hold right click to remove subsystems from hexes.[/color]
+	Modifiers, cores and turrets can be moved by left click dragging.
+
+	[i]Hold control while left clicking to create a new core instead of adding to an existing subsystem.  [/i]
+
+	[i]Hold alt or middle click to quick-eyedrop.[/i]
+>>
+DESIGN_MOVE_TOOL: <<
+	[b]Move Tool ($1)[/b]
+	Move the currently selected hex.
+
+	[i]Hold shift to move the entire subsystem.[/i]
+
+	[i]Hold control to duplicate the dragged subsystem.[/i]
+>>
+DESIGN_DROP_TOOL: <<
+	[b]Eyedropper Tool ($1)[/b]
+	Left click to select the subsystem type of the clicked hex.
+>>
+DESIGN_REPLACE_TOOL: <<
+	[b]Replace Tool ($1)[/b]
+	Click a subsystem to replace it entirely with a subsystem of the selected type.
+>>
+DESIGN_CLEAR: Clear the contents of the design. Can be undone.
+
+DESIGN_RND_WEAPONCOUNT: Weapon Count
+DESIGN_RND_ENGINESIZE: Engine Size
+DESIGN_RND_HYPERSIZE: Hyperdrive Size
+DESIGN_RND_SUPPLIES: Generate supply storage.
+DESIGN_RND_SUPPORT: Generate support command.
+
+GRAPHICS_EDITOR: Graphics Editor
+MODULES: Modules
+
+WEAPONS: Weapons
+DEFENSES: Defenses
+
+SAVE_GAME_DATA: Save to Game Data
+SAVE_GAME_DATA_CONFIRM: Are you sure you wish to overwrite the game data?
+RESET_GAME_DATA: Reset to Game Data
+RESET_GAME_DATA_CONFIRM: Are you sure you wish to reset to game data?
+MUTATION_CHANCE: Mutation Chance:
+NAME_COUNT: $1 names
+
+CONFIRM_OVERWRITE: Are you sure you wish to overwrite '$1'?
+CONFIRM_DELETE_FILES: Are you sure you wish to delete all the following files/directories and any files they may contain?
+FILENAME_LABEL: Filename:
+NEW_DIRECTORY: New Directory
+CREATE_DIRECTORY: Create Directory
+DIRECTORY_LABEL: Directory:
+
+PLAY_EMPIRE_TITLE: Select Empire
+SPECTATE: Spectate
+PLAY_EMPIRE: Play Empire
+
+FREE_RESOURCES: Unused Resources
+DISABLED_RESOURCES: Disabled Resources
+NO_POP_RESOURCES: Insufficient Population to Produce
+DECAYING_PLANETS: Decaying Planets
+LABOR_PLANETS: Planets/Orbitals with Labor
+COLONIZING_PLANETS: Partially Colonized
+INFLUENCE_STACK: Influence Peddling
+WONDER_PLANETS: Owned Wonders
+UNDER_SIEGE_PLANETS: Planets under Siege
+DEFENSE_TARGETS: Locations Using Defense
+ALL_FLEETS: Military Flagships
+CIVILIAN_FLEETS: Civilian Flagships
+MOTHERSHIPS: Motherships
+DEFENSE_STATIONS: Defense Stations
+COMBAT_FLEETS: Fleets in Combat
+FLEETS_LOW_SUPPLY: Fleets on Low Supply
+AVAIL_ARTIFACTS: Available Artifacts
+COLONIZE_SAFE_PLANETS: Sufficient Population to Colonize
+AUTO_IMPORTS: Pending Auto-Imports
+TT_AUTO_IMPORTS: Planets are currently waiting for [img=$3;20/] [b]$1 $2 resource(s)[/b] to become available for auto-importing.
+OVERPRESSURE_PLANETS: Planets Over Pressure Capacity
+
+ASTEROID_UNOWNED: <<
+	Select a planet with labor and right click this asteroid to construct a [b][color=#8c4ec9]Mining Base[/color][/b] to access one of the resources.
+>>
+ASTEROID_OWNED: <<
+	This asteroid has a mining base. If the empire mining it loses trade access, the mining base is removed.
+>>
+ASTEROID_MINING: <<
+	This asteroid contains special minerals that need to be mined by a [color=#91692c][b]Miner ship[/b][/color], then brought to a planet for use.
+>>
+MOVE_TO_OBJ: Move to $1
+
+GO_RESOURCE: $1
+GO_RESOURCE_TYPE: Find Resource
+
+TT_GAMETIME: <<|
+	Displaying the current game time since the game was started.
+
+	[i]Click to toggle to current real time.[/i]
+>>
+TT_REALTIME: <<|
+	Displaying the current real time of the day.
+
+	[i]Click to toggle to game time.[/i]
+>>
+TT_PAUSE: Toggle whether the game is paused.
+TT_SLOWER: Decrease the game speed.
+TT_FASTER: Increase the game speed.
+PAUSED: PAUSED
+WAITING: WAITING
+NOTIFICATION_LOG: Event Log

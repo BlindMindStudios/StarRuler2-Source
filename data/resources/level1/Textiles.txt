@@ -1,0 +1,15 @@
+Resource: Textiles
+	Name: #TEXTILES
+	Description: #TEXTILES_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIcons::9
+	Small Icon: ResourceIconsSmall::8
+
+	Level: 1
+	Affinity: Money
+
+	Terraform Cost: 1000
+	Terraform Labor: 60
+
+	Pressure: 3 Money

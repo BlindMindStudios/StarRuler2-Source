@@ -1,0 +1,526 @@
+#version 120
+const bool advancedProcedurals = 	#{{level:extreme}};
+const bool parallax = 				#{{level:extreme}};
+const bool scattering =				#{{level:extreme}};
+const bool pbrLight = 				#{{level:high}};
+const bool simpleProcedurals = 		#{{level:high}};
+const bool advancedAmbience = 		#{{level:high}};
+const bool normalMapping = 			#{{level:medium}};
+const bool simpleAmbience = 		#{{level:medium}};
+const bool selfIllumination = 		#{{level:medium}};
+
+
+const int nLightCount = 2;
+const float pi = 3.14159265358;
+const float tau = 6.28318530717;
+
+const vec4 hashSeed = vec4(0.16532,0.17369,0.15787,0.14987);
+
+// constants for emissive lights and starlight intensity
+const float emissiveIntensity = 2.5;
+const float lightIntensity = 2.5;
+
+uniform sampler2D biomes, cities, differenceNoise, lookup, cityGlow, surfaceData;
+uniform samplerCube skybox;
+uniform float lightRadius[nLightCount];
+uniform vec4 ownerColor;
+uniform float time;
+uniform float cycle;
+uniform float population;
+vec4 playerPlateProfile = vec4(vec3((1.0 - ownerColor.rgb) * 0.2 + 0.8), 0.75);
+
+// complimentary triad color harmony, should in theory always generate an appealing theme.
+vec3 colorLightsPrimary = ownerColor.rgb * 0.45 + 0.55;
+vec3 colorLightsSecondary = vec3(ownerColor.brg) * 0.45 + 0.55;
+vec3 colorLightsTertiary = vec3(ownerColor.gbr) * 0.85 + 0.15;
+
+const float splatSharpness = 2.0;
+
+////Amount of population considered 'half full'
+const vec3 basePopulation = vec3(1.0, 0.25, 0.25);
+ 
+varying vec2 uv, uv2, uvNoise, uvSplat, uvB[5];
+varying vec4 pos;
+varying vec3 light[nLightCount];
+varying vec3 normal, npos, origo;
+varying float pulse, poleMask;
+varying vec3 splatRadial;
+varying float atmoMask;
+
+uniform vec4[3] biomesPicks;
+
+// parallax scale, bias and steps
+const vec2 scaleBias = vec2(0.005, 0.0025);
+ 
+// smoothstep without the edges
+float smoothCurve(float x){
+    return x * x * (3.0 - 2.0 * x);
+}
+ 
+vec3 toLinear(vec3 x) {
+    return pow(x, vec3(2.2));
+}
+ 
+vec3 toGamma(vec3 x) {
+    return pow(x, vec3(0.45));
+}
+ 
+vec3 square(vec3 x) {
+    return x*x;
+}
+ 
+float square(float x) {
+    return x*x;
+}
+ 
+vec2 square(vec2 x) {
+    return x*x;
+}
+ 
+float pow5(float x) {
+ 
+    float y = x*x;
+    return y*y*x;
+}
+  
+vec2 pow5(vec2 x) {
+ 
+    vec2 y = x*x;
+    return y*y*x;
+}
+ 
+vec3 pow5(vec3 x) {
+ 
+    vec3 y = x*x;
+    return y*y*x;
+}
+ 
+vec3 pow3(vec3 x) {
+    return x*x*x;
+}
+ 
+vec2 pow3(vec2 x) {
+    return x*x*x;
+}
+ 
+float pow3(float x) {
+    return x*x*x;
+}
+ 
+float pow8(float x) {
+ 
+    x = x*x;
+    x = x*x;
+    return x*x;
+}
+
+// speculer term part 1
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// specular term part 2
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+// fresnel for specular term
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return max(vec3(0.0), substance + (substance - 1.0) * pow(1.0 - max(0.0,(dot(l, h))), 5.0));
+}
+// fresnel for ambient light
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+// diffuse term
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+	float O = 0.62 - pow(1.0-NdotL * clamp(1.0-NdotV/2.0, 0.0,1.0), pi) * 0.62;
+	O = mix(O, NdotL, roughness);
+	return O;
+}
+
+// fail-safe get normal map z component
+float deriveZ(vec2 n) {
+ 
+    float z = pow(abs(1.0 - n.x * n.x - n.y * n.y), 0.5);
+   
+    return z;
+}
+ 
+// calculates palette for cracks
+vec3 paletteCracks(float c)
+{
+    return 0.5 + 0.5 * cos(tau * (1.0 * c + vec3(0.0, 0.33, 0.67)) );
+}
+ 
+// calculates light tinting, simulating atmospheric scattering.
+vec3 paletteAtmoTint( float t )
+{
+    t *= t;
+    return square(min(vec3(1.0), 0.45 + 0.45*cos( tau*((t * 0.9)+vec3(0.45, 0.55, 0.65)) ) + (1.0 - t) * 0.25));
+}
+ 
+vec3 dp1Calc(vec3 p)
+{
+    return dFdx(p);
+}
+ 
+vec3 dp2Calc(vec3 p)
+{
+    return dFdy(p);
+}
+ 
+vec2 duv1Calc(vec2 uv)
+{
+    return dFdx(uv);
+}
+ 
+vec2 duv2Calc(vec2 uv)
+{
+    return dFdy(uv);
+}
+
+// random noise functions ahead
+float hash12(vec2 p)
+{
+	vec3 p3  = fract(vec3(p.xyx) * hashSeed.xyz);
+    p3 += dot(p3, p3.yzx + 19.19);
+    return fract((p3.x + p3.y) * p3.z);
+}
+
+float noise(vec2 n) {
+    const vec2 d = vec2(0.0, 1.0);
+    vec2 b = floor(n), f = smoothstep(vec2(0.0), vec2(1.0), fract(n));
+    return mix(mix(hash12(b), hash12(b + d.yx), f.x), mix(hash12(b + d.xy), hash12(b + d.yy), f.x), f.y);
+}
+
+float cloudMaker(vec2 n, vec2 f, int iterations, float w) {
+	float total = 0.0, amplitude = 1.0;
+	for (int i = 0; i < iterations; i++) {
+		total += noise(n + w + f + total * 0.5) * amplitude;
+		n += n;
+		w *= 0.75;
+		f *= 1.5;
+		amplitude *= 0.4;
+	}
+	return total;
+}
+
+vec2 rotator(vec2 rotate, float rate)
+{
+	return vec2(dot(rotate,  vec2(cos(rate),  -sin(rate))), dot(rotate,  vec2(sin(rate),  cos(rate))));
+}
+// regular atan() fails at 0,0
+float atan2(float y, float x)
+{
+    return x == 0.0 ? sign(y)*pi/2 : atan(y, x);
+}
+
+
+void main() {
+	// atmoMask 1 = ground geometry, atmoMask 0 = cloud geometry
+	int atmoSteps;
+	if (advancedProcedurals){
+		atmoSteps = 8 - int(atmoSteps * 4.0); // reduce cloud iterations for softer shadows and performance
+	}
+	else if (simpleProcedurals){		
+		atmoSteps = 6 - int(atmoSteps * 3.0);
+	}
+	else{
+		atmoSteps = 4 - int(atmoSteps * 2.0);
+	}
+	// create cloud shadows and animated clouds
+	float shadow = abs(mod(uv.x + cycle - (1.0 - atmoMask), 1.0/8.0) * 8.0 - 0.5) * 2.0;
+	shadow = 1.0 - smoothstep(0.7,0.8, shadow) * 0.95;
+	float cloudSeamKill = 1.0 - max(0.0, abs((uv.x - 0.5) * 128.0) - 63.0);
+	float cloudDistort = noise(uv * vec2(32.0, 1.0) - vec2(time * 0.125, 0.0)) * 2.0 - 1.0;
+	float cloudAnimated = 1.0 - cloudMaker(uv * vec2(256.0, 8.0), vec2(time * 0.5, 0.0), atmoSteps, cloudDistort);
+	cloudAnimated *= cloudSeamKill * cloudSeamKill * (3.0 - cloudSeamKill * 2.0);
+	cloudAnimated = clamp(cloudAnimated * ((1.0 - atmoMask) * 0.5 + 1.0), 0.0, 1.0);
+	
+	// shared
+	vec3 v = normalize(npos);
+	vec4 n = vec4(normalize(normal), 0.5); // heightmap is stored in a later
+	vec2 NdotV = vec2(max(0.0, dot(n.xyz, v)), 0.0);
+	vec3 color  = vec3(0.0);
+	
+	// branch cloud shading off
+	if(atmoMask > 0.0){
+		vec4 splatMap = texture2D(surfaceData, uvB[0]) * 2.0;
+		for (int i = 0; i < 4; i++) {          
+			splatMap.rgb += texture2D(surfaceData, uvB[i+1]).rgb;
+		}
+		splatMap.rgb *= 0.166666666;
+		splatMap.b = pow(max(0.0,(splatMap.b - 0.5)* 2.0), 0.25);
+		vec2 uvS = uv2;
+		
+		vec3 r = n.xyz;
+		vec4 albedoR = vec4(0.0); // pure color of a surface and roughness
+		vec3 substance = vec3(0.0); // essentially an rgb specular color extracted from the albedo through metalness
+		float metalness = 0.0; // dielectric or metallic surface
+		float cavity = 0.5; // hard multiplier
+		float ao = 1.0; // detail occluder for lights
+		
+		// results
+		vec3 lights = vec3(0.0);
+		vec3 citylights = vec3(0.0);
+		
+		// because we have two uvs, for poles and equator, to avoid polar distortions and hide tiling, we need to run most things twice
+		mat3 TBN = mat3(0.0);
+			
+			// build splatting basis
+			vec3 detailSamp = vec3(texture2D(biomes, uvS + biomesPicks[0].xy).a, texture2D(biomes, uvS + biomesPicks[1].xy).a, texture2D(biomes, uvS + biomesPicks[2].xy).a);
+		
+		vec3 splatMaskMixed = vec3(detailSamp.r + detailSamp.g, detailSamp.g + detailSamp.b, detailSamp.b); // last one comes later
+		
+		splatMaskMixed = min(vec3(1.0), (splatMaskMixed.rgb + splatMap.rgb) * splatMap.rgb);
+		
+		// optional
+		splatMaskMixed = pow(splatMaskMixed.rgb, vec3(splatSharpness));
+		
+		// create combined detail texture and calculate weighted splat mapping for the two uv sets
+		detailSamp.r = mix(mix(detailSamp.r, detailSamp.g, splatMaskMixed.r), detailSamp.b, splatMaskMixed.g) - splatMap.b;   
+		
+		if (normalMapping){
+		
+			vec3 dp1 = dp1Calc(-v);
+			vec3 dp2 = dp2Calc(-v);
+			// derive for both uv's
+			vec2 duv1 = duv1Calc(uvS);
+			vec2 duv2 = duv2Calc(uvS);
+		
+			vec3 dp2perp = cross(dp2, n.xyz);
+			vec3 dp1perp = cross(n.xyz, dp1);
+		
+			// create matrix A
+			vec3 tangent = dp2perp * duv1.x + dp1perp * duv2.x;
+			vec3 binormal = dp2perp * duv1.y + dp1perp * duv2.y;
+			float invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+			TBN = mat3(tangent * invmax, binormal * invmax, n.xyz);
+			
+			if (parallax){
+		
+				// water depth refraction
+				float depthRefraction = mix(1.33,0.66, square(NdotV.r)); // water refraction index is 1.33, square so transparency wont cancel it out later
+				detailSamp.r *= mix(depthRefraction, 1.0, ceil(1.0 - detailSamp.r));
+			
+				// do parallax
+				float fDet = dot(dp1, dp2perp);
+				vec2 vProjVScr = (1.0/fDet) * vec2(dot(dp2perp, v), dot(dp1perp, v));
+				vec2 vProjVTex = (duv1 * vProjVScr.x + duv2 * vProjVScr.y);
+				float vProjVTexZ = NdotV.r * (detailSamp.r * scaleBias.r - scaleBias.g);
+		
+				uvS += vProjVTex * vProjVTexZ;
+			}
+		}
+		// sample all four biomes once for each of the first two uv sets
+		vec4 firstbiome    = texture2D(biomes, uvS + biomesPicks[0].xy);//red
+		vec4 secondbiome   = texture2D(biomes, uvS + biomesPicks[1].xy);//green
+		vec4 thirdbiome    = texture2D(biomes, uvS + biomesPicks[2].xy);//black
+		
+		// mix the normals cavity and resampled heightmap
+		vec4 dataSamp = mix(mix(firstbiome, secondbiome, splatMaskMixed.r), thirdbiome, splatMaskMixed.g);
+			float waterMask = clamp(floor((dataSamp.a + splatMap.b) * splatMap.b), 0.0, 1.0);
+		
+		dataSamp.a = dataSamp.b - splatMap.b;
+		dataSamp.z = max(0.0, ceil(dataSamp.a));
+		
+		dataSamp.x = mix(0.5, dataSamp.x, dataSamp.z);
+		ao = min(1.0,(dataSamp.x * 2.0));
+		
+		vec4 textureNoise = texture2D(differenceNoise, uvNoise.xy);
+		vec2 waterNorms = vec2(mix(vec2(textureNoise.r, textureNoise.g), vec2(textureNoise.g, textureNoise.b), pulse)) - 0.5;// // could maybe be replaced by a small simple 2D noise function
+			
+		float underWaterBlur = pow((1.0 - dataSamp.z) * (1.0 - dataSamp.a - 1.0), 0.5) * 7.0 + 1.0;
+		vec4  city	= texture2D(cities, uvS * vec2(4.0, 2.0), underWaterBlur);
+		citylights = texture2D(cityGlow, uvS.xy * vec2(4.0, 2.0), underWaterBlur).rgb;
+		
+		float citySplat = clamp(pow5((1.0 - abs(dataSamp.a - 0.5) * 0.2)) * (abs(city.a - 0.5) + city.a) * splatMap.a, 0.0, 1.0);
+		
+		if (normalMapping){  
+			// perform TBN matrix multiplication for each of the two normal maps separately and mix, save instructions by mix in height in alpha.
+		
+			n.xy = vec2(mix(dataSamp.xy, city.xy, citySplat));
+			n *= 2.0;
+			n -=1.0;
+			//create waterNormalMap
+			n.xy = mix(waterNorms * 0.1, n.xy, dataSamp.z);       
+		
+			n.xyz = mix(vec3(0.0,0.0,1.0), vec3(n.xy, deriveZ(n.xy)), atmoMask);
+			n = vec4(normalize(TBN * n.xyz), dataSamp.a);
+		
+			r = normalize(reflect(-v, n.xyz));		
+		}
+		
+		NdotV.r = dot(n.xyz, v);
+		NdotV.g = (1.0 - NdotV.r) * 0.5 + 0.5;
+		NdotV = max(vec2(0.0), NdotV);
+		
+			vec3 cityData = vec3(city.ba, citySplat);
+		// create combined lookup gradients for all four biomes, clamped to not wrap the texture.
+		vec3 albedoGradients = vec3(firstbiome.a, secondbiome.a, thirdbiome.a);
+		// and make the flat slopes have less color shifts - think silt vs cliff sides.
+		albedoGradients = clamp(1 - albedoGradients,  vec3(0.00390625), vec3(0.984375));
+			vec3 lookUpValue = vec3(biomesPicks[0].z,biomesPicks[1].z,biomesPicks[2].z) + vec3(biomesPicks[0].w,biomesPicks[1].w,biomesPicks[2].w) * poleMask;
+		// sample albedo and roughness from lookup table
+		vec4 firstBiomesAlbedoR = texture2D(lookup,  vec2(lookUpValue.x, albedoGradients.r)); //, 0.0
+		vec4 secondBiomesAlbedoR = texture2D(lookup, vec2(lookUpValue.y, albedoGradients.g)); //, 0.0
+		vec4 thirdBiomesAlbedoR = texture2D(lookup,  vec2(lookUpValue.z, albedoGradients.b)); //, 0.0
+		// create final splatmap , save instructions by mix in cavity in alpha.
+		vec4 albedoSplatCavity = vec4(splatMaskMixed, dataSamp.b);
+		
+		// mix final albedo and tweak with cavity roughness values
+		albedoR = mix(mix(firstBiomesAlbedoR, secondBiomesAlbedoR, albedoSplatCavity.r), thirdBiomesAlbedoR, albedoSplatCavity.g);
+			cityData.rg = cityData.rg * 0.33 + 0.5;
+			albedoR = mix(albedoR, vec4(playerPlateProfile.rgb * cityData.g, playerPlateProfile.a) * cityData.r, cityData.b);
+		
+		// creates ocean color
+		vec3 oceanColor = texture2D(lookup, vec2(biomesPicks[0].z, max(0.995, waterMask * 0.05))).rgb; //  from 0.0065 to 0.0025
+			
+		//creates lights
+		citylights.rg *= (1.5 - underWaterBlur * 0.1) * min(1.0, cityData.b + (1.0 - dataSamp.z) * 0.5 * splatMap.a);
+		citylights.g *= 0.5;
+		citylights.b *= splatMap.a * 0.5;
+		citylights = clamp(vec3(population) - vec3(0.0, 15.0, 30.0), vec3(0.0), vec3(1.0)) * citylights * emissiveIntensity;
+		citylights = toLinear(citylights.r * colorLightsPrimary) + toLinear(citylights.g * colorLightsSecondary) + toLinear(citylights.b * colorLightsTertiary);
+		citylights *= min(vec3(1.0), square(oceanColor.rgb) + dataSamp.z);
+		
+		// creates oceans
+		albedoR = mix(vec4((oceanColor / (1.0 + (1.0 - NdotV.y) * 0.75)) * mix(min(1.0, dataSamp.y * dataSamp.x * pow3(splatMap.b) * 16.0 + 0.25), 1.0, NdotV.y), 0.25), albedoR, dataSamp.z);
+		
+		// clamp to keep in PBR safe ranges - nothing in reality either albedo nor roughness is 0 or 1 and can make the math fail
+		albedoR = clamp(albedoR, vec4(0.05), vec4(0.975));
+		
+		
+		// create sss mask
+		vec4 invertedAlbedo = 1.0 - albedoR;   
+		float SSSmask = mix(NdotV.r * 0.5 + 0.5, 1.0 - min(1.0, pow8((1.0 - invertedAlbedo.a * invertedAlbedo.b) * (1.0 - invertedAlbedo.r * invertedAlbedo.g))) * dataSamp.y * dataSamp.x, dataSamp.z);
+		
+		// creates a metalness value if biomes are above 1950 on the lookup, for metallic specular on crystals.
+		metalness = square(n.a) * ceil(mix(mix(biomesPicks[0].z, biomesPicks[1].z, albedoSplatCavity.r), biomesPicks[2].z, albedoSplatCavity.g) - 0.9521484375) * dataSamp.z;
+		// Substance setup and Albedo adjust
+		albedoR.rgb = toLinear(albedoR.rgb);
+		substance = clamp((0.04 - 0.04 * metalness) + albedoR.rgb * metalness,0.0, 1.0);
+		albedoR.rgb -= substance;
+			
+		// actual shading starts here
+		vec3 ambientFresnel = Fresnel2(substance, NdotV.r ,albedoR.a);
+		
+		if (advancedAmbience){
+			
+			color += square((textureCube(skybox, r, sqrt(albedoR.a) * 8.0).rgb) + 0.024) * ambientFresnel;
+		
+			// ambient light
+			color += square(textureCube(skybox, n.xyz, 8.0).rgb + 0.024) * albedoR.rgb * (1.0 - ambientFresnel);
+		}
+		else if (simpleAmbience){
+			// Ambient reflections with fix mip and n instead of refect
+			color += square(textureCube(skybox, r, 3.0).rgb * ambientFresnel);
+		
+			// Ambient light - average color of skybox squared
+			color += vec3(0.006724, 0.014884, 0.067081) * albedoR.rgb * (1.0 - ambientFresnel);
+		}
+		else{
+			// Ambient 
+			color += vec3(0.006724, 0.014884, 0.067081) * (ambientFresnel + albedoR.rgb * (1.0 - ambientFresnel));
+		}
+		color *= ao;
+		float cloudShadow = 1.0 - cloudAnimated;
+
+		if (pbrLight){	
+	
+			for (int i = 0; i < nLightCount; i++) {
+				float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+				// rest is world space
+	
+				vec3 L = normalize(light[i] / distance);
+				vec2 NdotL = max(vec2(0.0), vec2(dot(mix(n.xyz, normalize(normal), 0.5),L) * 0.8 + 0.2, dot(n.xyz,L)));
+	
+				float sqrLightRadius = square(lightRadius[i]);
+				float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L) )));
+							
+				// note the square to kill hard spec in deep space!
+				float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+				+ gl_LightSource[i].linearAttenuation * distance
+				+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL.x  * shadow;
+				
+				citylights *= clamp(1.0 - attenuation, 0.0, 1.0) * atmoMask;
+	
+				if (attenuation >0.0){
+					vec3 VplusL = L + v * 0.5; // *0.5 is not correct but without it grazing angle specular fails, propably somewhere something is flipped space/normal space
+					vec3 halfVec = normalize(VplusL);
+					float HdotN = max(0.0, dot(halfVec, n.xyz));
+					vec3 F = Fresnel(substance, L, halfVec);
+					float D = max(0.0, D_GGX(HdotN, albedoR.a));
+					float V = max(0.0, V_SchlickforGGX((1.0 + albedoR.a) * 0.5, NdotV.r, NdotL.y));
+					float O = OrenNayerforDiffuseOnly(albedoR.a, NdotL.y, NdotV.r);
+					
+					vec3 A = vec3(1.0);
+					vec3 SSS = vec3(0.0);
+					if (scattering) {
+						// atmospheric light tinting simulating scattering
+						A = vec3(paletteAtmoTint(1.0 - max(0.0, min(0.33, dot(normal,L) * square(shadow)) + 0.15)));
+					
+						// sub surface scattering model
+						float inScatter = pow(clamp(dot(L, -v), 0.0, 1.0), 12.0) * mix(8.0, 0.1, SSSmask);
+						float normalContribution = clamp(dot(mix(normal, n.xyz, SSSmask), halfVec) * SSSmask + 1.0 - SSSmask, 0.0, 1.0);
+						float backScatter = dataSamp.x * normalContribution / tau;
+						SSS = mix(backScatter, 1.0, inScatter) * square(oceanColor) * NdotL.x;    
+					}
+					color += ((D * V * F) + ((1.0 - F) * O * albedoR.rgb) + SSS) * cloudShadow * gl_LightSource[i].diffuse.rgb * attenuation;		
+				}
+			}
+			// hard cavity multiplier
+			color *= dataSamp.x - metalness + 1.0;
+		}
+			// probably not worth it to check attenuation like pbr
+		else{
+		
+			for (int i = 0; i < nLightCount; i++) {	
+				float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+				// rest is world space
+	
+				vec3 L = normalize(light[i] / distance);
+				float NdotL = max(0.0, dot(n.xyz,L));
+				
+				float sqrLightRadius = square(lightRadius[i]);
+				float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+				
+				// note the square to kill hard spec in deep space!
+				float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+				+ gl_LightSource[i].linearAttenuation * distance
+				+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL;
+				
+				citylights *= clamp(1.0 - attenuation, 0.0, 1.0);
+				vec3 VplusL = L + v; 
+				vec3 halfVec = normalize(VplusL);
+				float HdotN = max(0.0, dot(halfVec, n.xyz));
+				vec3 S = Fresnel2(substance, HdotN ,albedoR.a);
+				// albedoR.rgb * (dataSamp.x * 0.75) to sorta hack albedo into a classical diffuse texture
+				color += max(vec3(0.001), albedoR.rgb * (dataSamp.x * 0.75) + pow(S * HdotN, vec3(albedoR.a + 5.0))) * gl_LightSource[i].diffuse.rgb * attenuation;
+			}
+		}
+		gl_FragColor.rgb = toGamma(clamp(color + lights + citylights, vec3(0.0), vec3(1.0)));	
+		gl_FragColor.a = 1.0;
+	}
+	else{
+		float atmosphere = 1.0 - NdotV.r;	
+		for (int i = 0; i < nLightCount; i++) {
+			// atmo color is terran atmosphere blue part precalculated to linear
+			color += mix(vec3(0.218,0.456,0.978) * atmosphere, gl_LightSource[i].diffuse.rgb, cloudAnimated) * shadow;
+		}
+		gl_FragColor.rgb = toGamma(color);
+		gl_FragColor.a = mix(square(atmosphere) * 0.75, cloudAnimated, cloudAnimated);
+	}
+}

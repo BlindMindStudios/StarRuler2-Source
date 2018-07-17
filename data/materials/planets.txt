@@ -1,0 +1,88 @@
+Material: TerranAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: TerranAtmosphere
+	Shininess: 1.5
+	Texture: data/images/atmosphere.png
+
+Material: FlatAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: FlatAtmosphere
+	Shininess: 1.5
+	DepthTest: Always
+	DepthWrite: False
+	Texture: data/images/atmosphere.png
+
+Material: DustyAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: DustyAtmosphere
+	Shininess: 1.5
+	Texture: data/images/atmosphere_thin.png
+
+Material: IceAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: IceAtmosphere
+	Shininess: 1.5
+	Texture: data/images/atmosphere_thin.png
+
+Material: VulcanicAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: VulcanicAtmosphere
+	Shininess: 1.5
+	Texture: data/images/atmosphere_thin.png
+	
+Material: CrystalAtmosphere
+	WrapVertical: ClampEdge
+	Blend: Alpha
+	Shader: CrystalAtmosphere
+	Shininess: 1.5
+	Texture: data/images/atmosphere_thin.png
+
+Material: GuiPlanetSurface
+	LoadPriority: Game
+	Texture: data/images/planets/biomes.png
+	Texture2: data/images/planets/biome_lookup.png
+
+Material: ProceduralPlanet
+	Shader: ProceduralPlanet
+	LoadPriority: Low
+	Texture: data/images/planets/biomes.png
+	Texture2: data/images/planets/cities.png
+	Texture3: data/images/difference_noise2.png
+	Texture4: data/images/planets/biome_lookup.png
+	Texture5: data/images/planets/city_glow.png
+	Cubemap7: data/images/skycube.png
+
+Material: ProceduralMoon
+    Shader: ProceduralMoon
+    LoadPriority: Low
+    Texture: data/images/planets/biomes.png
+    Texture2: data/images/planets/cities.png
+    Texture3: data/images/planets/biome_lookup.png
+    Texture4: data/images/planets/city_glow.png
+    Cubemap7: data/images/skycube.png
+
+Material: CrystalSurface
+	Shader: CrystalSurface
+	LoadPriority: Low
+	Shininess: 10
+	Texture: data/images/planets/crystallic-small.png
+	Texture2: data/images/planets/crystallic_glow-small.png
+	Texture3: data/images/planets/crystallic_normal-small.png
+	Texture4: data/images/planets/cities.png
+	Texture5: data/images/difference_noise.png
+
+Material: RingworldSurface
+	Blend: Alpha
+	Shader: RingworldSurface
+	LoadPriority: Low
+	Texture: data/images/planets/biomes.png
+	Texture2: data/images/planets/cities.png
+	Texture3: data/images/difference_noise2.png
+	Texture4: data/images/planets/biome_lookup.png
+	Texture5: data/images/planets/city_glow.png
+	Cubemap7: data/images/skycube.png

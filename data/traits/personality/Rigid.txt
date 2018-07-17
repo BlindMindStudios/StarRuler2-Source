@@ -1,0 +1,14 @@
+Trait: Rigid
+	Name: #TRAIT_RIGID
+	Description: #TRAIT_RIGID_DESC
+	Category: Personality
+	Order: 1
+
+	Conflict: Innovative
+
+	Color: #ffaaaa
+	Icon: ResourceIcon::4 * #ff8888
+
+	Gives Points: 1
+
+	ModAttribute(ForbidSecondaryUnlock, Add, +1)

@@ -1,0 +1,16 @@
+Technology: GravityEngine
+	Name: #R_SYS_GRAVITY_ENGINE
+	Description: #R_SYS_GRAVITY_ENGINE_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: HexagonSubsystems::5
+	Color: #e0f946
+	
+	UnlockSubsystem(GravityEngine)
+	SkipOnUnlockedSubsystem(GravityEngine)
+
+	SecondaryEnergyCost(1000)

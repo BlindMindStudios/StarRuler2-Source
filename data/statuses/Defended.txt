@@ -1,0 +1,8 @@
+Status: Defended
+	Name: #STATUS_DEFENDED
+	Description: #STATUS_DEFENDED_DESC
+	Icon: ResourceIcon::5
+
+	Unique: True
+
+	Repeat(5, AddTurret(Railgun, Range=250, Damage=2, Reload=0.2, Speed=100, Spread=0.06, FireArc=3.14, Tracking=0.4, FireTolerance=0.78))

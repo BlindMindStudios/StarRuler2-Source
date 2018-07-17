@@ -1,0 +1,25 @@
+Technology: ImpSupportDamage
+	Name: #R_IMP_SUPPORT_DAMAGE
+	Blurb: #R_IMP_SUPPORT_DAMAGE_BLURB:20%
+	Description: #R_IMP_SUPPORT_DAMAGE_DESC:20%
+
+	Icon: AttributeIcons::3 * #ff8000
+	Color: #ff8000
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	AddModifier( tag/Weapon,hull/Support::DamageFactor(1.2) )
+
+Technology: ImpSupportDamage2
+	Name: #R_IMP_SUPPORT_DAMAGE2
+	Blurb: #R_IMP_SUPPORT_DAMAGE_BLURB:40%
+	Description: #R_IMP_SUPPORT_DAMAGE_DESC:40%
+
+	Icon: AttributeIcons::3 * #ff8000
+	Color: #ff8000
+
+	Point Cost: 1500
+	Time Cost: 180
+
+	AddModifier( tag/Weapon,hull/Support::DamageFactor(1.4) )

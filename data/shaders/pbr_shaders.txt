@@ -1,0 +1,261 @@
+Shader: Debris
+	Vertex: data/shaders/source/pbr_debris_vs.txt
+	Fragment: data/shaders/source/pbr_debris_lodding_ps.txt
+	Settings Reload: True
+
+	Variable: tex wreckage = 0
+	Variable: tex skybox = 1
+	Variable: vec4 wsRot = node_rotation
+	Variable: float life = global LIFE
+	Variable: float[2] lightRadius = light_radius 0 1
+
+Shader: AsteroidTonalite
+    Vertex: data/shaders/source/asteroid_mine_vs.txt
+    Fragment: data/shaders/source/asteroid_mine_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex normalMap = 0
+    Variable: tex emissive = 1
+    Variable: tex skybox = 2
+    Variable: float mineBuild = state_vars Asteroid::HasBase
+    Variable: vec3[2] colors = <1.0,1.0,1.0> <1.0,0.0,0.0>
+    Variable: vec4 ownerColor = node_color
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+ 
+Shader: AsteroidMagnetite
+    Vertex: data/shaders/source/asteroid_mine_vs.txt
+    Fragment: data/shaders/source/asteroid_mine_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex normalMap = 0
+    Variable: tex emissive = 1
+    Variable: tex skybox = 2
+    Variable: float mineBuild = state_vars Asteroid::HasBase
+    Variable: vec3[2] colors = <0.8,0.43,0.3> <0.0,1.0,1.0>
+    Variable: vec4 ownerColor = node_color
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+ 
+Shader: AsteroidPegmatite
+    Vertex: data/shaders/source/asteroid_mine_vs.txt
+    Fragment: data/shaders/source/asteroid_mine_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex normalMap = 0
+    Variable: tex emissive = 1
+    Variable: tex skybox = 2
+    Variable: float mineBuild = state_vars Asteroid::HasBase
+    Variable: vec3[2] colors = <0.8,0.66,0.47> <0.0,0.0,0.8>
+    Variable: vec4 ownerColor = node_color
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+ 
+Shader: PBRShipFlag
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_ship_flag_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: float time = game_time_cycle 64.0
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+   
+    Variable: int flagNumber = emp_flag
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float acceleration = obj_acceleration
+    Variable: float velocity = obj_velocity
+   
+// supports dont use transparency and don't generate shields or support flags
+Shader: PBRShipSupport
+    Vertex: data/shaders/source/pbr_common_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_ship_support_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: float time = game_time_cycle 64.0
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+   
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float acceleration = obj_acceleration
+    Variable: float velocity = obj_velocity
+   
+Shader: PBRStations
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_stations_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: float time = game_time_cycle 64.0
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+   
+    Variable: int flagNumber = emp_flag
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+ 
+Shader: PBRStations_Beacon
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_stations_beacon_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: float time = game_time_cycle 64.0
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+ 
+    Variable: int flagNumber = emp_flag    
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+ 
+Shader: PBRStations_FTLStorage
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_stations_ftl_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+ 
+    Variable: int flagNumber = emp_flag    
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float time = game_time_cycle 64.0
+ 
+Shader: PBRStations_Habitat
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_stations_habitat_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: int flagNumber = emp_flag    
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex biome = 5
+    Variable: tex skybox = 6
+   
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float time = game_time_cycle 64.0
+ 
+ 
+Shader: PBRStations_Forge
+    Vertex: data/shaders/source/pbr_common_flag_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_stations_forge_lodding_ps.txt
+    Settings Reload: True
+   
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex biome = 5
+    Variable: tex skybox = 6
+ 
+    Variable: int flagNumber = emp_flag    
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float time = game_time_cycle 64.0
+
+Shader: PBRShipRemnant
+    Vertex: data/shaders/source/pbr_common_remnant_lodding_vs.txt
+    Fragment: data/shaders/source/pbr_ship_remnant_lodding_ps.txt
+   Settings Reload: True
+ 
+    Variable: float time = game_time_cycle 64.0
+    Variable: tex diffuse = 0
+    Variable: tex normals = 1
+    Variable: tex masks = 2
+    Variable: tex damaged = 3
+    Variable: tex emissives = 4
+    Variable: tex skybox = 5
+   
+    Variable: vec4 ownerColor = node_color
+    Variable: float camDist = node_distance
+    Variable: float nodeScale = node_scale
+    Variable: vec4 damage = obj_quadrant_damage
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: float acceleration = obj_acceleration
+    Variable: float velocity = obj_velocity
+
+Shader: PBRShipSeed
+	Vertex: data/shaders/source/pbr_common_remnant_lodding_vs.txt
+	Fragment: data/shaders/source/pbr_ship_seed_lodding_ps.txt
+   Settings Reload: True
+ 
+	Variable: float time = game_time_cycle 64.0
+	Variable: tex diffuse = 0
+	Variable: tex normals = 1
+	Variable: tex masks = 2
+	Variable: tex damaged = 3
+	Variable: tex emissives = 4
+	Variable: tex skybox = 5
+   
+	Variable: vec4 ownerColor = node_color
+	Variable: float camDist = node_distance
+	Variable: float nodeScale = node_scale
+	Variable: vec4 damage = obj_quadrant_damage
+	Variable: float[2] lightRadius = light_radius 0 1
+	Variable: vec4 wsRot = node_rotation
+	Variable: float acceleration = obj_acceleration
+	Variable: float velocity = obj_velocity
+
+Shader: PBR_obelisk
+    Vertex: data/shaders/source/obelisk_vs.txt
+    Fragment: data/shaders/source/obelisk_lodding_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex model = 0
+    Variable: tex detail = 1
+    Variable: tex skybox = 2
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation

@@ -1,0 +1,27 @@
+Technology: DevInfluenceIncome
+	Name: #R_DEV_INFLUENCE_INCOME
+	Blurb: #R_DEV_INFLUENCE_INCOME_BLURB:3
+	Description: #R_DEV_INFLUENCE_INCOME_DESC:3
+	Class: Boost
+
+	Point Cost: 1000
+	Time Cost: 60
+
+	Icon: ResourceIcon::1
+	Color: #0087c7
+
+	AddInfluenceStake(3)
+
+Technology: DevInfluenceIncome2
+	Name: #R_DEV_INFLUENCE_INCOME2
+	Blurb: #R_DEV_INFLUENCE_INCOME_BLURB:6
+	Description: #R_DEV_INFLUENCE_INCOME_DESC:6
+	Class: Boost
+
+	Point Cost: 1500
+	Time Cost: 100
+
+	Icon: ResourceIcon::1
+	Color: #0087c7
+
+	AddInfluenceStake(6)

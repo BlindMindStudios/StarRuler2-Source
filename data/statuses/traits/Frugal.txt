@@ -1,0 +1,7 @@
+Status: Frugal
+	Visible To: Nobody
+
+	IfLevel(2, AddDummyResource(Textiles, 1)) #version<154
+	IfLevel(3, AddDummyResource(Textiles, 1)) #version<154
+
+	IfLevel(2, IfAvailableOfTier(1, 1, AddDummyResource(Textiles, 1), Enabled Mod = -1)) #version>=154

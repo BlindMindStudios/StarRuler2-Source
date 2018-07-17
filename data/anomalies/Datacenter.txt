@@ -1,0 +1,31 @@
+Anomaly: Datacenter
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State:
+		Narrative: #ANOMALY_NAR_DATACENTER
+
+		Model: Asteroid1
+		Material: AsteroidPegmatite
+
+		Choice: Read
+		Choice: Recover
+
+	Option: Read
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_DATACENTER_READ
+
+		RandomMapVision(5)
+
+	Option: Recover
+		Icon: CardCategoryIcons::1
+		Description: #ANOMALY_DATACENTER_RECOVER
+
+		Result: 20%
+			SendMessage(#ANOMALY_DATACENTER_RECOVER_SUCCEED)
+			AddResearchPoints(500, Modified = False, Penalized = False)
+			RandomMapVision(5)
+		
+		Result: 80%
+			SendMessage(#ANOMALY_DATACENTER_RECOVER_FAIL)
+			RandomMapVision(2)

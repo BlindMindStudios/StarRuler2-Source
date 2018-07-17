@@ -1,0 +1,23 @@
+Building: Factory
+	Name: #BLD_FACTORY
+	Description: #BLD_FACTORY_DESC
+	Sprite: Factory
+
+	Category: Production
+
+	Size: 3x3
+	Base Cost: 20
+	Tile Cost: 20
+	Base Maintenance: 150
+	Tile Maintenance: 15
+
+	AddResource(Labor, 3)
+	AddResourceEmpireAttribute(Labor, FactoryLaborMod)
+	ModConstructionHPBonusAttribute(FactoryHPMod) #version>=147
+
+	RequireNotTrait(Ancient)
+
+	ShowAttributeValue(#RESOURCE_LABOR, FactoryLaborMod, Base Amount = 3, Icon = ResourceIcon::6, Suffix = #PER_MINUTE)
+	ShowAttributeValue(#CONS_HP_BONUS, FactoryHPMod, Icon = AttributeIcons::6, Multiplier = 100, Suffix = %, Hide Zero = True)
+
+	AI: RegisterForUse(Factory)

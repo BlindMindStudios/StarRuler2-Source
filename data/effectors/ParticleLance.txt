@@ -1,0 +1,47 @@
+Effector: ParticleLance
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 0.8
+	Value: CapOnTarget = 1
+	Value: Spread = 0.05
+	Value: FireArc = 0.5 * pi
+	Value: TargetTolerance = 0
+	Value: FireTolerance = 0
+	Value: SupplyCost = 0
+	Value: IgnoreDR = 0
+
+	Range: Range * 0.9
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+	CapTarget: CapOnTarget
+	Spread: Spread
+	FireArc: FireArc
+	FireTolerance: FireTolerance
+	TargetTolerance: TargetTolerance
+
+	Pierces: True
+	RecoverTime: 1.0
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Partial
+	Activation: StaggeredTimed(Reload, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: LineDamage
+		Damage = Damage
+
+	PhysicalType: Projectile
+		GfxType: Beam
+		GfxSize: 0.5
+		GfxLength: 20.0
+		FireSfx: railgun_fire
+		FireSfx: muon_fire
+		Material: ParticleLance
+		TrailCol: ff7600ff, ff8e00ff
+		ImpactGfx: ImpactFlareParticleLance

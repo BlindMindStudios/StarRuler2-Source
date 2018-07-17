@@ -1,0 +1,21 @@
+Resource: Phosphate
+	Name: #PHOSPHATE
+	Blurb: #PHOSPHATE_BLURB
+	Description: #PHOSPHATE_DESC
+	Native Biome: Ice
+	Class: Scalable
+
+	Small Icon: ResourceIconsSmall::62
+
+	Rarity Level: 3
+	Frequency: 2
+
+	Limitless Level: True
+	Exportable: False
+
+	IfLevel(0, AddRegionStatusOwnedSystems(AllyBuff5), Exact = True) #version>=111
+	IfLevel(1, AddRegionStatusOwnedSystems(AllyBuff10), Exact = True)
+	IfLevel(2, AddRegionStatusOwnedSystems(AllyBuff15), Exact = True)
+	IfLevel(3, AddRegionStatusOwnedSystems(AllyBuff25), Exact = True)
+	IfLevel(4, AddRegionStatusOwnedSystems(AllyBuff40), Exact = True)
+	IfLevel(5, AddRegionStatusOwnedSystems(AllyBuff60), Exact = True)

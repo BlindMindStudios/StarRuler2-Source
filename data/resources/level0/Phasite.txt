@@ -1,0 +1,15 @@
+Resource: Phasite
+	Name: #PHASITE
+	Description: #PHASITE_DESC
+	Native Biome: Ice
+
+	Icon: ResourceIcons::24
+	Small Icon: ResourceIconsSmall::24
+
+	Level: 0
+	Rarity: Uncommon
+	Affinity: Research
+
+	Pressure: 2 Research
+	PopResearch(0.2) #version<132
+	PerPopulationAddResource(0.2, Research) #version>=132

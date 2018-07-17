@@ -1,0 +1,26 @@
+Card: EnergyClash
+	Name: #CARD_ENERGY_CLASH
+	Description: #CARD_ENERGY_CLASH_DESC
+
+	Icon: CardIcons::3
+	Color: #42b4bd
+
+	Class: Support
+	Frequency: 7
+	Rarity: Common
+	Side: Both
+
+	Min Uses: 2
+	Max Uses: 5
+
+	Base Purchase Cost: 0
+	Uses Purchase Cost: 1
+
+	Base Weight: 2
+
+	PlayEnergyCostPerPlay(Base Cost = 200, Per Play = 100, Same Side = False)
+	WeightPerPlay(Weight = 2, Same Side = False)
+
+	LogVoteEvent(Support = #CARD_ENERGY_CLASH_LOG_Y, Oppose = #CARD_ENERGY_CLASH_LOG_N)
+
+	AI: VoteSupport()

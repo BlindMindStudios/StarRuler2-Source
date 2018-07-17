@@ -1,0 +1,13 @@
+varying vec3 normal, pos;
+
+void main() {
+	vec3 vert = gl_Vertex.xyz;
+	vert += normalize(vert) * 0.02 + gl_Normal.xyz * (0.03 * (2.0 - length(vert)));
+	
+	normal = (gl_NormalMatrix * gl_Normal).xyz;
+	vec4 tVert = gl_ModelViewProjectionMatrix * vec4(vert, 1.0);
+	pos = tVert.xyz;
+	gl_Position = tVert;
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

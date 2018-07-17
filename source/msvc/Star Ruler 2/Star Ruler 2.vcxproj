@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Scripts|Win32">
+      <Configuration>Debug Scripts</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Scripts|x64">
+      <Configuration>Debug Scripts</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Non-Steam Release|Win32">
+      <Configuration>Non-Steam Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Non-Steam Release|x64">
+      <Configuration>Non-Steam Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{50CA85BE-6640-4824-8CB6-9D65F77518F6}</ProjectGuid>
+    <RootNamespace>StarRuler2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win32\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win32\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win64\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|x64'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win64\</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|x64'">
+    <OutDir>$(SolutionDir)..\..\..\bin\win64\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN_MODE;WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win32\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;steam_api.lib;DbgHelp.lib;zdll.lib;opengl32.lib;glew32.lib;libpng.lib;glfw.lib;glu32.lib;freetype247.lib;Shlwapi.lib;Shell32.lib;angelscriptd.lib;as_addonsd.lib;soundd.lib;utild.lib;osd.lib;networkd.lib;libcurld.lib;libircclientd.lib</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN_MODE;WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win32\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;steam_api.lib;DbgHelp.lib;zdll.lib;opengl32.lib;glew32.lib;libpng.lib;glfw.lib;glu32.lib;freetype247.lib;Shlwapi.lib;Shell32.lib;angelscriptd.lib;as_addonsd.lib;soundd.lib;utild.lib;osd.lib;networkd.lib</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NSTEAM;WIN_MODE;WIN32;_DEBUG;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win64\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;DbgHelp.lib;zlibwapi.lib;opengl32.lib;glew32.lib;libpng64.lib;glfw64.lib;glu32.lib;freetype247_64.lib;Shlwapi.lib;Shell32.lib;angelscript64d.lib;as_addons64d.lib;sound64d.lib;util64d.lib;os64d.lib;network64d.lib;libcurl.lib;libircclient64d.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Scripts|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN_MODE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win64\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;steam_api64.lib;DbgHelp.lib;opengl32.lib;glew32.lib;libpng.lib;angelscript64.lib;glfw.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN_MODE;WIN32;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib\win32\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;steam_api.lib;DbgHelp.lib;zdll.lib;opengl32.lib;glew32.lib;libpng.lib;glfw.lib;glu32.lib;freetype247.lib;Shlwapi.lib;Shell32.lib;angelscript.lib;as_addons.lib;sound.lib;util.lib;os.lib;network.lib;libcurl.lib;libircclient.lib</AdditionalDependencies>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <SubSystem>
+      </SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NSTEAM;NDEBUG;WIN_MODE;WIN32;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib\win32\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;DbgHelp.lib;zdll.lib;opengl32.lib;glew32.lib;libpng.lib;glfw.lib;glu32.lib;freetype247.lib;Shlwapi.lib;Shell32.lib;angelscript.lib;as_addons.lib;sound.lib;util.lib;os.lib;network.lib;libcurl.lib;libircclient.lib</AdditionalDependencies>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <SubSystem>
+      </SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN_MODE;WIN32;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib\win64\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;steam_api64.lib;DbgHelp.lib;zlibwapi.lib;opengl32.lib;glew32.lib;libpng64.lib;glfw64.lib;glu32.lib;Shlwapi.lib;Shell32.lib;freetype247_64.lib;angelscript64.lib;as_addons64.lib;sound64.lib;util64.lib;os64.lib;network64.lib;libcurl.lib;libircclient64.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Non-Steam Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\game\;..\..\include\;..\..\include\glew\;..\..\glfw\include\;..\..\libpng\;..\..\angelscript\include\;..\..\freetype2\include\;..\..\sound\include\;..\..\as_addons\include\;..\..\os\include\;..\..\util\include\;..\..\network\include;..\..\rapidjson\include;..\..\libircclient\include;..\..\steam\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NSTEAM;NDEBUG;WIN_MODE;WIN32;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib\win64\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Advapi32.lib;DbgHelp.lib;zlibwapi.lib;opengl32.lib;glew32.lib;libpng64.lib;glfw64.lib;glu32.lib;Shlwapi.lib;Shell32.lib;freetype247_64.lib;angelscript64.lib;as_addons64.lib;sound64.lib;util64.lib;os64.lib;network64.lib;libcurl.lib;libircclient64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\game\as\as_binding_print.cpp" />
+    <ClCompile Include="..\..\game\as\as_jit.cpp" />
+    <ClCompile Include="..\..\game\design\design.cpp" />
+    <ClCompile Include="..\..\game\design\effect.cpp" />
+    <ClCompile Include="..\..\game\design\effector.cpp" />
+    <ClCompile Include="..\..\game\design\effector_functions.cpp" />
+    <ClCompile Include="..\..\game\design\hull.cpp" />
+    <ClCompile Include="..\..\game\design\projectiles.cpp" />
+    <ClCompile Include="..\..\game\design\subsystem.cpp" />
+    <ClCompile Include="..\..\game\empire.cpp" />
+    <ClCompile Include="..\..\game\empire_stats.cpp" />
+    <ClCompile Include="..\..\game\general_states.cpp" />
+    <ClCompile Include="..\..\game\gui\skin.cpp" />
+    <ClCompile Include="..\..\game\main.cpp" />
+    <ClCompile Include="..\..\game\main\console.cpp" />
+    <ClCompile Include="..\..\game\main\initialization.cpp" />
+    <ClCompile Include="..\..\game\main\input_handling.cpp" />
+    <ClCompile Include="..\..\game\main\logging.cpp" />
+    <ClCompile Include="..\..\game\main\profiler.cpp" />
+    <ClCompile Include="..\..\game\main\references.cpp" />
+    <ClCompile Include="..\..\game\main\save_load.cpp" />
+    <ClCompile Include="..\..\game\main\tick.cpp" />
+    <ClCompile Include="..\..\game\mods\mod_manager.cpp" />
+    <ClCompile Include="..\..\game\network\network_manager.cpp" />
+    <ClCompile Include="..\..\game\obj\blueprint.cpp" />
+    <ClCompile Include="..\..\game\obj\lock.cpp" />
+    <ClCompile Include="..\..\game\obj\object.cpp" />
+    <ClCompile Include="..\..\game\obj\object_saving.cpp" />
+    <ClCompile Include="..\..\game\obj\obj_group.cpp" />
+    <ClCompile Include="..\..\game\obj\universe.cpp" />
+    <ClCompile Include="..\..\game\os\glfw_driver.cpp" />
+    <ClCompile Include="..\..\game\physics\physics_world.cpp" />
+    <ClCompile Include="..\..\game\processing.cpp" />
+    <ClCompile Include="..\..\game\profile\keybinds.cpp" />
+    <ClCompile Include="..\..\game\profile\settings.cpp" />
+    <ClCompile Include="..\..\game\render\bmf_loader.cpp" />
+    <ClCompile Include="..\..\game\render\camera.cpp" />
+    <ClCompile Include="..\..\game\render\font_fnt.cpp" />
+    <ClCompile Include="..\..\game\render\font_ft2.cpp" />
+    <ClCompile Include="..\..\game\render\gl_driver.cpp" />
+    <ClCompile Include="..\..\game\render\gl_framebuffer.cpp" />
+    <ClCompile Include="..\..\game\render\gl_mesh.cpp" />
+    <ClCompile Include="..\..\game\render\gl_shader.cpp" />
+    <ClCompile Include="..\..\game\render\gl_texture.cpp" />
+    <ClCompile Include="..\..\game\render\gl_vertexBuffer.cpp" />
+    <ClCompile Include="..\..\game\render\lighting.cpp" />
+    <ClCompile Include="..\..\game\render\obj_loader.cpp" />
+    <ClCompile Include="..\..\game\render\ogex_loader.cpp" />
+    <ClCompile Include="..\..\game\render\render_state.cpp" />
+    <ClCompile Include="..\..\game\render\shader_states.cpp" />
+    <ClCompile Include="..\..\game\render\spritesheet.cpp" />
+    <ClCompile Include="..\..\game\render\x_loader.cpp" />
+    <ClCompile Include="..\..\game\resource\hot_loading.cpp" />
+    <ClCompile Include="..\..\game\resource\library.cpp" />
+    <ClCompile Include="..\..\game\resource\load_font.cpp" />
+    <ClCompile Include="..\..\game\resource\load_material.cpp" />
+    <ClCompile Include="..\..\game\resource\load_model.cpp" />
+    <ClCompile Include="..\..\game\resource\load_shader.cpp" />
+    <ClCompile Include="..\..\game\resource\load_skin.cpp" />
+    <ClCompile Include="..\..\game\resource\load_sound.cpp" />
+    <ClCompile Include="..\..\game\resource\locale.cpp" />
+    <ClCompile Include="..\..\game\scene\animation\anim_group.cpp" />
+    <ClCompile Include="..\..\game\scene\animation\anim_linear.cpp" />
+    <ClCompile Include="..\..\game\scene\animation\anim_node_sync.cpp" />
+    <ClCompile Include="..\..\game\scene\animation\anim_projectile.cpp" />
+    <ClCompile Include="..\..\game\scene\beam_node.cpp" />
+    <ClCompile Include="..\..\game\scene\billboard_node.cpp" />
+    <ClCompile Include="..\..\game\scene\frame_line.cpp" />
+    <ClCompile Include="..\..\game\scene\icon_node.cpp" />
+    <ClCompile Include="..\..\game\scene\line_trail_node.cpp" />
+    <ClCompile Include="..\..\game\scene\mesh_icon_node.cpp" />
+    <ClCompile Include="..\..\game\scene\mesh_node.cpp" />
+    <ClCompile Include="..\..\game\scene\node.cpp" />
+    <ClCompile Include="..\..\game\scene\particle_system.cpp" />
+    <ClCompile Include="..\..\game\scene\plane_node.cpp" />
+    <ClCompile Include="..\..\game\scene\scripted_node.cpp" />
+    <ClCompile Include="..\..\game\scene\culling_node.cpp" />
+    <ClCompile Include="..\..\game\scripts\binds.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_creation.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_data.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_datafile.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_design.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_dynamic.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_empire.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_events.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_formula.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_general.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_gui.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_inspection.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_irc.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_joystick.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_menu.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_network.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_savefile.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_object.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_profile.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_render.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_sound.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_threading.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_json.cpp" />
+    <ClCompile Include="..\..\game\scripts\bind_web.cpp" />
+    <ClCompile Include="..\..\game\scripts\context_cache.cpp" />
+    <ClCompile Include="..\..\game\scripts\generic_call.cpp" />
+    <ClCompile Include="..\..\game\scripts\manager.cpp" />
+    <ClCompile Include="..\..\game\scripts\script_bind.cpp" />
+    <ClCompile Include="..\..\game\scripts\script_components.cpp" />
+    <ClCompile Include="..\..\game\scripts\script_hooks.cpp" />
+    <ClCompile Include="..\..\game\scripts\script_type.cpp" />
+    <ClCompile Include="..\..\game\util\bbcode.cpp" />
+    <ClCompile Include="..\..\game\util\elevation_map.cpp" />
+    <ClCompile Include="..\..\game\util\format.cpp" />
+    <ClCompile Include="..\..\game\util\formula.cpp" />
+    <ClCompile Include="..\..\game\util\generic.cpp" />
+    <ClCompile Include="..\..\game\util\mesh_generation.cpp" />
+    <ClCompile Include="..\..\game\util\name_generator.cpp" />
+    <ClCompile Include="..\..\game\util\random.cpp" />
+    <ClCompile Include="..\..\game\util\save_file.cpp" />
+    <ClCompile Include="..\..\game\util\stat_history.cpp" />
+    <ClCompile Include="..\..\game\util\threaded_loader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\game\as\as_binding_print.h" />
+    <ClInclude Include="..\..\game\as\as_jit.h" />
+    <ClInclude Include="..\..\game\compat\gl.h" />
+    <ClInclude Include="..\..\game\compat\misc.h" />
+    <ClInclude Include="..\..\game\compat\regex.h" />
+    <ClInclude Include="..\..\game\design\design.h" />
+    <ClInclude Include="..\..\game\design\effect.h" />
+    <ClInclude Include="..\..\game\design\effector.h" />
+    <ClInclude Include="..\..\game\design\effector_functions.h" />
+    <ClInclude Include="..\..\game\design\hull.h" />
+    <ClInclude Include="..\..\game\design\projectiles.h" />
+    <ClInclude Include="..\..\game\design\subsystem.h" />
+    <ClInclude Include="..\..\game\empire.h" />
+    <ClInclude Include="..\..\game\empire_stats.h" />
+    <ClInclude Include="..\..\game\general_states.h" />
+    <ClInclude Include="..\..\game\gui\skin.h" />
+    <ClInclude Include="..\..\game\main\console.h" />
+    <ClInclude Include="..\..\game\main\game_platform.h" />
+    <ClInclude Include="..\..\game\main\gl_rendering.h" />
+    <ClInclude Include="..\..\game\main\initialization.h" />
+    <ClInclude Include="..\..\game\main\input_handling.h" />
+    <ClInclude Include="..\..\game\main\logging.h" />
+    <ClInclude Include="..\..\game\main\profiler.h" />
+    <ClInclude Include="..\..\game\main\references.h" />
+    <ClInclude Include="..\..\game\main\save_load.h" />
+    <ClInclude Include="..\..\game\main\tick.h" />
+    <ClInclude Include="..\..\game\main\version.h" />
+    <ClInclude Include="..\..\game\memory\AllocOnlyPool.h" />
+    <ClInclude Include="..\..\game\memory\MemoryPool.h" />
+    <ClInclude Include="..\..\game\mods\mod_manager.h" />
+    <ClInclude Include="..\..\game\network\network_manager.h" />
+    <ClInclude Include="..\..\game\network\player.h" />
+    <ClInclude Include="..\..\game\obj\lock.h" />
+    <ClInclude Include="..\..\game\obj\object.h" />
+    <ClInclude Include="..\..\game\obj\obj_group.h" />
+    <ClInclude Include="..\..\game\obj\universe.h" />
+    <ClInclude Include="..\..\game\os\driver.h" />
+    <ClInclude Include="..\..\game\os\glfw_driver.h" />
+    <ClInclude Include="..\..\game\os\key_consts.h" />
+    <ClInclude Include="..\..\game\os\resource.h" />
+    <ClInclude Include="..\..\game\physics\physics_world.h" />
+    <ClInclude Include="..\..\game\processing.h" />
+    <ClInclude Include="..\..\game\profile\keybinds.h" />
+    <ClInclude Include="..\..\game\profile\settings.h" />
+    <ClInclude Include="..\..\game\render\bmf_loader.h" />
+    <ClInclude Include="..\..\game\render\camera.h" />
+    <ClInclude Include="..\..\game\render\driver.h" />
+    <ClInclude Include="..\..\game\render\font.h" />
+    <ClInclude Include="..\..\game\render\gl_driver.h" />
+    <ClInclude Include="..\..\game\render\gl_framebuffer.h" />
+    <ClInclude Include="..\..\game\render\gl_mesh.h" />
+    <ClInclude Include="..\..\game\render\gl_shader.h" />
+    <ClInclude Include="..\..\game\render\gl_texture.h" />
+    <ClInclude Include="..\..\game\render\lighting.h" />
+    <ClInclude Include="..\..\game\render\obj_loader.h" />
+    <ClInclude Include="..\..\game\render\ogex_loader.h" />
+    <ClInclude Include="..\..\game\render\render_mesh.h" />
+    <ClInclude Include="..\..\game\render\render_state.h" />
+    <ClInclude Include="..\..\game\render\shader.h" />
+    <ClInclude Include="..\..\game\render\spritesheet.h" />
+    <ClInclude Include="..\..\game\render\texture.h" />
+    <ClInclude Include="..\..\game\render\vertexBuffer.h" />
+    <ClInclude Include="..\..\game\render\x_loader.h" />
+    <ClInclude Include="..\..\game\resource\library.h" />
+    <ClInclude Include="..\..\game\resource\locale.h" />
+    <ClInclude Include="..\..\game\resource\universe_node.h" />
+    <ClInclude Include="..\..\game\scene\animation\animator.h" />
+    <ClInclude Include="..\..\game\scene\animation\anim_group.h" />
+    <ClInclude Include="..\..\game\scene\animation\anim_linear.h" />
+    <ClInclude Include="..\..\game\scene\animation\anim_node_sync.h" />
+    <ClInclude Include="..\..\game\scene\animation\anim_projectile.h" />
+    <ClInclude Include="..\..\game\scene\beam_node.h" />
+    <ClInclude Include="..\..\game\scene\billboard_node.h" />
+    <ClInclude Include="..\..\game\scene\frame_line.h" />
+    <ClInclude Include="..\..\game\scene\icon_node.h" />
+    <ClInclude Include="..\..\game\scene\line_trail_node.h" />
+    <ClInclude Include="..\..\game\scene\mesh_icon_node.h" />
+    <ClInclude Include="..\..\game\scene\mesh_node.h" />
+    <ClInclude Include="..\..\game\scene\node.h" />
+    <ClInclude Include="..\..\game\scene\particle_system.h" />
+    <ClInclude Include="..\..\game\scene\plane_node.h" />
+    <ClInclude Include="..\..\game\scene\scripted_node.h" />
+    <ClInclude Include="..\..\game\scene\culling_node.h" />
+    <ClInclude Include="..\..\game\scripts\binds.h" />
+    <ClInclude Include="..\..\game\scripts\context_cache.h" />
+    <ClInclude Include="..\..\game\scripts\generic_call.h" />
+    <ClInclude Include="..\..\game\scripts\manager.h" />
+    <ClInclude Include="..\..\game\scripts\script_bind.h" />
+    <ClInclude Include="..\..\game\scripts\script_components.h" />
+    <ClInclude Include="..\..\game\scripts\script_type.h" />
+    <ClInclude Include="..\..\game\util\basic_type.h" />
+    <ClInclude Include="..\..\game\util\bbcode.h" />
+    <ClInclude Include="..\..\game\util\elevation_map.h" />
+    <ClInclude Include="..\..\game\util\format.h" />
+    <ClInclude Include="..\..\game\util\formula.h" />
+    <ClInclude Include="..\..\game\util\generic.h" />
+    <ClInclude Include="..\..\game\util\hex_grid.h" />
+    <ClInclude Include="..\..\game\util\locked_type.h" />
+    <ClInclude Include="..\..\game\util\mesh_generation.h" />
+    <ClInclude Include="..\..\game\util\name_generator.h" />
+    <ClInclude Include="..\..\game\util\random.h" />
+    <ClInclude Include="..\..\game\util\refcount.h" />
+    <ClInclude Include="..\..\game\util\save_file.h" />
+    <ClInclude Include="..\..\game\util\stat_history.h" />
+    <ClInclude Include="..\..\game\util\threaded_loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Star Ruler 2.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\sr2.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

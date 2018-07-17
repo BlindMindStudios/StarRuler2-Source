@@ -1,0 +1,12 @@
+PlanetType: Volcanic
+	Icon: PlanetType::0
+	DistantIcon: DistantPlanetType::0
+	Atmosphere: VulcanicAtmosphere
+	
+	BiomeWeights:
+		Volcanic: 3
+		Desert: 1
+		Mountains: 1
+		Ice: -1
+		Forest: -3
+		Oceanic: -4

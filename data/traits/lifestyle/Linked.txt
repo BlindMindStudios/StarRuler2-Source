@@ -1,0 +1,17 @@
+Trait: Linked
+	Name: #TRAIT_LINKED
+	Description: #TRAIT_LINKED_DESC
+	Order: 2
+
+	Icon: ActionBarIcons::9
+	Color: #7458a5
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	AddStatusOwnedFleets(FleetLinked, Give to Stations = False)
+
+	UnlockSubsystem(ShipComputer)
+	UnlockSubsystem(EmergencySupplies)
+
+	SpawnOrbital(Mainframe, Free = True)

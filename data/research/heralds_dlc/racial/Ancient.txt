@@ -1,0 +1,24 @@
+Technology: FoundryLabor
+	Name: #R_IMP_FOUNDRY_LABOR
+	Description: #R_IMP_FOUNDRY_LABOR_DESC:3
+
+	Icon: ResourceIcon::6
+	Color: #b1b4b6
+	Class: Boost
+
+	Point Cost: 500
+	Time Cost: 60
+
+	ModAttribute(FactoryLaborMod, Add, 3)
+
+Technology: FoundryLabor2
+	Name: #R_IMP_FOUNDRY_LABOR2
+	Description: #R_IMP_FOUNDRY_LABOR_DESC:5
+
+	Icon: ResourceIcon::6
+	Color: #b1b4b6
+
+	Point Cost: 700
+	Time Cost: 80
+
+	ModAttribute(FactoryLaborMod, Add, 5)

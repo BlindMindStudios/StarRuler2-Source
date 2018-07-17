@@ -1,0 +1,104 @@
+Empire.ObjectManager : components.ObjectManager::ObjectManager {
+restricted local:
+	Planet@[] getPlanets();
+	Planet@[] getQueuedColonizations();
+	Asteroid@[] getAsteroids();
+	safe bool get_hasFlingBeacons();
+	Object@[] getFlingBeacons();
+	Object@ getFlingBeacon(vec3d position);
+	Object@ getClosestFlingBeacon(vec3d position);
+	Object@ getClosestFlingBeacon(Object& obj);
+	Object@[] getStargates();
+	Object@ getStargate(vec3d position);
+	Orbital@[] getOrbitals();
+	bool hasStargates();
+	Artifact@[] getArtifacts();
+
+	bool isDefending(Object@ obj);
+	bool get_hasDefending();
+	Object@[] getDefending();
+
+	double get_globalDefenseRate();
+	double get_globalDefenseStorage();
+	double get_globalDefenseStored();
+
+	safe uint get_planetCount();
+	Planet@ get_planetList(uint index);
+
+	bool isFlingBeacon(Object@ obj);
+
+	safe uint get_orbitalCount();
+	Orbital@ get_orbitals(uint index);
+	Orbital@ getClosestOrbital(uint type, const vec3d& position);
+
+	AutoImportDesc@[] getAutoImports();
+
+restricted remote:
+	async void autoImportResourceOfClass(Object& into, uint resClsId);
+	async void autoImportResourceOfLevel(Object& into, uint level);
+	async void autoImportResourceOfType(Object& into, uint typeId);
+	async void autoImportToLevel(Object& into, uint level);
+	async void cancelAutoImportTo(Object& into);
+	async void cancelAutoImportTo(Object& into, uint resId);
+	async void cancelAutoImportClassTo(Object& into, uint clsId);
+	async void cancelAutoImportLevelTo(Object& into, uint level);
+	async void autoColonize(Object@ pl);
+	async void cancelColonization(Object@ pl);
+	async void setDefending(Object@ obj, bool value);
+	async void deployDefense(Object& at);
+
+server:
+	async void registerColonization(Object@ from, Object@ to);
+	async void unregisterColonization(Object@ from, Object@ to, bool cancel = true);
+	
+	async void registerPlanet(Planet@ pl);
+	async void unregisterPlanet(Planet@ pl);
+	
+	async void registerFlingBeacon(Object@ obj);
+	async void unregisterFlingBeacon(Object@ obj);
+	
+	async void registerStargate(Object@ obj);
+	async void unregisterStargate(Object@ obj);
+	bool isStargate(Object@ obj);
+
+	void registerOrbital(Orbital@ obj);
+	void unregisterOrbital(Orbital@ obj);
+
+	async void registerAsteroid(Asteroid@ asteroid);
+	async void unregisterAsteroid(Asteroid@ asteroid);
+
+	async void registerArtifact(Artifact@ obj);
+	async void unregisterArtifact(Artifact@ obj);
+
+	async void checkAutoImport(Object@ from);
+	async void gotImportFor(Object@ forObj, uint resId);
+
+	async void modDefenseRate(double value);
+	async void modDefenseStorage(double value);
+	async void modLocalDefense(double value);
+	async void generateDefense(double amount);
+	async void spawnDefenseAt(Object&, double defense);
+
+	uint get_autoColonizeCount();
+	async void bumpPlanetUpdate();
+
+	void requestTradeCivilian(Region@ toRegion);
+	void stopRequestTradeCivilian(Region@ toRegion);
+	Region@ getTradeCivilianRequest(vec3d position);
+
+	Orbital@ getOrbitalAfter(int id);
+	Object@ popAutoColonizeTarget();
+	void pushAutoColonizeTarget(Object& obj);
+	void registerAutoColonizer(Object& obj, int ablId);
+	void unregisterAutoColonizer(Object& obj, int ablId);
+	
+server:
+	void planetTick(double time);
+
+	void writeObjects(Message& msg, bool initial = false);
+	
+	bool get_hasPlanets();
+
+shadow:
+	void readObjects(Message& msg);
+}

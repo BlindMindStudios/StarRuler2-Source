@@ -1,0 +1,28 @@
+Module: RingHabitat
+	Name: #ORB_RING_HABITAT
+	Blurb: #ORB_RING_HABITAT_BLURB
+	Description: #ORB_RING_HABITAT_DESC
+	Icon: GuiOrbitalIcons::11
+	Distant Icon: OrbitalIcons::11
+
+	Health: 20000
+	Armor: 10000
+	Size: 8
+
+	Build Cost: 1000
+	Labor Cost: 25
+
+	ConsumeInfluence(10)
+	ConsumePopulation(2)
+
+	RequireUnlockTag(RingHabitatUnlock)
+
+	Model: Habitat
+	Material: GenericPBR_Habitat
+
+	LimitInOrbitStatus(RingHabitat)
+
+	AddStatusToOrbitingPlanet(RingHabitat)
+	MatchOrbitingOwner(Destroy None = True)
+
+	ModEmpireAttribute(RingHabitatsBuilt, Add, 1)

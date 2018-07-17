@@ -1,0 +1,13 @@
+Ability: GeneratePlanet
+	Name: #ABL_GENERATE_PLANET
+	Description: #ABL_GENERATE_PLANET_DESC
+	Icon: PlanetType::2
+	Activate Sound: planetgen_activate
+
+	Energy Cost: 1400
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: dest = Point
+	TargetFilterInSystem(dest)
+
+	SpawnPlanetAt(dest)

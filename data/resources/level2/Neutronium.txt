@@ -1,0 +1,12 @@
+Resource: Neutronium
+	Name: #NEUTRONIUM
+	Description: #NEUTRONIUM_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::36
+	Small Icon: ResourceIconsSmall::36
+
+	Level: 2
+	Affinity: Defense
+
+	Pressure: 7 Defense

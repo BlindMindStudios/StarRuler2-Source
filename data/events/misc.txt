@@ -1,0 +1,10 @@
+void clientAchievement(string id) -> shadow::achievements::clientAchive
+double getGlobalValue(uint id) -> local server::hook_globals::getGlobalValue_client
+void sendPingAll(vec3d position, uint type = 0) -> server::pings::sendPingAll
+void sendPingAllied(vec3d position, uint type = 0) -> server::pings::sendPingAllied
+void showPing(Empire@ fromEmpire, vec3d position, uint type = 0) -> client::pings::showPing
+int getUnlockTag_client(string ident) -> local server::unlock_tags::getUnlockTag_client
+string getUnlockTagIdent_client(int ident) -> local server::unlock_tags::getUnlockTagIdent
+int getObjectStat_client(string ident) -> local server::object_stats::getObjectStatId_client
+string getObjectStatIdent_client(int ident) -> local server::object_stats::getObjectStatIdent
+bool hasInvasionMap() -> local server::Invasion.InvasionMap::hasInvasionMap

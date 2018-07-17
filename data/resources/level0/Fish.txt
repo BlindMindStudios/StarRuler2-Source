@@ -1,0 +1,12 @@
+Resource: Fish
+	Name: #FISH
+	Blurb: #FOOD_BLURB
+	Native Biome: Oceanic
+	Class: Food
+
+	Icon: ResourceIcons::2
+	Small Icon: ResourceIconsSmall::19
+
+	Level: 0
+	AddResourceVanishBonus(+0.3) #version<105
+	AddToNativeResource(AddResourceVanishBonus(+0.3)) #version<71

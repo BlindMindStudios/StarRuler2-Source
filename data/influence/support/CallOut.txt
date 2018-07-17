@@ -1,0 +1,38 @@
+Card: CallOut
+	Name: #CARD_CALLOUT
+	Description: #CARD_CALLOUT_DESC
+	Color: #a893a8
+
+	Icon: CardIcons::4
+
+	Class: Support
+	Rarity: Common
+	Side: Neutral
+
+	Max Uses: 3
+	Max Quality: 2
+
+	Base Purchase Cost: 1
+	Uses Purchase Cost: 1
+
+	Base Play Cost: 4
+
+	Base Weight: 0
+
+	LogVoteEvent(Neutral = #CARD_CALLOUT_LOG)
+
+	Target: target = Empire
+	TargetFilterOtherEmpire(target)
+	GenerateRandomEmpire(target, Generic Chance = 0.5)
+	DisappearSelfBuy(target)
+
+	LimitPerVote(1, Match Targets = True)
+	ExtendRemainingTimeTo(60)
+
+	CalloutEmpire(target, Leverage Quality = 4.0)
+	AddWeightToNextSupportBy(target, 3, Per Quality = 3)
+	ListActiveIfNotVotedAfterThis(target)
+	Notify(target, #CARD_CALLOUT_NOTIFICATION)
+
+	AI: VoteOnAlly(target, Min Vote = 0, Allied Only = True)
+	AI: NotInRace()

@@ -1,0 +1,6 @@
+Status: EmergencyShields
+	Name: #STATUS_EMERGENCY_SHIELDS
+	Description: #STATUS_EMERGENCY_SHIELDS_DESC
+	Icon: AntimatterReactor * #b8b800
+
+	RestoreShieldsOverTime(Percentage = 1.0)

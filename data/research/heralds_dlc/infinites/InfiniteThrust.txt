@@ -1,0 +1,23 @@
+Technology: InfiniteThrust
+	Name: #R_INFINITE_THRUST
+	Description: #R_INFINITE_THRUST_DESC:5%
+
+	Icon: techPropulsion * #e2f83a
+	Symbol: EditIcons::7
+	Color: #e2f83a
+
+	Category: Infinites
+	Class: Keystone
+
+	Point Cost: 400
+	Time Cost: 50
+
+	AddPointCostAttribute(InfiniteThrustTaken, 300)
+	AddTimeCostAttribute(InfiniteThrustTaken, 10)
+
+	ResetWhenUnlocked()
+
+	AddModifier( ThrustFactor(1.05) )
+	AddModifier( TurnThrustFactor(1.05) )
+	AddModifier( Hyperdrive::SpeedFactor(1.05) )
+	ModAttribute(InfiniteThrustTaken, Add, 1)

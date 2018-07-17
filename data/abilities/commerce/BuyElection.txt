@@ -1,0 +1,11 @@
+Ability: BuyElection
+	Name: #ABL_BUY_ELECTION
+	Description: #ABL_BUY_ELECTION_DESC
+	Icon: CardIcons::31
+
+	Cooldown: 10
+
+	ConsumeInfluence(10)
+	ShowInfluenceValue(10, #COST)
+
+	GainInfluenceCard(Election)

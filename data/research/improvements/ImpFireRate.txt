@@ -1,0 +1,31 @@
+Technology: ImpFireRate
+	Name: #R_IMP_FIRE_RATE
+	Blurb: #R_IMP_FIRE_RATE_BLURB:10%
+	Description: #R_IMP_FIRE_RATE_DESC:10%
+
+	Icon: techCooling * #c680ff
+	Color: #c680ff
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	AddModifier( tag/WeaponBase::ReloadFactor(0.9) )
+	AddModifier( tag/BeamBase::CooldownFactor(0.9) )
+	AddModifier( tag/SpecialWeapon::ReloadFactor(0.9) )
+	ModAttribute(StaticDamageBonus, Multiply, 1.1)
+
+Technology: ImpFireRate2
+	Name: #R_IMP_FIRE_RATE2
+	Blurb: #R_IMP_FIRE_RATE_BLURB:20%
+	Description: #R_IMP_FIRE_RATE_DESC:20%
+
+	Icon: techCooling * #c680ff
+	Color: #c680ff
+
+	Point Cost: 1500
+	Time Cost: 180
+
+	AddModifier( tag/WeaponBase::ReloadFactor(0.8) )
+	AddModifier( tag/SpecialWeapon::ReloadFactor(0.8) )
+	AddModifier( tag/BeamBase::CooldownFactor(0.8) )
+	ModAttribute(StaticDamageFactor, Multiply, 1.25)

@@ -1,0 +1,21 @@
+Building: Compressor
+	Name: #BLD_ANCIENT_COMPRESSOR
+	Description: #BLD_ANCIENT_COMPRESSOR_DESC
+	Sprite: Compressor
+
+	Category: Enhancing
+
+	Size: 3x4
+
+	Base Cost: 0
+	Tile Cost: 25
+	Build Time: 100
+
+	Build Affinity: Ice
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ActiveWhenCargoConsumed(BaseMaterial, 1, 6, EnableModifier(MassFactor(0.92)), Inactive Status = AncientRequireBaseMat)

@@ -1,0 +1,45 @@
+Effector: PlasmaThrower
+	Value: Range
+	Value: DamageOverTime
+	Value: Duration
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 0.8
+	Value: Spread = 0.03
+	Value: FireArc = 0.5 * pi
+	Value: TargetTolerance = 0
+	Value: FireTolerance = 0
+	Value: Pierce = 0.5
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+	Spread: Spread
+	FireArc: FireArc
+	FireTolerance: FireTolerance
+	CapOnTarget: 1
+	TargetTolerance: TargetTolerance
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && ((isShip / sizeDifference) || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.1)
+
+	EfficiencyMode: Reload Partial
+	Activation: StaggeredTimed(Reload, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ApplyDoT
+		DPS = DamageOverTime
+		Duration = Duration
+
+	PhysicalType: Projectile
+		GfxType: Sprite
+		GfxSize: 1.0
+		PhysicalSize: 1.5
+		FireSfx: railgun_fire
+		FireSfx: muon_fire
+		Material: PlasmaThrower
+		Color: #ce815a
+		ImpactGfx: ImpactFlareRailRed

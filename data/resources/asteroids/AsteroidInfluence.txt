@@ -1,0 +1,6 @@
+Resource: AsteroidInfluence
+	Name: #ASTEROID_INFLUENCE
+	Description: #ASTEROID_INFLUENCE_DESC
+
+	Distribution: 0
+	PerIncomeAddResource(Research, 1, Influence)

@@ -1,0 +1,2 @@
+SYSTEM_STAR: $1 Star
+SYSTEM_BLACKHOLE: $1 Black Hole

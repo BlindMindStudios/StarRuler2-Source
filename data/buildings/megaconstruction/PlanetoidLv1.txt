@@ -1,0 +1,16 @@
+Building: PlanetoidLv1
+	Name: #BLD_PLANETOID_LV1
+	Description: #BLD_PLANETOID_LV1_DESC
+	Sprite: FakeLV1
+
+	Category: Resource
+
+	Size: 4x4
+	Base Cost: 1000
+
+	Build Time: 240
+
+	ConsumeCargo(Ore, 2000)
+
+	RequireStatus(ArtificialPlanetoid)
+	AddDummyResource(Titanium, 1)

@@ -1,0 +1,34 @@
+Subsystem: SupplyModule
+	Name: #SUPPLYMODULE_NAME
+	Description: #SUPPLYMODULE_DESC
+	Picture: SubsystemButtonArt::8 * #b3ffef
+	BaseColor: #2fd6b3
+	Elevation: 3
+	
+	Tags: DefaultUnlock, NonContiguous, NoCore, HasInternals, Category:Control
+	Tags: Compressible
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	SupplyCapacity := Size * 4000
+	SupplyRate := Size * 6
+	
+	Hex.LaborCost := 0.15 * HexSize + 0.8
+	Hex.BuildCost := 1.5 * HexSize + 2
+	Hex.MaintainCost := 2 * HexSize + 3 - (4 * HexSize / ShipSize^0.5)
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := HexSize
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor
+
+	Modifier: Compress(Amount)
+		SupplyCapacity := SupplyCapacity + Base::SupplyCapacity * (Amount / Hexes)
+
+	Effect: LeakSupply
+		LeakPctPerSec = 1 / 60
+	
+	Module: Default
+		Sprite: SupplyStorage

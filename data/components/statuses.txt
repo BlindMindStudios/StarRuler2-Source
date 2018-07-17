@@ -1,0 +1,41 @@
+Object.Statuses : components.Statuses::Statuses {
+local:
+	Status@[] getStatusEffects();
+	bool hasStatusEffect(uint typeId);
+
+	safe uint get_statusEffectCount();
+	uint get_statusEffectType(uint index);
+	uint get_statusEffectStacks(uint index);
+	Object@ get_statusEffectOriginObject(uint index);
+	Empire@ get_statusEffectOriginEmpire(uint index);
+
+	uint getStatusStackCount(uint typeId, Object@ originObject = null, Empire@ originEmpire = null);
+	uint getStatusStackCountAny(uint typeId);
+
+server:
+	int addStatus(double timer, uint typeId, Empire@ boundEmpire = null, Region@ boundRegion = null, Empire@ originEmpire = null, Object@ originObject = null);
+	void addStatus(uint typeId, double timer = -1.0, Empire@ boundEmpire = null, Region@ boundRegion = null, Empire@ originEmpire = null, Object@ originObject = null);
+	void removeStatus(int id);
+	bool isStatusInstanceActive(int id);
+	void removeStatusType(uint typeId);
+	void removeStatusInstanceOfType(uint typeId);
+	void removeRegionBoundStatus(Region@ region, uint typeId, double timer = -1.0);
+
+	uint get_statusInstanceCount();
+	uint get_statusInstanceType(uint index);
+	int get_statusInstanceId(uint index);
+
+	void addRandomCondition();
+
+	void changeStatusOwner(Empire@ prevOwner, Empire@ newOwner);
+	void changeStatusRegion(Region@ prevRegion, Region@ newRegion);
+	void statusTick(double time);
+	void destroyStatus();
+
+	void writeStatuses(Message& msg) const;
+	bool writeStatusDelta(Message& msg) const;
+
+shadow:
+	void readStatuses(Message& msg);
+	void readStatusDelta(Message& msg);
+}

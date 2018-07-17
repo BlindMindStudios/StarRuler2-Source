@@ -1,0 +1,6 @@
+varying vec2 uv;
+
+void main() {
+	gl_FragColor.rgb = gl_Color.rgb * gl_Color.a;
+	gl_FragColor.a = 0.0;
+}

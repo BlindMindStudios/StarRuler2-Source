@@ -1,0 +1,311 @@
+ORBITAL_REPACK: Pack up Orbital
+PROMPT_SCUTTLE: Destroy $1?
+ORB_TT_COST: Cost: $1, $2 Labor
+ORBITAL_MODULES: Modules
+TRADE: Trade
+OERR_SYSTEM: Cannot build orbitals outside systems.
+OERR_TRADE: Must build within trade borders.
+OERR_VISION: Cannot build outside vision.
+OERR_LIMIT: Only one per system allowed.
+OERR_BLACKHOLE: Must be built near black hole.
+OERR_PLANET_ORBIT: Must be built in planetary orbit.
+OERR_CLOSE_TO_STAR: Must be placed close to a star.
+OERR_PLANET_LIMIT: Only one per planet orbit allowed.
+
+LAB_RESOURCES: Imported Resources:
+LAB_AVAIL_AFFINITIES: Available Affinities:
+
+ORB_REQ_AFFINITY: Requires [b]$1[/b] [img=$3;24/] $2 resource(s).
+ORB_REQ_RESOURCE: Requires [img=$2;24/] $1.
+
+TT_MANAGE_ORBITAL: <<|
+	[b]Manage Orbital[/b]
+
+	View and modify the modules installed on this orbital.
+>>
+
+TT_PACKUP_ORBITAL: <<|
+	[b]Pack Up Orbital[/b]
+
+	Pack the orbital back into a ship in order to move it around.
+>>
+
+DRY_DOCK: Dry Dock
+DRY_DOCK_NAME: Dry Dock: $1
+
+FLING_BEACONS: Fling Beacons
+ORB_FLING_CORE: Fling Beacon
+ORB_FLING_CORE_BLURB: Lets nearby ships use fling to FTL to anywhere in the galaxy.
+ORB_FLING_CORE_DESC: <<|
+	Allows use of fling-based FTL near the beacon.
+
+	Ships within 12,500 distance units of a fling beacon can be FTLed to
+	anywhere in the galaxy.
+
+	[b][color=#00c0ff]Fling Beacons cost 250 FTL energy to construct, and 0.15 FTL/s in upkeep.[/color][/b]
+>>
+
+ORB_GATE_CORE: Gate
+ORB_GATE_CORE_BLURB: Allows instant travel to any other gate.
+ORB_GATE_CORE_DESC: <<|
+	Allows instant travel to any other gate.
+
+	Gates cost 0.15 FTL per second to maintain.
+	Gates can be packed back into a constructor.
+	Unpacking a gate from a constructor costs 150 FTL.
+>>
+
+ORB_DRY_DOCK: Dry Dock
+ORB_DRY_DOCK_BLURB: Single-use flagship construction in space.
+ORB_DRY_DOCK_DESC: <<|
+	Can construct a flagship in space, letting other planets easily contribute
+	their labor to the construction.
+>>
+
+ORB_REMNANT_DEFENSE_CORE: Remnant Defense Station
+ORB_REMNANT_DEFENSE_CORE_BLURB: <<
+	Fires at nearby enemy ships.
+>>
+
+ORB_REMNANT_ENERGY_CORE: Reactor Core
+ORB_REMNANT_ENERGY_CORE_BLURB: Produces large amounts of energy.
+ORB_REMNANT_ENERGY_CORE_DESC: <<|
+	Produces 36 energy per minute.
+>>
+
+ORB_ANCIENT_EMBASSY: Ancient Embassy
+ORB_ANCIENT_EMBASSY_BLURB: A marvel of engineering, respected by all.
+ORB_ANCIENT_EMBASSY_DESC: <<|
+	Increases the loyalty of all owned planets in the system by 5.
+	Influence actions targeted in this system by any empire cost 5 less
+	influence to activate.
+
+	If this orbital is destroyed, the owner and all empires friendly to the
+	owner gain [b]major[/b] leverage against the empire that destroyed it.
+
+	Protects all owned planets in the system this orbital is in from being captured.
+
+	Has 500 support command, letting it hold support ships.
+
+	Can trade freely with trade cores.
+>>
+
+ORB_SHIPYARD: Shipyard
+ORB_SHIPYARD_BLURB: Can build flagships and support ships. Planets can be ordered to export their labor to this shipyard.
+ORB_SHIPYARD_DESC: <<|
+	A massive orbital shipyard capable of constructing fleets in space.
+
+	Construction of ships on a shipyard has a 20% cheaper build cost.
+
+	Has 6 innate Labor generation per minute. Planets can export their own
+	labor to shipyards within trade range at a 75% reduced rate.
+
+	Gains Labor from Metallurgy factory research at a 75% reduced rate.
+>>
+ORB_ARTILLERY_PLATFORM: Artillery Platform
+ORB_ARTILLERY_PLATFORM_BLURB: Long-range artillery cannon.
+ORB_ARTILLERY_PLATFORM_DESC: <<|
+	An independent orbital artillery cannon, capable of firing at enemies
+	throughout the system.
+>>
+ORB_DEFENSE_PLATFORM: Defense Platform
+ORB_DEFENSE_PLATFORM_BLURB: Defense platform with short range weaponry.
+ORB_DEFENSE_PLATFORM_DESC: <<|
+	An orbital defense platform outfitted with an arsenal of short-range
+	weaponry to defend its vicinity.
+>>
+ORB_TRADE_OUTPOST: Outpost
+ORB_TRADE_OUTPOST_BLURB: Allows trade through its system. Generates defense ships and protects planets in the system from being captured.
+ORB_TRADE_OUTPOST_DESC: <<|
+	A small outpost that allows your civilian ships to travel through the
+	system it is in.
+
+	Outposts generate up to [b]3 Defense[/b] worth of local defense ships,
+	depending on how many adjacent systems have outposts in them.
+
+	If all of the outpost's support command is used and it has a full
+	complement of defense ships, it will start adding its defense generation to
+	your empire's global pool.
+
+	Planets in systems that have contained an outpost for at least 2 minutes
+	will be [b]Protected[/b] from being captured until the outpost is destroyed.
+
+	[i]Can be built in systems you do not own planets in, expanding your
+	empire border. Only one outpost can be constructed per system.[/i]
+>>
+
+ORB_TRADE_STATION: Commerce Station
+ORB_TRADE_STATION_BLURB: Allows global trade to other commerce stations. Allows the purchase of resources with money.
+ORB_TRADE_STATION_DESC: <<|
+	A large and bustling station of commerce allows global resource trade
+	between any territories with Commerce Stations.
+
+	In addition, on each commerce station you can purchase a quantity of
+	research, energy, influence or labor in exchange for money every 3 minutes.
+
+	[i]Normally, planets in separated territories cannot export resources to
+	each other. Construct a Commerce Station in both territories in order to
+	allow import and export of resources from planets in your distinct
+	territories.[/i]
+>>
+ABL_BUY_ENERGY: Purchase Energy
+ABL_BUY_ENERGY_DESC: Buy a lump sum of energy from the market. Shares cooldown with other purchase abilities.
+ABL_BUY_INFLUENCE: Purchase Influence
+ABL_BUY_INFLUENCE_DESC: Peddle for a few influence points. Shares cooldown with other purchase abilities.
+ABL_BUY_RESEARCH: Purchase Research
+ABL_BUY_RESEARCH_DESC: Invest in some third-party research. Shares cooldown with other purchase abilities.
+ABL_BUY_LABOR: Purchase Labor
+ABL_BUY_LABOR_DESC: Purchase some contracted labor for a targeted planet or shipyard. Shares cooldown with other purchase abilities.
+
+ORB_SUPPLY_DEPOT: Supply Depot
+ORB_SUPPLY_DEPOT_BLURB: Increases the rate of resupply in the system.
+ORB_SUPPLY_DEPOT_DESC: <<|
+	Infrastructure specially set up to resupply fleets at an accelerated rate.
+
+	All fleets in the system the Supply Depot is in resupply much faster.
+>>
+STATUS_FAST_RESUPPLY: Receiving Supplies
+STATUS_FAST_RESUPPLY_DESC: <<|
+	Is receiving supplies from a Supply Depot in the system. Regenerating
+	supplies at a significantly increased rate while not in combat.
+>>
+ORB_FTL_JAMMER: FTL Jammer
+ORB_FTL_JAMMER_BLURB: Prevents hostile empires from engaging their FTL drives in this system.
+ORB_FTL_JAMMER_DESC: <<|
+	An array of precise hyperfield excitors calibrated to specific frequencies
+	can block the use of particular makes of FTL drive.
+
+	Empires you are at war with cannot use their FTL inside this system.
+
+	[b][color=#00c0ff]Costs 0.15 FTL per second to maintain.[/color][/b]
+>>
+ORB_SCAFFOLDING: Scaffolding
+ORB_SCAFFOLDING_BLURB: An orbital hull is under construction here.
+ORB_SCAFFOLDING_DESC: <<|
+	An orbital is under construction at this location.
+>>
+NAME_SCAFFOLDING: $1 (Scaffolding)
+
+ORB_SOLAR_ORBITAL: Solar Engine
+ORB_SOLAR_ORBITAL_BLURB: Generates energy per second relative to the temperature of the system's star.
+ORB_SOLAR_ORBITAL_DESC: <<
+	Generates extra energy per second. The higher the temperature of the star of the system it's in, the more energy is generated.
+
+	Only one may be constructed per system.
+>>
+
+ORB_FRAME: Orbital Frame
+ORB_FRAME_BLURB: An orbital can be built on this frame for a reduced build cost.
+ORB_FRAME_DESC: <<
+	A pre-built frame and scaffold that can be refitted to other orbital types.
+
+	Orbitals built on top of this frame have 50% reduced build and labor cost, and do not suffer from build distance labor penalties.
+>>
+
+ORB_SINGULARITY_LAB: Singularity Lab
+ORB_SINGULARITY_LAB_BLURB: <<
+	Harnesses the unique properties of being near a singularity in order to generate power and gain scientific knowledge.
+>>
+ORB_SINGULARITY_LAB_DESC: <<
+	Harnesses the unique properties of being near a singularity in order to generate power and gain scientific knowledge.
+
+	Can only be built in systems that have a black hole. Only one may be constructed per system.
+>>
+
+ORB_FTL_STORAGE: FTL Storage
+ORB_FTL_STORAGE_DESC: <<
+	Stores 300 FTL Energy.
+>>
+
+ORB_SENATORIAL_PALACE: Senatorial Palace
+ORB_SENATORIAL_PALACE_BLURB: <<
+	A grand palace for galactic senate members to use for diplomatic business. Allows purchase of influence victory component cards.
+>>
+ORB_SENATORIAL_PALACE_DESC: <<
+	A grand palace for galactic senate members to use for diplomatic business.
+
+	Can only be constructed if you are currently the Senate Leader.
+
+	All other empires gain vision over the system the Senatorial Palace is in.
+	
+	You can use influence to purchase Election, Galactic Superpower and Galactic Utopia cards at the Senatorial Palace, which allow for an influence victory when played appropriately.
+>>
+NOTIFY_SENATORIAL_PALACE: The [color=$2]$1[/color] have constructed a [b]Senatorial Palace[/b].
+ABL_BUY_ELECTION: Purchase "Election"
+ABL_BUY_ELECTION_DESC: <<
+	Use influence to purchase an "Election" card for future use.
+>>
+ABL_BUY_GALACTIC_UTOPIA: Purchase "Galactic Utopia"
+ABL_BUY_GALACTIC_UTOPIA_DESC: <<
+	Use influence to purchase a "Galactic Utopia" card for future use.
+
+	Galactic Utopia provides multiple benefits. If you have both it and Galactic Superpower active at the same time, you win the game.
+>>
+ABL_BUY_GALACTIC_SUPERPOWER: Purchase "Galactic Superpower"
+ABL_BUY_GALACTIC_SUPERPOWER_DESC: <<
+	Use influence to purchase a "Galactic Superpower" card for future use.
+
+	Galactic Superpower provides multiple benefits. If you have both it and Galactic Utopia active at the same time, you win the game.
+>>
+
+ORB_RING_HABITAT: Ring Habitat
+ORB_RING_HABITAT_BLURB: Increases the population that can live on and around the planet.
+ORB_RING_HABITAT_DESC: <<
+	A ring habitat constructed in low planetary orbit increases the population that can live in and around it, allowing a luxuriously maintained lifestyle in space for those who can afford it.
+
+	Must be constructed in orbit of a planet. Increases the maximum population of that planet by 2.
+
+	2 Population is removed from the planet constructing the Ring Habitat to live on it.
+	
+	Costs 10 Influence to construct in addition to its build cost.
+
+	Only one ring habitat may be constructed in orbit of every planet.
+>>
+
+ORB_SOLAR_SATELLITE: Solar Satellite
+ORB_SOLAR_SATELLITE_BLURB: Increases the planet's native resource's pressure given by 1.
+ORB_SOLAR_SATELLITE_DESC: <<
+	A solar power satellite constructed in low planetary orbit sends power down to the surface for domestic use, improving the efficiency of economic operations on the ground.
+
+	Must be constructed in orbit of a planet. Increases the pressure given by that planet's native resource by 1 where possible.
+
+	Costs 500 Energy to construct in addition to its build cost.
+
+	Only one solar satellite may be constructed in orbit of every planet.
+>>
+
+ORB_DEFENSE_SATELLITE: Tactical Satellite
+ORB_DEFENSE_SATELLITE_BLURB: Increases support strength, fires missiles, allows independent support action.
+ORB_DEFENSE_SATELLITE_DESC: <<
+	A military satellite constructed in low planetary orbit grants improved defensive capabilities to the planet and its support ships.
+
+	Must be constructed in orbit of a planet.
+	
+	Support ships assigned to this planet fight at increased combat strength, and can independently move across the system in order to attack enemy fleets. Support ships set to Shield, Support or Artillery behavior will not leave the planet's orbit.
+
+	Costs 500 Energy to construct in addition to its build cost.
+
+	Only one tactical satellite may be constructed in orbit of every planet.
+>>
+
+ORB_HYDROPONICS_SATELLITE: Hydroponics Satellite
+ORB_HYDROPONICS_SATELLITE_BLURB: Adds 1 Food to the planet it is in orbit of.
+ORB_HYDROPONICS_SATELLITE_DESC: <<
+	A satellite equipped with high-yield zero-G hydroponics bays growing genetically modified crops in exposure to direct sunlight.
+
+	Must be constructed in orbit of a planet.
+
+	The planet this is in orbit of gains 1 Food resource.
+
+	Costs 100 Research points to construct in addition to its build cost.
+>>
+
+ORB_ANCIENT_REPLICATOR: Orbital Replicator
+ORB_ANCIENT_REPLICATOR_BLURB: Constructs buildings on the surface of the planet it orbits. Spawn defense satellites.
+ORB_ANCIENT_REPLICATOR_DESC: <<
+	A vast low-orbit station that can replicate materials and transfer them to the surface. Buildings can only be constructed on planets with a Replicator in orbit.
+
+	Replicator stations can be moved between planets in order to construct facilities on other planets.
+
+	If the planet the replicator is in orbit of has free support capacity, it will automatically construct defense satellites for it over time.
+>>

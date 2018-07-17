@@ -1,0 +1,25 @@
+Technology: ImpSupportSupplyUse
+	Name: #R_IMP_SUPPORT_SUPPLY_USE
+	Blurb: #R_IMP_SUPPORT_SUPPLY_USE_BLURB:20%
+	Description: #R_IMP_SUPPORT_SUPPLY_USE_DESC:20%
+
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Point Cost: 800
+	Time Cost: 120
+
+	AddModifier( tag/Weapon,hull/Support::SupplyCostFactor(0.8) )
+
+Technology: ImpSupportSupplyUse2
+	Name: #R_IMP_SUPPORT_SUPPLY_USE2
+	Blurb: #R_IMP_SUPPORT_SUPPLY_USE_BLURB:36%
+	Description: #R_IMP_SUPPORT_SUPPLY_USE_DESC:36%
+
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Point Cost: 1200
+	Time Cost: 120
+
+	AddModifier( tag/Weapon,hull/Support::SupplyCostFactor(0.64) )

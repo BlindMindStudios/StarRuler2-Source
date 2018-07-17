@@ -1,0 +1,19 @@
+Technology: Disruptor
+	Name: #R_SYS_DISRUPTOR
+	Description: #R_SYS_DISRUPTOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Damage
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: Laser::0
+	Color: #f0e5b5
+	
+	UnlockSubsystem(Disruptor)
+	SkipOnUnlockedSubsystem(Disruptor)
+
+	SecondaryFTLCost(250)

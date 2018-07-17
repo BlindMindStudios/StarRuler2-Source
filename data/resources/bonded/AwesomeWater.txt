@@ -1,0 +1,18 @@
+Resource: AwesomeWater
+	Name: #AWESOME_WATER
+	Description: #AWESOME_WATER_DESC:150%
+	Native Biome: Oceanic
+	Class: WaterType
+
+	Icon: ResourceIconsSmall::102
+	Small Icon: ResourceIconsSmall::102
+
+	Artificial: True
+	Level: 0
+
+	ModCivResourceMult(Labor, +1.5)
+	ModCivResourceMult(Research, +1.5)
+	ModCivResourceMult(Influence, +1.5)
+	ModCivResourceMult(Defense, +1.5)
+	ModCivResourceMult(Money, +1.5)
+	ModCivResourceMult(Energy, +1.5)

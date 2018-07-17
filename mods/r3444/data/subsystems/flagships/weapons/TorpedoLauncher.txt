@@ -1,0 +1,46 @@
+Subsystem: TorpedoLauncher
+	Name: Torpedo Launcher
+	Description: Launches massive, slow-moving, guided bombs. These bombs explode in an area around their target.
+	BaseColor: #7946f9
+	TypeColor: #7946f9
+	Picture: SubsystemButtonArt::4
+	Elevation: 2
+	
+	Tags: BaseCost
+	Tags: WeaponBase, MissileBase, Category:Weapons
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsExplosiveWeapon, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	Range := Size + 800
+	Damage := Size * 6
+	Reload := 25.0
+	Speed := 40
+	Tracking := 1.5
+	Radius := 4.0 + (log(Size) / log(2) * 6.0)
+	SupplyCost := Size * 4.0
+	Hex.Mass := HexSize
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: HexagonSubsystems::7
+
+	Effector: Torpedo
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Radius = Radius
+		SupplyCost = SupplyCost * Reload

@@ -1,0 +1,8 @@
+PlanetType: Crystallic
+	Icon: PlanetType::5
+	DistantIcon: DistantPlanetType::5
+	Atmosphere: CrystalAtmosphere
+	
+	BiomeWeights:
+		Crystallic: 4
+		Oceanic: -4

@@ -1,0 +1,19 @@
+Construction: BeaconLabor
+	Name: #CONS_BEACON_LABOR
+	Description: #CONS_BEACON_LABOR_DESC
+
+	Category: Beacons
+
+	Build Cost: 300
+	Time Cost: 80
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconLaborUpgradeCost, Add, 1))
+	OnCancel(ModAttribute(BeaconLaborUpgradeCost, Add, -1))
+
+	ConsumeCargoAttribute(ResearchCargo, BeaconLaborUpgradeCost, Multiply = 500, Base Amount = 250)
+
+	ModAttribute(BeaconLaborUpgrades, Add, 1)
+
+	AddBuildCostAttribute(BeaconLaborUpgradeCost, Multiply = 100)

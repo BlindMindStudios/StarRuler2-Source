@@ -1,0 +1,19 @@
+Technology: ParticleLance
+	Name: #R_SYS_PARTICLELANCE
+	Description: #R_SYS_PARTICLELANCE_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Damage
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: ParticleLance::2
+	Color: #ff7600
+	
+	UnlockSubsystem(ParticleLance)
+	SkipOnUnlockedSubsystem(ParticleLance)
+
+	SecondaryFTLCost(250)

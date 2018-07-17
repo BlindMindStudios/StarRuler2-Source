@@ -1,0 +1,14 @@
+Artifact: InvMoney
+	Name: #INV_ART_MONEY
+	Description: #INV_ART_MONEY_DESC
+
+	Frequency: 0
+	Tag: Invasion
+	
+	Ability: InvMoney
+	Ability: InvMoneyPlus
+
+	AI: Value(4.0)
+
+	Secondary Chance: 0.25
+	Secondary AI: Value(4.0)

@@ -1,0 +1,194 @@
+#version 120
+
+uniform sampler2D texture;
+
+uniform float nodeScale;
+uniform vec3 colors[2];
+
+varying vec2 uv;
+varying vec3 normal, binormal, tangent, light, light2;
+varying vec3 pos, center;
+varying float dist, dist2;
+
+//planetRim is the (normal dot view) value corresponding to the edge of the planet on the atmosphere's model
+const float planetRim = 0.169;
+const float innerFadeStart = 0.169;
+const float innerFadeBase = planetRim + 0.021;
+const float innerFadeMax = 0.5;
+const float outerFade = 0.0;
+const float rimDecay = 2.0;
+
+const float atmosExaggerateDist = 55.0;
+
+//The thickness of atmosphere that must be present before any haze is visible
+const float hazeThreshold = 0.01;
+//The brightness multiplier of the haze
+const float hazeBrightnessBase = 15.0;
+const float scaledHazeBrightness = 60.0;
+const float rimHazeBrightness = 4.0;
+//Fraction of haze that occurs beneath the clouds
+const float lowHaze = 0.3;
+const float hiHaze = 1.0 - lowHaze;
+
+//How much cover is 100% cloud cover
+const float shadowDarkness = 1.0;
+
+const float shadowDist = 0.025;
+
+vec3 hazeColor(float NdL, vec3 lightCol) {
+	float depth = pow(max(0.8 - NdL, 0.0), 2.0);
+	float lum = max(lightCol.r, max(lightCol.g, lightCol.b));
+	vec3 col = mix(colors[0], colors[1], depth);
+	col /= max(col.r, max(col.g, col.b));
+	return col  * lum * pow(max((0.8 + NdL) * 0.5, 0.0), 1.3);
+}
+
+vec4 alphaBlend(vec4 dest, vec4 src) {
+	float alpha = src.a + (dest.a * (1.0 - src.a));
+	return vec4( ((src.rgb * src.a) + (dest.rgb * dest.a * (1.0 - src.a))) / alpha, alpha);
+}
+// fail-safe get normal map z component
+float deriveZ(vec2 n) {	
+
+	float z = pow(abs(1.0 - n.x * n.x - n.y * n.y), 0.5);
+	
+	return z;
+}
+void main() {
+	vec3 normMap = texture2D(texture, uv).rgb - vec3(0.5);
+	float opacity = max((length(normMap) - 0.25) / 0.25, 0.0);
+	normMap.z = deriveZ(normMap.xy);
+	
+	vec3 n = normalize(normal);
+	
+	vec3 cloudNorm = n * normMap.z;
+	cloudNorm += normalize(binormal) * normMap.x;
+	cloudNorm += normalize(tangent) * normMap.y;
+	cloudNorm = normalize(cloudNorm);
+	
+	vec3 p = -pos;
+	//Apply a correction to the position to correct for the vertex structure
+	p += nodeScale * (length(normal) - 1.0) * n;
+	
+	vec3 v = normalize(p);
+	vec3 c = normalize(center);
+	float cosTheta = -dot(c,v);
+	float theta = acos(cosTheta);
+	
+	float dToCenter = length(center);
+	float dToAtmos = length(p);
+	float dToFarAtmos;
+	float dToSurface;
+	{
+		float k = sin(theta) * dToCenter;
+		float e = sqrt(nodeScale*nodeScale - k*k);
+		dToSurface = sqrt(dToCenter*dToCenter - k*k) - e;
+		
+		e = sqrt(pow(nodeScale*1.015,2.0) - k*k);
+		dToFarAtmos = dToAtmos + e*2.0;
+	}
+	
+	dToCenter /= nodeScale;
+	dToAtmos /= nodeScale;
+	dToFarAtmos /= nodeScale;
+	dToSurface /= nodeScale;
+	
+	float exag = clamp(pow(dToCenter / atmosExaggerateDist, 2.0), 0.0, 1.0);
+	
+	float hazeBrightness = hazeBrightnessBase;
+	hazeBrightness += scaledHazeBrightness * exag;
+	float innerFade = planetRim + 0.021;
+	
+	vec3 l = normalize(light);
+	vec3 l2 = normalize(light2);
+	float ndv = max(dot(n, v), 0.0);
+	float ndl = dot(n,l);
+	
+	//Calculate shadow cover
+	float shadow = 0.0;
+	if(ndl > 0.0 && ndv > planetRim) {
+		vec2 off;
+		off.x = asin(dot(binormal,l)) * shadowDist / 6.283;
+		off.y = asin(dot(tangent,l)) * shadowDist / 6.283;
+		
+		float thickness = max((length(texture2D(texture, uv + off.xy).rgb - vec3(0.5))-0.25)/0.25, 0.0) * sqrt(ndl);
+		shadow = thickness * shadowDarkness;
+	}
+	
+	float lightFactor = 1.0 / (1.0 + (gl_LightSource[0].quadraticAttenuation * dist * dist));
+	vec3 r = normalize(-reflect(l, n));
+	float rDv = dot(r,v);
+	
+	//Calculate atmospheric haze
+	//Haze increases in brightness with depth through the atmosphere
+	//The color changes as light is preferentially scattered away by frequency
+	
+	vec3 haze = vec3(0.0);
+	if(ndv >= planetRim + 0.00001) {
+		float rimFactor = max(dToFarAtmos - dToAtmos - hazeThreshold, 0.0) * 0.15 * rimHazeBrightness;
+		float hazeFactor = max(dToSurface - dToAtmos - hazeThreshold, 0.0) * hazeBrightness;
+		float factor = mix(rimFactor,hazeFactor,smoothstep(planetRim,innerFade, ndv));
+		haze = hazeColor(ndl, gl_LightSource[0].diffuse.rgb * lightFactor) * factor;
+	}
+	else if(ndv >= planetRim) {
+		//At the very edge of the planet, the surface distance can be invalid
+		float hazeFactor = max(dToFarAtmos - dToAtmos - hazeThreshold, 0.0) * 0.15 * rimHazeBrightness ;
+		haze = hazeColor(ndl, gl_LightSource[0].diffuse.rgb * lightFactor) * hazeFactor;
+	}
+	float hazeLum = min(max(haze.r, max(haze.g, haze.b)), 1.0);
+	
+	vec3 rimHaze = vec3(0.0);
+	if(ndv <= innerFade) {
+		float hazeFactor = max(dToFarAtmos - dToAtmos - hazeThreshold, 0.0) * rimHazeBrightness * 0.5;
+		float surfFactor = max((dToFarAtmos - dToAtmos)*0.5 - hazeThreshold, 0.0) * hazeBrightness;
+		hazeFactor = mix(hazeFactor,surfFactor,ndv/planetRim);
+		
+		hazeFactor *= smoothstep(innerFade,innerFadeStart,ndv) * pow(min(1.0, ndv/planetRim), rimDecay);
+		rimHaze = hazeColor(ndl, gl_LightSource[0].diffuse.rgb * lightFactor) * hazeFactor;
+	}
+	rimHaze += haze * hiHaze;
+	float rimLum = min(max(rimHaze.r, max(rimHaze.g, rimHaze.b)), 1.0);
+	
+	float nDl = dot(cloudNorm,light);
+    float nl = max(0.0,  nDl);
+
+    vec3 diffuse = gl_LightSource[0].diffuse.rgb * nl * lightFactor * gl_FrontMaterial.diffuse.rgb;
+	diffuse += gl_LightModel.ambient.rgb * gl_FrontMaterial.ambient.rgb;
+
+    vec3 specular = vec3(0.0);
+	{ //Light 0
+		rDv = dot(normalize(-reflect(l, cloudNorm)),v);
+		if(rDv > 0.0) {
+			specular += gl_LightSource[0].specular.rgb * pow(rDv, gl_FrontMaterial.shininess) * lightFactor * pow(nl, 0.4);
+		}
+	}
+	{ //Light 1
+		rDv = dot(normalize(-reflect(l2, cloudNorm)),v);
+		float l2Factor = 1.0 / (1.0 + (gl_LightSource[1].quadraticAttenuation * dist2 * dist2));
+		diffuse += gl_LightSource[1].diffuse.rgb * max(0.0, dot(cloudNorm,l2)) * l2Factor;
+		if(rDv > 0.0) {
+			specular += gl_LightSource[1].specular.rgb * pow(rDv, gl_FrontMaterial.shininess) * l2Factor * pow(nl, 0.4);
+		}
+	}
+	specular *= gl_FrontMaterial.specular.rgb;;
+	
+	vec4 clouds = vec4(diffuse + specular, opacity);
+	if(ndv < planetRim)
+		clouds.a = 0.0;
+	
+	//vec4 result = vec4(hazeFactor,0.0,0.0,1.0);
+	vec4 result = vec4(0.0,0.0,0.0,shadow);
+	if(hazeLum > 0.0)
+		result = alphaBlend(result, vec4(haze / hazeLum, hazeLum * lowHaze));
+	if(clouds.a > 0.0)
+		result = alphaBlend(result, clouds);
+	//if(hazeLum > 0.0)
+	//	result = alphaBlend(result, vec4(haze / hazeLum, hazeLum * hiHaze);
+	if(rimLum > 0.0)
+		result = alphaBlend(result, vec4(rimHaze / rimLum, rimLum));
+	//result = vec4(shadow,0.0,0.0,1.0);
+	
+	result.a *= clamp(ndv / clamp(exag * 2.0, 0.00001, 0.3), 0.0, 1.0);
+	
+	gl_FragColor = result;
+}

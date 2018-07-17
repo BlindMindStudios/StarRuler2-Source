@@ -1,0 +1,36 @@
+Object.SupportAI : orders.SupportAI::SupportAI {
+restricted remote:
+	void transferTo(Object@ leader);
+	void transferTo(Object@ leader, vec3d newOffset);
+	void setFleetOffset(vec3d offset);
+
+server:
+	void supportInit();
+	void completeRegisterLeader(Object@ leader);
+	void supportDestroy();
+	void supportTick(double time);
+	void supportScuttle();
+	void clearLeader(Object@ prevLeader);
+	void preventExpire();
+	safe bool get_isDetached();
+	safe bool get_isRaiding();
+	safe void set_doRaids(bool raid);
+
+	void writeSupportAI(Message& msg) const;
+	bool writeSupportAIDelta(Message& msg) const;
+	
+	void supportAttack(Object@ target);
+	void cavalryCharge(Object@ target);
+	void supportInterfere(Object@ target, Object@ protect);
+	void supportRetreat();
+	void supportIdle();
+	void supportPostLoad();
+	
+	void set_supportEngageRange(double range);
+
+	safe int get_LeaderID();
+
+shadow:
+	void readSupportAI(Message& msg);
+	void readSupportAIDelta(Message& msg);
+}

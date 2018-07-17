@@ -1,0 +1,31 @@
+Subsystem: RocketEngine
+	Name: #ROCKETENGINE_NAME
+	Description: #ROCKETENGINE_DESC
+	BaseColor: #f9e146
+	TypeColor: #f9e146
+	Picture: SubsystemButtonArt::5
+	Elevation: 0
+	
+	Tags: HighMaint, Category:Propulsion
+	Tags: ExteriorCore, DefaultUnlock, Engine, GivesThrust, HasInternals
+	Hull: Flagship
+
+	OnCheckErrors: designs::checkCoreFacingBackwards
+	
+	Size := HexSize * Hexes
+	Thrust := 35 * Size
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: HexagonSubsystems::2
+		Hex.HP := 2 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

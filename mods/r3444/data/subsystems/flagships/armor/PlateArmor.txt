@@ -1,0 +1,20 @@
+Subsystem: PlateArmor
+	Name: #PLATEARMOR_NAME
+	Description: #PLATEARMOR_DESC
+	BaseColor: #a9a9a9
+	Picture: SubsystemButtonArt::0
+	Elevation: 1
+
+	Tags: LowMaint, Category:Armor
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, TankArmor
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	Hex.Resistance := 0.5
+	Hex.HP := 54 * HexSize
+	Hex.Mass := 2.5 * HexSize
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 0.5
+		Sprite: HexagonSubsystems::0

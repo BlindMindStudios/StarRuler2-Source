@@ -1,0 +1,68 @@
+Effect: ReactorOverload
+	Value: Damage
+
+	End: heralds_combat::ReactorOverload
+
+Effect: NilingAbsorb
+	Value: Damage
+	Value: Radius
+
+	Damage: heralds_combat::NilingAbsorb
+
+Effect: LineDamage
+	Value: Damage
+
+	End: heralds_combat::LineDamage
+
+Effect: DamageShields
+	Value: Amount
+
+	End: heralds_combat::DamageShields
+
+Effect: ShieldRedirect
+	Value: Percentage
+	
+	GlobalDamage: heralds_combat::ShieldRedirect
+
+Effect: AddBonusShields
+	Value: Amount
+	
+	Tick: heralds_combat::BonusShield
+	End: heralds_combat::RemoveBonusShield
+
+Effect: WarheadExpl
+	Value: Damage
+	Value: Radius
+
+	End: heralds_combat::WarheadExpl
+
+Effect: ApplyDoT
+	Value: DPS = 0
+	Value: Duration = 0
+
+	End: heralds_combat::ApplyDoT
+
+Effect: DamageOverTime
+	Value: DPS = 0
+
+	Tick: heralds_combat::DoTDamage
+
+Effect: DeflectInstances
+	Value: Instances
+
+	Start: heralds_combat::StartInstances
+	Tick: heralds_combat::RecoverInstances
+	GlobalDamage: heralds_combat::DeflectInstances
+
+Effect: SingleUseHexes
+	Start: heralds_combat::NoRepairHexes
+	RetrofitPost: heralds_combat::SingleUseRetrofit
+	Damage: heralds_combat::RemoveDeadHexes
+
+Effect: FlakImpact
+	Value: Damage = 0
+	Value: Pierce = 0
+	Value: IgnoreDR = 0
+	Value: FlagReduction = 1
+
+	End: heralds_combat::FlakImpact

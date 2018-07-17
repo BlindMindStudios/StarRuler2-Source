@@ -1,0 +1,115 @@
+Object.Construction : construction.Construction::Construction {
+restricted local safe:
+	bool get_canBuildShips();
+	bool get_canBuildOrbitals();
+	bool get_canBuildAsteroids();
+	bool get_canBuildSupports();
+	bool get_canTerraform();
+	uint get_constructionCount() const;
+	bool get_constructingSupport() const;
+	bool get_canExportLabor() const;
+	bool get_canImportLabor() const;
+
+	double get_laborIncome() const;
+	double get_constructionCostMod() const;
+
+	int get_shipBuildCost() const;
+	int get_orbitalBuildCost() const;
+	int get_supportBuildSpeed() const;
+	double get_orbitalMaintenanceMod() const;
+	double get_terraformCostMod() const;
+
+	bool get_isRallying() const;
+	vec3d get_rallyPosition() const;
+
+	double get_laborStorageCapacity() const;
+	double get_currentLaborStored() const;
+
+	bool get_isRepeating() const;
+
+restricted local:
+	float get_constructionProgress() const;
+	string get_constructionName(uint num) const;
+	const Design@ get_constructionDesign() const;
+	Constructible@[] getConstructionQueue();
+	Constructible@[] getConstructionQueue(uint limit);
+	
+	Object@ get_rallyObject() const;
+
+restricted remote:
+	void cancelConstruction(int id);
+	void buildFlagship(const Design@ design, Object@ constructFrom = null);
+	async relocking void buildOrbital(int OrbitalType, vec3d position, Object@ frame = null, Object@ constructFrom = null);
+	async relocking void buildStation(const Design@ design, vec3d position, Object@ frame = null, Object@ constructFrom = null);
+	async relocking void buildConstruction(uint constructionType, Object@ objTarg = null, vec3d pointTarg = vec3d());
+	void buildDryDock(const Design@ forDesign, float pct);
+	void workDryDock(Orbital@ dryDock);
+	async relocking void buildAsteroid(Asteroid@ asteroid, uint resourceId, Object@ constructFrom = null);
+	async relocking void startTerraform(Planet@ planet, uint resourceId);
+	void addSupportShipConstruction(int id, const Design@ dsg, uint amount);
+	void removeSupportShipConstruction(int id, const Design@ dsg, uint amount);
+	void exportLaborTo(Object@ other);
+	void moveConstruction(int id, int beforeId = -1);
+	
+	void clearRally();
+	void rallyTo(Object@ dest);
+	void rallyTo(vec3d position);
+	void setRepeating(bool value);
+
+server:
+	safe uint get_constructionType() const;
+	int get_constructionID(uint num) const;
+	double get_distributedLabor() const;
+	
+	safe bool get_isUsingLabor() const;
+	safe double get_baseLaborIncome() const;
+	safe double get_laborFactor() const;
+	void destroyConstruction();
+	void modLaborIncome(double mod);
+	void modLaborFactor(double mod);
+	void setDistributedLabor(double val);
+	safe bool flagUsingLabor(Object@ obj = null);
+
+	void modLaborStorage(double mod);
+	void modStoredLabor(double mod, bool obeyCap = false);
+
+	void modSupportBuildSpeed(int amt);
+	void modShipBuildCost(int amt);
+	void modOrbitalBuildCost(int amt);
+	void modOrbitalMaintenanceMod(double amt);
+	void modTerraformCostMod(double amt);
+	void multConstructionCostMod(double multFactor);
+	uint queuePosition(int id);
+
+	void modConstructionHPBonus(double mod);
+	safe double get_constructionHPBonus();
+
+	void startBuildingConstruction(uint type, vec2i position);
+	void cancelBuildingConstruction(uint type, vec2i position);
+	void startRetrofitConstruction(Object@ fleet, int buildCost, double laborCost, int extraMaint, Object@ constructFrom = null);
+	void retrofitDesignCost(Object@ fleet, const Design@ dsg);
+	void retrofitDesignCostFinish(Object@ fleet);
+	void buildSupport(uint id, const Design@ design, Object@ buildFor);
+	void transferBuildSupport(uint id, Object@ buildFor);
+	void cancelBuildSupport(uint id);
+	
+	void doRally(Object@ orderObj);
+
+	void set_canBuildShips(bool value);
+	void set_canBuildOrbitals(bool value);
+	void set_canBuildAsteroids(bool value);
+	void set_canBuildSupports(bool value);
+	void set_canTerraform(bool value);
+	void set_canExportLabor(bool value);
+	void set_canImportLabor(bool value);
+
+	relocking void constructionTick(double time);
+	bool hasConstructionUnder(double eta);
+
+	bool writeConstructionDelta(Message& msg) const;
+	void writeConstruction(Message& msg) const;
+
+shadow:
+	void readConstructionDelta(Message& msg);
+	void readConstruction(Message& msg);
+}

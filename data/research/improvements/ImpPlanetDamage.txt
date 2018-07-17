@@ -1,0 +1,25 @@
+Technology: ImpPlanetDamage
+	Name: #R_IMP_PLANET_DAMAGE
+	Blurb: #R_IMP_PLANET_DAMAGE_BLURB:20%
+	Description: #R_IMP_PLANET_DAMAGE_DESC:20%
+
+	Icon: techBallistics * #ffe100
+	Color: #ff8000
+
+	Point Cost: 500
+	Time Cost: 100
+
+	ModAttribute(StaticDamageFactor, Multiply, 1.2)
+
+Technology: ImpPlanetDamage2
+	Name: #R_IMP_PLANET_DAMAGE2
+	Blurb: #R_IMP_PLANET_DAMAGE_BLURB:40%
+	Description: #R_IMP_PLANET_DAMAGE_DESC:40%
+
+	Icon: techBallistics * #ffe100
+	Color: #ff8000
+
+	Point Cost: 800
+	Time Cost: 140
+
+	ModAttribute(StaticDamageFactor, Multiply, 1.4)

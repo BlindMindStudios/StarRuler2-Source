@@ -1,0 +1,16 @@
+Building: PlanetoidLv2
+	Name: #BLD_PLANETOID_LV2
+	Description: #BLD_PLANETOID_LV2_DESC
+	Sprite: FakeLV2
+
+	Category: Resource
+
+	Size: 4x8
+	Base Cost: 1500
+
+	Build Time: 360
+
+	ConsumeCargo(Ore, 4000)
+
+	RequireStatus(ArtificialPlanetoid)
+	AddDummyResource(Neutronium, 1)

@@ -1,0 +1,35 @@
+Shipset: Mechanica
+	Name: Mechanica
+
+	Hull: MechanicaFlagHuge
+	Hull: MechanicaFlagVeryLarge
+	Hull: MechanicaFlagLarge
+	Hull: MechanicaFlagMedium
+	Hull: MechanicaFlagTiny
+	Hull: MechanicaHuge
+	Hull: MechanicaLarge
+	Hull: MechanicaMedium
+	Hull: MechanicaSmall
+	Hull: MechanicaTiny
+	Hull: MechanicaStation
+	Hull: MechanicaSatellite
+
+	Skin: Miner
+		Model: MechanicaMiner
+		Material: MechanicaGenericPBR
+
+	Skin: Missionary
+		Model: MechanicaMissionary
+		Material: MechanicaGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: MechanicaFreighter
+		Material: MechanicaGenericPBR
+
+	Skin: Colonizer
+		Model: MechanicaColony
+		Material: MechanicaGenericPBR
+
+	Skin: Tractor
+		Model: MechanicaTractor
+		Material: MechanicaGenericPBR

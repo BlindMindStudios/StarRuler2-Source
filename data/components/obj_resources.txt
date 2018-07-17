@@ -1,0 +1,120 @@
+Object.Resources : components.Resources::ObjectResources {
+local:
+	Resource@[] getNativeResources() const;
+	Resource@[] getAllResources() const;
+	safe uint get_nativeResourceCount() const;
+	uint get_nativeResourceType(uint index) const;
+	int get_nativeResourceId(uint index) const;
+	uint get_nativeResourceTotalLevel() const;
+	bool get_nativeResourceUsable(uint index) const;
+	bool get_nativeResourceLocked(uint index);
+	uint getTradedResourceCount() const;
+	Object@ get_nativeResourceDestination(uint index) const;
+	bool get_exportEnabled() const;
+	bool get_importEnabled() const;
+	safe uint get_resourceModID() const;
+	safe bool isTerraforming() const;
+	bool get_hasAutoImports() const;
+	safe uint get_queuedImportCount();
+	uint get_queuedImportType(uint i);
+	Object@ get_queuedImportOrigin(uint i);
+	uint getImportsOfClass(uint cls) const;
+	safe float get_resourceVanishRate() const;
+
+	safe uint get_primaryResourceType() const;
+	safe uint get_primaryResourceLevel() const;
+	safe uint get_primaryResourceLimitLevel() const;
+	safe int get_primaryResourceId() const;
+	safe bool get_primaryResourceUsable() const;
+	safe bool get_primaryResourceLocked() const;
+	safe bool get_primaryResourceExported() const;
+	
+	string getDisabledReason(int id);
+
+restricted local:
+	Resource@[] getAvailableResources() const;
+	Resource@[] getImportedResources() const;
+	Resource@[] getQueuedImports() const;
+	Resources@[] getResourceAmounts() const;
+	bool hasImportedResources() const;
+	safe uint get_availableResourceCount() const;
+	uint get_availableResourceType(uint index) const;
+	bool get_availableResourceUsable(uint index) const;
+	uint get_usableResourceCount() const;
+	bool isResourceAvailable(uint id) const;
+	uint getAvailableResourceAmount(uint id) const;
+	Object@ get_availableResourceOrigin(uint index) const;
+
+remote:
+	async void exportResource(uint index, Object@ to);
+	async void exportResourceByID(int id, Object@ to);
+
+server:
+	safe bool isPrimaryDestination(Object@ dest);
+	Resource@[] getResourcesFor(Empire@ emp) const;
+	Resource@[] getQueuedImportsFor(Empire@ emp) const;
+	void changeResourceOwner(Empire@ prevOwner);
+	void changeResourceRegion(Region@ prevRegion, Region@ newRegion);
+	void changeResourceTerritory(Territory@ prev, Territory@ terr);
+	void resourceTick(double time);
+	int addResource(uint resourceId);
+	void createResource(uint resourceId);
+	uint getNativeIndex(int id);
+	async void removeResource(int id, bool wasManual = false);
+	Object@ getNativeResourceDestination(Empire@ forEmpire, uint index) const;
+	Object@ getNativeResourceDestinationByID(Empire@ forEmpire, int id) const;
+	bool getNativeResourceUsableByID(int id) const;
+	uint get_nativeResourceByID(int id) const;
+	async void addAvailableResource(Object@ from, int id, uint resource, bool usable);
+	async void removeAvailableResource(Object@ from, int id, bool wasManual = false);
+	async void enableAvailableResource(Object@ from, int id);
+	async void disableAvailableResource(Object@ from, int id, bool wasManual = false);
+	async void setAvailableResourceVanish(Object@ from, int id, double vanishTime);
+	void setResourceDisabled(int nativeId, bool disabled, bool wasManual = false);
+	void setResourceLocked(int nativeId, bool locked);
+	void addQueuedImport(Empire@ forEmpire, Object@ from, int id, uint resource);
+	void removeQueuedImport(Empire@ forEmpire, Object@ from, int id);
+	void setExportEnabled(bool value);
+	void setImportEnabled(bool value);
+	void exportResource(Empire@ forEmpire, uint index, Object@ to);
+	async void clearExportResource(int id);
+	uint getResourceTargetLevel();
+	void modPressure(uint resource, int amount);
+	async void modDummyResource(uint resource, int amount, bool manual = false);
+	void destroyObjResources();
+	uint getUniqueFoodCount(int modBy = 0);
+	uint getFoodCount();
+	void startTerraform();
+	void stopTerraform();
+	void terraformTo(uint resId);
+	void modResourceEfficiencyBonus(double amt);
+	void modResourceVanishBonus(double amt);
+	void bumpResourceModId();
+	void redirectAllImports(Object@ toObject);
+	double pressureFromAsteroids(uint type);
+	uint getAvailableOfTier(uint tier);
+
+	safe float get_resourceEfficiency() const;
+	void set_resourceEfficiency(float val);
+
+	void enableResources();
+	void disableResources();
+	bool get_areResourcesEnabled() const;
+	void setResourceLevel(uint level, bool wasManual = false);
+	int get_resourcePressure(uint resource) const;
+	uint get_resourcesProducing(uint resource) const;
+	int get_totalResourcePressure() const;
+
+	bool writeResourceDelta(Message& msg) const;
+	void writeResources(Message& msg) const;
+	void resourcesPostLoad();
+
+	safe Civilian@ getAssignedCivilian();
+	void setAssignedCivilian(Civilian@ civ);
+	safe double getCivilianTimer();
+	void setCivilianTimer(double time);
+
+shadow:
+	void readResourceDelta(Message& msg);
+	void readResources(Message& msg);
+}

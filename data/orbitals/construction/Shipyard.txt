@@ -1,0 +1,39 @@
+Module: Shipyard
+	Name: #ORB_SHIPYARD
+	Blurb: #ORB_SHIPYARD_BLURB
+	Description: #ORB_SHIPYARD_DESC
+	Icon: OrbitalIcons::5
+
+	Core: True
+	Standalone: True
+	Spin: 0
+
+	Build Cost: 500
+	Maintenance: 250
+	Labor Cost: 30
+
+	Health: 7500
+	Armor: 5000
+
+	Model: Shipyard
+	Material: GenericPBR_Shipyard
+	Size: 20
+
+	Strategic Icon: OrbitalIcons::5
+
+	AllowConstruction(Ships = True, Enable Fill From = True)
+	AddFleetCommand(256)
+	AddCargoStorage(100000)
+
+	MultConstructionCost(0.8)
+
+	AddLaborIncome(8)
+	AddLaborEmpireAttribute(FactoryLaborMod)
+	AddLaborFactor(-0.25)
+
+	RequireNotTrait(Mechanoid)
+
+	AllowLaborImport()
+	ForbidLaborExport()
+
+	AI: RegisterForUse(Shipyard)

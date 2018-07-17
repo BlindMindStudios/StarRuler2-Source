@@ -1,0 +1,18 @@
+Card: Harvest
+	Name: #CARD_HARVEST
+	Description: #CARD_HARVEST_DESC
+
+	Icon: CardIcons::19
+	
+	Color: #fcb729
+	Class: Action
+
+	Frequency: 0
+
+	Target: planet = Object
+	TargetFilterOwned(planet)
+	TargetFilterType(planet, Planet)
+
+	OnPlanet(planet, AddPlanetResource(Grain))
+
+	AI: PlayAsCreatedResource(planet, Grain, 5.0)

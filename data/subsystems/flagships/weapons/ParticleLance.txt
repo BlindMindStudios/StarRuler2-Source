@@ -1,0 +1,57 @@
+Subsystem: ParticleLance
+	Name: #S_PARTICLELANCE
+	Description: #S_PARTICLELANCE_DESC
+	BaseColor: #ff7600
+	TypeColor: #ff7600
+	Elevation: 2
+
+	Tags: BaseCost, Category:Weapons, HeraldsDLC
+	Tags: WeaponBase, Rotatable, HexLimitArc
+	Tags: ExteriorCore, Weapon, IsProjWeapon, HasInternals, MainDPS
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Range := Size + 500
+	Damage := Size * 1.25
+	Reload := 5.0 * min(1.0 + Size/512, 2.0)
+	Speed := max(60, Range / 30)
+	Spread := 0
+	Tracking := 0.1
+	FireArc := 3.0
+	SupplyCost := Size * 2.5
+	PowerUse := 4.5 * Size
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+	
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: ParticleLance::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: ParticleLance
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Spread = Spread
+		FireArc = FireArc
+		TargetTolerance = max(pi,FireArc + pi/4)
+		FireTolerance = Spread * 3
+		SupplyCost = SupplyCost * Reload
+		CapOnTarget = 24

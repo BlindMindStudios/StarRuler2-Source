@@ -1,0 +1,27 @@
+Status: AncientPlanet
+	Visible To: Nobody
+	
+	NoNeedPopulationForLevel()
+	PlanetLevelIncomeMod(+80, -50, Step = -80)
+	AlwaysAtMaxPopulation()
+
+	AddDummyResource(Water, 20)
+	AddDummyResource(Meat, 20)
+	AddDummyResource(Titanium, 20)
+	AddDummyResource(Supercarbons, 20)
+
+	IfNativeLevel(0, SetMaxLevel(0), Exact = True, Limit = False) #version<159
+	IfNativeLevel(1, SetMaxLevel(1), Exact = True, Limit = False) #version<159
+	IfNativeLevel(2, SetMaxLevel(2), Exact = True, Limit = False) #version<159
+	IfNativeLevel(3, SetMaxLevel(3), Exact = True, Limit = False) #version<159
+	IfNotNativeClass(Scalable, IfNativeLevel(0, SetMaxLevel(0), Exact = True, Limit = False)) #version>=159
+	IfNotNativeClass(Scalable, IfNativeLevel(1, SetMaxLevel(1), Exact = True, Limit = False)) #version>=159
+	IfNotNativeClass(Scalable, IfNativeLevel(2, SetMaxLevel(2), Exact = True, Limit = False)) #version>=159
+	IfNotNativeClass(Scalable, IfNativeLevel(3, SetMaxLevel(3), Exact = True, Limit = False)) #version>=159
+	IfNativeClass(Scalable, SetMaxLevelStatusCount(Base = 2, Status = AncientScalable)) #version>=159
+	IfNativeClass(Scalable, PlanetLevelIncomeMod(0, 0, Step = -50)) #version>=159
+
+	IfLevel(0, AddFleetCommand(-50), Exact = True, Limit = False)
+	IfLevel(1, AddFleetCommand(-50), Exact = True, Limit = False)
+	IfLevel(2, AddFleetCommand(-200), Exact = True, Limit = False)
+	IfLevel(3, AddFleetCommand(-350), Exact = True, Limit = False)

@@ -1,0 +1,66 @@
+Trait: StarChildren
+	Name: #TRAIT_STAR_CHILDREN
+	Description: #TRAIT_STAR_CHILDREN_DESC
+	Order: 6
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	Icon: SystemUnderAttack
+	Color: #1c9bb4
+
+	AddStatusOwnedPlanets(StarChildren)
+	ModAttribute(PopulationGrowthFactor, Multiply, 0)
+	ModAttribute(PopulationDecayFactor, Multiply, 0)
+	ModAttribute(TileDevelopmentFactor, Multiply, 0)
+	ModAttribute(OverpopulationBenefitFactor, Multiply, 0)
+	ModAttribute(ColonizeDevelopTiles, Multiply, 0)
+	ModAttribute(ForbidColonization, Add, 1)
+	ModAttribute(ImperialBldConstructionRate, Multiply, 0)
+	ModAttribute(CivBldConstructionRate, Multiply, 0)
+	ModAttribute(HabitatUpgrade, Add, 1)
+	ModAttribute(HasPressure, Multiply, 0)
+
+	IfHaveTrait(Slipstream, LoadDesigns(starchildren/slipstream))
+	IfHaveTrait(Hyperdrive, LoadDesigns(starchildren/hyperdrive))
+	IfHaveTrait(Jumpdrive, LoadDesigns(starchildren/jumpdrive))
+	IfHaveTrait(Gate, LoadDesigns(starchildren/other))
+	IfHaveTrait(Fling, LoadDesigns(starchildren/other))
+	IfHaveTrait(Sublight, LoadDesigns(starchildren/other))
+
+	UnlockSubsystem(MothershipHull)
+
+	TriggerHomeworld(SpawnShip(Mothership, Override Disable Starting = True, Set Home = True))
+	TriggerHomeworld(DestroySystemPlanet(0, Quiet = True))
+
+	ReplaceTechnologyNodes(ImpFactoryLabor, ImpMothershipLabor)
+	ReplaceTechnologyNodes(ImpFactoryLabor2, ImpMothershipLabor2)
+
+	ReplaceTechnologyNodes(ImpTileDevelopment, ImpMothershipLabor)
+	ReplaceTechnologyNodes(ImpTileDevelopment2, ImpMothershipLabor2)
+
+	ReplaceTechnologyNodes(ImpCivConstructionRate, ImpHabitat)
+	ReplaceTechnologyNodes(ImpCivConstructionRate2, ImpHabitat)
+
+	ReplaceTechnologyNodes(ImpImpConstructionRate, ImpHabitat)
+	ReplaceTechnologyNodes(ImpImpConstructionRate2, ImpHabitat)
+
+	ReplaceTechnologyNodes(ImpPlanetDamage, ImpHabitat)
+	ReplaceTechnologyNodes(ImpPlanetDamage2, ImpHabitat)
+
+	ReplaceTechnologyNodes(BldMegacity, ImpHabitat)
+	ReplaceTechnologyNodes(BldPlanetaryEngine, ImpHabitat)
+	ReplaceTechnologyNodes(RingHabitat, ImpHabitat)
+	
+	ReplaceTechnologyNodes(FactoryLabor, MothershipLabor)
+	ReplaceTechnologyNodes(FactoryLabor2, MothershipLabor2)
+	ReplaceTechnologyNodes(Construction, HabitatUpgrade)
+	ReplaceTechnologyNodes(Megacity, HabitatUpgrade)
+	ReplaceTechnologyNodes(PlanetaryEngine, HabitatUpgrade)
+	ReplaceTechnologyNodes(Population, HabitatUpgrade)
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((-3,1), HabitatUpgrade))
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((-1,4), HabitatUpgrade))
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((-1,11), HabitatUpgrade))
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((-8,11), HabitatUpgrade))
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((5,-12), HabitatUpgrade))
+	OnDLC(Heralds, ReplaceTechnologyNodeAt((7,1), HabitatUpgrade))

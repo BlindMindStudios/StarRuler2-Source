@@ -1,0 +1,6 @@
+Status: Lavish
+	Visible To: Nobody
+
+	IfLevel(3, AddMaxPopulation(-1))
+	IfLevel(4, AddMaxPopulation(-2))
+	IfLevel(5, AddMaxPopulation(-2))

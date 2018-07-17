@@ -1,0 +1,14 @@
+Technology: VacuumTelescope
+	Name: #R_ORB_VACUUM_TELESCOPE
+	Description: #R_ORB_VACUUM_TELESCOPE_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 900
+	Time Cost: 180
+
+	Icon: GuiOrbitalIcons::17
+	Color: #fff300
+	
+	UnlockTag(VacuumTelescopeUnlock)
+	SkipOnUnlockedTag(VacuumTelescopeUnlock)

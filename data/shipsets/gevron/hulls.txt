@@ -1,0 +1,168 @@
+Hull: GevronTiny
+	Name: Corvette
+	Background: GevronBlueprint
+	BackgroundScale: 0.4
+	ModelScale: 0.4
+	Material: GevronGenericPBR
+	Model: GevronTiny
+	Shape: data/shipsets/Gevron/support_tiny.shape.png
+	
+	Tags: Support
+	MinSize: 1
+	Subsystem: SupportHull
+
+Hull: GevronSmall
+	Name: Frigate
+	Background: GevronBlueprint
+	BackgroundScale: 0.5
+	ModelScale: 0.5
+	Material: GevronGenericPBR
+	Model: GevronSmall
+	Shape: data/shipsets/Gevron/support_small.shape.png
+
+	Tags: Support
+	MinSize: 2
+	Subsystem: SupportHull
+
+Hull: GevronMedium
+	Name: Destroyer
+	Background: GevronBlueprint
+	BackgroundScale: 0.7
+	ModelScale: 0.6
+	Material: GevronGenericPBR
+	Model: GevronMedium
+	Shape: data/shipsets/Gevron/support_medium.shape.png
+
+	Tags: Support
+	MinSize: 4
+	Subsystem: SupportHull
+
+Hull: GevronLarge
+	Name: Cruiser
+	Background: GevronBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 0.9
+	Material: GevronGenericPBR
+	Model: GevronLarge
+	Shape: data/shipsets/Gevron/support_large.shape.png
+
+	Tags: Support
+	MinSize: 8
+	Subsystem: SupportHull
+
+Hull: GevronHuge
+	Name: Heavy Cruiser
+	Background: GevronBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.0
+	Material: GevronGenericPBR
+	Model: GevronFlagSmall
+	Shape: data/shipsets/Gevron/support_huge.shape.png
+
+	Tags: Support
+	MinSize: 80
+	Subsystem: SupportHull
+
+Hull: GevronFlagTiny
+	Name: Small Battleship
+	Background: GevronBlueprint
+	ModelScale: 1.0
+	BackgroundScale: 1.0
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagSmall
+	Shape: data/shipsets/Gevron/flagship_small.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: GevronFlagSmall
+	Name: Small Battleship
+	Background: GevronBlueprint
+	ModelScale: 1.0
+	BackgroundScale: 1.0
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagSmall
+	Shape: data/shipsets/Gevron/flagship_small.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: GevronFlagMedium
+	Name: Medium Battleship
+	Background: GevronBlueprint
+	ModelScale: 1.05
+	BackgroundScale: 1.1
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagMedium
+	Shape: data/shipsets/Gevron/flagship_medium.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: GevronFlagLarge
+	Name: Large Battleship
+	Background: GevronBlueprint
+	BackgroundScale: 1.2
+	ModelScale: 1.5
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagLarge
+	Shape: data/shipsets/Gevron/flagship_large.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: GevronFlagVeryLarge
+	Name: Very Large Battleship
+	Background: GevronBlueprint
+	BackgroundScale: 1.25
+	ModelScale: 1.8
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagVeryLarge
+	Shape: data/shipsets/Gevron/flagship_verylarge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: GevronFlagHuge
+	Name: Huge Battleship
+	Background: GevronBlueprint
+	BackgroundScale: 1.5
+	ModelScale: 2.0
+	Material: GevronGenericPBRAdvanced
+	Model: GevronFlagHuge
+	Shape: data/shipsets/Gevron/flagship_huge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+	
+Hull: GevronStation
+	Name: Station
+	Background: GevronBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/Gevron/station.shape.png
+
+	Tags: Station
+	MinSize: 16
+	Subsystem: StationHull
+
+Hull: GevronSatellite
+	Name: Satellite
+	Background: GevronBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/Gevron/station.shape.png
+
+	Tags: Satellite
+	MinSize: 1
+	Subsystem: SatelliteHull

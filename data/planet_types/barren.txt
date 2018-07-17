@@ -1,0 +1,10 @@
+PlanetType: Barren
+	Icon: PlanetType::1
+	DistantIcon: DistantPlanetType::1
+	Atmosphere: DustyAtmosphere
+	
+	BiomeWeights:
+		Mountains: 3
+		Desert: 1
+		Forest: -4
+		Oceanic: -4

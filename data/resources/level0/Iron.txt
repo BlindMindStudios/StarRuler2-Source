@@ -1,0 +1,17 @@
+Resource: Iron
+	Name: #IRON
+	Description: #IRON_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::7
+	Small Icon: ResourceIconsSmall::15
+
+	Level: 0
+	Distribution: 0.4
+	Affinity: Labor
+
+	Asteroid Frequency: 0.2
+	Asteroid Labor: 30
+
+	Pressure: 4 Labor
+	ModSupportBuildSpeed(+0.3)

@@ -1,0 +1,17 @@
+Resource: Spice
+	Name: #SPICE
+	Description: #SPICE_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::19
+	Small Icon: ResourceIconsSmall::2
+
+	Level: 0
+	Rarity: Rare
+	Affinity: Influence
+
+	Asteroid Frequency: 0.2
+	Asteroid Labor: 40
+
+	Pressure: 3 Influence
+	ModLoyalty(+6)

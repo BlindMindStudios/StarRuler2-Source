@@ -1,0 +1,17 @@
+attribute vec4 in_position;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+
+varying vec3 npos;
+varying vec3 normal;
+varying vec2 uv;
+
+void main()
+{
+	normal = normalize(gl_NormalMatrix * in_normal);
+	vec4 pos = gl_ModelViewMatrix * in_position;
+	npos = -pos.xyz;
+	
+	uv = in_uv;
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

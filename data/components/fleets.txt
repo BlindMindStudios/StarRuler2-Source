@@ -1,0 +1,18 @@
+Empire.FleetManager : components.FleetManager::FleetManager {
+restricted local:
+	safe uint get_fleetCount();
+	Object@ get_fleets(uint index);
+
+restricted local async:
+	Object@ getFleetFromPosition(vec3d pos);
+	Ship@[] getFlagships();
+	Ship@[] getStations();
+
+server:
+	Ship@ getStrongestFleet();
+server async:
+	void registerFleet(Object@ obj);
+	void unregisterFleet(Object@ obj);
+	double getTotalFleetStrength();
+	void giveFleetVisionTo(Empire@ toEmpire, bool systemSpace = true, bool deepSpace = true, bool inFTL = true, bool flagships = true, bool stations = false, int statusReq = -1, Region@ toSystem = null);
+}

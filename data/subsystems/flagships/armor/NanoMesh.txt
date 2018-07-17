@@ -1,0 +1,23 @@
+Subsystem: NanoMesh
+	Name: #NANOMESH_NAME
+	Description: #NANOMESH_DESC
+	BaseColor: #a9a9a9
+	Elevation: 1
+
+	Tags: LowMaint, Category:Defense, NoWall, PassExterior
+	Tags: NoCore, NonContiguous, Defense, IsArmor, TankArmor
+	Tags: SecondaryArmor, HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	Hex.HP := 200 * HexSize
+	Hex.Mass := 2.0 * HexSize
+
+	AddAdjacentModifier: AddHP(Hex.HP / 6.0)
+	AddPostModifier: HpFactor(0.0)
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 3
+		Hex.LaborCost := Hex.LaborCost * 2
+		Sprite: NanoMesh

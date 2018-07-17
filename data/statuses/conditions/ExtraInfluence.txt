@@ -1,0 +1,11 @@
+Status: ExtraInfluence
+	Name: #COND_EXTRA_INFLUENCE
+	Description: #COND_EXTRA_INFLUENCE_DESC
+
+	Icon: ConditionIcons::0
+	Color: #0087c7
+
+	Condition Frequency: 0.25
+	
+	AddToNativeResource( AddPressure(Influence, 1) ) #version<147
+	AddToNativeResource( AddPressureEmpireAttribute(Influence, PlanetConditionMultiplier) ) #version>=147

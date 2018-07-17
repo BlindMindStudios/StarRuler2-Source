@@ -1,0 +1,22 @@
+Anomaly: NeutronPlate
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_NEUTRONPLATE
+
+		Choice: Infuse
+		Choice: Study
+
+	Option: Infuse
+		Icon: AffinityIcons::3
+		Description: #ANOMALY_NEUTRONPLATE_INFUSE:15
+
+		AddModifier(tag/IsArmor::HPFactor(1.15))
+		AddModifier(ReactiveArmor::ImpactLevelFactor(1.15))
+
+	Option: Study
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_NEUTRONPLATE_STUDY
+
+		UnlockSubsystem(NeutronArmor)

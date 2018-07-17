@@ -1,0 +1,12 @@
+Module: SolarComplex
+	Name: #ORB_SOLAR_COMPLEX
+	Blurb: #ORB_SOLAR_COMPLEX_BLURB
+	Description: #ORB_SOLAR_COMPLEX_DESC
+	Icon: ResourceIcon::2
+	Standalone: False
+	Core: False
+
+	Maintenance: 100
+	Build Cost: 250
+
+	AddEnergyIncome(+0.3)

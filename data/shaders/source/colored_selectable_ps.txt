@@ -1,0 +1,9 @@
+varying vec2 uv;
+uniform sampler2D texture;
+uniform float selected;
+
+void main() {
+	vec4 col = texture2D(texture, uv) * gl_Color;
+	col.rgb = mix(col.rgb, vec3(1.0, 1.0, 1.0), selected * 0.5);
+	gl_FragColor = col;
+}

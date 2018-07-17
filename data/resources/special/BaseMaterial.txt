@@ -1,0 +1,16 @@
+Resource: BaseMaterial
+	Name: #R_BASE_MATERIAL
+	Description: #R_BASE_MATERIAL_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIconsSmall::81
+	Small Icon: ResourceIconsSmall::81
+
+	Rarity: Common
+	Distribution: 0
+	Frequency: 0
+	Level: 0
+
+	TriggerPeriodic(AddCargo(BaseMaterial, 1), Interval = 6)
+
+	OnExportMoveLocalCargo(BaseMaterial)

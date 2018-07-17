@@ -1,0 +1,41 @@
+Model: VolkurMiner
+	Mesh: data/shipsets/volkur/civilian_miner.ogex
+
+Model: VolkurMissionary
+	Mesh: data/shipsets/volkur/civilian_missionary.ogex
+
+Model: VolkurFreighter
+	Mesh: data/shipsets/volkur/civilian_freighter.ogex
+
+Model: VolkurColony
+	Mesh: data/shipsets/volkur/civilian_colony.ogex
+
+Model: VolkurTractor
+	Mesh: data/shipsets/volkur/civilian_tractor.ogex
+
+Model: VolkurTiny
+	Mesh: data/shipsets/volkur/support_tiny.ogex
+
+Model: VolkurSmall
+	Mesh: data/shipsets/volkur/support_small.ogex
+
+Model: VolkurMedium
+	Mesh: data/shipsets/volkur/support_medium.ogex
+
+Model: VolkurLarge
+	Mesh: data/shipsets/volkur/support_large.ogex
+
+Model: VolkurFlagSmall
+	Mesh: data/shipsets/volkur/flagship_small.ogex
+
+Model: VolkurFlagMedium
+	Mesh: data/shipsets/volkur/flagship_medium.ogex
+
+Model: VolkurFlagLarge
+	Mesh: data/shipsets/volkur/flagship_large.ogex
+
+Model: VolkurFlagVeryLarge
+	Mesh: data/shipsets/volkur/flagship_verylarge.ogex
+
+Model: VolkurFlagHuge
+	Mesh: data/shipsets/volkur/flagship_huge.ogex

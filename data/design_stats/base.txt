@@ -1,0 +1,157 @@
+GlobalStat: HP
+	Name: #S_HP
+	Description: #STT_HP
+	Icon: AttributeIcons::6
+	Color: #80ff80
+
+	Variable: Hex.HP
+
+	GlobalStat: Repair
+		Name: #S_REPAIR
+		Description: #STT_REPAIR
+		Color: #aaa
+		Secondary: HP
+
+		Variable: Repair
+
+GlobalStat: DPS
+	Name: #S_DPS
+	Description: #STT_DPS
+	Icon: AttributeIcons::3
+	Color: #ff8080
+
+	Variable: DPS
+
+GlobalStat: SupplyCap
+	Name: #S_SUPPLYCAP
+	Description: #STT_SUPPLYCAP
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Variable: SupplyCapacity
+
+	GlobalStat: SupplyRegen
+		 Name: #S_SUPPLYREGEN
+		 Description: #STT_SUPPLYREGEN
+		 Color: #aaa
+		 Secondary: SupplyCap
+		 Suffix: /s
+
+		 Variable: SupplyRate
+
+	 GlobalStat: SupplyUse
+		  Name: #S_SUPPLYUSE
+		  Description: #STT_SUPPLYUSE
+		  Color: #aaa
+		  Secondary: SupplyCap
+		  Suffix: /s
+
+		  Variable: SupplyDrain
+
+GlobalStat: SupportSupplyCapacity
+	Name: #S_SUPPLYCAP_SUPPORT
+	Description: #STT_SUPPLYCAP_SUPPORT
+	Icon: AttributeIcons::4 * #80ff80
+	Color: #fefc61
+
+	Variable: SupportSupplyCapacity
+
+GlobalStat: SupportSupplyUse
+	 Name: #S_SUPPLYUSE
+	 Description: #STT_SUPPLYUSE
+	 Icon: AttributeIcons::4
+	 Color: #fefc61
+	 Suffix: /s
+
+	 RequireTag: SupportHull
+
+	 Variable: SupplyDrain
+
+GlobalStat: SupportCap
+	Name: #S_SUPPORTCAP
+	Description: #STT_SUPPORTCAP
+	Icon: ActionBarIcons::2
+	Color: #00cffe
+
+	Variable: SupportCapacity
+
+GlobalStat: Acceleration
+	 Name: #S_ACCEL
+	 Description: #STT_ACCEL
+	 Icon: AttributeIcons::0
+	 Color: #a77751
+	 Suffix: u/s²
+
+	 Variable: Thrust
+	 DivBy: Hex.Mass
+
+	 GlobalStat: Thrust
+		  Name: #S_THRUST
+		  Description: #STT_THRUST
+		  Color: #aaa
+		  Secondary: Acceleration
+
+		  Variable: Thrust
+
+	GlobalStat: Mass
+		Name: #S_MASS
+		Description: #STT_MASS
+		Color: #aaa
+		Secondary: Acceleration
+
+		Variable: Hex.Mass
+
+	GlobalStat: TurnRate
+		 Name: #S_TURN_THRUST
+		 Description: #STT_TURN_THRUST
+		 Color: #aaa
+		 Secondary: Acceleration
+		 Suffix: rad/s
+
+		 Variable: TurnThrust
+		 DivBy: Hex.Mass
+
+GlobalStat: Power
+	Name: #S_POWER
+	Description: #STT_POWER
+	Icon: ResourceIcon::2
+	Color: #42b4bd
+
+	Variable: Ship.Power
+	UsedVariable: Ship.REQUIRES_Power
+
+GlobalStat: Control
+	Name: #S_CONTROL
+	Description: #STT_CONTROL
+	Icon: ActionBarIcons::0 * #00ff80
+	Color: #00ff80
+
+	Variable: Ship.Command
+	UsedVariable: Ship.REQUIRES_Command
+
+GlobalStat: HyperdriveSpeed
+	Name: #S_HYPERDRIVESPEED
+	Description: #STT_HYPERDRIVESPEED
+	Icon: ActionBarIcons::5
+	Color: #00c0ff
+	Suffix: u/s
+
+	Variable: HyperdriveSpeed
+
+GlobalStat: SlipstreamTime
+	Name: #S_SLIPSTREAMTIME
+	Description: #STT_SLIPSTREAMTIME
+	Icon: ActionBarIcons::6
+	Color: #00c0ff
+	Suffix: s
+
+	Variable: SlipstreamDuration
+
+GlobalStat: SlipsteramOptimalDistance
+	Name: #S_SLIPSTREAMOPTDIST
+	Description: #STT_SLIPSTREAMOPTDIST
+	Icon: ActionBarIcons::6
+	Color: #8080ff
+	Suffix: u
+
+	Variable: SlipstreamOptimalDistance

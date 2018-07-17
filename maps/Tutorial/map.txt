@@ -1,0 +1,65 @@
+//Enemy gate system
+System: Odatak
+	MakeStar(Temperature = 5778, Radius = 75)
+	MakePlanet(Water, Conditions = False)
+	MakePlanet(Meat, Conditions = False)
+	MakePlanet(Salts, Conditions = False)
+	MakePlanet(Water, Conditions = False)
+	MakeAsteroid()
+	MakeAsteroid()
+	MakeAsteroid()
+
+//Spacewood's system	
+System: Lihls
+	Position: (5000, 0, 0)
+
+	MakeStar(Temperature = 1000, Radius = 75)
+	MakePlanet(Meat, Grid Size = (17, 10), Conditions = False, Moons = False)
+		AddPlanetResource(Water)
+		AddResource(Labor, +20)
+		AddPopulation(3.0)
+		Rename(Spacewood)
+		NoNeedPopulationForLevel()
+	MakePlanet(NativeGold, Conditions = False)
+	MakePlanet(Fruit, Conditions = False)
+	MakePlanet(Grain, Conditions = False)
+	MakeAsteroid()
+
+//Phasite system
+System: Xaste
+	Position: (8000, 120, 8000)
+
+	MakeStar(Temperature = 2500, Radius = 75)
+	MakePlanet(Meat, Conditions = False)
+	MakePlanet(Fish, Conditions = False)
+	MakePlanet(Water, Conditions = False)
+	MakePlanet(Phasite, Conditions = False)
+	MakeAsteroid()
+	MakeAsteroid()
+	MakeArtifact(PowerCell)
+
+//Enemy colonized system
+System: Yingmow
+	Position: (9000, -60, 15000)
+
+	MakeStar(Temperature = 8000, Radius = 75)
+	MakePlanet(Neutronium, Conditions = False)
+	MakePlanet(Fish, Conditions = False)
+	MakePlanet(Water, Conditions = False)
+	MakePlanet(Titanium, Conditions = False)
+	MakeAsteroid()
+	MakeAsteroid()
+	MakeAsteroid()
+	MakeAsteroid()
+
+//Neutral system
+System: Darolco
+	Position: (2000, -60, 9400)
+
+	NameSystem(Darolco)
+	MakeStar(Temperature = 4000, Radius = 75)
+	MakePlanet(Pekelm, Conditions = False)
+	MakePlanet(Meat, Conditions = False)
+	MakePlanet(Water, Conditions = False)
+	MakePlanet(Water, Conditions = False)
+	MakeAsteroid()

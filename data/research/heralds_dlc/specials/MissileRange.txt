@@ -1,0 +1,17 @@
+Technology: MissileRange
+	Name: #R_MISSILE_RANGE
+	Description: #R_MISSILE_RANGE_DESC:50%
+
+	Icon: MissileLauncher::3
+	Symbol: techTargeting*#80ffea
+	Color: #80ffea
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 100
+
+	AddModifier( tag/MissileBase::RangeFactor(1.5) )
+
+	AffectsTaggedSubsystems(MissileBase)

@@ -1,0 +1,14 @@
+Trait: RandomLifestyle
+	Name: #TRAIT_RANDOM_LIFESTYLE
+	Description: #TRAIT_RANDOM_LIFESTYLE_DESC
+	Order: 100
+
+	Icon: MenuIcons::4
+	Color: #ff0000
+
+	Category: Lifestyle
+	Unique: Lifestyle
+	AI Support: False
+
+	AddResearchIncome(1)
+	AddRandomTrait(Lifestyle)

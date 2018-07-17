@@ -1,0 +1,35 @@
+Subsystem: SupportRocketEngine
+	Name: #ROCKETENGINE_NAME
+	Description: #ROCKETENGINE_DESC
+	BaseColor: #f9e146
+	TypeColor: #f9e146
+	Picture: RocketEngine
+	Elevation: 0
+	
+	Tags: ExteriorCore, DefaultUnlock, Engine, GivesThrust, HasInternals, NoBackWall, TurnToThrust
+	Tags: Category:Propulsion
+	Hull: Support
+	
+	OnCheckErrors: designs::checkCoreFacingBackwards
+
+	Size := HexSize * Hexes
+	Thrust := 24 * Size
+	TurnThrust := 1.5 * Size
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	
+	Hex.BuildCost := 1 * HexSize
+	Hex.LaborCost := 0.13 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: RocketEngine
+		Hex.HP := 2 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

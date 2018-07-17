@@ -1,0 +1,9 @@
+//Trait: Generous
+//	Name: #TRAIT_GENEROUS
+//	Description: #TRAIT_GENEROUS_DESC:4
+//	Category: Personality
+
+//	Color: #aaffaa
+//	Icon: NotImplemented
+
+//	Costs Points: 1

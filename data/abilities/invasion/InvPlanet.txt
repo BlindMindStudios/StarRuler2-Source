@@ -1,0 +1,26 @@
+Ability: InvPlanet
+	Name: #INV_ABL_PLANET
+	Description: #INV_ABL_PLANET_DESC
+	Icon: PlanetType::2
+	Activate Sound: planetgen_activate
+
+	Energy Cost: 0
+
+	Target: dest = Point
+	TargetFilterInSystem(dest)
+
+	SpawnPlanetAt(dest, Owned = True)
+
+Ability: InvPlanetPlus
+	Name: #INV_ABL_PLANET_PLUS
+	Description: #INV_ABL_PLANET_PLUS_DESC
+	Icon: PlanetType::3
+	Activate Sound: planetgen_activate
+
+	Energy Cost: 0
+
+	Target: dest = Point
+	TargetFilterInSystem(dest)
+
+	SpawnPlanetAt(dest, LevelGTE:1, Owned = True, Add Status = AddedDrugs)
+	AddInvasionStrength(1)

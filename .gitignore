@@ -1,0 +1,15 @@
+*.obj
+*.log
+*.pdb
+*.tlog
+*.log
+*.idb
+*.user
+*.db
+*.opendb
+*.suo
+*.ipch
+*.res
+*.sdf
+*.db-shm
+*.db-wal

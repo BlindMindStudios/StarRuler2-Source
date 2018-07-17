@@ -1,0 +1,16 @@
+Empire.RandomEvents : components.RandomEvents::RandomEvents {
+restricted local:
+	bool hasCurrentEvents();
+	CurrentEvent@[] getCurrentEvents();
+	CurrentEvent@[] getEvent(int id);
+	int get_currentEventID();
+restricted remote:
+	void chooseEventOption(int evtId, uint optId);
+server:
+	void spawnRandomEvent(uint typeId);
+	void eventsTick(double time);
+	void writeEvents(Message& msg);
+
+shadow:
+	void readEvents(Message& msg);
+}

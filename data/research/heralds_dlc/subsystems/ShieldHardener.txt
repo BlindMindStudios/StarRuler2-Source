@@ -1,0 +1,16 @@
+Technology: ShieldHardener
+	Name: #R_SYS_SHIELD_HARDENER
+	Description: #R_SYS_SHIELD_HARDENER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: FissionReactor
+	Color: #681be3
+
+	UnlockSubsystem(ShieldHardener)
+	SkipOnUnlockedSubsystem(ShieldHardener)
+
+	SecondaryEnergyCost(1500)

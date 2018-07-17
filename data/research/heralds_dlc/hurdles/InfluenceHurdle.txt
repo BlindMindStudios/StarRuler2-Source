@@ -1,0 +1,15 @@
+Technology: InfluenceHurdle
+	Name: #R_INFLUENCE_HURDLE
+	Description: #R_INFLUENCE_HURDLE_DESC
+
+	Icon: ResourceIcon::1
+	Symbol: QuickbarIcons::3
+	Color: #ff0000
+
+	Category: Hurdles
+	Class: Boost
+
+	Point Cost: 0
+	Time Cost: 80
+
+	SecondaryInfluenceCost(10)

@@ -1,0 +1,12 @@
+Ability: RemoteScan
+	Name: #ABL_REMOTE_SCAN
+	Description: #ABL_REMOTE_SCAN_DESC
+	Icon: AnomalyIcons::0
+
+	Target: targ = Object
+
+	TargetFilterType(targ, Anomaly)
+	TargetFilterSameTerritory(targ)
+
+	IsToggleTarget(targ)
+	ScanAnomaly(targ)

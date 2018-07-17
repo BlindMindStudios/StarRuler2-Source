@@ -1,0 +1,44 @@
+Attitude: Warmongering
+	Name: #ATT_WARMONGERING
+	Progress: #ATT_WARMONGERING_PROGRESS
+	Color: #d81c30
+	Sort: 40
+
+	ProgressFromAttribute(PlanetsConquered)
+	Conflict(Scheming)
+
+	Level:
+		Description: #ATT_WARMONGERING_L1
+		Icon: AttributeIcons::0 * #ff8080
+		Threshold: 2
+
+		ModEmpireAttribute(PlanetDecaySpeed, Multiply, 0.5)
+
+	Level:
+		Description: #ATT_WARMONGERING_L2
+		Icon: ActionBarIcons::2 * #ffff80
+		Threshold: 4
+
+		TriggerOnAttributeIncrease(EnemyFlagshipsDestroyed, ModAttribute(FleetEfficiencyFactor, Add, 0.01))
+
+	Level:
+		Description: #ATT_WARMONGERING_L3
+		Icon: ActionBarIcons::2
+		Threshold: 8
+
+		EnableModifier(SupportCapacityFactor(1.15))
+
+	Level:
+		Description: #ATT_WARMONGERING_L4
+		Icon: ResourceIcon::6
+		Threshold: 14
+
+		EnableModifier(hull/Flagship::LaborCostFactor(0.85))
+
+	Level:
+		Description: #ATT_WARMONGERING_L5
+		Icon: ResourceIcon::5
+		Threshold: 22
+
+		ModAttributeWarPercentage(DefenseGenerationFactor, 0.5)
+		ModAttributeWarPercentage(EnergyGenerationFactor, 0.5)

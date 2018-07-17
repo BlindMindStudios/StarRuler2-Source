@@ -1,0 +1,20 @@
+Technology: NanoMesh
+	Name: #R_SYS_NANOMESH
+	Description: #R_SYS_NANOMESH_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	DLC: Heralds
+	DLC Replace: ArmorHealth
+
+	Icon: NanoMesh
+	Color: #a9a9a9
+	
+	UnlockSubsystem(NanoMesh)
+	UnlockSubsystem(SupportNanoMesh)
+	SkipOnUnlockedSubsystem(NanoMesh)
+
+	SecondaryInfluenceCost(12)

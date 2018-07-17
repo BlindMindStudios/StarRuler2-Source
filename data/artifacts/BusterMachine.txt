@@ -1,0 +1,8 @@
+Artifact: BusterMachine
+	Name: #ART_BUSTER_MACHINE
+	Description: #ART_BUSTER_MACHINE_DESC
+	Frequency: 0.5
+	
+	Model: ArtifactAdvanced
+
+	Ability: BusterMachine

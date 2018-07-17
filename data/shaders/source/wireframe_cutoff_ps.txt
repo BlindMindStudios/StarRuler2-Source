@@ -1,0 +1,11 @@
+varying vec2 uv;
+varying float renderpos;
+
+uniform float cutoff;
+uniform sampler2D texture;
+
+void main() {
+	if(renderpos < (cutoff * 2.0) - 1.0)
+		discard;
+	gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+}

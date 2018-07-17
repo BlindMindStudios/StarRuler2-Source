@@ -1,0 +1,8 @@
+PlanetType: Artificial
+	Icon: PlanetType::1
+	DistantIcon: DistantPlanetType::1
+	Atmosphere: DustyAtmosphere
+	Artificial: True
+
+	BiomeWeights:
+		Artificial: 100000

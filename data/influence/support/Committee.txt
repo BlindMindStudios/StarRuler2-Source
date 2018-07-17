@@ -1,0 +1,31 @@
+Card: Committee
+	Name: #CARD_COMMITTEE
+	Description: #CARD_COMMITTEE_DESC
+
+	Icon: CardIcons::48
+	Color: #5ffd9a
+
+	Leader Only: True
+	DLC: Heralds
+
+	Class: Support
+	Rarity: Epic
+	Side: Both
+
+	Base Purchase Cost: 5
+	Base Play Cost: 5
+
+	Base Weight: 10
+
+	RequireValidVoteStarter()
+	ListActiveEffect()
+
+	RequireNotActiveEffect(Filibuster)
+	RequireNotActiveEffect(Committee)
+
+	LogVoteEvent(Support = #CARD_COMMITTEE_LOG_Y, Oppose = #CARD_COMMITTEE_LOG_N)
+
+	LimitPerVote(1, Per Empire = False)
+	DelayVote(120)
+
+	AI: VoteSupport()

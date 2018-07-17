@@ -1,0 +1,13 @@
+Module: MiningBay
+	Name: #ORB_MINING_BAY
+	Blurb: #ORB_MINING_BAY_BLURB
+	Description: #ORB_MINING_BAY_DESC
+	Icon: AsteroidIcon::0
+	Standalone: False
+	Core: False
+
+	Require Affinity: 1 Labor
+
+	Build Cost: 300
+
+	UnlimitedAsteroidSystem()

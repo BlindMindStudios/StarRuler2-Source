@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{91457ef1-4758-4ff6-90f5-eb77aff296e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compat">
+      <UniqueIdentifier>{a6793dcb-b7aa-4a1f-922f-5b7b1dfb3ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{dc9e2d4b-389f-42fa-bce1-2ba8bc98a764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{9be86039-bc07-48c5-b04a-be0835fb511f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{438405e3-2331-4872-9d3e-b108d66c6dcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{0a3e7f2b-4d2e-4cb9-b132-d28189fb540d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{2a21c457-0efe-4f6b-890e-6bc7a96a54d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{003790e9-4260-4ca9-8618-f89637a5a39d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{cbaccb9f-2c9b-424a-b4e8-680babc0ad66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{24a00747-8a0d-45f6-afc7-b382e5ed9faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{c1108850-8755-4b33-9dd8-58dfeff604f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mods">
+      <UniqueIdentifier>{614bff6c-6676-48ff-b47f-f242732d6d0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="profiles">
+      <UniqueIdentifier>{f961f5ff-22e8-4aac-9ec5-c868f05af6d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\bindings">
+      <UniqueIdentifier>{9c68d374-09bd-4a5d-80c0-995a01336298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\formulas">
+      <UniqueIdentifier>{92b088a2-e811-4f60-9544-9d667b86f5a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{862b1cac-dc2b-4c3d-9645-f6d1f84bdc95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="profiling">
+      <UniqueIdentifier>{f1803fcc-682d-478b-9bfb-1e1d2ba7eb83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\Mesh formats">
+      <UniqueIdentifier>{2939a6af-a619-4463-be9b-fbbd88168377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\animation">
+      <UniqueIdentifier>{85aca2ec-30d7-4a29-bc9c-5ff262494894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj\locks">
+      <UniqueIdentifier>{4982d77d-5be3-42b1-8743-f9dad4351675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="designs">
+      <UniqueIdentifier>{6333a04e-6b04-4f5e-aa5b-ce7ce6c48b5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj\components">
+      <UniqueIdentifier>{309466eb-9966-4356-ab6c-88f6cfc46c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{10395ff9-e431-4df8-8396-8ce79843919a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\Shader inputs">
+      <UniqueIdentifier>{e433bade-c616-44a6-b368-ed199b94319d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics">
+      <UniqueIdentifier>{cd656e1f-c075-45f2-8c53-788d19ada150}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\game\render\gl_mesh.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\gl_texture.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\gl_shader.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\gl_driver.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\mesh_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\render_state.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\library.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_material.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_model.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_shader.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\script_bind.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\os\glfw_driver.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\camera.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\input_handling.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\references.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\gui\skin.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_font.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_skin.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\billboard_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\processing.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\context_cache.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\manager.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\as\as_jit.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\font_fnt.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\font_ft2.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\initialization.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\tick.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\mods\mod_manager.cpp">
+      <Filter>mods</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\logging.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\profile\keybinds.cpp">
+      <Filter>profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_profile.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_data.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_general.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_gui.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_menu.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_render.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_threading.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_json.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_web.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\binds.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\locale.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\profile\settings.cpp">
+      <Filter>profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_inspection.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\formula.cpp">
+      <Filter>utils\formulas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\object.cpp">
+      <Filter>obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\profiler.cpp">
+      <Filter>profiling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_object.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\lighting.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\obj_loader.cpp">
+      <Filter>render\Mesh formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\x_loader.cpp">
+      <Filter>render\Mesh formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\empire.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\line_trail_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\general_states.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_joystick.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\animation\anim_node_sync.cpp">
+      <Filter>scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\animation\anim_linear.cpp">
+      <Filter>scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\lock.cpp">
+      <Filter>obj\locks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\spritesheet.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_empire.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_creation.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_design.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\design.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\effect.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\hull.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\subsystem.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\mesh_icon_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\effector.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\effector_functions.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\animation\anim_projectile.cpp">
+      <Filter>scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\gl_framebuffer.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\console.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\format.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\generic.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\mesh_generation.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\save_file.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\threaded_loader.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\random.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\as\as_binding_print.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\blueprint.cpp">
+      <Filter>obj\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\generic_call.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_events.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_formula.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\script_type.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\plane_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\shader_states.cpp">
+      <Filter>render\Shader inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\load_sound.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_sound.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\resource\hot_loading.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_dynamic.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_network.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_datafile.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\script_components.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\script_hooks.cpp">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\elevation_map.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\universe.cpp">
+      <Filter>obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\network\network_manager.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\name_generator.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\physics\physics_world.cpp">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\design\projectiles.cpp">
+      <Filter>designs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\obj_group.cpp">
+      <Filter>obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\stat_history.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\empire_stats.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\obj\object_saving.cpp">
+      <Filter>obj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\main\save_load.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\util\bbcode.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\bmf_loader.cpp">
+      <Filter>render\Mesh formats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\icon_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\animation\anim_group.cpp">
+      <Filter>scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\scripted_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\beam_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\frame_line.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\gl_vertexBuffer.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\particle_system.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scene\culling_node.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_savefile.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\scripts\bind_irc.cpp">
+      <Filter>scripts\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\game\render\ogex_loader.cpp">
+      <Filter>render\Mesh formats</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\game\render\render_state.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\texture.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\render_mesh.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\gl_mesh.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\gl_texture.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\gl_shader.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\shader.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\driver.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\gl_driver.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\mesh_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\memory\AllocOnlyPool.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\resource\library.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\compat\misc.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\compat\gl.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\script_bind.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\font.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\os\driver.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\os\glfw_driver.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\os\key_consts.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\memory\MemoryPool.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\camera.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\gl_rendering.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\input_handling.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\references.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\gui\skin.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\billboard_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\processing.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\context_cache.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\manager.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\as\as_jit.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\initialization.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\tick.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\mods\mod_manager.h">
+      <Filter>mods</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\logging.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\profile\keybinds.h">
+      <Filter>profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\binds.h">
+      <Filter>scripts\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\resource\locale.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\profile\settings.h">
+      <Filter>profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\compat\regex.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\formula.h">
+      <Filter>utils\formulas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\resource\universe_node.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\obj\object.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\profiler.h">
+      <Filter>profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\lighting.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\obj_loader.h">
+      <Filter>render\Mesh formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\x_loader.h">
+      <Filter>render\Mesh formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\empire.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\line_trail_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\general_states.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\animation\animator.h">
+      <Filter>scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\animation\anim_node_sync.h">
+      <Filter>scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\animation\anim_linear.h">
+      <Filter>scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\obj\lock.h">
+      <Filter>obj\locks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\spritesheet.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\design.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\effect.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\hull.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\subsystem.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\mesh_icon_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\effector.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\effector_functions.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\animation\anim_projectile.h">
+      <Filter>scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\gl_framebuffer.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\console.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\format.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\generic.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\hex_grid.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\mesh_generation.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\refcount.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\save_file.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\threaded_loader.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\random.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\as\as_binding_print.h">
+      <Filter>scripts\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\generic_call.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\script_type.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\network\player.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\plane_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\locked_type.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\basic_type.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\network\network_manager.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scripts\script_components.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\version.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\elevation_map.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\obj\universe.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\name_generator.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\physics\physics_world.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\design\projectiles.h">
+      <Filter>designs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\obj\obj_group.h">
+      <Filter>obj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\stat_history.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\empire_stats.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\save_load.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\util\bbcode.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\bmf_loader.h">
+      <Filter>render\Mesh formats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\icon_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\animation\anim_group.h">
+      <Filter>scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\scripted_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\beam_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\frame_line.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\vertexBuffer.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\particle_system.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\scene\culling_node.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\main\game_platform.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\os\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\game\render\ogex_loader.h">
+      <Filter>render\Mesh formats</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Star Ruler 2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\sr2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

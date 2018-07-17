@@ -1,0 +1,42 @@
+Subsystem: FlagshipHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Hull: Flagship
+	EvaluationOrder: -100
+
+	HexLimit := 128
+	FreeHexLimit := 0
+
+	GridWidth := 28
+	GridHeight := 23
+
+	Ship.ExternalHexes := 0
+	Ship.HexSize := ShipSize / (HexLimit - FreeHexLimit)
+
+	Repair := (ShipSize / HexLimit) * 8
+
+	Hex.LaborCost := 0.1 * ShipSize
+	Hex.BuildCost := 1.1 * ShipSize
+	Hex.MaintainCost := 4 * ShipSize^0.5
+
+	Hex.Mass := 0
+	AddPostModifier: AddMass(ShipSize * (1.0 - min(max((ShipTotalHexes - Ship.ExternalHexes) / Sum.HexLimit, 0.0), 1.0)))
+
+	OnCheckErrors: designs::checkGlobalDesign
+
+	Assert: ShipTotalHexes - Ship.ExternalHexes < Sum.HexLimit + 0.001
+		Message: #ERROR_HEX_COUNT
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL
+
+	RequirePrayer := 0
+	Assert: (RequirePrayer == 0) || (Sum.Prayer > 0)
+		Message: #ERROR_NEED_PRAYER
+
+	HasFTLCost := 0
+	FTLBuildCost := 0
+	AddPostModifier: AddFTLBuildCost(if(HasFTLCost, ShipSize*2.0, 0)))
+
+	Modifier: IncreaseHexLimit(Hexes)
+		HexLimit := HexLimit + Hexes
+		FreeHexLimit := FreeHexLimit + Hexes

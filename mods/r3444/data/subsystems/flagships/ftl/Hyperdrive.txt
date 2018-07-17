@@ -1,0 +1,30 @@
+Subsystem: Hyperdrive
+	Name: Hyperdrive
+	Description: Allows for hyperdrive navigation. The larger the hyperdrive the faster the FTL speed.
+	BaseColor: #a767ad
+	TypeColor: #a767ad
+	Picture: SubsystemButtonArt::10
+	Elevation: 0
+	
+	Tags: BaseCost, Category:Propulsion
+	Tags: Engine, Hyperdrive, HasInternals
+	Hull: Flagship
+	
+	Size := HexSize * Hexes
+	HyperdriveSpeed := 3200.0 * Size / ShipSize
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Modifier: SpeedFactor(factor)
+		HyperdriveSpeed := HyperdriveSpeed * factor
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: HexagonSubsystems::10
+		Hex.BuildCost := 2 * Hex.BuildCost

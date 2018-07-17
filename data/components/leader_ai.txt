@@ -1,0 +1,171 @@
+Object.LeaderAI : orders.LeaderAI::LeaderAI {
+local:
+	safe double getFormationRadius();
+
+	GroupData@[] getSupportGroups() const;
+	safe uint get_supportCount();
+	Object@ get_supportShip(uint index);
+	
+	safe double getFleetHP() const;
+	safe double getFleetDPS() const;
+	safe double getFleetStrength() const;
+	safe double getFleetMaxStrength() const;
+	safe float getFleetEffectiveness() const;
+	safe float getBaseFleetEffectiveness() const;
+	safe double getRemainingExp() const;
+	safe bool get_canHaveSatellites() const;
+
+	safe double get_GhostHP() const;
+	safe double get_GhostDPS() const;
+
+	safe uint get_SupplyUsed() const;
+	safe uint get_SupplyCapacity() const;
+	safe uint get_SupplyAvailable() const;
+
+restricted local:
+	safe bool get_hasOrders();
+	bool hasOrder(uint type, bool checkQueued = false);
+	uint get_orderCount();
+	string get_orderName(uint num);
+	uint get_orderType(uint num) const;
+	bool get_orderHasMovement(uint num) const;
+	vec3d get_orderMoveDestination(uint num) const;
+	vec3d get_finalMoveDestination() const;
+
+	int getRetrofitCost() const;
+	double getRetrofitLabor() const;
+
+	uint getGhostCount(const Design@ design) const;
+
+	safe uint getAutoMode();
+	safe uint getEngageType();
+	safe uint getEngageBehave();
+
+	safe bool get_autoBuySupports() const;
+	safe bool get_autoFillSupports() const;
+	safe bool get_allowFillFrom() const;
+
+restricted remote:
+	void addGotoOrder(Object& target, bool append = false);
+	void addAttackOrder(Object& target, bool append = false);
+	void addAbilityOrder(int abilityId, vec3d target, bool append = false);
+	void addAbilityOrder(int abilityId, Object@ target, bool append = false);
+	void addAbilityOrder(int abilityId, vec3d target, double range, bool append = false);
+	void addAbilityOrder(int abilityId, Object@ target, double range, bool append = false);
+	void addCaptureOrder(Planet& target, bool append = false);
+	void addPickupOrder(Pickup& target, bool append = false);
+	void addMoveOrder(vec3d target, bool append = false);
+	void addMoveOrder(vec3d target, quaterniond facing, bool append = false);
+	void addHyperdriveOrder(vec3d target, bool append = false);
+	void addJumpdriveOrder(vec3d target, bool append = false);
+	void addFlingOrder(Object& beacon, vec3d target, bool append = false);
+	void addScanOrder(Anomaly& target, bool append = false);
+	void addRefreshOrder(Object& target, bool append = false);
+	void addOddityGateOrder(Oddity& target, bool append = false);
+	void addSlipstreamOrder(vec3d target, bool append = false);
+	void addAutoExploreOrder(bool useFTL, bool append = false);
+
+	void addSecondaryToSlipstream(Object& other);
+	void addWaitOrder(Object@ waitingFor = null, bool append = false, bool moveTo = false);
+	void moveAfterWait(vec3d position, Object@ waitingFor = null);
+	
+	void clearOrders();
+	void clearTopOrder();
+	
+	void insertMoveOrder(vec3d target, uint index);
+	void insertHyperdriveOrder(vec3d target, uint index);
+	void insertJumpdriveOrder(vec3d target, uint index);
+	void insertFlingOrder(Object& beacon, vec3d target, uint index);
+
+	void transferSupports(const Design@ ofDesign, uint amount, Object@ transferTo);
+	void orderSupports(const Design@ ofDesign, uint amount);
+	void scuttleSupports(const Design@ ofDesign, uint amount);
+	void rebuildAllGhosts();
+	void clearAllGhosts();
+	void retrofitFleetAt(Object@ obj, Object@ constructFrom = null);
+
+	void setAutoMode(uint type);
+	void setEngageType(uint type);
+	void setEngageBehave(uint type);
+	void setHoldPosition(bool hold);
+	async relocking void refreshSupportsFrom(Object@ obj, bool keepGhosts = false);
+
+	void set_autoBuySupports(bool value);
+	void set_autoFillSupports(bool value);
+	void set_allowFillFrom(bool value);
+
+	void addExperience(double amount);
+	void resetLevelExperience(bool resetLevels = false);
+	void recalculateLevels(int prevSize, int newSize);
+	void convertRandomSupport(Object@ toLeader, Empire@ toEmpire, int maxSize);
+	void compEngageRange();
+
+server:
+	safe uint get_SupplyGhost() const;
+	safe uint get_SupplyOrdered() const;
+	safe uint get_SupplySatellite() const;
+	
+	safe bool get_hasOrderedSupports() const;
+	safe uint get_firstOrderType() const;
+
+	void commandTick();
+	void orderTick(double time);
+	void registerSupport(Object@ obj, bool pickup = false, bool force = false);
+	void unregisterSupport(Object@ obj, bool destroyed = false);
+
+	void set_canGainSupports(bool value);
+	safe bool get_canGainSupports() const;
+	safe bool canTakeSupport(int size, bool pickup = true) const;
+
+	void takeoverFleet(Empire@ newOwner, double supportRatio = 1.0, bool moveToTerritory = false);
+	void leaderInit();
+	void leaderDestroy();
+	void leaderPostLoad();
+	void leaderTick(double time);
+	void leaderChangeOwner(Empire@ oldOwner, Empire@ newOwner);
+	void leaderRegionChanged();
+	void modSupplyCapacity(int amt);
+	void repairFleet(double amount, bool spread = true);
+	void finishFleetRetrofit(Object@ at);
+	void stopFleetRetrofit(Object@ at);
+	void postSupportRetrofit(Ship@ support, const Design@ prevDesign, const Design@ newDesign);
+	void updateFleetStrength();
+	void modBonusDPS(double amount);
+
+	safe double getEngagementRange();
+	Object@ getAttackTarget();
+	double getAttackDistance();
+	
+	void idleAllSupports();
+
+	void teleportTo(vec3d position, bool movementPart = false);
+
+	void addSupportGhosts(const Design@ ofDesign, uint amount);
+	void addSupportOrdered(const Design@ ofDesign, uint amount);
+
+	void supportBuildStarted(uint id, const Design@ dsg, Object@ shipyard);
+	void supportBuildFinished(uint id, const Design@ dsg, Object@ shipyard, Ship@ ship);
+	uint getSupportCount(const Design@ design) const;
+	int rebuildGhostsCost();
+
+	void setFleetEffectiveness(float value);
+	void modFleetEffectiveness(float value);
+	
+	double get_slowestSupportAccel() const;
+	
+	void set_engageRange(double radius);
+
+	safe bool get_freeRaiding();
+	safe double get_raidRange();
+	void setFreeRaiding(bool value);
+	void modRaidRange(double value);
+
+//Networking
+	void writeLeaderAI(Message& msg) const;
+	bool writeLeaderAIDelta(Message& msg) const;
+
+shadow:
+	void addFakeSupports(const Design@ ofDesign, uint amount);
+	void readLeaderAI(Message& msg);
+	void readLeaderAIDelta(Message& msg);
+}

@@ -1,0 +1,16 @@
+Biome: Oceanic
+	Name: #BIOME_OCEANIC
+	
+	Temperature: 0.5
+	Humidity: 1
+	
+	UseWeight: 0.02
+	BuildCost: 2
+	BuildTime: 3
+	
+	Frequency: 10
+	IsWater: True
+	
+	Color: #0E7FDA
+
+	Lookup Range: 0.04833

@@ -1,0 +1,22 @@
+Module: SupplyDepot
+	Name: #ORB_SUPPLY_DEPOT
+	Blurb: #ORB_SUPPLY_DEPOT_BLURB
+	Description: #ORB_SUPPLY_DEPOT_DESC
+	Icon: OrbitalIcons::7
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 500
+	Maintenance: 100
+	Labor Cost: 10
+
+	Health: 4000
+	Armor: 1000
+
+	Model: Depot
+	Material: GenericPBR_Depot
+
+	Strategic Icon: OrbitalIcons::7
+
+	AddRegionStatus(FastResupply)

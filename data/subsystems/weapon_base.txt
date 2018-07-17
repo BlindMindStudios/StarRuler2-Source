@@ -1,0 +1,64 @@
+Template: tag/WeaponBase
+	Defaults:
+		Range := 100.0
+		Damage := 1.0
+		Reload := 1.0
+		SupplyCost := 0.0
+		out DPS := Damage / Reload
+		out SupplyDrain := SupplyCost
+		out SupplyFireCost := SupplyCost * Reload
+
+	Modifier: RangeFactor(factor)
+		Range := Range * factor
+	
+	Modifier: ReloadFactor(factor)
+		Reload := Reload * factor
+	
+	Modifier: DamageFactor(factor)
+		Damage := Damage * factor
+
+Template: tag/BeamBase
+	Defaults:
+		Range := 100
+		BeamDPS := 1
+		Duration := 1
+		Cooldown := 1
+		out DPS := (BeamDPS * Duration) / (Duration + Cooldown)
+		out SupplyDrain := SupplyCost * (Duration / (Duration + Cooldown))
+		out SupplyFireCost := SupplyCost * Duration
+		Tracking := 1
+
+	Modifier: RangeFactor(factor)
+		Range := Range * factor
+	
+	Modifier: DurationFactor(factor)
+		Duration := Duration * factor
+	
+	Modifier: CooldownFactor(factor)
+		Cooldown := Cooldown * factor
+	
+	Modifier: DamageFactor(factor)
+		BeamDPS := BeamDPS * factor
+	
+	Modifier: TrackingFactor(factor)
+		Tracking := Tracking * factor
+
+Template: tag/MissileBase
+	Modifier: SpeedFactor(factor)
+		Speed := Speed * factor
+	
+	Modifier: TrackingFactor(factor)
+		Tracking := Tracking * factor
+
+Template: tag/ProjBase
+	Modifier: SpeedFactor(factor)
+		Speed := Speed * factor
+	
+	Modifier: TrackingFactor(factor)
+		Tracking := Tracking * factor
+	
+	Modifier: SpreadFactor(factor)
+		Spread := Spread * factor
+	
+	Modifier: PierceMod(add)
+		Pierce := Pierce + add

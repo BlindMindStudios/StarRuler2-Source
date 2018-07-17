@@ -1,0 +1,28 @@
+Card: Leverage
+	Name: #CARD_LEVERAGE
+	Description: #CARD_LEVERAGE_DESC
+
+	Icon: CardIcons::5
+
+	Color: #ff8444
+
+	Class: Support
+	Frequency: 7
+	Side: Both
+
+	Max Quality: 3
+
+	Base Purchase Cost: 1
+	Quality Purchase Cost: 1
+
+	QualityWeightLevel(3, 5, 8)
+
+	Target: onEmpire = Empire
+	GenerateRandomEmpire(onEmpire)
+	LimitVoteToOppose(onEmpire)
+	DisappearSelfBuy(onEmpire)
+
+	LogVoteEvent(Support = #CARD_LEVERAGE_LOG_Y, Oppose = #CARD_LEVERAGE_LOG_N)
+
+	AI: BuyAgainstEnemies(onEmpire, 2.0)
+	AI: VoteAgainstEmpire(onEmpire, 2.0)

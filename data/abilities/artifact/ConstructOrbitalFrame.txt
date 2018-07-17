@@ -1,0 +1,13 @@
+Ability: ConstructOrbitalFrame
+	Name: #ABL_ORBITAL_FRAME
+	Description: #ABL_ORBITAL_FRAME_DESC
+	Icon: GuiOrbitalIcons::0
+	Activate Sound: generic_activate_2
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: dest = Point
+	TargetFilterInSystem(dest)
+
+	SpawnOrbitalAt(dest, Frame)

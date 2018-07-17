@@ -1,0 +1,25 @@
+Building: AncientMiner
+	Name: #BLD_ANCIENT_MINER
+	Description: #BLD_ANCIENT_MINER_DESC
+	Sprite: StripMiner
+
+	Category: ControlHubs
+
+	Size: 10x6
+
+	Base Cost: 0
+	Tile Cost: 4
+	Build Time: 60
+
+	Build Affinity: Mountains
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+	ConflictBuilding(AncientCore, Hide = True)
+	ConflictBuilding(AncientTransmuter, Hide = True)
+	ConflictBuilding(AncientMiner, Hide = True)
+
+	AddStatus(AncientClaim)
+	ChangeNativeResourceTo(OreRate)

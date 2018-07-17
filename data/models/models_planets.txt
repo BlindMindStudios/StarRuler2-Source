@@ -1,0 +1,95 @@
+// sphere models
+
+	
+// recalibrated to match planet sphere lodding
+	
+Model: Sphere_low
+	Sphere: 16x8
+	
+Model: Sphere_med
+	Sphere: 32x16
+	LOD: Sphere_low > 64
+	
+Model: Sphere_high
+	Sphere: 64x32
+	LOD: Sphere_med > 48
+
+Model: Sphere_vhigh
+	Sphere: 128x64
+	LOD: Sphere_high > 32
+
+Model: Sphere_max
+	Sphere: 256x128
+	LOD: Sphere_vhigh > 16
+
+// planet spheres are more or less the same as the engine generated ones, but with 3 different highly customized uv's that makes the planet tiling+parallaxing possible.
+// the vertex paint channels got a bunch of polar gradients that more or less goes like this:
+// red: clamp(abs(uv.y * 2.0 -1.0) * 3.0 - 1.0, 0.0, 1.0)
+// green: abs(uv.y * 2.0 - 1.0)
+// blue: max(0.0, abs(uv.y * 2.0 - 1.0) * 4.0 - 3.0)
+//48 tris
+Model: Planet_Sphere_low
+	Mesh: data/models/spheres/planet_sphere_lod4.ogex
+//224 tris	
+Model: Planet_Sphere_med
+	Mesh: data/models/spheres/planet_sphere_lod3.ogex
+//	LOD: Planet_Sphere_low > 64
+//960
+Model: Planet_Sphere_high
+	Mesh: data/models/spheres/planet_sphere_lod2.ogex
+	LOD: Planet_Sphere_med > 48
+// 3.968 tris
+Model: Planet_Sphere_vhigh
+	Mesh: data/models/spheres/planet_sphere_lod1.ogex
+	LOD: Planet_Sphere_high > 32
+// 16.128 tris
+Model: Planet_Sphere_max
+	Mesh: data/models/spheres/planet_sphere_lod0.ogex
+	LOD: Planet_Sphere_vhigh > 16
+
+// moon spheres, like planet spheres with different masks and uv's tailored for their needs without having to do run time math. Object oriented assets yeaiih!!
+//48 tris
+Model: Moon_Sphere_low
+	Mesh: data/models/spheres/moon_sphere_lod3.ogex
+//224 tris	
+Model: Moon_Sphere_med
+	Mesh: data/models/spheres/moon_sphere_lod2.ogex
+//	LOD: Moon_Sphere_low > 48
+//960
+Model: Moon_Sphere_high
+	Mesh: data/models/spheres/moon_sphere_lod1.ogex
+	LOD: Moon_Sphere_med > 32
+// 3.968 tris
+Model: Moon_Sphere_max
+	Mesh: data/models/spheres/moon_sphere_lod0.ogex
+	LOD: Moon_Sphere_high > 16
+	
+// Ico spheres got a very even vert distribution, making them very useful for running detailed per vertex instructions.
+// lod0 is 20.480 tris, lod4 is 80 tris.
+// Each lod comes with a simple spherical uv, with pretty poor seaming, since the geometry is not uv friendly.
+// In the vertex color channel is a polar gradient for blending origo xz/atan() based projections.
+// uv2 and uv3 is unused
+
+Model: Ico_Sphere_low
+	// 80 tris
+	Mesh: data/models/spheres/sun_sphere_lod4.ogex
+	
+Model: Ico_Sphere_med
+	// 320 tris
+	Mesh: data/models/spheres/sun_sphere_lod3.ogex
+	LOD: Ico_Sphere_low > 90
+	
+Model: Ico_Sphere_high
+	// 1.2080 tris
+	Mesh: data/models/spheres/sun_sphere_lod2.ogex
+	LOD: Ico_Sphere_med > 60
+
+Model: Ico_Sphere_vhigh
+	// 5.120 tris
+	Mesh: data/models/spheres/sun_sphere_lod1.ogex
+	LOD: Ico_Sphere_high > 20
+
+Model: Ico_Sphere_max
+	// 20.480 tris
+	Mesh: data/models/spheres/sun_sphere_lod0.ogex
+	LOD: Ico_Sphere_vhigh > 8

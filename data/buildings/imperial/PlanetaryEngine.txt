@@ -1,0 +1,23 @@
+Building: PlanetaryEngine
+	Name: #BLD_PLANET_ENGINE
+	Description: #BLD_PLANET_ENGINE_DESC
+	Sprite: PlanetThruster
+
+	Category: Military
+
+	Size: 5x5
+
+	Base Cost: 500
+	Tile Cost: 20
+
+	Build Affinity: Oceanic
+	Maintenance Affinity: Oceanic
+
+	Base Maintenance: 70
+	Tile Maintenance: 5
+
+	Build Time: 300
+
+	RequireUnlockTag(PlanetaryEngineUnlock)
+	RequireNotStatus(Ringworld)
+	AddAccelerationBonus(0.5)

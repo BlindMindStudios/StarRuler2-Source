@@ -1,0 +1,6 @@
+Status: ArtificialPlanetoid
+	Name: #ARTIFICIAL_PLANETOID
+	Description: #ARTIFICIAL_PLANETOID_DESC
+	Icon: PlanetType::1
+	Color: #00ff00
+	Collapses: True

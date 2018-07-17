@@ -1,0 +1,29 @@
+Technology: ImpAllRange
+	Name: #R_IMP_ALL_RANGE
+	Blurb: #R_IMP_ALL_RANGE_BLURB:10%
+	Description: #R_IMP_ALL_RANGE_DESC:10%:1000
+
+	Icon: techTargeting*#80ffea
+	Color: #80ffea
+
+	Point Cost: 800
+	Time Cost: 180
+
+	AddModifier( tag/Weapon::RangeFactor(1.1) )
+
+	SecondaryEnergyCost(1000)
+
+Technology: ImpAllRange2
+	Name: #R_IMP_ALL_RANGE2
+	Blurb: #R_IMP_ALL_RANGE_BLURB:20%
+	Description: #R_IMP_ALL_RANGE_DESC:20%:1500
+
+	Icon: techTargeting*#80ffea
+	Color: #80ffea
+
+	Point Cost: 1200
+	Time Cost: 180
+
+	AddModifier( tag/Weapon::RangeFactor(1.2) )
+
+	SecondaryEnergyCost(1500)

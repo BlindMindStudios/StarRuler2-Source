@@ -1,0 +1,47 @@
+Object.Abilities : components.Abilities::Abilities {
+local:
+	safe uint get_abilityCount() const;
+	Ability@[] getAbilities() const;
+	uint get_abilityTypes(int id) const;
+	int findAbilityOfType(int type) const;
+
+remote:
+	async relocking void activateAbility(int id);
+	async relocking void activateAbility(int id, vec3d point);
+	async relocking void activateAbility(int id, Object@ target);
+	
+server:
+	async relocking void activateAbilityFor(Empire& emp, int id);
+	async relocking void activateAbilityFor(Empire& emp, int id, Object@ target);
+	async relocking void activateAbilityFor(Empire& emp, int id, vec3d point);
+	async relocking void activateAbilityTypeFor(Empire& emp, int type);
+	async relocking void activateAbilityTypeFor(Empire& emp, int type, Object@ target);
+	async relocking void activateAbilityTypeFor(Empire& emp, int type, vec3d point);
+	
+	void initAbilities(const Design@ fromDesign);
+	void destroyAbilities();
+	void abilityTick(double time);
+	void abilityOwnerChange(Empire@ prevOwner, Empire@ newOwner)
+	void setNeutralAbilities(bool value);
+	void setAbilityDestroy(bool value);
+	void setCooldownForType(int typeId, double cooldown);
+
+	int addAbility(uint id);
+	void createAbility(uint id);
+	void removeAbility(int id);
+	void disableAbility(int id);
+	void enableAbility(int id);
+	bool isChanneling(int id);
+
+	bool isAbilityOnCooldown(int id);
+	double getAbilityRange(int id, Object@ target);
+	double getAbilityRange(int id, vec3d target);
+
+//Networking
+	void writeAbilities(Message& msg) const;
+	bool writeAbilityDelta(Message& msg) const;
+
+shadow:
+	void readAbilities(Message& msg);
+	void readAbilityDelta(Message& msg);
+}

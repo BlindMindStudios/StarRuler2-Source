@@ -1,0 +1,29 @@
+Technology: ImpFactoryLabor
+	Name: #R_IMP_FACTORY_LABOR
+	Blurb: #R_IMP_FACTORY_LABOR_BLURB:2
+	Description: #R_IMP_FACTORY_LABOR_DESC:2:12
+
+	Icon: Factory
+	Color: #b1b4b6
+
+	Point Cost: 500
+	Time Cost: 60
+
+	ModAttribute(FactoryLaborMod, Add, 2)
+
+	SecondaryInfluenceCost(12)
+
+Technology: ImpFactoryLabor2
+	Name: #R_IMP_FACTORY_LABOR2
+	Blurb: #R_IMP_FACTORY_LABOR_BLURB:4
+	Description: #R_IMP_FACTORY_LABOR_DESC:4:24
+
+	Icon: Factory
+	Color: #b1b4b6
+
+	Point Cost: 1000
+	Time Cost: 80
+
+	ModAttribute(FactoryLaborMod, Add, 4)
+
+	SecondaryInfluenceCost(24)

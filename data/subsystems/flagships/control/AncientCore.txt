@@ -1,0 +1,47 @@
+Subsystem: AncientCore
+	Name: #S_ANCIENT_CORE
+	Description: #S_ANCIENT_CORE_DESC
+	BaseColor: #c5f946
+	
+	Tags: BaseCost, Category:Control, HeraldsDLC, BadFiller, RaceSpecial
+	Tags: Crewed, Control, ControlCore, HasInternals, Important
+	Tags: NoBulkhead
+	Hull: Flagship, Station
+	
+	EvaluationOrder: -10
+	
+	Size := HexSize * Hexes
+	Command := Hexes * 3
+
+	Power := 20 * Size
+	SupplyCapacity := Size * 1000
+	SupplyRate := Size * 40
+
+	Repair := 3 * HexSize * (Hexes-1)
+	RepairSupplyCost := 3.0 * Repair
+	out SupplyDrain := RepairSupplyCost
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := HexSize
+
+	Hex.LaborCost := 0.15 * HexSize + 0.18
+	Hex.BuildCost := 1.5 * HexSize + 0.8
+	Hex.MaintainCost := 3 * HexSize + 2
+
+	Effect: ControlCore
+	
+	Provides:
+		Command = Command
+		Power = Power
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: AncientComputerCore
+		Hex.HP := 2 * Hex.HP
+		Hex.Resistance := 0.35
+
+		Hex.BuildCost := 5 * Hex.BuildCost
+		Hex.Mass := 5 * Hex.Mass
+

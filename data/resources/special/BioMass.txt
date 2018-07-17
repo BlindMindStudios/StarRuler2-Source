@@ -1,0 +1,14 @@
+Resource: BioMass
+	Name: #R_BIOMASS
+	Description: #R_BIOMASS_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIconsSmall::104
+	Small Icon: ResourceIconsSmall::104
+
+	Rarity: Common
+	Distribution: 0
+	Frequency: 0
+	Level: 0
+
+	TriggerPeriodic(AddCargo(BioMass, 1), Interval = 6)

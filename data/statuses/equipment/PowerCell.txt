@@ -1,0 +1,8 @@
+Status: PowerCell
+	Name: #STATUS_POWER_CELL
+	Description: #STATUS_POWER_CELL_DESC
+	Icon: ResourceIcon::2
+
+	AddFleetEffectiveness(+0.2)
+	ArtifactOnDestroy(PowerCell, Destroy Chance = 0.15)
+	WorthPoints(25)

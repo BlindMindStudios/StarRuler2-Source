@@ -1,0 +1,14 @@
+Template: hexVar/BuildCost, hexVar/HP, tag/Weapon, var/Range, var/SupplyCost, !tag/SupportHull
+	Module: TargetingSensor
+		Name: #TARGETINGSENSOR_NAME
+		Description: #TARGETINGSENSOR_DESC
+
+		Color: #00ff00
+		Sprite: SupportCommand * #00ff00
+
+		AddModifier: BuildCostFactor(3.0)
+		AddModifier: SupplyCostFactor(2.0)
+		AddModifier: optional SpeedFactor(2.0)
+		AddModifier: optional SpreadFactor(0.5)
+
+		Range := Range + Base::Range * 0.5

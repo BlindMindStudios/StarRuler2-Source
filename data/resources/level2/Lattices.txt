@@ -1,0 +1,20 @@
+Resource: Lattices
+	Name: #R_LATTICES
+	Description: #R_LATTICES_DESC
+	Native Biome: Crystallic
+	DLC: Heralds
+
+	Small Icon: ResourceIconsSmall::80
+
+	Level: 2
+	Frequency: 1.5
+
+	Rarity: Rare
+	Affinity: Research
+	Affinity: Money
+
+	Pressure: 3 Research
+	Pressure: 3 Money
+
+	ModPressurePct(Research, +0.40, +1)
+	ModPressurePct(Energy, -0.40, -1)

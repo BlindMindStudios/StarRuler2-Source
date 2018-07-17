@@ -1,0 +1,14 @@
+Technology: PlanetaryEngine
+	Name: #R_BLD_PLANET_ENGINE
+	Description: #R_BLD_PLANET_ENGINE_DESC
+	Class: Unlock
+	Category: Buildings
+
+	Point Cost: 2000
+	Time Cost: 180
+
+	Icon: HexagonSubsystems::10
+	Color: #00f3ff
+	
+	UnlockTag(PlanetaryEngineUnlock)
+	SkipOnUnlockedTag(PlanetaryEngineUnlock)

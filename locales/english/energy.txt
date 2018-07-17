@@ -1,0 +1,119 @@
+ABL_FLEET_EFFICIENCY: Overcharge Fleet
+ABL_FLEET_EFFICIENCY_DESC: <<|
+	Permanently increase the efficiency of the fleet by 30%.
+>>
+
+STATUS_OVERCHARGED: Overcharged
+STATUS_OVERCHARGED_DESC: <<|
+	Combat effectiveness increased by 30%.
+>>
+
+STATUS_PLANET_GROWTH: Energized
+STATUS_PLANET_GROWTH_DESC: <<|
+	Population growth and development rate doubled temporarily.
+>>
+
+ABL_FLEET_SUPPORT: Expand Support
+ABL_FLEET_SUPPORT_DESC: <<|
+	Expand the fleet's support capacity by 300.
+>>
+
+STATUS_EXPANDED: Expanded
+STATUS_EXPANDED_DESC: <<|
+	Fleet support capacity expanded by 300 using energy.
+>>
+
+STATUS_DEFENDED: Defended
+STATUS_DEFENDED_DESC: <<|
+	Has short-range gattling cannons for defense, installed through energy.
+>>
+
+STATUS_PRESS_ATTACK: Press the Attack
+STATUS_PRESS_ATTACK_DESC: <<|
+	Base effectiveness doubled. Fleet is healing for 50 health per second.
+>>
+
+ABL_FLOAT_BUDGET: Warchest Contributions
+ABL_FLOAT_BUDGET_DESC: <<|
+	Spend all current budget and gain it next budget cycle as bonus money at
+	a markup.
+
+	The closer to the start of the budget cycle and the more energy charges you
+	are currently holding, the more extra money you get.
+>>
+
+STATUS_ENTANGLED: Incapacitated
+STATUS_ENTANGLED_DESC: <<|
+	Flagship cannot move or use FTL.
+>>
+
+OT_Ship: Ship
+OT_Planet: Planet
+OT_Orbital: Orbital
+OT_Star: Star
+OT_Artifact: Artifact
+OT_Anomaly: Anomaly
+OT_Asteroid: Asteroid
+
+NTRG_NOT_SPACE: Cannot target space.
+NTRG_SPACE: Must target unowned.
+NTRG_NOT_SELF: Cannot target self.
+NTRG_TRADE_PRESENCE: Requires trade presence.
+NTRG_NOT_WAR: Cannot target enemies.
+NTRG_TYPE: Must target $1.
+NTRG_ORBITAL_CORE: Must target $1.
+NTRG_FLAGSHIP: Must target flagship.
+NTRG_STATION: Must target station.
+NTRG_VISION: Requires vision.
+NTRG_OWNED: Must target self.
+NTRG_ALLIED: Must target self or allies.
+NTRG_NOT_ALLIED: Cannot target allies..
+NTRG_UNNAMED: Cannot target already named.
+NTRG_STATUS: Already has status.
+NTRG_FTL: Cannot target ships in FTL.
+NTRG_TERRITORY: Must target same territory.
+NTRG_SAME_REGION: Must target same system.
+NTRG_PLLEV: Must target level $1 or below.
+NTRG_PLLEVA: Must target level $1 or above.
+NTRG_PLLEVE: Must target level $1.
+NTRG_RSLEV: Must target tier $1 or below.
+NTRG_RSLEVA: Must target tier $1 or above.
+NTRG_RSLEVE: Must target tier $1.
+NTRG_REGION: Must target region.
+NTRG_TERRAFORM: Must be able to terraform.
+NTRG_NOT_NATURAL: Cannot target natural artifact.
+NTRG_NATURAL: Must target natural artifact.
+NTRG_OWN_SYSTEM: Must own all planets.
+NTRG_CONTACT: Must be in contact with other empires.
+NTRG_IN_SYSTEM: Must place inside system.
+NTRG_NOT_SYSTEM: Must place outside system.
+NTRG_IN_UNIVERSE: Must place in universe bounds.
+NTRG_NEED_WAR: Must target enemies.
+NTRG_CONSTRUCTION: Must be able to use labor.
+NTRG_UNIQUE: Cannot target unique resources.
+NTRG_ARTIFICIAL: Cannot target artificial resources.
+NTRG_NO_COLONIZE: Planet is blockaded by remnants.
+NTRG_CARGO: Must target object with cargo storage.
+NTRG_NO_HOME: Cannot target home system.
+NTRG_REQUIRE: Requires $1
+NTRG_CANNOT: Cannot target $1
+NTRG_STORAGE_FULL: $1 storage full.
+NTRG_LOYALTY_MAX: Loyalty too high.
+NTRG_MIN_MAXPOP: $1 Maximum Population Required
+
+ABL_ENSLAVE: Enslave
+ABL_ENSLAVE_DESC: <<|
+	Generates a temporary Slave Labor resource.
+	Can only be used once per planet.
+>>
+
+STATUS_ENSLAVED: Enslaved
+
+STATUS_SEEDSHIP: Artifact Seed Ship
+STATUS_SEEDSHIP_DESC: <<|
+	This ancient ship travels from galaxy to galaxy, manufacturing artifacts
+	and leaving them for younger races to find.
+>>
+
+ENERGY_COST: Energy Cost
+COOLDOWN: Cooldown

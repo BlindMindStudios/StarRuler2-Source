@@ -1,0 +1,17 @@
+Ability: MineAsteroid
+	Name: #ABL_MINE_ASTEROID
+	Description: #ABL_MINE_ASTEROID_DESC
+	Icon: AsteroidIcon * #91692c
+
+	Range: 100
+	Target: targ = Object
+
+	TargetFilterType(targ, Asteroid)
+	TargetFilterHasCargoStored(targ)
+
+	RequireCargoSpace()
+
+	IsToggleTarget(targ)
+	PersistentBeamEffect(targ, #91692c, Tractor)
+
+	MineCargoFrom(targ, Sys.MiningRate:1)

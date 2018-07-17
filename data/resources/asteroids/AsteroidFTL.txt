@@ -1,0 +1,20 @@
+Resource: AsteroidFTL
+	Name: #ASTEROID_FTL
+	Description: #ASTEROID_FTL_DESC
+
+	Icon: ResourceIcons::22
+	Small Icon: ResourceIconsSmall::47
+
+	Rarity: Uncommon
+	Exportable: False
+
+	Distribution: 0
+	Asteroid Frequency: 0.5
+	Asteroid Labor: 30
+
+	Vanish Time: 540
+	Vanish Mode: Custom
+	VanishUnlessFTLFull()
+
+	AddFTLIncome(+0.5)
+	AddPermanentFTLStorage(+100)

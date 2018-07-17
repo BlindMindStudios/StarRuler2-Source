@@ -1,0 +1,13 @@
+Ability: Telescope
+	Name: #ABL_TELESCOPE
+	Description: #ABL_TELESCOPE_DESC
+	Icon: VoteIcons::3
+	Activate Sound: telescope_activate
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterRegion(targ)
+
+	Trigger(targ, GrantRegionVision(900, Hops = 1))

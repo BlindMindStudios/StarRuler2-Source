@@ -1,0 +1,30 @@
+Trait: Slipstream
+	Name: #TRAIT_SLIPSTREAM
+	Description: #TRAIT_SLIPSTREAM_DESC
+	Category: FTL
+	Order: 3
+
+	Icon: GuiOrbitalIcons::4
+	Color: #67a7ad
+
+	Unique: FTL
+
+	UnlockSubsystem(Slipstream)
+
+	LoadDesigns(default)
+	LoadDesigns(not_hyperdrive)
+	LoadDesigns(slipstream)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/not_hyperdrive))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/slipstream))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/not_hyperdrive))
+	IfHaveTrait(Devout, LoadDesigns(devout/slipstream))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/not_hyperdrive))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/slipstream))
+
+	IfNotHaveTrait(StarChildren, SpawnShip(Slipstream Generator))

@@ -1,0 +1,30 @@
+Subsystem: FissionGen
+	Name: #FISSIONGEN_NAME
+	Description: #FISSIONGEN_DESC
+	BaseColor: #00a4db
+	Elevation: 1
+
+	Tags: NoCore, NonContiguous, DefaultUnlock, IsReactor, Category:Control
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Power := 10 * Size
+	SupplyCapacity := Size * 1000
+	SupplyRate := Size * 40
+
+	Hex.Resistance := 0.5
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Hex.LaborCost := 0.3 * HexSize + 0.18
+	Hex.BuildCost := 3 * HexSize + 0.8
+	Hex.MaintainCost := 4 * HexSize / ShipSize^0.5 + 3 * HexSize + 2
+	
+	Provides:
+		Power = Power
+	
+	Module: Default
+		Sprite: HexagonSubsystems::11
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor

@@ -1,0 +1,9 @@
+Artifact: GenesisDevice
+	Name: #ART_GENESIS_DEVICE
+	Description: #ART_GENESIS_DEVICE_DESC
+	Frequency: 0.25
+	Natural: True
+	
+	Model: ArtifactAdvanced
+
+	Ability: GenesisDevice

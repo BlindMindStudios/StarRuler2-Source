@@ -1,0 +1,2 @@
+Status: ArtificialMoon
+	Visible To: Nobody

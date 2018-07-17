@@ -1,0 +1,14 @@
+Technology: ArtificialPlanetoid
+	Name: #R_ORB_ARTIFICIAL_PLANETOID
+	Description: #R_ORB_ARTIFICIAL_PLANETOID_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 1000
+	Time Cost: 200
+
+	Icon: PlanetType::1
+	Color: #f3ff00
+	
+	UnlockTag(ArtificialPlanetoidUnlock)
+	SkipOnUnlockedTag(ArtificialPlanetoidUnlock)

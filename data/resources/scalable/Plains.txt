@@ -1,0 +1,27 @@
+Resource: Plains
+	Name: #PLAINS
+	Blurb: #PLAINS_BLURB
+	Description: #PLAINS_DESC
+	Native Biome: Forest
+	Class: Scalable
+
+	Small Icon: ResourceIconsSmall::59
+
+	Rarity Level: 3
+	Frequency: 2
+
+	Limitless Level: True
+	Can Be Terraformed: False
+	Exportable: False
+
+	RegenSurface(26, 16, Biome Count = 3)
+
+	ModTileDevelopRate(+1.0)
+	RepeatPlanetLevel(ModTileDevelopRate(+0.5))
+
+	IfLevel(0, AddBuildingMaintenanceRefund(50), Exact = True) #version>=134
+	IfLevel(1, AddBuildingMaintenanceRefund(150), Exact = True) #version>=134
+	IfLevel(2, AddBuildingMaintenanceRefund(300), Exact = True) #version>=134
+	IfLevel(3, AddBuildingMaintenanceRefund(500), Exact = True) #version>=134
+	IfLevel(4, AddBuildingMaintenanceRefund(750), Exact = True) #version>=134
+	IfLevel(5, AddBuildingMaintenanceRefund(1100)) #version>=134

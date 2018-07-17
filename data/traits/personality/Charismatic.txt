@@ -1,0 +1,14 @@
+Trait: Charismatic
+	Name: #TRAIT_CHARISMATIC
+	Description: #TRAIT_CHARISMATIC_DESC
+	Category: Personality
+	Order: 4
+
+	Conflict: Paranoid
+
+	Color: #aaffaa
+	Icon: ThumbsUp
+
+	Costs Points: 1
+
+	ModAttribute(VoteStartSupport, Add, +2.0)

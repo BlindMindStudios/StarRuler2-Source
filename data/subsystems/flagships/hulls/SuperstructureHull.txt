@@ -1,0 +1,22 @@
+Subsystem: SuperstructureHull
+	Name: #S_SUPERSTRUCTURE_HULL
+	Description: #S_SUPERSTRUCTURE_HULL_DESC
+
+	Tags: Applied:Hull, Category:Hulls, NoCore
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+	EvaluationOrder: -200
+	BaseColor: #cc6a3a
+
+	AddShipModifier: BuildCostFactor(0.5)
+	AddShipModifier: LaborCostFactor(0.5)
+	AddShipModifier: MaintCostFactor(0.66)
+
+	Hex.OreCost := 0
+	AddPostModifier: AddOreCost(HexSum.BuildCost)
+	AddPostModifier: AddOreCost(HexSum.LaborCost)
+	AddPostModifier: AddOreCost(HexSum.MaintainCost * 0.5)
+
+	Module: Default
+		Sprite: HullSubsystems::3
+		DrawMode: 3

@@ -1,0 +1,14 @@
+Technology: DevFTL
+	Name: #R_DEV_FTL
+	Blurb: #R_DEV_FTL_BLURB:250
+	Description: #R_DEV_FTL_DESC:250
+	Class: Boost
+
+	Point Cost: 400
+	Time Cost: 60
+
+	Icon: ResourceIcon::3
+	Color: #00c0ff
+
+	AddFTLStorage(250)
+	AddStoredFTL(250)

@@ -1,0 +1,16 @@
+Ability: EquipSkipDrive
+	Name: #ABL_EQUIP_SKIP_DRIVE
+	Description: #ABL_EQUIP_SKIP_DRIVE_DESC
+	Icon: GuiOrbitalIcons::2 * #ff0000
+	Activate Sound: generic_activate_1
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterFlagship(targ)
+	TargetFilterOwned(targ)
+	TargetFilterSameTerritory(targ)
+	TargetFilterNotStatus(targ, SkipDrive)
+
+	Trigger(targ, AddStatus(SkipDrive))

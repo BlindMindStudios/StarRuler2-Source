@@ -1,0 +1,16 @@
+Building: MotherStalk
+	Name: #BLD_MOTHER_STALK
+	Description: #BLD_MOTHER_STALK_DESC
+	Sprite: Stalk
+
+	Category: Infrastructure
+
+	Size: 6x6
+	CannotBuildManually()
+	CannotRemove()
+
+	ModPressureCapMult(+1.25)
+	AddResource(Labor, 3)
+	AddResourceEmpireAttribute(Labor, FactoryLaborMod)
+
+	ShowAttributeValue(#RESOURCE_LABOR, FactoryLaborMod, Base Amount = 3, Icon = ResourceIcon::6, Suffix = #PER_MINUTE)

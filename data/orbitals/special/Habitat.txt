@@ -1,0 +1,41 @@
+Module: Habitat
+	Name: #ORB_HABITAT
+	Blurb: #ORB_HABITAT_BLURB
+	Description: #ORB_HABITAT_BLURB
+	Icon: GuiOrbitalIcons::14
+	Distant Icon: OrbitalIcons::14
+
+	Core: True
+	Standalone: True
+	Combat Repair: False
+
+	Health: 500
+	Armor: 0
+	Size: 8
+
+	Model: Outpost
+	Material: GenericPBR_Outpost
+
+	CannotBuildManually()
+	ProtectsOrbitSiege()
+
+	AddStatusToOrbitingPlanet(StarHabitats, Set Origin Empire = True)
+	DestroyIfNotAroundOwnedPlanet(Do Colonize = True)
+
+	AddHealth(4000) #version>=115
+	AddArmor(4000) #version>=115
+
+	AddHealthEmpireAttribute(HabitatUpgrade, 4000)
+	AddArmorEmpireAttribute(HabitatUpgrade, 4000)
+
+	AddResistance(5.0)
+
+	AddTurret(Missile, Range=300, Damage=10, Reload=1, Speed=150, Tracking=6) #version>=115
+	AddTurret(Laser, Range=200, DPS=5, Duration=2, Cooldown=0, Tracking=0.4) #version>=115
+
+	RepeatExtended(AddTurret(Missile, Range=300, Damage=6, Reload=1, Speed=150, Tracking=6), Base = 4, Multiply Attribute = StaticDamageFactor)
+	RepeatExtended(AddTurret(Laser, Range=200, DPS=5, Duration=2, Cooldown=0, Tracking=0.4), Base = 2, Multiply Attribute = StaticDamageFactor)
+
+	RecordBonusDPS(35) #version>=115
+	RepeatExtended(RecordBonusDPS(6), Base = 4, Multiply Attribute = StaticDamageFactor)
+	RepeatExtended(RecordBonusDPS(5), Base = 2, Multiply Attribute = StaticDamageFactor)

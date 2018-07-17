@@ -1,0 +1,15 @@
+Trait: Anarchy
+	Name: #TRAIT_ANARCHY
+	Description: #TRAIT_ANARCHY_DESC
+	Category: Personality
+	Available: False
+
+	Category: Government
+	Unique: Government
+
+	Color: #ff706f
+	Icon: ConvertIcon::0
+
+	Gives Points: 1
+
+	RemoveAllCards()

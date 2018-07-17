@@ -1,0 +1,11 @@
+Clause: AllianceClause
+	Name: #CLAUSE_ALLIANCE
+	Description: #CLAUSE_ALLIANCE_DESC
+
+	Icon: StatusPeace
+
+	Free Clause: True
+	Default Clause: True
+	Team Clause: True
+
+	ForcePeace(Break On War = True)

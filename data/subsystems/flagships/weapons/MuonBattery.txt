@@ -1,0 +1,62 @@
+Subsystem: MuonBattery
+	Name: #MUONBATTERY_NAME
+	Description: #MUONBATTERY_DESC
+	BaseColor: #f549f6
+	TypeColor: #f549f6
+	Elevation: 2
+
+	Tags: BaseCost, Category:Weapons
+	Tags: WeaponBase, Rotatable, HexLimitArc
+	Tags: ExteriorCore, Weapon, IsProjWeapon, IsRailgun, HasInternals, MainDPS
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	
+	Range := Size + 400
+	Damage := Size * 0.49
+	Reload := 0.2 * min(1.0 + Size/512, 2.0)
+	Speed := max(90, Range / 16)
+	Spread := 0.035 / max(Range / 600, 1)
+	Tracking := 0.4
+	FireArc := 1.5
+	Pierce := 1.15
+	SupplyCost := Size * 1.5
+	PowerUse := 3.5 * Size
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+	
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: Railgun::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: Railgun
+		Skin: Muon
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Spread = Spread
+		FireArc = FireArc
+		TargetTolerance = max(pi,FireArc + pi/4)
+		FireTolerance = Spread * 3
+		Pierce = Pierce
+		SupplyCost = SupplyCost * Reload
+		CapOnTarget = 24
+		IgnoreDR = 1

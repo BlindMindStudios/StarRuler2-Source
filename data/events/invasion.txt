@@ -1,0 +1,3 @@
+double getInvasionInterval() -> local server::Invasion.InvasionMap::getInvasionInterval
+double getInvasionTimer() -> local server::Invasion.InvasionMap::getInvasionTimer
+double getInvasionStrength() -> local server::Invasion.InvasionMap::getInvasionStrength

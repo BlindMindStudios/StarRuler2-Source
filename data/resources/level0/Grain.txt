@@ -1,0 +1,12 @@
+Resource: Grain
+	Name: #GRAIN
+	Blurb: #FOOD_BLURB
+	Native Biome: Forest
+	Class: Food
+
+	Icon: ResourceIcons::3
+	Small Icon: ResourceIconsSmall::20
+
+	Level: 0
+	AddOverpopulation(1) #version<105
+	AddToNativeResource(AddOverpopulation(1)) #version<71

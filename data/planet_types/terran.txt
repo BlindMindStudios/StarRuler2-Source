@@ -1,0 +1,10 @@
+PlanetType: Terran
+	Icon: PlanetType::2
+	DistantIcon: DistantPlanetType::2
+	Atmosphere: TerranAtmosphere
+	
+	BiomeWeights:
+		Forest: 2
+		Oceanic: 1
+		Mountains: 1
+		Volcanic: -2

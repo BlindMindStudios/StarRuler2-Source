@@ -1,0 +1,13 @@
+Trait: RandomGovernment
+	Name: #TRAIT_RANDOM_GOVERNMENT
+	Description: #TRAIT_RANDOM_GOVERNMENT_DESC
+	Order: 100
+
+	Icon: MenuIcons::4
+	Color: #ff0000
+
+	Category: Government
+	Unique: Government
+
+	AddMoney(200)
+	AddRandomTrait(Government)

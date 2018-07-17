@@ -1,0 +1,8 @@
+Ability: PlanetTakeover
+	Name: #ABL_PLANET_TAKEOVER
+
+	Target: targ = Object
+	TargetFilterOtherEmpire(targ)
+	TargetFilterType(targ, Planet)
+
+	RemotePlanetSiege(targ, Time Per Loyalty = 60)

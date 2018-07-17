@@ -1,0 +1,21 @@
+Building: AncientDeveloper
+	Name: #BLD_ANCIENT_DEVELOPER
+	Description: #BLD_ANCIENT_DEVELOPER_DESC
+	Sprite: AncientDeveloper
+
+	Category: Enhancing
+
+	Size: 3x5
+
+	Base Cost: 0
+	Tile Cost: 25
+	Build Time: 100
+
+	Build Affinity: Volcanic
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ActiveWhenCargoConsumed(BaseMaterial, 1, 6, AddStatus(AncientDeveloper), Inactive Status = AncientRequireBaseMat)

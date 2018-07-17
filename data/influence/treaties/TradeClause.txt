@@ -1,0 +1,11 @@
+Clause: TradeClause
+	Name: #CLAUSE_TRADE
+	Description: #CLAUSE_TRADE_DESC
+
+	Icon: TabPlanets
+
+	Free Clause: True
+	Default Clause: True
+	Team Clause: True
+
+	FreeTrade()

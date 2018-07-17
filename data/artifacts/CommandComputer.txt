@@ -1,0 +1,7 @@
+Artifact: CommandComputer
+	Name: #ART_COMMAND_COMPUTER
+	Description: #ART_COMMAND_COMPUTER_DESC
+
+	Ability: ExpandFleet
+
+	AI: ActivateOnBestFleet(2.0)

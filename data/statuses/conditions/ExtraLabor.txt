@@ -1,0 +1,11 @@
+Status: ExtraLabor
+	Name: #COND_EXTRA_LABOR
+	Description: #COND_EXTRA_LABOR_DESC
+
+	Icon: DesignationIcons::4 * #eeffee
+	Color: #b1b4b6
+
+	Condition Frequency: 0
+	
+	AddToNativeResource( AddPressure(Labor, 1) ) #version<147
+	AddToNativeResource( AddPressureEmpireAttribute(Labor, PlanetConditionMultiplier) ) #version>=147

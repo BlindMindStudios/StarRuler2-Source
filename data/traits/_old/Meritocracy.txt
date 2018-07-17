@@ -1,0 +1,17 @@
+Trait: Meritocracy
+	Name: #TRAIT_MERITOCRACY
+	Description: #TRAIT_MERITOCRACY_DESC
+
+	Category: Government
+	Unique: Government
+	Available: False
+
+	Costs Points: 1
+
+	Icon: StatusIcons::0
+
+	GainInfluenceCard(Negotiate, Uses=5, Quality=2)
+	GainInfluenceCard(Gift, Uses=2)
+	GainInfluenceCard(Enhance, Uses=2)
+	GainInfluenceCard(OpenForum)
+	GainInfluenceCard(Investigate)

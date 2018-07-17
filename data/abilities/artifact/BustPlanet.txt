@@ -1,0 +1,15 @@
+Ability: BustPlanet
+	Name: #ABL_BUST_PLANET
+	Description: #ABL_BUST_PLANET_DESC
+	Icon: CardCategoryIcons::5
+	Activate Sound: graviton_charge
+
+	Energy Cost: 1500
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterPlanetLevelBelow(targ, 1)
+
+	Trigger(targ, Destroy())
+
+	Trigger(targ, NotifyAll(#NOTIFY_BUST_PLANET, Icon = CardCategoryIcons::5))

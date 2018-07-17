@@ -1,0 +1,25 @@
+Technology: ImpImpConstructionRate
+	Name: #R_IMP_IMP_CONSTRUCT
+	Blurb: #R_IMP_IMP_CONSTRUCT_BLURB:20%
+	Description: #R_IMP_IMP_CONSTRUCT_DESC:20%
+
+	Icon: techConstruction*#00cc8f
+	Color: #00cc8f
+
+	Point Cost: 500
+	Time Cost: 100
+
+	ModAttribute(ImperialBldConstructionRate, Multiply, 1.2)
+
+Technology: ImpImpConstructionRate2
+	Name: #R_IMP_IMP_CONSTRUCT2
+	Blurb: #R_IMP_IMP_CONSTRUCT_BLURB:40%
+	Description: #R_IMP_IMP_CONSTRUCT_DESC:40%
+
+	Icon: techConstruction*#00cc8f
+	Color: #3accae
+
+	Point Cost: 800
+	Time Cost: 140
+
+	ModAttribute(ImperialBldConstructionRate, Multiply, 1.4)

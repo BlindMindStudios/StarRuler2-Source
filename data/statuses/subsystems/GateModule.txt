@@ -1,0 +1,8 @@
+Status: GateModule
+	Visible To: Nobody
+
+	FTLMaintenance(0.15)
+
+	OnEnable(AddStatus(GateUnpacked))
+	OnDisable(RemoveStatus(GateUnpacked))
+	OnDisable(RemoveStatus(GatePacked))

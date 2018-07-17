@@ -1,0 +1,23 @@
+Trait: Communism
+	Name: #TRAIT_COMMUNISM
+	Description: #TRAIT_COMMUNISM_DESC
+	Order: 3
+
+	Category: Government
+	Unique: Government
+
+	Icon: StatusPeace
+	Color: #42b4bd
+
+	GainInfluenceCard(Negotiate)
+	GainInfluenceCard(Investigate)
+	GainInfluenceCard(Cultivation)
+	GainInfluenceCard(UnitedResearch)
+	GainInfluenceCard(Sabotage)
+
+	AddEnergy(500)
+
+	SpawnShip(Dreadnaught, Empire, 6x Beamship, 12x Missile Boat, 20x Gunship)
+	SpawnShip(Dreadnaught, Empire, 6x Beamship, 12x Missile Boat, 20x Gunship)
+
+	OnDLC(Heralds, GainAttitude(Collectivism, Level Up = 1))

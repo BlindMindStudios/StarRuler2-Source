@@ -1,0 +1,17 @@
+Card: Innovation
+	Name: #CARD_INNOVATION
+	Description: #CARD_INNOVATION_DESC
+
+	DLC: Heralds
+
+	Icon: CardIcons::29
+	Color: #ff0000
+	Class: Instant
+	Rarity: Epic
+
+	Base Purchase Cost: 8
+	Placement Purchase Cost: 2
+
+	OnOwner(RevealSecretProject())
+
+	AI: BuyWeight(1.0)

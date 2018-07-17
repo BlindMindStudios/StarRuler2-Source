@@ -1,0 +1,6 @@
+Name: r3444
+	Base Mod: True
+	Derives From: base
+	Listed: False
+
+	Override: data/subsystems/*

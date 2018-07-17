@@ -1,0 +1,15 @@
+Technology: FTLJammerCombat
+	Name: #R_FTL_JAMMER_COMBAT
+	Description: #R_FTL_JAMMER_COMBAT_DESC
+
+	Icon: OrbitalIcons::9 * #ff0000
+	Symbol: techImpact * #ff8000
+	Color: #ff8080
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 140
+
+	ModAttribute(FTLJammerCombat, Add, 1)

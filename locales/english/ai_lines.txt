@@ -1,0 +1,30 @@
+AI_STANDING_POSITIVE: They're inclined to be peaceful and helpful.
+AI_STANDING_VERY_POSITIVE: They see us as valued friends and allies.
+
+AI_STANDING_NEGATIVE: They have disdain towards us and are unlikely to cooperate with us.
+AI_STANDING_VERY_NEGATIVE: They see us as bitter enemies and rivals.
+
+AI_STANDING_NEUTRAL: They have no particular opinion about us.
+AI_STANDING_TRUE_NEUTRAL: They have no strong feelings one way or the other.
+
+AI_STANDING_OFFENSE_WAR: Declaring war has spoiled our relations.
+AI_STANDING_OFFENSE_INFLUENCE: Diplomatic actions against them have damaged our relations.
+AI_STANDING_OFFENSE_PLANET: Conquering their worlds has spoiled our relations.
+AI_STANDING_GLAD_DONATION: Our generous donation improved our relations.
+
+AI_STANDING_WAR: Our ongoing war strains our relations.
+AI_STANDING_WAR_FEAR: They fear our empire's might, weakening their opposition.
+AI_STANDING_ALLIES: Our enduring alliance strengthens our relations.
+AI_STANDING_ALLIES_WEAK: Our shaky alliance does little to help our standing.
+
+AI_STANDING_BORDER: Our shared border may one day be a tempting target.
+AI_STANDING_EXPANDING: They are seeking to expand, and may go to war to conquer our shared border.
+AI_STANDING_BORDER_WAR: They will seek to attack our border systems.
+
+AI_STANDING_IGNORE: Unless provoked, they will ignore us.
+AI_STANDING_WAAGH: They will wage war and cannot be reasoned with.
+AI_STANDING_WAIT: They are unlikely to entertain diplomatic proposals for a short time.
+AI_STANDING_GIVE_UP: They are weak and inclined to surrender.
+
+AI_STANDING_CHEATS: They aren't playing fair.
+AI_STANDING_EASY: They tend toward favorable relations.

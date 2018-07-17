@@ -1,0 +1,18 @@
+Ability: GravitonCondenser
+	Name: #ABL_GRAVITON_CONDENSER
+	Description: #ABL_GRAVITON_CONDENSER_DESC
+	Icon: TractorGun::0 * #e45500
+
+	Range: 700
+
+	Target: targ = Object
+	Either(TargetFilterType(targ, Planet), TargetFilterType(targ, Star))
+	TargetFilterAttackable(targ)
+
+	IsToggleTarget(targ, Range Margin = 1.5)
+	CooldownOnDeactivate(targ, 30)
+	PersistentBeamEffect(targ, #e45500, Tractor, Width = 8.0)
+
+	DealStellarDamageOverTime(targ, Sys.StellarDamage:7000000)
+
+	OffensiveToTarget(targ)

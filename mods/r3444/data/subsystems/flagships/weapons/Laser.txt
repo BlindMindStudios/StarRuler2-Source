@@ -1,0 +1,45 @@
+Subsystem: Laser
+	Name: #LASER_NAME
+	Description: #LASER_DESC
+	BaseColor: #f9464d
+	TypeColor: #f9464d
+	Picture: SubsystemButtonArt::7
+	Elevation: 2
+	
+	Tags: BaseCost
+	Tags: BeamBase, Rotatable, HexLimitArc, Category:Weapons
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsBeamWeapon, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	BeamDPS := 2.8 * Size
+	Duration := 6
+	Cooldown := 6
+	Range := Size + 300
+	Tracking := 0.5
+	SupplyCost := Size * 0.75
+	
+	Hex.HP := 12 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Requires:
+		Command = 1
+		Power = 5 * Size
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: HexagonSubsystems::6
+	
+	Effector: Laser
+		Range = Range
+		DPS = BeamDPS
+		Duration = Duration
+		Cooldown = Cooldown
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Duration

@@ -1,0 +1,19 @@
+Building: FTLBreeder
+	Name: #BLD_FTLBREEDER
+	Description: #BLD_FTLBREEDER_DESC
+	Sprite: FTLStorage * #ff8080
+
+	Category: Production
+
+	Size: 2x3
+	Base Cost: 300
+	Tile Cost: 40
+	Base Maintenance: 80
+	Tile Maintenance: 30
+
+	RequireTrait(Mechanoid)
+
+	AddFTLIncome(0.35)
+	TriggerConstructed(LosePopulation(1))
+
+	ShowFTLValue(0.35, Suffix = #PER_SECOND)

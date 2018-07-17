@@ -1,0 +1,41 @@
+Subsystem: SupportAncientCore
+	Name: #S_ANCIENT_CORE
+	Description: #S_ANCIENT_CORE_DESC
+	BaseColor: #c5f946
+	Elevation: 4
+	
+	Tags: Crewed, Control, ControlCore, HasInternals, HeraldsDLC
+	Tags: NoBulkhead, BadFiller, Important
+	Tags: Category:Control
+	Hull: Support, Satellite
+	
+	EvaluationOrder: -10
+	
+	Size := HexSize * Hexes
+	Crew := floor(40 * Size)
+	Command := Hexes * 4
+
+	Repair := 5 * HexSize * (Hexes-1)
+	RepairSupplyCost := 0.4 * Repair
+	out SupplyDrain := RepairSupplyCost
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 16 * HexSize
+	Hex.Mass := HexSize
+	
+	Hex.LaborCost := 0.06 * HexSize
+	Hex.BuildCost := 1.0 * HexSize
+
+	Effect: ControlCore
+	
+	Provides:
+		Crew = Crew
+		Command = Command
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: AncientComputerCore
+		Hex.HP := 4 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

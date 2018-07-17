@@ -1,0 +1,11 @@
+WeaponSkin:
+	Icon: Missile * #ff8000
+
+WeaponSkin: Skin1
+	Icon: Missile * #ff00ff
+
+WeaponSkin: Skin2
+	Icon: Missile * #00ff00
+
+WeaponSkin: Skin3
+	Icon: Missile * #006bff

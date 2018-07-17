@@ -1,0 +1,17 @@
+Scenario: InevitableConquest
+	Name: #SCEN1_NAME
+	Description: #SCEN1_DESC
+	Icon: MenuIcons::3
+	Picture: PointsIcon
+
+	Map: Story.scenario1
+
+//Scenario: TestMap
+//	Name: TestMap
+//	Description: This is a secondary test map.
+//	Icon: MenuIcons::4
+//	Picture: PointsIcon
+
+//	Map: Story.scenario1
+
+//	Dependency: Introduction

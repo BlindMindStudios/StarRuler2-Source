@@ -1,0 +1,7 @@
+Status: Devout
+	Visible To: Nobody
+
+	IfCoversPopulation(AltarSupportedPopulation, RepeatPlanetLevel(ModEmpireAttribute(AltarSupportedPopulation, Add, 1))) #version<118
+	IfCoversPopulation(AltarSupportedPopulation, RepeatPlanetLevel(AddMaxPopulation(1))) #version<118
+
+	RepeatPlanetLevel(AddMaxPopulation(1)) #version>=118

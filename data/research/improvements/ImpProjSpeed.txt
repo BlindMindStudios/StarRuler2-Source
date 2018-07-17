@@ -1,0 +1,27 @@
+Technology: ImpProjSpeed
+	Name: #R_IMP_PROJ_SPEED
+	Blurb: #R_IMP_PROJ_SPEED_BLURB:20%
+	Description: #R_IMP_PROJ_SPEED_DESC:20%
+
+	Icon: TimeHaste::1
+	Color: #ffc419
+
+	Point Cost: 500
+	Time Cost: 120
+
+	AddModifier( tag/MissileBase::SpeedFactor(1.2) )
+	AddModifier( tag/IsProjWeapon::SpeedFactor(1.2) )
+
+Technology: ImpProjSpeed2
+	Name: #R_IMP_PROJ_SPEED2
+	Blurb: #R_IMP_PROJ_SPEED_BLURB:40%
+	Description: #R_IMP_PROJ_SPEED_DESC:40%
+
+	Icon: TimeHaste::1
+	Color: #ffc419
+
+	Point Cost: 750
+	Time Cost: 120
+
+	AddModifier( tag/MissileBase::SpeedFactor(1.4) )
+	AddModifier( tag/IsProjWeapon::SpeedFactor(1.4) )

@@ -1,0 +1,11 @@
+Ability: AncientEmbassy
+	Name: #ABL_ANCIENT_EMBASSY
+	Description: #ABL_ANCIENT_EMBASSY_DESC
+	Icon: GuiOrbitalIcons::0
+	Activate Sound: generic_activate_2
+
+	Energy Cost: 1000
+
+	Target: dest = Point
+
+	SpawnOrbitalAt(dest, AncientEmbassy)

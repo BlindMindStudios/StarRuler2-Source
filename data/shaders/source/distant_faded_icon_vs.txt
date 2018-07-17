@@ -1,0 +1,12 @@
+varying vec2 uv;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+
+	vec4 cpos = gl_ModelViewProjectionMatrix * gl_Vertex;
+	cpos.z -= 0.002;
+	gl_Position = cpos;
+
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

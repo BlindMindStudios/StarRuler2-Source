@@ -1,0 +1,5 @@
+Status: HydroponicsSatellite
+	Visible To: Nobody
+	Collapses: True
+
+	RepeatStacks(AddPlanetResource(Soylent1))

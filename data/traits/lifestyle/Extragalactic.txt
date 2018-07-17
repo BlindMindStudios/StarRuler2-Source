@@ -1,0 +1,30 @@
+Trait: Extragalactic //Planetary Planetary
+	Name: #TRAIT_EXTRAGALACTIC
+	Description: #TRAIT_EXTRAGALACTIC_DESC
+	Order: 8
+	DLC: Heralds
+
+	Icon: ActionBarIcons::0
+	Color: #2c74a4
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	ModAttribute(PopulationGrowthFactor, Multiply, 0)
+	ModAttribute(ForbidColonization, Add, 1)
+	ModAttribute(NoAutoColonize, Add, 1)
+	ModAttribute(ColonizerMaintFactor, Multiply, 0)
+
+	AddStatusOwnedPlanets(Extragalactic)
+
+	TriggerHomeworld(SpawnOrbital(Beacon, In Orbit = True, Set Home = True, Add Status = ClearRemnants))
+
+	TriggerRandomSystem(SpawnOrbital(Beacon, In Orbit = True, Add Status = ClearRemnants), Min Contestation = 0, Fallback Random = True, Match Homeworld Assign = True, Reassign = -2)
+	TriggerRandomSystem(SpawnOrbital(Beacon, In Orbit = True, Add Status = ClearRemnants), Min Contestation = 0, Fallback Random = True, Match Homeworld Assign = True, Reassign = -2)
+
+	TriggerHomeworld(SetSystemAssignGroup(-2))
+
+	TriggerHomeworld(DestroySystemPlanet(0, Quiet = True), Run Post = True)
+
+	ModAttribute(ColonizerSpeed, Multiply, 2.0)
+	SetColonizerInfo(#RACE_HERALDS_COLONIZER)

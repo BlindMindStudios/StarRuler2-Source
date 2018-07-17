@@ -1,0 +1,12 @@
+Status: GatePacked
+	Name: #STATUS_GATE_PACKED
+	Description: #STATUS_GATE_PACKED_DESC
+	Icon: ActionBarIcons::7 * #ff0000
+
+	AddAccelerationBonus(1.5)
+
+	AddBonusHP(-0.5)
+
+	GrantAbility(GateUnpack)
+
+	ForceHoldFire()

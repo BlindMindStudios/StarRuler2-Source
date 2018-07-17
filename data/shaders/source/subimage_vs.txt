@@ -1,0 +1,9 @@
+uniform vec2 subimg;
+varying vec2 uv;
+
+void main() {
+	uv = subimg + (gl_MultiTexCoord0.xy / 8.0);
+	gl_Position = ftransform();
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

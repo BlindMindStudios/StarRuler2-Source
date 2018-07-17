@@ -1,0 +1,7 @@
+SystemDesc@[] getSystems() -> local server::game_start::getSystems
+Region@ getRegion(vec3d point) -> local server::regions.regions::getRegion_client
+void sendClientMessage(string title, string txt, uint color = 0) -> client::scenario::sendMessage
+void sendClientZoom(Object@ zoomTo) -> client::tabs.GalaxyTab::sendZoom
+void refreshClientSystems() -> client::navigation.systems::refreshClientSystems
+bool isOutsideUniverseExtents(vec3d point, double margin = 500) -> local server::regions.regions::isOutsideUniverseExtents_client
+double getPathDistance(vec3d from, vec3d to) -> local server::oddity_navigation::getPathDistance_client

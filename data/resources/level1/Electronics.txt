@@ -1,0 +1,12 @@
+Resource: Electronics
+	Name: #ELECTRONICS
+	Description: #ELECTRONICS_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::14
+	Small Icon: ResourceIconsSmall::5
+
+	Level: 1
+	Affinity: Money
+
+	Pressure: 3 Money

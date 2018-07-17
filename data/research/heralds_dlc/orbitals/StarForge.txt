@@ -1,0 +1,14 @@
+Technology: StarForge
+	Name: #R_ORB_STARFORGE
+	Description: #R_ORB_STARFORGE_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 1200
+	Time Cost: 180
+
+	Icon: OrbitalIcons::16
+	Color: #fff300
+	
+	UnlockTag(StarForgeUnlock)
+	SkipOnUnlockedTag(StarForgeUnlock)

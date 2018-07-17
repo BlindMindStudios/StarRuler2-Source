@@ -1,0 +1,14 @@
+Ability: GenerateWater
+	Name: #ABL_GENERATE_WATER
+	Description: #ABL_GENERATE_WATER_DESC
+	Icon: ResourceIcons::0
+	Activate Sound: comet_activate
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+
+	TriggerEffectOnce(targ, AddPlanetResource(StellarWater))

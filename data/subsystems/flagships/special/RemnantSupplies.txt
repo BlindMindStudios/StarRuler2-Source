@@ -1,0 +1,24 @@
+Subsystem: RemnantSupplyModule
+	Name: #SUPPLYMODULE_NAME
+	Description: #SUPPLYMODULE_DESC
+	Picture: SubsystemButtonArt::8 * #b3ffef
+	BaseColor: #2fd6b3
+	Elevation: 3
+	
+	Tags: NonContiguous, NoCore, HasInternals, Category:Control, Disabled
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	SupplyCapacity := Size * 500000
+	SupplyRate := Size * 60000
+	
+	Hex.LaborCost := 0.3 * HexSize + 0.8
+	Hex.BuildCost := 3 * HexSize + 2
+	Hex.MaintainCost := 8 * HexSize + 5
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := HexSize
+
+	Module: Default
+		Sprite: SupplyStorage

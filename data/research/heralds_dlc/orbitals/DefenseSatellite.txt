@@ -1,0 +1,14 @@
+Technology: DefenseSatellite
+	Name: #R_ORB_DEFENSE_SATELLITE
+	Description: #R_ORB_DEFENSE_SATELLITE_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: GuiOrbitalIcons::14
+	Color: #ffdc40
+	
+	UnlockTag(DefenseSatelliteUnlock)
+	SkipOnUnlockedTag(DefenseSatelliteUnlock)

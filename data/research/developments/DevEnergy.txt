@@ -1,0 +1,13 @@
+Technology: DevEnergy
+	Name: #R_DEV_ENERGY
+	Description: #R_DEV_ENERGY_DESC:500:500
+	Class: Boost
+
+	Point Cost: 200
+	Time Cost: 60
+
+	Icon: techIonization *#42b4bd
+	Color: #42b4bd
+
+	SecondaryEnergyCost(500)
+	NotSecondary( AddEnergy(500) )

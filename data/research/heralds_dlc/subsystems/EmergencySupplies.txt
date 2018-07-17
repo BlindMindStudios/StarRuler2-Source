@@ -1,0 +1,16 @@
+Technology: EmergencySupplies
+	Name: #R_SYS_EMERGENCY_SUPPLIES
+	Description: #R_SYS_EMERGENCY_SUPPLIES_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: AntimatterReactor * #b8b800
+	Color: #b88b00
+	
+	UnlockSubsystem(EmergencySupplies)
+	SkipOnUnlockedSubsystem(EmergencySupplies)
+
+	SecondaryEnergyCost(500)

@@ -1,0 +1,6 @@
+Status: SeedShip
+	Name: #STATUS_SEEDSHIP
+	Description: #STATUS_SEEDSHIP_DESC
+	Icon: ResourceIcon::2
+
+	artifact_seeding::SeedShip()

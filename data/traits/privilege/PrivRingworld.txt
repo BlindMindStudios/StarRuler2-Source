@@ -1,0 +1,14 @@
+Trait: PrivRingworld
+	Name: #PRIV_TRAIT_RINGWORLD
+	Description: #PRIV_TRAIT_RINGWORLD_DESC
+	Color: #ff8000
+
+	Category: Privilege
+	Available: False
+
+	Conflict: Extragalactic
+	Conflict: StarChildren
+	Conflict: Ancient
+
+	TriggerHomeworld(SpawnPlanet(Ringworld, Owned = True, Add Status = PrivRingworld, Radius = 550, Physics = False, Set Homeworld = True))
+	TriggerHomeworld(DestroySystemPlanet(0, Quiet = True), Run Post = True)

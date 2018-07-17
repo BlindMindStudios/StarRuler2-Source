@@ -1,0 +1,40 @@
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+attribute vec4 in_color;
+attribute vec4 in_uv2;
+
+varying vec3 npos, origo;
+varying vec3 normal;
+varying vec2 uv, uv2, uv3;
+varying vec4 pos;
+varying vec3 vertMasksPrimary, vertMasksSecondary;
+varying float vertLightMask;
+uniform int flagNumber;
+
+void main()
+{
+
+	normal = normalize(gl_NormalMatrix * in_normal);
+
+	vec4 pos = gl_ModelViewMatrix * in_vertex;
+	npos = -pos.xyz;
+	origo = in_vertex.xyz;
+		
+	vertMasksSecondary = max(vec3(0.0), in_color.rgb * 3.0 -2.0);	//  shield r, windows g, engine b
+	vertMasksPrimary = max(vec3(0.0), (1.0 - in_color.rgb) * 3.0 - 2.0); // flags g, warp b, transparency on r
+	vertLightMask = 1.0 - vertMasksSecondary.r - vertMasksSecondary.g - vertMasksSecondary.b - vertMasksPrimary.b; // filter off no-special lights
+
+	
+	uv = in_uv;
+	uv.y = 1.0 - uv.y;
+	uv2 = in_uv2.xy;
+	uv2.y = 1.0 - uv2.y;
+	
+	uv2 = uv2.xy + vec2((1.0 / 32.0) * clamp(flagNumber, 0, 20) * vertMasksPrimary.g, 0.0);
+	
+	uv3 = in_uv2.zw;
+	uv3.y = 1.0-uv3.y;
+
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

@@ -1,0 +1,336 @@
+	#version 120
+	const bool advancedProcedurals = 	#{{level:extreme}};
+	const bool parallax = 				#{{level:extreme}};
+	const bool sss =	 				#{{level:extreme}};
+	const bool pbrLight = 				#{{level:high}};
+	const bool simpleProcedurals = 		#{{level:high}};
+	const bool advancedAmbience = 		#{{level:high}};
+	const bool normalMapping = 			#{{level:medium}};
+	const bool simpleAmbience = 		#{{level:medium}};
+	const bool selfIllumination = 		#{{level:medium}};
+	
+	const int nLightCount = 2;
+	const float pi = 3.14159265358;
+	const float tau = 6.28318530716;
+	// constants for emissive lights and starlight intensity
+	const float lightIntensity = 2.0;
+
+	
+	uniform sampler2D model, detail;
+	uniform samplerCube skybox;
+	uniform vec3 colors[nLightCount];
+	uniform float lightRadius[nLightCount];
+	uniform vec4 ownerColor;
+	// complimentary triad color harmony, should in theory always generate an appealing theme. 
+	vec3 colorLightsWindows = ownerColor.rgb * 0.7 + 0.3;
+	vec3 colorLightsPrimary = vec3(ownerColor.brg) * 0.7 + 0.3;
+	vec3 colorLightsSecondary = vec3(ownerColor.gbr) * 0.7 + 0.3;
+	
+	varying float vertMask;
+	varying vec3 normal;
+	varying vec3 npos;
+	varying vec2 uv, uv2;
+	varying vec4 pos;
+	
+	uniform float mineBuild;
+	
+	varying vec3 light[nLightCount];
+	
+	// parallax scale, bias and steps
+	const float rayScale = 0.001;
+	const int rSteps = 5;
+	
+	vec3 toLinear(vec3 x) {
+		return pow(x, vec3(2.2));
+	}
+	
+	vec3 toGamma(vec3 x) {
+		return pow(x, vec3(0.45));
+	}
+	
+	// pow alternatives
+	float square(float x) {
+		return x*x;
+	}
+	
+	vec2 square(vec2 x) {
+		return x*x;
+	}
+	
+	vec3 square(vec3 x) {
+		return x*x;
+	}
+	
+	vec4 square(vec4 x) {
+		return x*x;
+	}
+	
+	float pow5(float x) {
+	
+		float y = x*x;
+		return y*y*x;
+	}
+	
+
+// speculer term part 1
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// specular term part 2
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+// fresnel for specular term
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return max(vec3(0.0), substance + (substance - 1.0) * pow(1.0 - max(0.0,(dot(l, h))), 5.0));
+}
+// fresnel for ambient light
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+// diffuse term
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+	float O = 0.62 - pow(1.0-NdotL * clamp(1.0-NdotV/2.0, 0.0,1.0), pi) * 0.62;
+	O = mix(O, NdotL, roughness);
+	return O;
+}
+
+	float deriveZ(vec2 n) {		
+		return sqrt(abs(1.0 - n.x * n.x - n.y * n.y));
+	}		
+	
+	vec3 dp1Calc(vec3 p) {
+		return dFdx(p);
+	}
+	
+	vec3 dp2Calc(vec3 p) {
+		return dFdy(p);
+	}
+	
+	vec4 duv1Calc(vec4 uv) {
+		return dFdx(uv);
+	}
+	
+	vec4 duv2Calc(vec4 uv) {
+		return dFdy(uv);
+	}
+	
+void main() {
+
+	vec4 uvR = vec4(uv, uv2);
+
+	vec3 v = normalize(npos);
+	vec3 n = normalize(normal);
+	vec3 albedo = vec3(0.38, 0.2, 0.58);
+	vec3 substance = vec3(0.0); // essentially an rgb specular color extracted from the albedo through metalness
+	float metalness = 0.0; // dielectric or metallic surface
+	float orgRoughness = 0.0; // specular/reflection sharpness
+	float cavity = 0.5; // hard multiplier
+
+	mat3 TBNA = mat3(0.0);
+	mat3 TBNB = mat3(0.0);
+	
+	// results
+	vec3 color = vec3(0.0);
+	vec3 lights = vec3(0.0);
+	
+	vec4 surfSampB = texture2D(model, uvR.zw); 
+	vec4 subSampB = texture2D(detail, uvR.zw * vec2(1.0, 6.0));	
+	vec4 surfSampA = texture2D(model, uvR.xy); 
+	vec4 subSampA = texture2D(detail, uvR.xy * vec2(1.0, 6.0));	
+	vec3 NdotV = vec3(max(0.0, dot(n, v)), 0.0, 0.0);
+
+	if (normalMapping){		
+		// Normal and tangent setup
+		vec3 dp1 = dp1Calc(-v);
+		vec3 dp2 = dp2Calc(-v);
+		vec4 duv1 = duv1Calc(uvR);
+		vec4 duv2 = duv2Calc(uvR);
+		
+		// solve the linear system
+		vec3 dp2perp = cross(dp2, n);
+		vec3 dp1perp = cross(n, dp1);
+		vec3 tangent = dp2perp * duv1.x + dp1perp * duv2.x;
+		vec3 binormal = dp2perp * duv1.y + dp1perp * duv2.y;
+	
+		// construct a scale-invariant frame 
+		float invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+		TBNA = mat3(tangent * invmax, binormal * invmax, n);
+		
+		tangent = dp2perp * duv1.z + dp1perp * duv2.z;
+		binormal = dp2perp * duv1.w + dp1perp * duv2.w;
+	
+		// construct a scale-invariant frame 
+		invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+		TBNB = mat3(tangent * invmax, binormal * invmax, n);
+
+		uvR *= vec4(1.0, 6.0, 1.0, 6.0);
+
+		if(parallax){		
+		float fDet = dot(dp1, dp2perp);
+		vec2 vProjVScr = (1.0/fDet) * vec2(dot(dp2perp, v), dot(dp1perp, v));
+		vec4 vProjVTex = (duv1 * vProjVScr.x + duv2 * vProjVScr.y);	
+		float p = 0.0;	
+		
+			for (int i = 0; i < rSteps; i++) {
+				p -=(subSampA.a * rayScale);
+				float vProjVTexZ = NdotV.x * p;
+				uvR.xy += (vProjVTex.xy * vProjVTexZ);		
+				subSampA += texture2D(detail, uvR.xy, i);
+			}
+			subSampA /= float(rSteps) + 1.0;
+			p = 0.0;
+	
+			vec3 vB;
+			for (int i = 0; i < rSteps; i++) {
+				p -=(subSampB.a * rayScale);
+				float vProjVTexZ = NdotV.x * p;
+				uvR.zw += (vProjVTex.zw * vProjVTexZ);		
+				subSampB += texture2D(detail, uvR.zw, i);
+			}
+			subSampB /= float(rSteps) + 1.0;
+		}
+	}
+	
+	vec2 surfSamp = mix(surfSampA.zw, surfSampB.zw, vertMask);
+	vec2 subSamp = mix(subSampA.zw, subSampB.zw, vertMask);
+	vec4 nS = vec4(n, 0.0);
+	vec4 nSS = nS;
+	vec3 SSScolor = albedo;
+	
+	if (normalMapping){		
+		nS = vec4(surfSampA.xy, surfSampB.xy);
+		nS *= nS *(3.0 - 2.0 * nS);
+		nS *= 2.0;
+		nS -=1.0;
+		nSS = vec4(subSampA.xy, subSampB.xy) * 2.0;
+		nSS -=1.0;
+		nSS *= 0.5;
+		
+		nS.xyz = mix(normalize(TBNA * normalize(vec3(nS.xy, deriveZ(nS.xy)))), normalize(TBNB * normalize(vec3(nS.zw, deriveZ(nS.zw)))), vertMask);
+		nSS.xyz = mix(normalize(TBNA * normalize(vec3(nSS.xy, deriveZ(nSS.xy)))), normalize(TBNB * normalize(vec3(nSS.zw, deriveZ(nSS.zw)))), vertMask);
+		
+		albedo = toLinear(min(vec3(1.0), (albedo + albedo * surfSamp.g + subSamp.r * albedo + surfSamp.g * 0.25) * surfSamp.g));
+		SSScolor = albedo + surfSamp.g * albedo;
+	
+		orgRoughness = (1.0 - surfSamp.g) * 0.1 + 0.1;
+		
+		NdotV.z = max(0.0, dot(nSS.xyz, v));
+		
+		nSS.xyz = mix(nSS.xyz, nS.xyz, NdotV.z);
+	}
+	
+	vec3 r = normalize(reflect(-v, nS.xyz));
+	
+	metalness  = clamp(1.0 - surfSamp.g * surfSamp.r, 0.0, 1.0);
+	substance = (0.04 - 0.04 * metalness) + albedo * metalness;
+	albedo -= substance;
+	
+	NdotV.xy = max(vec2(0.0), vec2(dot(nSS.xyz, v), dot(nS.xyz, v)));
+	
+	vec3 ambientFresnel = Fresnel2(substance, NdotV.y ,orgRoughness);
+	
+	if (advancedAmbience){
+		
+		color += square((textureCube(skybox, r, sqrt(orgRoughness) * 4.0).rgb) + 0.024) * ambientFresnel;
+	
+		// ambient light
+		color += square(textureCube(skybox, nS.xyz, 4.0).rgb + 0.024) * albedo * (1.0 - ambientFresnel);
+	}
+	else if (simpleAmbience){
+		// Ambient reflections with fix mip and n instead of refect
+		color += square(textureCube(skybox, r, 3.0).rgb * ambientFresnel);
+	
+		// Ambient light - average color of skybox squared
+		color += vec3(0.006724, 0.014884, 0.067081) * albedo * (1.0 - ambientFresnel);
+	}
+	else{
+		// Ambient 
+		color += vec3(0.006724, 0.014884, 0.067081) * (ambientFresnel + albedo * (1.0 - ambientFresnel));
+	}
+	vec3 test = vec3(0.0);
+	if (pbrLight){		
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			vec2 NdotL = max(vec2(0.0), vec2(dot(nSS.xyz, L) + 1.0, dot(nS.xyz, L)));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			// also note I never do the Oren-Nayer diffuse calculation
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL.y;
+			
+			// note no attenuation check, to not kill the sss and to allow the spec to overshoot its tail
+			vec3 VplusL = L + v; 
+			vec3 halfVec = normalize(VplusL);
+			float HdotV = max(0.0, dot(halfVec, v));
+			vec2 HdotN = max(vec2(0.0), vec2(dot(halfVec, nS.xyz), dot(halfVec, nSS.xyz)));
+			vec3 F = Fresnel(substance, L, halfVec);
+			float D = max(0.0, D_GGX(HdotN.x, orgRoughness));
+			float V = max(0.0, V_SchlickforGGX((1.0 + orgRoughness) * 0.5, NdotV.y, NdotL.y));
+			
+			float inscatter = pow(clamp(dot(L, -v), 0.0, 1.0), 12.0) * mix(3.0, .1, (1.0 - subSamp.g) * 0.5 + 0.5);
+			float normalContribution = clamp(HdotN.y * subSamp.g + 1.0 - subSamp.r, 0.0, 1.0);	
+			float backscatter = surfSamp.r * (normalContribution / tau);
+			float SSS = mix(backscatter, 1.0, inscatter) * NdotL.x;
+
+			color += (((F * V * D) + albedo * NdotL.y * (1.0 - F)) * attenuation  + SSScolor * SSS) * gl_LightSource[i].diffuse.rgb;
+
+		}
+		// note, no hard cavity multiplier
+	}
+	// this light model is pretty loose in terms of what it does, design focus to match 
+	// the pbr in terms of visibility and overall feel for a fraction of the price
+	else{
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			vec2 NdotL = max(vec2(0.0), vec2(dot(nSS.xyz, L) + 1.0, dot(nS.xyz, L)));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			// also note I never do the Oren-Nayer diffuse calculation
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL.y;
+				
+			vec3 VplusL = L + v; 
+			vec3 halfVec = normalize(VplusL);
+			vec2 HdotN = max(vec2(0.0), vec2(dot(halfVec, nS.xyz), dot(halfVec, nSS.xyz)));
+			vec3 S = Fresnel2(substance, HdotN.x ,orgRoughness);
+
+			float inscatter = pow(clamp(dot(L, -v), 0.0, 1.0), 12.0) * mix(3.0, .1, (1.0 - subSamp.g) * 0.5 + 0.5);
+			float normalContribution = clamp(HdotN.y * subSamp.g + 1.0 - subSamp.r, 0.0, 1.0);	
+			float backscatter = surfSamp.r * (normalContribution / tau);
+			float SSS = mix(backscatter, 1.0, inscatter) * NdotL.x;
+			
+			color += ((pow(S * HdotN.x, vec3(orgRoughness + 5.0)) + albedo * NdotL.y) * attenuation  + SSScolor * SSS) * gl_LightSource[i].diffuse.rgb;
+		}
+	}
+
+	gl_FragColor.rgb = toGamma(clamp(color, vec3(0.0), vec3(1.0)));
+	gl_FragColor.a = 1.0;
+}

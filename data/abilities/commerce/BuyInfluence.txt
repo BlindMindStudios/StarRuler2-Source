@@ -1,0 +1,17 @@
+Ability: BuyInfluence
+	Name: #ABL_BUY_INFLUENCE
+	Description: #ABL_BUY_INFLUENCE_DESC
+	Icon: ResourceIcon::1
+
+	Cooldown: 180
+
+	ShareCooldown(BuyInfluence)
+	ShareCooldown(BuyEnergy)
+	ShareCooldown(BuyLabor)
+	ShareCooldown(BuyResearch)
+
+	ConsumeMoney(300)
+	AddInfluencePoints(4)
+
+	ShowMoneyValue(500, #COST)
+	ShowInfluenceValue(4)

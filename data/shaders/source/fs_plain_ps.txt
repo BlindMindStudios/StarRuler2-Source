@@ -1,0 +1,6 @@
+uniform sampler2D screen;
+varying vec2 uv;
+
+void main() {
+	gl_FragColor = texture2D(screen, uv);
+}

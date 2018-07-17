@@ -1,0 +1,28 @@
+Card: Rider
+	Name: #CARD_RIDER
+	Description: #CARD_RIDER_DESC
+
+	Icon: CardIcons::7
+
+	Color: #00a4ff
+
+	Class: Support
+	Side: Neutral
+
+	Max Uses: 3
+
+	Base Play Cost: 0
+	Base Purchase Cost: 1
+	Uses Purchase Cost: 1
+
+	DisableOnOwnedVotes()
+	LimitPerVote(1)
+	ExtendRemainingTimeTo(60)
+	ListActiveEffect()
+	RequireValidVoteStarter()
+
+	LogVoteEvent(Neutral = #CARD_RIDER_LOG)
+	GainLeverageOnVoteStarter(Pass, Quality Factor = 4.0)
+
+	AI: VoteAlwaysPositive()
+	AI: VoteNotOurs()

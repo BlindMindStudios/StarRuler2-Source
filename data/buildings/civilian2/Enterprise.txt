@@ -1,0 +1,11 @@
+Building: Enterprise
+	Name: #BLD_ENTERPRISE
+	Description: #BLD_ENTERPRISE_DESC
+	Sprite: BuildingSprites::5
+
+	Civilian: True
+	Upgrades From: Industry
+
+	Saturation: 4 Labor
+	Production: 3 Labor
+	Pressure Cap: 2

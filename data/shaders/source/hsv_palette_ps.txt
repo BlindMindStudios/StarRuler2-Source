@@ -1,0 +1,33 @@
+
+uniform float value;
+uniform float minSat;
+uniform float maxSat;
+varying vec2 uv;
+
+void main() {
+	float chroma = (1.0 - uv.y) * value * (maxSat - minSat) + minSat;
+	float X = chroma * (1.0 - (abs(mod(uv.x * 6.0, 2.0) - 1.0)));
+	float m = value - chroma;
+	
+	chroma += m;
+	X += m;
+	
+	vec3 rgb = vec3(chroma);
+	vec2 lower = vec2(X, m);
+	
+	float segment = floor(uv.x * 6.0);
+	if(segment == 0.0)
+		rgb.gb = lower;
+	else if(segment == 1.0)
+		rgb.rb = lower;
+	else if(segment == 2.0)
+		rgb.br = lower;
+	else if(segment == 3.0)
+		rgb.gr = lower;
+	else if(segment == 4.0)
+		rgb.rg = lower;
+	else// if(segment == 5.0)
+		rgb.bg = lower;
+	
+	gl_FragColor = vec4(rgb, 1.0);
+}

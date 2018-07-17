@@ -1,0 +1,46 @@
+Technology: AugmentReload
+	Name: #R_MOD_AUGMENT_RELOAD
+	Description: #R_MOD_AUGMENT_RELOAD_DESC
+	Class: Unlock
+	Category: Modifiers
+
+	Point Cost: 400
+	Time Cost: 60
+
+	Color: #ffff00
+	Icon: SupportCommand * #ffff00
+	
+	UnlockModule(AugmentReload)
+	SkipOnUnlockedModule(AugmentReload)
+
+	SecondaryMoneyCost(500)
+
+Technology: AugmentDamage
+	Name: #R_MOD_AUGMENT_DAMAGE
+	Description: #R_MOD_AUGMENT_DAMAGE_DESC
+	Class: Unlock
+	Category: Modifiers
+
+	Point Cost: 500
+	Time Cost: 60
+
+	Color: #ff8080
+	Icon: SupportCommand * #ff8080
+	
+	UnlockModule(AugmentDamage)
+	SkipOnUnlockedModule(AugmentDamage)
+
+Technology: AugmentSupply
+	Name: #R_MOD_AUGMENT_SUPPLY
+	Description: #R_MOD_AUGMENT_SUPPLY_DESC
+	Class: Unlock
+	Category: Modifiers
+
+	Point Cost: 500
+	Time Cost: 60
+
+	Color: #8080ff
+	Icon: SupportCommand * #8080ff
+	
+	UnlockModule(AugmentSupply)
+	SkipOnUnlockedModule(AugmentSupply)

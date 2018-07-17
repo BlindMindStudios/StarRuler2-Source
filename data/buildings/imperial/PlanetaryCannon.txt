@@ -1,0 +1,20 @@
+Building: PlanetaryCannon
+	Name: #BLD_PLANET_CANNON
+	Description: #BLD_PLANET_CANNON_DESC
+	Sprite: PlanetaryArtilleryCannon
+
+	Category: Military
+
+	Size: 6x2
+	Base Cost: 250
+	Tile Cost: 20
+	Base Maintenance: 60
+	Tile Maintenance: 5
+	Labor Cost: 50
+
+	RequireNotTrait(Ancient)
+
+	AddStatus(HasDefenses)
+
+	IfNotSiege( AddTurret(Artillery, Range=1500, Damage=200, Radius=50, Reload=5.0, Speed=200, Spread=0.0, FireArc=3.14, Tracking=0.2, FireTolerance=0, Hits=15) ) #version<106
+	IfNotSiege( RepeatExtended(AddTurret(Artillery, Range=1500, Damage=200, Radius=50, Reload=5.0, Speed=200, Spread=0.0, FireArc=3.14, Tracking=0.2, FireTolerance=0, Hits=15), Base = 1, Multiply Attribute = StaticDamageFactor) ) #version>=106

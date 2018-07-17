@@ -1,0 +1,13 @@
+Ability: TransferCargo
+	Name: #ABL_TRANSFER_CARGO
+	Description: #ABL_TRANSFER_CARGO_DESC
+	Icon: SupplyIcon * #91692c
+
+	Range: 100
+	Target: targ = Object
+
+	TargetFilterCargoStorage(targ)
+	TargetFilterOwned(targ)
+	RequireHeldCargo()
+
+	TransferAllCargoTo(targ)

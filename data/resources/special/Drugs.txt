@@ -1,0 +1,11 @@
+Resource: Drugs
+	Name: #DRUGS
+	Description: #DRUGS_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIcons::21
+	Small Icon: ResourceIconsSmall::22
+
+	Level: 0
+	Rarity: Epic
+	Mode: Universal Unique

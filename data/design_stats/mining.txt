@@ -1,0 +1,16 @@
+GlobalStat: CargoStorage
+	Name: #S_CargoStorage
+	Description: #STT_CargoStorage
+	Icon: SupplyStorage * #91692c
+	Color: #91692c
+
+	Variable: CargoStorage
+
+GlobalStat: MiningRate
+	Name: #S_MiningRate
+	Description: #STT_MiningRate
+	Icon: Laser::0 * #91692c
+	Color: #a1692c
+	Suffix: #PER_SECOND
+
+	Variable: MiningRate

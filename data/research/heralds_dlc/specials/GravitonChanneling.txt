@@ -1,0 +1,16 @@
+Technology: GravitonChanneling
+	Name: #R_GRAVITON_CHANNELING
+	Description: #R_GRAVITON_CHANNELING_DESC:50%
+
+	Icon: HexagonSubsystems::5
+	Symbol: techPropulsion*#a77751
+	Color: #e0f946
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 800
+	Time Cost: 100
+
+	AddModifier( GravityEngine::ThrustFactor(1.5) )
+	AddModifier( GravityEngine::PowerUseFactor(2.0) )

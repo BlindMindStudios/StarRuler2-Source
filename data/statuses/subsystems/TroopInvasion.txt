@@ -1,0 +1,11 @@
+Status: TroopInvasion
+	Name: #STATUS_TROOP_INVASION
+	Description: #STATUS_TROOP_INVASION_DESC
+	Icon: AbilityIcons::2
+	Color: #ff0000
+
+	Visible To: Everybody
+	Collapses: True
+
+	RemoveIfNotWar()
+	SiegeFromOrigin()

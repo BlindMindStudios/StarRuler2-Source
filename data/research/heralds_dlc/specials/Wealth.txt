@@ -1,0 +1,14 @@
+Technology: Wealth
+	Name: #R_WEALTH
+	Description: #R_WEALTH_DESC:500k
+
+	Icon: techEconomics * #b0d16a
+	Color: #b0d16a
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 100
+
+	AddPermanentIncome(500)

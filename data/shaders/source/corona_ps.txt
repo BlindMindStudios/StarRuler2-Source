@@ -1,0 +1,48 @@
+uniform sampler2D texture;
+uniform float time, temperature, scale;
+uniform vec4 color;
+varying vec2 uv;
+varying vec2 rcoords;
+varying vec3 viewDir, pos;
+const float innerRadius = 1.95/3.0;
+
+//Severity of changes in the corona
+const float turbulence = 9.0;
+//Brightness of the corona flames
+const float baseBrightness = 0.3, flameMinBrightness = 1.0, flameMaxBrightness = 1.3;
+//Brightness of the haze
+const float auraBrightness = 0.3;
+
+void main() {
+	float r = (length(rcoords) - innerRadius) / (1.0 - innerRadius);
+	if(r > 1.0)
+		discard;
+	else if(r < -0.05)
+		discard;
+	
+	float d = length(pos);
+	float baseDist = 1.0 * scale;
+	vec3 col = color.rgb * smoothstep(1.0,0.0,pow(r,0.5)) * auraBrightness * pow(2.0 - r, (8.0*baseDist + d)/(baseDist + d) + 0.2);
+	
+	vec3 p = normalize(viewDir);
+	
+	float temp = clamp((temperature - 4000.0) / 25800.0, 0.0, 1.0);
+	float t = time * (1.0 + floor(temp * 2.5 + 0.5));
+	
+	float u = t * 24.0/6.0 + atan(rcoords.y, rcoords.x) / 6.2828;
+	float v = u * 6.0 - t * 25.0;
+	
+	vec3 noise = texture2D(texture,vec2(u,v), -10.0).rgb;
+	
+	float n = mix(noise.r, noise.g, abs(atan(p.z,p.x)/6.2828) * 2.0);
+	n = (mix(n, noise.b, abs(p.z)) + baseBrightness) * mix(flameMinBrightness, flameMaxBrightness, temp * (1.0 - r));
+	
+	float corona = pow(n,turbulence);
+	corona = pow(corona,(0.15+(r*1.85))) * (1.0 + r) * 0.5;	
+	corona *= pow(1.0 - smoothstep(0.0,1.0,r), 4.0) * 0.8;
+	
+	col += color.rgb * max(corona, 0.0);
+
+	gl_FragColor.rgb = col;
+	gl_FragColor.a = 1.0;
+}

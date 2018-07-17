@@ -1,0 +1,15 @@
+Technology: SysAntimatterGen
+	Name: #R_SYS_ANTIMATTER
+	Description: #R_SYS_ANTIMATTER_DESC
+	Class: Unlock
+
+	Point Cost: 800
+	Time Cost: 120
+
+	Icon: AntimatterReactor
+	Color: #5ade8b
+
+	UnlockSubsystem(AntimatterGen)
+	SkipOnUnlockedSubsystem(AntimatterGen)
+
+	SecondaryEnergyCost(1250)

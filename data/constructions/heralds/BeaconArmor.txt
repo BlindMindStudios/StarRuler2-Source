@@ -1,0 +1,19 @@
+Construction: BeaconArmor
+	Name: #CONS_BEACON_ARMOR
+	Description: #CONS_BEACON_ARMOR_DESC
+
+	Category: Beacons
+
+	Build Cost: 300
+	Time Cost: 80
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconArmorUpgradeCost, Add, 1))
+	OnCancel(ModAttribute(BeaconArmorUpgradeCost, Add, -1))
+
+	ConsumeCargoAttribute(Ore, BeaconArmorUpgradeCost, Multiply = 1000, Base Amount = 1000)
+
+	ModAttribute(BeaconArmorUpgrades, Add, 1)
+
+	AddBuildCostAttribute(BeaconArmorUpgradeCost, Multiply = 100)

@@ -1,0 +1,13 @@
+Resource: Jewelry
+	Name: #JEWELRY
+	Description: #JEWELRY_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIcons::18
+	Small Icon: ResourceIconsSmall::1
+
+	Level: 2
+	Affinity: Money + Influence
+
+	Pressure: 5 Money
+	Pressure: 2 Influence

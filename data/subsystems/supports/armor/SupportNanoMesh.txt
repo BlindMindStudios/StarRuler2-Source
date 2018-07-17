@@ -1,0 +1,24 @@
+Subsystem: SupportNanoMesh
+	Name: #NANOMESH_NAME
+	Description: #NANOMESH_DESC
+	BaseColor: #a9a9a9
+	Elevation: 1
+
+	Tags: Category:Defense, NoWall, PassExterior
+	Tags: NoCore, NonContiguous, Defense, IsArmor, TankArmor
+	Tags: SecondaryArmor, HeraldsDLC
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+
+	Hex.HP := 100 * HexSize
+	Hex.Mass := 1.0 * HexSize
+
+	Hex.BuildCost := 0.90 * HexSize
+	Hex.LaborCost := 0.10 * HexSize
+
+	AddAdjacentModifier: AddHP(Hex.HP / 6.0)
+	AddPostModifier: HpFactor(0.0)
+
+	Module: Default
+		Sprite: NanoMesh

@@ -1,0 +1,43 @@
+Attitude: Xenophobic
+	Name: #ATT_XENOPHOBIC
+	Progress: #ATT_XENOPHOBIC_PROGRESS
+	Color: #5145ed
+	Sort: 65
+
+	ProgressFromAttribute(BorderOutposts, Monotonic = False)
+	Conflict(Tolerant)
+
+	Level:
+		Description: #ATT_XENOPHOBIC_L1
+		Icon: AttributeIcons::6
+		Threshold: 2
+
+		ModEmpireAttribute(OrbitalHealthMod, Multiply, 1.5)
+
+	Level:
+		Description: #ATT_XENOPHOBIC_L2
+		Icon: techOrganization * #fff080
+		Threshold: 4
+
+		ModEmpireAttribute(OutpostBoost, Add, 1)
+
+	Level:
+		Description: #ATT_XENOPHOBIC_L3
+		Icon: AttributeIcons::4
+		Threshold: 7
+
+		ModEmpireAttribute(OutpostFreeRaid, Add, 1)
+
+	Level:
+		Description: #ATT_XENOPHOBIC_L4
+		Icon: ActionBarIcons::2
+		Threshold: 13
+
+		EnableModifier(hull/Support::BuildCostFactor(0.7))
+
+	Level:
+		Description: #ATT_XENOPHOBIC_L5
+		Icon: ResourceIcon::0
+		Threshold: 22
+
+		ModEmpireAttribute(DestroyShipReward, Add, 0.2)

@@ -1,0 +1,30 @@
+Object.Orbit : components.Orbit::Orbit {
+local:
+	safe bool get_inOrbit() const;
+	safe bool get_hasOrbitCenter() const;
+server:
+	void orbitTick(double time);
+	void orbitAround(vec3d point);
+	void orbitAround(double minRadius, vec3d point);
+	void orbitAround(vec3d point, double radius);
+	void orbitAround(Object& around);
+	void orbitAround(Object& around, double radius);
+	void orbitAround(Object& around, double radius, double angle);
+	void orbitAround(vec3d position, vec3d origin);
+	void orbitSpin(double dayLength, bool staticPos = false);
+	void orbitRadius(double newRadius);
+	void setOrbitPct(double pct);
+	void orbitDuration(double duration);
+
+	void stopOrbit();
+	async relocking void remakeStandardOrbit(bool orbitPlanets = true);
+
+	void writeOrbit(Message& msg) const;
+	bool writeOrbitDelta(Message& msg) const;
+	Object@ getOrbitingAround();
+	safe bool isOrbitingAround(Object@ around) const;
+	
+shadow:
+	void readOrbit(Message& msg);
+	void readOrbitDelta(Message& msg);
+}

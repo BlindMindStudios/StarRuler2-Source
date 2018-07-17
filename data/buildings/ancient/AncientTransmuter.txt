@@ -1,0 +1,22 @@
+Building: AncientTransmuter
+	Name: #BLD_ANCIENT_TRANSMUTER
+	Description: #BLD_ANCIENT_TRANSMUTER_DESC
+	Sprite: AncientTransmuter
+
+	Category: ControlHubs
+
+	Size: 10x6
+
+	Base Cost: 80
+	Build Time: 50
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+	ConflictBuilding(AncientCore, Hide = True)
+	ConflictBuilding(AncientTransmuter, Hide = True)
+	ConflictBuilding(AncientMiner, Hide = True)
+
+	AddStatus(AncientClaim)
+	ChangeNativeResourceTo(BaseMaterial)

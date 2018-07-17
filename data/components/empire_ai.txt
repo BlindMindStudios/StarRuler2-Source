@@ -1,0 +1,16 @@
+Empire.EmpireAI : empire_ai.EmpireAI::EmpireAI {
+local:
+	bool get_isAI();
+	string getRelation();
+	int getRelationState();
+restricted local:
+	vec3d get_aiFocus();
+server:
+	int get_difficulty();
+	uint getAIType();
+	void aiTick(double time);
+	void aiPing(Empire@ fromEmpire, vec3d position, uint type = 0);
+	void initBasicAI();
+	void debugAI();
+	void commandAI(string cmd);
+};

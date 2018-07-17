@@ -1,0 +1,51 @@
+Effector: Missile
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 3
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: 1.05 * Range / Speed
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Only
+	Activation: StaggeredTimed(Reload, 1.0)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ExplDamage
+		Amount = Damage
+
+	PhysicalType: Missile
+		PhysicalSize: 0.25
+		GfxType: Sprite
+		GfxSize: 4.0
+		FireSfx: missile_launch
+		FireSfx: missile_launch_2
+		FireSfx: missile_launch_3
+		ImpactSfx: missile_impact
+		ImpactSfx: missile_impact_2
+		ImpactSfx: missile_impact_3
+		Trail: MissileTrail
+		Color: ff8000ff
+		TrailCol: 99990000, 00000000
+		Material: Missile
+		ImpactGfx: ImpactFlareMissile
+
+	Skin: Skin1
+		Color: ff00ffff
+		TrailCol: 99009900, 00000000
+
+	Skin: Skin2
+		Color: 00ff00ff
+		TrailCol: 00990000, 00000000
+
+	Skin: Skin3
+		Color: 006bffff
+		TrailCol: 00409900, 00000000

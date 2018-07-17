@@ -1,0 +1,20 @@
+attribute vec4 in_position;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+
+varying float distortion;
+varying vec2 uv;
+varying vec3 normal;
+varying vec3 v;
+
+void main() {
+	distortion = abs(in_uv.y-0.5) * 2.0;
+
+	uv = in_uv;
+	
+	vec4 vertPos = gl_ModelViewMatrix * in_position;
+	v = vertPos.xyz;
+	
+	gl_Position = gl_ProjectionMatrix * vertPos;
+	normal = normalize(gl_NormalMatrix * in_normal);
+}

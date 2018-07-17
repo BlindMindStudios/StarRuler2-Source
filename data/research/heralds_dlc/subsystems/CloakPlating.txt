@@ -1,0 +1,16 @@
+Technology: CloakPlating
+	Name: #R_SYS_CLOAKPLATING
+	Description: #R_SYS_CLOAKPLATING_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: PlateArmor * #5188e6a0
+	Color: #5188e6
+	
+	UnlockSubsystem(CloakPlating)
+	SkipOnUnlockedSubsystem(CloakPlating)
+
+	SecondaryEnergyCost(1000)

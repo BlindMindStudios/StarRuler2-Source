@@ -1,0 +1,507 @@
+#version 120
+// shader level settings
+const bool advancedProcedurals = 	#{{level:extreme}};
+const bool parallax = 				#{{level:extreme}};
+const bool scattering =				#{{level:extreme}};
+const bool pbrLight = 				#{{level:high}};
+const bool simpleProcedurals = 		#{{level:high}};
+const bool advancedAmbience = 		#{{level:high}};
+const bool normalMapping = 			#{{level:medium}};
+const bool simpleAmbience = 		#{{level:medium}};
+const bool selfIllumination = 		#{{level:medium}};
+
+const int nLightCount = 2;
+
+// math constants
+const float pi = 3.14159265358;
+const float tau = 6.28318530716;
+// constants for emissive lights and starlight intensity
+const float emissiveIntensity = 5.0;
+const float lightIntensity = 5.0;
+
+// parallax scale, bias and steps
+const vec2 scaleBias = vec2(0.005, 0.0025); // vertmask flattens parallax on engines to avoid mirror artifacts
+
+// shield color hardcoded to match the ship shield effect
+const vec3 shieldColor = vec3(0.3, 0.9,1.0);
+
+// for procedural noise
+const vec4 hashSeed = vec4(.16532,.17369,.15787, .14987);
+
+uniform sampler2D diffuse, normals, masks, damaged, emissives, biome;
+uniform samplerCube skybox;
+uniform vec4 ownerColor;
+uniform float camDist;
+uniform float time, nodeScale;
+uniform float lightRadius[nLightCount];
+//damage direction top, right, bottom, left
+uniform vec4 damage;
+varying vec3 light[nLightCount];
+varying float dist[nLightCount];
+varying vec3 vertMasksPrimary, vertMasksSecondary;
+varying vec3 normal;
+varying vec3 npos, origo;
+varying vec2 uv, uv2, uv3;
+varying vec4 pos;
+varying vec2 vertLightMask;
+
+
+vec3 toLinear(vec3 x) {
+	return pow(x, vec3(2.2));
+}
+
+vec3 toGamma(vec3 x) {
+	return pow(x, vec3(0.45));
+}
+
+// pow alternatives
+vec3 square(vec3 x) {
+	return x*x;
+}
+
+float square(float x) {
+	return x*x;
+}
+
+vec2 square(vec2 x) {
+	return x*x;
+}
+
+float pow5(float x) {
+
+	float y = x*x;
+	return y*y*x;
+}
+
+float pow32(float x) {
+
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	x = x*x;
+	return x;
+}
+
+// unpacks two-channel in one channel textures
+vec2 unPack(float single) {
+
+	vec2 split = vec2(0.0);
+	split.x = max(0.0, min(0.5, single) -0.25) * 2.0;
+	split.y = 1.0 - ((single - split.x) * 4.0);
+	split.x *= 2.0;
+	
+	return split;
+}
+
+// speculer term part 1
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// specular term part 2
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+// fresnel for specular term
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return max(vec3(0.0), substance + (substance - 1.0) * pow(1.0 - max(0.0,(dot(l, h))), 5.0));
+}
+// fresnel for ambient light
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+// diffuse term
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+	float O = 0.62 - pow(1.0-NdotL * clamp(1.0-NdotV/2.0, 0.0,1.0), pi) * 0.62;
+	O = mix(O, NdotL, roughness);
+	return O;
+}
+
+// fail-safe get normal map z component
+float deriveZ(vec2 n) {	
+
+	float z = pow(abs(1.0 - n.x * n.x - n.y * n.y), 0.5);
+	
+	return z;
+}
+
+// engine color sub function
+float mixRange(float x, float low, float hi) {
+	return clamp((x - low) / (hi - low), 0.0, 1.0);
+}
+// engine color
+vec3 blackBody(float temp) {
+	vec3 c;
+	c.r = mix(1.0, 0.6234, mixRange(temp, 6400.0, 29800.0));
+	c.b = mix(0.0, 1.0, mixRange(temp, 2800.0, 7600.0));
+	c.g = mix(mix(0.22, 0.976, mixRange(temp, 1000.0, 6600.0)), mix(0.976, 0.65, mixRange(temp, 6600.0, 29800.0)), floor(temp/29800.0 + 0.22148));
+	return c;
+}
+
+float hex(vec2 p)
+{
+    p = fract(p);
+    float s = 1.5;
+    p.x *= s;
+    float hex = length(p - vec2(0.5 * s, 0.5));
+    hex = min(hex, length(p - vec2(0.0, 0.0)));
+    hex = min(hex, length(p - vec2(  s, 0.0)));
+    hex = min(hex, length(p - vec2(0.0, 1.0)));
+    hex = min(hex, length(p - vec2(  s, 1.0)));
+    return hex;
+}
+
+// shield effect
+float shieldEffect(vec2 uv)
+{
+	vec2 uvRad = uv - 0.5;
+	float falloff = dot(uvRad, uvRad);
+	float h = hex(uv * 8.0);
+	h = pow5(h) * 3.0;
+	return falloff + h;
+}
+
+// random noise functions ahead
+float hash11(float p)
+{
+	vec2 p2 = fract(vec2(p) * hashSeed.x);
+    p2 += dot(p2.yx, p2.xy+19.19);
+	return fract(p2.x * p2.y);
+}
+
+float noise3D(vec3 x )
+{
+    vec3 p = floor(x);
+    vec3 f = fract(x);
+    f = f*f*(3.0-2.0*f);
+	
+    float n = p.x + p.y*157.0 + 113.0*p.z;
+    return mix(mix(mix( hash11(n+  0.0), hash11(n+  1.0),f.x),
+                   mix( hash11(n+157.0), hash11(n+158.0),f.x),f.y),
+               mix(mix( hash11(n+113.0), hash11(n+114.0),f.x),
+                   mix( hash11(n+270.0), hash11(n+271.0),f.x),f.y),f.z);
+}
+
+float fbm3D(vec3 n, int iterations) {
+	float total = 0.0, amplitude = 0.66;
+	for (int i = 0; i < iterations; i++) {
+		total += noise3D(n) * amplitude;
+		n += n;
+		amplitude *= 0.5;
+	}
+	return total;
+}
+
+vec3 dp1Calc(vec3 p)
+{
+	return dFdx(p);
+}
+
+vec3 dp2Calc(vec3 p)
+{
+	return dFdy(p);
+}
+
+vec4 duv1Calc(vec4 uv)
+{
+	return dFdx(uv);
+}
+
+vec4 duv2Calc(vec4 uv)
+{
+	return dFdy(uv);
+}
+
+void main() {
+	// time used for shields and engines
+	vec3 t = time * vec3(500.0, 250.0, 134.7);
+
+	//Damage setup
+	float damageNoise = 0.0;
+	if (advancedProcedurals){
+		damageNoise = fbm3D(origo * 20.0, 3);
+	}
+	else if (simpleProcedurals){		
+		damageNoise = fbm3D(origo * 20.0, 2);
+	}
+	else{
+		damageNoise = fbm3D(origo * 20.0, 1);
+	}
+	vec4 damageMask = clamp((vec4(-origo.z, origo.x, origo.z, -origo.x) * 8.0 + vec4(0.5)), vec4(0.0), vec4(1.0)) * damage * 0.5;
+	damageMask.r = square((min(0.9, (damageMask.r + damageMask.g + damageMask.b + damageMask.a) * damageNoise)));
+	
+	vec2 uvP = uv;
+	// adjust planet surface to terran biome
+	uvP = mix(uvP, (uv * vec2(0.25, 0.5) - vec2(0.5, 0.0)), vertMasksPrimary.b);
+	
+	vec2 uvPaint = uv2.xy;
+	vec3 v = normalize(npos);
+	vec3 n = normalize(normal);
+	// first NdotV - used for parallax and low shading
+	float NdotV = max(0.0, dot(normal, v));
+	mat3 TBN = mat3(0.0);
+	
+	// part one of normal mapping
+	if (normalMapping){		
+		// tbn screenspace cotangent derivative
+		vec3 dp1 = dp1Calc(-v);
+		vec3 dp2 = dp2Calc(-v);
+		vec4 duv1 = duv1Calc(vec4(uvP, uvPaint));
+		vec4 duv2 = duv2Calc(vec4(uvP, uvPaint));
+		
+		// solve the linear system
+		vec3 dp2perp = cross(dp2, normal);
+		vec3 dp1perp = cross(normal, dp1);
+		vec3 tangent = dp2perp * duv1.x + dp1perp * duv2.x;
+		vec3 binormal = dp2perp * duv1.y + dp1perp * duv2.y;
+	
+		// construct a scale-invariant frame 
+		float invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+		TBN = mat3(tangent * invmax, binormal * invmax, normal);
+		
+		// do parallax for both main uv and paint, so paint doesn't float about
+		if(parallax){
+
+			float p = mix(mix(texture2D(normals, uvP, 0.0).b, texture2D(damaged, uvP, 0.0).b, damageMask.r), texture2D(biome, uvP, 0.0).a, vertMasksPrimary.b) * scaleBias.r - scaleBias.g;
+			float fDet = dot(dp1, dp2perp);
+			vec2 vProjVScr = (1.0/fDet) * vec2(dot(dp2perp, v), dot(dp1perp, v));
+			vec2 vProjVTex = (duv1.xy * vProjVScr.x + duv2.xy * vProjVScr.y);	
+			float vProjVTexZ = NdotV * p;
+	
+			uvP += (vProjVTex.xy * vProjVTexZ);
+
+			vProjVTex = (duv1.zw * vProjVScr.x + duv2.zw * vProjVScr.y);	
+			
+			uvPaint += (vProjVTex.xy * vProjVTexZ);
+		}
+	}
+
+	// sample textures
+	// base albedo colors, transparency/detail ao
+	vec4 diffuseSamp = texture2D(diffuse, uvP);	
+	//normals xy, unused here(parallax height), detail primary/secondary/engines/windows lights 
+	vec4 normEmissive = texture2D(normals, uvP);	
+	// roughness, plates/metal, specular (and paint, though not here)
+	vec3 maskSamp = texture2D(masks, uvP).rgb;	
+	// damage normal xy, unused here(damage height) and damage spec/alpha
+	vec4 damSamp = texture2D(damaged, uvP);
+	// global secondary-, primary- and engines/windows self illumination, and model ao
+	vec4 uniqueEmissives = texture2D(emissives, uv3.xy);
+	// paint sample
+	float paintSamp = texture2D(masks, uvPaint).a;
+	// sample habitat planet surface
+	vec4 biomeSamp = texture2D(biome, uvP);
+
+	// create hex shields
+	float shields = shieldEffect(uv2) * vertMasksSecondary.r;
+			
+	//Zoom-out highlight setup
+	float highlight = smoothstep(0.0, 500.0, max(0.0001, camDist - 1.0) / pow5(nodeScale)) * 0.2;
+
+	// start of texture unpack/creation/mixing
+	vec4 transAoPlatesMetal = vec4(unPack(mix(diffuseSamp.a, damSamp.a, damageMask.r)), unPack(maskSamp.g));
+	
+	// special discard based on vertex mask color specific for stations - NOT ships!! (or they will be full of holes:oP)
+	transAoPlatesMetal.r = mix(transAoPlatesMetal.r, 1.0, vertMasksSecondary.r * 2.0);
+	if (transAoPlatesMetal.r + (1.0 - vertMasksPrimary.r) < 1.0)
+		discard;	
+
+	// player color setup
+	vec4 playerPlateProfile = vec4(vec3(min(vec3(1.0), (1.0 - ownerColor.rgb) * 0.15 + 0.85)), 0.45);
+	// complimentary triad color harmony, should in theory always generate an appealing theme.
+	vec3 colorLightsWindows = ownerColor.rgb * 0.85 + 0.15;
+	vec3 colorLightsPrimary = vec3(ownerColor.brg) * 0.85 + 0.15;
+	vec3 colorLightsSecondary = vec3(ownerColor.gbr) * 0.85 + 0.15;
+	
+	// create various masks
+	transAoPlatesMetal.a *= 1.0 + damageMask.r * 0.5;
+	transAoPlatesMetal.ga = clamp(transAoPlatesMetal.ga, vec2(0.0), vec2(1.0));
+	float battleDamage = mix(1.0, square((1.0 - damSamp.b) * damSamp.b), damageMask.r);
+	battleDamage *= battleDamage * (3.0 - 2.0 * battleDamage);
+	vec3 albedo = mix(diffuseSamp.rgb, vec3(0.24, 0.33, 0.52) * diffuseSamp.rgb * mix(1.0, square(transAoPlatesMetal.g * damSamp.b) + 0.1, damageMask.r), damageMask.r);
+	float paintMask = clamp(floor(paintSamp * battleDamage * transAoPlatesMetal.b * 2.0 - 0.5), 0.0, 1.0) * ((1.0 - maskSamp.b) * 0.66 + 0.33);
+	transAoPlatesMetal.a *= 1.0 - paintMask;
+
+	// final roughness, albedo and substance
+	float orgRoughness = min(1.0, maskSamp.r * playerPlateProfile.a + damSamp.b * damageMask.r  + (1.0 - battleDamage) * 0.25 + paintMask * 0.25);
+	albedo = toLinear(mix(vec3(1.0), mix(playerPlateProfile.rgb, ownerColor.rgb, paintMask), transAoPlatesMetal.b) * albedo);
+
+	// add planet texture to habitat surface
+	orgRoughness = mix(orgRoughness, biomeSamp.b, vertMasksPrimary.b);
+	biomeSamp.b *= 0.5;
+	biomeSamp.b += 0.5;	
+	albedo = mix(albedo, mix(vec3(0.216, 0.29, 0.212), vec3(0.185, 0.335, 0.153), biomeSamp.a) * biomeSamp.a, vertMasksPrimary.b);
+	transAoPlatesMetal = mix(transAoPlatesMetal, vec4(1.0,1.0,1.0,0.0), vertMasksPrimary.b);
+	vec3 substance = (0.04 - 0.04 * transAoPlatesMetal.a) + albedo * transAoPlatesMetal.a;
+	albedo -= substance;
+
+	//0.51 to clean off bad splitting
+	vec2 lightMask = square(max(vec2(0.0), vec2(1.0 - normEmissive.a, normEmissive.a) - 0.51) * 2.0); 
+	// end of texture unpack/creation/mixing
+
+	if (normalMapping){	
+		// mix with damage
+		normEmissive.xy = mix(normEmissive.xy, damSamp.xy, damageMask.r);
+		// mix with planet surface
+		normEmissive.xy = mix(normEmissive.xy, 1.0 - biomeSamp.xy, vertMasksPrimary.b);
+		// Normal setup
+		normEmissive.xy *= 2.0;
+		normEmissive.xy -= 1.0;
+		n = normalize(TBN * normalize(vec3(normEmissive.xy, deriveZ(normEmissive.xy))));		
+		NdotV = max(0.0, dot(n, v));
+	}
+	// reflection vector
+	vec3 r = normalize(reflect(-v, n));
+	
+	// actual shading starts here
+	vec3 color = vec3(0.0);
+
+	vec3 ambientFresnel = Fresnel2(substance, NdotV ,orgRoughness);
+	
+	if (advancedAmbience){
+		
+		color += square((textureCube(skybox, r, sqrt(orgRoughness) * 4.0).rgb) + 0.024) * ambientFresnel;
+	
+		// ambient light
+		color += square(textureCube(skybox, n.xyz, 4.0).rgb + 0.024) * albedo * (1.0 - ambientFresnel);
+	}
+	else if (simpleAmbience){
+		// Ambient reflections with fix mip and n instead of refect
+		color += square(textureCube(skybox, r, 3.0).rgb * ambientFresnel);
+	
+		// Ambient light - average color of skybox squared
+		color += vec3(0.006724, 0.014884, 0.067081) * albedo * (1.0 - ambientFresnel);
+	}
+	else{
+		// Ambient 
+		color += vec3(0.006724, 0.014884, 0.067081) * (ambientFresnel + albedo * (1.0 - ambientFresnel));
+	}
+	
+	vec3 lights = vec3(0.0);
+	
+	if (selfIllumination){
+		// self illuminate for primary, secondary, windows and engines are added.
+		uniqueEmissives.rgb *= uniqueEmissives.rgb; // close to linear conversion, not the ao channel!
+		uniqueEmissives.rgb *= (1.0 - (lightMask.x + lightMask.y));
+		lights = uniqueEmissives.r * colorLightsPrimary;
+		lights += uniqueEmissives.g * colorLightsSecondary;
+		lights += uniqueEmissives.b * (1.0 - vertMasksPrimary.r) * colorLightsWindows;
+		lights *= emissiveIntensity;
+		
+		// Self-illumination fake pbr calculations. 
+		vec3 emissiveFresnel = mix((1.0 - NdotV) * substance, albedo, pow5(orgRoughness));
+		lights *= emissiveFresnel;
+	
+		// detail ao on self illumination, unaffected by model ao
+		lights *= transAoPlatesMetal.g;
+		
+	}
+	// combine mode and detail ao for further use;
+	transAoPlatesMetal.g *= uniqueEmissives.w;
+	
+	// primary and secondary lights, windows and engines is added after fresnel calculations
+	vec3 detailLights = lightMask.x * vertLightMask.r * colorLightsPrimary;
+	detailLights += lightMask.y * colorLightsSecondary;
+	detailLights += (vertMasksSecondary.g * lightMask.x) * colorLightsWindows * vertLightMask.g;
+	
+	lights += detailLights;
+	
+	lights *= 1.0 - vertMasksPrimary.b;
+	
+	// occlude lights in damaged areas
+	lights *= pow5(1.0 - damageMask.r);
+	
+	if (simpleProcedurals){	
+		// makes shields flicker if area is damaged
+		shields = mix(shields, abs(shields * sin(t.y) * sin(t.z)), damageMask.r);
+	}
+	
+	maskSamp.b = mix(maskSamp.b, biomeSamp.x, vertMasksPrimary.b);
+	if (pbrLight){		
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			float NdotL = max(0.0, dot(n.xyz,L));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL;
+			
+			if (attenuation >0.0){
+				vec3 VplusL = L + v;
+				vec3 halfVec = normalize(VplusL);
+				float HdotN = max(0.0, dot(halfVec,n));
+				vec3 F = Fresnel(substance, L, halfVec);
+				float D = max(0.0, D_GGX(HdotN, orgRoughness));
+				float V = max(0.0, V_SchlickforGGX((1.0 + orgRoughness) * 0.5, NdotV, NdotL));
+				float O = OrenNayerforDiffuseOnly(orgRoughness, NdotL, NdotV);
+				
+				color += ((D * V * F) + (1.0 - F) * O * albedo) * gl_LightSource[i].diffuse.rgb * attenuation;
+			}
+		}
+		// hard cavity multiplier
+		color *= (maskSamp.b + 1.0);
+	}
+	// this light model is pretty loose in terms of what it does, design focus to match 
+	// the pbr in terms of visibility and overall feel for a fraction of the price
+	else{
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			float NdotL = max(0.0, dot(n.xyz,L));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL;
+			
+			vec3 VplusL = L + v; 
+			vec3 halfVec = normalize(VplusL);
+			float HdotN = max(0.0, dot(halfVec, n));
+			vec3 S = Fresnel2(substance, HdotN ,orgRoughness);
+			// albedo * (maskSamp.b * 0.5) to sorta hack albedo into a classical diffuse texture
+			lights += (albedo * (maskSamp.b * 0.5) + pow(S * HdotN, vec3(maskSamp.b + 5.0))) * gl_LightSource[i].diffuse.rgb * attenuation;
+		}
+	}
+	// apply ao, max to avoid occluding things to black
+	color *= max(0.1, transAoPlatesMetal.g);
+	
+	// shading is revomed from the shields and lights are added	
+	color *= (1.0 - vertMasksSecondary.r);
+	color += lights * emissiveIntensity;
+
+	// shields are added
+	color += mix(shieldColor, vec3(1.0), shields * 0.5) * vertMasksSecondary.r;
+	
+	// shields transparency is set
+	transAoPlatesMetal.r = 1.0 - vertMasksSecondary.r;
+	transAoPlatesMetal.r += clamp(shields, 0.0, 1.0);
+	
+	// convert back to gamma space, add zoom highlight, and enjoy the show :o)
+	gl_FragColor.rgb = toGamma(clamp(color, vec3(0.0), vec3(1.0))) + highlight;   	
+	gl_FragColor.a = transAoPlatesMetal.r;
+}

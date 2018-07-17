@@ -1,0 +1,49 @@
+Subsystem: CarpetBomb
+	Name: #S_CARPETBOMB
+	Description: #S_CARPETBOMB_DESC
+	BaseColor: #ff8931
+	TypeColor: #ff8931
+	Elevation: 2
+
+	Tags: BaseCost, Category:Weapons, Rotatable
+	Tags: ExteriorCore, Weapon, DefaultUnlock, Bombardment
+	Hull: Flagship
+
+	Size := HexSize * Hexes
+	
+	Range := Size + 200
+	BombardStacks := max(floor(Size * 0.015), 1)
+	BombardDuration := Size * 3.0 / BombardStacks
+	Reload := 30.0
+	BombardCost := Size * 200
+	
+	Hex.HP := 3 * HexSize
+	Hex.Mass := HexSize
+	Hex.Resistance := 0.2
+	
+	Requires:
+		Command = 1
+	
+	Modifier: RangeFactor(factor)
+		Range := Range * factor
+	
+	Modifier: DamageFactor(factor)
+		BombardDuration := BombardDuration * factor
+	
+	Module: Default
+		Hex.BuildCost := 3 * Hex.BuildCost
+
+	Module: Core
+		Hex.BuildCost := 3 * Hex.BuildCost
+		Hex.HP := Hex.HP * 4.0
+
+		Sprite: MissileLauncher::0 * #ffa0a0
+		DrawMode: 1
+
+	Effector: PopulationBomb
+		Range = Range
+		Speed = 35
+		Duration = BombardDuration
+		Stacks = BombardStacks
+		SupplyCost = BombardCost
+		Reload = Reload

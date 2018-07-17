@@ -1,0 +1,13 @@
+Trait: Ancient Vessel
+	Name: #TRAIT_ANCIENT_VESSEL
+	Description: #TRAIT_ANCIENT_VESSEL_DESC
+
+	Category: Military
+
+	Costs Points: 1
+	Available: False
+	
+	Icon: StatusWar
+	Color: #aaffaa
+
+	SpawnShip(Thereus, Design From = Creeps)

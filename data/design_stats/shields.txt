@@ -1,0 +1,39 @@
+GlobalStat: Shield
+	Name: #S_Shield
+	Description: #STT_Shield
+	Icon: AttributeIcons::6
+	Color: #8080ff
+
+	Variable: ShieldCapacity
+
+	GlobalStat: ShieldRegen
+		Name: #S_ShieldRegen
+		Description: #STT_ShieldRegen
+		Icon: AttributeIcons::6
+		Color: #8080ff
+		Secondary: Shield
+
+		Variable: ShieldRegen
+
+SubsystemStat: Shield
+	Name: #S_Shield
+	Description: #STT_Shield
+	Icon: AttributeIcons::6
+	Color: #8080ff
+
+	Variable: ShieldCapacity
+
+SubsystemStat: ShieldRegen
+	Name: #S_ShieldRegen
+	Description: #STT_ShieldRegen
+	Icon: AttributeIcons::6
+	Color: #8080ff
+
+	Variable: ShieldRegen
+
+SubsystemStat: Chance
+	Name: #S_Chance
+	Icon: AttributeIcons::6 * #8080ff
+	Color: #8080ff
+
+	Variable: Chance

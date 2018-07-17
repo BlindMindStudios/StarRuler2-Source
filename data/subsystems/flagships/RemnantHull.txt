@@ -1,0 +1,53 @@
+Subsystem: RemnantHull
+	Tags: NoCore, HullSystem
+	Hull: Flagship, Station
+	EvaluationOrder: -100
+
+	HexLimit := 80
+	GridWidth := 28
+	GridHeight := 23
+
+	Ship.HexSize := ShipSize / HexLimit
+
+	Repair := (ShipSize / HexLimit) * 16
+
+	AddShipModifier: HpFactor(1.5)
+	AddShipModifier: DamageFactor(0.9)
+	AddShipModifier: SpreadFactor(1.5)
+	AddShipModifier: ThrustFactor(4.0)
+	AddShipModifier: TurnThrustFactor(8.0)
+	AddShipModifier: SupportCapacityFactor(2.0)
+	AddShipModifier: tag/MissileBase::SpeedFactor(0.5)
+
+Subsystem: RemnantSupportHull
+	Tags: NoCore, HullSystem
+	Tags: IsSupport, SupportShip
+	Hull: Support
+	EvaluationOrder: -100
+
+	HexLimit := 40
+	Ship.HexSize := ShipSize / HexLimit
+
+	Repair := (ShipSize / HexLimit) * 16
+
+	AddShipModifier: HpFactor(1.5)
+	AddShipModifier: DamageFactor(0.9)
+	AddShipModifier: SpreadFactor(1.5)
+	AddShipModifier: tag/MissileBase::SpeedFactor(0.5)
+
+Subsystem: SpecialRemnantHull
+	Tags: NoCore, HullSystem
+	Hull: Flagship, Station
+	EvaluationOrder: -100
+
+	GridWidth := 28
+	GridHeight := 23
+	Repair := HexSize * 16
+
+	AddShipModifier: HpFactor(1.5)
+	AddShipModifier: DamageFactor(0.9)
+	AddShipModifier: SpreadFactor(1.5)
+	AddShipModifier: ThrustFactor(4.0)
+	AddShipModifier: TurnThrustFactor(8.0)
+	AddShipModifier: SupportCapacityFactor(2.0)
+	AddShipModifier: tag/MissileBase::SpeedFactor(0.5)

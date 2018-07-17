@@ -1,0 +1,15 @@
+Resource: Antimatter
+	Name: #ANTIMATTER
+	Description: #ANTIMATTER_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIcons::17
+	Small Icon: ResourceIconsSmall::0
+
+	Level: 3
+	Affinity: Energy
+
+	Pressure: 16 Energy
+
+	AddFleetCommand(+2048)
+	AddFleetEffectiveness(+3.0)

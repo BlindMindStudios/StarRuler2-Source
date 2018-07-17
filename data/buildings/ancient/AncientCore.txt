@@ -1,0 +1,27 @@
+Building: AncientCore
+	Name: #BLD_ANCIENT_CORE
+	Description: #BLD_ANCIENT_CORE_DESC
+	Sprite: CoreBuilding
+
+	Category: ControlHubs
+
+	Size: 6x6
+
+	Base Cost: 150
+	Build Time: 90
+	Base Maintenance: 70
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+	ConflictBuilding(AncientCore, Hide = True)
+	ConflictBuilding(AncientTransmuter, Hide = True)
+	ConflictBuilding(AncientMiner, Hide = True)
+
+	DisableResourceExport()
+	ProduceAsteroidPressure()
+
+	AddStatus(AncientClaim)
+
+	Repeat(5, AddStatus(AncientProduce))

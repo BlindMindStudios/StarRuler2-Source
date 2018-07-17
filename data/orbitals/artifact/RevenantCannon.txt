@@ -1,0 +1,29 @@
+Module: RevenantCannon
+	Name: #ORB_REVENANT_CANNON
+	Blurb: #ORB_REVENANT_BLURB
+	Description: #ABL_REVENANT_CANNON_DESC
+	Icon: GuiOrbitalIcons::6
+
+	Core: True
+	Standalone: True
+
+	Health: 30000
+	Armor: 10000
+
+	Model: RevenantCannon
+	Material: TyrantPBRAdvanced
+	Size: 84
+
+	Strategic Icon: OrbitalIcons::6
+
+	CannotBuildManually()
+	EnableModifier( tag/Weapon::RangeFactor(1.75) )
+	EnableModifier( tag/Weapon::SpeedFactor(1.75) )
+
+	OnDisable( SpawnArtifact(RevenantCannon) )
+	OnDisable( Destroy() )
+
+	ModEmpireAttribute(RevenantParts, Add, 1)
+	OnEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+	GloballyVisible()

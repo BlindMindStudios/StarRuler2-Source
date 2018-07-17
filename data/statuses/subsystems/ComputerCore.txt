@@ -1,0 +1,13 @@
+Status: ComputerCore
+	Visible To: Nobody
+	Unique: True
+
+	AddStatusInitialCombat(ComputerBoost, 30)
+
+Status: ComputerBoost
+	Name: #STATUS_COMPUTER_BOOST
+	Description: #STATUS_COMPUTER_BOOST_DESC
+	Icon: QuickbarIcons::6
+	Unique: True
+
+	ModFleetEffectivenessSubsystem(Sys.EfficiencyBoost)

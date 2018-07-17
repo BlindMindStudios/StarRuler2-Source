@@ -1,0 +1,10 @@
+Building: Bazaar
+	Name: #BLD_BAZAAR
+	Description: #BLD_BAZAAR_DESC
+	Sprite: BuildingSprites::3
+
+	Civilian: True
+	Upgrades From: Market
+
+	Saturation: 2 Money
+	Production: 1.5 Money

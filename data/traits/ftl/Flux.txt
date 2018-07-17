@@ -1,0 +1,35 @@
+Trait: Flux
+	Name: #TRAIT_FLUX
+	Description: #TRAIT_FLUX_DESC
+	Category: FTL
+	Order: 5
+
+	DLC: Heralds
+	Available: False
+
+	Icon: ActionBarIcons::5 * #ff4040
+	Color: #67ad85
+
+	Unique: FTL
+
+	LoadDesigns(default)
+	LoadDesigns(not_hyperdrive)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/not_hyperdrive))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/not_hyperdrive))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/not_hyperdrive))
+
+	ModAttribute(HasFlux, Add, 1)
+	ModAttribute(ForbidDeepSpace, Add, 1)
+	ModAttribute(ColonizerSpeed, Multiply, 0.1)
+
+	AddModifier(FlagshipHull::AddHasFTLCost(1))
+
+	GrantVisionTradeRange()
+
+	AddFTLStorage(250)

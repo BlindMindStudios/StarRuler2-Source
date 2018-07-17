@@ -1,0 +1,15 @@
+Ability: GenerateStar
+	Name: #ABL_GENERATE_STAR
+	Description: #ABL_GENERATE_STAR_DESC
+	Icon: SystemUnderAttack * #80ff80
+	Activate Sound: genesis_activate
+
+	Energy Cost: 2000
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: dest = Point
+	TargetFilterInUniverseBounds(dest, 2000)
+	TargetFilterNotInSystem(dest, 2000)
+
+	SpawnStarAt(dest)
+	Repeat(3:6, SpawnArtifactAround(dest, 400:1000, ProtoPlanet))

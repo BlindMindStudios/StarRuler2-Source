@@ -1,0 +1,14 @@
+Effect: TolerantEffect
+	Name: #TOLERANT_EFFECT
+	Description: #TOLERANT_EFFECT_DESC
+
+	Dismissable: False
+
+	Icon: HappyFace * #80ff80
+	Color: #80ff80
+
+	TriggerWhenWarEmpires(LoseInfluencePoints(Percentage = 0.5))
+	TriggerWhenWarEmpires(LoseStoredEnergy(Percentage = 0.5))
+	TriggerWhenWarEmpires(ReserveInfluence(0.5, Duration = 360))
+	TriggerWhenWarEmpires(ModAttributeTimed(ResearchGenerationFactor, Multiply, 0.5, Duration = 360))
+	TriggerWhenWarEmpires(ModAttributeTimed(EnergyGenerationFactor, Multiply, 0.5, Duration = 360))

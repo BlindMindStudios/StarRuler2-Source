@@ -1,0 +1,23 @@
+void setCheatsEnabled(bool enabled) -> server::cheats::setCheatsEnabled
+bool getCheatsEnabled() -> local server::cheats::getCheatsEnabled
+void cheatsEnabled(bool enabled) -> shadow::cheats::serverCheatsEnabled
+void cheatSeeAll(bool enabled) -> server::cheats::cheatSeeAll
+void cheatColonize(bool enabled) -> server::cheats::cheatColonize
+void cheatSpawnFlagship(Object@ spawnAt, const Design@ design, Empire@ owner) -> server::cheats::cheatSpawnFlagship
+void cheatSpawnFlagship(vec3d spawnAt, const Design@ design, Empire@ owner) -> server::cheats::cheatSpawnFlagship
+void cheatSpawnSupports(Object@ spawnAt, const Design@ design, uint count) -> server::cheats::cheatSpawnSupports
+void cheatSpawnSupports(vec3d, const Design@ design, uint count, Empire@ owner) -> server::cheats::cheatSpawnSupports
+void cheatSpawnOrbital(vec3d spawnAt, uint orbitalType, Empire@ owner) -> server::cheats::cheatSpawnOrbital
+void cheatActivateAI() -> server::cheats::cheatActivateAI
+void cheatInfluence(int amount) -> server::cheats::cheatInfluence
+void cheatResearch(double amount) -> server::cheats::cheatResearch
+void cheatMoney(int amount) -> server::cheats::cheatMoney
+void cheatLabor(Object@ obj, double amount) -> server::cheats::cheatLabor
+void cheatFTL(int amount) -> server::cheats::cheatFTL
+void cheatEnergy(int amount) -> server::cheats::cheatEnergy
+void cheatChangeOwner(Object@ obj, Empire@ newOwner) -> server::cheats::cheatChangeOwner
+void cheatDestroy(Object@ obj) -> server::cheats::cheatDestroy
+void cheatDebugAI(Empire@ emp) -> server::cheats::cheatDebugAI
+void cheatCommandAI(Empire@ emp, string cmd) -> server::cheats::cheatCommandAI
+void cheatAlliance(Empire& from, Empire& to) -> server::cheats::cheatAlliance
+void cheatTrigger(Object@ obj, Empire@ emp, string cmd) -> server::cheats::cheatTrigger

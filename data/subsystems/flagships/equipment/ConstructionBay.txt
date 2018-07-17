@@ -1,0 +1,27 @@
+Subsystem: ConstructionBay
+	Name: #S_CONSTRUCTION_BAY
+	Description: #S_CONSTRUCTION_BAY_DESC
+	BaseColor: #fca404
+	TypeColor: #fca404
+	Elevation: 1
+
+	Tags: Category:Equipment, BaseCost, HasInternals, StaticMaintenance
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	LaborIncome := Size / 4
+
+	Hook: AllowConstruction(True, False, False)
+	Hook: AddLaborIncome(LaborIncome)
+	Hook: AddPermanentStatus(ConstructionBay)
+
+	Module: Core
+		Sprite: ComputerCore * #fca404
+
+		Hex.BuildCost := Hex.BuildCost + LaborIncome * 60
+		Hex.LaborCost := Hex.BuildCost + LaborIncome * 3
+		Hex.MaintainCost := Hex.MaintainCost + LaborIncome * 25
+
+	Module: Default
+		Sprite: SupplyStorage * #fca404

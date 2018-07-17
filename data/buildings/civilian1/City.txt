@@ -1,0 +1,6 @@
+Building: City
+	Name: #BLD_CITY
+	Description: #BLD_CITY_DESC
+	Sprite: BuildingSprites::0
+
+	City: True

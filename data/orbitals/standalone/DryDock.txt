@@ -1,0 +1,22 @@
+Module: DryDock
+	Name: #ORB_DRY_DOCK
+	Blurb: #ORB_DRY_DOCK_BLURB
+	Description: #ORB_DRY_DOCK_DESC
+	Icon: GuiOrbitalIcons::3
+
+	Standalone: True
+	Build Cost: 100
+	Spin: 0
+
+	Health: 7500
+	Armor: 2500
+
+	Model: Drydock
+	Material: GenericPBR_Drydock
+	Size: 10
+
+	Strategic Icon: OrbitalIcons::3
+	Icon Size: 0.03
+
+	RequireNotTrait(Mechanoid)
+	DryDockConstruction()

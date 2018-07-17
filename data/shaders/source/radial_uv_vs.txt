@@ -1,0 +1,11 @@
+varying vec2 uv;
+varying vec2 rcoords;
+uniform vec4 sprite_pos;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	rcoords = ((uv - sprite_pos.xy) / (sprite_pos.zw - sprite_pos.xy) - vec2(0.5, 0.5)) * 2.0;
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+	gl_Position = ftransform();
+}

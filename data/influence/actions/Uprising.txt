@@ -1,0 +1,25 @@
+Card: Uprising
+	Name: #CARD_UPRISING
+	Description: #CARD_UPRISING_DESC
+
+	Icon: CardIcons::16
+	
+	Color: #806020
+	Class: Action
+	Rarity: Uncommon
+
+	Base Purchase Cost: 2
+	Base Play Cost: 4
+
+	Max Quality: 3
+
+	Target: planet = Object
+	TargetFilterOccupied(planet)
+	TargetFilterType(planet, Planet)
+	ApplyRegionTargetCostMod(planet)
+
+	Trigger(planet, GiveLoyalty(+5))
+	Trigger(planet, GenerateDefenseShips(25))
+	Trigger(planet, GenerateDefenseShips(25), Per Quality = 1)
+
+	AI: PlayOnDefendingPlanet(planet)

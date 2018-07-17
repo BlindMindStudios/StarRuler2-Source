@@ -1,0 +1,21 @@
+Status: Happy
+	Name: #STATUS_HAPPY
+	Description: #STATUS_HAPPY_DESC
+	Icon: HappyFace
+	Color: #00ff00
+
+	Unique: True
+
+	ModExistingResource(Labor, +1) #version<147
+	ModExistingResource(Money, +1) #version<147
+	ModExistingResource(Research, +1) #version<147
+	ModExistingResource(Influence, +1) #version<147
+	ModExistingResource(Defense, +1) #version<147
+	ModExistingResource(Energy, +1) #version<147
+
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Labor, +1)) #version>=147
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Money, +1)) #version>=147
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Research, +1)) #version>=147
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Influence, +1)) #version>=147
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Defense, +1)) #version>=147
+	RepeatEmpireAttribute(HappyMultiplier, ModExistingResource(Energy, +1)) #version>=147

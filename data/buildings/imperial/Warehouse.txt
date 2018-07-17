@@ -1,0 +1,21 @@
+Building: Warehouse
+	Name: #BLD_WAREHOUSE
+	Description: #BLD_WAREHOUSE_DESC
+	Sprite: Warehouse
+
+	Category: Storage
+	Build Affinity: Desert
+	Maintenance Affinity: Desert
+
+	Size: 2x2
+	Base Cost: 100
+	Tile Cost: 50
+	Base Maintenance: 25
+	Tile Maintenance: 20
+	Build Time: 80
+
+	RequireNotTrait(Ancient)
+
+	AddLaborStorage(100)
+
+	AI: RegisterForUse(LaborStorage)

@@ -1,0 +1,7 @@
+Status: EvtReactor
+	Name: #STATUS_EVT_REACTOR
+	Description: #STATUS_EVT_REACTOR_DESC
+	Icon: ResourceIconsSmall::0 * #0000ff
+
+	AddResource(Energy, 2)
+	AddPressure(Energy, 10)

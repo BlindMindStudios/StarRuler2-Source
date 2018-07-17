@@ -1,0 +1,25 @@
+Module: RemnantDefenseCore
+	Name: #ORB_REMNANT_DEFENSE_CORE
+	Blurb: #ORB_REMNANT_DEFENSE_CORE_BLURB
+	Icon: GuiOrbitalIcons::0
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 400
+	Maintenance: 200
+	Labor Cost: 25
+
+	Health: 5000
+	Armor: 2000
+
+	Model: DefenseStation
+	Material: VolkurGenericPBR
+
+	CannotBuildManually()
+
+	Strategic Icon: OrbitalIcons::0
+
+	Repeat(2, AddTurret(Railgun, Range=400, Damage=2, Reload=0.25, Speed=150, Spread=0.03, FireArc=3.14, Tracking=0.4, FireTolerance=0.78))
+	Repeat(3, AddTurret(Laser, Range=300, DPS=5, Duration=2, Cooldown=0, Tracking=0.4), Per Import = 2)
+	Repeat(2, AddTurret(Missile, Range=400, Damage=20, Reload=2, Speed=90, Tracking=3), Per Import = 1)

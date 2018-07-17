@@ -1,0 +1,25 @@
+Technology: ImpSupplyUse
+	Name: #R_IMP_SUPPLY_USE
+	Blurb: #R_IMP_SUPPLY_USE_BLURB:20%
+	Description: #R_IMP_SUPPLY_USE_DESC:20%
+
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Point Cost: 800
+	Time Cost: 120
+
+	AddModifier( tag/Weapon,hull/Flagship::SupplyCostFactor(0.8) )
+
+Technology: ImpSupplyUse2
+	Name: #R_IMP_SUPPLY_USE2
+	Blurb: #R_IMP_SUPPLY_USE_BLURB:36%
+	Description: #R_IMP_SUPPLY_USE_DESC:36%
+
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Point Cost: 1200
+	Time Cost: 120
+
+	AddModifier( tag/Weapon,hull/Flagship::SupplyCostFactor(0.64) )

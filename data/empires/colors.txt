@@ -1,0 +1,31 @@
+//Blue
+Color: #00c3ff
+	Background: emp_bg_blue
+
+//Orange
+Color: #ff6c00
+	Background: emp_bg_orange
+
+//Teal
+Color: #00ff9c
+	Background: emp_bg_teal
+
+//Purple
+Color: #884fff
+	Background: emp_bg_purple
+
+//Yellow
+Color: #d6bf2f
+	Background: emp_bg_yellow
+
+//Pink
+Color: #d62f83
+	Background: emp_bg_pink
+
+//Lime
+Color: #93d62f
+	Background: emp_bg_green
+
+//Marine
+Color: #476bba
+	Background: emp_bg_blue

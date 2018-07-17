@@ -1,0 +1,5 @@
+Status: AncientFoundry
+	Visible To: Nobody
+
+	AddResource(Labor, 3)
+	AddResourceEmpireAttribute(Labor, FactoryLaborMod)

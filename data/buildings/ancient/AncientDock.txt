@@ -1,0 +1,22 @@
+Building: AncientDock
+	Name: #BLD_ANCIENT_DOCK
+	Description: #BLD_ANCIENT_DOCK_DESC
+	Sprite: AncientDock
+
+	Category: Military
+
+	Size: 2x6
+
+	Base Cost: 0
+	Tile Cost: 25
+
+	Build Affinity: Oceanic
+
+	Build Time: 10
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ModConstructionHPBonus(+0.1)
+	AddFleetCommand(100)

@@ -1,0 +1,17 @@
+Artifact: RevenantEngine
+	Name: #ART_REVENANT_ENGINE
+	Description: #ART_REVENANT_ENGINE_DESC
+
+	Size: 20
+	Ability: RevenantEngine
+	
+	Model: ArtifactAdvanced
+
+	Strategic Icon: SpecialArtifactIcon
+
+	Mass: 500
+
+	Spread Variable: ENABLE_REVENANT_PARTS
+	Require Contestation: 60
+
+	AI: RevenantPart()

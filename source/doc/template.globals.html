@@ -1,0 +1,27 @@
+<%namespace file="template.util.html" name="util" />
+<!DOCTYPE html>
+<title>${engine} - Globals</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<%
+	ns = {}
+	for g in globals:
+		if g["ns"] not in ns:
+			ns[g["ns"]] = []
+		ns[g["ns"]].append(g)
+%>
+% for name, n in ns.items():
+<section class="globals">
+	<h2>${name if name else "Globals"}</h2>
+	<ul>
+		% for g in n:
+		<li>
+		<b>${util.type(g["type"])} ${g["ns"]+"::" if g["ns"] else ""}${g["name"]}</b>
+			% if "doc" in g:
+				&mdash; ${g["doc"]}
+			% endif
+		</li>
+		% endfor
+	</ul>
+</section>
+% endfor

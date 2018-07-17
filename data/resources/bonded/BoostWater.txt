@@ -1,0 +1,12 @@
+Resource: BoostWater
+	Name: #BOOST_WATER
+	Description: #BOOST_WATER_DESC:150%
+	Native Biome: Oceanic
+	Class: WaterType
+
+	Icon: ResourceIconsSmall::101
+	Small Icon: ResourceIconsSmall::101
+
+	Artificial: True
+	Level: 0
+	ModResourceEfficiencyBonus(+1.5)

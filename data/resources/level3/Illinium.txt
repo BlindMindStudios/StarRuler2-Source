@@ -1,0 +1,19 @@
+Resource: Illinium
+	Name: #ILLINIUM
+	Description: #ILLINIUM_DESC
+	Native Biome: Oceanic
+
+	Icon: ResourceIconsSmall::50
+	Small Icon: ResourceIconsSmall::50
+
+	Level: 3
+	Affinity: Influence
+
+	Pressure: 16 Influence
+
+	GiveExtraResourcePressure(Money, 1.0, Level Filter = 0, Allow Uniques = False)
+	GiveExtraResourcePressure(Influence, 1.0, Level Filter = 0, Allow Uniques = False)
+	GiveExtraResourcePressure(Defense, 1.0, Level Filter = 0, Allow Uniques = False)
+	GiveExtraResourcePressure(Labor, 1.0, Level Filter = 0, Allow Uniques = False)
+	GiveExtraResourcePressure(Energy, 1.0, Level Filter = 0, Allow Uniques = False)
+	GiveExtraResourcePressure(Research, 1.0, Level Filter = 0, Allow Uniques = False)

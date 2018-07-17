@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<title>${engine} - Star Ruler 2 API Documentation</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<nav>
+	<section>
+		<h2>Engines</h2>
+		<ul>
+			<li><a href="client.index.html">client</a></li>
+			<li><a href="server.index.html">server</a></li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Links</h2>
+		<ul>
+			<li><a href="${engine}.globals.html" target="contentframe">Globals</a></li>
+			<li><a href="${engine}.functions.html" target="contentframe">Functions</a></li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Classes</h2>
+		<ul>
+			% for cls in sorted(data["classmap"], key=str.lower):
+			<li><a href="${engine}.class.${cls}.html" class="classdef" target="contentframe">${cls}</a></li>
+			% endfor
+		</ul>
+	</section>
+
+	<section>
+		<h2>Enums</h2>
+		<ul>
+			% for en in data["enums"]:
+			<li><a href="${engine}.enum.${en["name"]}.html" class="enumdef" target="contentframe">${en["name"]}</a></li>
+			% endfor
+		</ul>
+	</section>
+</nav>
+
+<section id="content">
+	<iframe name="contentframe" id="contentframe" src="server.globals.html" />
+</section>

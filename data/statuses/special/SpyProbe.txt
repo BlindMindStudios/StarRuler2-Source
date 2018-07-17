@@ -1,0 +1,8 @@
+Status: SpyProbe
+	Name: #STATUS_SPY_PROBE
+	Description: #STATUS_SPY_PROBE_DESC
+	Icon: VoteIcons::3 * #ff0000
+
+	VisibleToOriginEmpire()
+	GivesVisionToOriginEmpire()
+	RoamSystems(GainIntelligenceInSystem(), Origin Empires = True)

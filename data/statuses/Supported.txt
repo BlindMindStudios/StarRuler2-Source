@@ -1,0 +1,11 @@
+Status: Supported
+	Name: #STATUS_SUPPORTED
+	Description: #STATUS_SUPPORTED_DESC
+	Icon: AttributeIcons::1 * #fff700
+	Collapses: True
+
+	ApplyToFlagships()
+
+	AddFleetEffectiveness(+0.2)
+	RepeatStacks(RepairPerSecond(Percent = 0.01))
+	RepeatStacks(ResupplyFlagship(Percent = 0.01, In Combat = True))

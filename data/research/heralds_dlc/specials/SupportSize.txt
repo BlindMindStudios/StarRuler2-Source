@@ -1,0 +1,15 @@
+Technology: SupportSize
+	Name: #R_SUPPORT_SIZE
+	Description: #R_SUPPORT_SIZE_DESC:7
+
+	Icon: techConstruction * #8ca2ff
+	Symbol: ActionBarIcons::2
+	Color: #8ca2ff
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 1200
+	Time Cost: 160
+
+	AddModifier(SupportHull::IncreaseHexLimit(7))

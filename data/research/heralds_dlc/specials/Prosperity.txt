@@ -1,0 +1,14 @@
+Technology: Prosperity
+	Name: #R_PROSPERITY
+	Description: #R_PROSPERITY_DESC:35%
+
+	Icon: techEconomics * #4f2cb4
+	Color: #4f2cb4
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 700
+	Time Cost: 80
+
+	ModAttribute(WelfareEfficiency, Multiply, 1.35)

@@ -1,0 +1,5 @@
+Status: Enslaved
+	Name: #STATUS_ENSLAVED
+	Icon: CardIcons::14
+
+	Unique: True

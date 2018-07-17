@@ -1,0 +1,29 @@
+Trait: Verdant
+	Name: #TRAIT_VERDANT
+	Description: #TRAIT_VERDANT_DESC
+	Order: 1
+
+	Icon: Plantation
+	Color: #5fb41c
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	AddStatusOwnedPlanets(Verdant)
+
+	ModAttribute(ImperialBldConstructionRate, Multiply, 0.75)
+
+	TriggerHomeworld(DestroyBuildingAt((4, 3), Undevelop = True))
+	TriggerHomeworld(SpawnBuilding(MotherStalk, (9, 5), Develop = True))
+
+	ReplaceTechnologyNodes(BldMegacity, ImpCivConstructionRate)
+	ReplaceTechnologyNodes(Megacity, Population)
+
+	ForbidSubsystem(CrewControl)
+	ForbidSubsystem(CrewDeck)
+	UnlockSubsystem(VerdantSinew)
+	UnlockSubsystem(VerdantSupportSinew)
+
+	ModAttribute(PopulationPerColonizer, Multiply, 16)
+	ModAttribute(ForbidCityConstruction, Add, 1)
+	SetColonizerInfo(#SPORE_SHIP, SporeShip, SporeShip)

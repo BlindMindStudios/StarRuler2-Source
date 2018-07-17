@@ -1,0 +1,42 @@
+Module: Mainframe
+	Name: #ORB_MAINFRAME
+	Blurb: #ORB_MAINFRAME_BLURB
+	Description: #ORB_MAINFRAME_DESC
+	Icon: GuiOrbitalIcons::20
+	Distant Icon: OrbitalIcons::20
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 500
+	Maintenance: 50
+	Labor Cost: 25
+	Size: 15
+
+	Health: 10000
+	Armor: 10000
+
+	Model: Mainframe
+	Material: GenericPBR_Mainframe
+
+	RequireTrait(Linked)
+
+	AddHealthEmpireAttribute(StaticDamageFactor, 5000)
+	AddArmorEmpireAttribute(StaticDamageFactor, 10000)
+
+	AddResistance(10.0)
+
+	RepeatExtended(AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6), Base = 4, Multiply Attribute = StaticDamageFactor) #version<117
+	RepeatExtended(AddTurret(Laser, Range=300, DPS=10, Duration=2, Cooldown=0, Tracking=0.4), Base = 4, Multiply Attribute = StaticDamageFactor) #version<117
+
+	IfInOwnedSpace(RepeatExtended(AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6), Base = 4, Multiply Attribute = StaticDamageFactor), Allow Allies = True) #version>=117
+	IfInOwnedSpace(RepeatExtended(AddTurret(Laser, Range=300, DPS=10, Duration=2, Cooldown=0, Tracking=0.4), Base = 4, Multiply Attribute = StaticDamageFactor), Allow Allies = True) #version>=117
+
+	AddAccelerationBonus(0.4) #version>=117
+
+	RepeatExtended(RecordBonusDPS(25), Base = 4, Multiply Attribute = StaticDamageFactor)
+	RepeatExtended(RecordBonusDPS(10), Base = 4, Multiply Attribute = StaticDamageFactor)
+
+	ShowRange(15000, #00ff00)
+
+	GrantAbility(RemoteScan)

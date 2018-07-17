@@ -1,0 +1,20 @@
+Artifact: Comet
+	Name: #ART_COMET
+	Description: #ART_COMET_DESC
+	Natural: True
+
+	Model: Moon_Sphere_max
+	Material: ProceduralMoon
+	Size: 2
+
+	Icon: CometIcon::0
+	Strategic Icon: CometIcon::0
+	Icon Size: 0.013
+
+	Frequency: 2
+
+	Orbit: True
+
+	Ability: GenerateWater
+
+	AI: AsCreatedResource(Water, 5.0)

@@ -1,0 +1,19 @@
+Building: AncientLab
+	Name: #BLD_ANCIENT_LAB
+	Description: #BLD_ANCIENT_LAB_DESC
+	Sprite: AncientLab
+
+	Category: Infrastructure
+
+	Size: 3x2
+
+	Base Cost: 125
+	Base Maintenance: 20
+	Build Time: 70
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ActiveWhenCargoConsumed(Ore, 1, 2.0, AddResource(Research, 1))

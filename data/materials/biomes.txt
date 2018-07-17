@@ -1,0 +1,12 @@
+Material: BiomeSet
+	Culling: None
+	Alpha: True
+	Lighting: False
+	DepthWrite: Off
+	DepthTest: NoDepthTest
+	
+SpriteSheet: BiomeTiles
+	Inherit: BiomeSet
+	Texture: data/images/planet_biome.png
+	Size: 16,16
+	Spacing: 2

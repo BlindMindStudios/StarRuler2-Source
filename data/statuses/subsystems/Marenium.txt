@@ -1,0 +1,8 @@
+Status: Marenium
+	Visible To: Nobody
+	Unique: True
+
+	AttributeAccelerationBonus(MareniumAcceleration, Stations = False)
+	AttributeFleetEffectiveness(MareniumEfficiency)
+
+	IfAttributeZero(MareniumEfficiency, AddFleetEffectiveness(-0.75))

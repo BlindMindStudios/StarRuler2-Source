@@ -1,0 +1,41 @@
+Effector: SubspaceShredder
+	Value: Range
+	Value: TravelRange
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 3
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: TravelRange / Speed
+
+	Pierces: True
+	RecoverTime: 1.0
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Only
+	Activation: Timed(Reload)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ExplDamage
+		Amount = Damage
+
+	PhysicalType: Aimed Missile
+		PhysicalSize: 3.0
+		GfxType: Sprite
+		GfxSize: 1.0
+		FireSfx: missile_launch
+		FireSfx: missile_launch_2
+		FireSfx: missile_launch_3
+		ImpactSfx: missile_impact
+		ImpactSfx: missile_impact_2
+		ImpactSfx: missile_impact_3
+		Color: #4997b7
+		Material: SubspaceShred
+		ImpactGfx: ImpactFlareMissile

@@ -1,0 +1,42 @@
+#version 120
+const int nLightCount = 2;
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec4 in_color;
+attribute vec2 in_uv;
+uniform vec4 wsRot;
+ 
+varying vec3 npos, vertMask;
+varying vec3 normal;
+varying vec2 uv;
+varying vec3 light[nLightCount];
+varying vec4 pos;
+
+vec3 wsAllign(vec3 x){
+    return x + 2.0 * cross(wsRot.xyz, cross(wsRot.xyz, x) + wsRot.w * x);
+}
+
+vec3 toLinear(vec3 x) {
+    return pow(x, vec3(2.2));
+}
+ 
+void main()
+{
+    pos = gl_ModelViewMatrix * in_vertex;
+   
+    // convert view, normal and light vectors to world space and quaternion correct for model rotation
+    mat3 tcamrot = transpose(mat3x3(gl_ModelViewMatrix));
+    npos = (wsAllign(normalize(tcamrot * -pos.xyz)));
+   
+    // special view vector to correct just for cubemap reflections
+    normal = (tcamrot * (gl_NormalMatrix * wsAllign(normalize(in_normal))));
+    for (int i = 0; i < nLightCount; i++) {
+        light[i] = wsAllign(normalize((tcamrot * (((gl_LightSource[i].position)).xyz - pos.xyz))));
+    }
+   
+	vertMask = in_color.rgb;
+	uv = in_uv;
+	uv.y = 1.0 - uv.y;
+
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

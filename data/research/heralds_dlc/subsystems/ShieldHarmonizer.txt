@@ -1,0 +1,19 @@
+Technology: ShieldHarmonizer
+	Name: #R_SYS_SHIELD_HARMONIZER
+	Description: #R_SYS_SHIELD_HARMONIZER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: ShieldCap
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: ShieldHarmonizer
+	Color: #e2e676
+	
+	UnlockSubsystem(ShieldHarmonizer)
+	SkipOnUnlockedSubsystem(ShieldHarmonizer)
+
+	SecondaryEnergyCost(1500)

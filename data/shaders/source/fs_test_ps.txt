@@ -1,0 +1,16 @@
+#version 130
+uniform sampler2D screen;
+uniform float time;
+
+in vec2 uv;
+out vec4 result;
+
+const float strength = 0.22;
+const float two_pi = 6.282;
+
+void main()
+{
+	vec4 sample = texture2D(screen, uv * 2.0);
+	
+	result = sample;
+}

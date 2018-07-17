@@ -1,0 +1,27 @@
+Subsystem: SupportLiquidArmor
+	Name: #S_LIQUIDARMOR
+	Description: #S_LIQUIDARMOR_DESC
+	BaseColor: #91692c
+	Picture: SubsystemButtonArt::0
+	Elevation: 1
+
+	Tags: NoCore, NonContiguous, Defense, IsArmor, TankArmor, SpecialCost
+	Tags: NoWall, Category:Defense, FauxExterior, ExternalSpace
+	Tags: PrimaryArmor
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	Hex.Resistance := 0.1
+	Hex.HP := 60 * HexSize
+	Hex.Mass := 2 * HexSize
+
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.LaborCost := 0.14 * HexSize
+	
+	Effect: DistributeHealth
+
+	Module: Default
+		Sprite: PlateArmor * #91692c

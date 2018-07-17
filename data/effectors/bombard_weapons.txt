@@ -1,0 +1,22 @@
+Effector: CarpetBomb
+	Value: Range
+	Value: Damage
+	Value: Reload
+
+	Range: Range
+	Speed: 10
+	Lifetime: Range / 10
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: min(isAttackable, isPlanet)
+	AutoTarget: isEnemy
+
+	Activation: VariableTimed(Reload, 0.1)
+
+	PhysicalType: Missile
+		GfxType: Sprite
+		GfxSize: 2
+		Material: EnergyBall
+
+	Effect: BombardDamage
+		Amount = Damage

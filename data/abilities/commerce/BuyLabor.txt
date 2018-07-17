@@ -1,0 +1,20 @@
+Ability: BuyLabor
+	Name: #ABL_BUY_LABOR
+	Description: #ABL_BUY_LABOR_DESC
+	Icon: ResourceIcon::6
+
+	Cooldown: 180
+
+	ShareCooldown(BuyInfluence)
+	ShareCooldown(BuyEnergy)
+	ShareCooldown(BuyLabor)
+	ShareCooldown(BuyResearch)
+
+	Target: obj = Object
+	TargetFilterHasConstruction(obj)
+
+	ConsumeMoney(300)
+	Trigger(obj, AddStoredLabor(26))
+
+	ShowMoneyValue(300, #COST)
+	ShowLaborValue(26)

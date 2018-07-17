@@ -1,0 +1,8 @@
+MOVE_TO: Move To
+ATTACK: Attack
+ATTACK_TARGET: Attack $1
+ONLY_ATTACKABLE: May only attack ships, orbitals, and planets.
+ONLY_WAR: Must be at war.
+PICK_UP: Pick Up
+RALLY_TO: Rally to $1
+STOP_RALLY: Clear Rally

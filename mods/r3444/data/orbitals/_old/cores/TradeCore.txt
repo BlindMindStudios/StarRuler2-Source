@@ -1,0 +1,24 @@
+Module: TradeCore
+	Name: #ORB_TRADE_CORE
+	Blurb: #ORB_TRADE_CORE_BLURB
+	Description: #ORB_TRADE_CORE_DESC
+	Icon: GuiOrbitalIcons::0
+
+	Core: True
+
+	Build Cost: 250
+	Maintenance: 200
+	Labor Cost: 15
+
+	Health: 7500
+	Armor: 2500
+
+	Model: Research_Station
+	Material: ResearchStation
+
+	Strategic Icon: OrbitalIcons::0
+
+	SpawnFreighters(1, 1)
+	GlobalTradeNode()
+
+	CannotBuildManually()

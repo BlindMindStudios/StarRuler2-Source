@@ -1,0 +1,11 @@
+Status: ExtraResearch
+	Name: #COND_EXTRA_RESEARCH
+	Description: #COND_EXTRA_RESEARCH_DESC
+
+	Icon: ConditionIcons::1
+	Color: #8c4ec9
+
+	Condition Frequency: 0.25
+	
+	AddToNativeResource( AddPressure(Research, 1) ) #version<147
+	AddToNativeResource( AddPressureEmpireAttribute(Research, PlanetConditionMultiplier) ) #version>=147

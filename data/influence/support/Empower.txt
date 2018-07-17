@@ -1,0 +1,29 @@
+Card: Empower
+	Name: #CARD_EMPOWER
+	Description: #CARD_EMPOWER_DESC
+	Color: #4996bb
+
+	Icon: CardIcons::33
+
+	Leader Only: True
+	DLC: Heralds
+
+	Class: Support
+	Rarity: Epic
+	Side: Neutral
+
+	Base Purchase Cost: 4
+	Base Play Cost: 6
+
+	Base Weight: 0
+
+	LogVoteEvent(Neutral = #CARD_EMPOWER_LOG)
+
+	Target: target = Empire
+	TargetFilterOtherEmpire(target)
+
+	LimitPerVote(1, Per Empire = False)
+	AddWeightToNextSupportBy(target, 1, Limited = False)
+
+	AI: VoteOnAlly(target, Min Vote = 7, Allied Only = False, Most Only = True)
+	AI: NotInRace()

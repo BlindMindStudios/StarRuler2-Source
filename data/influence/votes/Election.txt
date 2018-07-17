@@ -1,0 +1,32 @@
+Card: Election
+	Name: #CARD_ELECTION
+	Description: #CARD_ELECTION_DESC
+
+	Color: #8d79a8
+	Class: Vote
+	Rarity: Uncommon
+
+	DLC: Heralds
+	
+	Icon: CardIcons::31
+
+	Base Purchase Cost: 5
+	Base Play Cost: 10
+
+	RequireContact()
+
+	StartVote(Election)
+
+	AI: IgnoreIfSenateLeader()
+	AI: PlayWhenInfluenceStronk()
+
+Vote: Election
+	Name: #VOTE_ELECTION
+
+	Color: #8d79a8
+	Icon: CardIcons::31
+
+	OnOwner(MakeSenateLeader())
+
+	AI: Important(3)
+	AI: BadForSenateLeader()

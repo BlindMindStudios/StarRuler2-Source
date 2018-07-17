@@ -1,0 +1,31 @@
+Card: ClaimArtifact
+	Name: #CARD_CLAIM_ARTIFACT
+	Description: #CARD_CLAIM_ARTIFACT_DESC
+
+	Target: targ = Object
+
+	Color: #ffa4a4
+	Class: Vote
+	Rarity: Uncommon
+	
+	Icon: CardIcons::23
+
+	Base Purchase Cost: 2
+	Base Play Cost: 4
+
+	TargetFilterType(targ, Artifact)
+	TargetFilterArtifactNatural(targ, False)
+	TargetRequireVision(targ)
+	ApplyRegionTargetCostMod(targ)
+	RequireContact()
+
+	StartVote(ClaimArtifact, targ)
+
+Vote: ClaimArtifact
+	Name: #VOTE_CLAIM_ARTIFACT
+
+	Target: targ = Object
+	CancelOnDestroyed(targ)
+
+	Trigger(targ, TakeControl())
+	Trigger(targ, MoveToOwnedSystem())

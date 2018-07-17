@@ -1,0 +1,15 @@
+Technology: Laboratories
+	Name: #R_LABORATORIES
+	Description: #R_LABORATORIES_DESC:2
+
+	Icon: ResearchComplex
+	Symbol: ResourceIcon::4
+	Color: #8c4ec9
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	ModAttribute(ResearchComplexExtraPressure, Add, 2)

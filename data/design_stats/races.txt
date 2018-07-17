@@ -1,0 +1,7 @@
+GlobalStat: Prayer
+	Name: #S_PRAYER
+	Description: #STT_PRAYER
+	Icon: AntimatterReactor * #408fc1
+	Color: #408fc1
+
+	Variable: Prayer

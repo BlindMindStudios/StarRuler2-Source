@@ -1,0 +1,18 @@
+Building: Stalk
+	Name: #BLD_STALK
+	Description: #BLD_STALK_DESC
+	Sprite: Stalk
+
+	Category: Infrastructure
+
+	Base Cost: 300
+	Build Time: 80
+
+	Size: 4x4
+	RequireTrait(Verdant)
+	ModPressureCapMult(+1.25)
+	AddPressureCap(3)
+	CannotRemove()
+
+	ConflictBuilding(Stalk, Hide = False)
+	ConflictBuilding(MotherStalk, Hide = False)

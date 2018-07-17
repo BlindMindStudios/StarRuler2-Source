@@ -1,0 +1,20 @@
+Resource: Marble
+	Name: #R_MARBLE
+	Description: #R_MARBLE_DESC
+	Native Biome: Mountains
+	DLC: Heralds
+
+	Small Icon: ResourceIconsSmall::77
+
+	Pressure: 1 Defense
+	Pressure: 1 Energy
+	Pressure: 1 Influence
+
+	Affinity: Defense
+	Affinity: Energy
+	Affinity: Influence
+
+	Level: 1
+	Rarity: Rare
+
+	ModBuildingConstructRate(+0.5)

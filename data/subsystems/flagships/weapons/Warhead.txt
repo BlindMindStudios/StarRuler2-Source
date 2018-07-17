@@ -1,0 +1,79 @@
+Subsystem: Warhead
+	Name: #S_WARHEAD
+	Description: #S_WARHEAD_DESC
+	BaseColor: #df123d
+	TypeColor: #df123d
+	Elevation: 2
+
+	Tags: BaseCost, HeraldsDLC
+	Tags: WeaponBase, MissileBase, Category:Weapons, Rotatable, Warhead, SecondaryDPS
+	Tags: ExteriorCore, Weapon, IsExplosiveWeapon, HasInternals, Homing
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Range := Size + 1200
+	Damage := Size * 1
+	Reload := 5.0 * min(1.0 + Size/512, 2.0)
+	Speed := max(40, Range / 90)
+	Tracking := 1.5
+	Radius := 30.0 + (log(Size) / log(2) * 10.0)
+	SupplyCost := 0
+	Hex.Mass := HexSize
+
+	HasWarhead := 1
+	WarheadCost := 2.0 * ShipSize
+	WarheadLabor := 0.1 * ShipSize
+	WarheadStorage := 1
+
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+
+	Hook: OnEnable(AddStatus(Warhead))
+	Hook: LimitStatusStacks(Warhead, WarheadStorage)
+	//Hook: RefillStatusConstruction(Warhead, WarheadStorage, Warhead)
+
+	Modifier: AoERadiusFactor(Factor)
+		Radius := Radius * Factor
+
+	Requires:
+		Command = 1
+
+	Module: Default
+
+	Assert: Sum.HasWarhead <= 1
+		Unique: True
+		Message: #ERROR_ONLY_ONE
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost + WarheadCost
+		Hex.LaborCost := Hex.LaborCost + WarheadLabor
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: Warhead::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Module: WarheadTube
+		Name: #S_WARHEAD_TUBE
+		Description: #S_WARHEAD_TUBE_DESC
+		DefaultUnlock: True
+
+		Sprite: WarheadTube
+		
+		Hook: OnEnable(AddStatus(Warhead))
+
+		WarheadStorage := WarheadStorage + 1
+		Hex.BuildCost := Hex.BuildCost + WarheadCost
+		Hex.LaborCost := Hex.LaborCost + WarheadLabor
+
+	Effector: Warhead
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Radius = Radius

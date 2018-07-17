@@ -1,0 +1,8 @@
+Status: FastResupply
+	Name: #STATUS_FAST_RESUPPLY
+	Description: #STATUS_FAST_RESUPPLY_DESC
+	Icon: AttributeIcons::4 * #00ff00
+	Collapses: True
+
+	ApplyToFlagships()
+	RepeatStacks(ResupplyFlagship(250, Percent = 0.01))

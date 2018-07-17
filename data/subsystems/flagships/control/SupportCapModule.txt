@@ -1,0 +1,23 @@
+Subsystem: SupportCapModule
+	Name: #SUPPORTCAPMODULE_NAME
+	Description: #SUPPORTCAPMODULE_DESC
+	BaseColor: #d6d300
+	Picture: SubsystemButtonArt::8 * #fdffa8
+	Elevation: 3
+	
+	Tags: ScaledCost, Category:Control, SupportCap
+	Tags: DefaultUnlock, NonContiguous, NoCore, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	SupportCapacity := Size * 28
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := HexSize
+
+	Modifier: SupportCapacityFactor(factor)
+		SupportCapacity := SupportCapacity * factor
+	
+	Module: Default
+		Sprite: SupportCommand

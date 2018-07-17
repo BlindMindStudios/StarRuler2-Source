@@ -1,0 +1,14 @@
+Trait: Nimble
+	Name: #TRAIT_NIMBLE
+	Description: #TRAIT_NIMBLE_DESC
+	Category: Personality
+	Order: 8
+
+	Color: #aaffaa
+	Icon: AttributeIcons::0
+
+	Costs Points: 1
+
+	AddModifier( ThrustFactor(1.3) )
+	AddModifier( TurnThrustFactor(1.3) )
+	AddModifier( Hyperdrive::SpeedFactor(1.3) )

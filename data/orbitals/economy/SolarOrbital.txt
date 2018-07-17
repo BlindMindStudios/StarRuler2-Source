@@ -1,0 +1,25 @@
+Module: SolarOrbital
+	Name: #ORB_SOLAR_ORBITAL
+	Description: #ORB_SOLAR_ORBITAL_DESC
+	Blurb: #ORB_SOLAR_ORBITAL_BLURB
+	Icon: GuiOrbitalIcons::13
+	Distant Icon: OrbitalIcons::13
+	Icon Size: 0.01
+
+	Build Cost: 400
+	Maintenance: 25
+	Labor Cost: 15
+	Size: 30
+
+	Health: 4000
+	Armor: 3500
+
+	Model: SolarEngine
+	Material: GenericPBR_SolarEngine
+
+	FacesOrbitCenter()
+
+	LimitOncePerSystem(SolarOrbitalFlag)
+	RequireUnlockTag(SolarOrbitalUnlock)
+
+	AddEnergyIncomeStarTemperature(0.25, 1.0)

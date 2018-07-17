@@ -1,0 +1,9 @@
+Status: GalaxyMall
+	Name: #STATUS_GALAXY_MALL
+	Description: #STATUS_GALAXY_MALL_DESC
+	Icon: BuildingSprites::3
+
+	MultConstructionCostFromGlobal(GalaxyMallCount, 0.95, -0.05)
+	WorthPoints(200)
+
+	ModEmpireAttribute(HaveGalaxyMall, Add, 1)

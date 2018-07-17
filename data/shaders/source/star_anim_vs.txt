@@ -1,0 +1,56 @@
+#version 120
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+
+uniform float temperature;
+uniform vec4 wsRot;
+uniform float cycles[5]; // 971, 977, 983 high primes
+uniform vec3 halfCycle;
+uniform float nodeScale;
+
+varying float distortion;
+varying vec2 uvA, uvB;
+varying vec3 normal, origo;
+varying vec3 v, tempSpeed;
+varying float tempScale;
+
+vec2 rotator(vec2 rotate, float rate)
+{
+	return vec2(dot(rotate,  vec2(cos(rate),  -sin(rate))), dot(rotate,  vec2(sin(rate),  cos(rate))));
+}
+
+vec3 toLinear(vec3 x) {
+	return pow(x, vec3(2.2));
+}
+
+float square(float x){
+	return x*x;
+}
+
+vec3 wsAllign(vec3 x){
+	return x + 2.0 * cross(wsRot.xyz, cross(wsRot.xyz, x) + wsRot.w * x);
+}
+
+void main() {
+	distortion = abs(in_uv.y-0.5) * 2.0;
+
+	// world space for the better parallax
+	tempScale = pow(1.0 - min(1.0, temperature / 29800.0), 1.0);
+	tempSpeed = (1.0 - tempScale) * abs(vec3(cycles[0], cycles[1], cycles[2]) - halfCycle) * 0.1;
+    vec4 pos = gl_ModelViewMatrix * in_vertex;
+	origo = in_vertex.xyz;
+	
+    // convert view, normal and light vectors to world space and quaternion correct for model rotation
+    mat3 tcamrot = transpose(mat3x3(gl_ModelViewMatrix));
+    v = normalize(wsAllign(normalize(tcamrot * -pos.xyz)));
+   
+    // normals are needed for the parallax and fresnel
+    normal = normalize(tcamrot * (gl_NormalMatrix * wsAllign(normalize(in_normal))));
+	// approximate pole uv scale from origo in relation to nodescale
+	uvA = origo.xz / nodeScale * 24.0;
+	uvA.x *= 0.5;
+	uvB = in_uv;
+
+	gl_Position = gl_ProjectionMatrix * pos;
+}

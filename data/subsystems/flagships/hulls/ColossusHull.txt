@@ -1,0 +1,23 @@
+Subsystem: ColossusHull
+	Name: #S_COLOSSUS_HULL
+	Description: #S_COLOSSUS_HULL_DESC
+
+	Tags: Applied:Hull, Category:Hulls, NoCore, HeraldsDLC
+	Hull: Flagship
+	EvaluationOrder: -200
+	BaseColor: #cc3a7d
+
+	AddShipModifier: FlagshipHull::HexLimitFactor(10.0)
+	AddShipModifier: FlagshipHull::GridWidthFactor(4.0)
+	AddShipModifier: FlagshipHull::GridHeightFactor(sqrt(2.2))
+
+	Requires:
+		Command = 20
+		Power = ShipSize * 0.3
+
+	Assert: ShipSize >= 3000
+		Message: #ERROR_MIN_SIZE:$1:3000
+
+	Module: Default
+		Sprite: DesignationIcons::16
+		DrawMode: 3

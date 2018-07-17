@@ -1,0 +1,81 @@
+#define pi 3.141592653589793238462643383279
+
+const float gridWidth = 120.0;
+const float gridSize = 25000.0;
+const float gridFadeDist = 300000000.0;
+
+const float subGridWidth = 0.0;
+const float subGridSize = 50.0;
+const float subGridFadeDist = 0.0;
+
+const float subsubGridWidth = 0.0;
+const float subsubGridSize = 50.0;
+const float subsubGridFadeDist = 0.0;
+
+uniform float radius;
+uniform float planeDist;
+
+varying vec2 uv;
+varying vec2 rcoords;
+
+vec4 grid(float distance, float bordMult) {
+	if(distance >= 1.0)
+		return vec4(0, 0, 0, 0);
+
+	vec4 res;
+	res.rgb = gl_Color.rgb;
+	float baseAlpha = smoothstep(100.0, 200.0, planeDist) * 0.08;
+
+	vec2 absCoords = rcoords * radius;
+	vec2 gridPos = abs(mod(absCoords, gridSize));
+	gridPos = min(gridPos, gridSize - gridPos);
+
+	// Main grid alpha
+	if(planeDist < gridFadeDist) {
+		if(gridPos.x <= gridWidth * bordMult || gridPos.y <= gridWidth * bordMult) {
+			res.a = baseAlpha * 2.0;
+			return res;
+		}
+
+		if(planeDist < subGridFadeDist) {
+			vec2 subGridPos = abs(mod(absCoords, subGridSize));
+			subGridPos = min(subGridPos, subGridSize - subGridPos);
+			if(subGridPos.x <= subGridWidth * bordMult || subGridPos.y <= subGridWidth * bordMult) {
+				res.a = baseAlpha * 1.8;
+				return res;
+			}
+			
+			if(planeDist < subsubGridFadeDist) {
+				vec2 subsubGridPos = abs(mod(absCoords, subsubGridSize));
+				subsubGridPos = min(subsubGridPos, subsubGridSize - subsubGridPos);
+				if(subsubGridPos.x <= subsubGridWidth * bordMult || subsubGridPos.y <= subsubGridWidth * bordMult) {
+					res.a = baseAlpha * 1.5;
+					return res;
+				}
+			}
+		}
+	}
+
+	res.a = 0.0;
+	return res;
+}
+
+void main() {
+	float distance = length(rcoords);
+	float bordMult = 1.0;
+	if(distance > 0.9)
+		discard;
+
+	vec4 color;
+	if(uv.x > 0.5 && abs(uv.y - 0.5) < 0.002)
+		color = vec4(1.0, 0.0, 0.0, 1.0);
+	else
+		color = grid(distance, bordMult);
+
+	color.a *= clamp((planeDist - 32000.0) / 60000.0, 0.0, 1.0);
+	color.a *= clamp(1.0 - (planeDist - 300000.0) / 60000.0, 0.0, 1.0);
+
+	if (color.a == 0.0)
+		discard;
+	gl_FragColor = color;
+}

@@ -1,0 +1,50 @@
+Effector: FlakBattery
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 0.8
+	Value: CapOnTarget = 1
+	Value: Spread = 0.05
+	Value: FireArc = 0.5 * pi
+	Value: TargetTolerance = 0
+	Value: FireTolerance = 0
+	Value: Pierce = 0.5
+	Value: SupplyCost = 0
+	Value: IgnoreDR = 0
+	Value: FlagReduction = 1
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+	CapTarget: CapOnTarget
+	Spread: Spread
+	FireArc: FireArc
+	FireTolerance: FireTolerance
+	TargetTolerance: TargetTolerance
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && (isShip && !tagFlagship)
+	AutoTarget: isEnemy && (isShip && !tagFlagship)
+
+	EfficiencyMode: Reload Partial
+	Activation: StaggeredTimed(Reload, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: FlakImpact
+		Damage = Damage
+		Pierce = Pierce
+		IgnoreDR = IgnoreDR
+		FlagReduction = FlagReduction
+
+	PhysicalType: Projectile
+		GfxType: Line
+		GfxSize: 2.0
+		PhysicalSize: 2.0
+		FireSfx: railgun_fire
+		FireSfx: muon_fire
+		Material: RailgunEmit
+		Trail: RailTrail
+		ImpactGfx: ImpactFlareRailRed
+		TrailCol: ff0048ff, 00000000

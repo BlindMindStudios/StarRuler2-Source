@@ -1,0 +1,33 @@
+Subsystem: CrystalArmor
+	Name: #S_CRYSTALARMOR
+	Description: #S_CRYSTALARMOR_DESC
+	BaseColor: #ef45ff
+	Elevation: 2
+
+	Tags: LowMaint, Category:Defense, FauxExterior
+	Tags: NoCore, NonContiguous, Defense, IsArmor, ResistArmor, ExternalSpace
+	Tags: PrimaryArmor
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Hex.Resistance := 0.4
+	Hex.HP := 200 * HexSize
+	Hex.Mass := 3.0 * HexSize
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	DamageResist := ShipSize / 16.0
+
+	Effect: ReduceDamage
+		ProjResist = DamageResist
+		EnergyResist = DamageResist * 4.0
+		ExplResist = DamageResist
+		MinimumPercent = 1/6
+
+	Effect: SingleUseHexes
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 8
+		Hex.LaborCost := Hex.LaborCost * 3
+		Sprite: CrystalArmor

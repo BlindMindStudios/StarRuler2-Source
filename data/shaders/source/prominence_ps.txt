@@ -1,0 +1,12 @@
+#version 120
+varying vec2 uv;
+uniform sampler2D texture;
+varying vec3 pos, normal;
+
+void main() {
+	vec3 n = normalize(normal);
+	vec3 p = vec3(0.0,0.0,-1.0);
+
+	float d = abs(dot(n,p));
+	gl_FragColor = texture2D(texture,vec2(uv.x,d * 0.5)) * d;
+}

@@ -1,0 +1,44 @@
+Attitude: Collectivism
+	Name: #ATT_COLLECTIVISM
+	Progress: #ATT_COLLECTIVISM_PROGRESS
+	Color: #ac332d
+	Sort: 25
+
+	ProgressFromAttribute(MiningBasesBuilt)
+	Conflict(Individualism)
+
+	Level:
+		Description: #ATT_COLLECTIVISM_L1
+		Icon: AttributeIcons::0
+		Threshold: 2
+
+		ModEmpireAttribute(GlobalPressureCap, Add, 1)
+		TriggerPlanetUpdate()
+
+	Level:
+		Description: #ATT_COLLECTIVISM_L2
+		Icon: Factory
+		Threshold: 4
+
+		ModEmpireAttribute(FactoryLaborMod, Add, 2)
+
+	Level:
+		Description: #ATT_COLLECTIVISM_L3
+		Icon: CardCategoryIcons::2
+		Threshold: 8
+
+		ModEmpireAttribute(PlanetConditionMultiplier, Add, 1)
+
+	Level:
+		Description: #ATT_COLLECTIVISM_L4
+		Icon: AsteroidIcon
+		Threshold: 14
+
+		TriggerPeriodic(TriggerRandomSystem(SpawnAsteroids(1), Has Planets = True), Interval = 300, Random Margin = 0.25)
+
+	Level:
+		Description: #ATT_COLLECTIVISM_L5
+		Icon: Factory * #ff8080
+		Threshold: 26
+
+		ModEmpireAttribute(FactoryHPMod, Add, 0.1)

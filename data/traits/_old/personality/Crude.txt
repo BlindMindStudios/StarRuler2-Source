@@ -1,0 +1,12 @@
+Trait: Crude
+	Name: #TRAIT_CRUDE
+	Description: #TRAIT_CRUDE_DESC:30
+	Category: Personality
+
+	Color: #ffaaaa
+	Icon: QuickbarIcons::3
+	Available: False
+
+	Gives Points: 1
+
+	AddModifier( BuildCostFactor(1.3) )

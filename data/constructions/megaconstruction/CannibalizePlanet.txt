@@ -1,0 +1,17 @@
+Construction: CannibalizePlanet
+	Name: #CONS_CANNIBALIZE_PLANET
+	Description: #CONS_CANNIBALIZE_PLANET_DESC
+
+	Category: Infrastructure
+
+	Target: planet = Object
+	TargetFilterSameRegion(planet)
+	TargetFilterType(planet, Planet)
+	TargetFilterSpace(planet)
+
+	Time Cost: 30
+	RequireStatus(StarForge)
+
+	Trigger(planet, Destroy(Quiet = True))
+	AddCargo(Ore, 5000)
+	AddStoredLabor(250, Obey Capacity = False)

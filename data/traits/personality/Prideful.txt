@@ -1,0 +1,13 @@
+Trait: Prideful
+	Name: #TRAIT_PRIDEFUL
+	Description: #TRAIT_PRIDEFUL_DESC
+	Category: Personality
+	Order: 6
+
+	Color: #aaffaa
+	Icon: QuickbarIcons::6
+
+	Costs Points: 1
+
+	RepeatLargestFlagshipBuiltSize(AddInfluenceStake(1), Repeat Per = 100)
+	RepeatLargestFlagshipBuiltSize(AddGlobalDefenseIncome(1), Repeat Per = 100)

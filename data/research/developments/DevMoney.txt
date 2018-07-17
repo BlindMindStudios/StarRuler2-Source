@@ -1,0 +1,14 @@
+Technology: DevMoney
+	Name: #R_DEV_MONEY
+	Blurb: #R_DEV_MONEY_BLURB:500k
+	Description: #R_DEV_MONEY_DESC:500k:8
+	Class: Boost
+
+	Icon: techEconomics*#d1cb6a
+	Color: #d1cb6a
+
+	Point Cost: 200
+	Time Cost: 90
+	SecondaryInfluenceCost(8)
+
+	AddMoney(500)

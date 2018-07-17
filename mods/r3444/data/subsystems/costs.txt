@@ -1,0 +1,23 @@
+Template: tag/BaseCost
+	Defaults:
+		Hex.LaborCost := 0.3 * HexSize
+		Hex.BuildCost := 2.2 * HexSize
+		Hex.MaintainCost := 8 * HexSize / ShipSize^0.5
+
+Template: tag/HighMaint
+	Defaults:
+		Hex.LaborCost := 0.3 * HexSize
+		Hex.BuildCost := 2.2 * HexSize
+		Hex.MaintainCost := 16 * HexSize / ShipSize^0.5
+
+Template: tag/LowMaint
+	Defaults:
+		Hex.LaborCost := 0.3 * HexSize
+		Hex.BuildCost := 2.2 * HexSize
+		Hex.MaintainCost := 4 * HexSize / ShipSize^0.5
+
+Template: tag/ScaledCost
+	Defaults:
+		Hex.LaborCost := 0.3 * HexSize
+		Hex.BuildCost := 2.2 * HexSize
+		Hex.MaintainCost := 3.5 * HexSize

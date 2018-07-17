@@ -1,0 +1,34 @@
+Subsystem: SupportHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Tags: IsSupport, SupportShip
+	Hull: Support
+	EvaluationOrder: -100
+
+	HexLimit := 60
+	FreeHexLimit := 0
+
+	GridWidth := 19
+	GridHeight := 16
+
+	Ship.ExternalHexes := 0
+	Ship.HexSize := ShipSize / (HexLimit - FreeHexLimit)
+
+	Repair := (ShipSize / HexLimit) * 4
+
+	Hex.LaborCost := 0.07 * ShipSize
+	Hex.BuildCost := 0.75 * ShipSize
+
+	Hex.Mass := 0
+	AddPostModifier: AddMass(ShipSize * (1.0 - max((ShipTotalHexes - Ship.ExternalHexes) / HexLimit, 0.0)))
+
+	Assert: ShipTotalHexes - Ship.ExternalHexes < Sum.HexLimit + 0.001
+		Message: #ERROR_HEX_COUNT
+
+	OnCheckErrors: designs::checkGlobalDesign
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL
+
+	Modifier: IncreaseHexLimit(Hexes)
+		HexLimit := HexLimit + Hexes
+		FreeHexLimit := FreeHexLimit + Hexes

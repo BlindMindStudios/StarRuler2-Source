@@ -1,0 +1,9 @@
+Status: ProgressGeist
+	Name: #STATUS_PROGRESS_GEIST
+	Description: #STATUS_PROGRESS_GEIST_DESC
+	Icon: ResourceIcon::4
+
+	Visible To: Nobody
+	Unique: True
+
+	ConvertResource(Energy, 1.0, Research, Convert Percent = 0.5)

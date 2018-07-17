@@ -1,0 +1,48 @@
+Subsystem: RocketPod
+	Name: Rocket Pod
+	Description: A concealed tube of rockets rapidly extends, launches a volley of short range rockets, and receeds to reload.
+	BaseColor: #f94694
+	TypeColor: #f94694
+	Picture: SubsystemButtonArt::1
+	Elevation: 2
+	
+	Tags: BaseCost
+	Tags: WeaponBase, MissileBase, Category:Weapons
+	Tags: ExteriorCore, Weapon, DefaultUnlock, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	Range := Size + 200
+	Damage := Size * 7.6
+	Reload := 8
+	Speed := 65
+	Tracking := 6.0
+	SupplyCost := Size * 4.0
+	out DPS := (Damage * 8) / (Reload * 2)
+	out SupplyDrain := SupplyCost / 2
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: HexagonSubsystems::9
+
+	Effector: Rockets
+		Range = Range
+		Damage = Damage
+		FireDelay = Reload / 8
+		PodSize = 8
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		SupplyCost = SupplyCost * (Reload / 8)

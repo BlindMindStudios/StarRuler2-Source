@@ -1,0 +1,64 @@
+Effector: Railgun
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 0.8
+	Value: CapOnTarget = 1
+	Value: Spread = 0.05
+	Value: FireArc = 0.5 * pi
+	Value: TargetTolerance = 0
+	Value: FireTolerance = 0
+	Value: Pierce = 0.5
+	Value: SupplyCost = 0
+	Value: IgnoreDR = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+	CapTarget: CapOnTarget
+	Spread: Spread
+	FireArc: FireArc
+	FireTolerance: FireTolerance
+	TargetTolerance: TargetTolerance
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Partial
+	Activation: StaggeredTimed(Reload, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ProjDamage
+		Amount = Damage
+		Pierce = Pierce
+		Suppression = 0
+		IgnoreDR = IgnoreDR
+
+	PhysicalType: Projectile
+		GfxType: Line
+		GfxSize: 4.5
+		FireSfx: railgun_fire
+		FireSfx: muon_fire
+		Material: RailgunEmit
+		Trail: RailTrail
+		TrailCol: 8888ffff, 00000000
+		ImpactGfx: ImpactFlareRailBlue
+
+	Skin: Skin1
+		ImpactGfx: ImpactFlareRailRed
+		TrailCol: ff8888ff, 00000000
+
+	Skin: Skin2
+		ImpactGfx: ImpactFlareRailYellow
+		TrailCol: ff88ffff, 00000000
+
+	Skin: Skin3
+		ImpactGfx: ImpactFlareRailTurquise
+		TrailCol: 88ffffff, 00000000
+
+	Skin: Muon
+		ImpactGfx: ImpactFlareRailTurquise
+		TrailCol: 88ffffff, ff00ff80

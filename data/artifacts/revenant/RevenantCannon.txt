@@ -1,0 +1,17 @@
+Artifact: RevenantCannon
+	Name: #ART_REVENANT_CANNON
+	Description: #ART_REVENANT_CANNON_DESC
+
+	Size: 20
+	Ability: RevenantCannon
+	
+	Model: ArtifactAdvanced
+
+	Strategic Icon: SpecialArtifactIcon
+
+	Mass: 800
+
+	Spread Variable: ENABLE_REVENANT_PARTS
+	Require Contestation: 60
+
+	AI: RevenantPart()

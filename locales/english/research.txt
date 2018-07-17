@@ -1,0 +1,1021 @@
+RESEARCH_COST_OR: or
+RESEARCH_COST_JOIN: ", "
+RESEARCH_STUDY: Study
+RESEARCH_COST: Research Cost
+RESEARCH_TIME: Research Time
+QUEUE_RESEARCH: Queue Research
+UNQUEUE_RESEARCH: Cancel Queued Research
+QUEUED: Queued
+NOT_RESEARCHING: No Active Research...
+RESEARCH_SECRET: [b][color=#0ff]Secret Project:[/color][/b] [color=#aaa][i]This is a secret project research that has extra requirements to unlock and will not show up in every playthrough.[/i][/color]
+RESEARCH_AFFECTS: [i][color=#aaa]Affects: [offset=100]$1[/offset][/color][/i]
+
+RESEARCH_REQ: [b]Requirement:[/b]\n[offset=30][color=$2]$1[/color][/offset]
+RESEARCH_REQ_BUILDSHIPS: Construct $1 ships with a $2. [b]( $3 / $1 )[/b]
+RESEARCH_REQ_MEGACITIES: Construct $2 megacities. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_ARTIFACTS: Activate $2 artifacts. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_LABS: Operate $2 Research Lab buildings. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_FTLSPENT: Spend a total of $2 FTL Energy. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_RING_HABITATS: Build $2 Ring Habitats. [b]( $1 / $2 )[/b]
+
+ALT_UNLOCK_ENERGY: [color=#42b4bd][b]Study Unlock:[/b] Spend $1 energy.[/color]
+ALT_UNLOCK_INFLUENCE: [color=#0087c7][b]Study Unlock:[/b] Spend $1 influence points.[/color]
+ALT_UNLOCK_MONEY: [color=#d1cb6a][b]Study Unlock:[/b] Spend $1.[/color]
+ALT_UNLOCK_FTL: [color=$FTL][b]Study Unlock:[/b] Spend $1 FTL Energy.[/color]
+
+R_SCIENCE: Science
+R_SCIENCE_DESC: [i]The root of all knowledge. Unlocked by default as a starting point.[/i]
+
+R_DEV_ENERGY: Energy Science
+R_DEV_ENERGY_DESC: <<
+	[i][color=#aaa]Improvements to the collection and use of energy.[/color][/i]
+
+	Generates $1 bonus energy immediately when researched normally. Energy gained is decreased by energy storage penalty.
+
+	[offset=40][color=#f88][i]No bonus energy is gained from researching when using the alternate unlock.[/i][/color][/offset]
+>>
+
+R_DEV_MONEY: Economics
+R_DEV_MONEY_BLURB: §$1 Special Funds
+R_DEV_MONEY_DESC: <<
+	[i][color=#aaa]Further insight into the behaviour of large scale markets and economies.[/color][/i]
+
+	When unlocked, immediately gives you §$1 extra special funds to spend.
+>>
+
+R_DEV_BUDGET: Commerce
+R_DEV_BUDGET_SMALL: Business
+R_DEV_BUDGET_BLURB: +§$1 Budget
+R_DEV_BUDGET_DESC: <<
+	[i][color=#aaa]Improvements to the efficiency of trade and commerce.[/color][/i]
+
+	Permanently increases your budget income by §$1 when unlocked.
+>>
+
+R_DEV_FTL: FTL Containment
+R_DEV_FTL_BLURB: $1 FTL, Storage
+R_DEV_FTL_DESC: <<
+	[i][color=#aaa]New technologies to store and transport FTL energy.[/color][/i]
+
+	When unlocked, immediately increases your stored ftl and ftl storage capacity by $1.
+>>
+
+R_DEV_FTL_INCOME: FTL Tuning
+R_DEV_FTL_INCOME_BLURB: +$1 FTL/s
+R_DEV_FTL_INCOME_DESC: <<
+	[i][color=#aaa]Better control over the collection and refinement of FTL energy.[/color][/i]
+
+	Increases empire FTL income by $1/s.
+>>
+
+R_DEV_SURGE: Media Utilization
+R_DEV_SURGE_BLURB: 1x Patriotic Surge
+R_DEV_SURGE_DESC: <<
+	[i][color=#aaa]Audience research into more effective ways of riling populations into action.[/color][/i]
+
+	Gain a "Patriotic Surge" card immediately upon unlocking this technology.
+>>
+
+R_DEV_NEGOTIATE: Political Science
+R_DEV_NEGOTIATE_BLURB: 1x Negotiate (*)
+R_DEV_NEGOTIATE_DESC: <<
+	[i][color=#aaa]Think tanks and studies on better use of capital for political gain.[/color][/i]
+
+	Gain an increased-quality "Negotiate" card immediately upon unlocking this technology.
+>>
+
+R_DEV_ENHANCE: Synergy
+R_DEV_ENHANCE_BLURB: 1x Enhance
+R_DEV_ENHANCE_DESC: <<
+	[i][color=#aaa]Develop better ways to utilize existing strategies.[/color][/i]
+
+	Gain an "Enhance" card immediately upon unlocking this technology.
+>>
+
+R_DEV_INFLUENCE: Diplomacy
+R_DEV_INFLUENCE_BLURB: 5 Influence
+R_DEV_INFLUENCE_DESC: <<
+	[i][color=#aaa]Focused studies and research on the behaviour of various factions.[/color][/i]
+
+	When unlocked, immediately gives you $1 influence points to spend.
+>>
+
+R_SYS_ANTIMATTER: Antimatter Generator
+
+R_SYS_ANTIMATTER: Antimatter Generator
+R_SYS_ANTIMATTER_DESC: <<
+	[color=#aaa][i]Unlocks the Antimatter Generator subsystem.[/i][/color]
+
+	[bbloc=#AMGEN_DESC/]
+>>
+
+R_SYS_EMERGENCY_SUPPLIES: Emergency Supplies
+R_SYS_EMERGENCY_SUPPLIES_DESC: <<
+	[color=#aaa][i]Unlocks the Emergency Supplies subsystem.[/i][/color]
+
+	[bbloc=#S_EMERGENCY_SUPPLIES_DESC/]
+>>
+
+R_SYS_CONSTRUCTION_BAY: Construction Bay
+R_SYS_CONSTRUCTION_BAY_DESC: <<
+	[color=#aaa][i]Unlocks the Construction Bay subsystem.[/i][/color]
+
+	[bbloc=#S_CONSTRUCTION_BAY_DESC/]
+>>
+
+R_SYS_ORE_PROCESSOR: Ore Processor
+R_SYS_ORE_PROCESSOR_DESC: <<
+	[color=#aaa][i]Unlocks the Ore Processor subsystem.[/i][/color]
+
+	[bbloc=#S_ORE_PROCESSOR_DESC/]
+>>
+
+R_SYS_GRAVITY_ENGINE: Graviton Engine
+R_SYS_GRAVITY_ENGINE_DESC: <<
+	[color=#aaa][i]Unlocks the Graviton Engine subsystem.[/i][/color]
+
+	[bbloc=#GRAVITYENGINE_DESC/]
+>>
+
+R_SYS_HYPERLASER: Hyperdense Laser
+R_SYS_HYPERLASER_DESC: <<
+	[color=#aaa][i]Unlocks the Hyperdense Laser subsystem.[/i][/color]
+
+	[bbloc=#S_HYPERLASER_DESC/]
+>>
+
+R_SYS_NEUTRON_ARMOR: Neutronium Armor
+R_SYS_NEUTRON_ARMOR_DESC: <<
+	[color=#aaa][i]Unlocks the Neutronium Armor subsystem.[/i][/color]
+
+	[bbloc=#NEUTRONARMOR_DESC/]
+>>
+
+R_SYS_NILINGARMOR: Niling Fiber Armor
+R_SYS_NILINGARMOR_DESC: <<
+	[color=#aaa][i]Unlocks the Niling Fiber Armor subsystem.[/i][/color]
+
+	[bbloc=#S_NILINGARMOR_DESC/]
+>>
+
+R_SYS_LIQUID_ARMOR: Liquid Armor
+R_SYS_LIQUID_ARMOR_DESC: <<
+	[color=#aaa][i]Unlocks the Liquid Armor subsystem.[/i][/color]
+
+	[bbloc=#S_LIQUIDARMOR_DESC/]
+>>
+
+R_SYS_SELF_DESTRUCT: Self-Destruct Device
+R_SYS_SELF_DESTRUCT_DESC: <<
+	[color=#aaa][i]Unlocks the Self-Destruct Device subsystem.[/i][/color]
+
+	[bbloc=#S_SELF_DESTRUCT_DESC/]
+>>
+
+R_SYS_SHIP_COMPUTER: Control Computer
+R_SYS_SHIP_COMPUTER_DESC: <<
+	[color=#aaa][i]Unlocks the Control Computer subsystem.[/i][/color]
+
+	[bbloc=#SHIPCOMPUTER_DESC/]
+>>
+
+R_SYS_ION_CANNON: Ion Cannon
+R_SYS_ION_CANNON_DESC: <<
+	[color=#aaa][i]Unlocks the Ion Cannon subsystem.[/i][/color]
+
+	[bbloc=#S_ION_CANNON_DESC/]
+>>
+
+R_SYS_SKIP_DRIVE: Skip Drive
+R_SYS_SKIP_DRIVE_DESC: <<
+	[color=#aaa][i]Unlocks the Skip Drive subsystem.[/i][/color]
+
+	[bbloc=#S_SKIP_DRIVE_DESC/]
+>>
+
+R_SYS_GRAVITON_CONDENSER: Graviton Condenser
+R_SYS_GRAVITON_CONDENSER_DESC: <<
+	[color=#aaa][i]Unlocks the Graviton Condenser subsystem.[/i][/color]
+
+	[bbloc=#S_GRAVITON_CONDENSER_DESC/]
+>>
+
+R_SYS_CLOAKPLATING: Cloaking Mesh
+R_SYS_CLOAKPLATING_DESC: <<
+	[color=#aaa][i]Unlocks the Cloaking Mesh subsystem.[/i][/color]
+
+	[bbloc=#S_CLOAKPLATING_DESC/]
+>>
+
+R_MOD_TARGET_SENSOR: Targeting Sensor
+R_MOD_TARGET_SENSOR_DESC: <<
+	[color=#aaa][i]Unlocks the Targeting Sensor[/i][/color]
+
+	[bbloc=#TARGETINGSENSOR_DESC/]
+>>
+
+R_MOD_BULKHEAD: Bulkhead
+R_MOD_BULKHEAD_DESC: <<
+	[color=#aaa][i]Unlocks the Bulkhead[/i][/color]
+
+	[bbloc=#BULKHEAD_DESC/]
+>>
+
+R_MOD_AUGMENT_RELOAD: Coolant System
+R_MOD_AUGMENT_RELOAD_DESC: <<
+	[color=#aaa][i]Unlocks the 'Coolant System' weapon modifier.[/i][/color]
+
+	[bbloc=#S_AUGMENT_RELOAD_DESC/]
+>>
+
+R_MOD_AUGMENT_DAMAGE: Payload Amplifier
+R_MOD_AUGMENT_DAMAGE_DESC: <<
+	[color=#aaa][i]Unlocks the 'Payload Amplifier' weapon modifier.[/i][/color]
+
+	[bbloc=#S_AUGMENT_DAMAGE_DESC/]
+>>
+
+R_MOD_AUGMENT_SUPPLY: Smoothed Mechanism
+R_MOD_AUGMENT_SUPPLY_DESC: <<
+	[color=#aaa][i]Unlocks the 'Smoothed Mechanism' weapon modifier.[/i][/color]
+
+	[bbloc=#S_AUGMENT_SUPPLY_DESC/]
+>>
+
+R_MOD_QUANTUM_BATTERY: Quantum Battery
+R_MOD_QUANTUM_BATTERY_DESC: <<
+	[color=#aaa][i]Unlocks the 'Quantum Battery' modifier.[/i][/color]
+
+	[bbloc=#S_QUANTUM_BATTERY_DESC/]
+>>
+
+R_MOD_QUANTUM_COMPRESSOR: Quantum Compressor
+R_MOD_QUANTUM_COMPRESSOR_DESC: <<
+	[color=#aaa][i]Unlocks the 'Quantum Compressor' modifier.[/i][/color]
+
+	[bbloc=#S_QUANTUM_COMPRESSOR_DESC/]
+>>
+
+R_IMP_DAMAGE: Kinetics
+R_IMP_DAMAGE2: Kinetics 2
+R_IMP_DAMAGE_SMALL: Impact
+R_IMP_DAMAGE_BLURB: Weapon Damage +$1
+R_IMP_DAMAGE_DESC: <<
+	[i][color=#aaa]Research on how to best damage, detonate and destroy enemy starships.[/color][/i]
+
+	Increases all ship weapon damage by $1.
+>>
+
+R_IMP_PLANET_DAMAGE: Ballistics
+R_IMP_PLANET_DAMAGE2: Ballistics 2
+R_IMP_PLANET_DAMAGE_BLURB: Planetary Damage +$1
+R_IMP_PLANET_DAMAGE_DESC: <<
+	Increases the DPS output of planetary and static defense weapons by $1.
+>>
+
+R_IMP_FLAG_DAMAGE: Weaponry
+R_IMP_FLAG_DAMAGE2: Weaponry 2
+R_IMP_FLAG_DAMAGE_BLURB: Flagship Damage +$1
+R_IMP_FLAG_DAMAGE_DESC: <<
+	Increases all flagship weapon damage by $1.
+>>
+
+R_IMP_SUPPORT_DAMAGE: Destruction
+R_IMP_SUPPORT_DAMAGE2: Destruction 2
+R_IMP_SUPPORT_DAMAGE_BLURB: Support Damage +$1
+R_IMP_SUPPORT_DAMAGE_DESC: <<
+	Increases all support ship weapon damage by $1.
+>>
+
+R_IMP_ALL_HEALTH: Materials Science
+R_IMP_ALL_HEALTH2: Materials Science 2
+R_IMP_ALL_HEALTH_BLURB: Subsystem Health +$1
+R_IMP_ALL_HEALTH_DESC: <<
+	[i][color=#aaa]Research on how to improve the structural integrity of starship subsystems, letting them take more damage before ceasing to function.[/color][/i]
+
+	Increases all ship subsystem health by $1.
+>>
+
+R_IMP_REPAIR: Repair
+R_IMP_REPAIR2: Repair 2
+R_IMP_REPAIR_BLURB: Repair +$1
+R_IMP_REPAIR_DESC: <<
+	Increases ship repair rate by $1.
+>>
+
+R_IMP_CIV_HEALTH: Mass Production
+R_IMP_CIV_HEALTH2: Civil Armoring
+R_IMP_CIV_HEALTH_BLURB: Civilian Health +$1
+R_IMP_CIV_HEALTH_DESC: <<
+	[i][color=#aaa]The design and development of affordable forms of military armors and systems, increasing the health of civilian units.[/color][/i]
+
+	Increases all civilian health by $1.
+>>
+
+R_IMP_DECAY: Stockpiling
+R_IMP_DECAY2: Dense Storage
+R_IMP_DECAY_BLURB: Planets Decay $1 Slower
+R_IMP_DECAY_DESC: <<
+	[i][color=#aaa]Improved storage capacities and methods allow planets to go longer without supplies of vital resources..[/color][/i]
+
+	Planets decay $1 slower when out of necessary resources.
+>>
+
+R_IMP_ALL_RANGE: Targeting
+R_IMP_ALL_RANGE2: Targeting 2
+R_IMP_ALL_RANGE_BLURB: Weapon Range +$1
+R_IMP_ALL_RANGE_DESC: <<
+	[i][color=#aaa]Improvements to weapon targeting, tracking and miniaturization allow them to reach targets further away.[/color][/i]
+
+	Increases all weapon range by $1.
+>>
+
+R_IMP_ARMOR_HEALTH: Armoring
+R_IMP_ARMOR_HEALTH2: Armoring 2
+R_IMP_ARMOR_HEALTH_BLURB: Armor Health +$1
+R_IMP_ARMOR_HEALTH_DESC: <<
+	[i][color=#aaa]Better ways of reinforcing armor plates.[/color][/i]
+
+	Increases all armor health by $1.
+>>
+
+R_IMP_ARMOR_DR: Reinforcement
+R_IMP_ARMOR_DR2: Reinforcement 2
+R_IMP_ARMOR_DR_BLURB: Armor DR +$1
+R_IMP_ARMOR_DR_DESC: <<
+	Increases all armor damage resistance by $1.
+>>
+
+R_IMP_FACTORY_LABOR: Metallurgy
+R_IMP_FACTORY_LABOR2: Metallurgy 2
+R_IMP_FACTORY_LABOR_BLURB: Factory Labor +$1
+R_IMP_FACTORY_LABOR_DESC: <<
+	[i][color=#aaa]Improvements to the use of materials and labor division in planetary surface factories.[/color][/i]
+
+	Increases the labor generated by Factory buildings by $1.
+>>
+
+R_IMP_PLANET_SUPPORT: Orbital Command
+R_IMP_PLANET_SUPPORT2: Orbital Command 2
+R_IMP_PLANET_SUPPORT_BLURB: Outpost Support +$1
+R_IMP_PLANET_SUPPORT_DESC: <<
+	[i][color=#aaa]More focused and effective command of orbital defense vessels.[/color][/i]
+
+	Increases the maximum support capacity of all owned [b][img=GuiOrbitalIcons::0;20/] Outpost[/b] orbitals by $1.
+
+	Increases the maximum support capacity of all owned [b][img=PlanetType::2;20/] Planets[/b] by $2 for each planet level.
+
+	Also increases the [img=Plus;20/] Health and the rate of local defense ship production of [b][img=GuiOrbitalIcons::0;20/] Outpost[/b] orbitals.
+>>
+
+R_IMP_SUPPLY_STORAGE: Logistics
+R_IMP_SUPPLY_STORAGE2: Logistics 2
+R_IMP_SUPPLY_STORAGE_BLURB: Flagship Supplies +$1
+R_IMP_SUPPLY_STORAGE_DESC: <<
+	[i][color=#aaa]Better compression and more efficient storage of ship combat supplies.[/color][/i]
+
+	Increases the maximum supply storage capacity of all flagships by $1.
+>>
+
+R_IMP_SUPPORT_CAP: Organization
+R_IMP_SUPPORT_CAP2: Organization 2
+R_IMP_SUPPORT_CAP_SMALL: Command
+R_IMP_SUPPORT_CAP_BLURB: Flagship Support +$1
+R_IMP_SUPPORT_CAP_DESC: <<
+	[i][color=#aaa]Improved communications and coordination between a flagship and its support fleet.[/color][/i]
+
+	Increases the maximum support command of all flagships by $1.
+>>
+
+R_IMP_THRUST: Propulsion
+R_IMP_THRUST2: Propulsion 2
+R_IMP_THRUST_BLURB: Thrust +$1
+R_IMP_THRUST_DESC: <<
+	[i][color=#aaa]Studies and experiments on improving the thrust output of starship engines, conventional and otherwise.[/color][/i]
+
+	Increases all ship engine thrust by $1.
+
+	If using Hyperdrive, increases hyperdrive speed by $1 as well.
+>>
+
+R_IMP_CIV_CONSTRUCT: Infrastructure
+R_IMP_CIV_CONSTRUCT2: Infrastructure 2
+R_IMP_CIV_CONSTRUCT_BLURB: Civ. Construction +$1
+R_IMP_CIV_CONSTRUCT_DESC: <<
+	Increases civilian building construction rate by $1.
+>>
+
+R_IMP_IMP_CONSTRUCT: Construction
+R_IMP_IMP_CONSTRUCT2: Construction 2
+R_IMP_IMP_CONSTRUCT_BLURB: Imperial Constr. +$1
+R_IMP_IMP_CONSTRUCT_DESC: <<
+	Increases imperial building construction rate by $1.
+>>
+
+R_IMP_TILE_DEVELOPMENT: Development
+R_IMP_TILE_DEVELOPMENT2: Development 2
+R_IMP_TILE_DEVELOPMENT_BLURB: Tile Development +$1
+R_IMP_TILE_DEVELOPMENT_DESC: <<
+	Increases the rate at which civilian tile development occurs on planets by $1.
+>>
+
+R_IMP_TRACKING: Hydraulics
+R_IMP_TRACKING2: Hydraulics 2
+R_IMP_TRACKING_BLURB: Turret Tracking +$1
+R_IMP_TRACKING_DESC: <<
+	Increases weapon turret tracking rate by $1.
+>>
+
+R_IMP_FIRE_RATE: Cooling
+R_IMP_FIRE_RATE2: Cooling 2
+R_IMP_FIRE_RATE_BLURB: Weapon Reload +$1
+R_IMP_FIRE_RATE_DESC: <<
+	Increases the fire rate of all weapon systems by $1.
+>>
+
+R_IMP_PROJ_SPEED: Projectiles
+R_IMP_PROJ_SPEED2: Projectiles 2
+R_IMP_PROJ_SPEED_BLURB: Projectile Speed +$1
+R_IMP_PROJ_SPEED_DESC: Increases the speed of all weapon projectiles and missiles by $1.
+
+R_IMP_SUPPLY_USE: Ordinance
+R_IMP_SUPPLY_USE2: Ordinance 2
+R_IMP_SUPPLY_USE_BLURB: Flagship Supply Use -$1
+R_IMP_SUPPLY_USE_DESC: Reduces the supply use of all flagship weapons by $1.
+
+R_IMP_SUPPLY_REGEN: Resupply
+R_IMP_SUPPLY_REGEN2: Resupply 2
+R_IMP_SUPPLY_REGEN_BLURB: Resupply Rate +$1
+R_IMP_SUPPLY_REGEN_DESC: Increases the rate at which flagships regain supply by $1.
+
+R_IMP_SUPPORT_SUPPLY_USE: Efficiency
+R_IMP_SUPPORT_SUPPLY_USE2: Efficiency 2
+R_IMP_SUPPORT_SUPPLY_USE_BLURB: Support Supply Use -$1
+R_IMP_SUPPORT_SUPPLY_USE_DESC: Reduces the supply use of all support ship weapons by $1.
+
+R_IMP_ENERGY_STORAGE: Capacitance
+R_IMP_ENERGY_STORAGE2: Capacitance 2
+R_IMP_ENERGY_STORAGE_BLURB: Energy Storage +$1
+R_IMP_ENERGY_STORAGE_DESC: <<
+	Increases your empire's free energy storage by $1.
+	
+	Any energy stored under the free energy storage cap does not decrease your generation rate via storage penalty.
+>>
+
+R_IMP_AOE: Explosives
+R_IMP_AOE2: Explosives 2
+R_IMP_AOE_BLURB: Explosive AoE +$1
+R_IMP_AOE_DESC: Increases the area of effect of explosive weapons such as torpedos by $1.
+R_SYS_SHIELDGEN_DESC: <<
+	[color=#aaa][i]Unlocks the Shield Generator subsystem.[/i][/color]
+
+	[bbloc=#SHIELDGEN_DESC/]
+>>
+R_SYS_SHIELDGEN: Shield Generator
+R_SYS_SHIELD_HARDENER: Shield Hardener
+R_SYS_SHIELD_HARDENER_DESC: <<
+	[color=#aaa][i]Unlocks the Shield Hardener subsystem.[/i][/color]
+
+	[bbloc=#S_SHIELD_HARDENER_DESC/]
+>>
+
+R_SHRINE: Shrine
+R_SHRINE_DESC: <<
+	[color=#aaa][i]Unlocks the Shrine subsystem.[/i][/color]
+
+	[bbloc=#S_SHRINE_DESC/]
+>>
+
+R_BLD_MEGACITY: Megacities
+R_BLD_MEGACITY_DESC: <<
+	[color=#aaa][i]Unlocks the Megacity building.[/i][/color]
+
+	[bbloc=#BLD_MEGACITY_DESC/]
+>>
+R_IMP_SHIELDCAP: Phase Containment
+R_IMP_SHIELDCAP2: Phase Containment 2
+R_IMP_SHIELDCAP_BLURB: Shield HP +$1
+R_IMP_SHIELDCAP_DESC: Increases shield capacity by $1.
+R_IMP_SHIELDREG_BLURB: Shield Regen +$1
+R_IMP_SHIELDREG: Phase Harmonics
+R_IMP_SHIELDREG2: Phase Harmonics 2
+R_IMP_SHIELDREG_DESC: Increases shield regeneration rate by $1.
+
+R_ORB_ARTIFICIAL_PLANETOID: Artificial Planetoids
+R_ORB_ARTIFICIAL_PLANETOID_DESC: <<
+	[color=#aaa][i]Unlocks the Artificial Planetoid orbital.[/i][/color]
+
+	[bbloc=#ARTIFICIAL_PLANETOID_DESC/]
+>>
+
+R_ORB_STARFORGE: Star Forge
+R_ORB_STARFORGE_DESC: <<
+	[color=#aaa][i]Unlocks the Star Forge orbital.[/i][/color]
+
+	[bbloc=#STARFORGE_DESC/]
+>>
+
+R_ORB_VACUUM_TELESCOPE: Vacuum Telescope
+R_ORB_VACUUM_TELESCOPE_DESC: <<
+	[color=#aaa][i]Unlocks the Vacuum Telescope orbital.[/i][/color]
+
+	[bbloc=#VACUUM_TELESCOPE_DESC/]
+>>
+
+R_ORB_RINGWORLD: Ringworld
+R_ORB_RINGWORLD_DESC: <<
+	[color=#aaa][i]Unlocks the Ringworld orbital.[/i][/color]
+
+	[bbloc=#RINGWORLD_DESC/]
+>>
+
+R_BLD_PLANET_ENGINE: Planetary Thruster
+R_BLD_PLANET_ENGINE_DESC: <<
+	[color=#aaa][i]Unlocks the Planetary Thruster building.[/i][/color]
+
+	[bbloc=#BLD_PLANET_ENGINE_DESC/]
+>>
+R_SYS_MUON_CANNON: Muon Cannon
+R_SYS_MUON_CANNON_DESC: <<
+	[color=#aaa][i]Unlocks the Muon Battery and Cannon subsystems.[/i][/color]
+
+	[bbloc=#MUONBATTERY_DESC/]
+>>
+
+R_SYS_TITAN_HULL: Titan Hull
+R_SYS_TITAN_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Titan Hull subsystem.[/i][/color]
+
+	[bbloc=#S_TITAN_HULL_DESC/]
+>>
+
+R_SYS_COLOSSUS_HULL: Colossus Hull
+R_SYS_COLOSSUS_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Colossus Hull subsystem.[/i][/color]
+
+	[bbloc=#S_COLOSSUS_HULL_DESC/]
+>>
+
+R_DEV_ENERGY_INCOME: Ionization
+R_DEV_ENERGY_INCOME2: Ionization 2
+R_DEV_ENERGY_INCOME_BLURB: +$1 Energy/s
+R_DEV_ENERGY_INCOME_DESC: <<
+	Increases your base energy income per second by $1.
+>>
+
+R_DEV_INFLUENCE_INCOME: Policy
+R_DEV_INFLUENCE_INCOME2: Policy 2
+R_DEV_INFLUENCE_INCOME_BLURB: Influence Stake +$1
+R_DEV_INFLUENCE_INCOME_DESC: <<
+	Increases your influence stake by $1.
+
+	Influence stake increases your influence income relative to all other empires.
+>>
+
+R_DEV_DEFENSE: Defense
+R_DEV_DEFENSE_BLURB: +$1 Instant Defense
+R_DEV_DEFENSE_DESC: <<
+	Immediately generate $1 labor worth of defense ships spread over any locations marked for defense use.
+>>
+
+R_DEV_DEFENSE_INCOME: Militia
+R_DEV_DEFENSE_INCOME2: Militia 2
+R_DEV_DEFENSE_INCOME_BLURB: +$1 Defense/min
+R_DEV_DEFENSE_INCOME_DESC: <<
+	Increases your global defense generation by $1 labor worth per minute.
+>>
+
+R_IMP_SPREAD: Accuracy
+R_IMP_SPREAD2: Accuracy 2
+R_IMP_SPREAD_BLURB: Accuracy +$1
+R_IMP_SPREAD_DESC: <<
+	Increases the accuracy of projectiles fired by railguns and other kinetic weapons by $1.
+>>
+
+R_KEY_RAILGUN_KNOCKBACK: Projectile Impulse
+R_KEY_RAILGUN_KNOCKBACK_DESC: <<
+	Adds a significant knockback effect to flagship railgun batteries. Ships hit by the projectiles will receive a jolt of impulse in the opposite direction.
+
+	Increases the accuracy of all railguns, but removes all hexagon pierce from railgun impacts.
+>>
+
+R_KEY_BUILD_COST: Decentralized Construction
+R_KEY_BUILD_COST_DESC: <<
+	Halves all flagship build costs.
+
+	Doubles all flagship labor costs.
+
+	Dry Docks no longer increase build costs by 25%, but can be used without penalty.
+>>
+
+R_KEY_EMERGENCY_SHIELDS: Emergency Shields
+R_KEY_EMERGENCY_SHIELDS_DESC: <<
+	Whenever you trigger an "Emergency Supplies" subsystem, shield regeneration is temporarily boosted to extreme levels.
+
+	The duration of the boost is dependent on the size of the emergency supplies subsystem.
+>>
+STATUS_EMERGENCY_SHIELDS: Emergency Shields
+STATUS_EMERGENCY_SHIELDS_DESC: <<
+	This ship is experiencing temporarily boosted shield regeneration due to activating an upgraded "Emergency Supplies" subsystem.
+>>
+
+R_SYS_DISRUPTOR: Disruptor
+R_SYS_DISRUPTOR_DESC: <<
+	[color=#aaa][i]Unlocks the Disruptor subsystem.[/i][/color]
+
+	[bbloc=#S_DISRUPTOR_DESC/]
+>>
+
+R_SYS_DRONELAUNCHER: Drone Launcher
+R_SYS_DRONELAUNCHER_DESC: <<
+	[color=#aaa][i]Unlocks the Drone Launcher subsystem.[/i][/color]
+
+	[bbloc=#S_DRONELAUNCHER_DESC/]
+>>
+
+R_SYS_PARTICLELANCE: Particle Lance
+R_SYS_PARTICLELANCE_DESC: <<
+	[color=#aaa][i]Unlocks the Particle Lance subsystem.[/i][/color]
+
+	[bbloc=#S_PARTICLELANCE_DESC/]
+>>
+
+R_SYS_SHOCKMISSILES: Shock Missiles
+R_SYS_SHOCKMISSILES_DESC: <<
+	[color=#aaa][i]Unlocks the Shock Missiles subsystem.[/i][/color]
+
+	[bbloc=#S_SHOCKMISSILES_DESC/]
+>>
+
+R_SYS_SHIELD_HARMONIZER: Shield Harmonizer
+R_SYS_SHIELD_HARMONIZER_DESC: <<
+	[color=#aaa][i]Unlocks the Shield Harmonizer subsystem.[/i][/color]
+
+	[bbloc=#S_SHIELD_HARMONIZER_DESC/]
+>>
+
+R_BLD_SPIRE: Spire
+R_BLD_SPIRE_DESC: <<
+	[color=#aaa][i]Unlocks the Spire building.[/i][/color]
+
+	[bbloc=#BLD_SPIRE_DESC/]
+>>
+
+R_FLARE_BOMB: Flare Bomb
+R_FLARE_BOMB_DESC: <<
+	Study the remains of collected remnant artifacts to recover plans for a remnant superweapons project.
+
+	Unlocks construction of Flare Bombs, costing large amounts of Ore and Energy to construct.
+
+	Flare bombs can be used on stars. After a 60 second channel period, the star is triggered to emit a critical flare, wiping out all population in the solar system but leaving everything else intact. The planets in the system are irradiated for the next 5 minutes and cannot be colonized.
+
+	The flare bomb ship is destroyed in the process.
+>>
+
+R_HYPERFIELD_SEQUENCING: Hyperfield Sequencing
+R_HYPERFIELD_SEQUENCING_DESC: <<
+	Removes the charge up time from using hyperdrives, but increases the overhead cost of performing a jump by 150 FTL Energy.
+
+	Ships still need to turn to face the direction they are jumping in before being able to activate their hyperdrive.
+>>
+
+R_ORB_RING_HABITAT: Ring Habitat
+R_ORB_RING_HABITAT_DESC: <<
+	[color=#aaa][i]Unlocks the Ring Habitat orbital.[/i][/color]
+
+	[bbloc=#ORB_RING_HABITAT_DESC/]
+>>
+
+R_ORB_SOLAR_SATELLITE: Solar Satellite
+R_ORB_SOLAR_SATELLITE_DESC: <<
+	[color=#aaa][i]Unlocks the Solar Satellite orbital.[/i][/color]
+
+	[bbloc=#ORB_SOLAR_SATELLITE_DESC/]
+>>
+
+R_ORB_DEFENSE_SATELLITE: Tactical Satellite
+R_ORB_DEFENSE_SATELLITE_DESC: <<
+	[color=#aaa][i]Unlocks the Tactical Satellite orbital.[/i][/color]
+
+	[bbloc=#ORB_DEFENSE_SATELLITE_DESC/]
+>>
+
+R_ORB_HYDROPONICS_SATELLITE: Hydroponics Satellite
+R_ORB_HYDROPONICS_SATELLITE_DESC: <<
+	[color=#aaa][i]Unlocks the Hydroponics Satellite orbital.[/i][/color]
+
+	[bbloc=#ORB_HYDROPONICS_SATELLITE_DESC/]
+>>
+
+R_SYS_CARRIER_HULL: Carrier Hull
+R_SYS_CARRIER_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Carrier Hull for flagships.[/i][/color]
+
+	[bbloc=#S_CARRIER_HULL_DESC/]
+>>
+
+R_SYS_DESTROYER_HULL: Destroyer Hull
+R_SYS_DESTROYER_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Destroyer Hull for flagships.[/i][/color]
+
+	[bbloc=#S_DESTROYER_HULL_DESC/]
+>>
+
+R_SYS_SUPERSTRUCTURE_HULL: Superstructure Hull
+R_SYS_SUPERSTRUCTURE_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Superstructure Hull for flagships.[/i][/color]
+
+	[bbloc=#S_SUPERSTRUCTURE_HULL_DESC/]
+>>
+
+R_SYS_SPINAL_MOUNT_HULL: Spinal Mount Hull
+R_SYS_SPINAL_MOUNT_HULL_DESC: <<
+	[color=#aaa][i]Unlocks the Spinal Mount Hull for flagships.[/i][/color]
+
+	[bbloc=#S_SPINAL_MOUNT_HULL_DESC/]
+>>
+
+R_SYS_FLEET_COMPUTER: Fleet Computer
+R_SYS_FLEET_COMPUTER_DESC: <<
+	[color=#aaa][i]Unlocks the Fleet Computer subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_FLEETCOMPUTER_DESC/]
+>>
+
+R_SYS_SOLARPANEL: Solar Panel
+R_SYS_SOLARPANEL_DESC: <<
+	[color=#aaa][i]Unlocks the Solar Panel subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_SOLARPANEL_DESC/]
+>>
+
+R_SYS_FLAK_BATTERY: Flak Battery
+R_SYS_FLAK_BATTERY_DESC: <<
+	[color=#aaa][i]Unlocks the Flak Battery weapon for flagships.[/i][/color]
+
+	[bbloc=#S_FLAK_BATTERY_DESC/]
+>>
+
+R_SYS_WARHEAD: Warhead
+R_SYS_WARHEAD_DESC: <<
+	[color=#aaa][i]Unlocks the Warhead weapon for flagships.[/i][/color]
+
+	[bbloc=#S_WARHEAD_DESC/]
+>>
+
+R_SYS_PLASMA_THROWER: Plasma Thrower
+R_SYS_PLASMA_THROWER_DESC: <<
+	[color=#aaa][i]Unlocks the Plasma Thrower weapon for flagships and support ships.[/i][/color]
+
+	[bbloc=#S_PLASMATHROWER_DESC/]
+>>
+
+R_SYS_PULSE_BOLT: Pulse Bolt
+R_SYS_PULSE_BOLT_DESC: <<
+	[color=#aaa][i]Unlocks the Pulse Bolt weapon for support ships.[/i][/color]
+
+	[bbloc=#S_PULSE_BOLT_DESC/]
+>>
+
+R_SYS_SUBSPACE_SHREDDER: Subspace Shredder
+R_SYS_SUBSPACE_SHREDDER_DESC: <<
+	[color=#aaa][i]Unlocks the Subspace Shredder weapon for support ships.[/i][/color]
+
+	[bbloc=#S_SUBSPACE_SHREDDER_DESC/]
+>>
+
+R_SYS_RAMJET: Bussard Ramjet
+R_SYS_RAMJET_DESC: <<
+	[color=#aaa][i]Unlocks the Bussard Ramjet subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_RAMJET_DESC/]
+>>
+
+R_SYS_BOOSTER_ENGINE: Booster Engine
+R_SYS_BOOSTER_ENGINE_DESC: <<
+	[color=#aaa][i]Unlocks the Booster Engine subsystem for support ships.[/i][/color]
+
+	[bbloc=#S_BOOSTERENGINE_DESC/]
+>>
+
+R_SYS_BROADCAST_ANTENNA: Broadcast Antenna
+R_SYS_BROADCAST_ANTENNA_DESC: <<
+	[color=#aaa][i]Unlocks the Broadcast Antenna subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_BROADCAST_ANTENNA_DESC/]
+>>
+
+R_SYS_SIMULATOR: Simulator
+R_SYS_SIMULATOR_DESC: <<
+	[color=#aaa][i]Unlocks the Simulator subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_SIMULATOR_DESC/]
+>>
+
+R_SYS_TROOP_PODS: Troop Pods
+R_SYS_TROOP_PODS_DESC: <<
+	[color=#aaa][i]Unlocks the Troop Pods subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_TROOPPODS_DESC/]
+>>
+
+R_SYS_CRYSTAL_ARMOR: Crystalline Armor
+R_SYS_CRYSTAL_ARMOR_DESC: <<
+	[color=#aaa][i]Unlocks Crystalline Armor for flagships and support ships.[/i][/color]
+
+	[bbloc=#S_CRYSTALARMOR_DESC/]
+>>
+
+R_SYS_NANOMESH: Nano Mesh
+R_SYS_NANOMESH_DESC: <<
+	[color=#aaa][i]Unlocks the Nano Mesh subsystem for flagships and support ships.[/i][/color]
+
+	[bbloc=#NANOMESH_DESC/]
+>>
+
+R_SYS_DEFLECTOR_ARRAY: Deflector Array
+R_SYS_DEFLECTOR_ARRAY_DESC: <<
+	[color=#aaa][i]Unlocks the Deflector Array subsystem for flagships.[/i][/color]
+
+	[bbloc=#S_DEFLECTOR_ARRAY_DESC/]
+>>
+
+R_MISSILE_RANGE: Thrust Miniaturization
+R_MISSILE_RANGE_DESC: <<
+	Increases the range of all missile-based weapons by $1.
+>>
+
+R_DRONE_COUNT: Drone Control
+R_DRONE_COUNT_DESC: <<
+	Increases the amount of drones launched by the Drone Launcher subsystem by 50%.
+>>
+
+R_FLAG_HEALTH: Flagship Health
+R_FLAG_HEALTH2: Flagship Integrity
+R_FLAG_HEALTH_DESC: <<
+	Increases the health of all flagship and station designs by $1.
+>>
+
+R_ENERGY: Energy Flow
+R_ENERGY_DESC: Increases your energy generation by $1/s.
+
+R_DEFENSE: Military
+R_DEFENSE_DESC: Increases your defense generation by $1/min.
+
+R_POWER_GENERATION: Power Generation
+R_POWER_GENERATION_DESC: <<
+	Increases the Power generated by flagship generators by $1.
+>>
+
+R_BEAM_CYCLING: Beam Cycling
+R_BEAM_CYCLING_DESC: <<
+	Increases the Duration of beam weapons by $1.
+>>
+
+R_ADVANCED_TRACKING: Advanced Tracking
+R_ADVANCED_TRACKING_DESC: <<
+	Increases the accuracy of all projectile-based weapons by $1.
+
+	Decreases the supply cost of firing projectile-based weapons by $1.
+>>
+
+R_FTL_COST: Hyperfield Stabilization
+R_FTL_COST_DESC: <<
+	Decreases all FTL Costs by $1.
+>>
+
+R_LABORATORIES: Laboratories
+R_LABORATORIES_DESC: <<
+	Research Complex buildings give $1 additional Research Pressure.
+>>
+
+R_FTL_JAMMER_COMBAT: FTL Jammer Shorter
+R_FTL_JAMMER_COMBAT_DESC: <<
+	Equip your FTL Jammer orbitals with a system that can overload and short out electrical circuits on enemy vessels.
+
+	Enemy flagships in systems you have an FTL Jammer in fight at 30% reduced combat effectiveness.
+>>
+STATUS_FTL_JAMMER_COMBAT: FTL Jammer Shorter
+STATUS_FTL_JAMMER_COMBAT_DESC: <<
+	An enemy FTL Jammer is shorting out the electrical circuits on this vessel, reducing its combat strength by 25%.
+>>
+
+R_WEALTH: Wealth
+R_WEALTH_DESC: Increases your empire's total income by $1.
+
+R_PROSPERITY: Prosperity
+R_PROSPERITY_DESC: Increases the effectiveness of spending excess budget money on welfare options by $1.
+
+R_OBEDIENCE: Obedience
+R_OBEDIENCE_DESC: Increases the Loyalty of all your planets by $1.
+
+R_ABUNDANCE: Abundance
+R_ABUNDANCE_DESC: Increases the Pressure given by all Tier 3 resources by $1.
+
+R_GRAVITON_CHANNELING: Graviton Channeling
+R_GRAVITON_CHANNELING_DESC: <<
+	Increases the Thrust provided by [b]Graviton Engines[/b] by $1, but doubles their power use.
+>>
+
+R_SUPPORT_SIZE: Compact Construction
+R_SUPPORT_SIZE_DESC: <<
+	Increases the size of all your support ship designs by $1 hexes.
+>>
+
+R_STATION_MAINTENANCE: Station Sustenance
+R_STATION_MAINTENANCE_DESC: <<
+	Decreases the maintenance cost of all your station designs by $1.
+>>
+
+R_TACTICS: Tactics
+R_TACTICS_DESC: <<
+	Increases all Experience gained by ships by 10%.
+>>
+
+R_POPULATION: Infrastructure
+R_POPULATION_DESC: <<
+	Increases the maximum population of all Level 3 or higher planets by $1.
+>>
+
+R_CONSTRUCTION: Construction
+R_CONSTRUCTION2: Construction 2
+R_CONSTRUCTION_DESC: <<
+	Decreases the build cost and construction time of imperial surface buildings by $1.
+>>
+
+R_ORBITAL_CONSTRUCTION: Orbital Construction
+R_ORBITAL_CONSTRUCTION2: Orbital Construction 2
+R_ORBITAL_CONSTRUCTION_DESC: <<
+	Decreases the build and labor costs of orbitals and stations by $1.
+>>
+
+R_INFINITE_HEALTH: Chassis Strength
+R_INFINITE_HEALTH_DESC: <<
+	Increases all ship and station design health by $1.
+
+	Can be researched multiple times. Each subsequent time it is researched, the cost and time taken are increased.
+>>
+
+R_INFINITE_DAMAGE: Weapon Lethality
+R_INFINITE_DAMAGE_DESC: <<
+	Increases the damage dealt by all your ships and stations by $1.
+
+	Can be researched multiple times. Each subsequent time it is researched, the cost and time taken are increased.
+>>
+
+R_INFINITE_THRUST: Engine Output
+R_INFINITE_THRUST_DESC: <<
+	Increases the thrust output of all your engines by $1.
+
+	Can be researched multiple times. Each subsequent time it is researched, the cost and time taken are increased.
+>>
+
+R_INFINITE_SUPPORT: Fleet Coordination
+R_INFINITE_SUPPORT_DESC: <<
+	Increases the support capacity of all your designs by $1.
+
+	Can be researched multiple times. Each subsequent time it is researched, the cost and time taken are increased.
+>>
+
+R_INFINITE_SHIELDS: Shield Modulation
+R_INFINITE_SHIELDS_DESC: <<
+	Increases the shield capacity and regeneration of all your designs by $1.
+
+	Can be researched multiple times. Each subsequent time it is researched, the cost and time taken are increased.
+>>
+
+R_FTL_HURDLE: FTL Comprehension
+R_FTL_HURDLE_DESC: <<
+	To progress further, we must better understand the principles behind FTL Energy and operation of the Hyperfield.
+
+	[i]This technology gives no benefit, and must be researched by spending FTL Energy to study it.[/i]
+>>
+
+R_ENERGY_HURDLE: Energy Experiments
+R_ENERGY_HURDLE_DESC: <<
+	To progress further, we must better understand the interactions of extremely high energy particles.
+
+	[i]This technology gives no benefit, and must be researched by spending Energy to study it.[/i]
+>>
+
+R_INFLUENCE_HURDLE: Sociological Studies
+R_INFLUENCE_HURDLE_DESC: <<
+	To progress further, we must better understand the behavior of large populations and their responses.
+
+	[i]This technology gives no benefit, and must be researched by spending Influence to study it.[/i]
+>>
+
+R_ARTIFICIAL_MOON: Artificial Moons
+R_ARTIFICIAL_MOON_DESC: <<
+	Unlocks the artificial moon construction:
+
+	[bbloc=#CONS_ARTIFICIAL_MOON_DESC/]
+>>
+
+R_IMP_FOUNDRY_LABOR: Metallurgy
+R_IMP_FOUNDRY_LABOR2: Metallurgy 2
+R_IMP_FOUNDRY_LABOR_DESC: <<
+	[i][color=#aaa]Improvements to the use of materials and labor division in planetary surface factories.[/color][/i]
+
+	Increases the labor generated by Foundry buildings by $1.
+>>

@@ -1,0 +1,197 @@
+Material: TradePaths
+	Shader: TradeLine
+	DepthWrite: Off
+	Lighting: No
+	Culling: None
+	Blend: Alpha
+
+Material: Territory
+	Shader: Territory
+	DepthWrite: Off
+	Lighting: No
+	Culling: None
+	Blend: Alpha
+	
+Material: SystemPlane
+	DepthWrite: Off
+	Lighting: No
+	Culling: None
+	Blend: Alpha
+	Shader: SystemPlane
+
+Material: GalaxyPlane
+	DepthWrite: Off
+	Lighting: No
+	Culling: None
+	Blend: Alpha
+	Shader: GalaxyPlane
+
+Material: Skybox
+    Culling: None
+    DepthTest: NoDepthTest
+    DepthWrite: No
+    Lighting: No
+    LoadPriority: Game
+    Mipmap: No
+    Texture: data/images/skybox_details.png
+    Cubemap2: data/images/skycube.png
+    Shader: Skycube
+
+Material: Blackhole
+	Lighting: No
+	Mipmap: No
+	Texture: data/images/black.png
+
+Material: AccretionDisk
+	Culling: None
+	Shader: AccretionDisk
+	Mipmap: No
+	DepthWrite: No
+	Alpha: True
+	Texture: data/images/accretion_disk.png
+
+// dont think this one is ever used for mine base
+Material: Asteroid
+//	Texture: data/images/asteroid.png
+	Texture: data/images/asteroid_normal.png
+	Texture2: data/images/stationEmissives/asteroid_base_emissives.png
+	Cubemap3: data/images/skycube.png
+	Shininess: 2
+	Shader: AsteroidPegmatite
+	Specular: #444444
+
+Material: AsteroidPegmatite
+//	Texture: data/images/asteroid.png
+	Texture: data/images/asteroid_normal.png
+	Texture2: data/images/stationEmissives/asteroid_base_emissives.png
+	Cubemap3: data/images/skycube.png
+	Shininess: 2
+	Shader: AsteroidPegmatite
+	Specular: #444444
+
+Material: AsteroidMagnetite
+//	Texture: data/images/asteroid.png
+	Texture: data/images/asteroid_normal.png
+	Texture2: data/images/stationEmissives/asteroid_base_emissives.png
+	Cubemap3: data/images/skycube.png
+	Shininess: 2
+	Shader: AsteroidMagnetite
+	Specular: #444444
+
+Material: AsteroidTonalite
+//	Texture: data/images/asteroid.png
+	Texture: data/images/asteroid_normal.png
+	Texture2: data/images/stationEmissives/asteroid_base_emissives.png
+	Cubemap3: data/images/skycube.png
+	Shininess: 2
+	Shader: AsteroidTonalite
+	Specular: #444444
+
+Material: Nova
+	Lighting: No
+	Shader: Nova
+	Blend: Add
+	Culling: Front
+	DepthWrite: No
+	LoadPriority: Game
+	Texture: data/images/difference_noise.png
+
+Material: StarSurface
+    Lighting: No
+    Shader: StarSurface
+    LoadPriority: Game
+    Texture: data/images/star_surface.png
+	Texture2: data/images/star_noise.png
+
+Material: PopupStarSurface
+	Lighting: No
+	Shader: PopupStarSurface
+	LoadPriority: Game
+	Texture: data/images/star_surface.png
+	Texture2: data/images/difference_noise.png
+
+Material: Prominence
+	Texture: data/images/prominence.png
+	Lighting: No
+	Blend: Add
+	DepthWrite: No
+	Shader: Prominence
+
+Material: Corona
+	Lighting: No
+	Shader: Corona
+	Blend: Add
+	DepthWrite: No
+	Culling: None
+	Mipmap: No
+	LoadPriority: Game
+	Texture: data/images/difference_noise.png
+
+Material: DistantStar
+	Lighting: No
+	Shader: ColoredAdd
+	Blend: Add
+	DepthWrite: No
+	Culling: None
+	LoadPriority: Game
+	Texture: data/images/distant_star.png
+
+Material: Nebula
+	Lighting: No
+	Blend: Alpha
+	Culling: None
+	DepthWrite: No
+	LoadPriority: Game
+	Texture: data/images/nebula/nebulas.png
+
+SpriteSheet: Nebulas
+	Inherit: Nebula
+	Texture: data/images/nebula/nebulas.png
+	Size: 64, 64
+
+Material: Ping
+	Culling: None
+	Alpha: True
+	DepthTest: NoDepthTest
+	Lighting: False
+	Shader: Ping
+
+Material: PlanetRing
+	Shader: PlanetRing
+	Alpha: True
+	Specular: 12
+	Texture2: data/images/difference_noise2.png
+	
+Material: PlanetRing1
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient1.png
+
+Material: PlanetRing2
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient2.png
+
+Material: PlanetRing3
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient3.png
+
+Material: PlanetRing4
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient4.png
+
+Material: PlanetRing5
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient5.png
+
+Material: PlanetRing6
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient6.png
+
+Material: PlanetRing7
+	Inherit: PlanetRing
+	Texture: data/images/rings/ring_gradient7.png
+
+Material: Debris
+	Texture: data/images/anomalies/wreckage.png
+	Cubemap2: data/images/skycube.png
+	Shader: Debris
+

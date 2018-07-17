@@ -1,0 +1,12 @@
+
+Skin: Default
+	Material: DefaultSkin
+	File: data/skin definitions/default.txt
+
+Skin: Debug
+	Material: DefaultSkin
+	File: data/skin definitions/debug.txt
+
+Skin: Editor
+	Material: Editor
+	File: data/skin definitions/editor.txt

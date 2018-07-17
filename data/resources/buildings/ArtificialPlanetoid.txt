@@ -1,0 +1,19 @@
+Resource: ArtificialPlanetoid
+	Name: #ARTIFICIAL_PLANETOID
+	Description: #ARTIFICIAL_PLANETOID_DESC
+	Artificial: True
+
+	Icon: DesignationIcons::10
+
+	Level: 0
+	Limitless Level: True
+	Can Be Terraformed: False
+	Exportable: False
+
+	RegenSurface(6, 8, Biome Count = 1, Force Biome = Artificial)
+	OnEnable(DevelopTiles(48))
+
+	AddResource(Labor, 5)
+	AddIncome(-160)
+	AddDummyResource(Water, 1)
+	AddDummyResource(Meat, 5)

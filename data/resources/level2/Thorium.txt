@@ -1,0 +1,12 @@
+Resource: Thorium
+	Name: #THORIUM
+	Description: #THORIUM_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIcons::35
+	Small Icon: ResourceIconsSmall::35
+
+	Level: 2
+	Affinity: Energy
+
+	Pressure: 7 Energy

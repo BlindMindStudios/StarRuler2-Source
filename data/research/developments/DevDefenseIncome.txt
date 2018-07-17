@@ -1,0 +1,27 @@
+Technology: DevDefenseIncome
+	Name: #R_DEV_DEFENSE_INCOME
+	Blurb: #R_DEV_DEFENSE_INCOME_BLURB:3
+	Description: #R_DEV_DEFENSE_INCOME_DESC:3
+	Class: Boost
+
+	Icon: techMilitia*#ffb710
+	Color: #af7926ff
+
+	Point Cost: 1000
+	Time Cost: 60
+
+	AddGlobalDefenseIncome(3)
+
+Technology: DevDefenseIncome2
+	Name: #R_DEV_DEFENSE_INCOME2
+	Blurb: #R_DEV_DEFENSE_INCOME_BLURB:6
+	Description: #R_DEV_DEFENSE_INCOME_DESC:6
+	Class: Boost
+
+	Icon: techMilitia*#ffb710
+	Color: #af7926ff
+
+	Point Cost: 1500
+	Time Cost: 100
+
+	AddGlobalDefenseIncome(6)

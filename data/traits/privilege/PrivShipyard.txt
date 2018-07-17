@@ -1,0 +1,14 @@
+Trait: PrivShipyard
+	Name: #PRIV_TRAIT_SHIPYARD
+	Description: #PRIV_TRAIT_SHIPYARD_DESC
+	Color: #ff8000
+
+	Category: Privilege
+	Available: False
+
+	AddModifier(MaintainCostFactor(0.5))
+
+	SpawnOrbital(Shipyard, Free = True, Add Status = PrivShipyard)
+
+	SpawnShip(Battleship, Empire, 20x Heavy Gunship, 40x Beamship, 20x Missile Boat, 20x Gunship)
+	SpawnShip(Battleship, Empire, 20x Heavy Gunship, 40x Beamship, 20x Missile Boat, 20x Gunship)

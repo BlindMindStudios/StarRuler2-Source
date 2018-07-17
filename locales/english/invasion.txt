@@ -1,0 +1,154 @@
+INVASION_MAP: Invasion
+INVASION_MAP_DESC: <<
+	Protect the galaxy from an ever stronger invasion force.
+>>
+INVASION_MAP_TEXT: <<
+	[i][color=#aaa]A line of remnant defense stations protects the galaxy from annihilation, but are threatened by increasingly strong invasion forces. Protect the defense line or face destruction![/color][/i]
+>>
+
+REMNANT_DEFENSE_LINE: Remnant Defense Line
+INVADER: Invader
+VERB_COLLECT: Collect
+NEXT_WAVE: Next Wave:
+NEXT_STRENGTH: Strength:
+INV_DIFFICULTY: Difficulty:
+
+INV_PICKUP_MONEY: Economy Booster
+INV_PICKUP_MONEY_DESC: <<
+	[color=#afa]Permanently increase your budget by §500k.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_PICKUP_LABOR: Labor Booster
+INV_PICKUP_LABOR_DESC: <<
+	[color=#afa]Increase homeworld labor by 10.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_PICKUP_FOOD: Food Generation
+INV_PICKUP_FOOD_DESC: <<
+	[color=#afa]Gain 4 Cultivation diplomacy cards.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_PICKUP_WATER: Water Generation
+INV_PICKUP_WATER_DESC: <<
+	[color=#afa]Spawns 4 Comets in this system.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_PICKUP_RESOURCE2: Exotic Resource
+INV_PICKUP_RESOURCE2_DESC: <<
+	[color=#afa]Gain a Tier 2 resource planet.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_PICKUP_RESOURCE1: Valuable Resource
+INV_PICKUP_RESOURCE1_DESC: <<
+	[color=#afa]Gain a Tier 1 resource planet.[/color]
+	[color=#faa]Increases invasion strength.[/color]
+>>
+
+INV_ART_PLANET: Matter Shard
+INV_ART_PLANET_DESC: <<
+	Create a new random planet.
+	[color=#f00]Added Strength:[/color] Spawned planet has [b]Drugs[/b].
+>>
+INV_ABL_PLANET: Random Planet
+INV_ABL_PLANET_DESC: <<
+	Generate a new owned planet at the targeted position.
+>>
+INV_ABL_PLANET_PLUS: Drugs Planet
+INV_ABL_PLANET_PLUS_DESC: <<
+	Generate a new owned Drugs planet at the targeted position.
+
+	[b][color=#f00]Increases invasion strength.[/color][/b]
+>>
+
+INV_ART_MONEY: Rare Shard
+INV_ART_MONEY_DESC: <<
+	Increase your income by §300k.
+	[color=#f00]Added Strength:[/color] Ship Labor Cost -10%
+>>
+INV_ABL_MONEY: §300k Income
+INV_ABL_MONEY_DESC: <<
+	Increase your budget income by §300k.
+>>
+INV_ABL_MONEY_PLUS: Construction
+INV_ABL_MONEY_PLUS_DESC: <<
+	All ships and stations cost 10% decreased Labor to build.
+
+	[b][color=#f00]Increases invasion strength.[/color][/b]
+>>
+
+INV_ART_STATION: Volatile Shard
+INV_ART_STATION_DESC: <<
+	Upgrade Remnant Station by 256 size.
+	[color=#f00]Added Strength:[/color] Immediately destroy all enemies in a system.
+>>
+INV_ABL_STATION: Station Upgrade
+INV_ABL_STATION_DESC: <<
+	The targeted remnant Defense Station is increased in size by 256.
+>>
+INV_ABL_STATION_PLUS: Destruction
+INV_ABL_STATION_PLUS_DESC: <<
+	All enemy fleets in the targeted system are immediately destroyed.
+
+	[b][color=#f00]Increases invasion strength.[/color][/b]
+>>
+
+INV_ART_RESEARCH: Exotic Shard
+INV_ART_RESEARCH_DESC: <<
+	Increase a resource's pressure by 4.
+	[color=#f00]Added Strength:[/color] All Research Complexes give +1 Research Pressure.
+>>
+INV_ABL_RESEARCH: Resource
+INV_ABL_RESEARCH_DESC: <<
+	The targeted resource gives 4 extra pressure of its type.
+>>
+INV_ABL_RESEARCH_PLUS: Laboratory
+INV_ABL_RESEARCH_PLUS_DESC: <<
+	All your Research Complexes give an additional Research Pressure.
+
+	[b][color=#f00]Increases invasion strength.[/color][/b]
+>>
+
+INV_ART_SYSTEM: Singularity Shard
+INV_ART_SYSTEM_DESC: <<
+	Generate a new system with protoplanets in it.
+	[color=#f00]Added Strength:[/color] Sacrifice a planet for Energy.
+>>
+INV_ABL_SYSTEM: Generate
+INV_ABL_SYSTEM_DESC: <<
+	Generate a new Star surrounded by protoplanets.
+>>
+INV_ABL_SYSTEM_PLUS: Convert Energy
+INV_ABL_SYSTEM_PLUS_DESC: <<
+	The targeted planet you own is destroyed. Your stored Energy becomes 2500.
+
+	[b][color=#f00]Increases invasion strength.[/color][/b]
+>>
+
+HELP_INVASION: <<
+	[font=Big]Invasion[/font][vspace=4/]
+	You've chosen to play on the [color=#aaffaa]Invasion[/color] map. Here's a few quick tips to get you started!
+	[color=#aaa][i]Access this window at any time by pressing the [img=MenuIcons::3;22/] button on the right side of the screen.[/i][/color]
+
+	[font=Medium]Co-operative[/font][vspace=4/]
+	[color=#ccc]Invasion is a co-operative map. Empires cannot declare war on each other. Diplomatic connivery is A-OK, however![/color]
+
+	[font=Medium]Defense![/font][vspace=4/]
+	[color=#ccc]Your home system borders three systems containing remnant defense stations. These systems will be attacked by ever stronger waves of invaders.[/color]
+
+	[font=Medium]Defeat[/font][vspace=4/]
+	[color=#ccc]You must [b]protect the Remnant Defense Stations[/b]. When all three stations in a system are dead, the system will explode. When all three of the systems you are defending are gone, your empire will explode.[/color]
+
+	[font=Medium]Maintenance-Free[/font][vspace=4/]
+	[color=#ccc]Unlike normal maps, your flagships have no maintenance cost, so build as many as you like![/color]
+
+	[font=Medium]Artifact Shards[/font][vspace=4/]
+	[color=#ccc]When you defeat a wave of Invaders, they drop an [b]Artifact Shard[/b]. These can be used for free to gain some sort of boost for your empire.[/color]
+
+	[font=Medium]Secondary Shards[/font][vspace=4/]
+	[color=#ccc]Each artifact shard also has a secondary, more powerful, way to use it. Using this increases the strength of the invading waves for everyone in the game, however![/color]
+>>

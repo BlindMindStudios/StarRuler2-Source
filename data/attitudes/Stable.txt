@@ -1,0 +1,43 @@
+Attitude: Stable
+	Name: #ATT_STABLE
+	Progress: #ATT_STABLE_PROGRESS
+	Color: #50c53a
+	Sort: 50
+
+	ProgressFromAttribute(Level3Planets, Monotonic = False)
+	Conflict(Progressive)
+
+	Level:
+		Description: #ATT_STABLE_L1
+		Icon: techResupply * #fe4040
+		Threshold: 1
+
+		EnableModifier(SupplyRateFactor(1.2))
+
+	Level:
+		Description: #ATT_STABLE_L2
+		Icon: AttributeIcons::1
+		Threshold: 3
+
+		ModGlobalLoyalty(+2)
+
+	Level:
+		Description: #ATT_STABLE_L3
+		Icon: Warehouse
+		Threshold: 5
+
+		ModEmpireAttribute(BuildingCostFactor, Multiply, 0.5)
+
+	Level:
+		Description: #ATT_STABLE_L4
+		Icon: HappyFace
+		Threshold: 8
+
+		ModEmpireAttribute(HappyMultiplier, Add, 1)
+
+	Level:
+		Description: #ATT_STABLE_L5
+		Icon: ResourceIcon::0
+		Threshold: 12
+
+		ModEmpireAttribute(ShipCostRegain, Add, 0.2)

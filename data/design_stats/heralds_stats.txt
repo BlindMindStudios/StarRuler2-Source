@@ -1,0 +1,96 @@
+SubsystemStat: DroneCount
+	Name: #S_DroneCount
+	Color: #e0ff00
+
+	Variable: DroneCount
+
+GlobalStat: JumpRange
+	Name: #S_JUMP_RANGE
+	Description: #STT_JUMP_RANGE
+	Icon: ActionBarIcons::5
+	Color: #67ad85
+	Suffix: u
+
+	Variable: JumpRange
+
+SubsystemStat: Percentage
+	Name: #S_Percentage
+	Icon: AttributeIcons::6 * #8080ff
+	Color: #8080ff
+
+	Variable: Percentage
+
+SubsystemStat: BonusShield
+	Name: #S_BonusShield
+	Icon: AttributeIcons::6
+	Color: #8080ff
+
+	Variable: BonusShield
+
+SubsystemStat: MaxLoyalty
+	Name: #S_MaxLoyalty
+	Icon: AttributeIcons::1
+	Color: #ff8080
+
+	Variable: MaxLoyalty
+
+SubsystemStat: RaidRange
+	Name: #S_RaidRange
+	Color: #ca5700
+
+	Variable: RaidRange
+
+SubsystemStat: SupplyGain
+	Name: #S_SupplyGain
+	Color: #629b26
+
+	Suffix: /s
+	Variable: SupplyGain
+
+SubsystemStat: DamageOverTime
+	Name: #S_DamageOverTime
+	Icon: AttributeIcons::3
+	Color: #ba5a78
+
+	Suffix: /s
+	Variable: DamageOverTime
+
+SubsystemStat: ConvertInterval
+	Name: #S_ConvertInterval
+	Color: #a4b73c
+
+	Suffix: s
+	Variable: ConvertInterval
+
+GlobalStat: FTLBuildCost
+	Name: #S_FTLBuildCost
+	Description: #STT_FTLBuildCost
+	Icon: ResourceIcon::3
+	Color: #00c0ff
+
+	Variable: FTLBuildCost
+
+GlobalStat: InfluenceBuildCost
+	Name: #S_InfluenceBuildCost
+	Description: #STT_InfluenceBuildCost
+	Icon: ResourceIcon::1
+	Color: #0087c7
+
+	Variable: InfluenceBuildCost
+
+GlobalStat: BoostAcceleration
+	 Name: #S_BOOST_ACCELERATION
+	 Description: #STT_BOOST_ACCELERATION
+	 Icon: AttributeIcons::0
+	 Color: #8872bb
+	 Suffix: u/s²
+
+	 Variable: BoostThrust
+	 DivBy: Hex.Mass
+
+SubsystemStat: Instances
+	Name: #S_Instances
+	Color: #348c99
+	Suffix: /s
+	
+	Variable: Instances

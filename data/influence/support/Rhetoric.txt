@@ -1,0 +1,33 @@
+Card: Rhetoric
+	Name: #CARD_RHETORIC
+	Description: #CARD_RHETORIC_DESC
+
+	Icon: CardIcons::21
+	
+	Color: #ff8044
+
+	Class: Support
+	Rarity: Uncommon
+	Side: Both
+	Frequency: 0
+
+	Max Quality: 3
+
+	Max Uses: 6
+
+	Base Purchase Cost: 2
+	Uses Purchase Cost: 1
+
+	Base Play Cost: 4
+	Quality Play Cost: 1
+
+	Base Weight: 1
+	Quality Weight: 1
+
+	LogVoteEvent(Support = #CARD_RHETORIC_LOG_Y, Oppose = #CARD_RHETORIC_LOG_N)
+
+	CostPerPlay(2)
+	WeightPerPlay(1)
+	OnSucceedDistributeRandomCardsToSide(3) //Long function is long
+
+	AI: VoteSupport()

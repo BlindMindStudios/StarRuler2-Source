@@ -1,0 +1,27 @@
+Module: AncientEmbassy
+	Name: #ORB_ANCIENT_EMBASSY
+	Blurb: #ORB_ANCIENT_EMBASSY_BLURB
+	Description: #ORB_ANCIENT_EMBASSY_DESC
+	Icon: GuiOrbitalIcons::12
+
+	Core: True
+	Standalone: True
+
+	Health: 15000
+	Armor: 5000
+
+	Model: Research_Station
+	Material: GenericPBR_Research_Station
+
+	CannotBuildManually()
+
+	ProtectSystem()
+	AddFleetCommand(500)
+
+	GlobalTradeNode()
+
+	ModLocalLoyalty(+5)
+	ModRegionTargetCostMod(-5)
+	OnKillSpreadLeverageToFriendlies(Quality Factor = 12.0)
+
+	Strategic Icon: OrbitalIcons::12

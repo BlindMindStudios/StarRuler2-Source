@@ -1,0 +1,22 @@
+Template: var/ProjResist
+	Modifier: ProjResistFactor(factor)
+		ProjResist := ProjResist * factor
+
+Template: var/EnergyResist
+	Modifier: EnergyResistFactor(factor)
+		EnergyResist := EnergyResist * factor
+
+Template: var/ExplosiveResist
+	Modifier: ExplosiveResistFactor(factor)
+		ExplosiveResist := ExplosiveResist * factor
+
+Template: var/ProjResist, var/EnergyResist, var/ExplosiveResist
+	Modifier: ResistFactor(factor)
+		ProjResist := ProjResist * factor
+		EnergyResist := EnergyResist * factor
+		ExplosiveResist := ExplosiveResist * factor
+
+Template: tag/IsArmor
+	Modifier: PenResistMod(mod)
+		Hex.Resistance := Hex.Resistance + mod
+

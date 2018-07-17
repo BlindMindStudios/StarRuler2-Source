@@ -1,0 +1,14 @@
+Biome: Space
+	Name: #BIOME_SPACE
+	
+	IsVoid: True
+	Buildable: False
+
+	Temperature: 0
+	Humidity: 0
+	
+	UseWeight: 0
+	BuildTime: 0
+	Frequency: 0
+	
+	Color: #ff0000

@@ -1,0 +1,32 @@
+Resource: Marenium
+	Name: #MARENIUM
+	Blurb: #MARENIUM_BLURB
+	Description: #MARENIUM_DESC
+	Native Biome: Crystallic
+	Class: Scalable
+	DLC: Heralds
+
+	Small Icon: ResourceIconsSmall::64
+	Pressure: 1 Energy
+
+	Rarity: Unique
+	Require Contestation: 60
+
+	Limitless Level: True
+	Exportable: False
+	
+	TiedSubsystemUnlock(MareniumGen, UnlockMareniumGen)
+
+	IfLevel(0, ModEmpireAttribute(MareniumEfficiency, Add, +0.05), Exact = True)
+	IfLevel(1, ModEmpireAttribute(MareniumEfficiency, Add, +0.10), Exact = True)
+	IfLevel(2, ModEmpireAttribute(MareniumEfficiency, Add, +0.15), Exact = True)
+	IfLevel(3, ModEmpireAttribute(MareniumEfficiency, Add, +0.20), Exact = True)
+	IfLevel(4, ModEmpireAttribute(MareniumEfficiency, Add, +0.25), Exact = True)
+	IfLevel(5, ModEmpireAttribute(MareniumEfficiency, Add, +0.30), Exact = True)
+
+	IfLevel(0, ModEmpireAttribute(MareniumAcceleration, Add, +0.10), Exact = True)
+	IfLevel(1, ModEmpireAttribute(MareniumAcceleration, Add, +0.20), Exact = True)
+	IfLevel(2, ModEmpireAttribute(MareniumAcceleration, Add, +0.40), Exact = True)
+	IfLevel(3, ModEmpireAttribute(MareniumAcceleration, Add, +0.70), Exact = True)
+	IfLevel(4, ModEmpireAttribute(MareniumAcceleration, Add, +1.50), Exact = True)
+	IfLevel(5, ModEmpireAttribute(MareniumAcceleration, Add, +4.00), Exact = True)

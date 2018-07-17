@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{0e83e20a-24ba-4c9f-9315-d078b2bb17a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{ed1b1414-c5aa-4904-a1f9-9dadf6b973db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\GLFW\glfw3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GLFW\glfw3native.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win32_platform.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\internal.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\clipboard.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\context.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamma.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\init.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\joystick.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\monitor.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\time.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wgl_context.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_clipboard.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_gamma.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_init.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_joystick.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_monitor.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_time.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32_window.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window.c">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

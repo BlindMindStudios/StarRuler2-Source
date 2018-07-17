@@ -1,0 +1,5 @@
+Status: StarChildren
+	Visible To: Nobody
+
+	EnableAfter(IfNotHaveStatus(StarHabitats, OnEnable(SpawnOrbital(Habitat, In Orbit = True))), 5) #version<113
+	IfNotHaveStatus(StarHabitats, EnableAfter(OnEnable(SpawnOrbital(Habitat, In Orbit = True)), 5)) #version>=113

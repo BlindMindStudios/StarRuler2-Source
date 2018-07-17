@@ -1,0 +1,25 @@
+Module: VacuumTelescope
+	Name: #VACUUM_TELESCOPE
+	Blurb: #VACUUM_TELESCOPE_BLURB
+	Description: #VACUUM_TELESCOPE_DESC
+
+	Icon: GuiOrbitalIcons::17
+	Strategic Icon: OrbitalIcons::17
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 1000
+	Labor Cost: 100
+	ConsumeCargo(Ore, 5000)
+
+	RequireUnlockTag(VacuumTelescopeUnlock)
+
+	Health: 50000
+	Armor: 50000
+
+	Model: Observatory
+	Material: GenericPBR_Telescope
+	Size: 50
+
+	GrantAllFleetVision(System Space = False, Deep Space = True, In FTL = False, Stations = True)

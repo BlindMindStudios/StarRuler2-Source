@@ -1,0 +1,99 @@
+Node TradeLinesNode from nodes.TradeLines::TradeLinesNodeScript {
+	void addPathing(int towards, Object@ from, Object@ to, int resId, uint resource);
+	void removePathing(int towards, Object@ from, int resId);
+	void establish(uint sysId);
+}
+
+Node SystemPlaneNode from nodes.SystemPlane::SystemPlaneNodeScript {
+	void establish(Region&);
+	void setPrimaryEmpire(Empire@);
+	void setContested(uint mode);
+	void addMetalDebris(vec3d position, uint count = 1);
+}
+
+Node TerritoryNode from nodes.Territory::TerritoryNodeScript {
+	void setOwner(Empire@ emp);
+	void addInner(int sysId, vec3d position, double radius);
+	void addEdge(int sysId, vec3d position, double radius);
+	void removeInner(int sysId);
+	void removeEdge(int sysId);
+}
+
+Node PlanetIconNode from nodes.PlanetIcon::PlanetIconNodeScript {
+	void establish(Planet&);
+	void setOwner(Empire@ emp);
+	void setLevel(uint level);
+	void setResource(uint resource);
+	void setCounter(uint index, uint amount);
+	void setState(bool disabled, bool exported, bool material, bool decaying);
+	void setBeingColonized(bool value);
+	void setCapture(Empire@ emp, float pct);
+	void setStrategic(vec3d position, vec3d origin);
+	void clearStrategic();
+}
+
+Node ShipyardNode from nodes.ShipyardNode::ShipyardNodeScript {
+	void updateProgress(const Design@ design, float progress);
+}
+
+Node OrbitalNode from nodes.OrbitalNode::OrbitalNodeScript {
+	void establish(Orbital& obj, uint typeId);
+	void setFleetPlane(double radius);
+}
+
+Node FleetPlaneNode from nodes.FleetPlane::FleetPlaneNodeScript {
+	void establish(Object& obj, double radius);
+	void set_hasSupply(bool hasSupply);
+	void set_hasFleet(bool hasFleet);
+}
+
+Node StarNode from nodes.StarNode::StarNodeScript {
+}
+
+Node NovaNode from nodes.NovaNode::NovaNodeScript {
+}
+
+Node BlackholeNode from nodes.BlackholeNode::BlackholeNodeScript {
+	void establish(Star& obj);
+}
+
+Node PlanetNode from nodes.PlanetNode::PlanetNodeScript {
+	void establish(Planet@ obj);
+	void set_planetType(int id);
+	void set_colonized(bool);
+	void set_flags(uint flags);
+	void addRing(uint rnd);
+	void addMoon(float size, uint style = 0);
+	void giveAsteroids();
+}
+
+Node GalaxyGas from nodes.GalaxyGas::GalaxyGasScript {
+	void addSprite(vec3d position, double radius, uint col, bool structured, int baseAlpha = 0);
+	void read(Message& msg);
+	void write(Message& msg);
+}
+
+Node GalaxyPlaneNode from nodes.GalaxyPlane::GalaxyPlaneScript {
+	void establish(vec3d pos, double radius);
+}
+
+Node StrategicIconNode from nodes.StrategicIcon::StrategicIconNodeScript {
+	void establish(Object@ obj, double Size, const SpriteSheet& sht, uint index);
+	void establish(Object@ obj, double Size, const Material& material);
+	void setStrategic(vec3d position, vec3d origin);
+	void clearStrategic();
+	void setColor(uint color);
+	void clearColor();
+}
+
+Node PersistentGfx from nodes.PersistentGfx::PersistentGfxScript {
+	void establish(Object@ obj, string particle, double scale = 1.0);
+	void establish(vec3d position, string particle, double scale = 1.0, Object@ parent = null);
+	void rotate(quaterniond rot);
+	void setObjectRotation(bool value);
+	void stop();
+}
+
+Node PingNode from pings::Ping {
+	void establish(Empire@ emp, uint type);
+}

@@ -1,0 +1,14 @@
+Technology: Energy
+	Name: #R_ENERGY
+	Description: #R_ENERGY_DESC:1
+
+	Icon: ResourceIcon::2
+	Color: #42b4bd
+
+	Category: Basic Upgrades
+	Class: Upgrade
+
+	Point Cost: 500
+	Time Cost: 80
+
+	AddEnergyIncome(1)

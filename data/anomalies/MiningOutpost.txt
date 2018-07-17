@@ -1,0 +1,45 @@
+Anomaly: MiningOutpost
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State:
+		Narrative: #ANOMALY_NAR_MINING_OUTPOST
+
+		Model: Asteroid1
+		Material: AsteroidMagnetite
+
+		Choice: Mine
+		Choice: Convert
+
+	State:
+		Narrative: #ANOMALY_NAR_MINING_OUTPOST_VOLAT
+
+		Model: Asteroid2
+		Material: AsteroidTonalite
+
+		Choice: Mine
+		Choice: Convert
+		Choice: Explode
+
+	Option: Mine
+		Icon: ResourceIcons::7
+		Description: #ANOMALY_MINING_OUTPOST_MINE
+
+		PricedAsteroid(10, Iron, AsteroidLabor, Water)
+
+	Option: Convert
+		Icon: ResourceIcons::12
+		Description: #ANOMALY_MINING_OUTPOST_CONVERT
+		Chance: 50%
+
+		PricedAsteroid(20, RareMetals, NativeGold)
+
+	Option: Explode
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_MINING_OUTPOST_EXPLODE
+
+		Result: 50%
+			PricedAsteroid(10, AsteroidAffinity)
+		
+		Result: 50%
+			PricedAsteroid(20, Neutronium)

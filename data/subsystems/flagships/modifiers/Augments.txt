@@ -1,0 +1,46 @@
+Template: hexVar/HP, tag/Weapon, !tag/NoAugment
+	Module: AugmentReload
+		Name: #S_AUGMENT_RELOAD
+		Description: #S_AUGMENT_RELOAD_DESC
+		Unique: True
+
+		Color: #ffff00
+		Sprite: SupportCommand * #ffff00
+
+		Hex.HP := 3.0 * Hex.HP
+		Hex.BuildCost := Size
+
+		AddModifier: optional ReloadFactor(0.8)
+		AddModifier: optional CooldownFactor(0.8)
+		AddModifier: HPFactor(0.5)
+
+	Module: AugmentDamage
+		Name: #S_AUGMENT_DAMAGE
+		Description: #S_AUGMENT_DAMAGE_DESC
+		Unique: True
+
+		Color: #ff8080
+		Sprite: SupportCommand * #ff8080
+
+		Hex.HP := 3.0 * Hex.HP
+		Hex.BuildCost := Size
+
+		AddModifier: optional RangeFactor(0.5)
+		AddModifier: optional DamageFactor(1.25)
+		AddModifier: optional BeamDPSFactor(1.25)
+
+Template: hexVar/HP, var/SupplyCost, tag/Weapon, !tag/NoAugment
+	Module: AugmentSupply
+		Name: #S_AUGMENT_SUPPLY
+		Description: #S_AUGMENT_SUPPLY_DESC
+		Unique: True
+
+		Color: #8080ff
+		Sprite: SupportCommand * #8080ff
+
+		Hex.HP := 3.0 * Hex.HP
+		Hex.BuildCost := Size
+
+		AddModifier: optional SupplyCostFactor(0.7)
+		AddModifier: optional FireArcFactor(0.5)
+		AddModifier: optional SpeedFactor(0.5)

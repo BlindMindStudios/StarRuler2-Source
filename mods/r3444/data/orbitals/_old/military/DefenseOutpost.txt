@@ -1,0 +1,13 @@
+Module: DefenseOutpost
+	Name: #ORB_DEFENSE_OUTPOST
+	Blurb: #ORB_DEFENSE_OUTPOST_BLURB
+	Description: #ORB_DEFENSE_OUTPOST_DESC
+	Icon: LoyaltyIcon
+	Standalone: False
+	Core: False
+
+	Require Affinity: 1 Defense
+	Build Cost: 250
+
+	ProtectSystem()
+	AddFleetCommand(500)

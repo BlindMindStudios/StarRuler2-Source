@@ -1,0 +1,13 @@
+Ability: UnobtaniumMorph
+	Name: #ABL_MORPH_UNOBTANIUM
+	Description: #ABL_MORPH_UNOBTANIUM_DESC
+	Icon: ResourceIcons::26
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterAllied(targ)
+	TargetFilterResourceNonUnique(targ)
+	TargetFilterResourceNonArtificial(targ)
+	TargetFilterResourceNot(targ, Plains)
+
+	MorphResourceIntoNative(targ)

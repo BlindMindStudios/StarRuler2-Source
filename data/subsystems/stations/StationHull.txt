@@ -1,0 +1,55 @@
+Subsystem: StationHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Hull: Station
+	EvaluationOrder: -100
+
+	HexLimit := 160
+	FreeHexLimit := 0
+
+	GridWidth := 28
+	GridHeight := 23
+
+	Ship.ExternalHexes := 0
+	Ship.HexSize := ShipSize / (HexLimit - FreeHexLimit)
+
+	Repair := (ShipSize / HexLimit) * 8
+
+	OnCheckErrors: designs::checkGlobalDesign
+
+	Hex.LaborCost := 0.1 * 0.5 * ShipSize
+	Hex.BuildCost := 1.1 * 0.75 * ShipSize
+	Hex.MaintainCost := 2 * 0.25 * ShipSize^0.5
+
+	Hex.Mass := 0
+	AddPostModifier: AddMass(3.0 * ShipSize * (1.0 - max((ShipTotalHexes - Ship.ExternalHexes) / HexLimit, 0.0)))
+
+	Assert: ShipTotalHexes - Ship.ExternalHexes < Sum.HexLimit + 0.001
+		Message: #ERROR_HEX_COUNT
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL
+
+	RequirePrayer := 0
+	Assert: (RequirePrayer == 0) || (Sum.Prayer > 0)
+		Message: #ERROR_NEED_PRAYER
+
+	MaintenanceMod := 1.0
+	RangeMod := 1.0
+	HPMod := 1.0
+	LaborMod := 1.0
+
+	AddShipModifier: BuildCostFactor(0.75)
+	AddShipModifier: !tag/StaticMaintenance::MaintCostFactor(0.2 * MaintenanceMod)
+	AddShipModifier: LaborCostFactor(0.3 * LaborMod)
+	AddShipModifier: SupportCapacityFactor(0.33)
+	AddShipModifier: HpFactor(4.0 * HPMod)
+	AddShipModifier: ShieldCapacityFactor(4.0)
+	AddShipModifier: RangeFactor(2.0 * RangeMod)
+	AddShipModifier: SpreadFactor(0.5)
+	AddShipModifier: MassFactor(3.0)
+	AddShipModifier: FireArcFactor(2.0)
+	AddShipModifier: TrackingFactor(2.0)
+
+	Modifier: IncreaseHexLimit(Hexes)
+		HexLimit := HexLimit + Hexes
+		FreeHexLimit := FreeHexLimit + Hexes

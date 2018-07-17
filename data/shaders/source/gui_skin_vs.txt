@@ -1,0 +1,12 @@
+#version 120
+varying vec4 color;
+varying vec2 uv;
+varying vec2 qpos;
+
+void main()
+{
+	color = gl_Color;
+	uv = gl_MultiTexCoord0.xy;
+	gl_Position = ftransform();
+	qpos = gl_Position.xy;
+}

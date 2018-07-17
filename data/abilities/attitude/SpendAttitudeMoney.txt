@@ -1,0 +1,13 @@
+Ability: SpendAttitudeMoney
+	Name: #ABL_SPEND_ATTITUDE_MONEY
+	Description: #ABL_SPEND_ATTITUDE_MONEY_DESC
+	Icon: ResourceIcon::0
+
+	Hide Global: True
+
+	ConsumeMoney(500)
+	ShowMoneyValue(500, #COST)
+
+	GainAttitudeProgress(Materialism, 500)
+
+	RequireAttitudeNotMaxed(Materialism)

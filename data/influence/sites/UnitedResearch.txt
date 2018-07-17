@@ -1,0 +1,45 @@
+Card: UnitedResearch
+	Name: #CARD_UNITED_RESEARCH
+	Description: #CARD_UNITED_RESEARCH_DESC
+	Icon: CardIcons::28
+
+	Rarity: Epic
+
+	Target: planet = Object
+
+	Color: #4ea2cc
+	Class: Vote
+
+	Base Purchase Cost: 4
+	Base Play Cost: 6
+
+	TargetFilterType(planet, Planet)
+	TargetFilterOwned(planet)
+	TargetFilterNotStatus(planet, SenateBuilding)
+	TargetFilterNotStatus(planet, UnitedResearch)
+	TargetFilterNotStatus(planet, GalaxyMall)
+	ApplyRegionTargetCostMod(planet)
+	RequireContact()
+
+	PlayCostFromGlobal(UnitedResearchCount, 5.0)
+
+	ShowGlobalValue(DesignationIcons::5, #VAR_RESEARCH_INCOME, UnitedResearchCount, Factor = 2.0, Base = 2.0, Suffix = +Lv)
+
+	StartVote(UnitedResearch, planet)
+
+	AI: PlayOnImportantPlanets(planet)
+	AI: IgnoreIfAttributeGTE(HaveUnitedResearch, 1)
+
+Vote: UnitedResearch
+	Name: #VOTE_UNITED_RESEARCH
+	Icon: CardIcons::27
+
+	Target: planet = Object
+	CancelOnLost(planet)
+
+	ModGlobal(Pass, UnitedResearchCount, +1.0)
+
+	TriggerAllPlanets(RemoveStatus(UnitedResearch))
+	Trigger(planet, AddStatus(UnitedResearch))
+
+	AI: BadIfAttributeGTE(HaveUnitedResearch, 1.0, Weight = 10.0, Importance = 2.0)

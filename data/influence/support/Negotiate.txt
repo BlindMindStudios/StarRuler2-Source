@@ -1,0 +1,27 @@
+Card: Negotiate
+	Name: #CARD_NEGOTIATE
+	Description: #CARD_NEGOTIATE_DESC
+
+	Icon: CardIcons::6
+	Color: #00ffa4
+
+	Class: Support
+	Frequency: 20
+	Rarity: Basic
+	Side: Both
+
+	Max Quality: 3
+	Max Uses: 2
+
+	Base Purchase Cost: 1
+	Uses Purchase Cost: 2
+	Quality Purchase Cost: 1
+
+	QualityWeightLevel(2, 4, 8, 10)
+	QualityPlayCostLevel(2, 3, 4, 5)
+
+	AddWeightEmpireAttribute(NegotiateExtraWeight)
+
+	LogVoteEvent(Support = #CARD_NEGOTIATIONS_LOG_Y, Oppose = #CARD_NEGOTIATIONS_LOG_N)
+
+	AI: VoteSupport()

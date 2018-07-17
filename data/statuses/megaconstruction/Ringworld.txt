@@ -1,0 +1,9 @@
+Status: Ringworld
+	Name: #RINGWORLD
+	Description: #RINGWORLD_DESC
+	Icon: PlanetType::14
+	Color: #00ff00
+	Collapses: True
+
+	AddPlanetGfxFlag(Ringworld)
+	SetSystemFlag(RingworldFlag)

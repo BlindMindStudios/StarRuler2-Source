@@ -1,0 +1,12 @@
+varying vec2 uv;
+varying float depth;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	vec4 pos = ftransform();
+	depth = pos.z;
+	
+	gl_Position = pos;
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

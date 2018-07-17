@@ -1,0 +1,15 @@
+Status: Evangelized
+	Name: #STATUS_EVANGELIZED
+	Description: #STATUS_EVANGELIZED_DESC
+	Unique: True
+
+	Icon: AttributeIcons::1 * #ffff00
+	Color: #ffff00
+
+	AddResource(Influence, 1)
+	OnOriginEmpire(AddInfluenceStake(1), Allow Same = False)
+
+	GivePlanetIncomeToOriginEmpire(Percentage = 0.1, Allow Same = False)
+
+	RemoveOnOwnerChange()
+	OnlyOriginEmpireCanCapture()

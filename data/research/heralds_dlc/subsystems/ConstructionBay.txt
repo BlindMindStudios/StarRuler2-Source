@@ -1,0 +1,16 @@
+Technology: ConstructionBay
+	Name: #R_SYS_CONSTRUCTION_BAY
+	Description: #R_SYS_CONSTRUCTION_BAY_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 700
+	Time Cost: 60
+
+	Icon: ComputerCore * #fca404
+	Color: #fca404
+	
+	UnlockSubsystem(ConstructionBay)
+	SkipOnUnlockedSubsystem(ConstructionBay)
+
+	SecondaryMoneyCost(1000)

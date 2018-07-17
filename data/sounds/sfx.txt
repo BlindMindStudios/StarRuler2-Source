@@ -1,0 +1,272 @@
+Sound: objselect
+	File: data/sounds/ui/generic_click.ogg
+	Volume: 0.25
+
+Sound: clicked
+	File: data/sounds/ui/click.ogg
+	Volume: 0.8
+	
+Sound: laser_fire
+	File: data/sounds/weapons/laser.ogg
+	Volume: 0.2
+	
+Sound: laser_fire_2
+	File: data/sounds/weapons/laser_2.ogg
+	Volume: 0.2
+	
+Sound: laser_fire_3
+	File: data/sounds/weapons/laser_3.ogg
+	
+Sound: laser_fire_4
+	File: data/sounds/weapons/laser_4.ogg
+
+Sound: railgun_fire
+	File: data/sounds/weapons/railgun.ogg
+	Volume: 0.07
+
+Sound: muon_fire
+	File: data/sounds/weapons/muon.ogg
+	Volume: 0.07
+
+Sound: missile_launch
+	File: data/sounds/weapons/WEAP_missile1_01.ogg
+	
+Sound: missile_launch_2
+	File: data/sounds/weapons/WEAP_missile2_01.ogg
+	
+Sound: missile_launch_3
+	File: data/sounds/weapons/WEAP_missile3_01.ogg
+	
+Sound: torpedo_launch
+	File: data/sounds/weapons/WEAP_torpedo_fire.ogg
+
+Sound: torpedo_launch_2
+	File: data/sounds/weapons/WEAP_torpedo_fire_2.ogg
+	
+Sound: rocket
+	File: data/sounds/weapons/rocket.ogg
+	
+Sound: rocket_impact
+	File: data/sounds/weapons/EXPL_short_deep_01.ogg
+	
+Sound: rocket_impact_2
+	File: data/sounds/weapons/EXPL_short_deep_02.ogg
+
+Sound: rocket_impact_3
+	File: data/sounds/weapons/EXPL_short_deep_03.ogg
+	
+Sound: missile_impact
+	File: data/sounds/weapons/EXPL_norm_01.ogg
+	Volume: 1.0
+	
+Sound: missile_impact_2
+	File: data/sounds/weapons/EXPL_norm_02.ogg
+	
+Sound: missile_impact_3
+	File: data/sounds/weapons/EXPL_norm_03.ogg
+	
+Sound: torpedo_impact
+	File: data/sounds/weapons/EXPL_extra_norm_deep1.ogg
+	Volume: 0.4
+	
+Sound: torpedo_impact_2
+	File: data/sounds/weapons/EXPL_extra_norm_deep2.ogg
+	
+Sound: torpedo_impact_3
+	File: data/sounds/weapons/EXPL_extra_norm_deep3.ogg
+
+Sound: error
+	File: data/sounds/ui/error.ogg
+	Volume: 1
+
+Sound: confirm
+	File: data/sounds/ui/confirm.ogg
+	Volume: 0.5
+
+Sound: notify
+	File: data/sounds/ui/confirm.ogg
+	Volume: 1
+
+Sound: ship_explosion
+	File: data/sounds/ship_explosion.ogg
+	Volume: 0.23
+
+Stream: tear
+	File: data/sounds/tear.ogg
+
+Stream: gate
+	File: data/sounds/wormhole.ogg
+
+Sound: warp
+	File: data/sounds/warp_boom.ogg
+	
+Stream: star_rumble
+	File: data/sounds/star.ogg
+	Volume: 0.25
+	
+Stream: long_boom
+	File: data/sounds/long_boom.ogg
+	Volume: 2.0
+	
+Sound: alert_combat
+	File: data/sounds/ui/alert_combat.ogg
+	Volume: 0.4
+	
+Sound: alert_generic
+	File: data/sounds/ui/alert_generic.ogg
+	Volume: 0.4
+	
+Sound: alert_lostasset
+	File: data/sounds/ui/alert_lostasset.ogg
+	Volume: 0.4
+	
+Sound: card_draw
+	File: data/sounds/ui/card_draw.ogg
+	Volume: 0.50
+	
+Sound: card_examine
+	File: data/sounds/ui/card_examine.ogg
+	Volume: 0.50
+	
+Sound: card_play
+	File: data/sounds/ui/card_play.ogg
+	Volume: 0.50
+
+Sound: card_shuffle
+	File: data/sounds/ui/card_shuffle.ogg
+	Volume: 0.50
+	
+Sound: generic_click
+	File: data/sounds/ui/generic_click.ogg
+	Volume: 0.40
+
+Sound: generic_ok
+	File: data/sounds/ui/generic_ok.ogg
+	Volume: 0.40
+	
+Sound: generic_warn
+	File: data/sounds/ui/generic_warn.ogg
+	Volume: 0.625
+	
+Sound: ping
+	File: data/sounds/ui/ping.ogg
+	Volume: 1
+	
+Sound: ping_warn
+	File: data/sounds/ui/ping_warn.ogg
+	Volume: 1
+	
+Sound: cycle_economy
+	File: data/sounds/ui/cycle_economy.ogg
+	Volume: 0.5
+
+Sound: order_attack
+	File: data/sounds/orders/order_attack.ogg
+	Volume: 0.5
+	
+Sound: order_complete
+	File: data/sounds/orders/order_complete.ogg
+	Volume: 0.5
+	
+Sound: order_fling
+	File: data/sounds/orders/order_fling.ogg
+	Volume: 0.5	
+	
+Sound: order_gate
+	File: data/sounds/orders/order_gate.ogg	
+	Volume: 0.5
+	
+Sound: order_generic
+	File: data/sounds/orders/order_generic.ogg	
+	Volume: 0.5
+	
+Sound: order_goto
+	File: data/sounds/orders/order_goto.ogg
+	Volume: 0.5
+	
+Sound: order_hyperdrive
+	File: data/sounds/orders/order_hyperdrive.ogg
+	Volume: 0.5
+	
+Sound: order_move
+	File: data/sounds/orders/order_move.ogg
+	Volume: 0.5
+
+Sound: order_pickup
+	File: data/sounds/orders/order_pickup.ogg
+	Volume: 0.5
+
+Sound: order_refresh
+	File: data/sounds/orders/order_refresh.ogg
+	Volume: 0.5	
+	
+Sound: order_scan
+	File: data/sounds/orders/order_scan.ogg
+	Volume: 0.5
+
+Sound: order_slipstream
+	File: data/sounds/orders/order_slipstream.ogg
+	Volume: 0.5
+	
+Sound: open_slipstream
+	File: data/sounds/slipstream_open.ogg
+	Volume: 8.0
+
+Sound: ship_secondary_blast
+	File: data/sounds/ship_secondary_blastwave.ogg
+	Volume: 1.0
+	
+Sound: core_implosion_charge
+	File: data/sounds/core_implosion_charge.ogg
+	Volume: 1.0
+	
+Sound: core_implosion_blast
+	File: data/sounds/core_implosion_blast.ogg
+	Volume: 1.0
+
+Sound: ftl_charge
+	File: data/sounds/FTL_charge_01_mono.ogg
+	Volume: 1.0
+
+Sound: ftl_enter
+	File: data/sounds/FTL_enter_01.ogg
+
+Sound: ftl_exit
+	File: data/sounds/FTL_exit_01.ogg
+	
+Sound: artifact_ambient
+	File: data/sounds/SHIP_ambience_loop_3.ogg
+	
+Sound: espionage_activate
+	File: data/sounds/artifacts/ARTF_espionage_probe_1.ogg
+	
+Sound: comet_activate
+	File: data/sounds/artifacts/ARTF_comet.ogg
+	
+Sound: command_activate
+	File: data/sounds/artifacts/ARTF_command_computer_1.ogg
+	
+Sound: genesis_activate
+	File: data/sounds/artifacts/ARTF_genesis_effect.ogg
+	
+Sound: planetgen_activate
+	File: data/sounds/artifacts/ARTF_planet_generate.ogg
+
+Sound: telescope_activate
+	File: data/sounds/artifacts/ARTF_telescope_2.ogg
+
+Sound: generic_activate_1
+	File: data/sounds/artifacts/ARTF_generic_placement3.ogg
+	
+Sound: generic_activate_2
+	File: data/sounds/artifacts/ARTF_generic_placement2.ogg
+	
+Sound: revenant_activate
+	File: data/sounds/artifacts/ARTF_generic_placement1.ogg
+	
+Sound: ambient_blackhole
+	File: data/sounds/Blackhole_ambience_loop.ogg
+	
+Sound: graviton_charge
+	File: data/sounds/artifacts/WEAP_graviton_charge-001.ogg
+	

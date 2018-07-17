@@ -1,0 +1,186 @@
+
+//How long it takes for a planet to decay a level after losing its resources (seconds).
+LEVEL_DECAY_TIMER: 180
+
+//How much the labor cost of building an asteroid mining base increases per hop of distance.
+ASTEROID_COST_STEP: 0.5
+
+//The base frequency of permanent resources on asteroids.
+ASTEROID_PERMANENT_FREQ: 1.4
+
+//How much the labor cost of terraforming increases per hop of distance.
+TERRAFORM_COST_STEP: 1.0
+
+//How much the labor cost of constructing an orbital increases per hop of distance.
+ORBITAL_LABOR_COST_STEP: 0.5
+
+//Time at which influence votes pass (seconds).
+INFLUENCE_PASS_THRES: 180
+
+//Time at which influence votes fail (seconds).
+INFLUENCE_FAIL_THRES: -180
+
+//How much galactic influence is produced per empire per budget cycle.
+INFLUENCE_PER_EMPIRE: 6
+
+//Maximum influence generation per budget cycle for one influence stake.
+INFLUENCE_STAKE_MAX: 1
+
+//Influence storage capacity per influence stake.
+INFLUENCE_STAKE_STORE: 2
+
+//How many levels per research insight
+RESEARCH_LEVELS_PER_INSIGHT: 4
+
+//Influence card stack size.
+CARD_STACK_MIN: 6
+CARD_STACK_MAX: 9
+CARD_STACK_BASE: 3
+CARD_STACK_PER_PLAYER: 1
+
+//How long a card should stay on the stack under normal circumstances.
+CARD_STACK_DRAW_INTERVAL: 30
+
+//The amount of wormholes in multi-galaxy games.
+SYSTEMS_PER_WORMHOLE: 30
+GALAXY_MIN_WORMHOLES: 2
+
+//Stored energy increment that halves energy generation.
+ENERGY_EFFICIENCY_STEP: 500
+//Amount of energy to be collected for every seed ship.
+ENERGY_PER_SEEDSHIP: 2000
+//Amount of artifacts per system to aim for.
+TARGET_ARTIFACTS_PER_SYSTEM: 0.3
+//Artifacts seeded per seed ship.
+ARTIFACTS_PER_SEEDSHIP: 5
+//Artifacts dropped when a seed ship dies.
+ARTIFACTS_SEEDSHIP_DEATH: 5
+
+//Time to siege for every 10 loyalty
+SIEGE_LOYALTY_TIME: 90
+//Supply cost to siege per loyalty
+SIEGE_LOYALTY_SUPPLY_COST: 4000
+
+//Population growth reduction when colonizing
+COLONIZING_GROWTH_PENALTY: 0.3
+
+//The chance a planet has of spawning with a condition
+PLANET_CONDITION_CHANCE: 0.2
+
+//Frequency of anomalies
+ANOMALY_OCCURANCE: 0.2
+
+//Frequency of remnants
+REMNANT_OCCURANCE: 0.3
+
+//Frequency of asteroids
+ASTEROID_OCCURANCE: 0.45
+RESOURCE_ASTEROID_OCCURANCE: 0.45
+
+//Frequency of unique systems
+UNIQUE_SYSTEM_OCCURANCE: 0.3
+
+//Frequency of unique resources
+UNIQUE_RESOURCE_OCCURANCE: 0.3
+
+//Frequency of planets in systems
+PLANET_FREQUENCY: 1.0
+
+//Frequency of artifacts
+ARTIFACT_FREQUENCY: 0.25
+
+//System size modifier
+SYSTEM_SIZE: 1.0
+
+//Whether to enable civilian trade
+ENABLE_CIVILIAN_TRADE: 1.0
+
+//Modifier on graphical distances
+GFX_DISTANCE_MOD: 1.0
+
+//Time limit for the game
+GAME_TIME_LIMIT: 0
+
+//Whether empires start with fleets
+DISABLE_STARTING_FLEETS: 0
+
+//Whether the remnants are aggressive
+REMNANT_AGGRESSION: 0
+
+//Mass of an asteroid
+ASTEROID_MASS: 3000
+
+//Whether to enable revenant parts
+ENABLE_UNIQUE_SPREADS: 1
+ENABLE_REVENANT_PARTS: 1
+
+//Whether teams should start close together
+TEAMS_START_CLOSE: 1
+
+//Whether members of teams can surrender
+ALLOW_TEAM_SURRENDER: 0
+
+//Whether the dread pirate should be enabled
+ENABLE_DREAD_PIRATE: 1
+
+//Whether or not to enforce resource scarcity
+RESOURCE_SCARCITY: 1
+
+//How long it takes for a full labor storage to dump into a project
+LABOR_STORAGE_DUMP_TIME: 60
+
+//How many influence points you get as bonus when being the first empire someone meets
+INFLUENCE_CONTACT_BONUS: 5
+
+//Whether to enable influence events
+ENABLE_INFLUENCE_EVENTS: 1
+
+//Whether all systems should start explored
+START_EXPLORED_MAP: 1
+
+//Increase in build cost from using a dry dock
+DRYDOCK_BUILDCOST_FACTOR: 1.25
+
+//Chance of a planet having an extra moon
+PLANET_MOON_CHANCE: 0.3
+
+//Whether to hide empire relations to each other
+HIDE_EMPIRE_RELATIONS: 0
+
+//Frequency of random events in games
+RANDOM_EVENT_OCCURRENCE: 0
+
+//Absolute minimum interval between random events
+RANDOM_EVENT_MIN_INTERVAL: 180
+
+//Whether to enable terraforming
+ENABLE_TERRAFORMING: 1
+
+//Multiplier to civilian trade activity
+CIVILIAN_TRADE_MULT: 1
+
+//Amount of secret projects to unlock per game
+PICK_SECRET_PROJECTS: 2
+
+//Invasion difficulty
+INVASION_DIFFICULTY: 0.5
+
+//How often senate leader receives new cards
+SENATE_LEADER_CARD_TIMER: 600
+
+//Experience data
+EXPERIENCE_GAIN_FACTOR: 1
+EXPERIENCE_BASE_AMOUNT: 1
+EXPERIENCE_INCREASE_AMOUNT: 1
+
+//Influence victory
+ENABLE_INFLUENCE_VICTORY: 1
+
+//Attitude costs
+ATTITUDE_BASE_COST: 5
+ATTITUDE_INC_COST: 5
+ATTITUDE_DISCARD_COST: 4
+ATTITUDE_DISCARD_LEVEL_COST: 3
+
+INFLUENCE_EVENT_FREQ_MIN: 0.03
+INFLUENCE_EVENT_FREQ_MAX: 0.06

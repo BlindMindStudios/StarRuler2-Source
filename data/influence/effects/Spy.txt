@@ -1,0 +1,40 @@
+Card: Spy
+	Name: #CARD_SPY
+	Description: #CARD_SPY_DESC
+
+	Icon: CardIcons::10
+
+	Color: #ff4fa4
+	Class: Effect
+	Rarity: Rare
+
+	Base Purchase Cost: 4
+	Base Play Cost: 4
+
+	Max Quality: 3
+
+	GenerateRandomEmpire(target, Generic Chance = 0.3)
+	DisappearSelfBuy(target)
+
+	Target: target = Empire
+	TargetFilterOtherEmpire(target)
+
+	ShowDuration(300, Per Quality = 180)
+	CreateEffect(Spy, target, Quality Duration = 180)
+
+	AI: BuyAgainstEnemies(target)
+	AI: PlayOnEnemy(target, War Only = True)
+
+Effect: Spy
+	Name: #CARD_SPY_EFFECT
+	Description: #CARD_SPY_EFFECT_DESC
+	Color: #ff4fa4
+
+	Icon: CardIcons::10
+
+	Target: target = Empire
+
+	Default Duration: 300
+	Upkeep: 0.2
+
+	GrantVisionOver(target)

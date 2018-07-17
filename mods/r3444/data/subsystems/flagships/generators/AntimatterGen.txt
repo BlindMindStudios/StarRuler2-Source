@@ -1,0 +1,32 @@
+Subsystem: AntimatterGen
+	Name: #AMGEN_NAME
+	Description: #AMGEN_DESC
+	BaseColor: #5ade8b
+	Elevation: 1
+
+	Tags: NoCore, NonContiguous, IsReactor, Category:Control
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Power := 100 * Size
+	SupplyCapacity := Size * 1000
+	SupplyRate := Size * 150
+
+	Hex.Resistance := 0.5
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Hex.LaborCost := 0.3 * HexSize + 0.8
+	Hex.BuildCost := 20 * HexSize + 2
+	Hex.MaintainCost := 0
+	
+	Provides:
+		Power = Power
+	
+	Module: Default
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor
+
+	Modifier: PowerFactor(factor)
+		Power := Power * factor

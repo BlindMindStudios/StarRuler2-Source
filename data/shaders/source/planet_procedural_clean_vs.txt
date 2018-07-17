@@ -1,0 +1,88 @@
+#version 120
+const int nLightCount = 2;
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+attribute vec4 in_color;
+attribute vec4 in_uv2;
+ 
+uniform float time;
+uniform vec4 wsRot;
+uniform vec4 wsPos;
+uniform vec2 texSize;
+
+varying vec4 uvNoise, pos;
+varying vec3 normal, npos, vertCol;
+varying vec2 uv, uv2, uv3, uvB[5];
+varying float pulse;
+varying vec3 light[nLightCount];
+varying vec3 lightColor[nLightCount];
+varying float dist[nLightCount];
+
+const vec2 fractions = vec2(0.984375, 0.0078125);
+/*
+vec2 rotator(vec2 rotate, float rate)
+{
+    return vec2(dot(rotate,  vec2(cos(rate),  -sin(rate))), dot(rotate,  vec2(sin(rate),  cos(rate))));
+}/*
+// regular atan() fails at 0,0
+float atan2(float y, float x)
+{
+    return x == 0.0 ? sign(y)*pi/2 : atan(y, x);
+}*/
+vec3 toLinear(vec3 x) {
+	return pow(x, vec3(2.2));
+}
+	 
+vec3 wsAllign(vec3 x){
+    return x + 2.0 * cross(wsRot.xyz, cross(wsRot.xyz, x) + wsRot.w * x);
+}
+ 
+vec2 invertBlurEdge(vec2 uvB){
+    return abs(fract((uvB + 1.0) * 0.5) - 0.5) * 2.0;
+}
+ 
+void main()
+{
+ 
+    pulse = abs(time  * 2.0 - 1.0);
+    pos = gl_ModelViewMatrix * in_vertex;
+   
+    // convert view, normal and light vectors to world space and quaternion correct for model rotation
+    mat3 tcamrot = transpose(mat3x3(gl_ModelViewMatrix));
+    npos = (wsAllign(normalize(tcamrot * -pos.xyz)));
+   
+    // special view vector to correct just for cubemap reflections
+    normal = (tcamrot * (gl_NormalMatrix * wsAllign(normalize(in_normal))));
+    for (int i = 0; i < nLightCount; i++) {
+        light[i] = wsAllign(normalize((tcamrot * (((gl_LightSource[i].position)).xyz - pos.xyz))));
+    }
+   
+    uv = in_uv;
+    uv2 = in_uv2.xy;
+    uv3 = in_uv2.zw;
+    uv3.x = 1.0 - uv3.x;
+	
+	// make splatmap blurs
+	vec2 blur = vec2(1.0 / texSize.x, 1.0 / texSize.y);
+	uvB[0] = uv3;
+	uvB[1] = uv3 + blur;
+	uvB[2] = uv3 + vec2(-blur.x, blur.y);
+	uvB[3] = uv3 + vec2(-blur.x, -blur.y);
+	uvB[4] = uv3 + vec2(blur.x, -blur.y);
+	
+	// clamp so we don't get south poles blending into north poles an vice versa
+	blur.y = 1.0 - blur.x;
+	uvB[0].y = clamp(uvB[0].y, blur.x, blur.y);
+	uvB[1].y = clamp(uvB[1].y, blur.x, blur.y);
+	uvB[2].y = clamp(uvB[2].y, blur.x, blur.y);
+	uvB[3].y = clamp(uvB[3].y, blur.x, blur.y);
+	uvB[4].y = clamp(uvB[4].y, blur.x, blur.y);
+
+	uvNoise = ((vec4(uv, uv2) * 3.0) * fractions.x + fractions.y) / 3.0;
+	
+    vertCol = in_color.rgb;
+	// use to kill off the worst polar splatmap distortions
+	vertCol.b *= 0.6;
+    gl_Position = gl_ProjectionMatrix * pos;
+}

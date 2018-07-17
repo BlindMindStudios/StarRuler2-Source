@@ -1,0 +1,25 @@
+Technology: ImpEnergyStorage
+	Name: #R_IMP_ENERGY_STORAGE
+	Blurb: #R_IMP_ENERGY_STORAGE_BLURB:100
+	Description: #R_IMP_ENERGY_STORAGE_DESC:100
+
+	Icon: techIonization*#00e39d
+	Color: #00e39d
+
+	Point Cost: 800
+	Time Cost: 120
+
+	ModAttribute(FreeEnergyStorage, Add, 100)
+
+Technology: ImpEnergyStorage2
+	Name: #R_IMP_ENERGY_STORAGE2
+	Blurb: #R_IMP_ENERGY_STORAGE_BLURB:200
+	Description: #R_IMP_ENERGY_STORAGE_DESC:200
+
+	Icon: techIonization*#00e39d
+	Color: #00e39d
+
+	Point Cost: 1200
+	Time Cost: 180
+
+	ModAttribute(FreeEnergyStorage, Add, 200)

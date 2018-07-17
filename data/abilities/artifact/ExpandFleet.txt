@@ -1,0 +1,16 @@
+Ability: ExpandFleet
+	Name: #ABL_EXPAND_FLEET
+	Description: #ABL_EXPAND_FLEET_DESC
+	Icon: HexagonSubsystems::4
+	Activate Sound: command_activate
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterFlagship(targ)
+	TargetFilterOwned(targ)
+	TargetFilterSameTerritory(targ)
+	TargetFilterNotStatus(targ, CommandComputer)
+
+	Trigger(targ, AddStatus(CommandComputer))

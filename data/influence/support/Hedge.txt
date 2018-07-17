@@ -1,0 +1,27 @@
+Card: Hedge
+	Name: #CARD_HEDGE
+	Description: #CARD_HEDGE_DESC
+
+	Icon: CardIcons::39
+
+	Color: #fff700
+
+	Class: Support
+	Side: Neutral
+	Rarity: Rare
+
+	Max Uses: 2
+
+	Base Play Cost: 3
+	Base Purchase Cost: 1
+	Uses Purchase Cost: 1
+
+	LimitPerVote(1, Per Empire = False)
+	ExtendRemainingTimeTo(60)
+	ListActiveEffect()
+	RequireStartingCard()
+
+	LogVoteEvent(Neutral = #CARD_HEDGE_LOG)
+	GainStartingCard(Fail)
+
+	AI: VoteAlwaysNegative(0.5)

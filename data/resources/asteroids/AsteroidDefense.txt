@@ -1,0 +1,21 @@
+Resource: AsteroidDefense
+	Name: #ASTEROID_DEFENSE
+	Description: #ASTEROID_DEFENSE_DESC
+
+	Icon: ResourceIcons::42
+	Small Icon: ResourceIconsSmall::45
+
+	Distribution: 0
+	Asteroid Frequency: 0
+	Asteroid Labor: 20
+	Will Lock: True
+
+	Vanish Time: 180
+	Vanish Mode: Exported In Combat
+
+	Repeat(3, AddTurret(Railgun, Range=250, Damage=20, Reload=1, Speed=200, FireArc=3.14, Tracking=0.8, FireTolerance=0.78))
+	Repeat(5, AddTurret(Laser, Range=300, DPS=10, Duration=2, Cooldown=0, Tracking=0.4))
+	Repeat(5, AddTurret(Missile, Range=300, Damage=10, Reload=2, Speed=90, Tracking=3))
+	RecordBonusDPS(245)
+
+	LockOnExport()

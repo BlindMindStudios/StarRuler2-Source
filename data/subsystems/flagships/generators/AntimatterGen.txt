@@ -1,0 +1,44 @@
+Subsystem: AntimatterGen
+	Name: #AMGEN_NAME
+	Description: #AMGEN_DESC
+	BaseColor: #5ade8b
+	Elevation: 1
+
+	Tags: IsReactor, Category:Control
+	Tags: Important, HasInternals
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Power := 85 * Size
+
+	SupplyCapacity := Size * 300
+	SupplyRate := Size * 15
+
+	Hex.Resistance := 0.5
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 3.5 * HexSize
+	
+	Hex.LaborCost := 0.25 * HexSize + 1.2
+	Hex.BuildCost := 20 * HexSize + 2
+	Hex.MaintainCost := HexSize + 1
+
+	Effect: VitalSubsystem
+	
+	Provides:
+		Power = Power
+	
+	Module: Core
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+		Hex.HP := 1
+		Sprite: AntimatterReactor
+
+	Module: Default
+		Hex.BuildCost := 0.9 * Hex.BuildCost
+		Hex.Mass := 0.9 * Hex.Mass
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor
+
+	Modifier: PowerFactor(factor)
+		Power := Power * factor

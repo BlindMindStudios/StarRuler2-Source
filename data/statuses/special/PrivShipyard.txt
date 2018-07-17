@@ -1,0 +1,6 @@
+Status: PrivShipyard
+	Visible To: Nobody
+	
+	OnPlanetEnable(AddLaborStorage(500))
+	OnPlanetEnable(AddLaborIncome(50))
+	OnEnable(AddOrbitalHealth(50000))

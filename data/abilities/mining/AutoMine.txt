@@ -1,0 +1,18 @@
+Ability: AutoMine
+	Name: #ABL_AUTO_MINE
+	Description: #ABL_AUTO_MINE_DESC
+	Icon: AsteroidIcon * #91ff2c
+
+	Target: targ = Object
+
+	TargetFilterType(targ, Asteroid)
+	TargetFilterHasCargoStored(targ)
+
+	IsToggleTarget(targ, Check Range = False, Channels = False)
+
+	CastWhenIdle(MineAsteroid, targ, Require Free Cargo = True)
+	CastOnActivate(MineAsteroid, targ)
+
+	ClearOnMoveOrder(targ)
+
+	AutoCastSystemAsteroid(targ)

@@ -1,0 +1,20 @@
+System: RemnantBase
+	Frequency: 0.01
+	Unique: Global
+
+	MakeStar(Temperature = 5778, Radius = 75)
+	AddQuality(+500)
+
+	Repeat(4)
+		MakePlanet()
+	MakePlanet(Drugs:FTL)
+	MakePlanet(RandomLevel:1:Uncommon)
+
+	Repeat(4)
+		MakeAsteroid()
+
+	Repeat(4)
+		MakeCreepCamp()
+	MakeCreepCamp(DryDock)
+
+	AddAdjacentAnomalies(4)

@@ -1,0 +1,13 @@
+Ability: BuyAnnexPlanet
+	Name: #ABL_BUY_ANNEX_PLANET
+	Description: #ABL_BUY_ANNEX_PLANET_DESC
+	Icon: CardIcons::0
+
+	Cooldown: 60
+
+	ShareCooldown(BuyNameFlagship)
+
+	ConsumeInfluence(5)
+	ShowInfluenceValue(5, #COST)
+
+	GainInfluenceCard(AnnexPlanet)

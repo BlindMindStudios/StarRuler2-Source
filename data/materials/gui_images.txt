@@ -1,0 +1,534 @@
+Material: DefaultSkin
+	Inherit: Image2D
+	CachePixels: True
+	LoadPriority: Critical
+	Shader: GuiSkin
+	Texture: data/images/gui_skin.png
+
+Material: HSVPalette
+	Inherit: Image2D
+	Shader: HSVPalette
+
+Material: PlanetImage
+	Inherit: Image2D
+	Texture: data/images/planet1.png
+
+Material: StarIcon
+	Inherit: Image2D
+	Texture: data/images/distant_star.png
+
+Material: SmallLogo
+	Inherit: Image2D
+	Texture: data/images/distant_star.png
+
+Material: TestGrid
+	Texture: data/images/gui_grid.png
+	Lighting: False
+	Culling: None
+	Alpha: True
+
+Material: SupplyIcon
+	Inherit: Image2D
+	Texture: data/images/supplyIcon.png
+
+Material: FtlIcon
+	Inherit: Image2D
+	Texture: data/images/ftlIcon.png
+
+Material: StatusHex
+	Inherit: Image2D
+	Texture: data/images/statushex.png
+	
+SpriteSheet: SubsystemButton
+	Inherit: Image2D
+	Size: 250,79
+	Texture: data/images/subsys_item.png
+
+SpriteSheet: AbilityIcons
+	Inherit: Image2D
+	Size: 48,48
+	Texture: data/images/ability_icons.png
+
+SpriteSheet: SubsystemButtonArt
+	Inherit: Image2D
+	Size: 250,79
+	Texture: data/images/subsys_item_art.png
+
+Material: SubsystemButtonGlow
+	Inherit: Image2D
+	Texture: data/images/subsys_item_glow.png
+
+Material: RadialProgress
+	Inherit: Image2D
+	Shader: RadialProgress
+
+SpriteSheet: DesignationIcons
+	Inherit: Image2D
+	Size: 38,38
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/designations.png
+
+SpriteSheet: AffinityIcons
+	Inherit: Image2D
+	Size: 38,38
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/affinities.png
+
+SpriteSheet: ResourceIcons
+	Inherit: Image2D
+	Size: 44,44
+	LoadPriority: Game
+	Texture: data/images/planetary_resources.png
+
+SpriteSheet: ResourceIconsMods
+	Inherit: Image2D
+	Size: 44,44
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/planetary_resources_mods.png
+
+SpriteSheet: ConditionIcons
+	Inherit: Image2D
+	Size: 24,24
+	Spacing: 1
+	LoadPriority: Game
+	Texture: data/images/planet_conditions.png
+	
+SpriteSheet: ResourceIconsSmall
+	Inherit: Image2D
+	Size: 21,21
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/planetary_resources_small.png
+
+SpriteSheet: ResourceIconsSmallMods
+	Inherit: Image2D
+	Size: 25,25
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/planetary_resources_small_mods.png
+
+SpriteSheet: ResourceClassIcons
+	Inherit: Image2D
+	Size: 22,22
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/resource_class_icons.png
+
+SpriteSheet: ContextIcons
+	Inherit: Image2D
+	Size: 24,24
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/context_icons.png
+
+SpriteSheet: ShipIconMods
+	Inherit: Image2D
+	Size: 22,22
+	Spacing: 2
+	LoadPriority: Game
+	Texture: data/images/ship_icon_mods.png
+
+SpriteSheet: PlanetLevelIcons
+	Inherit: Image2D
+	Size: 64,22
+	LoadPriority: Game
+	Texture: data/images/planet_level_icons.png
+	
+SpriteSheet: PlanetType
+	Inherit: Image2D
+	Size: 42,42
+	LoadPriority: Game
+	Texture: data/images/planet_type.png
+
+Material: AsteroidIcon
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/asteroidIcon.png
+
+Material: PlanetIcon0
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_0.png
+	
+Material: PlanetIcon1
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_1.png
+	
+Material: PlanetIcon2
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_2.png
+	
+Material: PlanetIcon3
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_3.png
+	
+Material: PlanetIcon4
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_4.png
+
+Material: PlanetIcon5
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/planet_level_5.png
+	
+SpriteSheet: BuildingSprites
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/buildings/buildings.png
+	
+Material: Hydrogenator
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/hydrogenator.png
+
+Material: Megafarm
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/megafarm.png
+
+Material: Factory
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/factory.png
+
+Material: Stalk
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/stalk.png
+
+Material: Altar
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/altar.png
+
+Material: Compressor
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_compressor.png
+
+Material: StripMiner
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_miner.png
+
+Material: Depot
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_depot.png
+
+Material: AncientFoundry
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_foundry.png
+
+Material: CoreBuilding
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_core.png
+
+Material: NetworkBuilding
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_network.png
+
+Material: AncientRefinery
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_refinery.png
+
+Material: AncientDeveloper
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_developer.png
+
+Material: AncientDock
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_dock.png
+
+Material: AncientReinforcer
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_reinforcer.png
+
+Material: AncientTransmuter
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_transmuter.png
+
+Material: AncientLab
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_lab.png
+
+Material: AncientInfuser
+	Inherit: Image2D
+	Texture: data/images/buildings/ancient_infuser.png
+
+Material: SpaceElevator
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/space_elevator.png
+	
+Material: Spire
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/spire.png
+		
+Material: Metropolis
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/metropolis.png
+	
+Material: PlanetThruster
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/planetary_thruster.png
+	
+Material: Museum
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/museum.png
+	
+Material: AncientRuin
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/ancient_ruin.png
+	
+Material: FakeLV1
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/fake_lv1.png	
+
+Material: FakeLV2
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/fake_lv2.png		
+	
+Material: FTLStorage
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/ftl_storage.png
+	
+Material: DefenseGrid
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/defense_grid.png
+	
+Material: Warehouse
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/warehouse.png
+
+Material: Barracks
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/barracks.png
+	
+Material: Refinery
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/refinery.png
+	
+Material: Megacity
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/megacity.png
+	
+Material: Forge
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/forge.png
+	
+Material: Forge2
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/forge2.png
+	
+Material: Forge3
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/forge3.png
+	
+Material: Forge4
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/forge4.png
+
+Material: Forge5
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/forge5.png	
+	
+Material: ResearchComplex
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/research_complex.png
+	
+Material: PlanetaryArtilleryCannon
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/planetary_artillery_cannon.png
+	
+Material: DevelopedTile
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/tile_border.png
+
+Material: GrownTile
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/buildings/tile_grown.png
+
+Material: IRCButton
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/ircbutton.png
+
+Material: ShipInfoBar
+	Inherit: Image2D
+	CachePixels: True
+	LoadPriority: Game
+	Texture: data/images/ship_infobar.png
+	
+SpriteSheet: Notifications
+	Inherit: Image2D
+	Size: 80,60
+	Spacing: 2
+	Texture: data/images/notifications.png
+
+SpriteSheet: VoteIcons
+	Inherit: Image2D
+	Size: 60,60
+	Spacing: 2
+	Texture: data/images/votes.png
+
+Material: CardBorder
+	Inherit: Image2D
+	Texture: data/images/action_border.png
+
+SpriteSheet: PlanetLevelPictures
+	Inherit: Image2D
+	Size: 64,64
+	Texture: data/images/planet_level_pictures.png
+
+Material: LoyaltyIcon
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/loyalty_icon.png
+
+SpriteSheet: QuickbarIcons
+	Inherit: Image2D
+	Size: 29,36
+	Texture: data/images/sidebar_icons.png
+	
+SpriteSheet: MenuIcons
+	Inherit: Image2D
+	Sixe: 92,92
+	LoadPriority: Critical
+	Texture: data/images/icon_menu.png
+
+Material: HappyFace
+	Inherit: Image2D
+	Texture: data/images/happy.png
+
+Material: SystemUnderAttack
+	Inherit: Image2D
+	Texture: data/images/icon_under_attack.png
+
+SpriteSheet: EditIcons
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/edit_icons.png
+	
+SpriteSheet: TimeSlow
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/time_slow.png
+	
+SpriteSheet: TimeHaste
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/time_haste.png
+	
+SpriteSheet: TimeStop
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/time_stop.png
+	
+SpriteSheet: TimeResume
+	Inherit: Image2D
+	Size: 32,32
+	LoadPriority: Game
+	Texture: data/images/time_resume.png
+	
+Material: TimeReal
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/time_real.png
+	
+Material: TabGalaxy
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/tab_galaxy.png
+	
+Material: TabDiplomacy
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/tab_diplomacy.png
+	
+Material: TabDesigns
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/tab_designs.png
+	
+Material: TabPlanets
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/tab_planets.png
+
+Material: TabResearch
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/tab_research.png
+	
+Material: TabWiki
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/tab_wiki.png
+
+Material: TabAttitude
+	Inherit: Image2D
+	LoadPriority: Game
+	Texture: data/images/tab_attitude.png
+	
+Material: Plus
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/plus.png
+	
+Material: Minus
+	Inherit: Image2D
+	LoadPriority: Menu
+	Texture: data/images/minus.png
+
+Material: SelectionCircle
+	Inherit: Image2D
+	Texture: data/images/planet_icon_selected_alpha.png
+
+Material: AncientIcon
+	Inherit: Image2D
+	Texture: data/images/ancient_icon.png
+
+SpriteSheet: AIDifficulty
+	Inherit: Image2D
+	Size: 64,32
+	LoadPriority: Menu
+	Texture: data/images/ai_difficulties.png
+
+SpriteSheet: TraitIcons
+	Inherit: Image2D
+	Size: 64,64
+	Mipmap: False
+	LoadPriority: Menu
+	Texture: data/images/trait_icons.png

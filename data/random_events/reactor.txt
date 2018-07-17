@@ -1,0 +1,29 @@
+Event: Reactor
+	Name: #EVT_REACTOR
+	Text: #EVT_REACTOR_TEXT
+
+	Target: Location = Object
+	SelectRandomOwnedPlanet(Location)
+	TargetFilterNotHomeSystem(Location)
+
+	Option:
+		Text: #EVT_REACTOR_ACTIVATE
+		Icon: ResourceIcon::2
+		Safe: False
+
+		SendZoomTo(Location)
+
+		Result: 50%
+			On: Location
+				AddStatus(EvtReactor)
+			SendMessage(#EVT_REACTOR_SUCCESS, Title = #EVT_REACTOR)
+
+		Result: 50%
+			On: Location
+				AddStarDPS(100000000000)
+				Destroy()
+			SendMessage(#EVT_REACTOR_FAILURE, Title = #EVT_REACTOR)
+
+	Option:
+		Text: #EVT_REACTOR_IGNORE
+		Default: True

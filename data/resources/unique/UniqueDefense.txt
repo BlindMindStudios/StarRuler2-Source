@@ -1,0 +1,16 @@
+Resource: UniqueDefense
+	Name: #UNIQUE_DEFENSE
+	Description: #UNIQUE_DEFENSE_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIconsSmall::58
+	Small Icon: ResourceIconsSmall::58
+
+	Level: 0
+
+	Rarity: Unique
+	Require Contestation: 60
+
+	Affinity: Defense
+
+	Pressure: 10 Defense

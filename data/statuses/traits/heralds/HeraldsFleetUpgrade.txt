@@ -1,0 +1,8 @@
+Status: HeraldsFleetUpgrade
+	Name: #STATUS_HERALDS_FLEET_UPGRADE
+	Description: #STATUS_HERALDS_FLEET_UPGRADE_DESC
+	Icon: CargoIcons::0
+	Unique: True
+
+	AddBonusHP(+1.0)
+	AddFleetEffectiveness(-0.1)

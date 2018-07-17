@@ -1,0 +1,15 @@
+Technology: ModBulkhead
+	Name: #R_MOD_BULKHEAD
+	Description: #R_MOD_BULKHEAD_DESC
+	Class: Unlock
+
+	Point Cost: 400
+	Time Cost: 60
+
+	Icon: HexagonSubsystems::0 * #cf00ff
+	Color: #eda1ff
+	
+	UnlockModule(Bulkhead)
+	SkipOnUnlockedModule(Bulkhead)
+
+	SecondaryMoneyCost(750)

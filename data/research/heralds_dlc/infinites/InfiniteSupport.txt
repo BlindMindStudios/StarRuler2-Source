@@ -1,0 +1,21 @@
+Technology: InfiniteSupport
+	Name: #R_INFINITE_SUPPORT
+	Description: #R_INFINITE_SUPPORT_DESC:5%
+
+	Icon: techOrganization * #22c8ca
+	Symbol: EditIcons::7
+	Color: #22c8ca
+
+	Category: Infinites
+	Class: Keystone
+
+	Point Cost: 500
+	Time Cost: 50
+
+	AddPointCostAttribute(InfiniteSupportTaken, 300)
+	AddTimeCostAttribute(InfiniteSupportTaken, 15)
+
+	ResetWhenUnlocked()
+
+	AddModifier( SupportCapacityFactor(1.05) )
+	ModAttribute(InfiniteSupportTaken, Add, 1)

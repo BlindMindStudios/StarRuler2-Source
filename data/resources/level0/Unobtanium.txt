@@ -1,0 +1,14 @@
+Resource: Unobtanium
+	Name: #UNOBTANIUM
+	Description: #UNOBTANIUM_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::26
+	Small Icon: ResourceIconsSmall::26
+
+	Level: 0
+	Limitless Level: True
+	Rarity: Epic
+	Exportable: False
+
+	GrantAbility(UnobtaniumMorph)

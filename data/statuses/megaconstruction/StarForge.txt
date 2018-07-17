@@ -1,0 +1,14 @@
+Status: StarForge
+	Name: #STARFORGE
+	Description: #STARFORGE_DESC
+	Icon: OrbitalIcons::5
+	Color: #00ff00
+	Collapses: True
+
+	RepeatStacks(IfSystemHasStar(AddLaborIncome(25)))
+	RepeatStacks(IfSystemHasStar(IfUsingLabor(TriggerPeriodic(DealDamageToStar(5000000), Interval = 1.0))))
+	OnEnable(AddStatus(StarForgeUpgrade))
+
+Status: StarForgeUpgrade
+	Visible To: Nobody
+	Collapses: True

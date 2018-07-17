@@ -1,0 +1,42 @@
+Subsystem: MothershipHull
+	Name: #S_MOTHERSHIP_HULL
+	Description: #S_MOTHERSHIP_HULL_DESC
+
+	Tags: Applied:Hull, Category:Hulls, NoCore, Mothership
+	Tags: Ability:MothershipColonize, CannotDonate
+	Hull: Flagship
+	EvaluationOrder: -200
+	BaseColor: #cc6a3a
+
+	AddShipModifier: FlagshipHull::HexLimitFactor(1.76)
+	AddShipModifier: FlagshipHull::GridWidthFactor(sqrt(1.5))
+	AddShipModifier: FlagshipHull::GridHeightFactor(sqrt(1.5))
+	AddShipModifier: HPFactor(3.0)
+	AddShipModifier: DamageResistFactor(2.0)
+	AddShipModifier: SupplyCapacityFactor(0.01)
+	AddShipModifier: SupplyCostFactor(0)
+	AddShipModifier: RepairSupplyCostFactor(-1)
+	AddShipModifier: SlipstreamDistCostFactor(0.5)
+	AddShipModifier: SlipstreamOverheadFactor(0.16)
+	AddShipModifier: ThrustFactor(2.0)
+	AddShipModifier: TurnThrustFactor(2.0)
+	AddShipModifier: DamageFactor(0.5)
+
+	SupportCapacity := 128
+	Hex.MaintainCost := 0
+
+	Hook: AddPermanentStatus(Mothership)
+	Hook: AddCargoStorage(100000)
+	Hook: ModSupplyConsumeFactor(-1.0)
+
+	AddPostModifier: AddMaintainCost(max(300-HexSum.MaintainCost, 0))
+
+	Assert: ShipSize >= 500
+		Message: #ERROR_MIN_SIZE:$1:500
+
+	Assert: ShipTotalHexes - Ship.ExternalHexes >= floor(Sum.HexLimit * 0.9)
+		Message: #ERROR_MUST_BE_FILLED
+
+	Module: Default
+		Sprite: ResourceIcon::8
+		DrawMode: 3

@@ -1,0 +1,5 @@
+Artifact: FrameConstructor
+	Name: #ART_FRAME_CONSTRUCTOR
+	Description: #ART_FRAME_CONSTRUCTOR_DESC
+
+	Ability: ConstructOrbitalFrame

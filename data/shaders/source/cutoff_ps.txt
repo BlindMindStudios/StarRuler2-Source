@@ -1,0 +1,12 @@
+varying vec2 uv;
+varying float renderpos;
+
+uniform sampler2D texture;
+uniform float cutoff;
+
+void main() {
+	if(renderpos > (cutoff * 2.0) - 1.0)
+		discard;
+	gl_FragColor.rgb = texture2D(texture, uv).rgb;
+	gl_FragColor.a = 1.0;
+}

@@ -1,0 +1,54 @@
+Subsystem: SubspaceShredder
+	Name: #S_SUBSPACE_SHREDDER
+	Description: #S_SUBSPACE_SHREDDER_DESC
+	BaseColor: #ae6383
+	Elevation: 2
+	
+	Tags: WeaponBase, MissileBase, Category:Weapons, Rotatable, Homing
+	Tags: ExteriorCore, Weapon, IsExplosiveWeapon, HasInternals
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	Damage := Size * 15.0
+	Reload := 6.0 * min(1.0 + Size/512, 2.0)
+	Speed := 20
+	Tracking := 0.2
+	SupplyCost := Size * 2.0
+
+	Range := 5 + Size
+	TravelRange := (Range * 30) - (28 * Size)
+
+	out DPS := 0.25 * (Damage / Reload)
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.LaborCost := 0.07 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := Hex.BuildCost * 5
+		Hex.Mass := Hex.Mass * 5
+
+		Sprite: MissileLauncher::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 28.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: SubspaceShredder
+		TravelRange = TravelRange
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Reload

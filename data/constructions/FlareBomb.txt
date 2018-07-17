@@ -1,0 +1,15 @@
+Construction: FlareBomb
+	Name: #CONS_FLARE_BOMB
+	Description: #CONS_FLARE_BOMB_DESC
+
+	Category: Military
+
+	Labor Cost: 500
+	Build Cost: 1000
+
+	SpawnShip(Flare Bomb, Creeps)
+
+	ConsumeCargo(Ore, 10000)
+	ConsumeEnergy(1500)
+
+	RequireUnlockTag(FlareBombUnlock)

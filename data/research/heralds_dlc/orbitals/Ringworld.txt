@@ -1,0 +1,14 @@
+Technology: Ringworld
+	Name: #R_ORB_RINGWORLD
+	Description: #R_ORB_RINGWORLD_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 2000
+	Time Cost: 200
+
+	Icon: PlanetType::14
+	Color: #83ff40
+	
+	UnlockTag(RingworldUnlock)
+	SkipOnUnlockedTag(RingworldUnlock)

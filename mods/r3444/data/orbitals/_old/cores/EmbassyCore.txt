@@ -1,0 +1,27 @@
+Module: EmbassyCore
+	Name: #ORB_EMBASSY_CORE
+	Blurb: #ORB_EMBASSY_CORE_BLURB
+	Description: #ORB_EMBASSY_CORE_DESC
+	Icon: GuiOrbitalIcons::0
+
+	Core: True
+
+	Build Cost: 250
+	Maintenance: 200
+	Labor Cost: 15
+
+	Health: 2500
+	Armor: 1000
+
+	Model: Research_Station
+	Material: ResearchStation
+
+	Strategic Icon: OrbitalIcons::0
+
+	ModLocalLoyalty(+3)
+	ModLocalLoyaltyPerImport(+1)
+	ModRegionTargetCostMod(-3)
+
+	OnKillSpreadLeverageToFriendlies(Quality Factor = 7.0)
+
+	CannotBuildManually()

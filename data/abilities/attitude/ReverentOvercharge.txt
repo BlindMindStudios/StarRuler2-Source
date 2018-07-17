@@ -1,0 +1,10 @@
+Ability: ReverentOvercharge
+	Name: #ABL_REVERENT_OVERCHARGE
+	Description: #ABL_REVERENT_OVERCHARGE_DESC
+	Icon: ResourceIcon::2
+
+	Hide Global: True
+
+	ResetAttitudeProgress(Reverent)
+
+	TriggerAllFleets(AddStatus(ReverentOvercharge, Duration = 360))

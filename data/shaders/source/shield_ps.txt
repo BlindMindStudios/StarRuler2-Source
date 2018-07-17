@@ -1,0 +1,7 @@
+varying vec3 normal, pos;
+uniform float strength;
+
+void main() {
+	float brightness = strength * (1.0 - abs(dot(normalize(normal), normalize(pos))));
+	gl_FragColor = vec4(vec3(0.0, 0.0, 1.0) * brightness, 1.0);
+}

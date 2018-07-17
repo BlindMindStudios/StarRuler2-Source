@@ -1,0 +1,47 @@
+Card: ZealotGeist
+	Name: #ZEITGEIST_ZEALOT
+	Description: #ZEITGEIST_ZEALOT_DESC
+
+	Color: #00fffc
+	Icon: CardIcons::47
+
+	Class: Event
+	Rarity: Epic
+
+	StartVote(ZealotGeist)
+
+Vote: ZealotGeist
+	Name: #ZEITGEIST_ZEALOT
+	Description: #ZEITGEIST_ZEALOT_DESC
+
+	Color: #00fffc
+	Icon: CardIcons::47
+
+	AddStartWeight(+1)
+
+	OnOwner(DismissTaggedEffects(Zeitgeist))
+
+	CreateEffect(Pass, ZealotGeist, Give To Contributor = True)
+	TriggerLowestContributor(GainRandomInfluenceCards(4), Fail, Require Negative = True)
+
+	EmpireStartWeightAttribute(ZeitgeistStartSupport)
+
+	AI: ZeitgeistVote()
+
+Effect: ZealotGeist
+	Name: #ZEITGEIST_ZEALOT
+	Description: #ZEITGEIST_ZEALOT_DESC
+
+	Tag: Zeitgeist
+	Dismissable: False
+
+	Color: #00fffc
+	Icon: CardIcons::47
+
+	OnAllEmpires(ModGlobalLoyalty(+5)) #version>=149
+	OnAllEmpires(ModEmpireAttribute(CaptureTimeFactor, Multiply, 4), Apply On Owner = False) #version>=149
+	OnAllEmpires(ModEmpireAttribute(CaptureSupplyFactor, Multiply, 2), Apply On Owner = False) #version>=149
+
+	//Old version effects
+	AddGlobalDefense(+5.0) #version<149
+	OnAllEmpires(AddStatusOwnedPlanets(ZealotGeist)) #version<149

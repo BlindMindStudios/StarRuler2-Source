@@ -1,0 +1,9 @@
+Status: PrivRingworld
+	Visible To: Nobody
+	
+	OnEnable(AddStatus(Ringworld))
+	OnEnable(GainPlanetResource(Grain))
+	OnEnable(GainPlanetResource(Water))
+	OnEnable(GivePopulation(12))
+
+	IsTriggerStatus()

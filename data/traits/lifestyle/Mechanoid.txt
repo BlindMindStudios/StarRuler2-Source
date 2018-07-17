@@ -1,0 +1,30 @@
+Trait: Mechanoid
+	Name: #TRAIT_MECHANOID
+	Description: #TRAIT_MECHANOID_DESC
+	Order: 5
+
+	Icon: Industrious
+	Color: #d08859
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	AddStatusOwnedPlanets(Mechanoid)
+	OnHomeworld(AddResource(Labor, -1)) #version>=147
+	TriggerHomeworld(GivePopulation(3))
+	TriggerHomeworld(DestroyBuildingAt((4, 3), Undevelop = True))
+	TriggerHomeworld(TerraformTo(Unobtanium))
+	TriggerHomeworld(DestroySystemPlanet(1, Quiet = True))
+	TriggerHomeworld(DestroySystemPlanet(2, Quiet = True))
+	TriggerHomeworld(MorphSystemPlanetResource(3, Iron))
+	TriggerHomeworld(AddStatus(MonoHomeworld))
+
+	ModAttribute(PopulationGrowthFactor, Multiply, 0)
+	ModAttribute(PopulationDecayFactor, Multiply, 0)
+	ModAttribute(OverpopulationBenefitFactor, Multiply, 0)
+	ModAttribute(ForbidColonization, Add, 1)
+	RemoveTechnologyNodes(SysConstructionBay)
+	RemoveTechnologyNodes(SysOreProcessor)
+	ReplaceTechnologyNodes(ConstructionBay, FactoryLabor)
+	ReplaceTechnologyNodes(OreProcessor, FactoryLabor)
+	ReplaceTechnologyNodes(HydroponicsSatellite, Thrust)

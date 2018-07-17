@@ -1,0 +1,28 @@
+Subsystem: Slipstream
+	Name: Slipstream Generator
+	Description: Grants the ability to generate slipstream portals.
+	BaseColor: #67a7ad
+	TypeColor: #67a7ad
+	Picture: SubsystemButtonArt::10
+	Elevation: 0
+	
+	Tags: BaseCost, Category:FTL
+	Tags: Engine, Slipstream, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	SlipstreamOverhead := 60 * sqrt(Size/32)
+	SlipstreamDistCost := 6
+	SlipstreamDuration := 90 + 150 * (Size/32)
+	
+	Requires:
+		Command = 1
+	
+	Module: Core
+		Sprite: HexagonSubsystems::10
+		Hex.BuildCost := 2 * Hex.BuildCost

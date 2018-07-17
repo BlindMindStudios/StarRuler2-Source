@@ -1,0 +1,41 @@
+Module: TradeOutpost
+	Name: #ORB_TRADE_OUTPOST
+	Blurb: #ORB_TRADE_OUTPOST_BLURB
+	Description: #ORB_TRADE_OUTPOST_DESC
+	Icon: GuiOrbitalIcons::14
+	Distant Icon: OrbitalIcons::14
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 300
+	Maintenance: 30
+	Labor Cost: 15
+	Size: 7
+
+	Health: 6000
+	Armor: 4000
+
+	Model: Outpost
+	Material: GenericPBR_Outpost
+
+	RequireNotTrait(Evangelical)
+
+	LimitOncePerSystem(OutpostFlag) #version>=94
+
+	AddFleetCommand(128) #version>=94
+	AddFleetCommandEmpireAttribute(OutpostBoost, 128) #version>=94
+	AddFleetEffectiveness(+2.0) #version>=94
+	AddSupportBonusHP(+1.0) #version>=147
+
+	AddHealthEmpireAttribute(OutpostBoost, 10000)
+	AddLocalDefenseAdjacentFlags(OutpostFlag, 1.5, 3, Overflow Global = True, Local Boost = OutpostBoost) #version>=94
+
+	ProtectSystem(90) #version>=94
+	AddStatus(StartingProtection, Duration = 90) #version>=94
+
+	IfBorderSystem(ModEmpireAttribute(BorderOutposts, Add, 1)) #version>=147
+	IfAttributeGTE(OutpostFreeRaid, 1, AllowFreeRaiding()) #version>=147
+
+	GiveTrade()
+	

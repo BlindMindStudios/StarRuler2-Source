@@ -1,0 +1,32 @@
+Subsystem: GateModule
+	Name: #S_GATE_MODULE
+	Description: #S_GATE_MODULE_DESC
+	BaseColor: #8ed2ff
+	TypeColor: #8ed2ff
+	Elevation: 0
+	EvaluationOrder: 100
+	
+	Tags: Engine, BaseCost, Gate, HasInternals, Category:FTL, CannotDonate
+	Hull: Station
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Hook: AddPermanentStatus(GateModule)
+	OnCheckErrors: designs::checkExposedLeftRight
+	
+	Requires:
+		Command = 1
+	
+	Module: Core
+		Sprite: HexagonSubsystems::10
+
+		Hex.BuildCost := Hex.BuildCost + max(250 * (1.0 - (ShipTotalHexes / Sum.HexLimit)), 0)
+		Hex.LaborCost := Hex.LaborCost + max(10 * (1.0 - (ShipTotalHexes / Sum.HexLimit)), 0)
+		Hex.MaintainCost := Hex.MaintainCost + max(30 * (1.0 - (ShipTotalHexes / Sum.HexLimit)), 0)
+
+	Assert: (Size / ShipSize > 0.33) && ShipSize >= 128
+		Message: #ERROR_TOO_SMALL

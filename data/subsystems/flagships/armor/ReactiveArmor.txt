@@ -1,0 +1,32 @@
+Subsystem: ReactiveArmor
+	Name: #REACTIVEARMOR_NAME
+	Description: #REACTIVEARMOR_DESC
+	BaseColor: #b9a9a9
+	Elevation: 1
+
+	Tags: LowMaint, Category:Defense, FauxExterior
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, BlockArmor, ExternalSpace
+	Tags: PrimaryArmor
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	ImpactLevel := 27 * HexSize
+	MinPct := 1/6
+
+	Hex.Resistance := 0.4
+	Hex.HP := 30 * HexSize
+	Hex.Mass := 5.0 * HexSize
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+	
+	Effect: CapDamage
+		MaxDamage = ImpactLevel
+		MinimumPercent = MinPct
+	
+	Modifier: ImpactFactor(factor)
+		MinPct := MinPct / factor
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 2
+		Hex.LaborCost := Hex.LaborCost * 4
+		Sprite: PlateArmor * #ff9999

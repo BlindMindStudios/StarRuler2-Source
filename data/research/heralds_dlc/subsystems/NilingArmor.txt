@@ -1,0 +1,19 @@
+Technology: SysNilingArmor
+	Name: #R_SYS_NILINGARMOR
+	Description: #R_SYS_NILINGARMOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: ArmorHealth
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	Icon: NilingArmor
+	Color: #9dffb9
+	
+	UnlockSubsystem(NilingArmor)
+	SkipOnUnlockedSubsystem(NilingArmor)
+
+	SecondaryEnergyCost(1500)

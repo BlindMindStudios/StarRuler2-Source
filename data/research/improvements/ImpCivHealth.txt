@@ -1,0 +1,27 @@
+Technology: ImpCivHealth
+	Name: #R_IMP_CIV_HEALTH
+	Blurb: #R_IMP_CIV_HEALTH_BLURB:50%
+	Description: #R_IMP_CIV_HEALTH_DESC:50%
+
+	Icon: AttributeIcons::6
+	Color: #c0ff80
+
+	Point Cost: 600
+	Time Cost: 60
+
+	CivilanHPBonus( 1.5 )
+	ModAttribute(OrbitalHealthMod, Multiply, 1.4)
+
+Technology: ImpCivHealth2
+	Name: #R_IMP_CIV_HEALTH2
+	Blurb: #R_IMP_CIV_HEALTH_BLURB:100%
+	Description: #R_IMP_CIV_HEALTH_DESC:100%
+
+	Icon: AttributeIcons::6
+	Color: #c0ff80
+
+	Point Cost: 1000
+	Time Cost: 90
+
+	CivilanHPBonus( 2 )
+	ModAttribute(OrbitalHealthMod, Multiply, 2.0)

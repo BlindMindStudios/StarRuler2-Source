@@ -1,0 +1,14 @@
+Resource: ExoticMatter
+	Name: #EXOTIC_MATTER
+	Description: #EXOTIC_MATTER_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIcons::20
+	Small Icon: ResourceIconsSmall::3
+
+	Level: 3
+	Affinity: Research
+
+	Pressure: 16 Research
+
+	ModBuildingConstructRate(100000000)

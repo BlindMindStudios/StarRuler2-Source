@@ -1,0 +1,16 @@
+Resource: Uranium
+	Name: #URANIUM
+	Description: #URANIUM_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::13
+	Small Icon: ResourceIconsSmall::4
+
+	Level: 2
+	Rarity: Uncommon
+	Affinity: Energy
+
+	Asteroid Frequency: 0.035
+	Asteroid Labor: 50
+
+	Pressure: 7 Energy

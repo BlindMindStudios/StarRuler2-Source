@@ -1,0 +1,19 @@
+Technology: CarrierHull
+	Name: #R_SYS_CARRIER_HULL
+	Description: #R_SYS_CARRIER_HULL_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Health
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: HullSubsystems::0
+	Color: #d6d300
+	
+	UnlockSubsystem(CarrierHull)
+	SkipOnUnlockedSubsystem(CarrierHull)
+
+	SecondaryMoneyCost(1000)

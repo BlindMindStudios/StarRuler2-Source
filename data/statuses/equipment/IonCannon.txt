@@ -1,0 +1,10 @@
+Status: IonCannon
+	Name: #STATUS_ION_CANNON
+	Description: #STATUS_ION_CANNON_DESC
+	Icon: HexagonSubsystems::6 * #ff8d00
+	Collapses: True
+
+	ArtifactOnDestroy(IonCannon, Destroy Chance = 0.3)
+	WorthPoints(25)
+
+	GrantAbility(IonCannon)

@@ -1,0 +1,14 @@
+Ability: RevenantChassis
+		Name: #ABL_REVENANT_CHASSIS
+		Description: #ABL_REVENANT_CHASSIS_DESC
+		Icon: PlateArmor
+		Activate Sound: revenant_activate
+
+		Energy Cost: 2000
+
+		OnAnyEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+		GiveAchievement(ACH_USE_ARTIFACT)
+		ReplaceWithOrbital(RevenantChassis, Free = True)
+
+		NotifyAll(#NOTIFY_REVENANT_CHASSIS, Icon = PlateArmor)

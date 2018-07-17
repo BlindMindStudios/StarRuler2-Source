@@ -1,0 +1,27 @@
+Subsystem: ReactiveArmor
+	Name: #REACTIVEARMOR_NAME
+	Description: #REACTIVEARMOR_DESC
+	BaseColor: #b9a9a9
+	Picture: SubsystemButtonArt::0 * #ff9999
+	Elevation: 1
+
+	Tags: LowMaint, Category:Armor
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, BlockArmor
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	ImpactLevel := 27 * HexSize
+	MinPct := 1/6
+	Hex.Resistance := 0.4
+	Hex.HP := 27 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Modifier: ImpactFactor(factor)
+		MinPct := MinPct / factor
+	
+	Effect: CapDamage
+		MaxDamage = ImpactLevel
+		MinimumPercent = MinPct
+
+	Module: Default
+		Sprite: HexagonSubsystems::0 * #ff9999

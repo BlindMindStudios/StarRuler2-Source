@@ -1,0 +1,22 @@
+Ability: FlareBomb
+	Name: #ABL_FLARE_BOMB
+	Description: #ABL_FLARE_BOMB_DESC
+	Icon: MissileLauncher::0 * #e45500
+
+	Range: 50
+
+	Target: targ = Object
+	TargetFilterType(targ, Star)
+	TargetFilterAttackable(targ)
+
+	IsToggleTarget(targ, Range Margin = 1.5, Channels = True)
+
+	AfterChannel(targ, 60, PlayParticles(FlareBomb), Clear = False)
+	AfterChannel(targ, 60, AddRegionStatus(FlareRadiation, 300, Empire Limited = False), Clear = False)
+	AfterChannelSelf(targ, 60, Destroy(), Clear = True)
+
+	PersistentBeamEffect(targ, #e45500, Tractor, Width = 7.0)
+
+	DealStellarDamageOverTime(targ, 20000000)
+
+	OffensiveToTarget(targ)

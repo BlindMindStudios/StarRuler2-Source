@@ -1,0 +1,22 @@
+Module: Frame
+	Name: #ORB_FRAME
+	Blurb: #ORB_FRAME_BLURB
+	Description: #ORB_FRAME_DESC
+	Icon: GuiOrbitalIcons::3
+
+	Standalone: True
+	Build Cost: 100
+	Spin: 0
+
+	Health: 7500
+	Armor: 2500
+
+	Model: Shipyard
+	Material: GenericPBR_Shipyard
+	Size: 10
+
+	Strategic Icon: OrbitalIcons::3
+	Icon Size: 0.03
+
+	FrameConstruction(Cost Factor = 0.5, Labor Factor = 0.5, Labor Penalty Factor = 0.0)
+	CannotBuildManually()

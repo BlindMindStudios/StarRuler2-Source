@@ -1,0 +1,17 @@
+Artifact: RevenantChassis
+	Name: #ART_REVENANT_CHASSIS
+	Description: #ART_REVENANT_CHASSIS_DESC
+
+	Size: 20
+	Ability: RevenantChassis
+	
+	Model: ArtifactAdvanced
+
+	Strategic Icon: SpecialArtifactIcon
+
+	Mass: 1000
+
+	Spread Variable: ENABLE_REVENANT_PARTS
+	Require Contestation: 60
+
+	AI: RevenantPart()

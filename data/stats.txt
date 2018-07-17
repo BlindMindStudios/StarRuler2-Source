@@ -1,0 +1,40 @@
+//Ship stats
+Stat: Ships
+Stat: ShipsBuilt
+Stat: ShipsLost
+Stat: ShipsDestroyed
+Stat: Stations
+	
+//Planet stats
+Stat: Planets
+	Event: Lost
+	Event: Colonized
+	Event: Conquered
+	Event: Glassed
+
+//Resource stats
+Stat: Budget
+	Type: Float
+	//Resolution: 15
+Stat: NetBudget
+	Type: Float
+Stat: Influence
+	//Resolution: 15
+Stat: InfluenceIncome
+	Type: Float
+Stat: FTL
+	Type: Float
+	//Resolution: 15
+Stat: Energy
+	Type: Float
+Stat: EnergyIncome
+	Type: Float
+Stat: ResearchIncome
+	Type: Float
+Stat: ResearchTotal
+	Type: Float
+
+//Strength stats
+Stat: Points
+Stat: Military
+	Type: Float

@@ -1,0 +1,28 @@
+Construction: BeaconAsteroidMorph
+	Name: #CONS_BEACON_ASTEROID_MORPH
+	Description: #CONS_BEACON_ASTEROID_MORPH_DESC
+
+	Category: Upgrades
+	In Context: True
+
+	Build Cost: 500
+	Labor Cost: 10
+
+	Target: roid = Object
+	TargetFilterType(roid, Asteroid)
+	TargetFilterHasTradePresence(roid, Allow Adjacent = False)
+	TargetFilterHasCargoStored(roid)
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconAsteroidMorphCost, Add, 1))
+	OnCancel(ModAttribute(BeaconAsteroidMorphCost, Add, -1))
+
+	Trigger(roid, SpawnAsteroids(1, Distance = 0, Resource Only = True))
+	Trigger(roid, Destroy())
+
+	ConsumeCargoAttribute(ResearchCargo, BeaconAsteroidMorphCost, Multiply = 200, Base Amount = 300)
+	ConsumeCargoAttribute(EnergyCargo, BeaconAsteroidMorphCost, Multiply = 200, Base Amount = 300)
+
+	AddBuildCostAttribute(BeaconAsteroidMorphCost, Multiply = 100)
+	AddLaborCostAttribute(BeaconAsteroidMorphCost, Multiply = 15)

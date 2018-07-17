@@ -1,0 +1,17 @@
+uniform sampler2D texture;
+varying vec2 rcoords;
+const float twopi = 6.28318530718;
+
+void main() {
+	float r = length(rcoords);
+	if(r >= 1.0 || r < 0.0)
+		discard;
+	
+	float a = atan(rcoords.y, rcoords.x) / twopi;
+	vec4 col = gl_Color;
+	col.a *= texture2D(texture, vec2(a,r)).r;
+	if(col.a < 1.0 / 255.0)
+		discard;
+	
+	gl_FragColor = col;
+}

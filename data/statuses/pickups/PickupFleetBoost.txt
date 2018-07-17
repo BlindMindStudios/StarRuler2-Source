@@ -1,0 +1,12 @@
+Status: PickupFleetBoost
+	Name: #STATUS_PICKUP_FLEETBOOST
+	Description: #STATUS_PICKUP_FLEETBOOST_DESC
+
+	Icon: PlateArmor
+	Collapses: True
+
+	AddBonusHP(0.5) #version<162
+	AddSupportBonusHP(0.25) #version<162
+
+	RepeatStacks(AddBonusHP(0.5)) #version>=162
+	RepeatStacks(AddSupportBonusHP(0.25)) #version>=162

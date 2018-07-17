@@ -1,0 +1,32 @@
+Module: GateCore
+	Name: #ORB_GATE_CORE
+	Blurb: #ORB_GATE_CORE_BLURB
+	Description: #ORB_GATE_CORE_DESC
+	Icon: GuiOrbitalIcons::1
+
+	Standalone: True
+	Solid: False
+	Spin: 0
+
+	Build Cost: 250
+	Maintenance: 30
+	Labor Cost: 10
+
+	Health: 7500
+	Armor: 2500
+
+	Model: Warpgate
+	Material: GenericPBR_Gate
+	Size: 15
+	AddParticleSystem(GateWormhole, Size = 0.6)
+
+	Strategic Icon: OrbitalIcons::1
+	Icon Size: 0.03
+
+	IsGate()
+	GlobalTradeNode()
+
+	FTLMaintenance(0.15)
+	CannotBuildManually()
+	PacksIntoShip(Gate Constructor)
+	DisableOnFTLBlock()

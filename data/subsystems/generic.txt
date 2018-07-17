@@ -1,0 +1,55 @@
+Template: hexVar/BuildCost
+	Modifier: BuildCostFactor(factor)
+		Hex.BuildCost := Hex.BuildCost * factor
+
+Template: hexVar/MaintainCost
+	Modifier: MaintCostFactor(factor)
+		Hex.MaintainCost := Hex.MaintainCost * factor
+
+Template: hexVar/LaborCost
+	Modifier: LaborCostFactor(factor)
+		Hex.LaborCost := Hex.LaborCost * factor
+
+Template: hexVar/HP
+	Modifier: HpFactor(factor)
+		Hex.HP := Hex.HP * factor
+	Modifier: AddBaseHP(factor)
+		Hex.HP := Hex.HP + Base::Hex.HP * factor
+	Modifier: AddHP(amount)
+		Hex.HP := Hex.HP + amount
+	Modifier: CoreHealthFactor(factor)
+		Hex.HP := if(IsCore, Hex.HP * factor, Hex.HP)
+
+Template: hexVar/Mass
+	Modifier: MassFactor(factor)
+		Hex.Mass := Hex.Mass * factor
+	Modifier: CoreMassFactor(factor)
+		Hex.Mass := if(IsCore, Hex.Mass * factor, Hex.Mass)
+
+Template: var/Speed
+	Modifier: SpeedFactor(factor)
+		Speed := Speed * factor
+
+Template: var/SupplyCost
+	Modifier: SupplyCostFactor(factor)
+		SupplyCost := SupplyCost * factor
+
+Template: var/Repair
+	Modifier: RepairFactor(factor)
+		Repair := Repair * factor
+
+Template: var/DamageResist
+	Modifier: DamageResistFactor(factor)
+		DamageResist := DamageResist * factor
+
+Template: var/DamageResist,tag/IsArmor
+	Modifier: ArmorResistFactor(factor)
+		DamageResist := DamageResist * factor
+
+Template: var/ShieldCapacity
+	Modifier: ShieldCapacityFactor(factor)
+		ShieldCapacity := ShieldCapacity * factor
+
+Template: var/ShieldRegen
+	Modifier: ShieldRegenFactor(factor)
+		ShieldRegen := ShieldRegen * factor

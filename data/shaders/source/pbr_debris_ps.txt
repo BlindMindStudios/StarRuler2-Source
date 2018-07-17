@@ -1,0 +1,165 @@
+#version 120
+const int nLightCount = 2;
+const float pi = 3.14159265358;
+
+uniform sampler2D diffuse, masks, normals;
+uniform samplerCube skybox;
+//uniform vec4 ownerColor;
+//uniform vec3 glowColor;
+//uniform float thrust;
+//uniform float camDist;
+uniform float life;
+
+varying vec3 normal;
+varying vec3 npos;
+varying vec2 uv;
+uniform mat3 invView;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// Schlick GGX approximation
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+// diffuse term
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+	float O = 0.62 - pow(1.0-NdotL * clamp(1.0-NdotV/2.0, 0.0,1.0), pi) * 0.62;
+	O = mix(O, NdotL, roughness);
+	return O;
+}
+
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return substance + (1.0 - substance) * pow(1.0 - clamp((dot(l, h)), 0.0, 1.0), 5.0);
+}
+
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+
+float RoughToSPow(float fRoughness)
+{
+   return (2.0 / (fRoughness * fRoughness)) - 2.0;
+}
+
+const float k0 = 0.00098f, k1 = 0.9921f;
+const float g_fMaxT = (exp2(-10.0 / sqrt((2.0 / (0.0014f * 0.0014f)) - 2.0)) - 0.00098f) / 0.9921f;
+
+float GetSpecPowToMip(float fSpecPow, int nMips)
+{
+   float fSmulMaxT = (exp2( -10.0 / sqrt(fSpecPow)) - k0) / k1;
+
+   return float(nMips - 1) * (1.0 - clamp(fSmulMaxT / g_fMaxT, 0.0, 1.0 ));
+}
+
+// screen-space cotangent derivative
+mat3 cotangent_frame(vec3 N, vec3 p, vec2 uv)
+{
+	vec4 dpduv1 = dFdx(vec4(p.xy, uv));
+	vec4 dpduv2 = dFdy(vec4(p.xy, uv));
+
+	// solve the linear system
+	vec3 dp2perp = cross(vec3(dpduv2.xy, 0.0), N);
+	vec3 dp1perp = cross(N, vec3(dpduv1.xy, 0.0));
+	vec3 T = dp2perp * dpduv1.z + dp1perp * dpduv2.z;
+	vec3 B = dp2perp * dpduv1.w + dp1perp * dpduv2.w;
+
+	// construct a scale-invariant frame 
+	float invmax = pow(max(dot(T, T), dot(B, B)), -0.5);
+	return mat3(T * invmax, B * invmax, N);
+}
+
+void main() {
+	vec4 diffuse = texture2D(diffuse, uv.xy, -10.0);// discard will screw up if mipmapping
+	if (diffuse.a < 1.0f)
+	{
+		discard;
+ 	}
+
+	vec4 normSamp = texture2D(normals, uv.xy);
+	vec4 maskSamp = texture2D(masks, uv.xy);
+
+	float transparency = clamp((clamp(diffuse.w,0.25, 0.5) - 0.25), 0.0, 0.25) * 4 + 0.25;	
+	float metalness = maskSamp.b;
+	float ao = normSamp.a;
+	vec3 normMap = normSamp.xyz * 2.0 - 1.0;
+	
+	// Roughness setup
+	float orgRoughness = maskSamp.r;
+	
+	// Albedo setup
+	vec3 albedo = diffuse.rgb;
+
+	mat3 TBN = cotangent_frame(normal, -npos, uv.xy);
+	vec3 n = normalize(TBN * normMap);
+	vec3 v = normalize(npos);
+	vec3 r = normalize(reflect(-v, n));
+	
+	// Substance setup and Albedo adjust
+	vec3 substance = clamp((0.04 - 0.04 * metalness) + albedo * metalness,0.0, 1.0);
+	albedo -= substance;
+
+	// Light model specials setup
+	float NdotV = clamp(dot(n, v), 0.0, 1.0);	
+
+	vec3 color = vec3(0.0);
+
+	// Ambient reflections	
+	vec3 reflectionFresnel = Fresnel2(substance,NdotV,orgRoughness);
+
+ 	color += textureCube(skybox, r,8.0 - (8.0*(1.0-orgRoughness))).rgb * reflectionFresnel;   	
+
+	// Ambient light
+	color += textureCube(skybox, n, 7.0).rgb * albedo * (1.0 - reflectionFresnel);
+
+	for (int i = 0; i < nLightCount; i++) {	
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+
+		// fakes disc like light up close to a star.
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		
+	
+			float NdotL = clamp(dot(n,light[i]),0.0, 1.0);
+			
+			float intensity = falloff * NdotL;// * clamp(dot(normal, light[i]), 0.0, 1.0);
+	
+			vec3 L=light[i];
+			L = normalize(L);
+		
+			vec3 VplusL = L + v; 
+			vec3 halfVec = normalize(VplusL);
+	
+			float HdotN = clamp(dot(halfVec,n), 0.0, 1.0);
+			vec3 F = Fresnel(substance, L, halfVec);
+			float D = clamp(D_GGX(HdotN, orgRoughness), 0.0, 1.0);
+			float V = clamp(V_SchlickforGGX((1.0 + orgRoughness) * 0.5, NdotV, NdotL), 0.0, 1.0);
+			float O = OrenNayerforDiffuseOnly(orgRoughness, NdotL, NdotV);
+	
+			color += (D * V * F +  O * albedo + max(vec3(0.0),1.0 - (1.0 + F))) * pi * gl_LightSource[i].diffuse.rgb * intensity;			
+		
+	}
+
+	float fadeCurve = clamp(1.0 - pow(life, 0.33) + 0.5, 0.0, 1.0) * (1.0 - maskSamp.g);
+
+	gl_FragColor.rgb = color + mix(vec3(0.69, 0.231, 0.027), vec3(1.0, 0.969, 0.6), fadeCurve) * fadeCurve * 6.0;
+	gl_FragColor.a = 1.0;
+}

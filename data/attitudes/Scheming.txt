@@ -1,0 +1,44 @@
+Attitude: Scheming
+	Name: #ATT_SCHEMING
+	Progress: #ATT_SCHEMING_PROGRESS
+	Color: #1cd86c
+	Sort: 45
+
+	ProgressFromAttribute(AnnexVotesWon)
+	Conflict(Warmongering)
+
+	Level:
+		Description: #ATT_SCHEMING_L1
+		Icon: CardIcons::0
+		Threshold: 1
+
+		ModEmpireAttribute(ReturnAnnexCards, Add, 1)
+
+	Level:
+		Description: #ATT_SCHEMING_L2
+		Icon: ThumbsUp
+		Threshold: 2
+
+		ModEmpireAttribute(VoteStartSupport, Add, 1)
+
+	Level:
+		Description: #ATT_SCHEMING_L3
+		Icon: ResourceIcon::1
+		Threshold: 4
+
+		TriggerOnVoteStart(AddInfluencePoints(3))
+
+	Level:
+		Description: #ATT_SCHEMING_L4
+		Icon: AttributeIcons::4 * #ff8080
+		Threshold: 7
+
+		ModEmpireAttribute(CaptureSupplyDifficulty, Multiply, 2)
+		ModEmpireAttribute(CaptureTimeDifficulty, Multiply, 2)
+
+	Level:
+		Description: #ATT_SCHEMING_L5
+		Icon: CardIcons::6
+		Threshold: 12
+
+		ModEmpireAttribute(InfluenceBuysCopyChance, Add, 0.5)

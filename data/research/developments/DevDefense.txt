@@ -1,0 +1,13 @@
+Technology: DevDefense
+	Name: #R_DEV_DEFENSE
+	Blurb: #R_DEV_DEFENSE_BLURB:25
+	Description: #R_DEV_DEFENSE_DESC:25
+	Class: Boost
+
+	Icon: techMilitia*#f2a734
+	Color: #f2a734
+
+	Point Cost: 200
+	Time Cost: 60
+
+	GenerateGlobalDefense(25)

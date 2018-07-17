@@ -1,0 +1,125 @@
+#version 120
+const int nLightCount = 2;
+
+//Masks: R = Glow, G = Owner Color, B = Engine Glow
+uniform sampler2D diffuseRGB, normalMap, specularMap, glossMap, skybox, masks;
+uniform vec4 ownerColor;
+uniform vec3 glowColor;
+uniform float thrust;
+uniform mat3 invView;
+uniform float camDist;
+uniform float nodeScale;
+
+varying vec3 forward, right;
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+vec2 skyboxSample(vec3 dir) {
+	float x = dot(dir, forward);
+	float z = dot(dir, right);
+	float y = dot(dir, cross(forward,right));
+	
+	return vec2(atan(-x,z) / 6.28318530718, (y + 1.0) * 0.5);
+}
+
+float mixRange(float x, float low, float hi) {
+	return clamp((x - low) / (hi - low), 0.0, 1.0);
+}
+
+vec3 blackBody(float temp) {
+	vec3 c;
+	c.r = mix(1.0, 0.6234, mixRange(temp, 6400.0, 29800.0));
+	c.b = mix(0.0, 1.0, mixRange(temp, 2800.0, 7600.0));
+	if(temp < 6600.0)
+		c.g = mix(0.22, 0.976, mixRange(temp, 1000.0, 6600.0));
+	else
+		c.g = mix(0.976, 0.75, mixRange(temp, 6600.0, 29800.0));
+	return c;
+}
+
+void main() {
+	vec3 color = gl_FrontMaterial.diffuse.rgb;
+	vec3 texSamp = texture2D(diffuseRGB, uv.xy).rgb;
+	vec3 matspec = gl_FrontMaterial.specular.rgb * texture2D(specularMap, uv.xy).rgb;
+	vec3 masks = texture2D(masks, uv.xy).rgb;
+	float gloss = texture2D(glossMap, uv.xy).r;
+	float shininess = mix(gl_FrontMaterial.shininess * 0.1, gl_FrontMaterial.shininess, gloss);
+	
+	matspec *= gloss * gloss;
+	color *= sqrt(1.0 - gloss * gloss);
+	
+	float sampValue = max(texSamp.r, max(texSamp.g, texSamp.b));
+	texSamp = mix(texSamp, ownerColor.rgb * sampValue, masks.g);
+	
+	vec3 normMap = (texture2D(normalMap, uv.xy).xyz * 2.0) - vec3(1.0);
+	float ao = (length(normMap) - 0.5) * 2.0;
+	
+	vec3 n = normalize(normal) * normMap.z;
+	n += normalize(binormal) * normMap.y;
+	n += normalize(tangent) * normMap.x;
+	n = normalize(n);
+	
+	vec3 v = normalize(npos);
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	
+	vec3 spaceAmbient = texture2D(skybox, skyboxSample(normal), -50.0).rgb;
+	vec3 diffuse = (gl_LightModel.ambient.rgb + spaceAmbient) * gl_FrontMaterial.ambient.rgb * ao;
+	
+	vec3 specular = vec3(0.0);
+
+	if(camDist > 0.0) {
+		float highlight = smoothstep(0.0, 500.0, camDist / sqrt(nodeScale));
+		diffuse += vec3(highlight) * 0.5;
+		specular += vec3(highlight) * 10.0;
+	}
+	
+	vec3 r = -reflect(v, n);
+	specular += texture2D(skybox, skyboxSample(r), -50.0).rgb * vec3(4.0);
+	
+	if(nLightCount > 0) {
+		const int i = 0;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		float rDv = max(0.0, dot(r, v));
+		
+		float starSize = atan(2.0/dist[i]) / (gloss + 0.01);
+		
+		intensity *= 1.0 + smoothstep(1.0 - starSize,1.0 - (starSize * 0.5),rDv) * 3.0;
+		
+		specular += gl_LightSource[i].specular.rgb * (pow(rDv, shininess) * intensity);
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		specular += gl_LightSource[i].specular.rgb * (pow(max(0.0, dot(r, v)), shininess) * intensity);
+	}
+	
+	float thrustIntensity = pow(thrust * 1.0, 2.0) * masks.b * 1.8;
+	
+	gl_FragColor.rgb = (diffuse * color * texSamp.rgb) + (specular * matspec) + (glowColor * masks.r) + (blackBody(1000.0 + 5000.0 * thrustIntensity) * thrustIntensity);
+	gl_FragColor.a = 1.0;
+}

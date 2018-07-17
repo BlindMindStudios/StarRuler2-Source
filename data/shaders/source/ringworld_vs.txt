@@ -1,0 +1,30 @@
+attribute vec4 in_color;
+attribute vec4 in_position;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+
+varying vec3 npos, vertPaint, origo;
+varying vec3 normal, binormal, tangent;
+varying vec2 uv;
+
+uniform float flipState;
+
+void main()
+{
+	normal = normalize(gl_NormalMatrix * in_normal);
+	binormal = normalize(cross(normal, gl_NormalMatrix * vec3(0.0,0.999,0.04471017781)));
+	tangent = normalize(cross(normal, binormal));
+	
+	vec4 pos = gl_ModelViewMatrix * in_position;
+	npos = -pos.xyz;
+	vertPaint = in_color.rgb;
+	origo = in_position.xyz;
+
+	vec2 baseUV = in_uv;
+	if(flipState > 0.5) {
+		baseUV.y = 1.0 - baseUV.y;
+		tangent = -tangent;
+	}
+	uv = baseUV;
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

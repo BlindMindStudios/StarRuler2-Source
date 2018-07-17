@@ -1,0 +1,7 @@
+Status: MothershipPopulation
+	Name: #STATUS_MOTHERSHIP_POPULATION
+	Description: #STATUS_MOTHERSHIP_POPULATION_DESC
+	Icon: ResourceIcon::8
+	Collapses: True
+
+	RepeatStacks(AddMoneyIncome(15))

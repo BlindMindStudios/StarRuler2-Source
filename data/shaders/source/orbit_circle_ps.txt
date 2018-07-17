@@ -1,0 +1,43 @@
+#define pi 3.141592653589793238462643383279
+#define twopi (pi * 2.0)
+varying vec2 uv;
+varying vec2 rcoords;
+
+uniform float circle_min;
+uniform float circle_max;
+
+uniform vec4 captureColor;
+uniform float capturePct;
+
+vec4 alphaBlend(vec4 dest, vec4 src) {
+	float alpha = src.a + (dest.a * (1.0 - src.a));
+	return vec4( ((src.rgb * src.a) + (dest.rgb * dest.a * (1.0 - src.a))) / alpha, alpha);
+}
+
+void main() {
+	float radius = length(rcoords);
+	if(radius > circle_max || radius < circle_min)
+		discard;
+
+	vec4 result = gl_Color;
+	result.a *= smoothstep(circle_min, circle_max, radius);
+	
+	//Dither the gradient
+	float rnd = dot(rcoords, vec2(0.2,0.3));
+	result.a += mod(rnd/max(mod(uv.x,0.01)/0.01, 0.001), 0.01)-0.005;
+	
+	if(captureColor.a > 0.0) {
+		vec2 rcoords = (uv - vec2(0.5, 0.5)) * 2.0;
+		if(radius > 0.9 && radius < 1.0) {
+			float ang = (atan(rcoords.y, rcoords.x) + pi) / twopi;
+			if(ang < capturePct) {
+				float alpha = smoothstep(1.0, 0.95, radius) * smoothstep(0.9, 0.95, radius);
+				alpha *= smoothstep(0.0, 0.01, ang) * smoothstep(capturePct, capturePct - 0.01, ang);
+				
+				result = alphaBlend(result, vec4(captureColor.rgb, captureColor.a * alpha));
+				//result = mix( result, vec4(captureColor.rgb, 1.0), alpha * captureColor.a);
+			}
+		}
+	}
+	gl_FragColor = result;
+}

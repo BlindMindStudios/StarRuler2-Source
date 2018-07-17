@@ -1,0 +1,17 @@
+Technology: PowerGeneration
+	Name: #R_POWER_GENERATION
+	Description: #R_POWER_GENERATION_DESC:25%
+
+	Icon: FissionReactor
+	Symbol: techIonization * #42b4bd
+	Color: #00a4db
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 120
+
+	AddModifier( tag/IsReactor::PowerFactor(1.25) )
+
+	AffectsTaggedSubsystems(IsReactor)

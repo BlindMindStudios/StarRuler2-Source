@@ -1,0 +1,16 @@
+Resource: SlaveLabor
+	Name: #SLAVE_LABOR
+	Description: #SLAVE_LABOR_DESC
+
+	Icon: ResourceIcons::33
+	Small Icon: ResourceIconsSmall::46
+
+	Distribution: 0
+	Artificial: True
+	Display Weight: -10
+
+	Vanish Time: 300
+	Vanish Mode: Custom
+	VanishWhenConstructing()
+
+	AddLaborIncome(5)

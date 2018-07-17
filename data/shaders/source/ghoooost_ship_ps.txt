@@ -1,0 +1,54 @@
+#version 120
+const int nLightCount = 2;
+
+//Masks: R = Glow, G = Owner Color, B = Engine Glow
+uniform sampler2D normalMap;
+uniform vec4 ownerColor;
+uniform vec3 glowColor;
+uniform float thrust;
+uniform mat3 invView;
+uniform float camDist;
+uniform float nodeScale;
+
+varying vec3 forward, right;
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+vec2 skyboxSample(vec3 dir) {
+	float x = dot(dir, forward);
+	float z = dot(dir, right);
+	float y = dot(dir, cross(forward,right));
+	
+	return vec2(atan(-x,z) / 6.28318530718, (y + 1.0) * 0.5);
+}
+
+float mixRange(float x, float low, float hi) {
+	return clamp((x - low) / (hi - low), 0.0, 1.0);
+}
+
+vec3 blackBody(float temp) {
+	vec3 c;
+	c.r = mix(1.0, 0.6234, mixRange(temp, 6400.0, 29800.0));
+	c.b = mix(0.0, 1.0, mixRange(temp, 2800.0, 7600.0));
+	if(temp < 6600.0)
+		c.g = mix(0.22, 0.976, mixRange(temp, 1000.0, 6600.0));
+	else
+		c.g = mix(0.976, 0.75, mixRange(temp, 6600.0, 29800.0));
+	return c;
+}
+
+void main() {
+	vec3 normMap = (texture2D(normalMap, uv.xy).xyz * 2.0) - vec3(1.0);
+	float ao = (length(normMap) - 0.5) * 2.0;
+	
+	vec3 n = normalize(normal) * normMap.z;
+	n += normalize(binormal) * normMap.y;
+	n += normalize(tangent) * normMap.x;
+	n = normalize(n);
+	
+	gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0 - dot(normalize(npos),n));
+}

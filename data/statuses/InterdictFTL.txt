@@ -1,0 +1,8 @@
+Status: InterdictFTL
+	Name: #STATUS_INTERDICT_FTL
+	Description: #STATUS_INTERDICT_FTL_DESC
+	Icon: ResourceIcon::3 * #ff0000
+
+	Unique: True
+
+	DelayFTL()

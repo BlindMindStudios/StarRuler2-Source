@@ -1,0 +1,22 @@
+Status: Mothership
+	Visible To: Nobody
+
+	CountAsPlanet()
+
+	CannotFireOutsideOwnedSpace()
+
+	OnEnable(AddStatus(MothershipPopulation), 5)
+	OnDisable(RemoveStatus(MothershipPopulation))
+
+	TriggerPeriodic(AddStatus(MothershipPopulation, Max Stacks = 16), 50)
+
+	AllowConstruction(Ships = True, Orbitals = True, Asteroids = True, Terraforming = True)
+
+	AddLaborIncome(7)
+	AddLaborEmpireAttribute(FactoryLaborMod)
+	CopyLaborFromOrbitPlanet()
+
+	IsHomeObject()
+
+	AddStatus(CanGiveCargo) #version>=132
+	AddStatus(CanTakeCargo) #version>=132

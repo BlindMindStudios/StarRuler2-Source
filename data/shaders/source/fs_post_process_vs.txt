@@ -1,0 +1,47 @@
+const float pi = 3.14159265358;
+const int nLightCount = 2;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+
+uniform sampler2D depthTex;
+uniform vec2 lightPos[nLightCount];
+uniform vec2 texSize;
+uniform float lightRadius[nLightCount];
+uniform float cycle;
+
+varying vec2 uv;
+
+varying float lightDepth[nLightCount], fallOffDepth[nLightCount];
+varying vec4 lightVec[nLightCount], pos, camDirection[nLightCount];
+varying vec2 radialAnimation[nLightCount];
+varying vec3 lightColor[nLightCount];
+varying vec2 aspectRatio;
+
+vec3 toLinear(vec3 color){
+	return pow(color, vec3(2.2));
+}
+
+void main() {
+
+	uv = gl_MultiTexCoord0.xy;
+	pos = vec4(vec2(2.0*(uv-0.5)),0.0,1.0);
+	aspectRatio = vec2(texSize.x / texSize.y, 1.0);	
+	// in case someone plays it on a screen that is rotated 90
+	if (texSize.x < texSize.y)
+		aspectRatio = vec2(1.0, texSize.y / texSize.x);
+	for (int i = 0; i < nLightCount; i++) {	
+		// to not distort the rays, it needs the real uv's
+		camDirection[i] = gl_ProjectionMatrix * vec4(lightPos[i], 0.0,1.0);
+		fallOffDepth[i] = distance(gl_ProjectionMatrix * gl_LightSource[i].position - pos, pos);
+		lightDepth[i] = (gl_ProjectionMatrixInverse * (normalize(gl_LightSource[i].position) -  pos) * vec4(aspectRatio, 1.0, 1.0)).z;
+		// we need to aspect correct to get a proper fade gradient
+		lightVec[i] = (gl_ProjectionMatrix * normalize(gl_LightSource[i].position) - pos);
+		// radial noise test //  move to vertShaders
+		radialAnimation[i] = vec2(abs(cycle - 0.5));
+		radialAnimation[i].y = 1.0 - radialAnimation[i].x;
+		lightColor[i] = toLinear(gl_LightSource[i].diffuse.rgb);		
+	}
+	gl_Position = pos;
+}

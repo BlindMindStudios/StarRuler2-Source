@@ -1,0 +1,15 @@
+Technology: DevSurge
+	Name: #R_DEV_SURGE
+	Blurb: #R_DEV_SURGE_BLURB
+	Description: #R_DEV_SURGE_DESC
+	Class: Boost
+
+	Point Cost: 100
+	Time Cost: 60
+
+	Icon: Revolutionaries
+	Color: #806020
+
+	GainInfluenceCard(Uprising)
+
+	SecondaryMoneyCost(500)

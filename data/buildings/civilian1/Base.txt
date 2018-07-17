@@ -1,0 +1,9 @@
+Building: Base
+	Name: #BLD_BASE
+	Description: #BLD_BASE_DESC
+	Sprite: BuildingSprites::12
+
+	Civilian: True
+
+	Saturation: 1 Defense
+	Production: 1 Defense

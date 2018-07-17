@@ -1,0 +1,34 @@
+Card: Eject
+	Name: #CARD_EJECT
+	Description: #CARD_EJECT_DESC
+	Color: #e94505
+
+	Icon: CardIcons::32
+
+	Leader Only: True
+	DLC: Heralds
+
+	Class: Support
+	Rarity: Epic
+	Side: Neutral
+
+	Base Purchase Cost: 5
+	Base Play Cost: 10
+
+	Base Weight: 0
+
+	LogVoteEvent(Neutral = #CARD_EJECT_LOG)
+	Notify(target, #CARD_EJECT_NOTIFICATION)
+
+	Target: target = Empire
+	TargetFilterOtherEmpire(target)
+
+	LimitPerVote(1, Per Empire = False)
+
+	EjectFromVote(target)
+	GiveLeverageTo(target, 5.0)
+
+	DisallowInVote(GalacticSuperpower)
+	DisallowInVote(GalacticUtopia)
+
+	AI: VoteAgainstEmpire(target, Min Vote = 7, Most Only = True)

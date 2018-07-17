@@ -1,0 +1,18 @@
+Building: Museum
+	Name: #BLD_MUSEUM
+	Description: #BLD_MUSEUM_DESC
+	Sprite: Museum
+
+	Category: Infrastructure
+
+	Tile Cost: 20
+	Build Affinity: Ice
+
+	Size: 3x3
+	Labor Cost: 25
+
+	RequireUnlockTag(MuseumUnlock)
+	CannotRemove()
+
+	AddResource(Influence, 1)
+	OnEnable( AddInfluencePoints(10) )

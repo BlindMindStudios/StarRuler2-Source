@@ -1,0 +1,63 @@
+<%namespace file="template.util.html" name="util" />
+<!DOCTYPE html>
+<title>${name}</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<section class="classdoc">
+	<h1>${name}</h1>
+	% if doc:
+	<span>${doc}</span>
+	% endif
+</section>
+
+% if len(members):
+<section class="classmembers">
+	<h2>Members</h2>
+	<ul>
+		% for m in members:
+		<li>
+		<b>${util.type(m["type"])} ${m["name"]}</b>
+			% if "doc" in m:
+				&mdash; ${m["doc"]}
+			% endif
+		</li>
+		% endfor
+	</ul>
+</section>
+% endif
+
+% if len(methods):
+<section class="classmethods">
+	<h2>Methods</h2>
+	<ul>
+		% for i, m in enumerate(methods):
+		<li>${util.func(m, "#"+str(i) if "doc" in m else None)}</li>
+		% endfor
+	</ul>
+</section>
+% endif
+
+% for i, m in enumerate(methods):
+%  if "doc" in m:
+<section class="method">
+	<h3><a name="${i}" class="anchor">${util.func(m)}</a></h2>
+	<span>${m["doc"]}</span>
+
+	% if len(m["arguments"]):
+	<ul>
+		% for a in m["arguments"]:
+		% if "doc" in a and a["doc"]:
+		<li>
+			<b>${util.type(a["type"])} ${a["name"]}</b> &mdash; ${a["doc"]}
+		</li>
+		% endif
+		% endfor
+	</ul>
+	% endif
+
+	% if "doc" in m["return"]:
+		<span><b>Returns ${util.type(m["return"]["type"])}:</b> ${m["return"]["doc"]}</span>
+	% endif
+</section>
+%  endif
+% endfor

@@ -1,0 +1,11 @@
+Status: NoxiousAtmosphere
+	Name: #COND_NOXIOUS_ATMOSPHERE
+	Description: #COND_NOXIOUS_ATMOSPHERE_DESC
+
+	Icon: ConditionIcons::4
+	Color: #ff0000
+
+	Condition Tier: 1
+	Condition Frequency: 0.5
+
+	AddMaxPopulation(-1)

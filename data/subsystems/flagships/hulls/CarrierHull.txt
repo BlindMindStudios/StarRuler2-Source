@@ -1,0 +1,25 @@
+Subsystem: CarrierHull
+	Name: #S_CARRIER_HULL
+	Description: #S_CARRIER_HULL_DESC
+
+	Tags: Applied:Hull, Category:Hulls, NoCore
+	Tags: HeraldsDLC
+	Hull: Flagship
+	EvaluationOrder: -200
+	BaseColor: #d6d300
+
+	HexLimit := -26
+
+	AddShipModifier: SupplyCapacityFactor(1.5)
+	AddShipModifier: SupportCapacityFactor(2.0)
+	AddShipModifier: HpFactor(2.0)
+
+	Assert: ShipSize >= 300
+		Message: #ERROR_MIN_SIZE:$1:300
+
+	Assert: TagCount.Weapon == 0
+		Message: #ERROR_CANNOT_HAVE_WEAPONS
+
+	Module: Default
+		Sprite: HullSubsystems::0
+		DrawMode: 3

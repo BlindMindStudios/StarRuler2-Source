@@ -1,0 +1,4 @@
+Cargo: BaseMaterial
+	Name: #C_BASE_MATERIAL
+	Description: #C_BASE_MATERIAL_DESC
+	Icon: ResourceIconsSmall::81

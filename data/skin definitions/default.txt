@@ -1,0 +1,1586 @@
+Font: Small = DroidSans_8
+Font: Normal = DroidSans_11
+Font: Bold = DroidSans_11_Bold
+Font: Italic = OpenSans_11_Italic
+Font: Medium = DroidSans_16
+Font: Big = DroidSans_20
+
+Font: Subsys = DroidSans_11
+Font: Name = GoodTimes_9
+Font: Detail = DroidSans_8
+
+Font: Title = GoodTimes_18
+Font: Subtitle = DroidSans_14
+Font: Button = DroidSans_11
+
+Color: Text = #fff
+Color: Selected = #a0000080
+Color: Disabled = #888888ff
+
+Color: ButtonText = #fff
+
+// {{{ Generic Styles
+Style: RoundedBox
+	Element: Normal
+		Rect: [3,3][182,39]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [3,43][182,79]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active
+		Rect: [3,83][182,119]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered, Active
+		Inherit: RoundedBox, Active
+
+	Element: Disabled
+		Rect: [195,343][374,379]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: StraightBox
+	Element: Normal
+		Rect: [194,4][373,39]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active
+		Rect: [194,84][373,119]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [194,44][373,79]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active, Hovered
+		Rect: [194,124][373,159]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: TinyBox
+	Element: Normal
+		Rect: [194,4][373,39]
+		Margin: 2
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [194,84][373,119]
+		Margin: 2
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: ItemBox
+	Element: Normal
+		Rect: [3,124][182,159]
+		Margin: 4
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [3,164][182,199]
+		Margin: 4
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active
+		Rect: [3,204][182,239]
+		Margin: 4
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered, Active
+		Rect: [3,699][182,734]
+		Margin: 4
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Disabled
+		Rect: [3,124][182,159]
+		Margin: 4
+		Vertical: Scaled
+		Horizontal: Scaled
+
+		Add Gradient:
+			TopLeft : #00000020
+			TopRight: #00000020
+			BotLeft : #00000020
+			BotRight: #00000020
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: 100%
+
+Style: InputBox
+	Element: Normal
+		Rect: [2,493][181,528]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active
+		Rect: [2,533][181,568]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [2,573][181,608]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active, Hovered
+		Rect: [2,613][181,648]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Disabled
+		Rect: [2,653][181,692]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: PlainBox
+	Element: Normal
+		Rect: [400,40][426,61]
+		Margin: 2
+		
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: PlainNameBox
+	Element: Normal
+		Rect: [429,42][459,56]
+		Margin: 16,14
+		Horizontal: Scaled
+
+Style: HexPattern
+	Element: Normal
+		Rect: [390,11][412,36]
+		Margin: 1
+		Vertical: Tiled
+		Horizontal: Tiled
+
+Style: SmallHexPattern
+	Element: Normal
+		Rect: [390,40][395,56]
+		Margin: 0
+		Vertical: Tiled
+		Horizontal: Tiled
+
+Style: PatternBox
+	Element: Normal
+		Layer: PlainBox
+		Layer: SmallHexPattern
+			Color Override: #ffffff40
+			OX1: +3
+			OY1: +3
+			OX2: -3
+			OY2: -3
+
+		GradientMode: Overlay
+		Add Gradient:
+			TopLeft : #4443
+			TopRight: #4443
+			BotLeft : #2221
+			BotRight: #2221
+
+			GX1: +3
+			GY1: +3
+			GX2: -3
+			GY2: -3
+
+Style: Panel
+	Element: Normal
+		Rect: [195,179][375,215]
+		Margin: 6
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+		Add Gradient:
+			TopLeft : #1b1b1bff
+			TopRight: #1b1b1bff
+			BotLeft : #101010ff
+			BotRight: #101010ff
+
+			GX1: +4
+			GY1: 50%
+			GX2: -5
+			GY2: -5
+
+Style: HorizBar
+	Element: Normal
+		Rect: [205,221][365,257]
+		Margin: 6
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: PlainOverlay
+	Element: Normal
+		Rect: [400,40][426,61]
+		Margin: 2
+		
+		Horizontal: Scaled
+		Vertical: Scaled
+
+		Add Gradient:
+			TopLeft : #1c1c1cff
+			TopRight: #1c1c1cff
+			BotLeft : #151515ff
+			BotRight: #151515ff
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+
+	Element: Hovered
+		Rect: [400,40][426,61]
+		Margin: 2
+		
+		Horizontal: Scaled
+		Vertical: Scaled
+
+		Add Gradient:
+			TopLeft : #2c2c2cff
+			TopRight: #2c2c2cff
+			BotLeft : #202020ff
+			BotRight: #202020ff
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+
+	Element: Disabled
+		Inherit: PlainOverlay, Normal
+
+Style: OverlayBox
+	Element: Normal
+		Inherit: Panel
+			
+Style: LightPanel
+	Element: Normal
+		Rect: [195,221][375,257]
+		Margin: 6
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: Highlight
+	Element: Normal
+		Rect: [5,740][182,773]
+		Margin: 6
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: Glow
+	Element: Normal
+		Rect: [4,780][184,849]
+		Margin: 10
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: SubtleGlow
+	Element: Normal
+		Rect: [4,854][184,922]
+		Margin: 10
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: HighlightPanel
+	Element: Normal
+		Inherit: Panel, Normal
+
+	Element: Hovered
+		Inherit: Panel, Normal
+
+		Add Gradient:
+			TopLeft : #2c2c2c40
+			TopRight: #2c2c2c40
+			BotLeft : #20202040
+			BotRight: #20202040
+
+			GX1: 3
+			GY1: 3
+			GX2: -3
+			GY2: -3
+
+Style: RoundedTitle
+	Element: Normal
+		Rect: [195,264][393,294]
+		Margin: 6, 6, 120, 6
+
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: CenterTitle
+	Element: Normal
+		Rect: [195,308][410,334]
+		Margin: 90, 6
+
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: FullTitle
+	Element: Normal
+		Rect: [198,450][332,480]
+		Margin: 6
+
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: PanelTitle
+	Element: Normal
+		Layer: FullTitle
+			Color Override: #fff
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 100%
+		Layer: RoundedTitle
+			OX1: 0
+			OY1: 0
+			OX2: 70%
+			OY2: 100%
+
+Style: WindowTitle
+	Inherit: FullTitle
+
+Style: SubTitle
+	Element: Normal
+		Rect: [201,487][327,517]
+		Margin: 6
+
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: HorizAccent
+	Element: Normal
+		Rect: [197,385][302,439]
+		Margin: 8
+
+		Horizontal: Scaled
+		Vertical: Scaled
+// }}}
+// {{{ Generic Parts
+Style: DownArrow
+	Element: Normal
+		Rect: [443,6][455,19]
+
+Style: UpArrow
+	Element: Normal
+		Rect: [457,6][470,19]
+		
+Style: RightArrow
+	Element: Normal
+		Rect: [429,6][441,19]
+
+Style: LeftArrow
+	Element: Normal
+		Rect: [416,6][428,19]
+
+Style: Field
+	Inherit: PlainBox
+
+Style: FieldName
+	Inherit: PlainNameBox
+
+Style: BG3D
+	Element: Normal
+		Rect: [202,526][446,636]
+
+Style: ProgressBarBG
+	Element: Normal
+		Rect: [382,70][488,80]
+		Margin: 6, 4
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: ProgressBar
+	Element: Normal
+		Rect: [383,83][487,91]
+		Margin: 3, 4
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: DragHandle
+	Element: Normal
+		Inherit: ItemBox, Active
+
+Style: ResizeHandle
+	Element: Normal
+		Inherit: ItemBox, Normal
+	Element: Active
+		Inherit: ItemBox, Active
+
+Style: Checkmark
+	Element: Normal
+		Rect: [419,23][430,34]
+// }}}
+// {{{ Basic GUI Elements
+Style: Button
+	Inherit: RoundedBox
+
+Style: BaselineButton
+	Element: Normal
+		Rect: [3,3][182,35]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [3,43][182,75]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Active
+		Rect: [3,83][182,115]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+	Element: Hovered, Active
+		Inherit: BaselineButton, Active
+
+	Element: Disabled
+		Rect: [195,343][374,375]
+		Margin: 6
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: IconButton
+	Element: Normal
+	Element: Hovered
+		Inherit: Highlight
+	Element: Active
+		Inherit: Highlight
+	Element: Hovered,Active
+		Inherit: Highlight
+
+Style: IconToggle
+	Element: Normal
+	Element: Hovered
+		Inherit: Highlight
+	Element: Active
+		Inherit: Highlight
+		Layer: Button
+	Element: Hovered,Active
+		Inherit: Highlight
+		Layer: Button
+
+Style: Tab
+	Inherit: Button
+
+Style: PageTab
+	Element: Normal
+		Layer: Button
+	Element: Hovered
+		Layer: Button
+		Layer: SubtleGlow
+			Color Override: #ffffff
+	Element: Active
+		Layer: Button
+		Layer: SubtleGlow
+
+Style: Listbox
+
+Style: ListboxItem
+	Inherit: ItemBox
+
+Style: StaticListboxItem
+	Element: Normal
+		Inherit: ItemBox, Normal
+
+Style: DropdownList
+
+Style: DropdownListItem
+	Element: Normal
+		Inherit: ItemBox
+
+	Element: Hovered
+		Inherit: ItemBox, Active
+
+	Element: Active
+		Inherit: ItemBox, Active
+
+	Element: Active, Hovered
+		Inherit: ItemBox, Active, Hovered
+
+Style: Dropdown
+	Inherit: RoundedBox
+
+Style: DropdownArrow
+	Element: Normal
+		Layer: DownArrow
+			OX1: +7
+			OY1: +7
+			OX2: -7
+			OY2: -7
+
+Style: Dialog
+	Element: Normal
+		Inherit: Panel
+
+Style: Tooltip
+	Element: Normal
+		Rect: [2,454][181,489]
+		Margin: 6
+
+		Horizontal: Scaled
+		Vertical: Scaled
+
+Style: Textbox
+	Inherit: InputBox
+
+	Element: Focused
+		Inherit: InputBox, Active
+
+Style: HoverTextbox
+	Element: Normal
+	Element: Disabled
+	Element: Disabled, Hovered
+	Element: Hovered
+		Inherit: InputBox
+	Element: Focused
+		Inherit: InputBox
+	Element: Hovered, Focused
+		Inherit: InputBox, Active
+
+Style: HoverButton
+	Element: Normal
+	Element: Disabled
+	Element: Disabled, Hovered
+	Element: Active
+		Inherit: Button, Active
+	Element: Hovered
+		Inherit: Button
+	Element: Hovered, Active
+		Inherit: Button, Active
+
+Style: GlowButton
+	Element: Normal
+		Inherit: PlainBox
+	Element: Hovered
+		Layer: PlainBox
+		Layer: Highlight
+			Color Override: #00c0ff
+	Element: Hovered, Disabled
+		Inherit: PlainBox
+	Element: Active
+		GradientMode: Overlay
+		Layer: PlainBox
+
+		Add Gradient:
+			TopLeft : #2228
+			TopRight: #2228
+			BotLeft : #00c0ff48
+			BotRight: #00c0ff48
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: 100%
+	Element: Active, Hovered
+		Layer: GlowButton, Active
+		Layer: Highlight
+			Color Override: #00c0ff
+
+Style: TabButton
+	Element: Normal
+		GradientMode: Overlay
+		Layer: PlainBox
+
+		Add Gradient:
+			TopLeft : #4448
+			TopRight: #4448
+			BotLeft : #2228
+			BotRight: #2228
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+	Element: Hovered
+		GradientMode: Overlay
+		Layer: TabButton, Normal
+		Add Gradient:
+			TopLeft : #fff0
+			TopRight: #fff0
+			BotLeft : #fff3
+			BotRight: #fff3
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+	Element: Active
+		GradientMode: Overlay
+		Layer: PlainBox
+			Color Override: #00c0ff
+
+		Add Gradient:
+			TopLeft : #2228
+			TopRight: #2228
+			BotLeft : #00c0ff48
+			BotRight: #00c0ff48
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+	Element: Active, Hovered
+		GradientMode: Overlay
+		Layer: TabButton, Active
+		Add Gradient:
+			TopLeft : #fff0
+			TopRight: #fff0
+			BotLeft : #fff2
+			BotRight: #fff2
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+
+Style: AccordionHeader
+	Element: Normal
+		Inherit: PatternBox
+
+	Element: Hovered
+		Inherit: PatternBox
+		Layer: Highlight
+
+	Element: Active
+		Inherit: PatternBox
+
+	Element: Hovered, Active
+		Inherit: PatternBox
+		Layer: Highlight
+
+	Element: Disabled
+		GradientMode: Overlay
+
+		Add Gradient:
+			TopLeft : #2221
+			TopRight: #2221
+			BotLeft : #4446
+			BotRight: #4446
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: -2
+
+		Add Gradient:
+			TopLeft : #444f
+			TopRight: #444f
+			BotLeft : #444f
+			BotRight: #444f
+
+			GX1: 0
+			GY1: -2
+			GX2: 100%
+			GY2: 100%
+
+Style: BuildElement
+	Element: Normal
+		GradientMode: Overlay
+
+		Add Gradient:
+			TopLeft : #0000
+			TopRight: #0000
+			BotLeft : #2224
+			BotRight: #2224
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: -1
+
+		Add Gradient:
+			TopLeft : #222f
+			TopRight: #222f
+			BotLeft : #222f
+			BotRight: #222f
+
+			GX1: 0
+			GY1: -1
+			GX2: 100%
+			GY2: 100%
+
+	Element: Hovered
+		GradientMode: Overlay
+
+		Add Gradient:
+			TopLeft : #222a
+			TopRight: #222a
+			BotLeft : #444a
+			BotRight: #444a
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: -1
+
+		Add Gradient:
+			TopLeft : #222f
+			TopRight: #222f
+			BotLeft : #222f
+			BotRight: #222f
+
+			GX1: 0
+			GY1: -1
+			GX2: 100%
+			GY2: 100%
+
+Style: SpinButton
+	Inherit: TinyBox
+
+Style: ContextMenu
+
+Style: ContextMenuItem
+	Element: Normal
+		Inherit: ItemBox
+
+	Element: Hovered
+		Inherit: ItemBox, Active
+
+	Element: Active
+		Inherit: ItemBox, Active
+
+	Element: Active, Hovered
+		Inherit: ItemBox, Active
+
+Style: Checkbox
+	Element: Normal
+		Inherit: ItemBox
+
+	Element: Hovered
+		Inherit: ItemBox, Hovered
+
+	Element: Active
+		Layer: ItemBox, Active
+
+		Layer: Checkmark
+			OX1: 4
+			OY1: 0
+			OX2: 100%
+			OY2: -4
+
+	Element: Active, Hovered
+		Layer: ItemBox, Active, Hovered
+
+		Layer: Checkmark
+			OX1: 4
+			OY1: 0
+			OX2: 100%
+			OY2: -4
+
+Style: Radiobox
+	Element: Normal
+		Inherit: ItemBox
+
+	Element: Hovered
+		Inherit: ItemBox, Hovered
+
+	Element: Active
+		Layer: ItemBox
+
+		Layer: ItemBox, Active
+			OX1: 20%
+			OY1: 20%
+			OX2: -20%
+			OY2: -20%
+
+	Element: Active, Hovered
+		Layer: ItemBox, Hovered
+
+		Layer: ItemBox, Active
+			OX1: 20%
+			OY1: 20%
+			OX2: -20%
+			OY2: -20%
+
+Style: ScrollVert
+	Inherit: Panel
+
+Style: ScrollVertHandle
+	Element: Normal
+		Inherit: StraightBox
+
+	Element: Hovered
+		Inherit: StraightBox, Hovered
+
+	Element: Active
+		Inherit: StraightBox, Active
+
+Style: ScrollHoriz
+	Inherit: Panel
+
+Style: ScrollHorizHandle
+	Element: Normal
+		Inherit: StraightBox
+
+	Element: Hovered
+		Inherit: StraightBox, Hovered
+
+	Element: Active
+		Inherit: StraightBox, Active
+
+Style: ScrollButton
+	Inherit: Button
+
+Style: ScrollUp
+	Element: Normal
+		Layer: ScrollButton
+		Layer: UpArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+	
+	Element: Hovered
+		Layer: ScrollButton, Hovered
+		Layer: UpArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4	
+
+	Element: Active
+		Layer: ScrollButton, Active
+		Layer: UpArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+Style: ScrollDown
+	Element: Normal
+		Layer: ScrollButton
+		Layer: DownArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Hovered
+		Layer: ScrollButton, Hovered
+		Layer: DownArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Active
+		Layer: ScrollButton, Active
+		Layer: DownArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+Style: ScrollLeft
+	Element: Normal
+		Layer: ScrollButton
+		Layer: LeftArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Hovered
+		Layer: ScrollButton, Hovered
+		Layer: LeftArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Active
+		Layer: ScrollButton, Active
+		Layer: LeftArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+Style: ScrollRight
+	Element: Normal
+		Layer: ScrollButton
+		Layer: RightArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Hovered
+		Layer: ScrollButton, Hovered
+		Layer: RightArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+	Element: Active
+		Layer: ScrollButton, Active
+		Layer: RightArrow
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+Style: DistributionBar
+	Inherit: StraightBox
+
+Style: DistributionElement
+	Element: Normal
+		GradientMode: Overlay
+		Add Gradient:
+			TopLeft : #bbb9
+			TopRight: #bbb9
+			BotLeft : #4449
+			BotRight: #4449
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: 100%
+
+Style: ChoiceBox
+	Inherit: ItemBox
+
+// }}}
+// {{{ Tab Bar
+Style: GameTabBar
+	Element: Normal
+		Rect: [1,400] [100,424]
+		Margin: 0
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: GameTab
+	Element: Normal
+		Rect: [2,345] [86,371]
+		Margin: 17, 0
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [2,317] [86,343]
+		Margin: 17, 0
+		Horizontal: Scaled
+
+	Element: Pressed
+		Inherit: GameTab, Normal
+
+	Element: Active
+		Rect: [2,372] [86,398]
+		AspectMargin: Horizontal
+		Margin: 17,0
+		Horizontal: Scaled
+
+Style: GameTabClose
+	Element: Normal
+		Rect: [3,429][17,443]
+		
+	Element: Hovered
+		Rect: [17,429][31,443]
+
+	Element: Active
+		Rect: [32,429][46,443]
+		
+		
+Style: GameTabNew
+	Element: Normal
+		Rect: [138,350][169,369]
+		Margin: 9
+		Horizontal: Scaled
+
+	Element: Hovered
+		Rect: [106,350][136,369]
+		Margin: 9
+		Horizontal: Scaled
+		
+	Element: Active
+		Rect: [138,373][169,392]
+		Margin: 9
+		Horizontal: Scaled
+		
+Style: HomeIcon
+	Element: Normal
+		Rect: [105, 300][136, 319]
+		
+	Element: Hovered
+		Rect: [138, 300][169, 319]
+		
+	Element: Active
+		Rect: [105, 324][136,343]
+		
+Style: GoIcon
+	Element: Normal
+		Rect: [105,253][136,272]
+
+	Element: Hovered
+		Rect: [138,253][169,272]
+
+	Element: Active
+		Rect: [105,277][136,296]		
+
+Style: GalaxyIcon
+	Element: Normal
+		Rect: [132,428] [157,451]
+
+		Vertical: Uniform
+		Horizontal: Uniform
+
+Style: PlanetIcon
+	Inherit: GalaxyIcon
+
+Style: SupportIcon
+	Inherit: GalaxyIcon
+
+Style: SystemIcon
+	Inherit: GalaxyIcon
+
+Style: DesignsIcon
+	Element: Normal
+		Rect: [94,429] [119,451]
+
+		Vertical: Uniform
+		Horizontal: Uniform
+
+Style: ResearchIcon
+	Element: Normal
+		Rect: [62,428] [87,451]
+
+		Vertical: Uniform
+		Horizontal: Uniform
+
+Style: GlobalBar
+	Element: Normal
+		Rect: [107,374] [136,425]
+		Margin: 4
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+		Add Gradient:
+			TopLeft : #1b1b1b44
+			TopRight: #1b1b1b44
+			BotLeft : #00000044
+			BotRight: #00000044
+
+			GX1: 1
+			GY1: 1
+			GX2: -1
+			GY2: -1
+
+Style: GoDialog
+	Element: Normal
+		Inherit: Panel
+
+Style: GoItem
+	Element: Normal
+		Inherit: ItemBox
+
+	Element: Active
+		Inherit: ItemBox, Active
+
+	Element: Hovered
+		Inherit: ItemBox, Hovered
+
+	Element: Active, Hovered
+		Inherit: ItemBox, Active, Hovered
+// }}}
+// {{{ Global Bar
+Style: BudgetProgress
+	Inherit: ProgressBarBG
+
+Style: BudgetProgressBar
+	Element: Normal
+		Inherit: ProgressBar
+
+Style: ResearchProgress
+	Inherit: ProgressBarBG
+
+Style: ResearchProgressBar
+	Element: Normal
+		Inherit: ProgressBar
+
+Style: Notification
+	Element: Normal
+		Inherit: PlainBox
+
+Style: TimeDisplay
+	Element: Normal
+		Inherit: PlainBox
+
+		Layer: SmallHexPattern
+			OX1: +3
+			OY1: +3
+			OX2: -3
+			OY2: -3
+// }}}
+// {{{ Research Tab
+Style: ResearchBG
+	Element: Normal
+		Inherit: HexPattern
+
+		Add Gradient:
+			TopLeft : #212e
+			TopRight: #212e
+			BotLeft : #000e
+			BotRight: #000e
+
+			GX1: 0%
+			GY1: 0%
+			GX2: 100%
+			GY2: 100%
+
+Style: ResearchField
+	Inherit: HighlightPanel
+// }}}
+// {{{ Design Tabs
+Style: DesignOverviewBG
+	Element: Normal
+		Inherit: HexPattern
+
+		Add Gradient:
+			TopLeft : #112e
+			TopRight: #112e
+			BotLeft : #000e
+			BotRight: #000e
+
+			GX1: 0%
+			GY1: 0%
+			GX2: 100%
+			GY2: 100%
+
+Style: DesignClassHeader
+	Element: Normal
+		Inherit: PanelTitle
+
+Style: DesignClass
+	Element: Normal
+		Inherit: Panel
+
+Style: DesignBorder
+	Element: Normal
+		Inherit: Panel
+	Element: Hovered
+		Inherit: Panel
+
+		Add Gradient:
+			TopLeft : #1112
+			TopRight: #1112
+			BotLeft : #aaa2
+			BotRight: #aaa2
+
+			GX1: +4
+			GY1: +4
+			GX2: -4
+			GY2: -4
+
+	Element: Active
+		Inherit: Panel
+
+		Add Gradient:
+			TopLeft : #fff3
+			TopRight: #fff3
+			BotLeft : #fff3
+			BotRight: #fff3
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: +4
+
+		Add Gradient:
+			TopLeft : #fff3
+			TopRight: #fff3
+			BotLeft : #fff3
+			BotRight: #fff3
+
+			GX1: 0
+			GY1: -4
+			GX2: 100%
+			GY2: 100%
+
+		Add Gradient:
+			TopLeft : #fff3
+			TopRight: #fff3
+			BotLeft : #fff3
+			BotRight: #fff3
+
+			GX1: 0
+			GY1: +4
+			GX2: +4
+			GY2: -4
+
+		Add Gradient:
+			TopLeft : #fff3
+			TopRight: #fff3
+			BotLeft : #fff3
+			BotRight: #fff3
+
+			GX1: -4
+			GY1: +4
+			GX2: 100%
+			GY2: -4
+
+	Element: Hovered, Active
+		Inherit: DesignBorder, Active
+
+		Add Gradient:
+			TopLeft : #1112
+			TopRight: #1112
+			BotLeft : #aaa2
+			BotRight: #aaa2
+
+			GX1: +4
+			GY1: +4
+			GX2: -4
+			GY2: -4
+
+Style: DesignGradient
+	Element: Normal
+		GradientMode: Overlay
+		Add Gradient:
+			TopLeft : #aaa3
+			TopRight: #8883
+			BotLeft : #8883
+			BotRight: #2223
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: 100%
+
+Style: DesignSummary
+	Element: Normal
+		Layer: DesignBorder, Normal
+			Color Override: #fff
+		Layer: DesignGradient
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+		Layer: PlainBox
+			OX1: 2
+			OY1: -34
+			OX2: -2
+			OY2: -2
+
+Style: DesignEditorBG
+	Inherit: DesignOverviewBG
+
+Style: DesignNavigationClass
+	Inherit: LightPanel
+
+Style: DesignNavigationIcon
+	Inherit: RoundedBox
+
+Style: ModuleButton
+	Inherit: Button
+// }}}
+// {{{ Diplomacy Tabs
+Style: DiplomacyBG
+	Element: Normal
+		Inherit: HexPattern
+
+		Add Gradient:
+			TopLeft : #121e
+			TopRight: #121e
+			BotLeft : #000e
+			BotRight: #000e
+
+			GX1: 0%
+			GY1: 0%
+			GX2: 100%
+			GY2: 100%
+
+Style: EmpireBox
+	Element: Normal
+		Layer: RoundedBox
+
+		Layer: Panel
+			Color Override: #fff
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+
+Style: PlayerEmpireBox
+	Inherit: EmpireBox
+
+Style: DelegationBox
+	Element: Normal
+		Layer: RoundedBox
+			Color Override: #fff
+			OX1: 0
+			OY1: 4
+			OX2: 100%
+			OY2: -4
+
+		Layer: RoundedBox
+			OX1: 0
+			OY1: 0
+			OX2: -46
+			OY2: 100%
+
+Style: VotingBox
+	Element: Normal
+		Inherit: PlainBox
+
+Style: VoteTotal
+	Element: Normal
+		Layer: PlainBox
+
+Style: InfluenceVoteBox
+	Inherit: PatternBox
+
+Style: TreatyBox
+	Inherit: PatternBox
+
+Style: InfluenceEffectBox
+	Inherit: PatternBox
+// }}}
+// {{{ Planet Tab
+Style: QueueBackground
+	Inherit: SmallHexPattern
+
+Style: ConstructionBox
+	Inherit: Panel
+
+Style: PlanetBox
+	Element: Normal
+		Layer: RoundedBox
+			Color Override: #ffffff80
+
+Style: PlanetElement
+	Element: Normal
+		Layer: Panel
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 100%
+
+		Layer: PlainBox
+			OX1: +4
+			OY1: +4
+			OX2: -4
+			OY2: -4
+// }}}
+// {{{ System Tab
+Style: SystemListBG
+	Element: Normal
+		Inherit: HexPattern
+
+		Add Gradient:
+			TopLeft : #210e
+			TopRight: #210e
+			BotLeft : #000e
+			BotRight: #000e
+
+			GX1: 0%
+			GY1: 0%
+			GX2: 100%
+			GY2: 100%
+
+Style: SystemPanel
+	Element: Normal
+		Layer: Panel
+			Color Override: #fff
+
+		Layer: PanelTitle
+			OX1: +1
+			OY1: +1
+			OX2: -2
+			OY2: +31
+
+Style: PlanetBar
+	Element: Normal
+		Inherit: PlainBox
+			
+// }}}
+// {{{ Support Tab
+Style: GroupPanel
+	Inherit: Panel
+
+Style: GroupSupportClass
+	Inherit: PatternBox
+// }}}
+// {{{ Wiki Tab
+Style: WikiBG
+	Element: Normal
+		Inherit: HexPattern
+
+		Add Gradient:
+			TopLeft : #211e
+			TopRight: #211e
+			BotLeft : #000e
+			BotRight: #000e
+
+			GX1: 0%
+			GY1: 0%
+			GX2: 100%
+			GY2: 100%
+// }}}
+// {{{ Popups
+Style: PopupBG
+	Element: Normal
+		Layer: Panel
+			Color Override: #fff
+
+		Layer: SubTitle
+			OX1: +2
+			OY1: +1
+			OX2: -3
+			OY2: 25
+
+		Layer: BG3D
+			OX1: +3
+			OY1: +24
+			OX2: -4
+			OY2: -35
+
+Style: ShipPopupBG
+	Element: Normal
+		Layer: Panel
+			Color Override: #fff
+
+		Layer: SubTitle
+			OX1: +2
+			OY1: +1
+			OX2: -3
+			OY2: 25
+
+		Layer: BG3D
+			OX1: +3
+			OY1: +24
+			OX2: -4
+			OY2: -80
+
+Style: GenericPopupBG
+	Element: Normal
+		Layer: Panel
+			Color Override: #fff
+
+		Layer: SubTitle
+			OX1: +2
+			OY1: +1
+			OX2: -3
+			OY2: 25
+
+		Layer: BG3D
+			OX1: +3
+			OY1: +24
+			OX2: -4
+			OY2: -4
+
+Style: SelectablePopup
+	Inherit: PopupBG
+
+Style: ManageButton
+	Element: Normal
+		Rect: [203,644][280,664]
+// }}}
+// {{{ Info Bar
+Style: InfoBar
+	Element: Normal
+		Inherit: PlainBox
+
+Style: InfoBarPlain
+	Element: Normal
+		Layer: Panel
+			Color Override: #fff
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 130%
+// }}}
+// {{{ Main Menu
+Style: MapSelectorItem
+	Element: Normal
+		Inherit: Panel
+
+	Element: Hovered
+		Inherit: Panel, Active
+
+Style: EmpireSetupItem
+	Element: Normal
+		Layer: Panel
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 100%
+
+Style: GalaxySetupItem
+	Element: Normal
+		Layer: PatternBox
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 100%
+		Layer: Panel
+			OX1: 0
+			OY1: 0
+			OX2: 100%
+			OY2: 40
+
+Style: MainMenuPanel
+	Element: Normal
+		Layer: Panel
+			Color Override: #ffffffff
+
+Style: MainMenuDescPanel
+	Inherit: MainMenuPanel
+
+Style: MainMenuItem
+	Element: Normal
+	Element: Hovered
+		Inherit: ItemBox, Active
+	Element: Active
+		Inherit: PlainBox, Normal
+
+		Add Gradient:
+			TopLeft : #aa444440
+			TopRight: #aa444440
+			BotLeft : #aa444440
+			BotRight: #aa444440
+
+			GX1: 0
+			GY1: 0
+			GX2: 100%
+			GY2: 100%
+
+	Element: Hovered, Active
+		Inherit: ItemBox, Active
+// }}}

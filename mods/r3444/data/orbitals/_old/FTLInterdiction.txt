@@ -1,0 +1,13 @@
+Module: FTLInterdiction
+	Name: #ORB_FTL_INTERDICTION
+	Blurb: #ORB_FTL_INTERDICTION_BLURB
+	Description: #ORB_FTL_INTERDICTION_DESC
+	Icon: ResourceIcons::22
+
+	Standalone: False
+	Core: False
+
+	Build Cost: 250
+	Require Resource: FTL
+
+	BlockSystemFTL(Block Owner = False, Timer = 60)

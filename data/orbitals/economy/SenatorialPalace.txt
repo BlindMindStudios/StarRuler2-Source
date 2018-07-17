@@ -1,0 +1,34 @@
+Module: SenatorialPalace
+	Name: #ORB_SENATORIAL_PALACE
+	Blurb: #ORB_SENATORIAL_PALACE_BLURB
+	Description: #ORB_SENATORIAL_PALACE_DESC
+	Icon: GuiOrbitalIcons::15
+	Distant Icon: OrbitalIcons::15
+
+	Build Cost: 1000
+	Maintenance: 150
+	Labor Cost: 50
+	Size: 15
+
+	ConsumeInfluence(15)
+
+	Health: 40000
+	Armor: 10000
+
+	Model: CommerceStation
+	Material: GenericPBR_CommerceStation
+
+	RequireSenateLeader()
+	RequireConfigOption(ENABLE_INFLUENCE_VICTORY)
+
+	OnEnable(NotifyAll(#NOTIFY_SENATORIAL_PALACE, Icon = GuiOrbitalIcons::0))
+
+	ModEmpireAttribute(SenatorialPalaceConstructed, Add, 1)
+	RequireAttributeLT(SenatorialPalaceConstructed, 1)
+
+	GloballyVisible()
+	GrantAllVision()
+
+	GrantAbility(BuyElection)
+	GrantAbility(BuyGalacticUtopia)
+	GrantAbility(BuyGalacticSuperpower)

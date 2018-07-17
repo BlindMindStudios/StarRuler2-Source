@@ -1,0 +1,12 @@
+Trait: PrivStations
+	Name: #PRIV_TRAIT_STATIONS
+	Description: #PRIV_TRAIT_STATIONS_DESC
+	Color: #ff8000
+
+	Category: Privilege
+	Available: False
+
+	TriggerHomeSystem(OnNearbySystems(4, RepeatTrigger(2, SpawnShip(Defense Station, Creeps)), On Home = True), Run Post = True)
+	TriggerHomeSystem(OnNearbySystems(3, RepeatTrigger(2, SpawnShip(Defense Station, Creeps)), On Home = True), Run Post = True)
+	TriggerHomeSystem(OnNearbySystems(2, RepeatTrigger(2, SpawnShip(Defense Station, Creeps)), On Home = True), Run Post = True)
+	TriggerHomeSystem(OnNearbySystems(1, RepeatTrigger(2, SpawnShip(Defense Station, Creeps)), On Home = True), Run Post = True)

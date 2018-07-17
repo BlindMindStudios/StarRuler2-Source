@@ -1,0 +1,16 @@
+Technology: SysShieldGen
+	Name: #R_SYS_SHIELDGEN
+	Description: #R_SYS_SHIELDGEN_DESC
+
+	Class: Unlock
+
+	Point Cost: 800
+	Time Cost: 120
+
+	Icon: FissionReactor
+	Color: #2b2bce
+
+	UnlockSubsystem(ShieldGen)
+	SkipOnUnlockedSubsystem(ShieldGen)
+
+	SecondaryEnergyCost(750)

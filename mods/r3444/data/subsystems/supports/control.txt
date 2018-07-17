@@ -1,0 +1,38 @@
+Subsystem: CrewDeck
+	Name: Crew Deck
+	Description: Provides a minimal deck and facilities for the crew to command the support ship.
+	BaseColor: #c5f946
+	Picture: SubsystemButtonArt::8
+	Elevation: 4
+	
+	Tags: DefaultUnlock, Crewed, Control, ControlCore, HasInternals
+	Hull: Support
+	
+	EvaluationOrder: -10
+	
+	Size := HexSize * Hexes
+	Crew := floor(40 * Size)
+	Command := Hexes * 4
+	Repair := 4 * HexSize * (Hexes-1)
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 12 * HexSize
+	Hex.Mass := HexSize
+	
+	Hex.LaborCost := 0.14 * HexSize
+	Hex.BuildCost := 1.5 * HexSize
+
+	Effect: ControlCore
+	
+	Provides:
+		Crew = Crew
+		Command = Command
+	
+	Module: Default
+		Sprite: HexagonSubsystems::4
+	
+	Module: Core
+		Sprite: HexagonSubsystems::3
+		Hex.HP := 4 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

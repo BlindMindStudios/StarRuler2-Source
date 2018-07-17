@@ -1,0 +1,25 @@
+varying vec2 uv;
+uniform sampler2D texture;
+uniform float age, time;
+varying vec3 n, v, norm;
+
+vec3 rangeUnpack(float t) {
+	vec3 r;
+	r.x = abs(mod(t + 0.33333,1.0) - 0.5) / 0.5;
+	r.y = abs(mod(t + 0.66666,1.0) - 0.5) / 0.5;
+	r.z = abs(mod(t + 1.0,1.0) - 0.5) / 0.5;
+	return r;
+}
+
+void main() {
+	vec3 sample = texture2D(texture,uv).rgb;
+	sample = sample * rangeUnpack(mod(age * 15.0, 1.0));
+	float alpha = max(sample.x + sample.y + sample.z - 0.7, 0.0);
+	alpha *= max(dot(normalize(norm), normalize(-v)), 0.0) * (1.0 - abs(n.y)) * (1.0 - age);
+	alpha *= 20.0;
+	if(alpha <= 0.0)
+		discard;
+		
+	gl_FragColor.rgb = alpha * vec3(1.0, 0.7, 0.2);
+	gl_FragColor.a = 1.0;
+}

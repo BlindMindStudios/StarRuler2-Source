@@ -1,0 +1,22 @@
+Resource: Gems
+	Name: #GEMS
+	Description: #GEMS_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIconsSmall::51
+	Small Icon: ResourceIconsSmall::51
+
+	Level: 0
+	Rarity: Rare
+	Affinity: ALL
+
+	Cargo Worth: 150
+
+	Pressure: 1 Money
+	Pressure: 1 Research
+	Pressure: 1 Influence
+	Pressure: 1 Defense
+	Pressure: 1 Energy
+	
+	IfType(Planet, AddStatus(Happy)) #version<48
+	OnTradeDeliver(AddStatus(Happy, Duration = 180)) #version>=48

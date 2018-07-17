@@ -1,0 +1,3 @@
+void removeGfxEffect(int64 id) -> client::gfxeffects::removeGfxEffect
+void makeBeamEffect(int64 id, Object@ from, Object@ to, uint color, double width, string material = "", double timer = -1.0) -> client::gfxeffects::makeBeamEffect
+void makePersistentParticles(int64 id, Object@ from, string particleName, double size = 1.0, double timer = -1.0) -> client::gfxeffects::makePersistentParticles

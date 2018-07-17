@@ -1,0 +1,24 @@
+Trait: Fling
+	Name: #TRAIT_FLING
+	Description: #TRAIT_FLING_DESC
+	Category: FTL
+	Order: 1
+
+	Icon: GuiOrbitalIcons::2
+	Color: #ef8eff
+
+	Unique: FTL
+
+	LoadDesigns(default)
+	LoadDesigns(not_hyperdrive)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/not_hyperdrive))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/not_hyperdrive))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/not_hyperdrive))
+
+	SpawnOrbital(FlingCore, Free = True)

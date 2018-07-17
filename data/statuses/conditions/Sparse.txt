@@ -1,0 +1,15 @@
+Status: Sparse
+	Name: #COND_SPARSE
+	Description: #COND_SPARSE_DESC
+
+	Icon: ConditionIcons::5
+	Color: #ff8000
+
+	Condition Frequency: 0.25
+
+	Condition Tier: 2
+	ConditionMinPressure(4)
+	ConditionMaxPressure(10)
+	
+	ModResourceEfficiencyBonus(-0.52)
+	AddDummyResource(Textiles)

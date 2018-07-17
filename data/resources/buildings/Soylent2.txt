@@ -1,0 +1,13 @@
+Resource: Soylent2
+	Name: #SOYLENT2
+	Description: #SOYLENT2_DESC
+	Native Biome: Forest
+	Class: Food
+
+	Icon: ResourceIconsSmall::104
+	Small Icon: ResourceIconsSmall::104
+	Display Weight: -10
+
+	Level: 0
+	Exportable: False
+	Artificial: True

@@ -1,0 +1,203 @@
+// Technology Icons
+
+Material: techArmor
+	Inherit: Image2D
+	Texture: data/images/techs/armor.png
+
+Material: techSupply
+	Inherit: Image2D
+	Texture: data/images/techs/supply.png
+
+Material: techHyperfield
+	Inherit: Image2D
+	Texture: data/images/techs/hyperfield.png
+
+Material: techScanner
+	Inherit: Image2D
+	Texture: data/images/techs/scanner.png
+
+Material: techRailgun
+	Inherit: Image2D
+	Texture: data/images/techs/railgun.png
+
+Material: techShipYard
+	Inherit: Image2D
+	Texture: data/images/techs/ship_yard.png
+
+Material: techTanks
+	Inherit: Image2D
+	Texture: data/images/techs/tanks.png
+
+Material: techRocket
+	Inherit: Image2D
+	Texture: data/images/techs/rocket.png
+
+Material: techEnergy
+	Inherit: Image2D
+	Texture: data/images/techs/energy.png
+
+Material: techPowerGen
+	Inherit: Image2D
+	Texture: data/images/techs/power_generator.png
+
+Material: techNeutronium
+	Inherit: Image2D
+	Texture: data/images/techs/neutronium.png
+
+Material: techFTL
+	Inherit: Image2D
+	Texture: data/images/techs/ftl_device.png
+
+SpriteSheet: TechBGs
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_bgs.png
+	Size: 201,134
+
+SpriteSheet: TechOverlays
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_bgs.png
+	Shader: InterpolateColor
+	Size: 201,134
+
+SpriteSheet: TechBase
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_base.png
+	Size: 201,134
+
+SpriteSheet: TechBoost
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_boost.png
+	Size: 201,134
+
+SpriteSheet: TechUnlock
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_unlock.png
+	Size: 201,134
+
+SpriteSheet: TechSecret
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_secret.png
+	Size: 201,134
+
+SpriteSheet: TechKeystone
+	Inherit: Image2D
+	CachePixels: True
+	Texture: data/images/techs/tech_keystone.png
+	Size: 201,134
+
+Material: TechScience
+	Inherit: Image2D
+	Texture: data/images/techs/science.png
+
+Material: ResearchBeam
+	Inherit: Image2D
+	Shader: ResearchBeam
+	Texture: data/images/techs/research_line_unlocked.png
+
+Material: LockedResearchBeam
+	Inherit: Image2D
+	Shader: ResearchBeam
+	Texture: data/images/techs/research_line_locked.png
+
+Material: techArmoring
+	Inherit: Image2D
+	Texture: data/images/techs/base_armoring.png
+	
+Material: techBallistics
+	Inherit: Image2D
+	Texture: data/images/techs/base_ballistics.png
+
+Material: techCooling
+	Inherit: Image2D
+	Texture: data/images/techs/base_cooling.png
+	
+Material: techImpact
+	Inherit: Image2D
+	Texture: data/images/techs/base_impact.png
+	
+Material: techImpact2
+	Inherit: Image2D
+	Texture: data/images/techs/base_impact_2.png
+	
+Material: techPhaseContainment
+	Inherit: Image2D
+	Texture: data/images/techs/base_phase_containment.png
+	
+Material: techPhaseHarmonics
+	Inherit: Image2D
+	Texture: data/images/techs/base_phase_harmonics.png
+
+Material: techReinforcement
+	Inherit: Image2D	
+	Texture: data/images/techs/base_reinforcement.png
+	
+Material: techEconomics
+	Inherit: Image2D
+	Texture: data/images/techs/base_economics.png
+	
+Material: techExplosives
+	Inherit: Image2D
+	Texture: data/images/techs/base_explosives.png
+	
+Material: techExplosives2
+	Inherit: Image2D	
+	Texture: data/images/techs/base_explosives_2.png
+	
+Material: techIonization
+	Inherit: Image2D
+	Texture: data/images/techs/base_ionization.png
+	
+Material: techOrganization
+	Inherit: Image2D
+	Texture: data/images/techs/base_organization.png
+	
+Material: techTargeting
+	Inherit: Image2D
+	Texture: data/images/techs/base_targeting.png
+	
+Material: techMilitia
+	Inherit: Image2D
+	Texture: data/images/techs/base_militia.png
+
+Material: techMaterialScience1
+	Inherit: Image2D
+	Texture: data/images/techs/base_material_science_1.png
+
+Material: techMaterialScience2
+	Inherit: Image2D
+	Texture: data/images/techs/base_material_science_2.png
+	
+Material: techConstruction
+	Inherit: Image2D
+	Texture: data/images/techs/base_construction.png
+	
+Material: techHydraulics
+	Inherit: Image2D	
+	Texture: data/images/techs/base_hydraulics.png
+	
+Material: techHydraulics2
+	Inherit: Image2D
+	Texture: data/images/techs/base_hydraulics_2.png
+	
+Material: techPropulsion
+	Inherit: Image2D
+	Texture: data/images/techs/base_propulsion.png
+	
+Material: techPropulsion2
+	Inherit: Image2D
+	Texture: data/images/techs/base_propulsion_2.png
+	
+Material: techResupply
+	Inherit: Image2D
+	Texture: data/images/techs/base_resupply.png
+
+SpriteSheet: ResearchIcons
+	Inherit: Image2D
+	Texture: data/images/research_icons.png
+	Size: 64,64

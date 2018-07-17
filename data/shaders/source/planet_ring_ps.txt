@@ -1,0 +1,104 @@
+#version 120
+const int nLightCount = 2;
+
+const float noiseSplit = 0.6;
+
+uniform sampler2D texture, hardNoise;
+uniform float plSize, ringMin, ringMax;
+uniform vec2 starDir;
+
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+void main() {
+	float radius = (length(uv) - 1.0) / 1.48;
+	vec3 color = gl_FrontMaterial.diffuse.rgb;
+	vec4 samp = texture2D(texture, vec2(0.0,radius));
+	
+	vec3 norm = vec3(0.0);
+	norm += texture2D(hardNoise, uv).xyz;
+	norm += texture2D(hardNoise, uv * 1.5 + vec2(0.15)).xyz;
+	norm += texture2D(hardNoise, uv * 2.0 + vec2(0.25)).xyz;
+	norm += texture2D(hardNoise, uv * 0.5 + vec2(0.41)).xyz;
+	norm = mod(norm, 1.0);
+
+	vec3 noiseSamp = texture2D(hardNoise, uv * 4.0).rgb;
+
+	samp.a *= noiseSamp.b;
+	samp.rgb *= (1.0 - noiseSplit + (noiseSamp.g * 2.0 * noiseSplit));
+	
+	samp.a *= smoothstep(ringMin - 0.05, ringMin, radius);
+	samp.a *= 1.0 - smoothstep(ringMax, ringMax + 0.05, radius);
+	if(samp.a < 0.01)
+		discard;
+	
+	const float gloss = 1.0;
+	float shininess = 100.0;//gl_FrontMaterial.shininess * gloss;
+
+	vec3 n = normalize(gl_NormalMatrix * (norm.xyz - vec3(0.5)));
+	vec3 v = normalize(npos);
+	
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	
+	vec3 ambient = gl_LightModel.ambient.rgb * gl_FrontMaterial.ambient.rgb;
+	vec3 diffuse = vec3(0.0);
+	float normContrib = (100.0 / (length(npos) + 100.0));
+	normContrib *= pow(abs(dot(normalize(normal),normalize(npos))), 0.5);
+	
+	if(nLightCount > 0) {
+		const int i = 0;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = mix(max(0.0, dot(n, light[i])), 1.0, 1.0 - normContrib) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = mix(max(0.0, dot(n, light[i])), 1.0, 1.0 - normContrib) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+	}
+	
+	//float penumbra = 1.0 - tan(40.0/length(starDir));
+	float shadow = 0.0;
+	float shadowDot = -dot(normalize(uv), normalize(starDir));
+	
+	if(shadowDot > 0.0) {
+		//shadow += clamp((shadowDot - penumbra) * 30.0, 0.0, 1.0);
+		float umbraDist = abs(dot(uv, normalize(starDir.yx * vec2(-1.0,1.0))));
+		float umbra = (plSize - umbraDist) * 40.0;
+		float penumbra = min(umbra, 0.0) + length(uv) * 8000.0 / length(starDir);
+		shadow += umbra + penumbra;
+	}
+	
+	shadow = clamp(1.0 - shadow, 0.0, 1.0);
+	
+	//float penumbra = 1.0 - tan(40.0/length(starDir));
+	
+	//float shadow = 1.0 - clamp((-dot(normalize(uv), normalize(starDir)) - penumbra) * 30.0, 0.0, 1.0);
+	
+	samp.rgb *= (1.0 - normContrib * 0.5);
+	
+	vec4 reservedKeyword = vec4(0.0, 0.0, 0.0, samp.a);
+	reservedKeyword.rgb = samp.rgb * (diffuse * shadow + ambient);
+	reservedKeyword.a *= smoothstep(0, 0.2, radius);
+	reservedKeyword.a *= 1.0 - smoothstep(0.95, 1.0, radius);
+	
+	gl_FragColor = reservedKeyword;
+}

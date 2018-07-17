@@ -1,0 +1,70 @@
+Subsystem: SupportPlasmaThrower
+	Name: #S_PLASMATHROWER
+	Description: #S_PLASMATHROWER_DESC
+	BaseColor: #ce815a
+	TypeColor: #ce815a
+	Elevation: 2
+
+	Tags: SpecialWeapon, Category:Weapons, Rotatable
+	Tags: ExteriorCore, Weapon, HasInternals, MainDPS, Homing, HexLimitArc
+	Tags: HeraldsDLC
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+	Range := Size + 500
+
+	Duration := 5 * (1.0 + Size/64)
+	DamageOverTime := (Size * 5.0) / Duration
+
+	out DPS := (DamageOverTime * Duration) / Reload
+	out SupplyDrain := SupplyCost
+	out SupplyFireCost := SupplyCost * Reload
+
+	Modifier: DamageFactor(factor)
+		DamageOverTime := DamageOverTime * factor
+
+	Reload := 5.0 * min(1.0 + Size/512, 2.0)
+	Speed := max(200, Range / 10)
+	Spread := 0.015 / max(Range / 600, 1)
+	Tracking := 0.2
+	FireArc := 1.5
+	Pierce := 0.0
+	SupplyCost := Size * 1.0
+
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+
+	Hex.BuildCost := 1.05 * HexSize
+	Hex.LaborCost := 0.03 * HexSize
+
+	Requires:
+		Command = 1
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: RocketPod::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: PlasmaThrower
+		Range = Range
+		DamageOverTime = DamageOverTime
+		Duration = Duration
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Spread = Spread
+		FireArc = FireArc
+		TargetTolerance = max(pi,FireArc + pi/4)
+		FireTolerance = Spread * 3
+		Pierce = Pierce
+		SupplyCost = SupplyCost * Reload

@@ -1,0 +1,31 @@
+Subsystem: GravityEngine
+	Name: #GRAVITYENGINE_NAME
+	Description: #GRAVITYENGINE_DESC
+	BaseColor: #e0f946
+	TypeColor: #e0f946
+	Picture: SubsystemButtonArt::9
+	Elevation: 0
+
+	Tags: BaseCost, Category:Propulsion, VectorThrust
+	Tags: Engine, GivesThrust, HasInternals
+	Hull: Flagship
+
+	Size := HexSize * Hexes
+	Thrust := 28 * Size
+	TurnThrust := 2.0 * Size
+	PowerUse := 5 * Size
+	Hex.Mass := HexSize
+
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+
+	Module: Default
+		Hex.BuildCost := 2 * Hex.BuildCost
+
+	Module: Core
+		Sprite: HexagonSubsystems::5
+		Hex.BuildCost := 3 * Hex.BuildCost

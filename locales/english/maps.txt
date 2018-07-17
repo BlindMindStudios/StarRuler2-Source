@@ -1,0 +1,29 @@
+SPIRAL_GALAXY: Spiral Galaxy
+SPIRAL_GALAXY_DESC: A galaxy with multiple arms in a spiral pattern.
+
+CORKSCREW_GALAXY: Corkscrew Galaxy
+CORKSCREW_GALAXY_DESC: Stars twisting down in a single strip.
+
+CLUSTERS_MAP: Clusters
+CLUSTERS_MAP_DESC: Several smaller clusters connected by narrow corridors.
+
+DUMBBELL_MAP: Dumbbell Galaxy
+DUMBBELL_MAP_DESC: Two large clusters connected by a long bar of systems in the middle.
+
+PERFECT_MIRROR: Perfect Mirror
+TT_PERFECT_MIRROR: <<|
+	Force both sides of the galaxy to be a perfect mirror of each other, including all generated planets, artifacts, anomalies, remnants, etc.
+
+	Intended for use in balanced 1v1 or team games.
+>>
+
+EXPANSE_MAP: The Expanse
+EXPANSE_MAP_DESC: <<|
+	Capture the remnant homeworld or expand out into the endless void.
+>>
+EXPANSE_MAP_TEXT: <<
+	[i][color=#aaa]Empires surround the remnant homeworld. Remnant fleets can be defeated in order to allow colonization of the inner planets. Remnant fleets also protect systems near the edge of the galaxy, defeating these fleets allows expansion and discovery of more previously undetected systems.[/color][/i]
+>>
+
+RINGS_MAP: Rings
+RINGS_MAP_DESC: Large interlocking rings of systems.

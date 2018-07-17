@@ -1,0 +1,55 @@
+Event: Clique
+	Name: #EVT_CLIQUE
+	Text: #EVT_CLIQUE_TEXT
+
+	Target: Location = Object
+	SelectRandomOwnedPlanet(Location)
+	TargetFilterPlanetLevel(Location, 2)
+
+	Target: Other = Empire
+	SelectRandomEmpire(Other)
+	TargetFilterRace(Other, Mechanoid, #RACE_MONO)
+
+	Option:
+		Text: #EVT_CLIQUE_ALLOW
+		Icon: emp_portrait_mono
+		Safe: False
+
+		SendZoomTo(Location)
+
+		Result: 50%
+			On: Location
+				AddStatus(EvtClique)
+			SendMessage(#EVT_CLIQUE_SUCCESS, Title = #EVT_CLIQUE)
+
+		Result: 50%
+			On: Location
+				LosePopulation(2)
+			SendMessage(#EVT_CLIQUE_FAILURE, Title = #EVT_CLIQUE)
+
+	Option:
+		Text: #EVT_CLIQUE_STUDY
+		Icon: AttributeIcons::3
+
+		Result: 50%
+			AddResearchPoints(300)
+			SendMessage(#EVT_CLIQUE_STUDY_R, Title = #EVT_CLIQUE)
+
+		Result: 50%
+			AddFTLStorage(200)
+			SendMessage(#EVT_CLIQUE_STUDY_F, Title = #EVT_CLIQUE)
+
+	Option:
+		Text: #EVT_CLIQUE_RETURN
+		Icon: StatusPeace
+		Safe: True
+		Default: True
+
+		TargetFilterNotWar(Other)
+
+		Result: 50%
+			AddInfluencePoints(+5)
+			SendMessage(#EVT_CLIQUE_RETURN_R, Title = #EVT_CLIQUE)
+
+		Result: 50%
+			//No effect

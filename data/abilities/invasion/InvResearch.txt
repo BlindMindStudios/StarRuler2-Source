@@ -1,0 +1,22 @@
+Ability: InvResearch
+	Name: #INV_ABL_RESEARCH
+	Description: #INV_ABL_RESEARCH_DESC
+	Icon: AttributeIcons::0
+
+	Energy Cost: 0
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+
+	Trigger(targ, RepeatTrigger(4, AddStatus(ImprovedPressure)))
+
+Ability: InvResearchPlus
+	Name: #INV_ABL_RESEARCH_PLUS
+	Description: #INV_ABL_RESEARCH_PLUS_DESC
+	Icon: ResearchComplex
+
+	Energy Cost: 0
+
+	ModAttribute(ResearchComplexExtraPressure, Add, 1)
+	AddInvasionStrength(1)

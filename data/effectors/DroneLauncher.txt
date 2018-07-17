@@ -1,0 +1,45 @@
+Effector: DroneLauncher
+	Value: Range
+	Value: Damage
+	Value: Speed
+	Value: Lifetime
+	Value: FireDelay
+	Value: DroneCount
+	Value: Tracking = 3
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Lifetime
+	CapOnTarget: 1
+
+	Pierces: True
+	RecoverTime: 0.25
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Only
+	Activation: Magazine(FireDelay, DroneCount, max(Lifetime - (DroneCount * FireDelay), 0))
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ExplDamage
+		Amount = Damage
+
+	PhysicalType: Missile
+		PhysicalSize: 1.0
+		GfxType: Sprite
+		GfxSize: 2.0
+		FireSfx: missile_launch
+		FireSfx: missile_launch_2
+		FireSfx: missile_launch_3
+		ImpactSfx: missile_impact
+		ImpactSfx: missile_impact_2
+		ImpactSfx: missile_impact_3
+		Trail: MissileTrail
+		Color: f3ff00ff
+		TrailCol: 00000000, 00000000
+		Material: Drone
+		ImpactGfx: ImpactFlareMissile

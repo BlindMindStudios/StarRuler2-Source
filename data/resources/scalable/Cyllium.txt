@@ -1,0 +1,27 @@
+Resource: Cyllium
+	Name: #CYLLIUM
+	Blurb: #CYLLIUM_BLURB
+	Description: #CYLLIUM_DESC
+	Native Biome: Desert
+	Class: Scalable
+
+	Small Icon: ResourceIconsSmall::63
+	Pressure: 1 Energy
+
+	Rarity Level: 3
+	Frequency: 2
+
+	Limitless Level: True
+	Exportable: False
+	
+	ModCivResourceMult(Energy, +0.1)
+	RepeatPlanetLevel(ModCivResourceMult(Energy, +0.1))
+
+	IfLevel(0, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 120), Interval = 120), Exact = True)
+	IfLevel(1, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 240), Interval = 120), Exact = True)
+	IfLevel(2, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 360), Interval = 120), Exact = True)
+	IfLevel(3, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 600), Interval = 120), Exact = True)
+	IfLevel(4, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 960), Interval = 120), Exact = True)
+	IfLevel(5, TriggerPeriodic(SpawnArtifact(In System = True, Owned = True, Expire = 1800), Interval = 120), Exact = True)
+	
+	IfLevel(4, SetSystemFlag(CheapArtifacts))

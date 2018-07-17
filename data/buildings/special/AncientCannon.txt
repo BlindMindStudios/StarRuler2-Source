@@ -1,0 +1,10 @@
+Building: AncientCannon
+	Name: #BLD_ANCIENT_CANNON
+	Description: #BLD_ANCIENT_CANNON_DESC
+	Sprite: PlanetaryArtilleryCannon
+
+	Size: 6x2
+
+	CannotBuildManually()
+
+	IfNotSiege( AddTurret(Artillery, Range=1500, Damage=100, Radius=50, Reload=10.0, Speed=200, Spread=0.0, FireArc=3.14, Tracking=0.2, FireTolerance=0, Hits=15) )

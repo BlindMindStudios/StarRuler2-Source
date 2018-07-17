@@ -1,0 +1,283 @@
+ABL_HOTKEY_SPEC: [color=#aaa](Hotkey: [b][color=#00c0ff]$1[/color][/b])[/color]
+
+ART_COMET: Comet
+ART_COMET_DESC: A giant comet that can be harvested to provide water for a planet.
+ABL_GENERATE_WATER: Generate Water
+ABL_GENERATE_WATER_DESC: <<|
+	Adds a water resource to the targeted planet.
+	
+	The water cannot be exported or bound to other waters.
+>>
+
+ART_COMMAND_COMPUTER: Command Computer
+ART_COMMAND_COMPUTER_DESC: An equippable computer system that increases a fleet's maximum support capacity.
+ABL_EXPAND_FLEET: Equip Command Computer
+ABL_EXPAND_FLEET_DESC: <<|
+	Expand the targeted fleet's support capacity by 300
+	
+	An equipped flagship has a high chance to drop the computer when destroyed.
+>>
+STATUS_COMMAND_COMPUTER: Command Computer
+STATUS_COMMAND_COMPUTER_DESC: <<|
+	Carrying Command Computer artifact.
+
+	Fleet support capacity increased by 300.
+	May drop when flagship is destroyed.
+>>
+
+ART_POWER_CELL: Power Cell
+ART_POWER_CELL_DESC: An equippable power source that increases a fleet's combat effectiveness by 20%.
+ABL_OVERCHARGE_FLEET: Equip Power Cell
+ABL_OVERCHARGE_FLEET_DESC: <<|
+	Increase the targeted fleet's effectiveness by 20%.
+	
+	A single cell can be equipped per fleet.
+	An equipped flagship has a high chance to drop the cell when destroyed.
+>>
+STATUS_POWER_CELL: Power Cell
+STATUS_POWER_CELL_DESC: <<|
+	Carrying Power Cell artifact.
+
+	Fleet Effectiveness increased by 20%.
+	May drop when flagship is destroyed.
+>>
+
+ART_ARCOLOGY: Arcology
+ART_ARCOLOGY_DESC: An abandoned orbital habitat that can be moved to a planet to increase maximum population.
+ABL_DEVELOP_PLANET: Move Arcology
+ABL_DEVELOP_PLANET_DESC: <<|
+	Increase the maximum population on the targeted planet by 10.
+>>
+
+ART_TELESCOPE: Telescope
+ART_TELESCOPE_DESC: A disposable quantum telescope that can provide vision over vast distances.
+ABL_TELESCOPE: Use Telescope
+ABL_TELESCOPE_DESC: <<|
+	Grants vision over the targeted system and all systems adjacent to it for
+	15 minutes.
+>>
+
+ART_BUSTER_MACHINE: Buster Machine
+ART_BUSTER_MACHINE_DESC: An activatable ship equipped with a planet buster beam.
+ABL_BUSTER_MACHINE: Activate Buster Machine
+ABL_BUSTER_MACHINE_DESC: Reactivate the dormant Buster Machine ship, an ancient vessel equipped with a planet buster beam.
+ABL_BUSTER_BEAM: Toggle Buster Beam
+ABL_BUSTER_BEAM_DESC: <<
+	Toggle the activation of the Buster Beam on a planet.
+
+	The buster beam will kill population and deplete a planet's Health. When the planet's health hits 0, the planet explodes. Some asteroids may be left behind after the destruction.
+>>
+ABL_BUST_PLANET: Bust Planet
+ABL_BUST_PLANET_DESC: <<|
+	Destroy target level 0 planet, leaving behind several asteroids.
+>>
+NOTIFY_BUST_PLANET: The [color=$2]$1[/color] have activated a [b]Buster Machine[/b] and blown [color=$4]$3[/color] to bits!
+
+ART_SPY_PROBE: Espionage Probe
+ART_SPY_PROBE_DESC: An activatable probe with sophisticated scanners that can spy for diplomatic advantage.
+ABL_SPAWN_SPY_PROBE: Activate Spy Probe
+ABL_SPAWN_SPY_PROBE_DESC: <<
+	Reactivate the dormant espionage probe. The probe has sophisticated scanners that can spy for diplomatic advantage.
+>>
+STATUS_SPY_PROBE: Espionage Probe
+STATUS_SPY_PROBE_DESC: This ship is a refurbished Remnant spy probe, and is gathering intelligence for an empire. It's impossible to tell which empire has sent the probe.
+ABL_GAIN_LEVERAGE: Gain Leverage
+ABL_GAIN_LEVERAGE_DESC: <<|
+	Gain leverage cards against all empires that control planets in the
+	targeted system.
+>>
+
+ART_ANCIENT_EMBASSY: Ancient Embassy
+ABL_ANCIENT_EMBASSY: Reactivate Embassy
+ABL_ANCIENT_EMBASSY_DESC: <<|
+	Place an Ancient Embassy orbital at the targeted location.
+>>
+
+ART_GENESIS_DEVICE: Genesis Device
+ART_GENESIS_DEVICE_DESC: A terraformation device that can change a planet's native resource to a random Tier 2 resource.
+ABL_GENESIS_DEVICE: Terraform Planet
+ABL_GENESIS_DEVICE_DESC: <<|
+	Instantly terraform target owned planet to a random Tier 2 resource.
+	
+	Removes all current native resources.
+>>
+
+ART_MIND_CONTROL: Mind Control Device
+
+ART_REVENANT_ENGINE: Engine of The Revenant
+ART_REVENANT_ENGINE_DESC: <<|
+	The Revenant's engine system.
+	Activate to grant all designs [b]100% increased thrust[/b].
+>>
+ORB_REVENANT_ENGINE: Engine of The Revenant
+ORB_REVENANT_BLURB: <<
+	A part of the mighty Revenant. Grants a bonus while active, having all 4 parts active spawns the Revenant itself. Can be destroyed to disable its effects.
+>>
+ABL_REVENANT_ENGINE: Activate Engine of The Revenant
+ABL_REVENANT_ENGINE_DESC: <<
+	Activate the engine of The Revenant, a dark ship of legend.
+
+	While active, the engine provides all your designs with [b]double thrust/acceleration[/b] and designs with hyperdrives with [b]50% increased hyperdrive speed[/b].
+
+	When the activated engine loses all its HP, it reverts back to its deactivated state.
+	
+	[b]Having all 4 parts of The Revenant activated at the same time will grant you control over the most powerful warship in the universe.[/b]
+>>
+NOTIFY_REVENANT_ENGINE: The [color=$2]$1[/color] have activated the [b]Engine of The Revenant[/b].
+
+ART_REVENANT_CANNON: Cannon of The Revenant
+ART_REVENANT_CANNON_DESC: <<|
+	The Revenant's weapons system.
+	Activate to grant all designs [b]75% increased weapons range[/b].
+>>
+ORB_REVENANT_CANNON: Cannon of The Revenant
+ABL_REVENANT_CANNON: Activate Cannon of The Revenant
+ABL_REVENANT_CANNON_DESC: <<
+	Activate the cannon of The Revenant, a dark ship of legend.
+
+	While active, the cannon provides all your designs with [b]75% increased weapon range/speed[/b].
+
+	When the activated cannon loses all its HP, it reverts back to its deactivated state.
+	
+	[b]Having all 4 parts of The Revenant activated at the same time will grant you control over the most powerful warship in the universe.[/b]
+>>
+NOTIFY_REVENANT_CANNON: The [color=$2]$1[/color] have activated the [b]Cannon of The Revenant[/b].
+
+ART_REVENANT_CHASSIS: Chassis of The Revenant
+ART_REVENANT_CHASSIS_DESC: <<|
+	The Revenant's chassis.
+	Activate to grant all designs [b]50% reduced build costs[/b].
+>>
+ORB_REVENANT_CHASSIS: Chassis of The Revenant
+ABL_REVENANT_CHASSIS: Activate Chassis of The Revenant
+ABL_REVENANT_CHASSIS_DESC: <<
+	Activate the chassis of The Revenant, a dark ship of legend.
+
+	While active, the chassis provides all your designs with [b]50% reduced build costs[/b].
+
+	When the activated chassis loses all its HP, it reverts back to its deactivated state.
+	
+	[b]Having all 4 parts of The Revenant activated at the same time will grant you control over the most powerful warship in the universe.[/b]
+>>
+NOTIFY_REVENANT_CHASSIS: The [color=$2]$1[/color] have activated the [b]Chassis of The Revenant[/b].
+
+ART_REVENANT_CORE: Core of The Revenant
+ART_REVENANT_CORE_DESC: <<|
+	The Revenant's command modules.
+	Activate to grant all designs [b]25% increased support capacity[/b].
+>>
+ORB_REVENANT_CORE: Core of The Revenant
+ABL_REVENANT_CORE: Activate Core of The Revenant
+ABL_REVENANT_CORE_DESC: <<
+	Activate the core of The Revenant, a dark ship of legend.
+
+	While active, the core provides all your designs with [b]25% increased support capacity[/b].
+
+	When the activated core loses all its HP, it reverts back to its deactivated state.
+	
+	[b]Having all 4 parts of The Revenant activated at the same time will grant you control over the most powerful warship in the universe.[/b]
+>>
+NOTIFY_REVENANT_CORE: The [color=$2]$1[/color] have activated the [b]Core of The Revenant[/b].
+
+ART_PLANET_GENERATOR: Planet Generator
+ART_PLANET_GENERATOR_DESC: An accelerated mass generator that can assemble brand new planets out of pure energy.
+ABL_GENERATE_PLANET: Generate Planet
+ABL_GENERATE_PLANET_DESC: <<
+	Spontaneously create a new randomized planet at the targeted position.
+>>
+
+ART_STELLAR_GENERATOR: Stellar Generator
+ART_STELLAR_GENERATOR_DESC: Channels massive amounts of energy into a point in space to create a brand new star.
+ABL_GENERATE_STAR: Generate Star
+ABL_GENERATE_STAR_DESC: <<
+	Spontaneously create a new star at the targeted position.
+>>
+
+ART_SKIP_DRIVE: Skip Drive
+ART_SKIP_DRIVE_DESC: An equippable experimental drive system that uses raw energy to FTL very short distances. Grants 1 Use.
+ABL_EQUIP_SKIP_DRIVE: Equip Skip Drive
+ABL_EQUIP_SKIP_DRIVE_DESC: Equip a skip drive to the targeted fleet. Skip drives are instant teleportation, but use up large amounts of energy.
+STATUS_SKIP_DRIVE: Skip Drive
+STATUS_SKIP_DRIVE_DESC: This flagship has a skip drive equipped. Skip drives are instant teleportation, but use up large amounts of energy. Loses 1 stack per use.
+ABL_BLINK: Teleport
+ABL_BLINK_DESC: Instantly teleport the fleet to a nearby position. Costs more energy the further away the fleet is teleported.
+
+ART_ION_CANNON: Ion Cannon
+ART_ION_CANNON_DESC: An equippable beam cannon that temporarily disables enemy engines and FTL. Grants 1 Use.
+ABL_EQUIP_ION_CANNON: Equip Ion Cannon
+ABL_EQUIP_ION_CANNON_DESC: Equip an ion cannon to the targeted fleet. Firing an ion cannon temporarily prevents the targeted ship from moving or using FTL.
+STATUS_ION_CANNON: Ion Cannon
+STATUS_ION_CANNON_DESC: This flagship has an ion cannon equipped. Firing an ion cannon temporarily prevents the targeted ship from moving or using FTL. Loses 1 stack per use.
+ABL_ION_CANNON: Fire Ion Cannon
+ABL_ION_CANNON_DESC: <<
+	Fire the equipped ion cannon on a target enemy flagship. It will be unable to move or use FTL for a duration after being hit.
+	
+	Ion cannons cost more energy to fire if the enemy ship is larger than the ship with the ion cannon.
+>>
+
+ART_PROTO_PLANET: Protoplanet
+ART_PROTO_PLANET_DESC: A planet still in the process of forming. Expend a large amount of energy to regulate its formation.
+ABL_PROTO_LEVEL0: Form Planet (Tier 0)
+ABL_PROTO_LEVEL0_DESC: Manipulate the planet's formation by expending a large amount of energy. The planet will produce a random tier 0 resource.
+ABL_PROTO_LEVEL1: Form Planet (Tier 1)
+ABL_PROTO_LEVEL1_DESC: Manipulate the planet's formation by expending a large amount of energy. The planet will produce a random tier 1 resource.
+ABL_PROTO_LEVEL2: Form Planet (Tier 2)
+ABL_PROTO_LEVEL2_DESC: Manipulate the planet's formation by expending a large amount of energy. The planet will produce a random tier 2 resource.
+
+ART_FRAME_CONSTRUCTOR: Orbital Frame Constructor
+ART_FRAME_CONSTRUCTOR_DESC: <<
+	Create a frame that an orbital can be constructed on top of for reduced build and labor costs.
+>>
+ABL_ORBITAL_FRAME: Construct Orbital Frame
+ABL_ORBITAL_FRAME_DESC: <<
+	Create an orbital frame at the specified location.
+
+	You can construct any other orbital on top of an orbital frame to replace it. Orbitals constructed on top of frames have 50% reduced build and labor costs, and do not suffer from build distance labor penalties.
+>>
+
+ART_SUPPORT_STATION: Support Station
+ART_SUPPORT_STATION_DESC: <<
+	An activatable support station that can empower and resupply a nearby fleet during combat.
+>>
+ABL_SPAWN_SUPPORT_STATION: Support Station
+ABL_SPAWN_SUPPORT_STATION_DESC: <<
+	Activate the support station in a particular position.
+
+	Support stations automatically target one nearby allied fleet with a support beam, providing repair, increased efficiency and significant resupply even in combat.
+
+	Support stations take 60 seconds to construct after being activated.
+>>
+ABL_SUPPORT_BEAM: Target Support Beam
+ABL_SUPPORT_BEAM_DESC: <<
+	Target the station's support beam on a particular fleet.
+
+	Support beams repair the flagship of the fleet they're targeting by 1% of its hp per second, resupply the flagship by 1% of its total supply capacity per second, even in combat, and improve the fleet's strength by 20% while active.
+>>
+STATUS_CONSTRUCTING: Constructing...
+STATUS_SUPPORTED: Supported
+STATUS_SUPPORTED_DESC: <<
+	This fleet is being empowered by a support beam.
+
+	Support beams repair the flagship of the fleet they're targeting by 1% of its hp per second, resupply the flagship by 1% of its total supply capacity per second, even in combat, and improve the fleet's strength by 20% while active.
+>>
+ORB_SUPPORT_STATION: Support Station
+ORB_SUPPORT_STATION_BLURB: Supports nearby fleets and stations with a repair and resupply beam.
+
+ART_FLOATING_CONTINENT: Floating Continent
+ART_FLOATING_CONTINENT_DESC: <<
+	Adds a large new continent to a planet's surface that can be moved between planets.
+>>
+ABL_ADD_FLOATING_CONTINENT: Claim Floating Continent
+ABL_ADD_FLOATING_CONTINENT_DESC: <<
+	Claim the floating continent and attach it to one of your planets to build on.
+
+	For a cost of energy dependent on distance, the floating continent and all buildings on it can be moved to another one of your planets.
+>>
+ABL_TRANSFER_FLOATING_CONTINENT: Move Floating Continent
+ABL_TRANSFER_FLOATING_CONTINENT_DESC: <<
+	Move the floating continent and all buildings on it from this planet to another one of your planets.
+
+	The energy cost to move the floating continent is dependent on the distance between the two planets.
+
+	This ability cannot be activated while the planet the floating continent is currently on is under siege.
+>>

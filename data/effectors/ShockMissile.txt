@@ -1,0 +1,39 @@
+Effector: ShockMissile
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 3
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: 1.05 * Range / Speed
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isShip && tagIsShield
+	AutoTarget: isEnemy && isShip && tagIsShield
+
+	EfficiencyMode: Reload Only
+	Activation: StaggeredTimed(Reload, 1.0)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: DamageShields
+		Amount = Damage
+
+	PhysicalType: Missile
+		PhysicalSize: 0.25
+		GfxType: Sprite
+		GfxSize: 4.0
+		FireSfx: missile_launch
+		FireSfx: missile_launch_2
+		FireSfx: missile_launch_3
+		ImpactSfx: missile_impact
+		ImpactSfx: missile_impact_2
+		ImpactSfx: missile_impact_3
+		Trail: MissileTrail
+		Color: 0080ffff
+		TrailCol: 00999900, 00000000
+		Material: Missile
+		ImpactGfx: ShockImpact

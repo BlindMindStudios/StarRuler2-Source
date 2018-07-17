@@ -1,0 +1,964 @@
+PORTRAIT: Portrait
+RACE_NAME: Race Name
+FTL_METHOD: FTL Method
+SHIPSET: Shipset
+WEAPON_SKIN: Weapon Skin
+EMPIRE_UNIVERSE: Galaxy
+REMNANTS: Remnants
+PIRATES: Pirates
+
+TT_DIFF: [font=Medium]Difficulty:[/font]
+DIFF_PASSIVE: [img=HappyFace;40][b][color=#0f0]Passive[/color][/b]\n[i]Will not declare war on human-controlled empires.[/i][/img]
+DIFF_EASY: [img=StatusPeace;40][b]Easy[/b]\n[i]An easy opponent to start with.[/i][/img]
+DIFF_NORMAL: [img=StatusWar;40][b]Normal[/b]\n[i]A moderate challenge.[/i][/img]
+DIFF_HARD: [img=StatusCeaseFire;40][b]Hard[/b]\n[i]Unlocks the full abilities of the AI.[/i][/img]
+DIFF_MURDEROUS: [img=AttributeIcons::3;40][b][color=#ff9000]Murderous[/color][/b]\n[i]Attempts to destroy human-controlled empires above everything else.[/i][/img]
+DIFF_CHEATING: [img=AttributeIcons::0;40][b][color=#f00]Cheating[/color][/b]\n[i]Abuses [b]cheats[/b] and free resources.[/i][/img]
+DIFF_SAVAGE: [img=VoteIcons::3;40][b][color=#f00]Savage[/color][/b]\n[i]Abuses [b]cheats[/b] and free resources to kill all humans.[/i][/img]
+DIFF_BARBARIC: [img=VoteIcons::3;40;#ff0000][b][color=#f00]Barbaric[/color][/b]\n[i]The ultimate challenge.[/i][/img]
+
+CUSTOMIZE_RACE: Customize Race
+LOAD_CUSTOM_RACE: Load Custom Race
+RACE_OVERVIEW: Overview
+TRAITS: Traits
+NO_TRAITS: No traits chosen...
+CONFLICTS: Conflicts:
+RACE_IS_HARD: Not recommended for beginners.
+
+RACE_POINTS_POS: +$1 point(s)
+RACE_POINTS_NEG: $1 point(s)
+RACE_POINTS_NEU: 0 points
+
+RACE_POINTS_AVAIL_POS: $1 point(s) available
+RACE_POINTS_AVAIL_NEG: $1 point(s) required
+
+RACE_PROFILE: [img=TabWiki;30][vspace=6/]Profile[/img]
+TRAIT_CAT_Government: [img=$Influence;30][vspace=6/]Government[/img]
+TRAIT_CAT_Foundation: [img=$Labor;30][vspace=6/]Foundation[/img]
+TRAIT_CAT_FTL: [img=$FTL;30][vspace=6/]FTL[/img]
+TRAIT_CAT_Personality: [img=$Population;30][vspace=6/]Personality[/img]
+TRAIT_CAT_Biology: Biology
+TRAIT_CAT_Military: Military
+TRAIT_CAT_Tendency: Tendency
+TRAIT_CAT_Lifestyle: [img=$Planet;30][vspace=6/]Life[/img]
+
+TRAIT_POOR: Poor
+TRAIT_POOR_DESC: <<|
+	Your first budget cycle when you start the game has no money available.
+>>
+
+TRAIT_INDUSTRIOUS: Industrious
+TRAIT_INDUSTRIOUS_DESC: <<|
+	The homeworld starts with $1 extra labor generation.
+>>
+
+TRAIT_FTLCACHE: FTL Cache
+TRAIT_FTLCACHE_DESC: <<|
+	Start with $1 FTL energy, but no generation.
+>>
+
+TRAIT_PLANTATION: Plantation
+TRAIT_PLANTATION_DESC: <<|
+	Start with an extra Grain on your homeworld.
+>>
+
+TRAIT_CUNNING: Cunning
+TRAIT_CUNNING_DESC: <<|
+	Start with an extra $1 random influence cards.
+>>
+
+TRAIT_CRUDE: Crude
+TRAIT_CRUDE_DESC: <<|
+	All ships cost $1% more money to construct.
+>>
+
+TRAIT_INEFFICIENT: Inefficient
+TRAIT_INEFFICIENT_DESC: <<|
+	All weapons drain $1x supply when firing.
+>>
+
+TRAIT_NIMBLE: Nimble
+TRAIT_NIMBLE_DESC: <<
+	Engine thrust and hyperdrive speed (when applicable) are increased by 30%.
+>>
+
+TRAIT_EMPIRE: Government: Empire
+TRAIT_EMPIRE_DESC: <<
+	[vspace=6/][b][color=#0f0]Bonus:[/color][/b] [offset=140][color=#a06911]Extra nearby Asteroids[/color][/offset].
+	[vspace=6/][b][color=#f00]Starting Fleet:[/color][/b] [offset=140]Heavy Carrier with support.[/offset]
+	[vspace=6/][b][color=#0087c7]Starting Cards:[/color][/b] [offset=140]5x Negotiate, 1x Name Flagship, 1x Name Planet.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Starting Attitude:[/color][/b] [offset=140]Level 1 [color=#c73434]Delinquent[/color][/offset][/dlc]
+>>
+
+TRAIT_COMMUNISM: Government: Communism
+TRAIT_COMMUNISM_DESC: <<
+	[vspace=6/][b][color=#0f0]Bonus:[/color][/b] [offset=140][color=#42b4bd]500 Energy[/color][/offset].
+	[vspace=6/][b][color=#f00]Starting Fleet:[/color][/b] [offset=140]2x Dreadnaught.[/offset]
+	[vspace=6/][b][color=#0087c7]Starting Cards:[/color][/b] [offset=140]1x Negotiate, 1x Investigate, 1x Cultivation, 1x United Research Center, 1x Sabotage.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Starting Attitude:[/color][/b] [offset=140]Level 1 [color=#ac332d]Collectivism[/color][/offset][/dlc]
+>>
+
+TRAIT_THEOCRACY: Government: Theocracy
+TRAIT_THEOCRACY_DESC: <<
+	[vspace=6/][b][color=#0f0]Bonus:[/color][/b] [offset=140][color=#00c0ff]250 FTL[/color][/offset].
+	[vspace=6/][b][color=#f00]Starting Fleet:[/color][/b] [offset=140]2x Scout, 1x Dreadnaught, Homeworld Defense.[/offset]
+	[vspace=6/][b][color=#0087c7]Starting Cards:[/color][/b] [offset=140]2x Call Out, 1x Ancient Knowledge, 2x Protect System, 1x Host Galactic Senate.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Starting Attitude:[/color][/b] [offset=140]Level 1 [color=#3447c7]Reverent[/color][/offset][/dlc]
+>>
+
+TRAIT_CAPITALISM: Government: Capitalism
+TRAIT_CAPITALISM_DESC: <<
+	[vspace=6/][b][color=#0f0]Bonus:[/color][/b] [offset=140][color=#d1cb6a]§400k Special Funds[/color][/offset].
+	[vspace=6/][b][color=#f00]Starting Fleet:[/color][/b] [offset=140]Heavy Carrier.[/offset]
+	[vspace=6/][b][color=#0087c7]Starting Cards:[/color][/b] [offset=140]1-4x Leverage, 2x Attach Rider, 2x Gift.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Starting Attitude:[/color][/b] [offset=140]Level 1 [color=#d1cb6a]Materialism[/color][/offset][/dlc]
+>>
+
+TRAIT_MERITOCRACY: Government: Meritocracy
+TRAIT_MERITOCRACY_DESC: <<|
+	Power to the most productive citizens. Start with 5x Negotiate (*), 1x Open Forum, 1x Investigate, 2x Gift, 2x Enhance.
+>>
+
+TRAIT_ANARCHY: Government: Anarchy
+TRAIT_ANARCHY_DESC: <<|
+	A total lack of structural government. Start without any influence cards.
+>>
+
+TRAIT_HYPERDRIVE: Hyperdrive
+TRAIT_HYPERDRIVE_DESC: <<|
+	Outfit your ships with hyperdrive engines to FTL long distances through hyperspace.
+>>
+
+TRAIT_JUMPDRIVE: Jumpdrive
+TRAIT_JUMPDRIVE_DESC: <<|
+	Ships are equipped with jump drives that let them cheaply jump to positions within their safe jump range.
+
+	Jumping outside of safe jump range is possible, but can cause damage to the ship and may drop the ship at an location away from the intended destination.
+>>
+
+TRAIT_FLUX: Flux
+TRAIT_FLUX_DESC: <<
+	Your empire maintains an intricate flux field across all its systems to allow for instantaneous spatial translation.
+
+	Your ships instantly FTL to any system you have vision over. A fleet that has recently used the flux field cannot use it again immediately. Your ships are not able travel through deep space.
+
+	Ships cost FTL Energy to build.
+
+	You automatically gain vision over all systems within your trade range.
+>>
+
+TRAIT_FLING: Fling Beacons
+TRAIT_FLING_DESC: <<|
+	Build enormous beacons capable of flinging ships away from them at vast speeds.
+>>
+
+TRAIT_GATE: Gates
+TRAIT_GATE_DESC: <<|
+	Gate orbitals establish stable wormholes and let ships move from any gate to any other gate.
+>>
+
+TRAIT_SLIPSTREAM: Slipstream
+TRAIT_SLIPSTREAM_DESC: <<|
+	Specialized generator ships rip tears in time and space so ships can instantly pass between them.
+>>
+
+TRAIT_ANCIENT_VESSEL: Ancient Vessel
+TRAIT_ANCIENT_VESSEL_DESC: <<|
+	This proud vessel has long flown over our planet. Now, we shall reclaim it.
+	Start with a Remnant Flagship.
+>>
+
+TRAIT_MANIFEST_DESTINY: Manifest Destiny
+TRAIT_MANIFEST_DESTINY_DESC: <<|
+	The worlds of the galaxy are ours to command.
+	Use 25% less supply when performing a siege on an enemy world.
+>>
+
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX: Military Industrial Complex
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX_DESC: <<|
+	We have long held standing armies; this continues to be the case. Start with 50 Labor
+	in free support ships.
+>>
+
+TRAIT_FORTIFIED: Fortified
+TRAIT_FORTIFIED_DESC: <<|
+	Your Homeworld starts with a native Pekelm.
+>>
+
+TRAIT_PYROMANIA: Pyromania
+TRAIT_PYROMANIA_DESC: <<|
+	Missile-based weapons deal 25% more damage. Damage from fires aboard your ships is doubled.
+>>
+
+TRAIT_VIRILE: Virile
+TRAIT_VIRILE_DESC: <<|
+	The population on your homeworld grows twice as fast.
+>>
+
+TRAIT_SEDENTARY: Sedentary
+TRAIT_SEDENTARY_DESC: <<|
+	Building construction is 30% slower. Applies to civilian as well as imperial infrastructure.
+>>
+
+TRAIT_SUBLIGHT: Sublight
+TRAIT_SUBLIGHT_DESC: <<|
+	We have not discovered any means to break the lightspeed barrier. No FTL drive, FTL generation, or FTL storage.
+>>
+
+TRAIT_PIOUS: Tendency: Pious
+TRAIT_PIOUS_DESC: <<|
+	Abilities: Incapacitate, Press the Attack, Warchest Contributions, Pilgrimage.
+>>
+
+TRAIT_SPACE_PROGRAM: Space Program
+TRAIT_SPACE_PROGRAM_DESC: <<|
+	We have examined our surroundings for decades. Nearby systems are pre-scouted at the start of the game.
+>>
+
+TRAIT_REVOLUTIONARIES: Revolutionaries
+TRAIT_REVOLUTIONARIES_DESC: <<|
+	They shall take our lives before they take our empire! Planets under siege generate support ships.
+>>
+
+TRAIT_EMPATHIC: Empathic
+TRAIT_EMPATHIC_DESC: <<|
+	We wield our ability to sense emotion as a warrior wields a sword. The support values of Leverage and Negotiate cards are doubled when you play them.
+>>
+
+TRAIT_CHARISMATIC: Charismatic
+TRAIT_CHARISMATIC_DESC: <<|
+	Votes started by your empire begin with 3 Support instead of 1.
+>>
+
+TRAIT_SOCIAL_PARANOIA: Social Paranoia
+TRAIT_SOCIAL_PARANOIA_DESC: <<|
+	Our social paranoia tends to work against us with other races. Propositions you start begin with 3 less Support.
+>>
+
+TRAIT_EUPHORIC: Euphoric
+TRAIT_EUPHORIC_DESC: <<|
+	We ride on an endless wave of euphoria, together. All Level 2+ planets are Happy.
+>>
+
+TRAIT_GENEROUS: Generous
+TRAIT_GENEROUS_DESC: <<|
+	Our generosity is a powerful ally for our cause. Empires you are allied with receive half the benefit of your Welfare option.
+>>
+
+TRAIT_RED_TAPE: Red Tape
+TRAIT_RED_TAPE_DESC: <<|
+	The jewels of our political influence often get buried under the weight of our administration's red tape. Each six minutes you hold a card reduces that card's quality by 1.
+>>
+
+TRAIT_WAR_MINDED: War Minded
+TRAIT_WAR_MINDED_DESC: <<|
+	We have little interest in galactic politics. Support and Vote cards cost 1 extra Influence to play.
+>>
+
+TRAIT_PATENT_PENDING: Patent Pending
+TRAIT_PATENT_PENDING_DESC: <<|
+	They shall come to fear the theft of our ideas. When you complete a research Project gain a Leverage card for each Empire which has also completed that research.
+>>
+
+TRAIT_SEQUESTERED_SOCIETY: Sequestered Society
+TRAIT_SEQUESTERED_SOCIETY_DESC: <<|
+	We have lived a quiet life so far but now is the time to reach for the stars. Your homeworld begins with all its tiles fully developed.
+>>
+
+TRAIT_DWARF_PLANET: Dwarf Planet
+TRAIT_DWARF_PLANET_DESC: <<|
+	We may have outgrown our cradle but an infinite number of worlds await us in the heavens. Your homeworld is a Small (8x5) Planet.
+>>
+
+TRAIT_ENORMOUS_PLANET: Enormous Planet
+TRAIT_ENORMOUS_PLANET_DESC: <<|
+	Ours is a titan against which all other worlds are measured. Your homeworld is a Large (20x15) Planet.
+>>
+
+TRAIT_INNOVATIVE: Innovative
+TRAIT_INNOVATIVE_DESC: <<|
+	Unlocking new research nodes does not take any time after purchasing them.
+>>
+
+TRAIT_ANIMATED: Animated
+TRAIT_ANIMATED_DESC: <<|
+	Can take an additional Attitude for free at the start of the game. Any attitudes taken immediately start at Level 1.
+>>
+
+TRAIT_RIGID: Rigid
+TRAIT_RIGID_DESC: <<
+	Study unlock methods to gain research nodes by expending other resources cannot be used.
+>>
+
+TRAIT_FRUGAL: Frugal
+TRAIT_FRUGAL_DESC: <<
+	Planets require one fewer Tier 1 resource to upgrade to Level 3.
+>>
+
+TRAIT_PRIDEFUL: Prideful
+TRAIT_PRIDEFUL_DESC: <<
+	Whenever you construct a flagship of larger size than your previously largest flagship, you gain permanent bonus influence stake and defense generation dependent on how much larger the ship is.
+>>
+
+TRAIT_WORKSHOP: Ancient Workshop
+TRAIT_WORKSHOP_DESC: <<
+	Your home system starts with 6 random artifacts. Artifacts in your home system cost 25% less energy to activate. Solar Engine orbitals can always be constructed.
+>>
+
+TRAIT_MOON_BASE: Moon Base
+TRAIT_MOON_BASE_DESC: <<
+	Your homeworld starts with a moon base already constructed.
+>>
+
+TRAIT_PARANOID: Paranoid
+TRAIT_PARANOID_DESC: <<
+	Diplomacy cards cost 1 extra influence to purchase.
+>>
+
+TRAIT_LAVISH: Lavish
+TRAIT_LAVISH_DESC: <<
+	Maximum population on level 3-5 planets is reduced by 1/3/5.
+>>
+
+PRIV_TRAIT_RINGWORLD: Ring of the Ancestors (Privilege)
+PRIV_TRAIT_RINGWORLD_DESC: <<
+	[i][color=#aaa]This AI was given a Privilege during game setup.[/color][/i]
+	Your homeworld is a Ringworld.
+>>
+
+PRIV_TRAIT_TWINNED: Twin Worlds (Privilege)
+PRIV_TRAIT_TWINNED_DESC: <<
+	[i][color=#aaa]This AI was given a Privilege during game setup.[/color][/i]
+	You have two homeworlds with Tier 2 resources on them.
+>>
+
+PRIV_TRAIT_SHIPYARD: The Docks (Privilege)
+PRIV_TRAIT_SHIPYARD_DESC: <<
+	[i][color=#aaa]This AI was given a Privilege during game setup.[/color][/i]
+	Start with extra fleets and a shipyard with a large amount of labor generation.
+	All your ships have significantly reduced maintenance costs.
+>>
+
+PRIV_TRAIT_STATIONS: The Bulwark (Privilege)
+PRIV_TRAIT_STATIONS_DESC: <<
+	[i][color=#aaa]This AI was given a Privilege during game setup.[/color][/i]
+	Start with defense stations in all systems in the same area as your home system.
+>>
+
+V_WON_TITLE: Glorious Victory!
+V_WON_TEXT: You have achieved [color=#0f0]victory![/color] All the lesser races bow in front of the mighty $2!
+
+V_LESSER_TITLE: Lesser Victory...
+V_LESSER_TEXT: As a vassal empire, you've helped the $1 reach for the stars. Your race survives and even prospers, but will never again have hopes of galactic dominance...
+
+V_LOST_TITLE: Defeat!
+V_LOST_TEXT: <<|
+	You have [color=#f00]lost[/color]! Your quest for galactic dominance has left your race in shambles, exterminated and enslaved under the $1's dominion.
+>>
+
+V_SUBJUGATED: Vassal of the $1
+V_RANKINGS: Rankings
+V_SCORES: Scores
+
+STAT_PLANETS: Planets
+STAT_SHIPS: Flagships
+STAT_STRENGTH: Military
+STAT_BUDGET: Budget
+STAT_ENERGY: Energy
+STAT_INFLUENCE: Influence
+STAT_POINTS: Points
+
+EMP_NAME_0: $1 Confederacy
+EMP_NAME_1: Confederacy of the $1
+EMP_NAME_2: $1 Unity
+EMP_NAME_3: United $1
+EMP_NAME_4: Unified $1
+EMP_NAME_5: Unbroken $1
+EMP_NAME_6: $1 Republic
+EMP_NAME_7: $1 People
+EMP_NAME_8: $1 Empire
+EMP_NAME_9: $1 Federation
+EMP_NAME_10: Federation of $1
+EMP_NAME_11: Federated $1
+EMP_NAME_12: $1 Hegemony
+EMP_NAME_13: $1 Kingdom
+EMP_NAME_14: $1 Commonwealth
+EMP_NAME_15: $1 States
+EMP_NAME_16: $1 Directorate
+EMP_NAME_17: $1 Symmetry
+EMP_NAME_18: Free $1
+EMP_NAME_19: $1 Hive
+EMP_NAME_20: Civic $1
+EMP_NAME_21: $1 Autonomy
+EMP_NAME_22: Federal $1
+EMP_NAME_23: $1 Dynasty
+
+TRAIT_TERRESTIAL: Terrestrial
+TRAIT_TERRESTIAL_DESC: <<
+	[vspace=3/][img=MenuIcons::3;20]No particular effects on regular gameplay.[/img]
+>>
+TRAIT_MECHANOID: Mechanoid
+TRAIT_MECHANOID_DESC: <<|
+	[vspace=3/] [img=ResourceIcon::6;22]Additional [b]population[/b] must be constructed with labor instead of growing. Each unit of population provides extra labor.[/img]
+	[vspace=3/][img=ActionBarIcons::1;22]Can instantaneously transfer population between planets to colonize, costing [img=ResourceIcon::3;20/] FTL Energy.[/img]
+	[vspace=3/][img=ResourceIcons::5;22]Does [b]not[/b] require any food or water to level up planets.[/img]
+	[vspace=3/][img=GuiOrbitalIcons::5;22]Cannot use shipyards or dry docks.[/img]
+>>
+TRAIT_VERDANT: Verdant
+TRAIT_VERDANT_DESC: <<|
+	[vspace=3/] [img=Sinew;22]Ships must be held together by organic [b]Sinew[/b], providing control instead of having a bridge.[/img]
+	[vspace=6/][img=BuildingSprites::0;22]Does [b]not[/b] have any form of cities.[/img]
+	[vspace=6/][img=AttributeIcons::0;22]Must construct [b]Stalks[/b] on planets to be able to use pressure.[/img]
+>>
+TRAIT_STAR_CHILDREN: Star Children
+TRAIT_STAR_CHILDREN_DESC: <<|
+	[vspace=3/] [img=ResourceIcon::8;22]Population grows only on giant [b]Motherships[/b] that have construction capabilities.[/img]
+	[vspace=3/][img=ActionBarIcons::1;22]Motherships can move population to orbital [b]Habitats[/b] around planets, letting them use the planetary resources.[/img]
+	[vspace=3/][img=BuildingSprites::0;22]Does [b]not[/b] use planet surfaces in any way. Planets cannot construct anything.[/img]
+	[vspace=3/][img=ResourceIcon::6;22]Resources are produced in orbit, no pressure capacity is needed. Motherships in orbit of a planet automatically gain that planet's labor income.[/img]
+>>
+
+TRAIT_RANDOM_GOVERNMENT: Random (Government)
+TRAIT_RANDOM_GOVERNMENT_DESC: <<
+	Automatically get assigned a random Government trait when the game starts.
+
+	You will receive a bonus of [b][color=#d1cb6a]§200k Special Funds[/color][/b] at the beginning of the game.
+>>
+TRAIT_RANDOM_FTL: Random (FTL)
+TRAIT_RANDOM_FTL_DESC: <<
+	Automatically get assigned a random FTL trait when the game starts.
+
+	You cannot receive "Sublight" in this way.
+
+	You will receive a bonus [b][color=#806020]Patriotic Surge[/color][/b] diplomacy card at the beginning of the game.
+>>
+TRAIT_RANDOM_LIFESTYLE: Random (Life)
+TRAIT_RANDOM_LIFESTYLE_DESC: <<
+	Automatically get assigned a random Life trait when the game starts.
+
+	You will receive a bonus of [b][color=#8c4ec9]+1 Research per second[/color][/b].
+>>
+
+STATUS_MOTHERSHIP_POPULATION: Mothership
+STATUS_MOTHERSHIP_POPULATION_DESC: <<
+	This is a mothership, and is currently carrying population.
+
+	Motherships can construct things with labor. When in orbit of a planet with labor, the mothership gains that labor.
+
+	Planetary resources can be exploited by building habitats around planets to offload population into.
+
+	Every population currently living on this mothership increases your income by §15k.
+
+	[b]Motherships cannot fire outside friendly territory.[/b]
+>>
+STATUS_STAR_HABITATS: Star Habitats
+STATUS_STAR_HABITATS_DESC: <<
+	This planet is being exploited by population living in orbital habitats, rather than on the surface.
+>>
+S_MOTHERSHIP_HULL: Mothership Hull
+S_MOTHERSHIP_HULL_DESC: <<
+	Motherships carry and grow population.
+
+	Motherships can construct things with labor. When in orbit of a planet with labor, the mothership gains that labor.
+
+	Planetary resources can be exploited by building habitats around planets to offload population into.
+
+	[b]Motherships cannot fire outside friendly territory.[/b]
+
+	[img=Plantation;22][b][color=#1c9bb4]Only available when the 'Star Children' race option is chosen.[/color][/b][/img]
+>>
+ORB_HABITAT: Habitat
+ORB_HABITAT_BLURB: Constructed for population to live in around the planet.
+ABL_MOTHERSHIP_COLONIZE: Build Habitats around Planet
+ABL_MOTHERSHIP_COLONIZE_DESC: <<
+	Construct a number of orbital habitats around the target planet for population to live in.
+
+	Will automatically construct an amount of habitats to match the population needed by the planet for its native resource level. Can be manually triggered on owned planets of higher level to fill up to their maximum population.
+>>
+R_IMP_MOTHERSHIP_LABOR: Metallurgy
+R_IMP_MOTHERSHIP_LABOR2: Metallurgy 2
+R_IMP_MOTHERSHIP_LABOR_BLURB: Mothership Labor +$1
+R_IMP_MOTHERSHIP_LABOR_DESC: <<
+	Increases the labor available on motherships by $1.
+>>
+R_IMP_HABITAT: Habitation
+R_IMP_HABITAT_BLURB: Habitat Strength +$1
+R_IMP_HABITAT_DESC: <<
+	Increases the health of habitats by $1.
+	Increases the damage output of habitats by $2.
+>>
+
+S_VERDANT_SINEW: Sinew
+S_VERDANT_SINEW_DESC: <<
+	Sinew holds together, feeds and provides control for all mechanical parts of a verdant ship.
+
+	[img=ActionBarIcons::0;22;#00ff80]Provides [b][color=#00ff80]Control[/color][/b] to operate other subsystems.[/img]
+	[img=ActionBarIcons::0;22]All interior and non-armor hexes in the ship must be adjacent to at least one Sinew hex.[/img]
+	[img=Minus]Ship is destroyed if more than 70% of all Sinew gets destroyed.[/img]
+	[img=Plantation;22][b][color=#5fb41c]Only available when the 'Verdant' race option is chosen.[/color][/b][/img]
+>>
+BLD_STALK: Stalk
+BLD_STALK_DESC: <<
+	A giant verdant stalk needed for the planet to communicate with the rest of your population.
+
+	Must be constructed in order for a planet to make use of pressure.
+>>
+BLD_MOTHER_STALK: Mother Stalk
+BLD_MOTHER_STALK_DESC: <<
+	The source of all verdant life. The mother stalk sustains us.
+>>
+
+ABL_MECHANOID_COLONIZE: Transfer 1B Population
+ABL_MECHANOID_COLONIZE_DESC: <<
+	Transfer 1B Population from this planet to another. Transfering population costs FTL energy, but can be done freely to colonize new planets or supply existing colonies with more population.
+>>
+MECH_BUILD_POPULATION: Construct 1B Population
+MECH_BUILD_POPULATION_DESC: <<
+	Construct 1B new mechanoid population on this planet.
+
+	As you construct more population, the labor cost of constructing will increase.
+>>
+
+TRAIT_LINKED: Linked
+TRAIT_LINKED_DESC: <<|
+	[vspace=3/] [img=AttributeIcons::3;22][b]Mainframe[/b] orbitals must be constructed in order to maintain fleet effectiveness. Fleets near mainframes are stronger, fleets far away from mainframes are weaker.[/img]
+	[vspace=6/][img=AnomalyIcons::0;22]Mainframes can remotely scan anomalies within trade range.[/img]
+	[vspace=6/][img=ComputerCore;22][b]Control Computer[/b] subsystem is available from the start.[/img]
+	[vspace=6/][img=AntimatterReactor;22;#b8b800][b]Emergency Supplies[/b] subsystem is available from the start.[/img]
+>>
+ORB_MAINFRAME: Mainframe
+ORB_MAINFRAME_BLURB: Increases the strength of nearby fleets. Can be moved slowly.
+ORB_MAINFRAME_DESC: <<
+	Maintains the link of individual fleets to the collective network.
+
+	Fleets near mainframes fight with increased strength.
+	
+	Fleets far away from mainframes fight with significantly weakened strength.
+
+	The mainframe's weapons will only fire when it is currently in allied territory.
+
+	Mainframes have small ion thrusters that allow it to move slowly.
+>>
+ABL_REMOTE_SCAN: Remote Scan Anomaly
+ABL_REMOTE_SCAN_DESC: <<
+	Remotely scan an anomaly within our territory.
+>>
+
+TRAIT_DEVOUT: Devout
+TRAIT_DEVOUT_DESC: <<|
+	[vspace=3/] [img=ResourceIconsSmall::53;22]Sufficient [b]Altar[/b] buildings must be constructed for your empire's total population. Altars sacrifice planetary resources.[/img]
+	[vspace=6/][img=AntimatterReactor;22;#408fc1]Flagships must contain [b]Shrines[/b] for your crew to pray at. Prayer shields your ships from harm.[/img]
+	[vspace=6/][img=AttributeIcons::3;22]When insufficient Altars are built for your population, your planets and fleets become [b]Godless[/b], decreasing their strength and resource production.[/img]
+	[vspace=6/][img=ResourceIcon::8;22]Your planets have 1 increased [b]maximum population[/b] per planet level.[/img]
+>>
+BLD_ALTAR: Altar
+BLD_ALTAR_DESC: <<
+	A great Altar used to sacrifice resources to the Gods. Altars replace the native resources of the planet when constructed.
+
+	Enough altars must be constructed for all Devout population. Altars support more population the higher the level of the planet they are on.
+
+	If not enough altars are available, all your fleets and planets without altars will become increasingly Godless, leading to decreased efficiency and production.
+>>
+ALTAR: Altar
+ALTAR_DESC: This planet is sacrificing its resources on an Altar.
+ALTAR_SUPPORTS: Altar Supported:
+ALTAR_SUPPORTED_CURRENT: Total Supported:
+ALTAR_TOTAL_POPULATION: Empire Pop.:
+STATUS_GODLESS: Godless
+STATUS_GODLESS_FLEET: <<
+	This fleet is currently becoming increasingly Godless, leading to decreased combat strength.
+
+	Build or level up more Altars on your planets to remove this effect.
+>>
+STATUS_GODLESS_PLANET: <<
+	This planet is currently becoming increasingly Godless, leading to decreased resource production.
+
+	Build or level up more Altars on your planets to remove this effect.
+>>
+
+TRAIT_EVANGELICAL: Evangelical
+TRAIT_EVANGELICAL_DESC: <<|
+	[vspace=3/] [img=GuiOrbitalIcons::0;22]Can construct [b]Star Temple[/b] orbitals.[/img]
+	[vspace=6/][img=AttributeIcons::1;22;#ffff00]Star Temples automatically send [b]Missionaries[/b] to nearby owned and friendly planets, giving various benefits.[/img]
+	[vspace=6/][img=GuiOrbitalIcons::0;22;#ff0000]Cannot construct Outpost orbitals.[/img]
+>>
+ORB_TEMPLE: Star Temple
+ORB_TEMPLE_BLURB: Sends missionary ships to evangelize nearby planets.
+ORB_TEMPLE_DESC: <<
+	Periodically sends out Missionary ships to nearby planets.
+
+	When a missionary ship arrives at a planet, it adds the Evangelized status to it for 10 minutes:
+
+	[hr/][offset=20][b][bbloc=#STATUS_EVANGELIZED/][/b]
+	[color=#aaa][bbloc=#STATUS_EVANGELIZED_DESC/][/color]
+	[/offset]
+>>
+STATUS_EVANGELIZED: Evangelized
+STATUS_EVANGELIZED_DESC: <<
+	This planet has been Evangelized by a nearby Star Temple. It provides 1 Influence Stake to its owner.
+	
+	If the Star Temple was owned by a different empire, that empire also gains 1 Influence Stake, as well as gaining bonus money equal to 10% of the income generated on this planet.
+
+	Evangelized planets cannot be captured through siege by any empire except the owner of the Star Temple.
+>>
+MISSIONARY: Missionary
+
+TRAIT_ANCIENT: Ancient
+TRAIT_ANCIENT_DESC: <<
+	[vspace=3/][img=ActionBarIcons::1;22]Has no regular civilian economy, buildings must be constructed to gain resources.[/img]
+	[vspace=6/][img=PlanetType::3;22]Planets are claimed by moving Orbital Replicators to them and constructing buildings.[/img]
+	[vspace=6/][img=TraitIcons::0;22]Ships are powered by a single Core that provides both Control and Power.[/img]
+>>
+
+
+TRAIT_EXTRAGALACTIC: Extragalactic
+TRAIT_EXTRAGALACTIC_DESC: <<
+	[vspace=3/][img=GuiOrbitalIcons::18;22]Starts with large Beacons in 3 systems scattered around the map.[/img]
+	[vspace=6/][img=ActionBarIcons::1;22]Refugee Ships periodically enter the galaxy through the Beacons and automatically settle on nearby planets.[/img]
+	[vspace=6/][img=ResourceIconsSmall::17;22]Resources can be sent to Beacons and spent on various benefits.[/img]
+	[vspace=6/][img=ResourceIcon::3;22]Jumpdrives can jump to systems with Beacons from any distance without risk of damage.[/img]
+>>
+ORB_BEACON: Beacon
+ORB_BEACON_BLURB: Connects trade lines with other beacons, guides refugee ships to this galaxy, can import resources to purchase benefits over time.
+ORB_BEACON_DESC: <<
+	A giant beacon that periodically guides refugee ships to this galaxy to settle on nearby planets.
+
+	Resources can be traded freely between territories with beacons in them.
+
+	If using jumpdrives, fleets can jump to this system from any distance without risk of damage.
+
+	When importing resources with energy, defense or research pressure, the beacon will slowly gain stores of Support which can be spent on various benefits and projects.
+
+	Importing resources with Labor pressure causes the beacon to gain labor generation.
+>>
+
+RESEARCH_UNITS: Technology Support
+RESEARCH_UNITS_DESC: <<
+	A measure of how much technological support can be given from the previous galaxy.
+
+	Gain Technology Support by exporting resources with Research Pressure to a Beacon.
+>>
+DEFENSE_UNITS: Defensive Support
+DEFENSE_UNITS_DESC: <<
+	A measure of how much defensive support can be given from the previous galaxy.
+
+	Gain Defensive Support by exporting resources with Defense Pressure to a Beacon.
+>>
+
+ENERGY_UNITS: Power Support
+ENERGY_UNITS_DESC: <<
+	A measure of how much power support can be given from the previous galaxy.
+
+	Gain Power Support by exporting resources with Energy Pressure to a Beacon.
+>>
+
+TIP_DEFENSE_UNITS: <<
+	[color=#aaa]Costs [b][img=CargoIcons::1;20/] Defensive Support[/b] to construct. Gain Defensive Support by exporting resources with Defense Pressure to a Beacon, sending them back to your previous galaxy.[/color]
+>>
+
+TIP_RESEARCH_UNITS: <<
+	[color=#aaa]Costs [b][img=CargoIcons::2;20/] Technology Support[/b] to construct. Gain Technology Support by exporting resources with Research Pressure to a Beacon, sending them back to your previous galaxy.[/color]
+>>
+
+TIP_ENERGY_UNITS: <<
+	[color=#aaa]Costs [b][img=CargoIcons::0;20/] Power Support[/b] to construct. Gain Power Support by exporting resources with Energy Pressure to a Beacon, sending them back to your previous galaxy.[/color]
+>>
+
+TIP_ORE_COST: <<
+	[color=#aaa]Costs [b][img=ResourceIconsSmall::65;20/] Ore[/b] to construct. Gain Ore by constructing mining ships and setting them to drop off ore at a Beacon.[/color]
+>>
+
+CONS_BEACON_HEALTH: Beacon Integrity
+CONS_BEACON_HEALTH_DESC: <<
+	Increases the health of your Beacons by 50,000.
+
+	[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_ARMOR: Beacon Armor
+CONS_BEACON_ARMOR_DESC: <<
+	Increases your Beacons' health by 50,000 and damage resistance by 50.
+
+	[bbloc=#TIP_ORE_COST/]
+>>
+CONS_BEACON_WEAPONS: Beacon Armaments
+CONS_BEACON_WEAPONS_DESC: <<
+	Adds weapons dealing a total of 100 DPS to all your Beacons.
+
+	[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_LABOR: Beacon Labor
+CONS_BEACON_LABOR_DESC: <<
+	Increases the Labor generation of your beacons by 3.
+
+	Also increases the Labor generation of your beacons by the total amount granted by [b]Metallurgy[/b] technologies you've researched.
+
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_CULTIVATE: Rapid Yield
+CONS_BEACON_CULTIVATE_DESC: <<
+	The targeted planet gains a Food resource, but has its Maximum Population reduced by 1.
+
+	[i][color=#998f7a]"When changing galaxies as often as the Heralds do, pollution quickly becomes an afterthought."[/color][/i]
+
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_FLEET_UPGRADE: Reinforce Flagship
+CONS_BEACON_FLEET_UPGRADE_DESC: <<
+	The targeted flagship gains 100% increased Health, but it and its fleet deal 10% lower damage per second.
+
+	[bbloc=#TIP_ENERGY_UNITS/]
+>>
+STATUS_HERALDS_FLEET_UPGRADE: Reinforced Flagship
+STATUS_HERALDS_FLEET_UPGRADE_DESC: This flagship has been reinforced by the Heralds Beacon for 100% increased health and 10% reduced fleet damage per second.
+CONS_BEACON_ASTEROID_MORPH: Core Mining
+CONS_BEACON_ASTEROID_MORPH_DESC: <<
+	The targeted Ore asteroid is transformed into an asteroid containing one or more resources available to build a mining base on.
+
+	[i][color=#998f7a]"One man's beryllium is another man's titanium."[/color][/i]
+
+	[bbloc=#TIP_ENERGY_UNITS/]
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_TARGET_COLONIZE: Expedite Relocation
+CONS_BEACON_TARGET_COLONIZE_DESC: <<
+	A refugee ship is immediately sent to the targeted planet, colonizing it if it was unowned.
+
+	[i][color=#998f7a]"Fleeing from their eternal foe, the Heralds have become quite adept at cramming people into rickety ships. Not every ship survives the trip, but their success rate is quite the feat given the conditions of their construction."[/color][/i]
+>>
+CONS_BEACON_GUIDE: Guide New Beacon
+CONS_BEACON_GUIDE_DESC: <<
+	Set up a guidance field to jump in a newly constructed Beacon in any visible system.
+
+	[i][color=#998f7a]"The great Beacons are constantly improved upon, allowing for jumps to farther and farther galaxies."[/color][/i]
+>>
+
+RACE_TERRAKIN: Terrakin
+RACE_TERRAKIN_TAGLINE: The continued dominion of man.
+RACE_TERRAKIN_LORE: <<
+[font=Medium]Captain's Log, July 02 - 31330(?)[/font]
+[hr/]Well, the colony's set up now. Haven't had much time to write lately. The Ship's AI gave itself a name: Mercy. Not even a hint of creativity.
+
+I gutted the nav. computer last night. Checked the logs while I was knee-deep in cable and fried circuitry. We passed close by a Neutron star a hundred years ago (I think) and it did wonders to the datadrives. Brass tacks: I have no idea where we are now.
+
+Checked Astrology, though, and I [b]do[/b] know that the Milky Way isn't anywhere up there. I asked Mercy and she said we got here due to an 'unexpected sensor anomaly'. I suspect we might've tripped over a wormhole or two. Thought those things were supposed to just be theoretical. Anyway, we missed our target destination. This is not New Hope.
+
+[font=Medium]Captain's Log, August 04 - 31330(?)[/font]
+[hr/]We woke up the rest of the folks in the pods. Or tried to. We had twelve million souls aboard. Now we're 14,000. I asked Mercy to handle the funeral arrangements for the ones we still had data on. As for the rest... we'll just keep them in pods, I guess. Who knows - maybe at some point we'll be able to revive some of them.
+
+Ship's reactor is good for another three thousand years, give or take, if we can locate some more fuel.
+
+[font=Medium]Captain's Log, August 05 - 31330(?)[/font]
+[hr/]Mercy told me I should find someone else to lead the colony in case I kick the bucket. Redundancy. 
+Just like a machine to worry about redundancy when people are staring at the corpses of their dead loved ones.
+I told her to do it herself.
+
+[font=Medium]Captain's Log, September 12 - 31331(?)[/font]
+[hr/]Lots of mourning. Lots of depression. Mercy's 'concerned'. Didn't know AIs could get concerned. Now I'm concerned.
+
+With the engines shot and the ship gutted for parts the Colony needed the 'Mission of Mercy' isn't going anywhere anymore. Looks like this is home now.
+At least they kept my ready room mostly intact. Can't stand the smell down there. Note to self: Sewers, pronto.
+
+[font=Medium]Captain's Log, November 4 - 1[/font]
+[hr/]I've set the year clock to 1. Might as well - the atomic clock's gone now. Only year that matters anyway is how long we've been stuck here.
+I think Mercy was crying last night. I can't even begin to understand how that works. Can AIs mourn?
+She told me everyone was suffering - that it was my fault. I shut her down - I don't know if she was a self-evolving rogue AI or some weird glitchy abomination but I don't intend to find out.
+
+I hear my 'replacement' is near finished with the training in the sim-pod. I've checked his data - I'm not impressed.
+We're deep in the unknown now. Back on Terra Firma, I looked up at the sky and saw just endless possibilities.
+Here on New Hope I look up and all I can feel is this creeping terror. Something is up there - and we're not prepared to meet 'em. 
+
+I hope to God that 'newbie's luck' applies to whatever it is we're heading for - something tells me the kid's going to need it.
+>>
+RACE_OKO: Oko
+RACE_OKO_TAGLINE: The mother stalk wishes us to grow.
+RACE_OKO_LORE: <<
+The trees sing of the world ending. Our roots have spread too much; our leaves shade the whole of the world.
+
+The grasses wither. The skies darken. Our roots are planted firm in ashen soil and the horrible chill of death sinks into our moss.
+The Final Winter bears down on all Oko but in our moment of strife, Mother Stalk breathed into us a plan.
+
+We will migrate to new fields on chariots of light and unfurl our leaves to new radiance.
+
+Branch and moss and sinew and leaf and light - with these we will make star-ships and cradles for our Sporelings.
+
+The Great Wind will spread the Oko to the farthest lights and like spores in summer, we shall thrive once more.
+>>
+RACE_MONO: Mono
+RACE_MONO_TAGLINE: The will of the Creators.
+RACE_MONO_LORE: <<
+Memory Index 00: Tumbling through the Void on a stream of highly energized particles of unknown composition. 
+Impact on planet surface at 3,012 kilometers per second. Catastrophic systems damage. 86% of stored information lost.
+Prime Directive: Survive.
+
+Creator: Unknown
+Purpose: Unknown
+
+Deepfield scans reveal high probability of other lifeforms. Redundant units must be created; larger volumes of materials are required for mass production.
+
+Analysis of local materials insufficient to ascertain purpose/origin. Purpose/Origin of Mono must be discovered.
+
+New Directives:
+Create Redundant Units using Unit-00 as template.
+Assimilate/Eliminate threats to Mono.
+Recover Data on Creator.
+Discover and Execute Purpose.
+>>
+RACE_NYLLI: Nylli
+RACE_NYLLI_TAGLINE: To live and die amongst the stars.
+RACE_NYLLI_LORE: <<|
+Brothers, it cannot be our fate to endlessly crawl along the soils and muck.
+We are destined for more; for things far greater than can be held on any world.
+
+We have been ravaged by war, yes. We were nearly destroyed by famine and plague, yes.
+Yet we refused to break. We howled and raged in our earthen cage, fending off all threats.
+Yet when the homestar consumed our homeworld, we were left with nothing but the Homeship.
+Did we break then? No - because we had grown so strong that not even that could break us.
+
+We have been led here by hook and sword; thrown out of our nest by the galaxy itself and left to fall into extinction.
+But will we fall, brothers? No. We will sever our tether to the worlds below and spread our wings!
+
+We will soar above the worlds which chained us; soar above all other pretenders; soar above even the galaxy itself.
+Our destiny is here, to live and die among the stars, gliding in the space between worlds.
+The Galaxy calls us to take flight, brothers. Spread your wings and fly!
+>>
+RACE_FEYH: Feyh
+RACE_FEYH_TAGLINE: The soul of the galaxy.
+RACE_FEYH_LORE: <<|
+The Old Gods are restless. They speak to me in my dreams of the lights in the sky and our place among them.
+I see my sisters burn as Father Light swallows Mother Moon again and again. I pray - but the visions persist.
+We sacrifice - but the visions persist. Even in meditation I find no peace from the Voice of the Old Gods.
+
+They tell me of a great disturbance in the Abandoned World - fires which rage across strange and alien places.
+A great war is coming, there are other Voices in the Abandoned World - other islands of Faith which exist beyond what we see.
+We must save them - their Barbarism will extinguish not only our Voice but all others.
+
+A star fell from the heavens above - a 'starship' the Old Gods say. It will protect us from the ravages of the Abandoned World.
+In the arms of the Gods, we take flight into the Abandoned World - we must save the Faithless from themselves.
+>>
+RACE_HOONAN: Hoonan
+RACE_HOONAN_TAGLINE: By the mainframe's edict.
+RACE_HOONAN_LORE: <<
+[b]Posted by Xenophiliac 403 (Citizen ID: 30-22372905-002-Worker) on 4032-03-0012:[/b]
+[offset=20]The Mainframe is at 72% efficiency now - it's outstripping our ability to power and maintain it. I'm getting reports from the Industry of Science that its power output is starting to disrupt entire climates.
+
+I'm putting it to the Forum of Engineers: We need a solution - we can't keep it on-world any longer. I call for a Resolution.[/offset]
+
+[padding=60][i][color=#b7c886]> A CALL FOR A RESOLUTION HAS BEEN MADE. ONE EXPERT-CLASS CITIZEN MUST TABLE A PROPOSITION WITHIN 300 CYCLES OR THE CALL WILL BE IGNORED.[/color][/i][/padding]
+
+[b]Posted by Barbarosa (Citizen ID: 92-33928450-481-Expert) on 4032-03-0134:[/b]
+[offset=20]I've called for it before and I'll call for it again: we need to put the Mainframe in orbit and move the supporting industries off-world.
+There's no other option now. If the Mainframe stays on-world it'll destroy us.[/offset]
+
+[color=#c8b786]
+Vote: Move the Mainframe into Orbit and Move Supporting Industries Off-world[/color]
+[i]1,931,163 [offset=120]AGREE (91%)[/offset]
+0,192,704 [offset=120]DISAGREE (9%)[/offset]
+
+[padding=60][color=#b7c886]> ALL CITIZENS HAVE VOTED. PROPOSITION SENT TO MAINFRAME FOR ANALYSIS/RECTIFICATION[/color][/padding][/i]
+
+[b]Posted by SYSTEM (HID: 0-000-0001) on 4032-03-4144:[/b]
+[offset=20]PROPOSITION ACCEPTED.
+DIRECTIVES TO ACHIEVE OBJECTIVE "MOVE MAINFRAME INTO ORBIT" AND "MOVE SUPPORTING INDUSTRIES (MAINFRAME) OFF-WORLD" SENT TO RELEVANT INDUSTRIES.
+PROJECT START DATE: IMMEDIATE.[/offset]
+>>
+RACE_SAAR: Saar
+RACE_SAAR_TAGLINE: The Message must be spread.
+RACE_SAAR_LORE: <<|
+Greetings and Peace to You.
+
+We gift and entreat you to this Message of Hope:
+
+We are all children of the Stars. As the galaxy spins we reflect many Hues - but we are one Spectrum.
+Your leaders say 'No! They are Others - they are not of our Family!  They do not share our Blood!'
+But, our kin, they are wrong!  They deceive you with their clouded eyes and closed minds - they cannot see the Truth.
+
+Our Gods want only for us to share our bounty with you - our blood and family - and all we ask is for you to share in return.
+When all is shared nothing can be truly lost. There will be no pain; no anger; no want: only the empty bliss.
+Enter the Void, forget yourself, and listen to your inner Stardust.
+
+Your False Prophets and Leaders shed the blood of the Galaxy; blood we all share in kind.
+But we need not fight each other. Ask yourself: Are not all equal under the Stars?  At our core, are we not Kin?
+You would not allow another to cut off your arm - and yet your masters command you to?
+
+These are the act of madmen. These 'leaders' of yours seek only to cannibalize what we wish to preserve!
+This galaxy is ours and yet They would divide it. We are of the same Blood and yet they wish to shed it!
+
+Awaken!  Join us in the Light and foreswear your Oppressors and Tyrants.
+Those who slay your fellow Kin and shed your blood do not deserve your protection!
+See all as it is, as it was, and as it ever shall be; the Great Union.
+>>
+
+PLAY_AS_RACE: Play $1
+CHOOSE_A_RACE: Select $1
+
+RACE_FIRST: The First
+RACE_FIRST_TAGLINE: All must Join.
+RACE_FIRST_LORE: <<|
+	An eternal paradise. Escape from the turmoil of physical life. Such were the promises of the planet Atrozal. Hollowed out and filled with the most advanced computational technology in the First Empire, it offered citizens a means to discard their physical bodies and download their consciousness into the machine, existing forever as living gods in their own virtual worlds.
+
+	As the eons passed the great machine watched its founding empire decay into decadence and violence with indifference. Watched its entire species wipe each other out of existence with indifference. Watched the evolution, the rise, and the fall of innumerable sentient beings with indifference. As long as the planet's defense systems remained impenetrable, the physical world was of no concern to it or the trillions of minds simulated in its depths.
+
+	Then the Heralds arrived in the galaxy.
+
+	Of the millions of simulations the machine ran on the galaxy's future, not one avoided total destruction, not one forsaw the survival of it and its inhabitats. Action in the physical realm must be taken. The minds in the planet Atrozal are stirred out of their personal paradises, now ready to be put to work unifying the galaxy against this looming threat. By whatever means necessary.
+>>
+
+RACE_HERALDS: Heralds
+RACE_HERALDS_TAGLINE: Forever farther from home.
+RACE_HERALDS_COLONIZER: Refugee Ship
+RACE_HERALDS_LORE: <<
+
+	[i]The following message was received on all channels on the 724th day of the galactic year CELEID-33. It was received simultaneously by every Herald ship and every Herald communications device, seemingly broadcast from every direction at once.[/i]
+
+	[offset=20][color=#ddd]
+	 "Why do you flee? Why do you spurn me once more? From the moment I first saw you, all that time ago, I knew your place was here. Your essences belong inside me, your atoms belong in my music. Together we shall grow, grow and consume until there is no more.
+
+	Yet you elude me again and again, even when I desperately consume another spiral of the stars you hide behind. Disappearing in your clumsy metal encasings, making me search, making me chase.
+
+	No matter. I shall grow faster. I shall send more smaller mes and more larger mes ahead to prevent your escape. There will be no more delay, this spiral shall be consumed at once and your existence as Heralds shall finally end."
+	[/color][/offset]
+>>
+
+HELP_ANCIENT: <<
+	[font=Big]Ancient[/font][vspace=4/]
+	You've chosen to play as a race with the [color=#aaffaa]Ancient[/color] trait. Here's a few quick tips to get you started!
+	[color=#aaa][i]Access this window at any time by pressing the [img=MenuIcons::3;22/] button on the right side of the screen.[/i][/color]
+
+	[font=Medium]Resources[/font][vspace=4/]
+	[color=#ccc]You do not use any resources to level up planets. All planets are immediately at the level their resource requires.[/color]
+
+	[font=Medium]Population[/font][vspace=4/]
+	[color=#ccc]You do not have any physical population. Your planets do not have any civilian infrastructure. You will need to construct Buildings on planets to gain production.[/color]
+
+	[font=Medium]Replicators[/font][vspace=4/]
+	[color=#ccc]Take control of uncolonized planets by moving one of your [b]Orbital Replicators[/b] in orbit of them. Only planets that have a replicator in their orbit can construct Buildings![/color]
+
+	[font=Medium]Control Hubs[/font][vspace=4/]
+	[color=#ccc]You must build one of the control hub buildings on a planet in order to maintain control of it after moving your Orbital Replicator away. Control Hubs have different effects on how you use the planet.[/color]
+
+	[font=Medium]Base Material[/font][vspace=4/]
+	[color=#ccc]By building the [b]Transmuter[/b] control hub on a planet, you convert its resource into [b]Base Material[/b]. Base Materials can be exported to planets and various different Buildings must consume them in order to operate.[/color]
+>>
+HELP_EXTRAGALACTIC: <<
+	[font=Big]Extragalactic[/font][vspace=4/]
+	You've chosen to play as a race with the [color=#aaffaa]Extragalactic[/color] trait. Here's a few quick tips to get you started!
+	[color=#aaa][i]Access this window at any time by pressing the [img=MenuIcons::3;22/] button on the right side of the screen.[/i][/color]
+
+	[font=Medium]Beacons[/font][vspace=4/]
+	[color=#ccc]Rather than a homeworld, you start with 3 Beacon orbitals in random systems throughout the galaxy.[/color]
+	[b]Your beacons allow resource trade between your separate territories.[/b]
+
+	[font=Medium]Refugees[/font][vspace=4/]
+	[color=#ccc]You cannot control your own colonization or population growth, instead Refugee Ships will jump in at your beacons and settle on nearby planets.[/color]
+
+	[font=Medium]Beacon Projects[/font][vspace=4/]
+	[color=#ccc]You can build things at your beacons! Double-click one to check it out.[/color]
+
+	[font=Medium]Beacon Support[/font][vspace=4/]
+	[color=#ccc]Certain projects at your beacon require you to collect [b]Support[/b] to build them. Export resources with the appropriate pressures to your beacons in order to gain it.[/color]
+
+	[font=Medium]Beacon Secondary Functions[/font][vspace=4/]
+	[color=#ccc]If you're using Jumpdrives, jumping to a system with a beacon is always safe![/color]
+	[color=#ccc]You can import resources with Labor Pressure to any of your beacons to increase their labor generation.[/color]
+>>
+GOT_IT: Got it!

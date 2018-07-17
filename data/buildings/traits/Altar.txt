@@ -1,0 +1,30 @@
+Building: Altar
+	Name: #BLD_ALTAR
+	Description: #BLD_ALTAR_DESC
+	Sprite: Altar
+
+	Category: Infrastructure
+
+	Base Cost: 300
+	Build Time: 60
+
+	Size: 4x4
+
+	RequireTrait(Devout)
+	CannotRemove()
+
+	ConflictBuilding(Altar)
+	OnEnable(TerraformTo(Altar))
+
+	RemoveAllStatus(GodlessPlanet)
+
+	IfLevel(0, ModEmpireAttribute(AltarSupportedPopulation, Add, 10), Exact = True)
+	IfLevel(1, ModEmpireAttribute(AltarSupportedPopulation, Add, 25), Exact = True)
+	IfLevel(2, ModEmpireAttribute(AltarSupportedPopulation, Add, 50), Exact = True)
+	IfLevel(3, ModEmpireAttribute(AltarSupportedPopulation, Add, 100), Exact = True)
+	IfLevel(4, ModEmpireAttribute(AltarSupportedPopulation, Add, 200), Exact = True)
+	IfLevel(5, ModEmpireAttribute(AltarSupportedPopulation, Add, 500), Exact = True)
+
+	ShowLevelValue(#ALTAR_SUPPORTS, 10 / 25 / 50 / 100 / 200 / 500, Icon = ResourceIconsSmall::53)
+	ShowAttributeValue(#ALTAR_SUPPORTED_CURRENT, AltarSupportedPopulation, Icon = ResourceIcon::8)
+	ShowTotalPopulation(#ALTAR_TOTAL_POPULATION, Icon = ResourceIcon::8)

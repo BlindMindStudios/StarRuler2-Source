@@ -1,0 +1,39 @@
+Subsystem: SolarPanel
+	Name: #S_SOLARPANEL
+	Description: #S_SOLARPANEL_DESC
+	BaseColor: #64fff9
+	Elevation: 3
+
+	Tags: IsReactor, Category:Control
+	Tags: NonContiguous, NoCore
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	Power := 7 * Size
+	SolarPower := 7 * Size
+
+	SolarEfficiencyLoss := 0.5
+	SolarEfficiencyMinBoost := 0.0
+	SolarEfficiencyMaxBoost := 1.0
+
+	Hook: SolarEfficiency(SolarEfficiencyLoss, SolarEfficiencyMinBoost, SolarEfficiencyMaxBoost, True)
+
+	Hex.Resistance := 0.01
+	Hex.HP := 10 * HexSize
+	Hex.Mass := 0.25 * HexSize
+	
+	Hex.LaborCost := 0.05 * HexSize
+	Hex.BuildCost := 0.5 * HexSize
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	Assert: Hexes == ExteriorHexes
+		Message: #ERROR_MUST_BE_EXTERIOR
+
+	Provides:
+		Power = Power
+	
+	Module: Default
+		Sprite: SolarPanel

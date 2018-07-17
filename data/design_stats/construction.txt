@@ -1,0 +1,26 @@
+GlobalStat: LaborIncome
+	Name: #S_LaborIncome
+	Description: #STT_LaborIncome
+	Icon: ResourceIcon::6
+	Color: #3fe7b2
+	Suffix: #PER_MINUTE
+
+	Variable: LaborIncome
+
+GlobalStat: OreProcessRate
+	Name: #S_OreProcessRate
+	Description: #STT_OreProcessRate
+	Icon: ResourceIconsSmall::11 * #91692c
+	Color: #91692c
+	Suffix: #PER_SECOND
+
+	Variable: OreProcessRate
+
+GlobalStat: LaborProcessRate
+	Name: #S_LaborProcessRate
+	Description: #STT_LaborProcessRate
+	Icon: ResourceIcon::6 * #8870ac
+	Color: #8870ac
+	Suffix: #PER_MINUTE
+
+	Variable: LaborProcessRate

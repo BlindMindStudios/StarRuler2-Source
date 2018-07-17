@@ -1,0 +1,10 @@
+Ability: UnpackGate
+	Name: #ABL_UNPACK_GATE
+	Description: #ABL_UNPACK_GATE_DESC
+
+	Target: dest = Point
+	Range: 200
+
+	ConsumeFTL(100)
+	SpawnOrbitalAt(dest, GateCore, Set Design = True)
+	Destroy()

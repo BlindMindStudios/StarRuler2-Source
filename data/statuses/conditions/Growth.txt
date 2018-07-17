@@ -1,0 +1,13 @@
+Status: Growth
+	Name: #COND_GROWTH
+	Description: #COND_GROWTH_DESC
+
+	Icon: ConditionIcons::8
+	Color: #5fb41c
+
+	Condition Frequency: 0.5
+	ConditionBiome(Forest)
+	ConditionDLC(Heralds)
+
+	AddToNativeResource(ModPopulationGrowth(+0.25))
+	AddToNativeResource(ModTileDevelopRate(+0.25))

@@ -1,0 +1,28 @@
+Card: OpenForum
+	Name: #CARD_OPENFORUM
+	Description: #CARD_OPENFORUM_DESC
+
+	Icon: CardIcons::9
+
+	Color: #10f1af
+	Class: Effect
+	Rarity: Epic
+
+	Base Purchase Cost: 2
+	Base Play Cost: 6
+
+	CreateEffect(OpenForum)
+
+	AI: BuyWeight(0.5)
+	AI: PlayWhenInfluenceStronk(0.5)
+
+Effect: OpenForum
+	Name: #EFFECT_OPENFORUM
+	Color: #ff00dd
+
+	Icon: CardIcons::9
+
+	Upkeep: 0.25
+
+	ModInfluenceStackSize(+1)
+	ModAttribute(InfluencePlacementMod, Add, -1)

@@ -1,0 +1,92 @@
+Anomaly: ChemicalPlant
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_PLANT
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Board
+		Choice: Catch = 80%
+		Choice: Siphon = 80%
+		Choice: Destroy
+
+	Option: Board
+		Icon: CardCategoryIcons::0
+		Description: #ANOMALY_PLANT_BOARD
+		Safe: False
+
+		Result: 80%
+			ProgressToState(Boarded)
+
+		Result: 20%
+			SendMessage(#ANOMALY_PLANT_BOARD_FAIL)
+
+			SpawnOrbital(RemnantDefenseCore, Creep Owned = True)
+
+	Option: Catch
+		Icon: CardCategoryIcons::1
+		Description: #ANOMALY_PLANT_CATCH
+		Safe: False
+
+		Result: 75%
+			SendMessage(#ANOMALY_PLANT_CATCH_SUCCESS)
+			ProgressToState(Initial)
+			AddResearchPoints(100:200, Modified = False, Penalized = False)
+
+		Result: 25%
+			SendMessage(#ANOMALY_PLANT_CATCH_FAIL)
+
+			SpawnOrbital(RemnantDefenseCore, Creep Owned = True)
+
+	Option: Siphon
+		Icon: CardCategoryIcons::3
+		Description: #ANOMALY_PLANT_SIPHON
+
+		Result: 90%
+			SendMessage(#ANOMALY_PLANT_SIPHON_SUCCESS)
+
+			GainInfluenceCard(Cultivation)
+
+		Result: 10%
+			SendMessage(#ANOMALY_PLANT_SIPHON_FAIL)
+
+	Option: Destroy
+		Icon: CardCategoryIcons::5
+		Description: #ANOMALY_PLANT_DESTROY
+
+	State: Boarded
+		Narrative: #ANOMALY_PLANT_BOARDED
+		Frequency: 0
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Happy
+		Choice: Cultivation = 70%
+		Choice: Station = 50%
+
+	Option: Happy
+		Icon: HappyFace
+		Description: #ANOMALY_PLANT_BOARD_HAPPY
+		Blurb: #ANOMALY_PLANT_HAPPY_BLURB
+
+		Target: obj = Object
+		TargetFilterType(obj, Planet)
+		TargetFilterOwned(obj)
+
+		Trigger(obj, AddStatus(Happy))
+
+	Option: Cultivation
+		Icon: CardIcons::19
+		Description: #ANOMALY_PLANT_BOARD_CULTIVATION
+
+		GainInfluenceCard(Cultivation)
+
+	Option: Station
+		Icon: LoyaltyIcon
+		Description: #ANOMALY_PLANT_BOARD_STATION
+
+		SpawnOrbital(RemnantDefenseCore, Free = True)

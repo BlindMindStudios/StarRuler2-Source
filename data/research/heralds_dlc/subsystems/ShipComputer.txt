@@ -1,0 +1,17 @@
+Technology: ShipComputer
+	Name: #R_SYS_SHIP_COMPUTER
+	Description: #R_SYS_SHIP_COMPUTER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: ComputerCore
+	Color: #ffa4a0
+
+	UnlockSubsystem(ShipComputer)
+	UnlockSubsystem(AICore)
+	SkipOnUnlockedSubsystem(ShipComputer)
+
+	SecondaryEnergyCost(1000)

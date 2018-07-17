@@ -1,0 +1,12 @@
+Ability: EmergencySupplies
+	Name: #ABL_EMERGENCY_SUPPLIES
+	Description: #ABL_EMERGENCY_SUPPLIES_DESC
+	Icon: AntimatterReactor * #b8b800
+
+	Energy Cost: 200
+	Cooldown: 30
+
+	EnergyCostFromSubsystem(EnergyCost)
+	EmergencyResupply(Resupply)
+
+	AddStatusSelf(EmergencyShields, Sys.Duration:10)

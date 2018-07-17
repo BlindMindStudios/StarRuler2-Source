@@ -1,0 +1,43 @@
+Attitude: Generosity
+	Name: #ATT_GENEROSITY
+	Progress: #ATT_GENEROSITY_PROGRESS
+	Color: #34c794
+	Sort: 15
+
+	ProgressFromAttribute(InfluenceCardsBought)
+	Conflict(Materialism)
+
+	Level:
+		Description: #ATT_GENEROSITY_L1
+		Icon: ResourceIcon::1
+		Threshold: 2
+
+		RepeatEmpireContacts(AddInfluenceStake(1), Maximum = 3)
+
+	Level:
+		Description: #ATT_GENEROSITY_L2
+		Icon: BuildingSprites::4
+		Threshold: 5
+
+		ModEmpireAttribute(BuildingConstructRate, Add, 0.35)
+
+	Level:
+		Description: #ATT_GENEROSITY_L3
+		Icon: CardIcons::6
+		Threshold: 11
+
+		ModEmpireAttribute(NegotiateExtraWeight, Add, 1)
+
+	Level:
+		Description: #ATT_GENEROSITY_L4
+		Icon: CardCategoryIcons::4
+		Threshold: 19
+
+		ModEmpireAttribute(ZeitgeistStartSupport, Add, 5)
+
+	Level:
+		Description: #ATT_GENEROSITY_L5
+		Icon: PlanetLevelIcons::2
+		Threshold: 28
+
+		ModEmpireAttribute(InfluenceBuysExtraQuality, Add, 1)

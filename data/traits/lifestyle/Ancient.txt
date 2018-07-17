@@ -1,0 +1,68 @@
+Trait: Ancient
+	Name: #TRAIT_ANCIENT
+	Description: #TRAIT_ANCIENT_DESC
+	Order: 7
+	DLC: Heralds
+
+	Icon: TraitIcons::0
+	Color: #8953f7
+
+	Costs Points: 4
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	ForbidSubsystem(CrewControl)
+	ForbidSubsystem(CrewDeck)
+	ForbidSubsystem(FissionGen)
+	ForbidSubsystem(FusionGen)
+	UnlockSubsystem(AncientCore)
+	UnlockSubsystem(SupportAncientCore)
+
+	AddStatusOwnedPlanets(AncientPlanet)
+
+	TriggerHomeworld(TerraformTo(Supercarbons))
+	TriggerHomeworld(DestroyBuildingAt((4, 3), Undevelop = True))
+	TriggerHomeworld(AddPlanetIncome(-250))
+	TriggerHomeworld(NameObject(Atrozal))
+
+	TriggerHomeworld(SpawnOrbital(AncientReplicator, In Orbit = True))
+	TriggerHomeworld(SpawnOrbital(AncientReplicator, In Orbit = True))
+
+	TriggerHomeworld(SpawnBuilding(AncientCore, (9, 5)))
+
+	TriggerHomeworld(SpawnBuilding(AncientDock, (13, 5)))
+	TriggerHomeworld(SpawnBuilding(AncientDock, (5, 5)))
+
+	TriggerHomeworld(SpawnBuilding(AncientRefinery, (16, 5)))
+	TriggerHomeworld(SpawnBuilding(AncientRefinery, (2, 5)))
+
+	TriggerHomeworld(SpawnBuilding(AncientNetwork, (3, 1)))
+	TriggerHomeworld(SpawnBuilding(AncientNetwork, (9, 1)))
+	TriggerHomeworld(SpawnBuilding(AncientNetwork, (15, 1)))
+
+	TriggerHomeworld(SpawnBuilding(AncientFoundry, (7, 9)))
+	TriggerHomeworld(SpawnBuilding(AncientFoundry, (11, 9)))
+
+	TriggerHomeworld(ReplaceAllBiomesWith(Desert))
+
+	ModAttribute(PopulationGrowthFactor, Multiply, 0)
+	ModAttribute(PopulationDecayFactor, Multiply, 0)
+	ModAttribute(OverpopulationBenefitFactor, Multiply, 0)
+	ModAttribute(HasPopulation, Multiply, 0)
+	ModAttribute(TileDevelopmentFactor, Multiply, 0)
+	ModAttribute(CivBldConstructionRate, Multiply, 0)
+	ModAttribute(ForbidCityConstruction, Add, 1)
+	ModAttribute(ForbidColonization, Add, 1)
+	ModAttribute(ForbidTerraform, Add, 1)
+	ModAttribute(NoAutoColonize, Add, 1)
+
+	ReplaceTechnologyNodes(FactoryLabor, FoundryLabor)
+	ReplaceTechnologyNodes(FactoryLabor2, FoundryLabor2)
+
+	ReplaceTechnologyNodes(Megacity, Thrust2)
+	ReplaceTechnologyNodes(RingHabitat, Thrust)
+	ReplaceTechnologyNodes(HydroponicsSatellite, FoundryLabor2)
+	ReplaceTechnologyNodes(PlanetaryEngine, Thrust2)
+	ReplaceTechnologyNodes(Population, FoundryLabor)
+	ReplaceTechnologyNodes(Laboratories, FoundryLabor2)

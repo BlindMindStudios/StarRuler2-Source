@@ -1,0 +1,47 @@
+Subsystem: SatelliteHull
+	Name: Satellites
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Tags: HeraldsDLC
+	Tags: IsSupport
+
+	Hull: Satellite
+	EvaluationOrder: -100
+
+	HexLimit := 70
+	FreeHexLimit := 0
+
+	GridWidth := 21
+	GridHeight := 17
+
+	TurnThrust = 0.5 * Size
+
+	Ship.ExternalHexes := 0
+	Ship.HexSize := ShipSize / (HexLimit - FreeHexLimit)
+
+	Repair := (ShipSize / HexLimit) * 4
+
+	Hex.LaborCost := 0.07 * ShipSize
+	Hex.BuildCost := 0.75 * ShipSize
+
+	AddShipModifier: BuildCostFactor(0.75)
+	AddShipModifier: LaborCostFactor(0.5)
+	AddShipModifier: tag/Weapon::RangeFactor(2.0)
+	AddShipModifier: tag/MissileBase::RangeFactor(0.65)
+	AddShipModifier: tag/MissileBase::DamageFactor(0.65)
+	AddShipModifier: tag/Weapon::DamageFactor(1.5)
+	AddShipModifier: HpFactor(2.0)
+
+	Hex.Mass := 0
+	AddPostModifier: AddMass(ShipSize * (1.0 - max((ShipTotalHexes - Ship.ExternalHexes) / HexLimit, 0.0)))
+
+	Assert: ShipTotalHexes - Ship.ExternalHexes < Sum.HexLimit + 0.001
+		Message: #ERROR_HEX_COUNT
+
+	OnCheckErrors: designs::checkGlobalDesign
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL
+
+	Modifier: IncreaseHexLimit(Hexes)
+		HexLimit := HexLimit + Hexes
+		FreeHexLimit := FreeHexLimit + Hexes

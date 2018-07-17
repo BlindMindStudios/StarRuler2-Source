@@ -1,0 +1,35 @@
+Technology: ArmorHealth
+	Name: #R_IMP_ARMOR_HEALTH
+	Blurb: #R_IMP_ARMOR_HEALTH_BLURB:15%
+	Description: #R_IMP_ARMOR_HEALTH_DESC:15%
+
+	Icon: techArmoring
+	Color: #a9a9a9
+
+	Class: Boost
+	Category: Basic Upgrades
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddModifier(tag/IsArmor::HpFactor(1.15))
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.15))
+	ModAttribute(OrbitalArmorMod, Multiply, 1.25)
+
+Technology: ArmorHealth2
+	Name: #R_IMP_ARMOR_HEALTH2
+	Blurb: #R_IMP_ARMOR_HEALTH_BLURB:30%
+	Description: #R_IMP_ARMOR_HEALTH_DESC:30%
+
+	Icon: techArmoring * #a85f5f
+	Color: #a9a9a9
+
+	Category: Basic Upgrades
+	Class: Upgrade
+
+	Point Cost: 700
+	Time Cost: 80
+
+	AddModifier(tag/IsArmor::HpFactor(1.3))
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.3))
+	ModAttribute(OrbitalArmorMod, Multiply, 1.5)

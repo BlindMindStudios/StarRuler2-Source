@@ -1,0 +1,308 @@
+	#version 120
+	const bool advancedProcedurals = 	#{{level:extreme}};
+	const bool parallax = 				#{{level:extreme}};
+	const bool sss =	 				#{{level:extreme}};
+	const bool pbrLight = 				#{{level:high}};
+	const bool simpleProcedurals = 		#{{level:high}};
+	const bool advancedAmbience = 		#{{level:high}};
+	const bool normalMapping = 			#{{level:medium}};
+	const bool simpleAmbience = 		#{{level:medium}};
+	const bool selfIllumination = 		#{{level:medium}};
+	
+	const int nLightCount = 2;
+	const float pi = 3.14159265358;
+	// constants for emissive lights and starlight intensity
+	const float emissiveIntensity = 5.0;
+	const float lightIntensity = 2.0;
+
+	
+	uniform sampler2D normalMap, emissive;
+	uniform samplerCube skybox;
+	uniform vec3 colors[nLightCount];
+	uniform float lightRadius[nLightCount];
+	uniform vec4 ownerColor;
+	// complimentary triad color harmony, should in theory always generate an appealing theme. 
+	vec3 colorLightsWindows = ownerColor.rgb * 0.7 + 0.3;
+	vec3 colorLightsPrimary = vec3(ownerColor.brg) * 0.7 + 0.3;
+	vec3 colorLightsSecondary = vec3(ownerColor.gbr) * 0.7 + 0.3;
+	
+	varying vec3 normal;
+	varying vec3 npos, vertMask;
+	varying vec2 uv;
+	varying vec4 pos;
+	
+	uniform float mineBuild;
+	
+	varying vec3 light[nLightCount];
+	
+	// parallax scale, bias and steps
+	const vec2 scaleBias = vec2(0.005, 0.0035);
+	
+	vec3 toLinear(vec3 x) {
+		return pow(x, vec3(2.2));
+	}
+	
+	vec3 toGamma(vec3 x) {
+		return pow(x, vec3(0.45));
+	}
+	
+	// pow alternatives
+	float square(float x) {
+		return x*x;
+	}
+	
+	vec2 square(vec2 x) {
+		return x*x;
+	}
+	
+	vec3 square(vec3 x) {
+		return x*x;
+	}
+	
+	vec4 square(vec4 x) {
+		return x*x;
+	}
+	
+	float pow5(float x) {
+	
+		float y = x*x;
+		return y*y*x;
+	}
+	
+
+// speculer term part 1
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// specular term part 2
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+// fresnel for specular term
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return max(vec3(0.0), substance + (substance - 1.0) * pow(1.0 - max(0.0,(dot(l, h))), 5.0));
+}
+// fresnel for ambient light
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+// diffuse term
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+	float O = 0.62 - pow(1.0-NdotL * clamp(1.0-NdotV/2.0, 0.0,1.0), pi) * 0.62;
+	O = mix(O, NdotL, roughness);
+	return O;
+}
+
+	float deriveZ(vec2 n) {		
+		return sqrt(abs(1.0 - n.x * n.x - n.y * n.y));
+	}		
+	
+	vec3 dp1Calc(vec3 p) {
+		return dFdx(p);
+	}
+	
+	vec3 dp2Calc(vec3 p) {
+		return dFdy(p);
+	}
+	
+	vec2 duv1Calc(vec2 uv) {
+		return dFdx(uv);
+	}
+	
+	vec2 duv2Calc(vec2 uv) {
+		return dFdy(uv);
+	}
+	
+void main() {
+	if((1.0 - mineBuild) + (1.0 - vertMask.g) < 1.0)
+		discard;		
+
+	vec2 uvP = uv;
+
+	vec3 v = normalize(npos);
+	vec3 n = normalize(normal);
+	vec3 r = n;
+	float NdotV = max(0.0, dot(n, v));
+	vec3 albedo = vec3(0.0); // pure color of a surface
+	vec3 substance = vec3(0.0); // essentially an rgb specular color extracted from the albedo through metalness
+	float metalness = 0.0; // dielectric or metallic surface
+	float orgRoughness = 0.0; // specular/reflection sharpness
+	float cavity = 0.5; // hard multiplier
+	float aoDetail = 1.0; // detail occluder for lights
+	float aoModel = 1.0; // large scale usually pr model baked occluder
+	mat3 TBN = mat3(0.0);
+	
+	// results
+	vec3 color = vec3(0.0);
+	vec3 lights = vec3(0.0);
+
+	
+	if (normalMapping){		
+		// Normal and tangent setup
+		vec3 dp1 = dp1Calc(-v);
+		vec3 dp2 = dp2Calc(-v);
+		vec2 duv1 = duv1Calc(uvP);
+		vec2 duv2 = duv2Calc(uvP);
+		
+		// solve the linear system
+		vec3 dp2perp = cross(dp2, normal);
+		vec3 dp1perp = cross(normal, dp1);
+		vec3 tangent = dp2perp * duv1.x + dp1perp * duv2.x;
+		vec3 binormal = dp2perp * duv1.y + dp1perp * duv2.y;
+	
+		// construct a scale-invariant frame 
+		float invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+		TBN = mat3(tangent * invmax, binormal * invmax, normal);
+		if(parallax){
+		
+			float p = (texture2D(normalMap, uvP).a * scaleBias.r - scaleBias.g);
+			float fDet = dot(dp1, dp2perp);
+			vec2 vProjVScr = (1.0/fDet) * vec2(dot(dp2perp, v), dot(dp1perp, v));
+			vec2 vProjVTex = (duv1.xy * vProjVScr.x + duv2.xy * vProjVScr.y);	
+			float vProjVTexZ = NdotV * p;
+	
+			uvP += (vProjVTex.xy * vProjVTexZ);
+
+		}
+	}
+	
+	//inputs
+	vec4 texSamp2 = texture2D(normalMap, uvP);
+	vec4 texSamp3 = vec4(vec3(0.0), 1.0);
+
+	if (selfIllumination){
+		texSamp3 = square(texture2D(emissive, clamp(uv.xy * vec2(0.5, 1.0), vec2(0.0125, 0.025), vec2(0.4875, 0.975))));
+		texSamp3 = mix(vec4(0.0,0.0,0.0,1.0), texSamp3, vertMask.r * mineBuild);
+		texSamp3.rgb *= 8.0; // way to faint texture bake correction
+	}
+	orgRoughness = square(texSamp2.a * 0.33 + 0.66);
+	aoDetail = min(1.0, texSamp2.b + 0.5);
+	albedo = vec3((texSamp2.b + texSamp2.a) * 0.5);
+	albedo = toLinear(min(vec3(1.0), (mix(colors[0], colors[1], albedo) * 0.25 + 0.25)) + texSamp2.b * 0.25);
+
+	if (normalMapping){
+		//calculate blue channel from x and y of normal map	
+		texSamp2.xy *= 2.0;
+		texSamp2.xy -= 1.0;
+		texSamp2.xy = texSamp2.yx;
+	
+		vec3 normMap = normalize(vec3(texSamp2.xy, deriveZ(texSamp2.xy)));
+		
+		n = normalize(TBN * normMap);
+		NdotV = max(0.0, dot(n, v));
+	}
+	r = normalize(reflect(-v, n));
+	
+	metalness  = (1.0 - (orgRoughness * texSamp2.b)) * 0.25;
+	substance = (0.04 - 0.04 * metalness) + albedo * metalness;
+
+	vec3 ambientFresnel = Fresnel2(substance, NdotV ,orgRoughness);
+	
+	if (advancedAmbience){
+		
+		color += square((textureCube(skybox, r, sqrt(orgRoughness) * 4.0).rgb) + 0.024) * ambientFresnel;
+	
+		// ambient light
+		color += square(textureCube(skybox, n.xyz, 4.0).rgb + 0.024) * albedo * (1.0 - ambientFresnel);
+	}
+	else if (simpleAmbience){
+		// Ambient reflections with fix mip and n instead of refect
+		color += square(textureCube(skybox, r, 3.0).rgb * ambientFresnel);
+	
+		// Ambient light - average color of skybox squared
+		color += vec3(0.006724, 0.014884, 0.067081) * albedo * (1.0 - ambientFresnel);
+	}
+	else{
+		// Ambient 
+		color += vec3(0.006724, 0.014884, 0.067081) * (ambientFresnel + albedo * (1.0 - ambientFresnel));
+	}
+	
+	
+	if (selfIllumination){
+		// self illuminate for primary, secondary, windows and engines are added.
+		lights = texSamp3.r * colorLightsPrimary;
+		lights += texSamp3.g * colorLightsSecondary;
+		lights += texSamp3.b * colorLightsWindows;
+	
+		// Self-illumination fake pbr calculations. 
+		vec3 emissiveFresnel = mix((1.0 - NdotV) * substance, albedo, pow5(orgRoughness));
+		lights *= emissiveFresnel * aoDetail;
+	}
+	aoModel = max(0.25, (1.0 - ((1.0 - texSamp3.a) * mineBuild)) * aoDetail);
+
+	if (pbrLight){		
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			float NdotL = max(0.0, dot(n.xyz,L));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL;
+			
+			if (attenuation >0.0){
+				vec3 VplusL = L + v;
+				vec3 halfVec = normalize(VplusL);
+				float HdotN = max(0.0, dot(halfVec,n));
+				vec3 F = Fresnel(substance, L, halfVec);
+				float D = max(0.0, D_GGX(HdotN, orgRoughness));
+				float V = max(0.0, V_SchlickforGGX((1.0 + orgRoughness) * 0.5, NdotV, NdotL));
+				float O = OrenNayerforDiffuseOnly(orgRoughness, NdotL, NdotV);
+				
+				color += ((D * V * F) + (1.0 - F) * O * albedo) * gl_LightSource[i].diffuse.rgb * attenuation;
+			}
+		}
+		// hard cavity multiplier
+		color *= (texSamp2.b + 1.0);
+	}
+	// this light model is pretty loose in terms of what it does, design focus to match 
+	// the pbr in terms of visibility and overall feel for a fraction of the price
+	else{
+		for (int i = 0; i < nLightCount; i++) {
+			float distance = length(gl_LightSource[i].position.xyz - pos.xyz); // EYE SPACE, I'm sorry:o(
+			// rest is world space
+
+			vec3 L = normalize(light[i] / distance);
+			float NdotL = max(0.0, dot(n.xyz,L));
+			
+			float sqrLightRadius = square(lightRadius[i]);
+			float illuminance = lightIntensity * pi * (sqrLightRadius / (max(sqrLightRadius, dot(L,L))));
+			
+			// note the square to kill hard spec in deep space!
+			float attenuation = square(1.0 / (1.0 + (gl_LightSource[i].constantAttenuation
+			+ gl_LightSource[i].linearAttenuation * distance
+			+ gl_LightSource[i].quadraticAttenuation * square(distance)))) * illuminance * NdotL;
+			
+			vec3 VplusL = L + v; 
+			vec3 halfVec = normalize(VplusL);
+			float HdotN = max(0.0, dot(halfVec, n));
+			vec3 S = Fresnel2(substance, HdotN ,orgRoughness);
+			// albedo * (texSamp2.b * 0.5) to sorta hack albedo into a classical diffuse texture
+			color += (albedo * (texSamp2.b * 0.5) + pow(S * HdotN, vec3(orgRoughness + 5.0))) * gl_LightSource[i].diffuse.rgb * attenuation;
+		}
+	}
+	color *= aoModel;	
+	color += lights * emissiveIntensity;
+
+	gl_FragColor.rgb = toGamma(clamp(color, vec3(0.0), vec3(1.0)));
+	gl_FragColor.a = 1.0;
+}

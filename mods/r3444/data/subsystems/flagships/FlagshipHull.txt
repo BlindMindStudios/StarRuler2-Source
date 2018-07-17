@@ -1,0 +1,11 @@
+Subsystem: FlagshipHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Hull: Flagship
+	EvaluationOrder: -100
+
+	Hex.Mass := ShipEmptyHexes * HexSize
+	Hex.LaborCost := ShipEmptyHexes * 0.25 * HexSize
+	Repair := HexSize * 4
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL

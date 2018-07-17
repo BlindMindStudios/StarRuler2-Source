@@ -1,0 +1,17 @@
+Ability: BuyEnergy
+	Name: #ABL_BUY_ENERGY
+	Description: #ABL_BUY_ENERGY_DESC
+	Icon: ResourceIcon::2
+
+	Cooldown: 180
+
+	ShareCooldown(BuyInfluence)
+	ShareCooldown(BuyEnergy)
+	ShareCooldown(BuyLabor)
+	ShareCooldown(BuyResearch)
+
+	ConsumeMoney(300)
+	AddEnergy(700)
+
+	ShowMoneyValue(300, #COST)
+	ShowEnergyValue(700)

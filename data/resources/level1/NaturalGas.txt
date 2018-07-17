@@ -1,0 +1,15 @@
+Resource: NaturalGas
+	Name: #NATURAL_GAS
+	Description: #NATURAL_GAS_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::41
+	Small Icon: ResourceIconsSmall::41
+
+	Level: 1
+	Affinity: Energy
+
+	Terraform Cost: 500
+	Terraform Labor: 30
+
+	Pressure: 3 Energy

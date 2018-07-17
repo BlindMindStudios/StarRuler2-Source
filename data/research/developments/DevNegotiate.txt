@@ -1,0 +1,15 @@
+Technology: DevNegotiate
+	Name: #R_DEV_NEGOTIATE
+	Blurb: #R_DEV_NEGOTIATE_BLURB
+	Description: #R_DEV_NEGOTIATE_DESC
+	Class: Boost
+
+	Point Cost: 100
+	Time Cost: 60
+
+	Icon: CardIcons::6
+	Color: #00ffa4
+
+	GainInfluenceCard(Negotiate, Quality=1)
+
+	SecondaryMoneyCost(500)

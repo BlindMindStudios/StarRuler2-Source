@@ -1,0 +1,14 @@
+Template: hexVar/BuildCost, hexVar/HP, !tag/NoBulkhead, !tag/NoCore, !tag/IsArmor, !tag/SupportHull
+	Module: Bulkhead
+		Name: #BULKHEAD_NAME
+		Description: #BULKHEAD_DESC
+
+		Color: #eda1ff
+		Sprite: HexagonSubsystems::0 * #cf00ff
+
+		DefaultUnlock: True
+
+		Hex.HP := 3.0 * Hex.HP
+
+		AddModifier: AddBaseHP(1.5)
+		AddModifier: BuildCostFactor(2.0)

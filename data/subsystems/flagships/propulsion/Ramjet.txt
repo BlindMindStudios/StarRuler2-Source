@@ -1,0 +1,70 @@
+Subsystem: Ramjet
+	Name: #S_RAMJET
+	Description: #S_RAMJET_DESC
+	BaseColor: #629b26
+	TypeColor: #629b26
+	Elevation: 0
+
+	Tags: BaseCost, Category:Propulsion, ExteriorCore, ModuleNoFrontWall
+	Tags: Engine, GivesThrust, HasInternals, NoBackWall, TurnToThrust, HasInternals
+	Tags: HeraldsDLC
+	Hull: Flagship
+
+	Size := HexSize * Hexes
+	Thrust := 18 * Size
+	TurnThrust := 0.75 * Size
+
+	SupplyGain := 0
+
+	Hex.Mass := 0.3 * HexSize
+
+	Hex.Resistance := 0.3
+	Hex.HP := 26 * HexSize
+
+	Hook: GainSupplyVelocity(SupplyGain, 100)
+
+	OnCheckErrors: heralds_designs::checkRamjet
+
+	Modifier: MaintCostFactor(factor)
+		Hex.MaintainCost := Hex.MaintainCost //No change, since this is negative
+
+	Requires:
+		Command = 1
+
+	Assert: TagCount.Mothership == 0
+		Unique: True
+		Message: #ERROR_NOT_ALLOWED_ON_MOTHERSHIP
+
+	Module: Default
+		Hex.MaintainCost := Hex.MaintainCost * -2 * min((ShipSize-16)/100, 1)
+		Hex.BuildCost := 1.0 * Hex.BuildCost
+		Hex.LaborCost := 0.5 * Hex.LaborCost
+
+	Module: Core
+		Sprite: Ramjet
+
+		Hex.MaintainCost := Hex.MaintainCost * -10 * min((ShipSize-16)/100, 1)
+		Hex.HP := 5 * Hex.HP
+		Hex.BuildCost := 2.0 * Hex.BuildCost
+		Hex.LaborCost := 2.0 * Hex.LaborCost
+
+	Module: Scoop
+		Name: #S_RAMJET_SCOOP
+		Description: #S_RAMJET_SCOOP_DESC
+		Color: #da8a9f
+
+		DefaultUnlock: True
+		Sprite: Ramscoop
+
+		Hex.MaintainCost := 0
+		Hex.BuildCost := 25 * Hex.BuildCost
+		Hex.LaborCost := 25 * Hex.LaborCost
+		Hex.HP := 5 * Hex.HP
+
+		SupplyGain := SupplyGain + HexSize * 200
+
+		Requires:
+			Command = 2
+
+	Assert: SupplyGain > 0
+		Message: #ERROR_REQUIRE_SCOOP

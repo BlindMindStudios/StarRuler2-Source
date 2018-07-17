@@ -1,0 +1,29 @@
+#version 120
+uniform sampler2D screen;
+varying vec2 uv;
+
+const float blurStep = 0.001;
+const vec3 gray = vec3(0.50, 0.50, 0.50);
+const float desaturateLevel = 0.6;
+
+void main()
+{
+	//Blur the pixel
+	vec4 color = texture2D(screen, uv);
+	color += texture2D(screen, uv + vec2(-blurStep, -blurStep));
+	color += texture2D(screen, uv + vec2(0, -blurStep));
+	color += texture2D(screen, uv + vec2(+blurStep, -blurStep));
+
+	color += texture2D(screen, uv + vec2(-blurStep, 0));
+	color += texture2D(screen, uv + vec2(+blurStep, 0));
+
+	color += texture2D(screen, uv + vec2(-blurStep, +blurStep));
+	color += texture2D(screen, uv + vec2(0, +blurStep));
+	color += texture2D(screen, uv + vec2(+blurStep, +blurStep));
+	color /= 9.0;
+
+	//Desaturate the pixel
+	color.rgb = mix(vec3(dot(gray, color.rgb)), color.rgb, desaturateLevel);
+
+	gl_FragColor = color;
+}

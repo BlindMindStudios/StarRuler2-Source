@@ -1,0 +1,26 @@
+Card: Development
+	Name: #CARD_DEVELOPMENT
+	Description: #CARD_DEVELOPMENT_DESC
+
+	Icon: CardIcons::51
+
+	Leader Only: True
+	DLC: Heralds
+	
+	Color: #ff5b01
+	Class: Action
+	Rarity: Epic
+
+	Base Purchase Cost: 2
+	Base Play Cost: 10
+
+	ShowPopulation(2)
+
+	Target: planet = Object
+	TargetFilterType(planet, Planet)
+	ApplyRegionTargetCostMod(planet)
+
+	OnPlanet(planet, AddMaxPopulation(2))
+	OnPlanet(planet, AddResource(Defense, 1))
+
+	AI: PlayOnImportantPlanets(planet)

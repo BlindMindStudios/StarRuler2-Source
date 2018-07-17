@@ -1,0 +1,27 @@
+Technology: DevBudget
+	Name: #R_DEV_BUDGET
+	Blurb: #R_DEV_BUDGET_BLURB:250k
+	Description: #R_DEV_BUDGET_DESC:250k
+	Class: Boost
+
+	Icon: techEconomics *#b0d16a
+	Color: #b0d16a
+
+	Point Cost: 1000
+	Time Cost: 120
+
+	AddPermanentIncome(250)
+
+Technology: DevBudgetSmall
+	Name: #R_DEV_BUDGET_SMALL
+	Blurb: #R_DEV_BUDGET_BLURB:150k
+	Description: #R_DEV_BUDGET_DESC:150k
+	Class: Boost
+
+	Icon: techEconomics *#b0d16a
+	Color: #b0d16a
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddPermanentIncome(150)

@@ -1,0 +1,13 @@
+Resource: HeavyWater
+	Name: #HEAVY_WATER
+	Description: #HEAVY_WATER_DESC:3
+	Native Biome: Oceanic
+	Class: WaterType
+
+	Icon: ResourceIconsSmall::99
+	Small Icon: ResourceIconsSmall::99
+
+	Artificial: True
+	Level: 0
+
+	AddRandomPressure(3, 180, 30)

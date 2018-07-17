@@ -1,0 +1,6 @@
+Status: ConstructOrbital
+	Name: #STATUS_CONSTRUCTING
+	Icon: GuiOrbitalIcons::0 * #ff0000
+
+	ConstructOrbital(60)
+

@@ -1,0 +1,16 @@
+Ability: GateUnpack
+	Name: #ABL_GATE_UNPACK
+	Description: #ABL_GATE_UNPACK_DESC
+	Icon: AbilityIcons::1
+	Hotkey: G
+
+	Target: dest = Point
+	Range: 10
+
+	RemoveStatus(GatePacked)
+	AddStatus(GateUnpacked)
+
+	ConsumeFTL(100)
+	ShowFTLValue(100, #COST)
+
+	TeleportTo(dest)

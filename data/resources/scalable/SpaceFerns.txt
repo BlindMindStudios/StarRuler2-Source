@@ -1,0 +1,69 @@
+Resource: SpaceFerns
+	Name: #R_SPACEFERNS
+	Blurb: #R_SPACEFERNS_BLURB
+	Description: #R_SPACEFERNS_DESC
+	Native Biome: Forest
+	Class: Scalable
+	DLC: Heralds
+
+	Small Icon: ResourceIconsSmall::75
+
+	Pressure: 1 Money
+	Affinity: Money
+
+	Rarity Level: 3
+
+	Limitless Level: True
+	Exportable: False
+
+	IfLevel(0, EnableModifier(tag/Engine::MaintCostFactor(0.95)), Exact = True)
+	IfLevel(1, EnableModifier(tag/Engine::MaintCostFactor(0.90)), Exact = True)
+	IfLevel(2, EnableModifier(tag/Engine::MaintCostFactor(0.75)), Exact = True)
+	IfLevel(3, EnableModifier(tag/Engine::MaintCostFactor(0.50)), Exact = True)
+	IfLevel(4, EnableModifier(tag/Engine::MaintCostFactor(0.25)), Exact = True)
+	IfLevel(5, EnableModifier(tag/Engine::MaintCostFactor(0.10)), Exact = True)
+
+	IfLevel(1, AddPressure(Energy, 2))
+	IfLevel(2, AddPressure(Money, 3))
+	IfLevel(3, AddPressure(Influence, 4))
+	IfLevel(4, AddPressure(Energy, 5))
+	IfLevel(5, AddPressure(Influence, 6))
+
+	NativeLevelChain(FernChain)
+
+Level Chain: FernChain
+	Level: 0
+	Level: 1
+		Population: 3
+		BaseIncome: 250
+		ResourceIncome: 0
+		BasePressure: 10
+		Required: 1 WaterType, 1 Food
+	Level: 2
+		Population: 6
+		BaseIncome: 500
+		ResourceIncome: 0
+		BasePressure: 30
+		Points: 200
+		Required: 2 WaterType, 3 Food
+	Level: 3
+		Population: 9
+		BaseIncome: 1200
+		ResourceIncome: 0
+		BasePressure: 50
+		Points: 400
+		Required: 4 WaterType, 5 Food
+	Level: 4
+		Population: 12
+		BaseIncome: 2000
+		BasePressure: 70
+		ResourceIncome: 0
+		Points: 600
+		Required: 6 WaterType, 8 Food
+	Level: 5
+		Population: 15
+		BaseIncome: 3200
+		BasePressure: 90
+		ResourceIncome: 0
+		Points: 800
+		Required: 9 WaterType, 12 Food

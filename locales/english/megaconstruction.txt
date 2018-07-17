@@ -1,0 +1,71 @@
+ARTIFICIAL_PLANETOID: Artificial Planetoid
+ARTIFICIAL_PLANETOID_DESC: <<
+	A fully artificially constructed planetoid, complete with its own atmosphere and gravity field.
+
+	Artificial planetoids produce all their own food and do not need to import it, and can construct large processing plants to satisfy their other levelup requirements. The planetoid can also be upgraded to add more surface space.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Building an artificial planetoid or any of its upgrades requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+CONS_PLANETOID_UPGRADE: Extra Planetoid Layer
+CONS_PLANETOID_UPGRADE_DESC: <<
+	Add an extra layer of surface space to the artificial planetoid, expanding it and allowing for more buildings to be constructed.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+BLD_PLANETOID_LV1: Tier 1 Processing Plant
+BLD_PLANETOID_LV1_DESC: <<
+	A specialized processing plant that can replace one of the artificial planetoid's tier 1 resource requirements.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+BLD_PLANETOID_LV2: Tier 2 Processing Plant
+BLD_PLANETOID_LV2_DESC: <<
+	A specialized processing plant that can replace one of the artificial planetoid's tier 2 resource requirements.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+
+STARFORGE: Star Forge
+STARFORGE_BLURB: Rips apart and absorbs portions of the system's star to generate labor.
+STARFORGE_DESC: <<
+	A highly advanced construction yard that rips power and material straight from the outer layers of the star.
+
+	Generates 25 labor per minute at the cost of slowly damaging the star in the system it is in. Upgrades can be constructed on the star forge to increase its labor generation as well as the rate at which it damages the star.
+
+	All construction on a Star Forge has a 50% reduction in build cost compared to normal.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Building a star forge or any of its upgrades requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+CONS_STARFORGE_UPGRADE: Upgrade Star Forge
+CONS_STARFORGE_UPGRADE_DESC: <<
+	Increase the rate at which the Star Forge generates labor by 25 per minute. This also increases the damage dealt to the system's star while using that labor.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>
+CONS_CANNIBALIZE_PLANET: Cannibalize Planet
+CONS_CANNIBALIZE_PLANET_DESC: <<
+	Use the Star Forge's matter acquisition beam to completely rip apart an unowned or abandoned planet in this system, gaining ore and stored labor in the process.
+
+	Target uncolonized planet is destroyed, gain 5000 Ore and 250 stored Labor.
+>>
+
+VACUUM_TELESCOPE: Vacuum Telescope
+VACUUM_TELESCOPE_BLURB: Gives vision over all fleets currently anywhere in deep space.
+VACUUM_TELESCOPE_DESC: <<
+	By detecting minute fluctuations in the hyperfield corresponding to changes in realspace vacuum energy, clusters of concentrated mass can be pinpointed. This has very little use in solar system gravity wells, as the overwhelming mass of the star creates too much noise to detect any other objects, but can very accurately detect fleets traveling through the vast reaches of deep space, where no other significant clusters of mass exist.
+
+	Gives vision over all fleets currently anywhere in deep space.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires large amounts of Ore mined from asteroids to construct.[/color][/b][/img]
+>>
+
+RINGWORLD: Ringworld
+RINGWORLD_DESC: <<
+	An enormous ring constructed around a system's star, with habitable space on the inner surface of the ring, facing the star.
+
+	Ringworlds have [levels=$1;#ffb4b6]+0/+10/+20/+30/+40/+50[/levels] increased maximum population.
+
+	For each resource type, if the ringworld is receiving any pressure at all for that resource, it gains [levels=$1;#ffb4b6]2/4/6/8/10/12[/levels] extra pressure of that resource.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requires extremely large amounts of Ore mined from asteroids.[/color][/b][/img]
+>>

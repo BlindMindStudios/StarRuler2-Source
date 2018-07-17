@@ -1,0 +1,22 @@
+Building: AncientNetwork
+	Name: #BLD_ANCIENT_NETWORK
+	Description: #BLD_ANCIENT_NETWORK_DESC
+	Sprite: NetworkBuilding
+
+	Category: Military
+
+	Size: 6x2
+
+	Base Cost: 50
+	Tile Cost: 25
+
+	Build Affinity: Mountains
+
+	Build Time: 10
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	AddLocalDefense(2, Build Satellites = True)
+	ModLoyalty(+3)

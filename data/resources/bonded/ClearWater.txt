@@ -1,0 +1,17 @@
+Resource: ClearWater
+	Name: #CLEAR_WATER
+	Description: #CLEAR_WATER_DESC:150%
+	Native Biome: Oceanic
+	Class: WaterType
+
+	Icon: ResourceIconsSmall::100
+	Small Icon: ResourceIconsSmall::100
+
+	Artificial: True
+	Level: 0
+
+	ConvertResource(Influence, 1.0, Money)
+	ConvertResource(Defense, 1.0, Money)
+	ConvertResource(Research, 1.0, Money)
+	ConvertResource(Energy, 1.0, Money)
+	ConvertResource(Labor, 0.9, Money) #version<49

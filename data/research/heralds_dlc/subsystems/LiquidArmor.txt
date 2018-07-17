@@ -1,0 +1,17 @@
+Technology: LiquidArmor
+	Name: #R_SYS_LIQUID_ARMOR
+	Description: #R_SYS_LIQUID_ARMOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: PlateArmor * #91692c
+	Color: #91692c
+	
+	UnlockSubsystem(LiquidArmor)
+	UnlockSubsystem(SupportLiquidArmor)
+	SkipOnUnlockedSubsystem(LiquidArmor)
+
+	SecondaryInfluenceCost(10)

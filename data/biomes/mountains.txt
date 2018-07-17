@@ -1,0 +1,12 @@
+Biome: Mountains
+	Name: #BIOME_MOUNTAINS
+	
+	Frequency: 10
+	
+	Temperature: 0
+	Humidity: 0
+	
+	Color: #5D4F4D
+
+	Picks: 0.5, 0.0
+	Lookup Range: 0.43

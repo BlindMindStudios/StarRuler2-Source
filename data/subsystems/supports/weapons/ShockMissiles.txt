@@ -1,0 +1,50 @@
+Subsystem: ShockMissiles
+	Name: #S_SHOCKMISSILES
+	Description: #S_SHOCKMISSILES_DESC
+	BaseColor: #444ca0
+	TypeColor: #444ca0
+	Elevation: 2
+	
+	Tags: WeaponBase, MissileBase, Category:Weapons, Rotatable, Homing, HeraldsDLC
+	Tags: ExteriorCore, Weapon, IsExplosiveWeapon, HasInternals, SecondaryDPS
+	Hull: Support, Satellite
+	
+	Size := HexSize * Hexes
+	Range := Size + 800
+	Damage := Size * 22.0
+	Reload := 6.0 * min(1.0 + Size/512, 2.0)
+	Speed := 125
+	Tracking := 4
+	SupplyCost := Size * 2.0
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.LaborCost := 0.05 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := Hex.BuildCost * 5
+		Hex.Mass := Hex.Mass * 5
+
+		Sprite: MissileLauncher::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 28.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: ShockMissile
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Reload

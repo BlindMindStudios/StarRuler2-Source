@@ -1,0 +1,331 @@
+#version 120
+const int nLightCount = 2;
+const float pi = 3.14159265358;
+
+uniform sampler2D diffuse, normalAOlights, shield, masks;
+uniform samplerCube skybox;
+uniform vec4 ownerColor;
+uniform vec3 glowColor;
+uniform float thrust;
+uniform float camDist;
+uniform float time, nodeScale;
+
+float teamNumber = 5;
+
+//varying vec4 shadowCoord[nLightCount];
+varying vec3 forward, right;
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv, uv2, uv3;
+varying vec4 vertPaint;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+/*
+//Skybox sampling call
+vec2 skyboxSample(vec3 dir) {
+	float x = dot(dir, forward);
+	float z = dot(dir, right);
+	float y = dot(dir, cross(forward,right));
+	
+	return vec2(atan(-x,z) / 6.28318530718, (y + 1.0) * 0.5);
+}
+*/
+//Engine heat color call
+float mixRange(float x, float low, float hi) {
+	return clamp((x - low) / (hi - low), 0.0, 1.0);
+}
+
+vec3 blackBody(float temp) {
+	vec3 c;
+	c.r = mix(1.0, 0.6234, mixRange(temp, 6400.0, 29800.0));
+	c.b = mix(0.0, 1.0, mixRange(temp, 2800.0, 7600.0));
+	if(temp < 6600.0)
+		c.g = mix(0.22, 0.976, mixRange(temp, 1000.0, 6600.0));
+	else
+		c.g = mix(0.976, 0.75, mixRange(temp, 6600.0, 29800.0));
+	return c;
+}
+
+float D_GGX(float HdotN, float Roughness)
+{
+    float m = Roughness * Roughness;
+    float m2 = m * m;
+    float denominator = HdotN * HdotN * (m2 - 1.0) + 1.0;
+    float D = m2 /( pi * denominator * denominator);
+    return D;
+}
+
+// Schlick GGX approximation
+float V_SchlickforGGX(float Roughness, float NdotV, float NdotL)
+{
+    float k = Roughness * Roughness * 0.5f;
+    float G1V = NdotV * (1.0 - k) + k;
+    float G1L = NdotL * (1.0 - k) + k;
+    return 0.25f / (G1V * G1L);
+}
+
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+	return substance + (1.0 - substance) * pow(1.0 - clamp((dot(l, h)), 0.0, 1.0), 5.0);
+}
+
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+	return substance + (1.0 - substance) * pow((1.0 - dotProduct), 5.0) / (6.0 - 5.0 * roughness);
+}
+
+float RoughToSPow(float fRoughness)
+{
+   return (2.0 / (fRoughness * fRoughness)) - 2.0;
+}
+
+const float k0 = 0.00098f, k1 = 0.9921f;
+const float g_fMaxT = (exp2(-10.0 / sqrt((2.0 / (0.0014f * 0.0014f)) - 2.0)) - 0.00098f) / 0.9921f;
+
+float GetSpecPowToMip(float fSpecPow, int nMips)
+{
+   float fSmulMaxT = (exp2( -10.0 / sqrt(fSpecPow)) - k0) / k1;
+
+   return float(nMips - 1) * (1.0 - clamp(fSmulMaxT / g_fMaxT, 0.0, 1.0 ));
+}
+
+void main() {
+	vec4 diffuse = texture2D(diffuse, uv.xy);
+	vec4 normAO = texture2D(normalAOlights, uv.xy);
+	vec3 maskSamp = texture2D(masks, uv.xy).rgb;
+	float paintSamp = texture2D(masks, uv2.xy).w;
+	float flagSamp = texture2D(masks, uv2.xy + vec2((1.0/32.0) * teamNumber, 0.0)).w;
+	vec3 vertMasksPrimary = vertPaint.rgb; // .a unused
+	//float texSamp7 = texture2D(shield, uv2.xy * 10);
+	//float texSamp8 = texture2D(shield, uv2.xy - time * 80.0);
+	float texSamp5 = texture2D(shield, uv2.xy - 8.0 * 24.0).r;
+	float texSamp6 = texture2D(shield, uv2.xy + time * 24.0).g;
+	
+	// Normal map setup
+	vec3 normMap = normAO.xyz * 2.0 - vec3(1.0);
+	
+	// Vertex masks setup
+	vec3 vertMasksSecondary = (clamp(vertMasksPrimary, 0.5, 1.0) - 0.5) * 2.0;	//  shield r, windows g, engine b
+	vertMasksPrimary = clamp(((1.0 - vertMasksPrimary) - 0.5)* 2.0, 0.0, 1.0); // flags g, warp b, transparency on r
+
+	// Texture masks setup	
+	float paintMask = (flagSamp * vertMasksPrimary.g + paintSamp * (1.0-vertMasksPrimary.g)) * maskSamp.b;
+	float plateMask = maskSamp.b * (1.0-paintMask);	
+	float roughnessTweakMask = plateMask * (1.0-paintMask);
+	
+	float lightsOne = (clamp(1.0 - normAO.w, 0.5, 1.0) - 0.5) * 2.0; 
+	float lightsTwo = (clamp(normAO.w, 0.5, 1.0) - 0.5) * 2.0;
+	
+	// Emissive lights setup
+	vec3 lights = vec3(0.0);
+	
+	float lightMask = 1.0 - vertMasksSecondary.r - vertMasksSecondary.g - vertMasksSecondary.b - vertMasksPrimary.b; // filter for no-special lights
+
+	// Primary and secondary lights are added - should be selectable, as owner and inverted owner is not always nice
+	lights += vec3(lightsOne * lightMask * ownerColor.rgb * 2.0);
+	lights += vec3(lightsTwo * lightMask * (1.0 - ownerColor.rgb) * 2.0);
+
+	// Warp drive is added - currently no models contains the mask.
+	float engineGlow = texSamp5 * texSamp6;
+//	lights += vec3(2.0, 0.0, 2.0) * (1.0 + engineGlow) * lightsTwo * vertMasksPrimary.b;
+	
+	// Windows are added
+	lights += glowColor * vertMasksSecondary.g * lightsOne;
+	
+	// Engine animation is created
+	engineGlow = lightsOne * (/*lightsOne * 2.0 + */engineGlow * 2.0) * vertMasksSecondary.b;	
+	
+	// Gives nice intensity and falloff transitions.
+	lights = pow(lights + (lightsOne + lightsTwo) * 1.0, vec3(1.5)) * (1.0 - vertMasksPrimary.r);
+
+	// Transparency setup
+	float transparency = min(clamp((clamp(diffuse.w,0.25, 0.5) - 0.25), 0.0, 0.25) * 4 + 0.25, 1.0-vertMasksPrimary.r);
+	
+	// Transparency and ao extractionsetup
+	float ao = (1.0-((1.0-transparency) * 0.5 + diffuse.w))*2.0;
+		
+	// Engine setup
+	float thrustIntensity = pow(thrust * 1.0, 2.0) * engineGlow;
+	lights += (blackBody(1000.0 + 5000.0 * thrustIntensity) * thrustIntensity);
+
+	
+// Player color setup - move the PBR values to external source!
+//	float playerMetal = 0.01;												//PBR gold
+//	vec3 playerMetalCol = vec3(1.0, 0.77, 0.33); 							//PBR gold 
+//	float playerMetal = 0.25;												//PBR bronze
+//	vec3 playerMetalCol = vec3(0.99, 0.64, 0.34); 							//PBR bronze 
+//	float playerMetal = 0.13;												//PBR brass
+//	vec3 playerMetalCol = vec3(0.98, 0.87, 0.41); 							//PBR brass 
+//	float playerMetal = 0.35;												//PBR Copper
+//	vec3 playerMetalCol = vec3(0.98, 0.60, 0.52); 							//PBR Copper
+//	float playerMetal = 0.10;												//PBR Silver
+//	vec3 playerMetalCol = vec3(0.97, 0.96, 0.91); 							//PBR Silver
+//	float playerMetal = 0.01;												//PBR Chrome
+//	vec3 playerMetalCol = vec3(0.91, 0.95, 0.97); 							//PBR Chrome
+//	float playerMetal = 0.45;												//PBR Titanium
+//	vec3 playerMetalCol = vec3(0.54, 0.49, 0.46); 							//PBR Titanium
+//	float playerMetal = 0.15;												//PBR Bright Steel
+//	vec3 playerMetalCol = vec3(0.84, 0.85, 0.90); 							//PBR Bright Steel
+//	float playerMetal = 0.75;												//PBR Dull Steel
+//	vec3 playerMetalCol = vec3(0.56, 0.57, 0.58); 							//PBR Dull Steel
+//	float playerMetal = 0.25;												//PBR Dark Steel
+//	vec3 playerMetalCol = vec3(0.48, 0.45, 0.42) ; 							//PBR Dark Steel
+//	float playerMetal = 0.27;												//PBR Gallium
+//	vec3 playerMetalCol = vec3(0.88, 0.93, 0.56); 							//PBR Gallium
+//	float playerMetal = 0.35;												//PBR Molybdenum
+//	vec3 playerMetalCol = vec3(0.16, 0.22, 0.15); 							//PBR Molybdenum
+//	float playerMetal = 0.33;												//PBR Niobium
+//	vec3 playerMetalCol = vec3(0.38, 0.34, 0.62); 							//PBR Niobium
+//	float playerMetal = 0.35;												//PBR Vanadium
+//	vec3 playerMetalCol = vec3(0.08, 0.10, 0.09); 							//PBR Vanadium
+//	float playerMetal = 0.25;												//PBR Adamantium
+//	vec3 playerMetalCol = vec3(0.26, 0.18, 0.25); 							//PBR Adamantium
+//	float playerMetal = 0.07;												//PBR Tritinium
+//	vec3 playerMetalCol = vec3(0.54, 0.49, 0.62); 							//PBR Tritinium
+//	float playerMetal = 0.03;												//PBR Zentronium
+//	vec3 playerMetalCol = vec3(0.96, 0.48, 0.43); 							//PBR Zentronium
+//	float playerMetal = 0.16;												//PBR Xintinium
+//	vec3 playerMetalCol = vec3(0.48, 0.96, 0.96); 							//PBR Xintinium
+//	float playerMetal = 0.15;												//PBR Duranium
+//	vec3 playerMetalCol = vec3(0.94, 0.24, 0.02); 							//PBR Duranium
+//	float playerMetal = 1.0;												//PBR Carbon Fibre 	Complimentary
+//	vec3 playerMetalCol = vec3(1.0 - ownerColor) * 0.25;					//PBR Carbon Fibre 	Complimentary
+//	float playerMetal = 0.9;												//PBR Ceramic 		Complimentary
+//	vec3 playerMetalCol = vec3(1.0 - ownerColor) * 0.64 + vec3(0.32);		//PBR Ceramic 		Complimentary
+//	float playerMetal = 1.0;												//PBR Paint 		Complimentary
+//	vec3 playerMetalCol = vec3(1.0 - ownerColor);							//PBR Paint			Complimentary
+	float playerMetal = 0.15;												//PBR Metal 		Complimentary
+	vec3 playerMetalCol = vec3(1.0 - ownerColor) * 0.5 + vec3(0.5);			//PBR Metal			Complimentary
+
+	vec4 playerPlateProfile = vec4(playerMetalCol, playerMetal);
+
+	// PBR mixer
+	playerMetal = clamp(playerMetal, 0.001, 1.0) * plateMask;
+	vec3 paintColor = ownerColor.rgb * (1.0-paintMask);
+	float metalness = clamp(maskSamp.g * max(0.5, 1.0-paintMask), 0.0, 1.0);
+	
+	// Roughness setup
+	float orgRoughness = maskSamp.r * (1.0-plateMask) + plateMask * (plateMask * playerPlateProfile.w);
+	
+
+	// Albedo setup
+	vec3 albedo = mix(diffuse.rgb * plateMask * playerMetalCol, ownerColor.rgb * diffuse.rgb, paintMask);
+	albedo = mix(diffuse.rgb, albedo, maskSamp.b);
+
+	// Shield setup.	
+	lights *= (1.0 - vertMasksSecondary.r);
+	//vertMasksSecondary.r * (1.0 - abs(texSamp5 * texSamp6 * 2.0 - 1.0)) * vec3(0.33, 0.99, 2.0);
+	//	transparency *= vertMasksSecondary.r * (1.0 - abs(texSamp5 * texSamp6 * 2.0 - 1.0)) * 0.66;
+	transparency *= clamp(1.0 - vertMasksSecondary.r  * 0.5, 0.0, 1.0);
+	transparency += (texSamp5 * texSamp6);// * vertMasksSecondary.r;
+	lights += transparency * vec3(0.33, 0.99, 2.0) * vertMasksSecondary.r;
+	//Adjust all other PBR textures accordingly
+	ao *= 1.0 - vertMasksSecondary.r;
+	orgRoughness *= 1.0 - vertMasksSecondary.r;
+	metalness *= 1.0 - vertMasksSecondary.r;
+	albedo *= 1.0-vertMasksSecondary.r;
+	normMap = normalize(mix(normMap, vec3(0.0,0.0,1.0), vertMasksSecondary.r));
+	
+	// Normal setup
+	vec3 n = normalize(normal) * normMap.z;
+	n += normalize(binormal) * normMap.y;
+	n += normalize(tangent) * normMap.x;
+	n = normalize(n);
+	vec3 v = normalize(npos);
+	vec3 r = normalize(reflect(-v, n));
+
+	// Substance setup and Albedo adjust
+	vec3 substance = clamp((0.04 - 0.04 * metalness) + albedo * metalness,0.0, 1.0);
+	albedo -= substance;
+
+	// Light model specials setup
+	float NdotV = clamp(dot(n, v), 0.0, 1.0);
+	float roughnessV = (orgRoughness + 1.0)/2.0; // roughness remapping
+
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	
+	//Zoom-out highlight setup
+	float highlight = 0.0;
+	if(camDist > 1.0)
+		highlight += smoothstep(0.0, 500.0, camDist / sqrt(nodeScale)) * 0.2;
+	vec3 color = vec3(highlight);
+
+	// Ambient reflections
+	float fakeLysSpecularPower=RoughToSPow(orgRoughness);
+	float lysMipMap = GetSpecPowToMip(fakeLysSpecularPower,8);
+	color += textureCube(skybox, r, lysMipMap).rgb * Fresnel2(substance,NdotV,orgRoughness);
+	
+// use this if you want a cheaper reflection cubemap calculation. If so, remember to remove the GetSpecPowToMip() and RoughToSPow()
+// 	color += textureCube(skybox, r,8.0 - (8.0*(1.0-orgRoughness))).rgb * reflectionFresnel;   	
+
+	// Ambient light
+	color += textureCube(skybox, n, 7.0).rgb * albedo * (1.0 - Fresnel2(substance,NdotV,orgRoughness));
+
+	if(nLightCount > 0) {
+		//light
+		const int i = 0;
+//		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+//		float NdotL = clamp(dot(n,light[i]) + 0.2,0.0, 1.0);
+		// fakes disc lights up close to a star.
+		float falloff = 1.0 / (0.25 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float NdotL = clamp(dot(n,light[i]) + 0.2,0.0, 1.0);
+		
+		float intensity = falloff * NdotL;
+
+		vec3 L=light[i];
+		L = normalize(L);
+	
+		vec3 VplusL = L + v; 
+		vec3 halfVec = normalize(VplusL);
+
+		float HdotN = clamp(dot(halfVec,n), 0.0, 0.98);
+	
+		vec3 F = Fresnel(substance, L, halfVec);
+		float D = D_GGX(HdotN, roughnessV);
+		float V = V_SchlickforGGX(roughnessV, NdotV, NdotL);
+	
+		color += ao * ((D * V * F) + (1.0 - F) * NdotL * albedo) * gl_LightSource[i].diffuse.rgb * intensity;
+		
+	}
+
+	if(nLightCount > 1) {
+		//light
+		const int i = 1;
+//		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+//		float NdotL = clamp(dot(n,light[i]) + 0.2,0.0, 1.0);
+		// fakes disc lights up close to a star.
+		float falloff = 1.0 / (0.25 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float NdotL = clamp(dot(n,light[i]) + 0.2,0.0, 1.0);
+
+		float intensity = falloff * NdotL;
+
+		vec3 L=light[i];
+		L = normalize(L);
+	
+		vec3 VplusL = L + v;
+		vec3 halfVec = normalize(VplusL);
+
+		float HdotN = clamp(dot(halfVec,n), 0.0, 1.0);
+	
+		vec3 F = Fresnel(substance, L, halfVec);
+		float D = D_GGX(HdotN, roughnessV);
+		float V = V_SchlickforGGX(roughnessV, NdotV, NdotL);
+	
+		color += ao * ((D * V * F) + (1.0 - F) * NdotL * albedo) * gl_LightSource[i].diffuse.rgb * intensity;
+	}
+	gl_FragColor.rgb = color + lights;
+	gl_FragColor.a = transparency + 1.0;
+}

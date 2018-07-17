@@ -1,0 +1,9 @@
+Status: Entangled
+	Name: #STATUS_ENTANGLED
+	Description: #STATUS_ENTANGLED_DESC
+	Icon: HexagonSubsystems::6 * #ff8d00
+
+	Unique: True
+
+	InterdictMovement()
+	DelayFTL()

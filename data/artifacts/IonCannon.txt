@@ -1,0 +1,6 @@
+Artifact: IonCannon
+	Name: #ART_ION_CANNON
+	Description: #ART_ION_CANNON_DESC
+	Frequency: 0.5
+
+	Ability: EquipIonCannon

@@ -1,0 +1,23 @@
+Status: Cloaked
+	Name: #STATUS_CLOAKED
+	Description: #STATUS_CLOAKED_DESC
+	Icon: PlateArmor * #5188e6a0
+	Color: #5188e6
+
+	ShowShipSizeValue(RESOURCE_ENERGY, 0.5, 0.005, ResourceIcon::2, #PER_SECOND, #42b4bd)
+
+	ForceHoldFire()
+
+	LimitSeeableRange(100)
+	NoRegionVision()
+
+	RemoveIfInCombat(Timer = 60)
+	RemoveOnAttackOrder()
+
+	EnergyMaintenance(0.5, 0.005)
+
+	OnEnable(ClearAttackOrder())
+
+	OnEnable(PlayParticles(CloakingOn, Fleet Scale = True))
+	OnDisable(PlayParticles(CloakingOff, Fleet Scale = True))
+	PersistentParticles(Cloaking, Fleet Scale = True)

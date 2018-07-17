@@ -1,0 +1,26 @@
+//Starting System
+System: Varkus
+	Position: (0, 0, 0)
+	Effect: MakeStar(Temperature = 5778, Radius = 75)
+	Effect: MakePlanet(Water)
+	Effect: MakePlanet(Titanium)
+	Effect: MakePlanet(Meat)
+	Effect: MakePlanet(Grain)
+	Effect: MakeAsteroid(Iron)
+	Effect: MakeAsteroid(Aluminum)
+		
+System: Pidion
+	Position: (3900, -450, 2400)
+	Effect: MakeStar(Temperature = 8500, Radius = 80)
+	Effect: MakePlanet(Water)
+	Effect: MakePlanet(Grain)
+	Effect: MakePlanet(Iron)
+	Effect: MakeAsteroid(Water)
+
+System: Nolvir
+	Position: (-1850, 100, 3600)
+	Effect: MakeStar(Temperature = 3200, Radius = 110)
+	Effect: MakePlanet(Textiles)
+	Effect: MakePlanet(Fruit)
+	Effect: MakePlanet(Fulrate)
+	Effect: MakePlanet(Water)

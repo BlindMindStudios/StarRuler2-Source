@@ -1,0 +1,18 @@
+Resource: AsteroidLabor
+	Name: #ASTEROID_LABOR
+	Description: #ASTEROID_LABOR_DESC
+
+	Icon: ResourceIcons::33
+	Small Icon: ResourceIconsSmall::46
+
+	Distribution: 0
+	Asteroid Frequency: 1.7
+	Asteroid Labor: 15
+
+	Vanish Time: 360
+	Vanish Mode: Custom
+	VanishWhenConstructing()
+
+	AddLaborIncome(10)
+
+	AI: DistributeToLaborUsing()

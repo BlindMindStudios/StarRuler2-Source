@@ -1,0 +1,82 @@
+body, nav, section, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 0.9em;
+	font-family: verdana;
+}
+
+nav {
+	width: 312px;
+	background: #eee;
+	margin-right: 10px;
+
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+nav > section {
+	padding: 4px;
+}
+
+section {
+	padding: 8px;
+}
+
+#content {
+	position: absolute;
+	bottom: 0px;
+	left: 310px;
+	right: 0px;
+	top: 0px;
+	padding: 0;
+}
+
+#content > iframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: none;
+}
+
+.method, .classdoc, .classmembers, .classmethods,
+.enumdoc, .enumvalues, .globals, .functions {
+	margin: 10px;
+}
+
+.classdoc span {
+	display: block;
+	margin-top: 10px;
+}
+
+.classmethods, .classmembers {
+	background: #eee;
+}
+
+.method:nth-child(odd) {
+	background: #fee;
+}
+
+.method:nth-child(even) {
+	background: #eef;
+}
+
+a {
+	text-decoration: none;
+	color: #2222ff;
+}
+
+a:hover {
+	color: red;
+}
+
+a.anchor {
+	color: black;
+}
+
+span {
+	display: block;
+}

@@ -1,0 +1,6 @@
+Status: Virile
+	Name: #STATUS_VIRILE
+	Description: #STATUS_VIRILE_DESC
+	Icon: StatusIcons::0
+
+	ModPopulationGrowth(+1.0)

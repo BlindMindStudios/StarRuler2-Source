@@ -1,0 +1,29 @@
+Camp: LargeCamp
+	Frequency: 0.15
+
+	Target Strength: 16000
+
+	Pickup: FleetBoost
+		Name: #PICKUP_FLEETBOOST
+		Description: #PICKUP_FLEETBOOST_DESC
+
+		DLC: Heralds
+		
+		AddStatus(PickupFleetBoost)
+		TakeOnClear()
+
+	Pickup: FreeFood
+		Name: #PICKUP_FREEFOOD
+		Description: #PICKUP_FREEFOOD_DESC
+
+		DLC: Heralds
+		
+		GainInfluenceCard(Harvest)
+
+	Pickup: MuchInfluence
+		Name: #PICKUP_MUCHINFLUENCE
+		Description: #PICKUP_MUCHINFLUENCE_DESC
+
+		DLC: Heralds
+		
+		AddInfluenceStake(2)

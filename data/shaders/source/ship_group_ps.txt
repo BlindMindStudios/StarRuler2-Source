@@ -1,0 +1,22 @@
+varying vec2 uv;
+uniform sampler2D texture;
+uniform vec4 color;
+uniform vec4 glowColor;
+uniform float selected;
+uniform float cycle;
+
+vec4 alphaBlend(vec4 dest, vec4 src) {
+	float alpha = src.a + (dest.a * (1.0 - src.a));
+	return vec4( ((src.rgb * src.a) + (dest.rgb * dest.a * (1.0 - src.a))) / alpha, alpha);
+}
+
+void main() {
+	vec4 chn = texture2D(texture, uv);
+	vec4 col = vec4(color.rgb * chn.g, color.a * chn.a);
+	col.rgb = mix(col.rgb, vec3(1.0, 1.0, 1.0) * chn.g, selected * 0.5);
+
+	float pct = abs(cycle - 0.5) + 0.5;
+	col = alphaBlend(col, vec4(glowColor.rgb, sqrt(chn.b) * glowColor.a * pct * color.a));
+
+	gl_FragColor = col;
+}

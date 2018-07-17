@@ -1,0 +1,12 @@
+Trait: Inefficient
+	Name: #TRAIT_INEFFICIENT
+	Description: #TRAIT_INEFFICIENT_DESC:3
+	Category: Personality
+
+	Color: #ffaaaa
+	Icon: AttributeIcons::4
+	Available: False
+
+	Gives Points: 1
+
+	AddModifier( SupplyCostFactor(2) )

@@ -1,0 +1,186 @@
+Object.SurfaceComponent : planets.SurfaceComponent::SurfaceComponent {
+local safe:
+	uint get_maxPopulation() const;
+	double get_population() const;
+	uint get_level() const;
+	uint get_levelChain() const;
+	uint get_resourceLevel() const;
+	int get_income() const;
+	double get_decayTime() const;
+	bool get_quarantined() const;
+	double get_undevelopedMaintenance() const;
+	double get_buildingConstructRate() const;
+	double get_tileDevelopmentRate() const;
+	uint get_pressureCap() const;
+	float get_totalPressure() const;
+	int get_maxLevel() const;
+
+	bool isProtected(Empire@ siegeEmpire = null) const;
+	int get_baseLoyalty() const;
+	int get_currentLoyalty() const;
+	int getLoyaltyFacing(Empire@ emp) const;
+	bool get_isContested() const;
+	bool get_hasContestion() const;
+	bool get_isBeingColonized() const;
+	bool get_isUnderSiege() const;
+	bool get_isOverPressure() const;
+	int get_buildingMaintenance() const;
+
+	Empire@ get_captureEmpire() const;
+	float get_capturePct() const;
+
+	double getResourceProduction(uint resource);
+	double getResourcePressure(uint resource);
+	
+	Empire@ get_visibleOwner() const;
+	uint get_visibleLevel() const;
+	vec3d get_planetIconPosition() const;
+
+	uint get_totalSurfaceTiles() const;
+	uint get_usedSurfaceTiles() const;
+
+	uint get_planetGraphicsFlags() const;
+	uint getBuildingCount() const;
+	uint get_surfaceModId() const;
+	vec2i get_surfaceGridSize();
+	vec2i get_originalGridSize();
+
+	uint getSurfaceData(Image& img);
+
+	safe uint get_Biome0();
+	safe uint get_Biome1();
+	safe uint get_Biome2();
+
+local:
+	uint getBuildingCount(uint buildingId) const;
+	uint get_buildingType(uint index) const;
+
+	PlanetSurface@[] getPlanetSurface();
+
+restricted local:
+	safe double get_colonyShipAccel() const;
+	safe bool get_isColonizing() const;
+	safe bool get_canSafelyColonize() const;
+	safe uint get_colonyOrderCount() const;
+	
+	bool hasColonyTarget(Object& other) const;
+	Object@ get_colonyTarget(uint index) const;
+	int get_lowestLoyalty() const;
+
+remote:
+	void annex(Empire@ forEmpire = null);
+
+restricted remote:
+	async void colonize(Object& other, double toPopulation = 1.0);
+	async void stopColonizing(Object& other);
+	void abandon();
+	void buildBuilding(uint tid, vec2i pos);
+	void destroyBuilding(vec2i pos);
+
+server:
+	safe bool get_isSendingColonyShips() const;
+	safe bool isEmpireColonizing(Empire@ emp) const;
+	safe Empire@ visibleOwnerToEmp(Empire@ emp) const;
+	safe bool hasBiome(uint id) const;
+	void setBeingColonized(Empire@ emp, bool value);
+	void forceAbandon();
+	void forceDestroyBuilding(vec2i pos, bool undevelop = false);
+	safe bool isPressureSaturated(uint resource);
+	
+	void giveBasicIconVision(Empire@ emp);
+	
+	void initSurface(int width, int height, uint baseBiome, uint biomeTwo, uint biomeThree, uint resourceId);
+	void destroySurface();
+	void regenSurface(int width, int height, uint biomeCount);
+	int getBuildingAt(uint x, uint y);
+	float getBuildingProgressAt(uint x, uint y);
+	void replaceAllBiomesWith(uint id);
+	void replaceFirstBiomeWith(uint id);
+	void replaceBiome(uint index, uint id);
+	async relocking void mirrorSurfaceFrom(Object& other);
+	void forceUsefulSurface(double pct, uint biomeId);
+	
+	void changeSurfaceOwner(Empire@ prevOwner);
+	void changeSurfaceRegion(Region@ prevRegion, Region@ newRegion);
+	void changeSurfaceTerritory(Territory@ prev, Territory@ terr);
+	
+	void reducePopInTransit(Object& target, double amount);
+	void modMaxPopulation(int amt);
+	void addPopulation(double population, bool allowOver = true);
+	void removePopulation(double population, double minimum = 0);
+	void modIncomingPop(double population);
+	safe double get_IncomingPop();
+	safe uint get_emptyDevelopedTiles();
+	
+	void surfaceTick(double time);
+	void colonyShipArrival(Empire@ owner, double population);
+	void takeoverPlanet(Empire@ newOwner, double supportRatio = 1.0);
+	void setQuarantined(bool value);
+	void fakeSiege(uint mask);
+	void clearFakeSiege(uint mask);
+	void forceSiege(uint mask);
+	void clearForceSiege(uint mask);
+	void restoreLoyalty(double mod);
+	void modLoyaltyFacing(Empire@ emp, double mod);
+	void setLoyaltyBonus(int bonus);
+	void spawnBuilding(uint tid, vec2i pos, bool develop = false);
+	void setBuildingCompletion(uint x, uint y, float progress);
+	void modCityCount(int mod);
+	void addSurfaceArea(vec2i size, uint biome, uint voidBiome = uint(-1), bool separate = false, bool developed = false, bool vertical = false);
+	async relocking stealFinalSurfaceRowsFrom(Object& other, uint rows = 1, uint voidBiome = uint(-1));
+	async relocking removeFinalSurfaceRows(uint rows = 1);
+	
+	void modOverpopulation(int steps);
+	void modGrowthRate(double amt);
+	void modTileDevelopRate(double amt);
+	void developTiles(uint amount);
+	void modBuildingConstructRate(double amt);
+	void modUndevelopedMaintenance(double amt);
+	void modCivResourceMod(uint resource, double amount);
+	float getCivResourceMod(uint resource);
+	void modColonyShipAccel(double mod);
+	void modBaseLoyalty(int mod);
+	void setGraphicsFlag(uint flag, bool value);
+	void modIncome(int mod);
+	void set_maxLevel(int level);
+	void setLevelChain(uint chainId, bool wasManual = true);
+
+	void clearProtectedFrom(uint mask = ~0);
+	void protectFrom(uint mask);
+	
+	void destroyRandomTile(bool civilOnly);
+	void modBombardment(int amount);	
+	void absoluteSiege(Empire@ fromEmpire, double loyAmount);
+	void enterIntoOrbit(Object@ ship);
+	void leaveFromOrbit(Object@ ship);
+	bool get_enemiesInOrbit() const;
+	bool get_isGettingRelief() const;
+	safe void flagColonizing();
+
+	void setContestion(bool value);
+	double getCivilianProduction(uint resource);
+	
+	void modResource(uint resource, double amount);
+	void addAffinity(uint aff);
+	void removeAffinity(uint aff);
+	uint getAffinitiesMatching(uint type);
+	void modPressureCapFactor(float amt);
+	void modPressureCapMod(int amt);
+	void setNeedsPopulationForLevel(bool value);
+	void onManualResourceRemoved();
+	
+	void modBuildingMaintenanceRefund(int amt);
+	void setProtectionDisabled(bool val);
+	
+	void spawnDefenseShips(double totalLaborValue);
+
+	bool writeSurfaceDelta(Message& msg) const;
+	void writeSurface(Message& msg) const;
+	void surfacePostLoad();
+
+	async void requestSurface();
+
+shadow:
+	void readSurfaceDelta(Message& msg);
+	void readSurface(Message& msg);
+}

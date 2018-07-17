@@ -1,0 +1,45 @@
+Effect: Damage
+	Value: Amount
+
+	End: combat::Damage
+
+Effect: EnergyDamage
+	Value: Amount
+
+	End: combat::EnergyDamage
+
+Effect: ExplDamage
+	Value: Amount
+
+	End: combat::ExplDamage
+
+Effect: AreaExplDamage
+	Value: Amount
+	Value: Radius
+	Value: Hits = 1
+	Value: Spillable = 0
+
+	End: combat::AreaExplDamage
+
+Effect: ProjDamage
+	Value: Amount
+	Value: Pierce
+	Value: Suppression
+	Value: IgnoreDR = 0
+
+	End: combat::ProjDamage
+
+Effect: SelfDestruct
+	Value: Amount
+	Value: Radius
+	Value: Hits = 1
+
+	Destroy: combat::SelfDestruct
+
+Effect: ProjImpact
+	Value: Damage = 0
+	Value: Pierce = 0
+	Value: IgnoreDR = 0
+	Value: Impulse = 0
+
+	End: combat::ProjImpact

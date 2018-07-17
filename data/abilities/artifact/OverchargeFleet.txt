@@ -1,0 +1,14 @@
+Ability: OverchargeFleet
+	Name: #ABL_OVERCHARGE_FLEET
+	Description: #ABL_OVERCHARGE_FLEET_DESC
+	Icon: ResourceIcon::2
+
+	Energy Cost: 500
+
+	Target: targ = Object
+	TargetFilterFlagship(targ)
+	TargetFilterOwned(targ)
+	TargetFilterSameTerritory(targ)
+	TargetFilterNotStatus(targ, PowerCell)
+
+	Trigger(targ, AddStatus(PowerCell))

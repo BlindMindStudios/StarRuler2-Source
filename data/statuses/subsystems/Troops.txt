@@ -1,0 +1,6 @@
+Status: Troops
+	Name: #STATUS_TROOPS
+	Description: #STATUS_TROOPS_DESC
+	Icon: AbilityIcons::2
+	Visible To: Everybody
+	Collapses: True

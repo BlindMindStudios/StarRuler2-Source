@@ -1,0 +1,19 @@
+Technology: BoosterEngine
+	Name: #R_SYS_BOOSTER_ENGINE
+	Description: #R_SYS_BOOSTER_ENGINE_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Thrust
+
+	Point Cost: 500
+	Time Cost: 100
+
+	Icon: ResearchIcons::1
+	Color: #8872bb
+	
+	UnlockSubsystem(BoosterEngine)
+	SkipOnUnlockedSubsystem(BoosterEngine)
+
+	SecondaryEnergyCost(1000)

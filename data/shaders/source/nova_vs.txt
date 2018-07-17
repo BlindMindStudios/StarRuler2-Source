@@ -1,0 +1,14 @@
+attribute vec3 in_position;
+attribute vec2 in_uv;
+attribute vec3 in_normal;
+varying vec3 n, v, norm;
+varying vec2 uv;
+
+void main() {
+	uv = in_uv;
+	n = in_normal;
+	norm = gl_NormalMatrix * in_normal;
+	vec4 vert = ftransform();
+	gl_Position = vert;
+	v = vert.xyz;
+}

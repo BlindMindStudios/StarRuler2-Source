@@ -1,0 +1,22 @@
+Card: Sabotage
+	Name: #CARD_SABOTAGE
+	Description: #CARD_SABOTAGE_DESC
+
+	Icon: CardIcons::14
+
+	Color: #ff4ff4
+	Class: Action
+	Rarity: Rare
+
+	Base Purchase Cost: 2
+	Base Play Cost: 5
+
+	Target: target = Effect
+	TargetFilterOtherEmpire(target)
+	TargetFilterDismissableByOwner(target)
+
+	NotifyAllEffectSubject(target, #SABOTAGE_NOTIFY)
+	GiveLeverageToOwner(target, Quality Factor = 5.0)
+	DismissEffect(target)
+
+	AI: PlayOnEnemyEffect(target)

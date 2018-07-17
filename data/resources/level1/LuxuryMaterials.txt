@@ -1,0 +1,15 @@
+Resource: LuxuryMaterials
+	Name: #LUXURY_MATERIALS
+	Description: #LUXURY_MATERIALS_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::16
+	Small Icon: ResourceIconsSmall::32
+
+	Level: 1
+	Rarity: Uncommon
+	Affinity: Influence
+
+	Pressure: 3 Influence
+
+	IfType(Planet, AddStatus(Happy))

@@ -1,0 +1,247 @@
+
+Material: Subsystem
+	Alpha: True
+	DepthTest: NoDepthTest
+	Mipmap: False
+	Lighting: False
+
+SpriteSheet: HexagonBasic
+	Inherit: Subsystem
+	Texture: data/images/hexagon_basic.png
+	Size: 128, 66
+
+SpriteSheet: HexagonSubsystems
+	Inherit: Subsystem
+	Texture: data/images/hexagon_subsystems.png
+	Size: 200, 100
+
+Material: FireArc2D
+	Inherit:  Subsystem
+	Shader: FireArc2D
+
+SpriteSheet: HexWall
+	Inherit: Subsystem
+	Shader: MaskColored
+	Texture: data/images/hexwall.png
+	Texture2: data/images/hexwall_mask.png
+	Size: 253, 162
+	Spacing: 2
+
+Material: HexFloor
+	Inherit: Subsystem
+	Shader: MaskColored
+	Mipmap: True
+	Texture: data/images/hexwall_floor.png
+	Texture2: data/images/hexwall_floor_mask.png
+
+Material: HexError
+	Inherit: Subsystem
+	Mipmap: True
+	Texture: data/images/hexwall_error.png
+
+Material: HexEmpty
+	Inherit: Subsystem
+	Texture: data/images/hexwall_floor_empty.png
+	
+SpriteSheet: HexRiser
+	Inherit: Subsystem
+	Texture: data/images/hexwall_riser.png
+	Size: 253, 162
+	Spacing: 2
+	
+Material: SubsystemCursor
+	Inherit: Subsystem
+	Texture: data/images/subsystem_cursor.png
+	
+Material: Bridge
+	Inherit: Subsystem
+	Texture: data/images/subsystems/bridge.png
+
+Material: Simulator
+	Inherit: Subsystem
+	Texture: data/images/subsystems/simulator.png
+
+Material: CrewQuarters
+	Inherit: Subsystem
+	Texture: data/images/subsystems/crew_quarters.png
+	
+Material: PlateArmor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/armor_plate.png
+
+Material: SolarPanel
+	Inherit: Subsystem
+	Texture: data/images/subsystems/solar_panel.png
+
+Material: NilingArmor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/niling_armor.png
+
+Material: NanoMesh
+	Inherit: Subsystem
+	Texture: data/images/subsystems/nano_mesh.png
+
+Material: Sinew
+	Inherit: Subsystem
+	Texture: data/images/subsystems/sinew.png
+	
+Material: RocketEngine
+	Inherit: Subsystem
+	Texture: data/images/subsystems/thruster_rocket.png
+
+Material: IonEngine
+	Inherit: Subsystem
+	Texture: data/images/subsystems/thruster_ion.png
+
+Material: Ramjet
+	Inherit: Subsystem
+	Texture: data/images/subsystems/ramjet.png
+
+Material: Ramscoop
+	Inherit: Subsystem
+	Texture: data/images/subsystems/ramscoop.png
+	
+Material: FissionReactor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/reactor_fission.png
+	
+Material: FusionReactor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/reactor_fusion.png
+
+Material: AntimatterReactor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/reactor_antimatter.png
+
+Material: Jumpdrive
+	Inherit: Subsystem
+	Texture: data/images/subsystems/jumpdrive.png
+
+Material: QuantumBattery
+	Inherit: Subsystem
+	Texture: data/images/subsystems/quantum_battery.png
+
+Material: QuantumCompressor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/quantum_compressor.png
+
+Material: SupplyStorage
+	Inherit: Subsystem
+	Texture: data/images/subsystems/supply_storage.png
+	
+Material: SupportCommand
+	Inherit: Subsystem
+	Texture: data/images/subsystems/support_command.png
+	
+Material: ComputerCore
+	Inherit: Subsystem
+	Texture: data/images/subsystems/computer_core.png
+
+Material: AncientComputerCore
+	Inherit: Subsystem
+	Texture: data/images/subsystems/control_core.png
+
+Material: ShieldHarmonizer
+	Inherit: Subsystem
+	Texture: data/images/subsystems/shield_harmonizer.png
+
+Material: BoosterEngine
+	Inherit: Subsystem
+	Texture: data/images/subsystems/booster_rocket.png
+
+Material: CrystalArmor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/crystalline_armor.png
+
+Material: Antenna
+	Inherit: Subsystem
+	Texture: data/images/subsystems/antenna.png
+
+SpriteSheet: Railgun
+	Inherit: Subsystem
+	Texture: data/images/subsystems/railgun.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: Flak
+	Inherit: Subsystem
+	Texture: data/images/subsystems/flak.png
+	Size: 234,220
+
+SpriteSheet: ParticleLance
+	Inherit: Subsystem
+	Texture: data/images/subsystems/particle_lance.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: RocketPod
+	Inherit: Subsystem
+	Texture: data/images/subsystems/rocket_pod.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: Laser
+	Inherit: Subsystem
+	Texture: data/images/subsystems/laser.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: HyperdenseLaser
+	Inherit: Subsystem
+	Texture: data/images/subsystems/hyperdense_laser.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: MissileLauncher
+	Inherit: Subsystem
+	Texture: data/images/subsystems/missile_launcher.png
+	Size: 234,180
+	Spacing: 2
+
+
+SpriteSheet: TorpedoLauncher
+	Inherit: Subsystem
+	Texture: data/images/subsystems/missile_launcher.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: TractorGun
+	Inherit: Subsystem
+	Texture: data/images/subsystems/tractor.png
+	Size: 234,180
+	Spacing: 2
+
+SpriteSheet: Warhead
+	Inherit: Subsystem
+	Texture: data/images/subsystems/warhead.png
+	Size: 234,180
+	Spacing: 2
+
+Material: WarheadTube
+	Inherit: Subsystem
+	Texture: data/images/subsystems/warhead_tube.png
+
+Material: WarheadStored
+	Inherit: Image2D
+	Texture: data/images/subsystems/warhead_stored.png
+
+Material: TroopPods
+	Inherit: Image2D
+	Texture: data/images/subsystems/troop_pods.png
+
+Material: FleetComputer
+	Inherit: Image2D
+	Texture: data/images/subsystems/fleet_computer.png
+
+SpriteSheet: HullSubsystems
+	Inherit: Image2D
+	Texture: data/images/subsystems/hulls.png
+	Size: 42,42
+
+Material: Dish
+	Inherit: Subsystem
+	Texture: data/images/subsystems/dish.png
+
+Material: MareniumReactor
+	Inherit: Subsystem
+	Texture: data/images/subsystems/marenium_generator.png

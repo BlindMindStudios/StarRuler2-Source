@@ -1,0 +1,18 @@
+Card: Profiteering
+	Name: #CARD_PROFITEERING
+	Description: #CARD_PROFITEERING_DESC
+
+	Icon: CardIcons::12
+
+	Color: #ffffa4
+	Class: Instant
+	Rarity: Uncommon
+
+	Max Quality: 3
+
+	Base Purchase Cost: 1
+	Quality Purchase Cost: 1
+
+	BonusMoney(250, Per Quality = 300)
+
+	AI: BuyWeight(2.0)

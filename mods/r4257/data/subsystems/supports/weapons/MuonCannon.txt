@@ -1,0 +1,57 @@
+Subsystem: MuonCannon
+	Name: #MUON_CANNON_NAME
+	Description: #MUON_CANNON_DESC
+	BaseColor: #f549f6
+	TypeColor: #f549f6
+	Elevation: 2
+
+	Tags: WeaponBase, ProjBase, Rotatable, HexLimitArc, Category:Weapons
+	Tags: ExteriorCore, Weapon, IsProjWeapon, IsRailgun, HasInternals
+	Hull: Support
+
+	Size := HexSize * Hexes
+	
+	Range := Size + 350
+	Damage := Size * 1.7
+	Reload := 2.0
+	Speed := 110
+	Spread := 0.07 * 4.0 / (4.0 + Size)
+	Tracking := 0.8
+	FireArc := 0.5 * pi
+	Pierce := 1.25
+	SupplyCost := Size * 1.5
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.MaintainCost := 0
+	Hex.LaborCost := 0.07 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 2
+
+		Sprite: Railgun::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 28.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: Railgun
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		FireArc = FireArc
+		Tracking = Tracking
+		CapOnTarget = 0
+		Spread = Spread
+		TargetTolerance = Spread / 2
+		Pierce = Pierce
+		SupplyCost = SupplyCost * Reload

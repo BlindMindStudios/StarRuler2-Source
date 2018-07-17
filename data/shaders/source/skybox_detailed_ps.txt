@@ -1,0 +1,21 @@
+varying vec3 uvs;
+varying vec2 uv;
+uniform sampler2D detail;
+uniform samplerCube skybox;
+
+const float starsToggle = #{{bSkycubeStars}} ? 1.0 : 0.0;
+
+void main() {
+	vec3 dir = uvs;
+
+	vec3 color = textureCube(skybox, uvs, 0.0).rgb;
+	float variation = texture2D(detail, uv * vec2(4.0, 2.0)).a;
+	float density = dot(color, color);
+	vec4 details = texture2D(detail, uv * vec2(10.0, 5.0)) * density * 4.0;
+	details += texture2D(detail, uv * vec2(14.0, 7.0)) * (1.0 - pow(density, 2.0)) * variation;
+
+	color *= variation * details.a * 0.15 + 0.85;
+	color += details.rgb * starsToggle;
+
+	gl_FragColor = vec4(vec3(color.rgb), 1.0);
+}

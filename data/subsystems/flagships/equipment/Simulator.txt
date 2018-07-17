@@ -1,0 +1,26 @@
+Subsystem: Simulator
+	Name: #S_SIMULATOR
+	Description: #S_SIMULATOR_DESC
+	BaseColor: #f17757
+	TypeColor: #f17757
+	Elevation: 3
+	
+	Tags: BaseCost, Category:Equipment, HasInternals
+	Tags: HeraldsDLC
+	Hull: Flagship
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Rate := (Size / 60) * 2
+
+	Hook: ExperienceOverTime(Rate, True)
+
+	Requires:
+		Command = 3
+
+	Module: Core
+		Sprite: Simulator

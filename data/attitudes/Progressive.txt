@@ -1,0 +1,43 @@
+Attitude: Progressive
+	Name: #ATT_PROGRESSIVE
+	Progress: #ATT_PROGRESSIVE_PROGRESS
+	Color: #ede645
+	Sort: 55
+
+	ProgressFromAttribute(ResearchUnlocksDone)
+	Conflict(Stable)
+
+	Level:
+		Description: #ATT_PROGRESSIVE_L1
+		Icon: ResourceIcon::4
+		Threshold: 1
+
+		AddResearchIncome(1)
+
+	Level:
+		Description: #ATT_PROGRESSIVE_L2
+		Icon: ResourceIcon::3
+		Threshold: 3
+
+		AddFTLIncome(1)
+
+	Level:
+		Description: #ATT_PROGRESSIVE_L3
+		Icon: ActionBarIcons::5
+		Threshold: 7
+
+		GainResearchWhenAttributeUps(FTLEnergySpent, 4.0)
+
+	Level:
+		Description: #ATT_PROGRESSIVE_L4
+		Icon: ConvertIcon::1
+		Threshold: 11
+
+		ModEmpireAttribute(WelfareEfficiency, Multiply, 2)
+
+	Level:
+		Description: #ATT_PROGRESSIVE_L5
+		Icon: ActionBarIcons::2
+		Threshold: 18
+
+		EnableModifier(FlagshipHull::IncreaseHexLimit(14))

@@ -1,0 +1,40 @@
+Empire.ResearchGrid : components.ResearchGrid::ResearchGrid {
+restricted local:
+	double get_ResearchRate();
+	double get_ResearchPoints();
+	double get_ResearchEfficiency();
+
+	TechnologyNode@[] getTechnologyNodes();
+	TechnologyNode@[] getTechnologyNode(int id);
+	TechnologyNode@[] getTechnologyNode(vec2i position);
+
+	TechnologyNode@[] getResearchingNodes();
+
+	bool isTagUnlocked(int tagID);
+
+restricted remote:
+	void research(int id, bool secondary = false, bool queue = false);
+	void setResearchQueued(int id, bool queued = true);
+
+server:
+	void modResearchRate(double mod);
+	void generatePoints(double pts, bool modified = true, bool penalized = true);
+	void initResearch();
+	void researchTick(double time);
+	async void removeResearchOfType(int type);
+	async void replaceResearchOfType(int type, int replaceWith);
+	async void replaceResearchAt(vec2i position, int replaceWith);
+	async void replaceResearchGrid(string name);
+
+	bool consumeResearchPoints(int amount);
+	void freeResearchPoints(int amount);
+	void reduceResearchPenalty(int points);
+
+	void setTagUnlocked(int tagID, bool unlocked);
+
+	void writeResearch(Message& msg, bool initial = false);
+	async void revealSecretProject(bool pickedOnly = false);
+
+shadow:
+	void readResearch(Message& msg);
+};

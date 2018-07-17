@@ -1,0 +1,28 @@
+Card: Bureaucracy
+	Name: #CARD_BUREAUCRACY
+	Description: #CARD_BUREAUCRACY_DESC
+
+	Icon: CardIcons::8
+
+	Color: #fff100
+	Class: Effect
+	Rarity: Rare
+
+	Base Purchase Cost: 2
+	Base Play Cost: 6
+
+	CreateEffect(Bureaucracy)
+
+	AI: BuyWeight(0.5)
+	AI: PlayWhenInfluenceStronk(0.5)
+
+Effect: Bureaucracy
+	Name: #EFFECT_BUREAUCRACY
+	Color: #ff00dd
+
+	Icon: CardIcons::8
+
+	Upkeep: 0.2
+
+	GainLeverageWhenVoteStarted(Quality Factor = 2.0)
+	GainLeverageWhenEffectStarted(Quality Factor = 2.0)

@@ -1,0 +1,9 @@
+Status: PressAttack
+	Name: #STATUS_PRESS_ATTACK
+	Description: #STATUS_PRESS_ATTACK_DESC
+	Icon: VoteIcons::5
+
+	Unique: True
+
+	AddFleetEffectiveness(+1.0)
+	HealFleetPerSecond(50)

@@ -1,0 +1,7 @@
+Ability: SelfDestruct
+	Name: #ABL_SELF_DESTRUCT
+	Description: #ABL_SELF_DESTRUCT_DESC
+	Icon: AntimatterReactor * #ff0000
+
+	SetInCombat()
+	Destroy()

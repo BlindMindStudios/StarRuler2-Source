@@ -1,0 +1,19 @@
+Camp: DryDock
+	Frequency: 0.05
+
+	Ship: Ixion [Remnant Ixion]
+	Ship: 1-5x Pholus
+	Ship: 0-1x ED
+
+	Pickup:
+		Name: #PICKUP_DRYDOCK
+		Description: #PICKUP_DRYDOCK_DESC
+
+		Model: Drydock
+		Material: GenericPBR_Drydock
+
+		Physical Size: 14
+
+		SpawnDryDock(Ixion, 0.0, 1.0)
+		SpawnDryDock(Ixion, 0.0, 1.0)
+		AddResearchPoints(250, Modified = False, Penalized = False)

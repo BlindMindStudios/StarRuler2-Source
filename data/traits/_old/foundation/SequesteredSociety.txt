@@ -1,0 +1,12 @@
+Trait: SequesteredSociety
+	Name: #TRAIT_SEQUESTERED_SOCIETY
+	Description: #TRAIT_SEQUESTERED_SOCIETY_DESC
+	Category: Foundation
+
+	Icon: SequesteredSociety
+	Color: #aaffaa
+	Available: False
+
+	Costs Points: 1
+
+	TriggerHomeworld(DevelopTiles(500))

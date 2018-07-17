@@ -1,0 +1,58 @@
+Subsystem: PulseBolt
+	Name: #S_PULSE_BOLT
+	Description: #S_PULSE_BOLT_DESC
+	BaseColor: #7390db
+	TypeColor: #7390db
+	Elevation: 1
+	
+	Tags: BeamBase, Rotatable, HexLimitArc, Category:Weapons
+	Tags: ExteriorCore, Weapon, IsBeamWeapon, HasInternals
+	Tags: HeraldsDLC, RangeForRaid
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	BeamDPS := 10.0 * Size
+	Duration := 1
+	Cooldown := 0
+	Range := Size^0.4 * 6.0
+	Tracking := 1.0
+	SupplyCost := Size * 7.0
+	FireArc := 0.4 * pi
+
+	//I don't really like doing this but we don't want strengths to be inaccurate representations :/
+	// This works under the assumption that the ship spends about 25% of its
+	// time firing and the other 75% moving into position, or moving back to the fleet for resupply.
+	out DPS := 0.25 * BeamDPS
+	
+	Hex.HP := 10 * HexSize
+	Hex.Resistance := 0.4
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 2 * HexSize
+	Hex.LaborCost := 0.20 * HexSize
+	
+	Requires:
+		Command = 1
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 1.5
+		Hex.BuildCost := Hex.BuildCost * 4
+		Hex.Mass := Hex.Mass * 4
+
+		Sprite: HyperdenseLaser::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 28.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+	
+	Effector: PulseBolt
+		Range = Range
+		DPS = BeamDPS
+		Duration = Duration
+		Cooldown = Cooldown
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Duration
+		FireArc = FireArc

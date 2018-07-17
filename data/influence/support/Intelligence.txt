@@ -1,0 +1,25 @@
+Card: Intelligence
+	Name: #CARD_INTELLIGENCE
+	Description: #CARD_INTELLIGENCE_DESC
+
+	Icon: CardIcons::38
+	Color: #ff8444
+
+	Class: Support
+	Side: Both
+
+	Frequency: 0
+
+	Base Weight: 6
+	Base Play Cost: 3
+
+	Target: onEmpire = Empire
+	GenerateRandomEmpire(onEmpire)
+	LimitVoteToOppose(onEmpire)
+	WeightPerPlay(-2, Same Side = False, Same Empire = False, Match Targets = True)
+	LimitPerVote(3, Per Empire = False, Per Side = False, Match Targets = True)
+
+	AnonymousVoteEvent(Support = #CARD_INTELLIGENCE_LOG_Y, Oppose = #CARD_INTELLIGENCE_LOG_N)
+	AnonymizeVoteSupport()
+
+	AI: VoteAgainstEmpire(onEmpire)

@@ -1,0 +1,364 @@
+//Defines types of objects, their governing script class, their accessible script methods, their components, and native members
+
+//Shared members for all object types (cannot define methods)
+Object {
+visible:
+	Region$ region
+}
+
+Ship : objects.Ship::ShipScript {
+	Mover mover
+	Orbit@ orbit = null
+	LeaderAI@ leaderAI = null
+	SupportAI@ supportAI = null
+	Abilities@ abilities = null
+	Statuses@ statuses = null
+	Construction@ construction = null
+	Cargo@ cargo = null
+visible:
+	float MaxEnergy = 0
+	float Energy = 0
+	float DPS = 0
+	float MaxDPS = 0
+	float Supply = 0
+	float MaxSupply = 0
+	float Shield = 0
+	float MaxShield = 0
+	bool isFTLing = false
+	bool isFree = false
+	quaterniond formationDest
+	Blueprint blueprint
+	Object Leader
+	Object RetrofittingAt
+	bool delayFTL = false
+	double minEngagementRange = 0
+	double maxEngagementRange = 0
+	int lastHit = 0
+
+	local safe bool get_isStation();
+	
+remote restricted:
+	void scuttle();
+
+server:
+	async void retrofit(const Design@ toDesign);
+	bool consumeEnergy(double amount);
+	void refundEnergy(double amount);
+	void consumeSupply(double amount);
+	void consumeSupplyPct(double pct);
+	bool consumeMinSupply(double amount);
+	void refundSupply(double amount);
+	void repairShip(double amount);
+	void makeNotFree();
+	void setHealthPct(float pct);
+	void modSupplyBonus(float amount);
+	void modMass(float amount);
+	safe float getMass();
+	safe float getBaseMass();
+	int get_maintenanceCost();
+	void startEffects();
+	void setHoldFire(bool value);
+	void setDisableRegionVision(bool value);
+	void restoreShield(double amount);
+	void modBonusShield(float amount);
+	void shieldDamage(double amount);
+	void damageAllHexes(double amount, Object@ source = null);
+	void modHPFactor(float pct);
+	void modSupplyConsumeFactor(float mod);
+	safe bool getDisableRegionVision();
+	safe bool getHoldFire();
+	Object@ getLastHitBy();
+	void addBonusEffectiveness(float mod);
+	void recordDamage(Object@ source);
+
+	void startRetrofit(Object@ from, const Design@ to);
+	void stopRetrofit(Object@ from);
+	void completeRetrofit(Object@ from);
+	
+	void suppress(double amount);
+	void mangle(double amount);
+	void startFire();
+
+	void triggerLeaderChange(Object@ prevLeader, Object@ newLeader);
+	
+	safe Empire@ getKillCredit();
+}
+
+Star : objects.Star::StarScript {
+	Orbit orbit
+visible:
+	double temperature
+	double Health = 20000000000
+	double MaxHealth = 20000000000
+
+server:
+	void dealStarDamage(double amount);
+}
+
+Planet : objects.Planet::PlanetScript {
+	Orbit orbit
+	Construction buildQueue
+	Resources resources
+	SurfaceComponent surface
+	Abilities@ abilities = null
+	int ResearchRate = 100
+	LeaderAI leaderAI
+	Statuses statuses
+	Mover@ mover = null
+	Cargo cargo
+visible:
+	double OrbitSize = 100
+	double Population
+	int PlanetType
+	bool renamed = false
+	double Health = 1000000000
+	double MaxHealth = 1000000000
+
+	local safe uint get_moonCount() const;
+	
+server:
+	void giveHistoricMemory(Empire@ emp);
+	void dealPlanetDamage(double amount);
+	void setRing(uint ring);
+	void destroyQuiet();
+	void addMoon(float size = 0, uint style = 0);
+}
+
+ColonyShip : objects.ColonyShip::ColonyShipScript {
+invisible:
+	Object$ Origin
+	Object$ Target
+	Mover mover
+visible:
+	synced double CarriedPopulation = 0
+	synced double Health = 50
+}
+
+Orbital : objects.Orbital::OrbitalScript {
+	Orbit orbit
+	Mover mover
+	Construction@ construction = null
+	Abilities@ abilities = null
+	LeaderAI@ leader = null
+	Resources resources
+	Statuses statuses
+	Cargo@ cargo = null
+	bool usingLabor = false
+local visible:
+	safe uint get_coreModule();
+	safe bool get_isStandalone();
+	safe bool get_isContested();
+	safe bool get_isDisabled();
+	OrbitalSection@[] getSections();
+	bool hasModule(uint typeId);
+	safe double get_health();
+	safe double get_maxHealth();
+	safe double get_armor();
+	safe double get_maxArmor();
+	safe double get_dps();
+	safe double get_efficiency();
+	safe vec3d get_strategicIconPosition() const;
+	double getValue(uint id);
+	const Design@ getDesign(uint id);
+	Object@ getObject(uint id);
+	safe bool hasMaster();
+	safe bool isMaster(Object@ obj);
+	Orbital@ getMaster();
+restricted remote:
+	void buildModule(uint typeId);
+	void destroyModule(int id);
+	void scuttle();
+	void sendValue(uint id, double value = 1.0);
+	void sendObject(uint id, Object@ obj);
+	void sendDesign(uint id, const Design@ design);
+server:
+	async relocking void checkOrbit();
+	vodi setMaster(Orbital@ orb);
+	void setBuildPct(double pct);
+	void modDPS(double mod);
+	void setDisabled(bool value)
+	void setContested(bool value);
+	void addSection(uint modId);
+	void modMaxArmor(double value);
+	void modMaxHealth(double value);
+	void modDR(double value);
+	void triggerDelta();
+	void makeFree();
+	void repairOrbital(double amount);
+}
+
+Region : regions.Region::RegionScript {
+	RegionObjects objects
+
+visible:
+	locked_int SiegedMask = 0
+	locked_int SiegingMask = 0
+	locked_int ProtectedMask = 0
+	locked_int FreeFTLMask = 0
+	locked_int BlockFTLMask = 0
+	locked_int GateMask = 0
+	locked_int ScoutingMask = 0
+	int EngagedMask = 0
+	int CombatMask = 0
+	int CoreSystemMask = 0
+	int AngleOffset = 0
+	double InnerRadius = 100
+	double OuterRadius = 200
+	int SystemId = -1
+	int PrimaryEmpire = -1
+	uint ContestedMask = 0
+	uint TradeMask = 0
+	uint PlanetsMask = 0
+	uint VisionMask = 0
+	uint BasicVisionMask = 0
+	uint DonateVisionMask = 0
+	uint MemoryMask = 0
+	uint ShipyardMask = 0
+	int TargetCostMod = 0
+	uint AvailSupportMask = 0
+	locked_int ExploredMask = 0
+
+local:
+	safe bool getSystemFlag(Empire@ emp, uint flagIndex) const;
+	safe bool getSystemFlagAny(uint flagIndex) const;
+
+server:
+	uint SeenMask = 0
+
+	void setSystemFlag(Empire@ emp, uint flagIndex, bool value);
+	void modTargetCostMod(int mod);
+}
+
+Territory : objects.Territory::TerritoryScript {
+local:
+	bool canTradeTo(Region@ region) const;
+	uint getRegionCount() const;
+	Region@ getRegion(uint i) const;
+
+server:
+	void add(Region@ region);
+	void remove(Region@ region);
+}
+
+Pickup : objects.Pickup::PickupScript {
+	PickupControl control
+visible:
+	int PickupType = -1
+}
+
+Asteroid : objects.Asteroid::AsteroidScript {
+	Orbit orbit
+	Cargo cargo
+	Resources resources
+visible:
+	Object origin
+	double HasBase = 0
+local:
+	vec3d get_strategicIconPosition();
+	safe uint getAvailableCount();
+	uint getAvailable(uint index);
+	double getAvailableCost(uint index);
+	double getAvailableCostFor(uint resId);
+	safe bool canDevelop(Empire@ emp);
+	safe bool canGainLimit(Empire@ emp);
+server:
+	void initMesh();
+	void setup(Object@ origin, Empire@ emp, uint resource);
+	void addAvailable(uint resource, double cost);
+	void setResourceLimit(uint limit);
+	void modResourceLimitMod(int mod);
+	void morphTo(uint resource, double cost = 10.0);
+}
+
+Anomaly : objects.Anomaly::AnomalyScript {
+local safe:
+	float get_progress() const;
+	string get_narrative() const;
+	string get_model() const;
+	string get_material() const;
+	uint get_anomalyType() const;
+	uint get_optionCount() const;
+	uint get_option(uint index) const;
+
+remote:
+	relocking async void choose(uint option, Object@ target = null);
+
+server:
+	relocking async void choose(Empire@ emp, uint option, Object@ target = null);
+	safe uint getOptionCount() const;
+	safe bool get_isOptionSafe(uint index) const;
+	safe float getEmpireProgress(Empire@ emp) const;
+	void setup(uint type);
+	void progressToState(uint state);
+	void addProgress(Empire@ emp, float progress);
+	void clearOptions();
+	void addOption(uint id);
+}
+
+Oddity : objects.Oddity::OddityScript {
+local safe:
+	bool isGate();
+	Object@ getLink();
+	double getTimer();
+	vec3d getGateDest();
+	vec3d get_strategicIconPosition();
+
+server:
+	void setGate(bool value);
+	void linkTo(Object@ obj);
+	void linkVision(bool value);
+	void setTimer(double timer);
+	void makeVisuals(uint type, bool fromCreation = true, uint color = 0xffffffff);
+	void setSuperior(bool value);
+	uint getVisualType();
+	uint getVisualColor();
+}
+
+Freighter : objects.Freighter::FreighterScript {
+invisible:
+	Object$ Origin
+	Object$ Target
+	Mover mover
+	int StatusId = -1
+	double StatusDuration = 180.0
+	bool SetOrigin = False
+	int MinLevel = 0
+	bool VisitHostile = False
+visible:
+	string skin
+	synced double Health = 50
+}
+
+Artifact : objects.Artifact::ArtifactScript {
+	Abilities abilities
+	Orbit orbit
+visible:
+	int ArtifactType = -1
+server:
+	void setExpire(double time);
+};
+
+Civilian : objects.Civilian::CivilianScript {
+	Mover@ mover = null
+local visible:
+	safe uint getCargoType();
+	safe uint getCargoResource();
+	safe int getCargoWorth();
+	safe uint getCivilianType();
+	safe double get_health() const;
+	safe double get_maxHealth() const;
+server:
+	void setOrigin(Object@ origin);
+	void pathTo(Object@ origin, Object@ target, Object@ intermediate = null);
+	void pathTo(Object@ target);
+	void gotoTradeStation(Civilian@ station);
+	void gotoTradePlanet(Planet@ planet);
+	void setCargoType(uint type);
+	void setCargoResource(uint id);
+	void modCargoWorth(int diff);
+	safe int getStepCount();
+	void resetStepCount();
+	void modStepCount(int mod);
+	void setCivilianType(uint type);
+	void modIncome(int mod);
+};

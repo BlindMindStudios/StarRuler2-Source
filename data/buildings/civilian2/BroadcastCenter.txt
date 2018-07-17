@@ -1,0 +1,10 @@
+Building: BroadcastCenter
+	Name: #BLD_BROADCAST
+	Description: #BLD_BROADCAST_DESC
+	Sprite: BuildingSprites::11
+
+	Civilian: True
+	Upgrades From: MediaCenter
+
+	Saturation: 2 Influence
+	Production: 1.5 Influence

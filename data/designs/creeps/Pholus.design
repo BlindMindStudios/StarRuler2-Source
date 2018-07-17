@@ -1,0 +1,183 @@
+{
+	"__VERSION__": 1,
+	"name": "Pholus",
+	"size": 48,
+	"hull": "TyrantFrigate",
+	"type": "Support",
+	"gridWidth": 19,
+	"gridHeight": 16,
+	"class": "Creep",
+	"subsystems": [
+		{
+			"type": "SupportRocketEngine",
+			"hexes": [
+				[
+					6,
+					8,
+					"Core"
+				],
+				[
+					7,
+					8
+				],
+				[
+					8,
+					8
+				],
+				[
+					8,
+					9
+				]
+			]
+		},
+		{
+			"type": "SupportRocketEngine",
+			"hexes": [
+				[
+					6,
+					9,
+					"Core"
+				]
+			]
+		},
+		{
+			"type": "CrewDeck",
+			"hexes": [
+				[
+					10,
+					9,
+					"Core"
+				],
+				[
+					10,
+					8
+				]
+			]
+		},
+		{
+			"type": "SupportLaser",
+			"direction": [
+				1,
+				0,
+				3.05311e-16
+			],
+			"hexes": [
+				[
+					9,
+					9
+				],
+				[
+					11,
+					9
+				],
+				[
+					11,
+					8
+				],
+				[
+					12,
+					9
+				],
+				[
+					9,
+					10,
+					"Core"
+				],
+				[
+					10,
+					10
+				]
+			]
+		},
+		{
+			"type": "SupportLaser",
+			"direction": [
+				0.913545,
+				0,
+				-0.406737
+			],
+			"hexes": [
+				[
+					9,
+					7
+				],
+				[
+					9,
+					8
+				],
+				[
+					11,
+					7
+				],
+				[
+					12,
+					8
+				],
+				[
+					9,
+					6,
+					"Core"
+				],
+				[
+					10,
+					7
+				]
+			]
+		},
+		{
+			"type": "Railgun",
+			"direction": [
+				-1.11022e-16,
+				0,
+				1
+			],
+			"hexes": [
+				[
+					13,
+					9,
+					"Core"
+				],
+				[
+					14,
+					9
+				]
+			]
+		},
+		{
+			"type": "Railgun",
+			"direction": [
+				-1.11022e-16,
+				0,
+				-1
+			],
+			"hexes": [
+				[
+					13,
+					7,
+					"Core"
+				],
+				[
+					14,
+					8
+				]
+			]
+		},
+		{
+			"type": "SupportPlateArmor",
+			"hexes": [
+				[
+					11,
+					6
+				],
+				[
+					11,
+					10
+				],
+				[
+					13,
+					8
+				]
+			]
+		}
+	]
+}

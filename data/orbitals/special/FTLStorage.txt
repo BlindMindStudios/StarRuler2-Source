@@ -1,0 +1,21 @@
+Module: FTLStorage
+	Name: #ORB_FTL_STORAGE
+	Blurb: #ORB_FTL_STORAGE_DESC
+	Description: #ORB_FTL_STORAGE_DESC
+	Icon: GuiOrbitalIcons::19
+	Strategic Icon: OrbitalIcons::19
+
+	Build Cost: 300
+	Maintenance: 50
+	Labor Cost: 10
+	Size: 16
+
+	Health: 5000
+	Armor: 1000
+
+	Model: FTLStorage
+	Material: GenericPBR_FTLStorage
+
+	RequireTrait(StarChildren)
+
+	AddFTLStorage(300)

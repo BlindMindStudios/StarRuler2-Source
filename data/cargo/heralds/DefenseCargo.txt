@@ -1,0 +1,4 @@
+Cargo: DefenseCargo
+	Name: #DEFENSE_UNITS
+	Description: #DEFENSE_UNITS_DESC
+	Icon: CargoIcons::1

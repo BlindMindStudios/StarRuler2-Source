@@ -1,0 +1,23 @@
+Module: SingularityLab
+	Name: #ORB_SINGULARITY_LAB
+	Blurb: #ORB_SINGULARITY_LAB_BLURB
+	Description: #ORB_SINGULARITY_LAB_DESC
+	Icon: GuiOrbitalIcons::12
+	Distant Icon: OrbitalIcons::12
+
+	Build Cost: 800
+	Maintenance: 25
+	Labor Cost: 25
+	Size: 8
+
+	Health: 8000
+	Armor: 6000
+
+	Model: Research_Station
+	Material: GenericPBR_Research_Station
+
+	LimitOncePerSystem(SingularityLabFlag)
+	RequireBlackHoleSystem()
+
+	AddResearchIncome(4)
+	AddEnergyIncome(4)

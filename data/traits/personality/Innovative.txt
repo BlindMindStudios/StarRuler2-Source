@@ -1,0 +1,14 @@
+Trait: Innovative
+	Name: #TRAIT_INNOVATIVE
+	Description: #TRAIT_INNOVATIVE_DESC
+	Category: Personality
+	Order: 0
+
+	Conflict: Rigid
+
+	Color: #aaffaa
+	Icon: ResourceIcon::4
+
+	Costs Points: 1
+
+	ModAttribute(ResearchUnlockSpeed, Add, +100000)

@@ -1,0 +1,5 @@
+Status: AncientDeveloper
+	Visible To: Nobody
+
+	EnableModifier(SupportCapModule::SupportCapacityFactor(1.05))
+	EnableModifier(SupportCapModule::MassFactor(1.25))

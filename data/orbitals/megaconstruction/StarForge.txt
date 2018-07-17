@@ -1,0 +1,36 @@
+Module: StarForge
+	Name: #STARFORGE
+	Blurb: #STARFORGE_BLURB
+	Description: #STARFORGE_DESC
+	Icon: GuiOrbitalIcons::16
+
+	Core: True
+	Standalone: True
+	Spin: 0
+
+	Build Cost: 1000
+	Labor Cost: 100
+	ConsumeCargo(Ore, 5000)
+
+	Health: 20000
+	Armor: 30000
+
+	Model: Forge
+	Material: GenericPBR_Forge
+	Size: 30
+
+	Strategic Icon: OrbitalIcons::16
+
+	RequireCloseToStar()
+	FacesOrbitCenter()
+
+	AllowConstruction(Ships = True, Orbitals = True)
+	ForbidLaborExport()
+	AddFleetCommand(256)
+	AddCargoStorage(100000)
+
+	AddStatus(StarForge)
+
+	MultConstructionCost(0.5)
+
+	RequireUnlockTag(StarForgeUnlock)

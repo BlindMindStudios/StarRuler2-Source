@@ -1,0 +1,30 @@
+Module: Temple
+	Name: #ORB_TEMPLE
+	Blurb: #ORB_TEMPLE_BLURB
+	Description: #ORB_TEMPLE_DESC
+	Icon: GuiOrbitalIcons::21
+	Distant Icon: OrbitalIcons::21
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 300
+	Maintenance: 30
+	Labor Cost: 15
+	Size: 7
+
+	Health: 6000
+	Armor: 4000
+
+	Model: Temple
+	Material: GenericPBR_Temple
+
+	RequireTrait(Evangelical)
+
+	AddHealthEmpireAttribute(OutpostBoost, 10000)
+
+	GiveTrade()
+
+	SpawnFreighters(1, Status = Evangelized, Duration = 600, Name = #MISSIONARY, Set Origin Empire = True, Visit Hostile = True, Skin = Missionary)
+
+	IfBorderSystem(ModEmpireAttribute(BorderOutposts, Add, 1)) #version>=162

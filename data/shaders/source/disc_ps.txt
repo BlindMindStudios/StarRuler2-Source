@@ -1,0 +1,8 @@
+varying vec2 uv;
+
+void main() {
+	float radius = length(uv);
+	if(radius > 1.0)
+		discard;
+	gl_FragColor = gl_Color;
+}

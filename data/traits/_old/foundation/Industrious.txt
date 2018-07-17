@@ -1,0 +1,11 @@
+Trait: Industrious
+	Name: #TRAIT_INDUSTRIOUS
+	Description: #TRAIT_INDUSTRIOUS_DESC:4
+	Category: Foundation
+
+	Color: #aaffaa
+	Icon: Industrious
+	Available: False
+
+	Costs Points: 1
+	OnHomeworld( AddResource(Labor, +4) )

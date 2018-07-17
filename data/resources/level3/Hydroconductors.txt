@@ -1,0 +1,14 @@
+Resource: Hydroconductors
+	Name: #HYDROCONDUCTORS
+	Description: #HYDROCONDUCTORS_DESC
+	Native Biome: Oceanic
+
+	Icon: ResourceIcons::40
+	Small Icon: ResourceIconsSmall::40
+
+	Level: 3
+	Affinity: Labor
+
+	Pressure: 16 Labor
+	DuplicateResourceEffects() #version<88
+	AddLaborFactor(0.5) #version>=88

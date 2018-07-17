@@ -1,0 +1,27 @@
+Status: OceanicFish
+	Name: #COND_NATIVE_FISH
+	Description: #COND_NATIVE_FISH_DESC
+
+	Icon: ResourceIconsSmall::19 * #ff00e6
+	Color: #ff00e6
+
+	Condition Type: Oceanic
+	Condition Tier: 1
+	Condition Frequency: 10
+
+	AddPlanetResource(NativeFish) #version<147
+	RepeatEmpireAttribute(PlanetConditionMultiplier, AddPlanetResource(NativeFish)) #version>=147
+
+Status: TerranFish
+	Name: #COND_NATIVE_FISH
+	Description: #COND_NATIVE_FISH_DESC
+
+	Icon: ResourceIconsSmall::19 * #ff00e6
+	Color: #ff00e6
+
+	Condition Type: Terran
+	Condition Tier: 1
+	Condition Frequency: 2
+
+	AddPlanetResource(NativeFish) #version<147
+	RepeatEmpireAttribute(PlanetConditionMultiplier, AddPlanetResource(NativeFish)) #version>=147

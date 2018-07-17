@@ -1,0 +1,35 @@
+attribute vec4 in_position;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+
+varying vec2 uv;
+varying vec3 pos, center;
+varying vec3 normal, binormal, tangent, light, light2;
+varying float dist, dist2;
+
+uniform float nodeScale;
+
+void main()
+{ 
+	normal = normalize(gl_NormalMatrix * in_normal);
+	binormal = normalize(cross(normal, gl_NormalMatrix * vec3(0.0,0.999,0.04471017781)));
+	tangent = normalize(cross(normal, binormal));
+	vec4 vertPos = gl_ModelViewMatrix * in_position;
+	pos = vertPos.xyz;
+	
+	center = (gl_ModelViewMatrix * vec4(0.0,0.0,0.0,1.0)).xyz;
+	
+	vec4 lpos = gl_LightSource[0].position;
+	vec4 lpos2 = gl_LightSource[1].position;
+	vec4 s = normalize(lpos-vertPos);
+	vec4 s2 = normalize(lpos2-vertPos);
+
+	light = s.xyz;
+	light2 = s2.xyz;
+	
+	dist = distance(vertPos, lpos);
+	dist2 = distance(vertPos, lpos2);
+	
+	uv = in_uv;
+	gl_Position = gl_ProjectionMatrix * vertPos;
+} 

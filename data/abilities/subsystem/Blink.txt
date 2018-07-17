@@ -1,0 +1,18 @@
+Ability: Blink
+	Name: #ABL_BLINK
+	Description: #ABL_BLINK_DESC
+	Icon: GuiOrbitalIcons::2 * #ff0000
+
+	Target: dest = Point
+	TargetFilterMovableTo(dest)
+
+	Cooldown: 45
+
+	DistanceEnergyCost(dest, 0.1, Sqrt Cost = 6.5)
+	MultiplyEnergyCost(Sys.CostFactor:1)
+
+	PlayParticles(SkipDriveEvent, Scale = 3.0, Object Tied = False)
+	TeleportTo(dest)
+	PlayParticlesAt(dest, SkipDriveEvent, Scale = 3.0)
+
+	SubsystemOrConsumeStatus(SkipDrive)

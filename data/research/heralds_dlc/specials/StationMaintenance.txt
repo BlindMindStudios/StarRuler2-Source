@@ -1,0 +1,15 @@
+Technology: StationMaintenance
+	Name: #R_STATION_MAINTENANCE
+	Description: #R_STATION_MAINTENANCE_DESC:40%
+
+	Icon: techConstruction * #30a67a
+	Symbol: GuiOrbitalIcons::0 * #30a67a
+	Color: #30a67a
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 1000
+	Time Cost: 160
+
+	AddModifier(StationHull::MaintenanceModFactor(0.6))

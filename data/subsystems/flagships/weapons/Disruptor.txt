@@ -1,0 +1,53 @@
+Subsystem: Disruptor
+	Name: #S_DISRUPTOR
+	Description: #S_DISRUPTOR_DESC
+	BaseColor: #f0e5b5
+	TypeColor: #f0e5b5
+	Picture: SubsystemButtonArt::7
+	Elevation: 2
+	
+	Tags: BaseCost, HeraldsDLC
+	Tags: BeamBase, Rotatable, HexLimitArc, Category:Weapons
+	Tags: ExteriorCore, Weapon, IsBeamWeapon, HasInternals, MainDPS
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	BeamDPS := 1.5 * Size
+	Duration := 10
+	Cooldown := 6 * min(1.0 + Size/512, 2.0)
+	Range := Size + 250
+	Tracking := 0.5
+	SupplyCost := Size * 0.75
+	FireArc := 0.25 * pi
+	PowerUse := 10 * Size
+
+	Hex.HP := 10 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Requires:
+		Command = 1
+		Power = PowerUse
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: Laser::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+	
+	Effector: Disruptor
+		Range = Range
+		DPS = BeamDPS
+		Duration = Duration
+		Cooldown = Cooldown
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Duration
+		FireArc = FireArc

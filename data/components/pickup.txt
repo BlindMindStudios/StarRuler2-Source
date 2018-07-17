@@ -1,0 +1,20 @@
+Object.PickupControl : objects.Pickup::PickupControl {
+local safe:
+	bool get_isPickupProtected();
+
+local:
+	Object@ getProtector();
+
+server:
+	void setCampType(uint id);
+	bool claimPickupDelta(); const
+	void addPickupProtector(Object& obj);
+	void initPickup();
+	void tickPickup(double time);
+	void pickupPickup(Object& obj);
+
+	void writePickup(Message& msg) const;
+
+shadow:
+	void readPickup(Message& msg);
+}

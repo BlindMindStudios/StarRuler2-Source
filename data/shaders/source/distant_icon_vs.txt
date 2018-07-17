@@ -1,0 +1,17 @@
+varying vec2 uv, uv1, uv2;
+uniform float approach;
+uniform float innerScale1;
+uniform float innerScale2;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	uv1 = ((uv - vec2(0.5)) / innerScale1) + vec2(0.5);
+	uv2 = ((uv - vec2(0.5)) / innerScale2) + vec2(0.5);
+
+	vec4 cpos = gl_ModelViewProjectionMatrix * gl_Vertex;
+	cpos.z -= approach;
+	gl_Position = cpos;
+
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

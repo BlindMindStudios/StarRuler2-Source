@@ -1,0 +1,37 @@
+Card: NamePlanet
+	Name: #CARD_NAMEPLANET
+	Description: #CARD_NAMEPLANET_DESC
+
+	Icon: CardIcons::15
+	
+	Color: #206080
+	Class: Action
+	Rarity: Rare
+
+	Base Purchase Cost: 2
+	Quality Purchase Cost: 1
+
+	Base Play Cost: 5
+	Quality Play Cost: 1
+
+	Max Quality: 3
+	ShowPopulation(2, Per Quality = 1)
+	ShowLabor(1)
+
+	Target: planet = Object
+	TargetFilterOwned(planet)
+	TargetFilterType(planet, Planet)
+	TargetFilterUnnamed(planet)
+	ApplyRegionTargetCostMod(planet)
+
+	Target: name = Text
+	TargetDefaultPlanetName(name)
+
+	NameObject(planet, name)
+	OnPlanet(planet, AddResource(Labor, +1))
+	OnPlanet(planet, AddMaxPopulation(2))
+	OnPlanet(planet, AddMaxPopulation(1), Per Quality = 1)
+
+	NotifyAll(#NAMEPLANET_NOTIFY)
+
+	AI: PlayOnImportantPlanets(planet)

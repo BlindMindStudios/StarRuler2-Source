@@ -1,0 +1,10 @@
+Effect: BombardDamage
+	Value: Amount
+
+	End: combat::BombardDamage
+
+Effect: SurfaceBombard
+	Value: Duration
+	Value: Stacks
+
+	End: combat::SurfaceBombard

@@ -1,0 +1,13 @@
+Trait: Virile
+	Name: #TRAIT_VIRILE
+	Description: #TRAIT_VIRILE_DESC
+
+	Category: Foundation
+
+	Costs Points: 1
+	Available: False
+
+	Icon: StatusIcons::0
+	Color: #aaffaa
+
+	OnHomeworld(AddStatus(Virile))

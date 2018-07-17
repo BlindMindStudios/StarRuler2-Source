@@ -1,0 +1,15 @@
+Resource: Plastics
+	Name: #PLASTICS
+	Description: #PLASTICS_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::10
+	Small Icon: ResourceIconsSmall::9
+
+	Level: 1
+	Affinity: Influence
+
+	Terraform Cost: 500
+	Terraform Labor: 30
+
+	Pressure: 3 Influence

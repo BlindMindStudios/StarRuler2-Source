@@ -1,0 +1,35 @@
+Card: GalaxyMall
+	Name: #CARD_GALAXY_MALL
+	Description: #CARD_GALAXY_MALL_DESC
+	Icon: CardIcons::26
+
+	Rarity: Epic
+
+	Target: planet = Object
+
+	Color: #ccc74e
+	Class: Action
+
+	Base Purchase Cost: 4
+	Base Play Cost: 4
+
+	TargetFilterType(planet, Planet)
+	TargetFilterOwned(planet)
+	TargetFilterNotStatus(planet, SenateBuilding)
+	TargetFilterNotStatus(planet, UnitedResearch)
+	TargetFilterNotStatus(planet, GalaxyMall)
+	ApplyRegionTargetCostMod(planet)
+	RequireContact()
+
+	PlayCostFromGlobal(GalaxyMallCount, 4.0)
+	PlayMoneyCostFromGlobal(GalaxyMallCount, 500, Base = 500)
+
+	ShowGlobalValue(AttributeIcons::2, #VAR_BUILD_COST_DECREASE, GalaxyMallCount, Factor = 5.0, Base = 10.0, Suffix = %)
+
+	TriggerAllPlanets(RemoveStatus(GalaxyMall))
+	Trigger(planet, AddStatus(GalaxyMall))
+	ModGlobal(GalaxyMallCount, +1.0)
+	NotifyAll(#NOTIFY_GALAXY_MALL)
+
+	AI: PlayOnImportantPlanets(planet)
+	AI: IgnoreIfAttributeGTE(HaveGalaxyMall, 1)

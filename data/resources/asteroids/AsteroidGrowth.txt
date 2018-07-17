@@ -1,0 +1,15 @@
+Resource: AsteroidGrowth
+	Name: #ASTEROID_GROWTH
+	Description: #ASTEROID_GROWTH_DESC
+
+	Icon: ResourceIcons::3
+	Small Icon: ResourceIconsSmall::20
+
+	Distribution: 0
+	Asteroid Frequency: 0.2
+	Asteroid Labor: 25
+
+	ModBuildingConstructRate(1.0)
+	AddMaxPopulation(2)
+
+	AI: DistributeToImportantPlanet()

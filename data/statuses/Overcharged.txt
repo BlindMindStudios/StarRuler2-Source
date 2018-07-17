@@ -1,0 +1,8 @@
+Status: Overcharged
+	Name: #STATUS_OVERCHARGED
+	Description: #STATUS_OVERCHARGED_DESC
+	Icon: ResourceIcon::2
+
+	Unique: True
+
+	AddFleetEffectiveness(+0.3)

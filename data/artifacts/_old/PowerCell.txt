@@ -1,0 +1,6 @@
+Artifact: PowerCell
+	Name: #ART_POWER_CELL
+	Description: #ART_POWER_CELL_DESC
+	Frequency: 0
+
+	Ability: OverchargeFleet

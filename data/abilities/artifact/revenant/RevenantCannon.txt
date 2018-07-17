@@ -1,0 +1,14 @@
+Ability: RevenantCannon
+		Name: #ABL_REVENANT_CANNON
+		Description: #ABL_REVENANT_CANNON_DESC
+		Icon: HexagonSubsystems::1
+		Activate Sound: revenant_activate
+
+		Energy Cost: 1500
+
+		OnAnyEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+		GiveAchievement(ACH_USE_ARTIFACT)
+		ReplaceWithOrbital(RevenantCannon, Free = True)
+
+		NotifyAll(#NOTIFY_REVENANT_CANNON, Icon = HexagonSubsystems::1)

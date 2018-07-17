@@ -1,0 +1,19 @@
+Resource: Salts
+	Name: #SALTS
+	Description: #SALTS_DESC
+	Class: Food
+	Native Biome: Oceanic
+
+	Icon: ResourceIcons::23
+	Small Icon: ResourceIconsSmall::23
+
+	Level: 0
+	Rarity: Uncommon
+	Frequency: 0.8
+	Display Requirement: False
+
+	Pressure: 1 Money
+	Pressure: 1 Research
+	Pressure: 1 Influence
+	Pressure: 1 Defense
+	Pressure: 1 Energy

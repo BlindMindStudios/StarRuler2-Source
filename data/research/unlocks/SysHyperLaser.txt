@@ -1,0 +1,15 @@
+Technology: SysHyperLaser
+	Name: #R_SYS_HYPERLASER
+	Description: #R_SYS_HYPERLASER_DESC
+	Class: Unlock
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	Icon: HexagonSubsystems::6
+	Color: #f9394d
+	
+	UnlockSubsystem(HyperLaser)
+	SkipOnUnlockedSubsystem(HyperLaser)
+
+	SecondaryMoneyCost(2000)

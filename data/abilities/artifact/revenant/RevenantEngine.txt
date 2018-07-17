@@ -1,0 +1,14 @@
+Ability: RevenantEngine
+		Name: #ABL_REVENANT_ENGINE
+		Description: #ABL_REVENANT_ENGINE_DESC
+		Icon: IonEngine
+		Activate Sound: revenant_activate
+
+		Energy Cost: 1500
+
+		OnAnyEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+		GiveAchievement(ACH_USE_ARTIFACT)
+		ReplaceWithOrbital(RevenantEngine, Free = True)
+
+		NotifyAll(#NOTIFY_REVENANT_ENGINE, Icon = IonEngine)

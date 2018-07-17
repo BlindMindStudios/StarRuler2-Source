@@ -1,0 +1,14 @@
+Trait: Animated
+	Name: #TRAIT_ANIMATED
+	Description: #TRAIT_ANIMATED_DESC
+	Category: Personality
+	Order: 9
+	DLC: Heralds
+
+	Color: #aaffaa
+	Icon: TabAttitude
+
+	Costs Points: 1
+
+	ModAttribute(FreeAttitudes, Add, +1)
+	ModAttribute(AttitudeStartLevel, Add, +1)

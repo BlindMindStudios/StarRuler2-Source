@@ -1,0 +1,12 @@
+Module: ThinkTank
+	Name: #ORB_THINK_TANK
+	Blurb: #ORB_THINK_TANK_BLURB
+	Description: #ORB_THINK_TANK_DESC
+	Icon: CardIcons::6
+	Standalone: False
+	Core: False
+
+	Require Affinity: 1 Research
+	Build Cost: 300
+
+	PeriodicInfluenceCard(Enhance:Cultivation:NamePlanet:NameFlagship:Negotiate, Timer=180, Quality=10)

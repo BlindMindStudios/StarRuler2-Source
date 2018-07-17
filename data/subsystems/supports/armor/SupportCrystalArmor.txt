@@ -1,0 +1,32 @@
+Subsystem: SupportCrystalArmor
+	Name: #S_CRYSTALARMOR
+	Description: #S_CRYSTALARMOR_DESC
+	BaseColor: #ef45ff
+	Elevation: 2
+
+	Tags: NoCore, NonContiguous, Defense, IsArmor, TankArmor
+	Tags: NoWall, Category:Defense, FauxExterior, ExternalSpace
+	Tags: PrimaryArmor, HeraldsDLC
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	Hex.Resistance := 0.5
+	Hex.HP := 200 * HexSize
+	Hex.Mass := 1.5 * HexSize
+
+	Hex.BuildCost := 2.0 * HexSize
+	Hex.LaborCost := 0.35 * HexSize
+	
+	DamageResist := ShipSize / 9.0
+	Effect: ReduceDamage
+		ProjResist = DamageResist
+		EnergyResist = DamageResist * 3.0
+		ExplResist = DamageResist
+
+	Effect: SingleUseHexes
+
+	Module: Default
+		Sprite: CrystalArmor

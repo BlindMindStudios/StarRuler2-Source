@@ -1,0 +1,21 @@
+#version 120
+#define pi 3.141592653589793238462643383279
+#define twopi (pi * 2.0)
+varying vec2 rcoords;
+varying vec2 uv;
+uniform float progress;
+uniform float dim_factor;
+uniform sampler2D texture;
+
+void main() {
+	vec4 color = texture2D(texture, uv) * gl_Color;
+	float ang = atan(rcoords.y, rcoords.x);
+	if(ang > -0.5 * pi)
+		ang = (ang + 0.5 * pi) / twopi;
+	else
+		ang = (ang + 2.5 * pi) / twopi;
+
+	if(ang > progress)
+		color.a *= dim_factor;
+	gl_FragColor = color;
+}

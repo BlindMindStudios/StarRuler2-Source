@@ -1,0 +1,15 @@
+Technology: FTLCost
+	Name: #R_FTL_COST
+	Description: #R_FTL_COST_DESC:25%
+
+	Icon: ResourceIcon::3
+	Symbol: techPhaseHarmonics * #00c0ff
+	Color: #00c0ff
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 100
+
+	ModAttribute(FTLCostFactor, Multiply, 0.75)

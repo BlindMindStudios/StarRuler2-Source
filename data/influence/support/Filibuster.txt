@@ -1,0 +1,26 @@
+Card: Filibuster
+	Name: #CARD_FILIBUSTER
+	Description: #CARD_FILIBUSTER_DESC
+	Color: #fe5c99
+
+	Icon: CardIcons::30
+
+	DLC: Heralds
+
+	Class: Support
+	Rarity: Epic
+	Side: Neutral
+
+	Base Purchase Cost: 6
+	Base Play Cost: 6
+
+	RequireValidVoteStarter()
+	ListActiveEffect()
+
+	RequireNotActiveEffect(Filibuster)
+	RequireNotActiveEffect(Committee)
+
+	LogVoteEvent(Neutral = #CARD_FILIBUSTER_LOG)
+	DelayVote(180)
+
+	AI: VoteAlwaysNegative()

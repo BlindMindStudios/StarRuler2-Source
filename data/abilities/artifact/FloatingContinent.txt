@@ -1,0 +1,34 @@
+Ability: AddFloatingContinent
+	Name: #ABL_ADD_FLOATING_CONTINENT
+	Description: #ABL_ADD_FLOATING_CONTINENT_DESC
+	Icon: PlanetType::3
+	Activate Sound: generic_activate_2
+
+	Energy Cost: 800
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+	TargetFilterNotStatus(targ, FloatingContinent)
+
+	Trigger(targ, AddStatus(FloatingContinent))
+	Trigger(targ, AddSurfaceArea(Forest, (12, 4), Vertical = True))
+
+Ability: TransferFloatingContinent
+	Name: #ABL_TRANSFER_FLOATING_CONTINENT
+	Description: #ABL_TRANSFER_FLOATING_CONTINENT_DESC
+	Icon: PlanetType::3
+
+	Energy Cost: 300
+	DistanceEnergyCost(targ, 0, Sqrt Cost = 3)
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+	TargetFilterNotStatus(targ, FloatingContinent)
+	RequireNotUnderSiege()
+
+	MoveFinalSurfaceRowsTo(targ, 5)
+	RemoveStatusInstance(FloatingContinent)
+	Trigger(targ, AddStatus(FloatingContinent))

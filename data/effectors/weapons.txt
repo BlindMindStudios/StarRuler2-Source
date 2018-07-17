@@ -1,0 +1,189 @@
+Effector: Rockets
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: FireDelay
+	Value: PodSize = 1
+	Value: Speed
+	Value: Tracking = 6
+	Value: SupplyCost = 0
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Reload Only
+	Activation: Magazine(FireDelay, PodSize, Reload)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	PhysicalType: Missile
+		GfxType: Sprite
+		GfxSize: 0.7
+		FireSfx: rocket
+		ImpactSfx: rocket_impact
+		ImpactSfx: rocket_impact_2
+		ImpactSfx: rocket_impact_3
+		Trail: MissileTrail
+		TrailCol: 99220000, 00000000
+		Material: Missile
+		ImpactGfx: ImpactFlareRocket
+
+	Effect: ExplDamage
+		Amount = Damage
+
+Effector: Torpedo
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking
+	Value: Radius
+	Value: SupplyCost = 0
+	
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed * 1.1
+	
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+	
+	Activation: VariableTimed(Reload, 0.025)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+	
+	PhysicalType: Missile
+		GfxType: Sprite
+		GfxSize: 1.25
+		FireSfx: torpedo_launch
+		ImpactSfx: torpedo_impact
+		Trail: MissileTrail
+		TrailCol: ffffff00, 00000000
+		Material: Torpedo
+		
+	Effect: AreaExplDamage
+		Amount = Damage
+		Radius = Radius
+		Hits = 4
+
+Effector: PopulationBomb
+	Value: Range
+	Value: Duration = 1
+	Value: Stacks = 1
+	Value: Reload
+	Value: Speed
+	Value: Tracking = 3
+	Value: SupplyCost = 6000
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isAttackable && isPlanet
+	AutoTarget: isEnemy && isPlanet
+
+	EfficiencyMode: Reload Only
+	Activation: VariableTimed(Reload, 0.025)
+	OnTrigger: combat::RequiresSupply(SupplyCost)
+
+	PhysicalType: Missile
+		GfxType: Sprite
+		GfxSize: 1.0
+		FireSfx: missile_launch
+		ImpactSfx: missile_impact
+		Trail: MissileTrail
+		TrailCol: 99990000, 00000000
+		Material: Missile
+		ImpactGfx: MissileExplosion
+		Physical: No
+
+	Effect: SurfaceBombard
+		Duration = Duration
+		Stacks = Stacks
+	
+Effector: WaveBeam
+	Value: Range
+	Value: DPS
+	Value: Duration
+	Value: Cooldown
+	Value: Tracking
+	Value: SupplyCost = 0
+
+	Range: Range
+	Lifetime: Duration
+	Tracking: Tracking
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian || isFreighter) * 0.5)
+
+	EfficiencyMode: Duration Partial
+	Activation: VariableTimed(Cooldown+Duration, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	PhysicalType: Beam
+		GfxSize: 0.9
+		FirePitchVariance: 0.06
+		FireSfx: laser_fire
+		Material: Laser
+		ImpactGfx: ImpactFlare
+		TrailCol: df00ffff, df00ffff
+
+	Effect: EnergyDamage
+		Amount = DPS
+
+Effector: StationArtillery
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Radius = 100
+	Value: Tracking = pi
+	Value: CapOnTarget = 1
+	Value: Spread = 0.05
+	Value: FireArc = pi
+	Value: TargetTolerance = 0
+	Value: FireTolerance = 0
+	Value: Pierce = 0.5
+	Value: SupplyCost = 0
+	Value: Hits = 5
+
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed
+	CapTarget: CapOnTarget
+	Spread: Spread
+	FireArc: FireArc
+	FireTolerance: FireTolerance
+	TargetTolerance: TargetTolerance
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && (isOrbital || isShip * 0.5)
+
+	EfficiencyMode: Reload Partial
+	Activation: VariableTimed(Reload, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	PhysicalType: Projectile
+		GfxType: Sprite
+		GfxSize: 5
+		FireSfx: railgun_fire
+		FireSfx: muon_fire
+		Material: RailgunEmit
+		Trail: RailTrail
+		TrailCol: ff8888ff, 00000000
+		ImpactGfx: ImpactFlare
+
+	Effect: AreaExplDamage
+		Amount = Damage
+		Radius = Radius
+		Hits = Hits

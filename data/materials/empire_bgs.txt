@@ -1,0 +1,28 @@
+
+Material: EmpireImages
+	Alpha: True
+	DepthTest: NoDepthTest
+	Lighting: False
+	LoadPriority: High
+	WrapVertical: ClampEdge
+	WrapHorizontal: ClampEdge
+
+MaterialGroup: EmpireBackgrounds
+	Template: EmpireImages
+	Prefix: emp_bg_
+	Folder: data/images/empires/backgrounds
+
+MaterialGroup: EmpireBackgrounds
+	Template: EmpireImages
+	Prefix: emp_bg_
+	Folder: data/images/empires/backgrounds
+
+MaterialGroup: EmpireFlags
+	Template: EmpireImages
+	Prefix: emp_flag_
+	Folder: data/images/empires/flags
+
+MaterialGroup: EmpirePortraits
+	Template: EmpireImages
+	Prefix: emp_portrait_
+	Folder: data/images/empires/portraits	

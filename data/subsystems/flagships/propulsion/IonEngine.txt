@@ -1,0 +1,34 @@
+Subsystem: IonEngine
+	Name: #IONENGINE_NAME
+	Description: #IONENGINE_DESC
+	BaseColor: #f9c846
+	TypeColor: #f9c846
+	Picture: SubsystemButtonArt::9
+	Elevation: 0
+
+	Tags: BaseCost, Category:Propulsion, NoBackWall, TurnToThrust
+	Tags: ExteriorCore, DefaultUnlock, Engine, HasInternals, SecondaryThrust
+	Hull: Flagship
+
+	OnCheckErrors: designs::checkCoreFacingBackwards
+
+	Size := HexSize * Hexes
+	Thrust := 22 * Size
+	TurnThrust := 2.0 * Size
+	PowerUse := 1.5 * Size
+	Hex.Mass := HexSize
+
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+
+	Module: Default
+
+	Module: Core
+		Sprite: IonEngine
+		Hex.HP := 2 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

@@ -1,0 +1,7 @@
+Status: SystemMorale
+	Name: #STATUS_SYSTEM_MORALE
+	Description: #STATUS_SYSTEM_MORALE_DESC
+	Icon: AttributeIcons::1 * #ffd200
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.2)

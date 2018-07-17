@@ -1,0 +1,14 @@
+Ability: DevelopPlanet
+	Name: #ABL_DEVELOP_PLANET
+	Description: #ABL_DEVELOP_PLANET_DESC
+	Icon: ResourceIcon::8
+	Activate Sound: planetgen_activate
+
+	Energy Cost: 1500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+
+	TriggerEffectOnce(targ, AddMaxPopulation(10))

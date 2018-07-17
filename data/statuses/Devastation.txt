@@ -1,0 +1,9 @@
+Status: Devastation
+	Name: #STATUS_DEVASTATE
+	Description: #STATUS_DEVASTATE_DESC
+	Icon: ResourceIconsSmall::45
+	
+	Collapses: True
+	Unique: False
+
+	BombardEffect()

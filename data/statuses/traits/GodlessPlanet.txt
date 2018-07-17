@@ -1,0 +1,10 @@
+Status: GodlessPlanet
+	Name: #STATUS_GODLESS
+	Description: #STATUS_GODLESS_PLANET
+	Icon: ResourceIconsSmall::53 * #ff8000
+	Color: #ff0000
+	Collapses: True
+
+	ReduceProductionPerStack(3)
+	RepeatStacks(ModPressureCapMult(-0.1), Max Repeats = 10) #version<118
+	AddLaborFactor(-0.25)

@@ -1,0 +1,20 @@
+#version 120
+const int nLightCount = 2;
+
+//Masks: R = Glow, G = Owner Color, B = Engine Glow
+uniform sampler2D diffuse;
+
+varying vec2 uv;
+
+void main() {
+	//vec3 color = gl_FrontMaterial.diffuse.rgb;
+	vec3 texSamp = texture2D(diffuse, uv.xy).rgb;
+	
+	float value = max(texSamp.r, max(texSamp.g, texSamp.b));
+	
+	//Shrink value range
+	value = mix(0.5, 1.0, value);
+	
+	gl_FragColor.rgb = value * vec3(0.1,0.1,1.0);
+	gl_FragColor.a = 1.0;
+}

@@ -1,0 +1,150 @@
+{
+	"__VERSION__": 1,
+	"name": "ED",
+	"size": 8,
+	"hull": "TyrantFrigate",
+	"type": "Support",
+	"gridWidth": 19,
+	"gridHeight": 16,
+	"class": "Creep",
+	"subsystems": [
+		{
+			"type": "SupportPlateArmor",
+			"hexes": [
+				[
+					7,
+					9
+				],
+				[
+					9,
+					9
+				],
+				[
+					9,
+					5
+				],
+				[
+					11,
+					6
+				],
+				[
+					12,
+					7
+				],
+				[
+					7,
+					5
+				],
+				[
+					7,
+					6
+				],
+				[
+					8,
+					6
+				],
+				[
+					7,
+					8
+				],
+				[
+					8,
+					9
+				],
+				[
+					11,
+					8
+				]
+			]
+		},
+		{
+			"type": "SupportRocketEngine",
+			"hexes": [
+				[
+					4,
+					7,
+					"Core"
+				],
+				[
+					5,
+					7
+				],
+				[
+					6,
+					7
+				],
+				[
+					6,
+					8
+				]
+			]
+		},
+		{
+			"type": "SupportRocketEngine",
+			"hexes": [
+				[
+					4,
+					8,
+					"Core"
+				]
+			]
+		},
+		{
+			"type": "Railgun",
+			"direction": [
+				0.461749,
+				0,
+				0.887011
+			],
+			"hexes": [
+				[
+					12,
+					8
+				],
+				[
+					11,
+					7
+				],
+				[
+					10,
+					7
+				],
+				[
+					9,
+					6
+				],
+				[
+					9,
+					7
+				],
+				[
+					8,
+					7
+				],
+				[
+					9,
+					8
+				],
+				[
+					10,
+					8,
+					"Core"
+				],
+				[
+					7,
+					7
+				]
+			]
+		},
+		{
+			"type": "CrewDeck",
+			"hexes": [
+				[
+					8,
+					8,
+					"Core"
+				]
+			]
+		}
+	]
+}

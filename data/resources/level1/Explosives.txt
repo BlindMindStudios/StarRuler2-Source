@@ -1,0 +1,18 @@
+Resource: Explosives
+	Name: #EXPLOSIVES
+	Description: #EXPLOSIVES_DESC
+	Native Biome: Volcanic
+
+	Icon: ResourceIcons::6
+	Small Icon: ResourceIconsSmall::13
+
+	Level: 1
+	Affinity: Defense
+
+	Asteroid Frequency: 0.1
+	Asteroid Labor: 50
+
+	Terraform Cost: 500
+	Terraform Labor: 30
+
+	Pressure: 3 Defense

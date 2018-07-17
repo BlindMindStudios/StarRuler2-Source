@@ -1,0 +1,6 @@
+Status: ConstructionBay
+	Name: #S_CONSTRUCTION_BAY
+	Description: #S_CONSTRUCTION_BAY_DESC
+	Icon: ComputerCore * #fca404
+
+	IfStation(AllowLaborImport())

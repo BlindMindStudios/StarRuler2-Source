@@ -1,0 +1,14 @@
+Trait: Workshop
+	Name: #TRAIT_WORKSHOP
+	Description: #TRAIT_WORKSHOP_DESC
+	Category: Foundation
+	Order: 2
+
+	Color: #aaffaa
+	Icon: ArtifactIcon::0
+
+	Costs Points: 1
+
+	TriggerHomeworld( SetPermanentSystemFlag(CheapArtifacts) )
+	TriggerHomeworld( RepeatTrigger(6, SpawnArtifact(In System = True, Owned = True)) )
+	UnlockTag(SolarOrbitalUnlock)

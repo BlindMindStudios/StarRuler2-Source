@@ -1,0 +1,26 @@
+Construction: BeaconFleetUpgrade
+	Name: #CONS_BEACON_FLEET_UPGRADE
+	Description: #CONS_BEACON_FLEET_UPGRADE_DESC
+
+	Category: Upgrades
+	In Context: True
+
+	Build Cost: 300
+	Labor Cost: 10
+
+	Target: ship = Object
+	TargetFilterFlagship(ship, Allow Stations = False)
+	TargetFilterOwned(ship)
+	TargetFilterNotStatus(ship, HeraldsFleetUpgrade)
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconFleetUpgradeCost, Add, 1))
+	OnCancel(ModAttribute(BeaconFleetUpgradeCost, Add, -1))
+
+	Trigger(ship, AddStatus(HeraldsFleetUpgrade))
+
+	ConsumeCargoAttribute(EnergyCargo, BeaconFleetUpgradeCost, Multiply = 200, Base Amount = 400)
+
+	AddBuildCostAttribute(BeaconFleetUpgradeCost, Multiply = 100)
+	AddLaborCostAttribute(BeaconFleetUpgradeCost, Multiply = 15)

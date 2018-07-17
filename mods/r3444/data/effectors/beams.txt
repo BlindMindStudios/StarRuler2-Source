@@ -1,0 +1,43 @@
+Effector: Laser
+	Value: Range
+	Value: DPS
+	Value: Duration
+	Value: Cooldown
+	Value: Tracking
+	Value: SupplyCost = 0
+
+	Range: Range
+	Lifetime: Duration
+	Tracking: Tracking
+	FireArc: 0.25 * pi
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isAttackable && !isPlanet
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian) * 0.5)
+
+	EfficiencyMode: Duration Partial
+	Activation: VariableTimed(Cooldown+Duration, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: EnergyDamage
+		Amount = DPS
+
+	PhysicalType: Beam
+		GfxSize: 0.3
+		FirePitchVariance: 0.06
+		FireSfx: laser_fire
+		Material: Laser
+		ImpactGfx: ImpactFlareLaserRed
+		TrailCol: ff3300aa, ff33ffaa
+
+	Skin: Skin1
+		ImpactGfx: ImpactFlareLaserGold
+		TrailCol: ffee99aa, ffee99aa
+
+	Skin: Skin2
+		ImpactGfx: ImpactFlareLaserBlue
+		TrailCol: 00ccddaa, 00ccddaa
+
+	Skin: Skin3
+		ImpactGfx: ImpactFlareLaserViolet
+		TrailCol: ff99ffaa, ff99ffaa

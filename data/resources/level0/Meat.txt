@@ -1,0 +1,12 @@
+Resource: Meat
+	Name: #MEAT
+	Blurb: #FOOD_BLURB
+	Native Biome: Forest
+	Class: Food
+
+	Icon: ResourceIcons::5
+	Small Icon: ResourceIconsSmall::17
+
+	Level: 0
+	AddBuildingMaintenanceRefund(100) #version<105
+	AddToNativeResource(AddBuildingMaintenanceRefund(100)) #version<71

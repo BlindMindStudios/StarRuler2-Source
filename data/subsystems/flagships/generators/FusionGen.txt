@@ -1,0 +1,38 @@
+Subsystem: FusionGen
+	Name: #FUSIONGEN_NAME
+	Description: #FUSIONGEN_DESC
+	BaseColor: #db0083
+	Elevation: 1
+
+	Tags: DefaultUnlock, IsReactor, Category:Control
+	Tags: Important, HasInternals
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Power := 30 * Size
+
+	SupplyCapacity := Size * 1500
+	SupplyRate := Size * 80
+
+	Hex.Resistance := 0.5
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 2.5 * HexSize
+	
+	Hex.LaborCost := 0.15 * HexSize + 0.18
+	Hex.BuildCost := 3 * HexSize + 0.8
+	Hex.MaintainCost := 5 * HexSize + 4
+	
+	Provides:
+		Power = Power
+
+	Module: Core
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+		Sprite: FusionReactor
+	
+	Module: Default
+		Hex.BuildCost := 0.9 * Hex.BuildCost
+		Hex.Mass := 0.9 * Hex.Mass
+
+	Modifier: SupplyCapacityFactor(factor)
+		SupplyCapacity := SupplyCapacity * factor

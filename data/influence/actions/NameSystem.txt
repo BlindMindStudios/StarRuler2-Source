@@ -1,0 +1,30 @@
+Card: NameSystem
+	Name: #CARD_NAMESYSTEM
+	Description: #CARD_NAMESYSTEM_DESC
+
+	Icon: CardIcons::34
+
+	Color: #206080
+	Class: Action
+	Rarity: Rare
+
+	Base Purchase Cost: 3
+	Base Play Cost: 6
+
+	ShowEffectiveness(0.2)
+
+	Target: system = Object
+	TargetFilterRegion(system)
+	TargetFilterOwnsAllPlanets(system)
+	ApplyRegionTargetCostMod(system)
+	TargetFilterUnnamed(system)
+
+	Target: name = Text
+	TargetDefaultPlanetName(name)
+
+	NameObject(system, name)
+	Trigger(system, AddRegionStatus(SystemMorale))
+
+	NotifyAll(#NAMESYSTEM_NOTIFY)
+
+	AI: PlayOnImportantSystems(system)

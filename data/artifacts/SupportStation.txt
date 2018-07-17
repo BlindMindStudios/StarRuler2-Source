@@ -1,0 +1,5 @@
+Artifact: SupportStation
+	Name: #ART_SUPPORT_STATION
+	Description: #ART_SUPPORT_STATION_DESC
+
+	Ability: SpawnSupportStation

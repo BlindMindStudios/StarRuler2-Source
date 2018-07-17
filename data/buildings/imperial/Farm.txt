@@ -1,0 +1,22 @@
+Building: Farm
+	Name: #BLD_FARM
+	Description: #BLD_FARM_DESC
+	Sprite: Megafarm
+
+	Category: Resource
+	Build Affinity: Forest
+
+	Size: 3x3
+	Base Cost: 120
+	Tile Cost: 20
+	Base Maintenance: 100
+	Tile Maintenance: 10
+
+	Build Time: 240
+	AddPlanetResource(Soylent1)
+
+	RequireNotTrait(Ancient)
+
+	RequireNotTrait(Mechanoid)
+
+	AI: AsCreatedResource(Soylent1)

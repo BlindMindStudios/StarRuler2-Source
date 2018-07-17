@@ -1,0 +1,12 @@
+Status: PrivTwinned
+	Visible To: Nobody
+	
+	OnEnable(GainPlanetResource(Water))
+	OnEnable(AddRandomResource(RandomLevel:2))
+	OnEnable(SetNeedPopulationForLevel(False))
+	OnEnable(GivePopulation(3))
+	OnPlanetEnable(AddPressureCap(2))
+	OnPlanetEnable(AddIncome(130))
+	OnEnable(SpawnBuilding(Factory, (4, 3), Develop = True))
+
+	IsTriggerStatus()

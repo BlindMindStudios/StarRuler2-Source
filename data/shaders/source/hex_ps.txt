@@ -1,0 +1,8 @@
+varying vec2 uv;
+
+void main() {
+	if(abs(uv.x - 0.5) > 0.25)
+		if(abs(abs(uv.x - 0.5)-0.25) * 2.0 > 0.5 - abs(uv.y - 0.5))
+			discard;
+	gl_FragColor = gl_Color;
+}

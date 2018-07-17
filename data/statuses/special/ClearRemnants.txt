@@ -1,0 +1,4 @@
+Status: ClearRemnants
+	Visible To: Nobody
+
+	EnableAfter(OnEnable(DestroyAllNonMajorEnemies()), 2)

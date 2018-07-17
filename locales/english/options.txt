@@ -1,0 +1,186 @@
+OPT_GAME: Game
+OPT_GALAXY_BG: Show Galaxy in Overlay Background
+OPT_ROTATE_OBJS: Rotate Objects in UI Display
+OPT_MENU_BG_SCREENSHOT: Show Latest Save in Menu Background
+OPT_ICONIFY_NOTIFICATIONS: Iconify Notifications
+OPT_MAX_NOTIFICATIONS: Max Visible
+OPT_AUTOPAUSE: Automatically Pause When Viewing Other Tabs
+OPT_HOLD_FOR_POPUP: Holding Left Button Anchors Tooltip
+OPTTT_HOLD_FOR_POPUP: When checked, holding the left mouse button for a moment while hovering over an object anchors the object's tooltip on the screen.
+
+OPT_KEYBINDS: Keybinds
+OPT_RESET_KEYBINDS: Reset Keybinds to Defaults
+OPT_RESET_SURE: Are you sure you wish to reset all keybinds to their defaults?
+
+OPT_AUDIO: Audio
+OPT_MASTER_VOLUME: Master Volume
+OPT_SFX_VOLUME: SFX Volume
+OPT_MUSIC_VOLUME: Music Volume
+
+OPT_LANGUAGE: Language*
+LOC_english: English
+LOC_japanese: Japanese
+
+OPT_MAX_FPS: FPS Limit
+OPT_AUTOSAVE: Autosave Interval (Minutes)
+OPT_AUTOSAVE_COUNT: Autosave Count
+
+KG_Global: Global Keybinds
+KB_WORLD_FORWARD: World Forward
+KB_WORLD_LEFT: World Left
+KB_WORLD_BACKWARD: World Backward
+KB_WORLD_RIGHT: World Right
+KB_WORLD_UP: World Up
+KB_WORLD_DOWN: World Down
+
+KB_CAM_FORWARD: Camera Forward
+KB_CAM_LEFT: Camera Left
+KB_CAM_BACKWARD: Camera Backward
+KB_CAM_RIGHT: Camera Right
+KB_CAM_UP: Camera Up
+KB_CAM_DOWN: Camera Down
+
+KB_ZOOM_IN: Zoom In
+KB_ZOOM_OUT: Zoom Out
+KB_ZOOM_LOCK_OBJECT: Zoom to Object
+
+KB_RESET_CAM: Reset Camera
+KB_TAKE_SCREENSHOT: Take Screenshot
+KB_TOGGLE_FIREARCS: Toggle Firing Arc Display
+KB_STOP: Stop/Cancel all Orders
+
+KB_TAB_NEXT: Next Tab
+KB_TAB_PREVIOUS: Previous Tab
+KB_TAB_NEW: Open New Tab
+KB_TAB_NEW_BG: Open New Background Tab
+KB_TAB_REOPEN: Reopen Closed Tab
+KB_TAB_CLOSE: Close Tab
+KB_TAB_HOME: Tab Home
+KB_TAB_1: Switch To Tab 1
+KB_TAB_2: Switch To Tab 2
+KB_TAB_3: Switch To Tab 3
+KB_TAB_4: Switch To Tab 4
+KB_TAB_5: Switch To Tab 5
+KB_TAB_6: Switch To Tab 6
+KB_TAB_7: Switch To Tab 7
+KB_TAB_8: Switch To Tab 8
+KB_TAB_9: Switch To Tab 9
+
+KB_UI_ZOOM_IN: UI Scale Zoom In
+KB_UI_ZOOM_OUT: UI Scale Zoom Out
+KB_UI_ZOOM_RESET: UI Scale Reset
+
+KB_MP_CHAT: Open MP Chat
+
+KB_PAUSE: Toggle Pause
+KB_SPEED_SLOWER: Slower Game Speed
+KB_SPEED_DEFAULT: Default Game Speed
+KB_SPEED_FASTER: Faster Game Speed
+
+KB_TOGGLE_CONSOLE: Toggle Console
+KB_TOGGLE_MENU: Switch to Main Menu
+KB_GO_MENU: Open Go Menu
+KB_CHANGE_EMPIRE: Change Empire
+
+KG_Objects: Objects
+
+KB_GROUP_1: Object Group 1
+KB_GROUP_2: Object Group 2
+KB_GROUP_3: Object Group 3
+KB_GROUP_4: Object Group 4
+KB_GROUP_5: Object Group 5
+KB_GROUP_6: Object Group 6
+KB_GROUP_7: Object Group 7
+KB_GROUP_8: Object Group 8
+KB_GROUP_9: Object Group 9
+
+KB_FTL: FTL Selected Ships
+KB_HOLD_POSITION: Hold Position
+KB_PIN: Pin Object
+KB_PIN_FLOATING: Pin Object Floating
+KB_PING: Ping Allies
+KB_PING_ALL: Ping All Empires
+
+KB_OPTIONS_MENU: Open Options Menu
+
+OPT_GRAPHICS: Graphics
+OPT_TEX_QUALITY: Texture Quality*
+OPT_RESOLUTION: Resolution*
+OPT_RES_ENTRY: $1x$2 $3Hz
+OPT_FULLSCREEN: Fullscreen*
+OPT_RESTART: * Option requires program restart to take effect.
+OPT_GUI_SCALE: Gui Scale
+
+OPT_SHADER_LEVEL: Shader Quality
+SHADER_LEVEL_1: Low
+SHADER_LEVEL_2: Medium
+SHADER_LEVEL_3: High
+SHADER_LEVEL_4: Extreme
+
+MONITOR: Fullscreen Monitor*
+MONITOR_PRIMARY: Primary Monitor
+
+ANTIALIASING: Antialiasing*
+AA_None: Off
+AA_2x: 2x MSAA
+AA_4x: 4x MSAA
+AA_8x: 8x MSAA
+AA_Super: 2x FSAA
+
+VSYNC: VSync
+VSYNC_Off: Off
+VSYNC_On: On
+VSYNC_OnHalf: On (Half Framerate)
+VSYNC_Adaptive: Adaptive
+
+AUDIO_DEVICE: Audio Device*
+AUDIO_DEVICE_DEFAULT: Default
+
+OPT_CAMERA: Camera
+OPT_ZOOM_SPEED: Zoom Speed
+OPT_INVERT_ZOOM: Invert Zoom
+OPT_PAN_SPEED: Pan Speed
+OPT_INVERT_PAN_X: Invert Horizontal Pan
+OPT_INVERT_PAN_Y: Invert Vertical Pan
+OPT_INVERT_ROTATION_X: Invert Horizontal Rotation
+OPT_INVERT_ROTATION_Y: Invert Vertical Rotation
+OPT_FREE_CAMERA: Enable Camera Roll
+OPT_CURSOR_ZOOM_IN: Zoom In to Cursor
+OPT_CURSOR_ZOOM_OUT: Zoom Out from Cursor
+OPT_MOD_SPEED_PAN: Holding Shift Speeds Up Panning
+OPT_SHOW_GAS: Show Galaxy Gas
+OPT_EDGE_PAN: Enable Edge Panning
+OPT_RESEARCH_EDGE_PAN: Research Tab Edge Panning
+OPT_ESCAPE_GALAXY_TAB: Escape Returns to Galaxy Tab
+OPT_DELAY_TOP_EDGE: Delay Top Edge Pan
+OPT_CAPTURE_CURSOR: Capture Cursor
+
+OPT_BLOOM: Bloom
+OPT_VIGNETTE: Vignette
+OPT_CHROMATIC_ABERRATION: Chromatic Aberration
+OPT_FILM_GRAIN: Film Grain
+OPT_GOD_RAYS: God Rays
+OPT_SKYCUBE_STARS: Skybox Stars
+
+KG_DesignEditor: Design Editor
+KB_DESIGN_UNDO: Undo
+KB_DESIGN_REDO: Redo
+KB_DESIGN_TOOL_PAINT: Select Paint Tool
+KB_DESIGN_TOOL_MOVE: Select Move Tool
+KB_DESIGN_TOOL_DROP: Select Eyedropper Tool
+KB_DESIGN_SAVE: Save Design
+KB_DESIGN_SAVE_CLOSE: Save and Close Design
+KB_DESIGN_DUPLICATE: Duplicate Design
+KB_DESIGN_EXPORT: Export Design
+KB_MANAGE: Open Planet Management
+KB_MANAGE_SUPPORT: Open Support Management
+KB_DEPLOY_DEFENSE: Deploy Defense Reserve
+
+
+KB_EXPORT: Export Resource
+KB_CANCEL_EXPORT: Cancel Export
+KB_AUTO_IMPORT: Auto-Import
+KB_COLONIZE: Colonize
+KB_ATTACK: Attack
+KB_HOMEWORLD: Zoom to Homeworld
+KB_TRANSFER_SUPPORTS: Transfer Supports

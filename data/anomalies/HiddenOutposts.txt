@@ -1,0 +1,110 @@
+Anomaly: HiddenOutposts
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Unique: True
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_HIDDEN_OUTPOSTS
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Activate
+		Choice: Study
+
+	Option: Activate
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_HIDDEN_ACTIVATE
+
+		SpawnAnomaly(Hidden1, Random System = True, Give Vision = True)
+		SpawnAnomaly(Hidden2, Random System = True, Give Vision = True)
+		SpawnAnomaly(Hidden3, Random System = True, Give Vision = True)
+		SpawnAnomaly(Hidden4, Random System = True, Give Vision = True)
+
+	Option: Study
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_HIDDEN_STUDY
+
+		UnlockSubsystem(CloakPlating)
+
+Anomaly: Hidden1
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Frequency: 0
+	Scan Time: 360
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_HIDDEN
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Download
+
+	Option: Download
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_HIDDEN_1_TAKE
+
+		AddModifier( ThrustFactor(1.25) )
+		AddModifier( Hyperdrive::SpeedFactor(1.25) )
+
+Anomaly: Hidden2
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Frequency: 0
+	Scan Time: 360
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_HIDDEN
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Download
+
+	Option: Download
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_HIDDEN_2_TAKE
+
+		AddModifier( SupplyCapacityFactor(1.25) )
+
+Anomaly: Hidden3
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Frequency: 0
+	Scan Time: 360
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_HIDDEN
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Download
+
+	Option: Download
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_HIDDEN_3_TAKE
+
+		ModAttribute(PlanetSupplyMod, Add, 128)
+		ModAttribute(OutpostBoost, Add, 1)
+
+Anomaly: Hidden4
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Frequency: 0
+	Scan Time: 360
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_HIDDEN
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Download
+
+	Option: Download
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_HIDDEN_4_TAKE
+
+		ModAttribute(FactoryLaborMod, Add, 3)

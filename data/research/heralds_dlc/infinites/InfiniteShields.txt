@@ -1,0 +1,23 @@
+Technology: InfiniteShields
+	Name: #R_INFINITE_SHIELDS
+	Description: #R_INFINITE_SHIELDS_DESC:7%
+
+	Icon: techPhaseContainment * #78a9ff
+	Symbol: EditIcons::7
+	Color: #5164eb
+
+	Category: Infinites
+	Class: Keystone
+
+	Point Cost: 400
+	Time Cost: 40
+
+	AddPointCostAttribute(InfiniteShieldsTaken, 200)
+	AddTimeCostAttribute(InfiniteShieldsTaken, 10)
+
+	ResetWhenUnlocked()
+
+	AddModifier(ShieldCapacityFactor(1.07))
+	AddModifier(ShieldRegenFactor(1.07))
+
+	ModAttribute(InfiniteShieldsTaken, Add, 1)

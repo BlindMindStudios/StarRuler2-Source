@@ -1,0 +1,13 @@
+Status: Infiltrated
+	Name: #STATUS_INFILTRATED
+	Description: #STATUS_INFILTRATED_DESC
+	Icon: CardIcons::2 * #ff0000
+
+	Unique: True
+	Visible To: Origin Empire
+
+	VisibleToOriginEmpire()
+	GivesVisionToOriginEmpire()
+
+	TriggerPeriodic(AddPermanentEffectiveness(-0.035), Interval = 20, Max Triggers = 3)
+	OnDisable(AddPermanentEffectiveness(+0.105))

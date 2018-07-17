@@ -1,0 +1,19 @@
+Technology: DroneLauncher
+	Name: #R_SYS_DRONELAUNCHER
+	Description: #R_SYS_DRONELAUNCHER_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Health
+
+	Point Cost: 500
+	Time Cost: 80
+
+	Icon: MissileLauncher::0
+	Color: #e6ed00
+	
+	UnlockSubsystem(DroneLauncher)
+	SkipOnUnlockedSubsystem(DroneLauncher)
+
+	SecondaryMoneyCost(1000)

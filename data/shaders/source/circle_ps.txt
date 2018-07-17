@@ -1,0 +1,11 @@
+varying vec2 rcoords;
+
+void main() {
+	float r = length(rcoords);
+	if(r > 1.0)
+		discard;
+
+	vec4 col = gl_Color;
+	col.a *= 1.0 - smoothstep(0.95, 1.0, r);
+	gl_FragColor = col;
+}

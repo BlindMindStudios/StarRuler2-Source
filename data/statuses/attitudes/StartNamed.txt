@@ -1,0 +1,7 @@
+Status: StartNamed
+	Visible To: Nobody
+
+	IsTriggerStatus()
+
+	OnEnable(AddPermanentEffectiveness(0.18))
+	OnEnable(GrantRandomName())

@@ -1,0 +1,19 @@
+Technology: PulseBolt
+	Name: #R_SYS_PULSE_BOLT
+	Description: #R_SYS_PULSE_BOLT_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	DLC: Heralds
+	DLC Replace: Damage
+
+	Icon: HyperdenseLaser::0
+	Color: #7390db
+	
+	UnlockSubsystem(PulseBolt)
+	SkipOnUnlockedSubsystem(PulseBolt)
+
+	SecondaryEnergyCost(1500)

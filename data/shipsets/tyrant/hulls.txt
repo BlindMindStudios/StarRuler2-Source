@@ -1,0 +1,138 @@
+Hull: TyrantFlagLarge
+	Name: TyrantFlagLarge
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipLarge
+
+	Tags: Flagship
+	MinSize: 1
+	Subsystem: RemnantHull
+
+Hull: TyrantFlagMedium
+	Name: TyrantFlagMedium
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipMedium
+
+	Tags: Flagship
+	MinSize: 1
+	Subsystem: RemnantHull
+
+Hull: TyrantTitan
+	Name: TyrantBattleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipVeryLarge
+
+	Tags: Flagship
+	Subsystem: RemnantHull
+
+Hull: TyrantBattleship
+	Name: TyrantBattleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipSmall
+
+	Tags: Flagship
+	Subsystem: RemnantHull
+
+
+
+Hull: TyrantFrigate
+	Name: TyrantFrigate
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 0.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantA
+
+	Tags: Support
+	Subsystem: RemnantSupportHull
+
+Hull: TyrantDestroyer
+	Name: TyrantDestroyer
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 0.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantB
+
+	Tags: Support
+	Subsystem: RemnantSupportHull
+
+Hull: TyrantCruiser
+	Name: TyrantCruiser
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 0.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantA
+
+	Tags: Support
+	Subsystem: RemnantSupportHull
+
+
+
+
+Hull: TyrantSpooky
+	Name: TyrantSpooky
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantSpooky
+	Model: TyrantFlagshipLarge
+
+	Tags: Flagship
+	Special: True
+	MinSize: 1
+	Subsystem: RemnantHull
+
+Hull: TyrantSpecial
+	Name: TyrantSpecial
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipHuge
+
+	Tags: Flagship
+	Special: True
+	MinSize: 10000
+	Subsystem: SpecialRemnantHull
+
+Hull: DreadPirate
+	Name: TyrantSpecial
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.8
+	Material: TyrantPBRAdvanced
+	Model: TyrantFlagshipLarge
+
+	Tags: Flagship
+	Special: True
+	MinSize: 666
+	Subsystem: SpecialRemnantHull
+
+Hull: SeedShip
+	Name: Seed Ship
+	Background: TyrantMediumBlue
+	BackgroundScale: 0.66
+	ModelScale: 0.66
+	Material: SeedShipPBR
+	Model: SeedShip
+	GuiIcon: ShipIcons::1
+	IconSheet: HullIcons
+	IconIndex: 1
+	Subsystem: SpecialRemnantHull
+	Special: True
+
+	Tags: Flagship
+	MinSize: 1024

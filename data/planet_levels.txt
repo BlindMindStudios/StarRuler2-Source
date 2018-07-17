@@ -1,0 +1,83 @@
+//Requirements for unlocking planet levels
+Level: 0
+	Icon: PlanetIcon0
+	Population: 1
+	PopGrowth: 0.75
+	BasePressure: 0
+	BaseIncome: -80
+	BaseLoyalty: 2
+	NeighbourLoyalty: 0.15
+	BaseSupport: 150
+	Points: 25
+
+Level: 1
+	Icon: PlanetIcon1
+	Required: 1 WaterType, 1 Food
+	Population: 3
+	PopGrowth: 1.2
+	RequiredPop: 2
+	BasePressure: 1
+	BaseIncome: 80
+	ResourceIncome: 170
+	BaseLoyalty: 4
+	NeighbourLoyalty: 1
+	BaseSupport: 250
+	Points: 100
+
+Level: 2
+	Icon: PlanetIcon2
+	Required: 1 WaterType, 2 Food, 1 Level1
+	PopGrowth: 1.6
+	Population: 8
+	RequiredPop: 6
+	BasePressure: 12
+	ExportPressurePenalty: 6
+	BaseIncome: 350
+	ResourceIncome: 150
+	BaseLoyalty: 8
+	NeighbourLoyalty: 1.5
+	BaseSupport: 500
+	Points: 400
+
+Level: 3
+	Icon: PlanetIcon3
+	Required: 1 WaterType, 3 Food, 2 Level1, 1 Level2
+	PopGrowth: 1.7
+	Population: 16
+	RequiredPop: 8
+	BasePressure: 22
+	ExportPressurePenalty: 9
+	BaseIncome: 500
+	ResourceIncome: 300
+	BaseLoyalty: 12
+	NeighbourLoyalty: 2
+	BaseSupport: 750
+	Points: 1000
+
+Level: 4
+	Icon: PlanetIcon4
+	Required: 1 WaterType, 4 Food, 4 Level1, 2 Level2
+	PopGrowth: 1.8
+	Population: 24
+	RequiredPop: 14
+	BasePressure: 40
+	ExportPressurePenalty: 10
+	BaseIncome: 1000
+	BaseLoyalty: 16
+	NeighbourLoyalty: 2.5
+	BaseSupport: 1000
+	Points: 1600
+
+Level: 5
+	Icon: PlanetIcon5
+	Required: 1 WaterType, 5 Food, 6 Level1, 4 Level2
+	PopGrowth: 1.8
+	Population: 36
+	RequiredPop: 20
+	BasePressure: 65
+	ExportPressurePenalty: 16
+	BaseIncome: 1600
+	BaseLoyalty: 20
+	NeighbourLoyalty: 3
+	BaseSupport: 1500
+	Points: 2600

@@ -1,0 +1,20 @@
+Construction: Troops
+	Name: #CONS_TROOPS
+	Description: #CONS_TROOPS_DESC
+
+	Category: Military
+	In Context: True
+
+	Target: targ = Object
+
+	RequireSubsystemUnlocked(TroopPods)
+
+	TargetFilterSameRegion(targ)
+	TargetFilterType(targ, Ship)
+	TargetFilterDesignTag(targ, Troops)
+	TargetFilterFewerStatusesThanVar(targ, Troops, Sys.TroopStorage)
+
+	AddBuildCostTargetVar(targ, Sys.TroopCost)
+	AddLaborCostTargetVar(targ, Sys.TroopLabor)
+
+	Trigger(targ, AddStatus(Troops))

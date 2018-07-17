@@ -1,0 +1,11 @@
+//Trait: EnormousPlanet
+//	Name: #TRAIT_ENORMOUS_PLANET
+//	Description: #TRAIT_ENORMOUS_PLANET_DESC
+//	Category: Foundation
+//
+//	Conflict: Dwarf Planet
+//	
+//	Color: #aaffaa
+//	Icon: EnormousPlanet
+//
+//	Costs Points: 1

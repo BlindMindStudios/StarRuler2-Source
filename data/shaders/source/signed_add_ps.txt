@@ -1,0 +1,9 @@
+varying vec2 uv;
+uniform sampler2D texture;
+
+void main() {
+	vec3 sample = texture2D(texture,uv).rgb;
+	gl_FragColor.rgb = ((sample - vec3(0.5)) * 2.0 + gl_Color.rgb) * gl_Color.a;
+	//gl_FragColor.rgb = (sample * 2.0 * gl_Color.rgb) * gl_Color.a;
+	gl_FragColor.a = 0.0;
+}

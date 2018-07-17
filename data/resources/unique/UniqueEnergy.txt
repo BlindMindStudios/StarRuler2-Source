@@ -1,0 +1,16 @@
+Resource: UniqueEnergy
+	Name: #UNIQUE_ENERGY
+	Description: #UNIQUE_ENERGY_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIconsSmall::57
+	Small Icon: ResourceIconsSmall::57
+
+	Level: 0
+
+	Rarity: Unique
+	Require Contestation: 60
+
+	Affinity: Energy
+
+	Pressure: 10 Energy

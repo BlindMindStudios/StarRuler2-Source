@@ -1,0 +1,55 @@
+Model: VecturTiny	
+	Tangents: on
+	Mesh: data/shipsets/vectur/support_tiny.ogex
+
+Model: VecturSmall	
+	Tangents: on
+	Mesh: data/shipsets/vectur/support_small.ogex
+
+Model: VecturMedium	
+	Tangents: on
+	Mesh: data/shipsets/vectur/support_medium.ogex
+
+Model: VecturLarge	
+	Tangents: on
+	Mesh: data/shipsets/vectur/support_large.ogex
+
+Model: VecturFlagSmall	
+	Tangents: on
+	Mesh: data/shipsets/vectur/flagship_small.ogex
+
+Model: VecturFlagMedium	
+	Tangents: on
+	Mesh: data/shipsets/vectur/flagship_medium.ogex
+
+Model: VecturFlagLarge	
+	Tangents: on
+	Mesh: data/shipsets/vectur/flagship_large.ogex
+
+Model: VecturFlagVeryLarge	
+	Tangents: on
+	Mesh: data/shipsets/vectur/flagship_verylarge.ogex
+
+Model: VecturFlagHuge	
+	Tangents: on
+	Mesh: data/shipsets/vectur/flagship_huge.ogex
+
+Model: VecturCivilianMissionary	
+	Tangents: on
+	Mesh: data/shipsets/vectur/civilian_missionary.ogex
+
+Model: VecturCivilianMiner
+	Tangents: on
+	Mesh: data/shipsets/vectur/civilian_miner.ogex
+
+Model: VecturCivilianFreighter
+	Tangents: on
+	Mesh: data/shipsets/vectur/civilian_freighter.ogex
+
+Model: VecturCivilianColony
+	Tangents: on
+	Mesh: data/shipsets/vectur/civilian_colony.ogex
+
+Model: VecturCivilianTractor
+	Tangents: on
+	Mesh: data/shipsets/vectur/civilian_tractor.ogex

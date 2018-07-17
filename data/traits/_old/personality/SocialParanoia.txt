@@ -1,0 +1,12 @@
+Trait: SocialParanoia
+	Name: #TRAIT_SOCIAL_PARANOIA
+	Description: #TRAIT_SOCIAL_PARANOIA_DESC
+	Category: Personality
+
+	Color: #ffaaaa
+	Icon: ThumbsDown
+	Available: False
+
+	Gives Points: 1
+
+	ModAttribute(VoteStartSupport, Add, -3.0)

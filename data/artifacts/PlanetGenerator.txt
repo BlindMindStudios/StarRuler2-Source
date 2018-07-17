@@ -1,0 +1,10 @@
+Artifact: PlanetGenerator
+	Name: #ART_PLANET_GENERATOR
+	Description: #ART_PLANET_GENERATOR_DESC
+	Frequency: 0.5
+	
+	Model: ArtifactAdvanced
+
+	Ability: GeneratePlanet
+
+	AI: ActivateInOwnedSystem(4.0)

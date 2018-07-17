@@ -1,0 +1,27 @@
+Construction: BeaconGuide
+	Name: #CONS_BEACON_GUIDE
+	Description: #CONS_BEACON_GUIDE_DESC
+
+	Category: Actions
+	In Context: True
+
+	Labor Cost: 50
+
+	Target: targ = Object
+	TargetFilterType(targ, Star)
+	TargetRequireVision(targ, Region Vision = True)
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconGuideCost, Add, 1))
+	OnCancel(ModAttribute(BeaconGuideCost, Add, -1))
+
+	ConsumeCargoAttribute(Ore, BeaconGuideCost, Multiply = 10000, Base Amount = 5000)
+	ConsumeCargoAttribute(EnergyCargo, BeaconGuideCost, Multiply = 1000, Base Amount = 500)
+	ConsumeCargoAttribute(DefenseCargo, BeaconGuideCost, Multiply = 1000, Base Amount = 500)
+	ConsumeCargoAttribute(ResearchCargo, BeaconGuideCost, Multiply = 1000, Base Amount = 500)
+
+	AddLaborCostAttribute(BeaconGuideCost, Multiply = 50)
+
+	Trigger(targ, SpawnOrbital(Beacon, In Orbit = True))
+	GiveAchievement(ACH_BEACON)

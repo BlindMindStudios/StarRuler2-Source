@@ -1,0 +1,29 @@
+Technology: ImpPlanetSupport
+	Name: #R_IMP_PLANET_SUPPORT
+	Blurb: #R_IMP_PLANET_SUPPORT_BLURB:128:64
+	Description: #R_IMP_PLANET_SUPPORT_DESC:128:64
+
+	Icon: techOrganization*#fff080
+	Color: #40df8e
+
+	Point Cost: 600
+	Time Cost: 100
+
+	ModAttribute(PlanetLevelSupport, Add, 64)
+	ModAttribute(OutpostBoost, Add, 1)
+	ModAttribute(StaticDamageFactor, Multiply, 1.2)
+
+Technology: ImpPlanetSupport2
+	Name: #R_IMP_PLANET_SUPPORT2
+	Blurb: #R_IMP_PLANET_SUPPORT_BLURB:256:128
+	Description: #R_IMP_PLANET_SUPPORT_DESC:256:128
+
+	Icon: techOrganization*#fff080
+	Color: #fff080
+
+	Point Cost: 900
+	Time Cost: 100
+
+	ModAttribute(PlanetLevelSupport, Add, 128)
+	ModAttribute(OutpostBoost, Add, 2)
+	ModAttribute(StaticDamageFactor, Multiply, 1.4)

@@ -1,0 +1,14 @@
+Technology: EnergyStorage
+	Name: #R_IMP_ENERGY_STORAGE
+	Description: #R_IMP_ENERGY_STORAGE_DESC:250
+
+	Icon: techIonization * #42b4bd
+	Color: #42b4bd
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 800
+	Time Cost: 130
+
+	ModAttribute(FreeEnergyStorage, Add, 250)

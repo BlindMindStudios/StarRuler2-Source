@@ -1,0 +1,37 @@
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec4 in_tangent;
+attribute vec2 in_uv;
+attribute vec4 in_color;
+attribute vec4 in_uv2;
+
+uniform mat3 invView;
+
+varying vec3 forward, right;
+varying vec3 npos;
+varying vec3 normal, binormal, tangent;
+varying vec2 uv, uv2, uv3;
+varying vec4 vertPaint;
+
+void main()
+{
+	normal = normalize(gl_NormalMatrix * in_normal);
+	tangent = normalize(gl_NormalMatrix * in_tangent.xyz);
+	binormal = normalize(gl_NormalMatrix * cross(normal, in_tangent.xyz * in_tangent.w));
+	
+	forward = normalize(invView * vec3(1.0,0.0,0.0));
+	right = normalize(invView * vec3(0.0,0.0,1.0));
+	
+	vec4 pos = gl_ModelViewMatrix * in_vertex;
+	npos = -pos.xyz;
+	
+	vertPaint = in_color;
+	
+	uv = in_uv;
+	uv.y = 1.0 - uv.y;
+	uv2 = in_uv2.xy;
+	uv2.y = 1.0 - uv2.y;
+	uv3 = in_uv2.zw;
+	uv3.y = 1.0 - uv3.y;
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

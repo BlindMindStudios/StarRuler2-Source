@@ -1,0 +1,32 @@
+Subsystem: Slipstream
+	Name: #S_SLIPSTREAM_GENERATOR
+	Description: #S_SLIPSTREAM_GENERATOR_DESC
+	BaseColor: #67a7ad
+	TypeColor: #67a7ad
+	Picture: SubsystemButtonArt::10
+	Elevation: 0
+	
+	Tags: BaseCost, Category:FTL, CannotDonate
+	Tags: Engine, Slipstream, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Hex.BuildCost := 2.0 * HexSize
+
+	SlipstreamCost := if(Sum.SlipstreamCost <= 0.01, 300, 0) - 150 * (Size/ShipSize)
+	SlipstreamOptimalDistance := 30000 * sqrt(pow(Sum.SlipstreamOptimalDistance / 30000, 2) + Size / 128) - Sum.SlipstreamOptimalDistance
+	SlipstreamDuration := if(Sum.SlipstreamDuration <= 0.01, 100, 0) + 600 * (Size/ShipSize)
+	
+	Requires:
+		Command = 1
+	
+	Module: Core
+		Sprite: HexagonSubsystems::10
+
+	Module: Default
+		Hex.MaintainCost := 0.5 * Hex.MaintainCost

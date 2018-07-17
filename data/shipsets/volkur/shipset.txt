@@ -1,0 +1,35 @@
+Shipset: Volkur
+	Name: Volkur
+
+	Hull: VolkurFlagHuge
+	Hull: VolkurFlagVeryLarge
+	Hull: VolkurFlagLarge
+	Hull: VolkurFlagMedium
+	Hull: VolkurFlagTiny
+	Hull: VolkurHuge
+	Hull: VolkurLarge
+	Hull: VolkurMedium
+	Hull: VolkurSmall
+	Hull: VolkurTiny
+	Hull: VolkurStation
+	Hull: VolkurSatellite
+
+	Skin: Miner
+		Model: VolkurMiner
+		Material: VolkurGenericPBR
+
+	Skin: Missionary
+		Model: VolkurMissionary
+		Material: VolkurGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: VolkurFreighter
+		Material: VolkurGenericPBR
+
+	Skin: Colonizer
+		Model: VolkurColony
+		Material: VolkurGenericPBR
+
+	Skin: Tractor
+		Model: VolkurTractor
+		Material: VolkurGenericPBR

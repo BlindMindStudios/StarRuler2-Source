@@ -1,0 +1,17 @@
+Resource: Pekelm
+	Name: #PEKELM
+	Description: #PEKELM_DESC
+	Native Biome: Ice
+
+	Icon: ResourceIcons::25
+	Small Icon: ResourceIconsSmall::25
+
+	Level: 0
+	Rarity: Uncommon
+	Affinity: Defense
+
+	Asteroid Frequency: 0.2
+	Asteroid Labor: 40
+
+	Pressure: 3 Defense
+	ModColonyShipAccel(+1.0)

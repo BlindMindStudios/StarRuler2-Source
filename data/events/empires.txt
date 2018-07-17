@@ -1,0 +1,16 @@
+void playAsEmpire(Empire@ emp) -> server::empire::playAsEmpire
+void allowPlayEmpire(Empire@ emp) -> shadow::empire::allowPlayEmpire
+void playingEmpire(Empire@ emp) -> client::tabs.GalaxyTab::playingEmpire
+
+void declareWar(Empire& onEmpire) -> server::warandpeace::declareWar
+bool isForcedPeace(Empire& from, Empire& to) -> local server::warandpeace::isForcedPeace
+void sendPeaceOffer(Empire& toEmpire) -> server::influence_global::sendPeaceOffer_client
+uint getMajorEmpireCount() -> local server::empire::getMajorEmpireCount
+
+void mpChat(string text, uint empMask = 0xffffffff, string spec = "") -> server::empire::chatMessage
+void recvMPChat(string text) -> client::multiplayer::chatMessage
+
+void markDesignObsolete(const Design@ dsg, bool value = true) -> server::empire::markDesignObsolete
+
+bool hasGameEnded() -> local server::victory::hasGameEnded_client
+void serverEndGame() -> shadow::victory::serverGameEnd

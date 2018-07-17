@@ -1,0 +1,51 @@
+Effect: ReduceDamage
+	Value: ProjResist
+	Value: EnergyResist
+	Value: ExplResist
+	Value: MinimumPercent = 1 / 5
+
+	Damage: combat::ReduceDamage
+
+Effect: CapDamage
+	Value: MaxDamage
+	Value: MinimumPercent
+
+	Damage: combat::CapDamage
+
+Effect: VitalSubsystem
+	End: effects::DestroyShip
+
+Effect: ControlCore
+	End: effects::ControlDestroyed
+
+Effect: FTLUpkeep
+	Value: Amount
+
+	Start: effects::StartFTLUpkeep
+	Destroy: effects::EndFTLUpkeep
+
+	RetrofitPre: effects::EndFTLUpkeep
+	RetrofitPost: effects::StartFTLUpkeep
+
+Effect: DamageResist
+	Value: Resist
+	Value: MinimumPercent = 1 / 5
+
+	Damage: combat::DamageResist
+
+Effect: DestroyOnLowEfficiency
+	Value: Threshold
+
+	Tick: effects::DestroyOnLowEfficiency
+
+Effect: DistributeHealth
+	Tick: combat::DistributeHealth
+	Damage: combat::DamageDistributeHealth
+
+Effect: ShieldDamage
+	GlobalDamage: combat::ShieldDamage
+
+Effect: ShieldBlock
+	Value: Chance
+	
+	GlobalDamage: combat::ShieldBlock

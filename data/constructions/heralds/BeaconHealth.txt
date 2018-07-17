@@ -1,0 +1,19 @@
+Construction: BeaconHealth
+	Name: #CONS_BEACON_HEALTH
+	Description: #CONS_BEACON_HEALTH_DESC
+
+	Category: Beacons
+
+	Build Cost: 300
+	Time Cost: 60
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconHealthUpgradeCost, Add, 1))
+	OnCancel(ModAttribute(BeaconHealthUpgradeCost, Add, -1))
+
+	ConsumeCargoAttribute(DefenseCargo, BeaconHealthUpgradeCost, Multiply = 500, Base Amount = 500)
+
+	ModAttribute(BeaconHealthUpgrades, Add, 1)
+
+	AddBuildCostAttribute(BeaconHealthUpgradeCost, Multiply = 100)

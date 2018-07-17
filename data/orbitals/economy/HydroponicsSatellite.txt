@@ -1,0 +1,25 @@
+Module: HydroponicsSatellite
+	Name: #ORB_HYDROPONICS_SATELLITE
+	Blurb: #ORB_HYDROPONICS_SATELLITE_BLURB
+	Description: #ORB_HYDROPONICS_SATELLITE_DESC
+	Icon: GuiOrbitalIcons::14
+	Distant Icon: OrbitalIcons::14
+
+	Health: 20000
+	Armor: 10000
+	Size: 8
+
+	Build Cost: 600
+	Labor Cost: 25
+
+	ConsumeResearch(100)
+
+	RequireUnlockTag(HydroponicsSatelliteUnlock)
+
+	Model: Outpost
+	Material: GenericPBR_Outpost
+
+	LimitInOrbitStatus(HydroponicsSatellite, 1000)
+
+	AddStatusToOrbitingPlanet(HydroponicsSatellite)
+	MatchOrbitingOwner(Destroy None = True)

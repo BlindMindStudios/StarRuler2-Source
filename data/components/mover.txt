@@ -1,0 +1,64 @@
+Object.Mover : components.Mover::Mover {
+local safe:
+	bool get_inFTL() const;
+	bool get_isMoving() const;
+	double get_maxAcceleration() const;
+
+restricted local:
+	vec3d get_moveDestination() const;
+	safe bool get_hasMovePath() const;
+	Object@[] getMovePath() const;
+
+	Object@ getLockedOrbit(bool requireLock = true);
+	Object@ getAroundLockedOrbit();
+	safe bool isLockedOrbit(Object@ at, bool requireLock = true);
+	safe bool hasLockedOrbit(bool requireLock = true);
+
+server:
+	safe double get_ftlSpeed() const;
+	safe quaterniond get_targetRotation() const;
+	void set_ftlSpeed(double value);
+	safe bool get_isColliding() const;
+	safe vec3d get_internalDestination() const;
+	safe vec3d get_computedDestination() const;
+	void set_maxAcceleration(double accel);
+	void set_rotationSpeed(float speed);
+	double moverTick(double time);
+	bool moveTo(vec3d point, int& id, bool doPathing = true, bool enterOrbit = true, bool allowStop = false);
+	bool moveTo(Object& target, int& id, double distance = 0, bool doPathing = true, bool enterOrbit = true);
+	safe bool isOnMoveOrder(int id);
+	bool rotateTo(quaterniond rotation, int& id);
+	void setRotation(quaterniond rotation);
+	bool FTLTo(vec3d point, double speed, int& id);
+	void FTLTo(vec3d point, double speed);
+	void FTLDrop();
+	void stopMoving(bool doPathing = true, bool enterOrbit = true);
+	void clearMovement();
+	void setCombatFacing(quaterniond& rotation);
+	void clearCombatFacing();
+	async relocking void checkOrbitObject(vec3d destPoint);
+	async relocking void createPathTowards(vec3d destPoint, Object@ target = null);
+	async relocking void updatePath();
+	void speedBoost(double amount);
+	void flagPositionUpdate();
+	void modAccelerationBonus(double mod);
+	void forceLockTo(Object@ obj);
+	
+	void impulse(vec3d ForceSeconds);
+	void rotate(quaterniond rot);
+	
+	safe bool get_leaderLock() const;
+	void set_leaderLock(bool doLock);
+
+	bool get_hasMovePortal();
+	vec3d getMovePortal();
+
+	void set_hasVectorMovement(bool value);
+
+	bool writeMoverDelta(Message& msg) const;
+	void writeMover(Message& msg) const;
+
+shadow:
+	void readMoverDelta(Message& msg);
+	void readMover(Message& msg);
+}

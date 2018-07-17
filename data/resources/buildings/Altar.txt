@@ -1,0 +1,12 @@
+Resource: Altar
+	Name: #ALTAR
+	Description: #ALTAR_DESC
+	Artificial: True
+	Exportable: False
+
+	Icon: ResourceIconsSmall::53
+	Small Icon: ResourceIconsSmall::53
+
+	Level: 0
+	Limitless Level: True
+	Can Be Terraformed: False

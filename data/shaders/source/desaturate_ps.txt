@@ -1,0 +1,10 @@
+varying vec2 uv;
+uniform sampler2D texture;
+uniform float level;
+const vec3 gray = vec3(0.30, 0.59, 0.11);
+
+void main() {
+	vec4 color = texture2D(texture, uv);
+	gl_FragColor.rgb = mix(vec3(dot(gray, color.rgb * gl_Color.rgb)), color.rgb * gl_Color.rgb, level);
+	gl_FragColor.a = color.a * gl_Color.a;
+}

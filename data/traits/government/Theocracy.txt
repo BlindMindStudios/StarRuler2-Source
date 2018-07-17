@@ -1,0 +1,26 @@
+Trait: Theocracy
+	Name: #TRAIT_THEOCRACY
+	Description: #TRAIT_THEOCRACY_DESC
+	Order: 4
+
+	Category: Government
+	Unique: Government
+
+	Icon: VoteIcons::5
+	Color: #00c0ff
+
+	GainInfluenceCard(CallOut, Uses=2)
+	GainInfluenceCard(AncientKnowledge)
+
+	GainInfluenceCard(ProtectSystem, Uses=2)
+	GainInfluenceCard(SenateBuilding)
+
+	AddStoredFTL(250)
+
+	SpawnShip(Scout)
+	SpawnShip(Scout)
+	SpawnShip(Dreadnaught, Empire, 10x Heavy Gunship, 15x Beamship, 15x Missile Boat, 20x Gunship)
+
+	OnHomeworld(GenerateDefenseShips(25))
+
+	OnDLC(Heralds, GainAttitude(Reverent, Level Up = 1))

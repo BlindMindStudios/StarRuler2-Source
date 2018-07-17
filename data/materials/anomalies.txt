@@ -1,0 +1,6 @@
+Material: Obelisk
+	Shader: PBR_obelisk
+	Texture: data/images/anomalies/obelisk_model.png
+	Texture2: data/images/anomalies/obelisk_detail.png
+	Cubemap3: data/images/skycube.png
+	Shininess: 10

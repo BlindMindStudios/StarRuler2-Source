@@ -1,0 +1,13 @@
+Trait: WarMinded
+	Name: #TRAIT_WAR_MINDED
+	Description: #TRAIT_WAR_MINDED_DESC:4
+	Category: Personality
+
+	Color: #ffaaaa
+	Icon: ActionBarIcons::2
+	Available: False
+
+	Gives Points: 2
+
+	ModAttribute(VoteCardCostMod, Add, +1.0)
+	ModAttribute(SupportCardCostMod, Add, +1.0)

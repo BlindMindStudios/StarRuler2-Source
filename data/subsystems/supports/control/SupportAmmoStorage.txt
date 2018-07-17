@@ -1,0 +1,21 @@
+Subsystem: SupportAmmoStorage
+	Name: #S_AMMOSTORAGE
+	Description: #S_AMMOSTORAGE_DESC
+	BaseColor: #2fd6b3
+	Elevation: 3
+	
+	Tags: DefaultUnlock, NonContiguous, NoCore, HasInternals, Category:Control
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	SupportSupplyCapacity := Size * 175
+	
+	Hex.LaborCost := 0.05 * HexSize
+	Hex.BuildCost := 1.0 * HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+	Hex.Mass := 0.6 * HexSize
+
+	Module: Default
+		Sprite: SupplyStorage * #80ff80

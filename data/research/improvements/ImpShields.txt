@@ -1,0 +1,48 @@
+Technology: ImpShieldCap
+	Name: #R_IMP_SHIELDCAP
+	Blurb: #R_IMP_SHIELDCAP_BLURB:20%
+	Description: #R_IMP_SHIELDCAP_DESC:20%
+
+	Icon: techPhaseContainment * #4040ff
+	Color: #149080
+
+	Point Cost: 700
+	Time Cost: 120
+
+	AddModifier( ShieldCapacityFactor(1.2) )
+	AddModifier( ShieldHarmonizer::BonusShieldFactor(1.2) )
+
+
+Technology: ImpShieldCap2
+	Name: #R_IMP_SHIELDCAP
+	Blurb: #R_IMP_SHIELDCAP_BLURB:40%
+	Description: #R_IMP_SHIELDCAP_DESC:40%
+
+	Icon: techPhaseContainment * #4040ff
+	Color: #149080
+
+	Point Cost: 1000
+	Time Cost: 120
+
+	AddModifier( ShieldCapacityFactor(1.4) )
+	AddModifier( ShieldHarmonizer::BonusShieldFactor(1.4) )
+
+Technology: ImpShieldReg
+	Name: #R_IMP_SHIELDREG
+	Blurb: #R_IMP_SHIELDREG_BLURB:20%
+	Description: #R_IMP_SHIELDREG_DESC:20%
+	Icon: techPhaseHarmonics * #4040ff
+	Color: #429f5c
+	Point Cost: 500
+	Time Cost: 90
+	AddModifier(ShieldRegenFactor(1.2))
+
+Technology: ImpShieldReg2
+	Name: #R_IMP_SHIELDREG
+	Blurb: #R_IMP_SHIELDREG_BLURB:40%
+	Description: #R_IMP_SHIELDREG_DESC:40%
+	Icon: techPhaseHarmonics * #4040ff
+	Color: #429f5c
+	Point Cost: 1000
+	Time Cost: 180
+	AddModifier(ShieldRegenFactor(1.4))

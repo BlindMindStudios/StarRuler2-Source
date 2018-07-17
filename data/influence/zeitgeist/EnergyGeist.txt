@@ -1,0 +1,44 @@
+Card: EnergyGeist
+	Name: #ZEITGEIST_ENERGY
+	Description: #ZEITGEIST_ENERGY_DESC
+
+	Color: #00fffc
+	Icon: CardIcons::45
+
+	Class: Event
+	Rarity: Epic
+
+	StartVote(EnergyGeist)
+
+Vote: EnergyGeist
+	Name: #ZEITGEIST_ENERGY
+	Description: #ZEITGEIST_ENERGY_DESC
+
+	Color: #00fffc
+	Icon: CardIcons::45
+
+	AddStartWeight(+1)
+
+	OnOwner(DismissTaggedEffects(Zeitgeist))
+
+	CreateEffect(Pass, EnergyGeist, Give To Contributor = True)
+	TriggerLowestContributor(AddMoney(800), Fail, Require Negative = True)
+
+	EmpireStartWeightAttribute(ZeitgeistStartSupport)
+
+	AI: ZeitgeistVote()
+
+Effect: EnergyGeist
+	Name: #ZEITGEIST_ENERGY
+	Description: #ZEITGEIST_ENERGY_DESC
+
+	Tag: Zeitgeist
+	Dismissable: False
+
+	Color: #00fffc
+	Icon: CardIcons::45
+
+	AddEnergyIncome(+2.0)
+
+	OnAllEmpires(UnlockTagWhileActive(SolarOrbitalUnlock))
+	OnAllEmpires(ModEmpireAttribute(EnergyGenerationFactor, Multiply, 1.25))

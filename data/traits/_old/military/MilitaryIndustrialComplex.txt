@@ -1,0 +1,13 @@
+Trait: Military Industrial Complex
+	Name: #TRAIT_MILITARY_INDUSTRIAL_COMPLEX
+	Description: #TRAIT_MILITARY_INDUSTRIAL_COMPLEX_DESC
+
+	Category: Military
+
+	Icon: StatusWar
+	Color: #aaffaa
+	Available: False
+
+	Costs Points: 1
+
+	TriggerHomeworld(GenerateDefenseShips(50))

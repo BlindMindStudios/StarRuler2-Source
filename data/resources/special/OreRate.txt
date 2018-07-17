@@ -1,0 +1,16 @@
+Resource: OreRate
+	Name: #R_ORE_RATE
+	Description: #R_ORE_RATE_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIconsSmall::65
+	Small Icon: ResourceIconsSmall::65
+
+	Rarity: Common
+	Distribution: 0
+	Frequency: 0
+	Level: 0
+
+	TriggerPeriodic(AddCargo(Ore, 1), Interval = 1)
+
+	OnExportMoveLocalCargo(Ore)

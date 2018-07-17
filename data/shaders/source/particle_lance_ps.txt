@@ -1,0 +1,16 @@
+varying vec2 uv;
+uniform sampler2D texture;
+
+void main() {
+	vec3 sample = texture2D(texture, vec2(uv.x, (uv.y - 0.45) / 0.2)).rgb;
+
+	if(uv.y < 0.45 || uv.y > 0.65)
+		discard;
+	float a = smoothstep(0.45, 0.46, uv.y);
+	a = min(a, 1.0 - smoothstep(0.64, 0.65, uv.y));
+	a = min(a, smoothstep(0.00, 0.05, uv.x));
+	a = min(a, 1.0 - smoothstep(0.95, 1.00, uv.x));
+
+	gl_FragColor.rgb = mix(gl_Color.rgb * sample, vec3(0.0, 0.0, 0.0), 1.0 - a);
+	gl_FragColor.a = 1.0;
+}

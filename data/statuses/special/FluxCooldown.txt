@@ -1,0 +1,4 @@
+Status: FluxCooldown
+	Name: #STATUS_FLUX_COOLDOWN
+	Description: #STATUS_FLUX_COOLDOWN_DESC
+	Icon: ActionBarIcons::5 * #ff4040

@@ -1,0 +1,29 @@
+Subsystem: OreProcessor
+	Name: #S_ORE_PROCESSOR
+	Description: #S_ORE_PROCESSOR_DESC
+	BaseColor: #8870ac
+	TypeColor: #8870ac
+	Elevation: 2
+
+	Tags: Category:Equipment, BaseCost, HasInternals, NoCore, NonContiguous
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	OreProcessRate := Size / 5
+	LaborProcessRate := OreProcessRate / 25 * 60
+	LaborStorage := LaborProcessRate * 5
+	Hook: AddLaborStorage(LaborStorage)
+	Hook: ProcessCargo(Ore, OreProcessRate, 25, AddStoredLabor(1, True))
+
+	CargoStorage := OreProcessRate
+	Hook: AddCargoStorage(CargoStorage)
+	Hook: AddPermanentStatus(CanTakeCargo)
+
+	Assert: Sum.LaborIncome > 0
+		Message: #REQUIRE_CONSTRUCTION_BAY
+
+	Module: Default
+		Sprite: SupportCommand * #8870ac
+
+		Hex.LaborCost := Hex.LaborCost * 2.0

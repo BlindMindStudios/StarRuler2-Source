@@ -1,0 +1,18 @@
+Technology: MuonCannon
+	Name: #R_SYS_MUON_CANNON
+	Description: #R_SYS_MUON_CANNON_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: Railgun::2
+	Color: #8f2399
+
+	UnlockSubsystem(MuonCannon)
+	SkipOnUnlockedSubsystem(MuonCannon)
+
+	UnlockSubsystem(MuonBattery)
+
+	SecondaryInfluenceCost(12)

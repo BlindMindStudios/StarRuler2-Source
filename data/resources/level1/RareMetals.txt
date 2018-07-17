@@ -1,0 +1,16 @@
+Resource: RareMetals
+	Name: #RARE_METALS
+	Description: #RARE_METALS_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::12
+	Small Icon: ResourceIconsSmall::11
+
+	Level: 1
+	Rarity: Rare
+	Affinity: Research
+
+	Asteroid Frequency: 0.1
+	Asteroid Labor: 50
+
+	Pressure: 3 Research

@@ -1,0 +1,9 @@
+Building: University
+	Name: #BLD_UNIVERSITY
+	Description: #BLD_UNIVERSITY_DESC
+	Sprite: BuildingSprites::8
+
+	Civilian: True
+
+	Saturation: 1 Research
+	Production: 1 Research

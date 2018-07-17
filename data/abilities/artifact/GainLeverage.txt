@@ -1,0 +1,13 @@
+Ability: GainLeverage
+	Name: #ABL_GAIN_LEVERAGE
+	Description: #ABL_GAIN_LEVERAGE_DESC
+	Icon: CardIcons::5
+
+	Energy Cost: 300
+
+	Target: targ = Object
+	TargetFilterRegion(targ)
+	TargetRequireVision(targ)
+	TargetFilterOtherEmpire(targ)
+
+	Trigger(targ, GainLeverageInSystem(9.0))

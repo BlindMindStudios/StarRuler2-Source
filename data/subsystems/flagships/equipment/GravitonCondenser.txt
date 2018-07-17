@@ -1,0 +1,34 @@
+Subsystem: GravitonCondenser
+	Name: #S_GRAVITON_CONDENSER
+	Description: #S_GRAVITON_CONDENSER_DESC
+
+	BaseColor: #e45500
+	TypeColor: #e45500
+	Elevation: 2
+
+	Tags: BaseCost, Category:Equipment, HasInternals, ExteriorCore
+	Tags: Ability:GravitonCondenser
+	Hull: Flagship
+
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	StellarDamage := 4000000 * (Size / 100)
+	PowerUse := 15 * Size
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+
+	Module: Default
+		Hex.BuildCost := 3.0 * Hex.BuildCost
+		Hex.MaintainCost := 3.0 * Hex.MaintainCost
+
+	Module: Core
+		Hex.BuildCost := 3.0 * Hex.BuildCost
+		Hex.MaintainCost := 3.0 * Hex.MaintainCost
+		Sprite: TractorGun::0 * #e45500
+		DrawMode: 1

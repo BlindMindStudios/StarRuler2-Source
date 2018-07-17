@@ -1,0 +1,11 @@
+Trait: Cunning
+	Name: #TRAIT_CUNNING
+	Description: #TRAIT_CUNNING_DESC:5
+	Category: Personality
+
+	Color: #aaffaa
+	Icon: ResourceIcon::1
+	Available: False
+
+	Costs Points: 1
+	GainRandomInfluenceCards(5)

@@ -1,0 +1,141 @@
+Shader: FlatAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_flat_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <0.5,0.7,1.0> <1.0,0.5,0.1>
+	Variable: float nodeScale = global MODEL_SCALE
+
+Shader: TerranAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <0.5,0.7,1.0> <1.0,0.5,0.1>
+	Variable: float nodeScale = node_scale
+
+Shader: DustyAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <1.0,0.8,0.4> <1.0,0.5,0.1>
+	Variable: float nodeScale = node_scale
+
+Shader: CrystalAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <0.8,0.4,1.0> <1.0,0.1,0.4>
+	Variable: float nodeScale = node_scale	
+
+Shader: VulcanicAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <1.0,0.6,0.4> <6.0,0.3,0.2>
+	Variable: float nodeScale = node_scale
+
+Shader: IceAtmosphere
+	Vertex: data/shaders/source/atmosphere_vs.txt
+	Fragment: data/shaders/source/atmosphere_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec3[2] colors = <0.6,0.8,1.0> <1.0,0.5,0.5>
+	Variable: float nodeScale = node_scale
+	
+Shader: PlanetSurfaceGeneric
+    Vertex: data/shaders/source/pl_generic_vs.txt
+    Fragment: data/shaders/source/pl_generic_ps.txt
+   
+    Variable: tex surfaceData = 0
+    Variable: tex biomes = 1
+    Variable: tex lookup = 2
+    Variable: vec2 texSize = global PLANET_SURFACE_GRID_SIZE
+    Variable: vec2 fullSize = global PLANET_FULL_GRID_SIZE
+    Variable: vec2 cracksColorIntensity = <0.95,6.0>
+    Variable: vec4[3] biomesPicks = global BIOME_PICKS
+
+Shader: ProceduralPlanet
+    Vertex: data/shaders/source/planet_procedural_clean_vs.txt
+    Fragment: data/shaders/source/planet_procedural_clean_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex biomes = 0
+    Variable: tex cities = 1
+    Variable: tex differenceNoise = 2
+    Variable: tex lookup = 3
+    Variable: tex cityGlow = 4
+//  Variable: tex testSplat = 5 // potential damage would go here
+    Variable: tex skybox = 6
+    Variable: tex surfaceData = 7
+    Variable: vec2 texSize = global PLANET_SURFACE_GRID_SIZE
+	Variable: vec2 fullSize = global PLANET_FULL_GRID_SIZE
+    Variable: float time = game_time_cycle 8
+    Variable: float population = state_vars Planet::Population //might be used later!
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec3 wsPos = node_position //not used
+    Variable: vec4 wsRot = node_rotation
+    Variable: vec4 ownerColor = node_color
+    Variable: vec2 cracksColorIntensity = <0.95,6.0>
+    Variable: vec4[3] biomesPicks = global BIOME_PICKS
+
+Shader: ProceduralMoon
+    Vertex: data/shaders/source/moon_procedural_vs.txt
+    Fragment: data/shaders/source/moon_procedural_ps.txt
+
+    Variable: tex biomes = 0
+    //Variable: tex cities = 1
+    Variable: tex lookup = 2
+    //Variable: tex cityGlow = 3
+    Variable: tex skybox = 6
+//  Variable: float population = state_vars Planet::Population //will be used later!
+    Variable: float lightRadius = light_radius 0 1
+//  Variable: vec3 wsPos = node_position //not used
+    Variable: vec4 wsRot = node_rotation
+    //Variable: vec3 ownerColor = node_color
+    Variable: vec4 cracksColorIntensityBiomeSeed = <0.95,6.0,0.23,0.0> // cracks color, make intensity 0 for cracks off, mono color lookup from biome, 0-1 random seed value for moon procedural splatmap.
+    Variable: vec4 biomeOffsets = <0.75,0.0,0.25,0.5> // xy for which two surface textures to blend
+//  Variable: float moonBaseBuilt = 1.0
+
+Shader: RingworldSurface
+    Vertex: data/shaders/source/ringworld_procedural_vs.txt
+    Fragment: data/shaders/source/ringworld_procedural_ps.txt
+    Settings Reload: True
+ 
+    Variable: tex biomes = 0
+    Variable: tex cities = 1
+    Variable: tex differenceNoise = 2
+    Variable: tex lookup = 3
+    Variable: tex cityGlow = 4
+    Variable: tex skybox = 6
+    Variable: tex surfaceData = 7
+    Variable: vec2 texSize = global PLANET_SURFACE_GRID_SIZE
+    Variable: vec2 fullSize = global PLANET_FULL_GRID_SIZE
+    Variable: float population = state_vars Planet::Population
+    Variable: float[2] lightRadius = light_radius 0 1
+    Variable: vec4 wsRot = node_rotation
+    Variable: vec4 ownerColor = node_color
+// glow cracks are unsuported by ringworld shader!
+//    Variable: vec2 cracksColorIntensity = <0.95,6.0>
+//  uncomment for hardcoded terran
+//  Variable: vec4[3] biomesPicks = <0.5,0.5,0.6,0.2> <0.75,0.5,0.61,0.1> <0.5,0.0,0.6,0.05>
+    Variable: vec4[3] biomesPicks = global BIOME_PICKS
+    Variable: float time = game_time
+    Variable: float cycle = game_time_cycle = 30
+
+Shader: CrystalSurface
+	Vertex: data/shaders/source/pl_normal_vs.txt
+	Fragment: data/shaders/source/pl_gradglow_ps.txt
+	
+	Variable: tex diffuseTex = 0
+	Variable: tex glowTex = 1
+	Variable: tex normalRGBspecA = 2
+	Variable: tex cities = 3
+	Variable: tex diffNoise = 4
+	Variable: float population = state_vars Planet::Population
+	Variable: float[4] uvOffsets = game_time_cycle 14 11.4 10.7 11.23
+	Variable: vec3[2] glowGradient = <1,0,0.5> <1,1,1>
+	Variable: float flipState = unique

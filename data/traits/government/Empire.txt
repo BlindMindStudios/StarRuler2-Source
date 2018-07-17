@@ -1,0 +1,26 @@
+Trait: Empire
+	Name: #TRAIT_EMPIRE
+	Description: #TRAIT_EMPIRE_DESC
+	Category: Government
+	Order: 0
+
+	Icon: StatusWar
+	Color: #a06911
+
+	Default: True
+	Unique: Government
+
+	GainInfluenceCard(Negotiate, Uses=3)
+	GainInfluenceCard(Negotiate, Uses=2, Quality=1)
+
+	GainInfluenceCard(NamePlanet, Quality=1)
+	GainInfluenceCard(NameFlagship, Quality=2)
+
+	SpawnShip(Heavy Carrier, Empire, 10x Heavy Gunship, 15x Beamship, 25x Missile Boat, 45x Gunship)
+
+	InHomeSystem( MakeAsteroid() )
+	InRandomAdjacentSystem( MakeAsteroid() )
+	InRandomAdjacentSystem( MakeAsteroid() )
+	InRandomAdjacentSystem( MakeAsteroid() )
+
+	OnDLC(Heralds, GainAttitude(Delinquent, Level Up = 1))

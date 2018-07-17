@@ -1,0 +1,25 @@
+Card: Expedition
+	Name: #EVT_EXPEDITION
+	Description: #EVT_EXPEDITION_DESC
+
+	Color: #dccc64
+	Icon: CardIcons::40
+
+	Class: Event
+	Rarity: Epic
+	Frequency: 0.6
+
+	StartVote(Expedition)
+
+Vote: Expedition
+	Name: #EVT_EXPEDITION
+	Description: #EVT_EXPEDITION_DESC
+
+	Color: #dccc64
+	Icon: CardIcons::40
+
+	AddStartWeight(+1)
+
+	TriggerHighestContributor(GenerateSystem(ExpeditionSystem, True, True), Pass, Randomize = True)
+
+	AI: BenefitRace()

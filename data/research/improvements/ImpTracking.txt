@@ -1,0 +1,29 @@
+Technology: ImpTracking
+	Name: #R_IMP_TRACKING
+	Blurb: #R_IMP_TRACKING_BLURB:20%
+	Description: #R_IMP_TRACKING_DESC:20%:1M
+
+	Icon: techHydraulics*#ffc419
+	Color: #ffc419
+
+	Point Cost: 500
+	Time Cost: 120
+
+	AddModifier( tag/Weapon::TrackingFactor(1.2) )
+
+	SecondaryMoneyCost(1000)
+
+Technology: ImpTracking2
+	Name: #R_IMP_TRACKING2
+	Blurb: #R_IMP_TRACKING_BLURB:40%
+	Description: #R_IMP_TRACKING_DESC:40%:1.5M
+
+	Icon: techHydraulics2*#ffc419
+	Color: #ffc419
+
+	Point Cost: 750
+	Time Cost: 120
+
+	AddModifier( tag/Weapon::TrackingFactor(1.4) )
+
+	SecondaryMoneyCost(1500)

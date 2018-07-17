@@ -1,0 +1,44 @@
+Camp: AsteroidBase
+	Frequency: 0.3
+
+	Ship: Kyllaros [Remnant Kyllaros]
+	Ship: 30-60x Gunship
+	Ship: 15-35x Missile Boat
+	Ship: 10-30x Beamship
+	Ship: 5-8x Heavy Gunship
+
+	Pickup:
+		Name: #PICKUP_ASTEROID
+		Description: #PICKUP_ASTEROID_DESC
+		Verb: #VERB_ACTIVATE
+
+		Model: Asteroid1
+		Material: AsteroidPegmatite
+
+		Physical Size: 6
+
+		OwnedAsteroid(AsteroidAffinity)
+
+	Pickup:
+		Name: #PICKUP_ASTEROID
+		Description: #PICKUP_ASTEROID_DESC
+		Verb: #VERB_ACTIVATE
+
+		Model: Asteroid1
+		Material: AsteroidPegmatite
+
+		Physical Size: 6
+
+		OwnedAsteroid(Deuterium)
+
+	Pickup:
+		Name: #PICKUP_ASTEROID
+		Description: #PICKUP_ASTEROID_DESC
+		Verb: #VERB_ACTIVATE
+
+		Model: Asteroid1
+		Material: AsteroidPegmatite
+
+		Physical Size: 6
+
+		OwnedAsteroid(Water)

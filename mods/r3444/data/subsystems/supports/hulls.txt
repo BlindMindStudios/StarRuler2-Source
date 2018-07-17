@@ -1,0 +1,9 @@
+Subsystem: SupportHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Hull: Support
+	EvaluationOrder: -100
+
+	Repair := HexSize * 4
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL

@@ -1,0 +1,25 @@
+Technology: ImpRepair
+	Name: #R_IMP_REPAIR
+	Blurb: #R_IMP_REPAIR_BLURB:15%
+	Description: #R_IMP_REPAIR_DESC:15%
+
+	Icon: AttributeIcons::6 * #88a8ff
+	Color: #88a8ff
+
+	Point Cost: 700
+	Time Cost: 120
+
+	AddModifier(RepairFactor(1.15))
+
+Technology: ImpRepair2
+	Name: #R_IMP_REPAIR2
+	Blurb: #R_IMP_REPAIR_BLURB:30%
+	Description: #R_IMP_REPAIR_DESC:30%
+
+	Icon: AttributeIcons::6 * #88a8ff
+	Color: #88a8ff
+
+	Point Cost: 1000
+	Time Cost: 120
+
+	AddModifier( RepairFactor(1.3) )

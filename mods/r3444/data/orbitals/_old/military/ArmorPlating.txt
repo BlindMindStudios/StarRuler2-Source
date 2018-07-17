@@ -1,0 +1,15 @@
+Module: ArmorPlating
+	Name: #ORB_ARMOR_PLATING
+	Blurb: #ORB_ARMOR_PLATING_BLURB
+	Description: #ORB_ARMOR_PLATING_DESC
+	Icon: HexagonSubsystems::0
+	Standalone: False
+	Core: False
+
+	Require Affinity: 1 Labor
+
+	Maintenance: 50
+	Build Cost: 100
+
+	Armor: 5000
+	AddResistance(2.5)

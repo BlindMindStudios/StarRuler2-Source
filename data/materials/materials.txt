@@ -1,0 +1,222 @@
+//Material: ResearchStation
+//	Texture: data/images/research_station.png
+//	Texture2: data/images/research_station_nrm.png
+//	Shininess: 3
+//	Shader: GlowNormalLighting
+
+//Material: Shipyard
+//	Texture: data/images/shipyard.png
+//	Shininess: 5
+//	Shader: GlowLighting
+
+Material: PlanetBB
+	Texture: data/images/planet1.png
+	Lighting: No
+	Culling: None
+	Alpha: Yes
+
+Material: Disc
+	Shader: ColoredDisc
+	Alpha: Yes
+	Culling: None
+
+Material: TradeLine
+	Alpha: Yes
+	Culling: None
+	Shader: TradeLine
+
+Material: HexGrid
+	Texture: data/images/hexagon_galactic.png
+	Lighting: No
+	Culling: None
+	Shader: Tiled
+	Alpha: Yes
+
+Material: Editor
+	Inherit: Image2D
+	LoadPriority: Critical
+	Shader: GuiSkin
+	Texture: data/images/editor_skin.png
+
+Material: Fling
+	Texture: data/images/ships/fling.png
+	Shader: Lighting
+	Specular: #333333
+	Shininess: 1
+	
+Material: Gate
+	Texture: data/images/ships/gate.png
+	Shader: Lighting
+	Specular: #333333
+	Shininess: 1
+
+Material: OrbitCircle
+	Culling: None
+	Alpha: Yes
+	Shader: OrbitCircle
+	DepthWrite: Off
+
+Material: FleetCircle
+	Culling: None
+	Alpha: Yes
+	Shader: FleetCircle
+	DepthWrite: Off
+	Mipmap: No
+	Texture: data/images/radial_grid.png
+
+Material: RangeCircle
+	Culling: None
+	Alpha: Yes
+	Shader: RangeCircle
+	DepthWrite: Off
+	Mipmap: No
+
+Material: Circle
+	Culling: None
+	Alpha: Yes
+	Shader: Circle
+	DepthWrite: Off
+	Mipmap: No
+
+Material: MoveBeam
+	Culling: None
+	Alpha: Yes
+	Shader: MoveBeam
+
+	
+Material: PBRStationsTemplate
+	Shader: PBRStations
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Cubemap6: data/images/skycube.png
+	
+Material: GenericPBR_Shipyard
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/shipyard_emissives.png
+
+Material: GenericPBR_SolarEngine
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/solar_engine_emissives.png
+
+Material: GenericPBR_RingworldOuter
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/ringworld_emissives.png
+
+Material: GenericPBR_RingworldInner
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/ringworld_inner_emissives.png
+
+Material: GenericPBR_ScaffoldRound
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/scaffold_round_emissives.png
+	
+Material: GenericPBR_CommerceStation
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/commerce_station_emissives.png
+
+Material: GenericPBR_Depot
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/depot_emissives.png
+
+Material: GenericPBR_Outpost
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/outpost_emissives.png
+
+Material: GenericPBR_Temple
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/star_temple_emissives.png
+
+Material: GenericPBR_Gate
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/gate_emissives.png
+
+Material: GenericPBR_Fling
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/fling_emissives.png
+
+Material: GenericPBR_Jammer
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/ftl_jammer_emissives.png
+	
+Material: GenericPBR_Defense_Station
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/defense_station_emissives.png
+
+Material: GenericPBR_Research_Station
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/research_station_emissives.png
+
+Material: GenericPBR_Mainframe
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/mainframe_emissives.png
+		
+Material: GenericPBR_Telescope
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/vacuum_telescope_emissives.png
+
+Material: GenericPBR_MiningBase
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/asteroid_base_emissives.png
+
+Material: GenericPBR_Drydock
+	Inherit: PBRStationsTemplate
+	Blend: Alpha
+	Texture5: data/images/stationEmissives/drydock_emissives.png
+
+Material: GenericPBR_Habitat
+    Shader: PBRStations_Habitat
+    Blend: Alpha
+    Texture: data/shipsets/volkur/diffuse.png
+    Texture2: data/shipsets/volkur/normal.png
+    Texture3: data/shipsets/volkur/masks.png
+    Texture4: data/shipsets/volkur/damaged.png
+    Texture5: data/images/stationEmissives/habitat_emissives.png
+    Texture6: data/images/planets/biomes.png
+    Cubemap7: data/images/skycube.png
+
+Material: GenericPBR_Beacon
+	Shader: PBRStations_Beacon
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/images/stationEmissives/beacon_emissives.png
+	Cubemap6: data/images/skycube.png
+
+Material: GenericPBR_FTLStorage
+	Shader: PBRStations_FTLStorage
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/images/stationEmissives/ftl_storage_emissives.png
+	Cubemap6: data/images/skycube.png
+
+Material: GenericPBR_Forge
+	Shader: PBRStations_Forge
+	Blend: Alpha
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/images/stationEmissives/stellar_forge_emissives.png
+	Cubemap6: data/images/skycube.png

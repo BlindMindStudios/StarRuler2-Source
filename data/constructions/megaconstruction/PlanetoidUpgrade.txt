@@ -1,0 +1,17 @@
+Construction: PlanetoidUpgrade
+	Name: #CONS_PLANETOID_UPGRADE
+	Description: #CONS_PLANETOID_UPGRADE_DESC
+
+	Category: Infrastructure
+
+	RequireStatus(ArtificialPlanetoid)
+	OnStart(AddStatus(ArtificialPlanetoid))
+	OnCancel(RemoveStatusInstance(ArtificialPlanetoid))
+
+	ConsumeCargoStatusCount(Ore, ArtificialPlanetoid, 1500, Allow Cancel = True)
+	AddBuildCostStatusCount(ArtificialPlanetoid, 500)
+	AddLaborCostStatusCount(ArtificialPlanetoid, 50)
+
+	AddSurfaceArea(Artificial, (4, 8))
+
+	RequireNotTrait(StarChildren)

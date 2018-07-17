@@ -1,0 +1,8 @@
+Status: Expanded
+	Name: #STATUS_EXPANDED
+	Description: #STATUS_EXPANDED_DESC
+	Icon: HexagonSubsystems::4
+
+	Unique: True
+
+	AddFleetCommand(300)

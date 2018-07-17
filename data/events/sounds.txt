@@ -1,0 +1,2 @@
+void addAmbientSource(string sound, int id, vec3d pos, double scale) -> client::ambience::addAmbientSource
+void removeAmbientSource(int id) -> client::ambience::removeAmbientSource

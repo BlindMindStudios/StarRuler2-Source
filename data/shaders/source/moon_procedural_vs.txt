@@ -1,0 +1,59 @@
+#version 120
+const int nLightCount = 2;
+attribute vec4 in_vertex;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+attribute vec4 in_color;
+attribute vec4 in_uv2;
+ 
+uniform float time;
+//uniform vec3 wsPos;
+uniform vec4 wsRot;
+ 
+varying vec4 uvNoise;
+varying vec3 normal, v, vertCol;
+varying vec2 uv, uv2, uv3, uvB[4];
+varying float pulse;
+varying vec3 light[nLightCount];
+varying vec3 origo;
+ 
+const vec2 fractions = vec2(0.984375, 0.0078125);
+ 
+float square(float x) {
+    return x*x;
+}
+ 
+vec3 wsAllign(vec3 x){
+    return x + 2.0 * cross(wsRot.xyz, cross(wsRot.xyz, x) + wsRot.w * x);
+}
+ 
+vec2 invertBlurEdge(vec2 uvB){
+    return abs(fract((uvB + 1.0) * 0.5) - 0.5) * 2.0;
+}
+ 
+void main()
+{
+    origo = in_vertex.xyz;
+    pulse = abs(time  * 2.0 - 1.0);
+    vec4 pos = gl_ModelViewMatrix * in_vertex;
+   
+    // convert view, normal and light vectors to world space and quaternion correct for model rotation
+    mat3 tcamrot = transpose(mat3x3(gl_ModelViewMatrix));
+    v = normalize(wsAllign(normalize(tcamrot * -pos.xyz)));
+   
+    // special view vector to correct just for cubemap reflections
+    normal = normalize(tcamrot * (gl_NormalMatrix * wsAllign(normalize(in_normal))));
+    for (int i = 0; i < nLightCount; i++) {
+        light[i] = wsAllign(((tcamrot * (((gl_LightSource[i].position)).xyz - pos.xyz))));
+    }
+   
+    uv = in_uv;//gridUV.xy * 3.0; // still 1/3rd to compensate for vert precision
+    uv2 = in_uv2.xy;
+    uv3 = in_uv2.zw;
+ 
+    uv3.x = 1.0 - uv3.x;
+   
+    vertCol = in_color.rgb;
+   
+    gl_Position = gl_ProjectionMatrix * pos;
+}

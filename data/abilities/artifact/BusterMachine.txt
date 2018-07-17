@@ -1,0 +1,10 @@
+Ability: BusterMachine
+	Name: #ABL_BUSTER_MACHINE
+	Description: #ABL_BUSTER_MACHINE_DESC
+	Icon: HexagonSubsystems::6 * #e900ff
+	Activate Sound: generic_activate_2
+
+	Energy Cost: 1500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	SpawnShip(Buster Machine, Creeps)

@@ -1,0 +1,11 @@
+Ability: Cloak
+	Name: #ABL_CLOAK
+	Description: #ABL_CLOAK_DESC
+	Icon: PlateArmor * #5188e6a0
+
+	Cooldown: 5
+
+	ShowShipSizeValue(RESOURCE_ENERGY, 0.5, 0.005, ResourceIcon::2, #PER_SECOND, #42b4bd)
+	RequireEnergyMaintenance(0.5, 0.005)
+
+	IsStatusToggle(Cloaked)

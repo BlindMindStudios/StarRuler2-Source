@@ -1,0 +1,26 @@
+BCAT_Actions: Actions
+BCAT_Beacons: Beacons
+BCAT_Upgrades: Upgrades
+
+CONS_MOON_BASE: Moon Base
+CONS_MOON_BASE_DESC: <<
+	Construct a large amount of infrastructure on one of the planet's moons, making more area available for placing buildings and increasing the maximum population of the planet by 2.
+
+	Only one moon base may be constructed for every moon present in orbit of the planet.
+>>
+
+CONS_FLARE_BOMB: Flare Bomb
+CONS_FLARE_BOMB_DESC: <<
+	Construct a flare bomb using plans recovered from remnant artifacts.
+
+	Flare bombs can be used on stars. After a 60 second channel period, the star is triggered to emit a critical flare, wiping out all population in the solar system but leaving everything else intact. The planets in the system are irradiated for the next 5 minutes and cannot be colonized.
+
+	The flare bomb ship is destroyed in the process.
+>>
+
+CONS_ARTIFICIAL_MOON: Artificial Moon
+CONS_ARTIFICIAL_MOON_DESC: <<
+	Construct an artificial moon to orbit this planet. Only one artificial moon can be constructed around a planet.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Building an artificial moon requires Ore mined from asteroids.[/color][/b][/img]
+>>

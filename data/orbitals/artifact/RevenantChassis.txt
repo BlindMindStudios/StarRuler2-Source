@@ -1,0 +1,33 @@
+Module: RevenantChassis
+	Name: #ORB_REVENANT_CHASSIS
+	Blurb: #ORB_REVENANT_BLURB
+	Description: #ABL_REVENANT_CHASSIS_DESC
+	Icon: GuiOrbitalIcons::25
+
+	Core: True
+	Standalone: True
+
+	Health: 50000
+	Armor: 20000
+
+	Model: RevenantChassis
+	Material: TyrantPBRAdvanced
+	Size: 58
+
+	Strategic Icon: OrbitalIcons::25
+
+	CannotBuildManually()
+	EnableModifier( BuildCostFactor(0.5) )
+
+	OnDisable( SpawnArtifact(RevenantChassis) )
+	OnDisable( Destroy() )
+
+	ModEmpireAttribute(RevenantParts, Add, 1)
+	OnEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+	OnEmpireAttributeGTE(RevenantParts, 4, SpawnShip(The Revenant, Design From = Creeps))
+	OnEmpireAttributeGTE(RevenantParts, 4, GiveAchievement(ACH_AIDOXE))
+	OnEmpireAttributeGTE(RevenantParts, 4, Destroy())
+	OnEmpireAttributeGTE(RevenantParts, 4, ModAttribute(RevenantParts, Add, -5))
+
+	GloballyVisible()

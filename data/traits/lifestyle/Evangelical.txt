@@ -1,0 +1,10 @@
+Trait: Evangelical
+	Name: #TRAIT_EVANGELICAL
+	Description: #TRAIT_EVANGELICAL_DESC
+	Order: 4
+
+	Icon: AttributeIcons::1 * #ffff00
+	Color: #ffff00
+
+	Category: Lifestyle
+	Unique: Lifestyle

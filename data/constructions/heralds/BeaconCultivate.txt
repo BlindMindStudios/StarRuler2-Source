@@ -1,0 +1,26 @@
+Construction: BeaconCultivate
+	Name: #CONS_BEACON_CULTIVATE
+	Description: #CONS_BEACON_CULTIVATE_DESC
+
+	Category: Upgrades
+	In Context: True
+
+	Build Cost: 500
+	Labor Cost: 10
+
+	Target: planet = Object
+	TargetFilterType(planet, Planet)
+	TargetFilterOwned(planet)
+
+	RequireOnOrbital(Beacon)
+
+	OnStart(ModAttribute(BeaconCultivateCost, Add, 1))
+	OnCancel(ModAttribute(BeaconCultivateCost, Add, -1))
+
+	Trigger(planet, AddPlanetResource(Soylent2))
+	Trigger(planet, AddMaxPopulation(-1))
+
+	ConsumeCargoAttribute(ResearchCargo, BeaconCultivateCost, Multiply = 250, Base Amount = 500)
+
+	AddBuildCostAttribute(BeaconCultivateCost, Multiply = 100)
+	AddLaborCostAttribute(BeaconCultivateCost, Multiply = 10)

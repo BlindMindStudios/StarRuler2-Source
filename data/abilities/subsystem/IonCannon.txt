@@ -1,0 +1,21 @@
+Ability: IonCannon
+	Name: #ABL_ION_CANNON
+	Description: #ABL_ION_CANNON_DESC
+	Icon: HexagonSubsystems::6 * #ff8d00
+
+	Range: 600
+	Energy Cost: 500
+	Cooldown: 60
+
+	Target: targ = Object
+	TargetFilterWar(targ)
+	TargetFilterFlagship(targ)
+
+	RelativeSizeEnergyCost(targ, Factor = 0.75)
+	TriggerBeamEffect(targ, 4.0, #ff8d00, Tractor, Width = 2)
+
+	AddStatusTo(targ, Entangled, Sys.Duration:120)
+
+	ShowSubsystemVariable(Sys.Duration:120, Format = #TIME_S, Name = #DURATION, Icon = ContextIcons::1, Color = #80baff)
+
+	SubsystemOrConsumeStatus(IonCannon)

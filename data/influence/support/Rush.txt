@@ -1,0 +1,24 @@
+Card: Rush
+	Name: #CARD_RUSH
+	Description: #CARD_RUSH_DESC
+	Color: #fa00ff
+
+	Icon: CardIcons::24
+
+	Class: Support
+	Rarity: Rare
+	Side: Neutral
+
+	Base Purchase Cost: 3
+	Base Play Cost: 6
+
+	LogVoteEvent(Neutral = #CARD_RUSH_LOG)
+	AlwaysActiveEffect()
+
+	LimitPerVote(1, Per Empire = False)
+	MultiplyVotePositiveSpeed(2.0)
+	AddVotePositiveCostPenalty(+1)
+
+	CanOnlyPlayIfSupporting()
+
+	AI: VoteAlwaysPositive(0.4)

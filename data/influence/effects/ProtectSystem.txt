@@ -1,0 +1,41 @@
+Card: ProtectSystem
+	Name: #CARD_PROTECT_SYSTEM
+	Description: #CARD_PROTECT_SYSTEM_DESC
+
+	Target: system = Object
+	
+	Icon: CardIcons::17
+
+	Color: #ffa4ff
+	Class: Effect
+	Rarity: Epic
+
+	Base Purchase Cost: 2
+	Quality Purchase Cost: 2
+
+	Base Play Cost: 5
+	Quality Play Cost: 2
+
+	Max Quality: 3
+
+	TargetFilterRegion(system)
+	TargetFilterRegionOwned(system)
+	ApplyRegionTargetCostMod(system)
+
+	NotifyAll(#PROTECT_SYSTEM_NOTIFY)
+
+	ShowDuration(300, Per Quality = 300)
+	CreateEffect(ProtectSystem, system, Quality Duration = 300)
+
+	AI: PlayOnDefendingSystem(system)
+
+Effect: ProtectSystem
+	Name: #PROTECT_SYSTEM_EFFECT
+	Color: #ffa4ff
+
+	Target: system = Object
+
+	Default Duration: 300
+	Upkeep: 0.35
+
+	ProtectSystem(system)

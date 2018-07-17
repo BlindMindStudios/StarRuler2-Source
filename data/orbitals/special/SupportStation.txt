@@ -1,0 +1,20 @@
+Module: SupportStation
+	Name: #ORB_SUPPORT_STATION
+	Blurb: #ORB_SUPPORT_STATION_BLURB
+	Description: #ORB_SUPPORT_STATION_BLURB
+	Icon: GuiOrbitalIcons::7
+	Strategic Icon: OrbitalIcons::7
+
+	Health: 2000
+	Armor: 3000
+
+	Size: 15
+
+	Model: Depot
+	Material: GenericPBR_Depot
+
+	CannotBuildManually()
+	AddHealthEmpireAttribute(StaticDamageFactor, 5000)
+	AddArmorEmpireAttribute(StaticDamageFactor, 5000)
+
+	GrantAbility(SupportBeam)

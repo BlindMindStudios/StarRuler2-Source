@@ -1,0 +1,18 @@
+Building: SpaceElevator
+	Name: #BLD_SPACE_ELEVATOR
+	Description: #BLD_SPACE_ELEVATOR_DESC
+	Sprite: SpaceElevator
+
+	Category: Infrastructure
+
+	Size: 2x5
+	Base Cost: 750
+	Build Time: 120
+
+	RequireNotTrait(Ancient)
+
+	ModSupportBuildSpeed(+0.4)
+	IfSystemFlag(CommerceStation, AddResource(Money, 1.6)) #version<125
+
+	AddPlanetGfxFlag(SpaceElevator)
+	ConflictBuilding(SpaceElevator)

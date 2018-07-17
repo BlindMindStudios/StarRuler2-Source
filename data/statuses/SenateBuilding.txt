@@ -1,0 +1,11 @@
+Status: SenateBuilding
+	Name: #STATUS_SENATE_BUILDING
+	Description: #STATUS_SENATE_BUILDING_DESC
+	Icon: BuildingSprites::11
+
+	AddResourceFromLevel(Influence, Factor = 1.0)
+	AddResourceFromGlobal(Influence, SenateBuildingCount, Factor = 2.0)
+	ModEmpireAttribute(VoteStartSupport, Add, +2.0)
+	WorthPoints(200)
+
+	ModEmpireAttribute(HaveSenateBuilding, Add, 1)

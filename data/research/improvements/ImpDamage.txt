@@ -1,0 +1,41 @@
+Technology: ImpDamage
+	Name: #R_IMP_DAMAGE
+	Blurb: #R_IMP_DAMAGE_BLURB:20%
+	Description: #R_IMP_DAMAGE_DESC:20%
+
+	Icon: techImpact * #ff8000
+	Color: #ff8000
+
+	Point Cost: 1000
+	Time Cost: 180
+
+	AddModifier( tag/Weapon::DamageFactor(1.2) )
+	ModAttribute(StaticDamageFactor, Multiply, 1.2)
+
+Technology: ImpDamage2
+	Name: #R_IMP_DAMAGE2
+	Blurb: #R_IMP_DAMAGE_BLURB:40%
+	Description: #R_IMP_DAMAGE_DESC:40%
+
+	Icon: techImpact2*#ffff00
+	Color: #ff8000
+
+	Point Cost: 1500
+	Time Cost: 180
+
+	AddModifier( tag/Weapon::DamageFactor(1.4) )
+	ModAttribute(StaticDamageFactor, Multiply, 1.4)
+
+Technology: ImpDamageSmall
+	Name: #R_IMP_DAMAGE_SMALL
+	Blurb: #R_IMP_DAMAGE_BLURB:10%
+	Description: #R_IMP_DAMAGE_DESC:10%
+
+	Icon: techImpact * #ff8000
+	Color: #ff8000
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddModifier( tag/Weapon::DamageFactor(1.1) )
+	ModAttribute(StaticDamageFactor, Multiply, 1.1)

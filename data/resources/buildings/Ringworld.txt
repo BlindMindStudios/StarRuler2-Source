@@ -1,0 +1,29 @@
+Resource: Ringworld
+	Name: #RINGWORLD
+	Description: #RINGWORLD_DESC
+	Artificial: True
+
+	Level: 0
+	Limitless Level: True
+	Can Be Terraformed: False
+	Exportable: False
+
+	Small Icon: ResourceIconsSmall::105
+
+	RegenSurface(160, 8, Biome Count = 3)
+
+	ForcePlanetType(Ringworld)
+	ForceUsefulSurface(0.6, Forest)
+
+	OnEnable(MoveToSystemCenter())
+	SetOrbitSpin(60)
+
+	RepeatPlanetLevel(ModLoyalty(20), Base = 1)
+	RepeatPlanetLevel(AddMaxPopulation(10))
+	RepeatPlanetLevel(ModTileDevelopRate(+1.0))
+	RepeatPlanetLevel(ModExistingPressure(Labor, +2), Base = 1)
+	RepeatPlanetLevel(ModExistingPressure(Money, +2), Base = 1)
+	RepeatPlanetLevel(ModExistingPressure(Research, +2), Base = 1)
+	RepeatPlanetLevel(ModExistingPressure(Influence, +2), Base = 1)
+	RepeatPlanetLevel(ModExistingPressure(Defense, +2), Base = 1)
+	RepeatPlanetLevel(ModExistingPressure(Energy, +2), Base = 1)

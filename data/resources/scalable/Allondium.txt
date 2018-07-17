@@ -1,0 +1,33 @@
+Resource: Allondium
+	Name: #ALLONDIUM
+	Blurb: #ALLONDIUM_BLURB
+	Description: #ALLONDIUM_DESC
+	Native Biome: Mountains
+	Class: Scalable
+
+	Small Icon: ResourceIconsSmall::61
+	Pressure: 1 Influence
+
+	Rarity Level: 3
+	Frequency: 2
+
+	Limitless Level: True
+	Exportable: False
+	
+	ModCivResourceMult(Influence, +0.1)
+	RepeatPlanetLevel(ModCivResourceMult(Influence, +0.1))
+
+	IfLevel(0, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 600), Exact = True) #version<116
+	IfLevel(1, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 480), Exact = True) #version<116
+	IfLevel(2, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 360), Exact = True) #version<116
+	IfLevel(3, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 240), Exact = True) #version<116
+	IfLevel(4, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 120), Exact = True) #version<116
+	IfLevel(5, TriggerPeriodic(GainRandomInfluenceCards(1), Interval = 60), Exact = True) #version<116
+
+	IfLevel(2, ModEmpireAttribute(InfluencePlacementMod, Add, -1)) #version>=116
+	IfLevel(4, ModEmpireAttribute(InfluencePlacementMod, Add, -1)) #version>=116
+
+	IfLevel(4, GrantAbility(BuyNameFlagship)) #version>=116
+	IfLevel(4, GrantAbility(BuyAnnexPlanet)) #version>=116
+
+	IfLevel(5, ModEmpireAttribute(SupportCardCostMod, Add, -3)) #version>=116

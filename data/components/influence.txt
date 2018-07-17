@@ -1,0 +1,51 @@
+Empire.InfluenceManager : components.InfluenceManager::InfluenceManager {
+restricted local:
+	int get_Influence();
+	double get_InfluenceIncome();
+	double get_InfluencePercentage();
+	double get_InfluenceEfficiency();
+	double get_InfluenceCap();
+	double get_InfluenceFactor();
+	uint getInfluenceCardCount();
+	InfluenceCard@[] getInfluenceCards();
+	int getInfluenceStock();
+
+local:
+	InfluenceCard@[] getInfluenceCard(int id);
+	uint getInfluenceCardType(int id);
+	int getInfluenceCardUses(int id);
+	int getInfluenceCardQuality(int id);
+
+	uint getEdictType();
+	Empire@ getEdictEmpire();
+	Object@ getEdictObject();
+
+restricted remote:
+	void clearEdict();
+	void conquerEdict(Empire@ onEmpire);
+
+server:
+	void addInfluence(double amount);
+	void modInfluence(int amount);
+	void modInfluenceIncome(int amount);
+	void modInfluenceFactor(double amount);
+
+	void takeCardUse(int id, uint amount = 1);
+	void copyCardTo(int id, Empire@ emp, int uses = 0, bool maxQuality = false, int addQuality = 0);
+	void gainRandomLeverage(Empire@ towards, double qualityFactor = 1.0);
+	bool gainIntelligence(Empire@ towards, uint amount = 1);
+	async void gainCard(uint typeId, int uses = 1, int quality = 0);
+
+	uint getUsesOfCardType(uint id);
+	int getCostOfCard(int id);
+
+	int reserveInfluence(double factor, double timer = -1.0);
+	void removeInfluenceReservation(int id);
+
+	void influenceTick(double time);
+	bool consumeInfluence(int amount);
+
+	void writeInfluenceManager(Message& msg, bool initial = false) const;
+shadow:
+	void readInfluenceManager(Message& msg);
+}

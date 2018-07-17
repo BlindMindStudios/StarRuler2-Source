@@ -1,0 +1,7 @@
+//This is a dummy effector to add fire arc support to the deflector
+Effector: Deflector
+	Value: Arc = Arc
+	
+	FireArc: Arc
+	PhysicalType: Beam
+		TrailCol: #348c99, #348c99

@@ -1,0 +1,14 @@
+Technology: Population
+	Name: #R_POPULATION
+	Description: #R_POPULATION_DESC:1
+
+	Icon: ResourceIcon::8
+	Color: #b63fff
+
+	Category: Basic Upgrades
+	Class: Boost
+
+	Point Cost: 600
+	Time Cost: 80
+
+	ModAttribute(PopulationLevel3Mod, Add, 1)

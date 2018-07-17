@@ -1,0 +1,20 @@
+Template: tag/BeamTool
+	Defaults:
+		Range := 100
+		Duration := 1
+		Cooldown := 1
+		out SupplyDrain := SupplyCost * (Duration / (Duration + Cooldown))
+		out SupplyFireCost := SupplyCost * Duration
+		Tracking := 1
+
+	Modifier: RangeFactor(factor)
+		Range := Range * factor
+	
+	Modifier: DurationFactor(factor)
+		Duration := Duration * factor
+	
+	Modifier: CooldownFactor(factor)
+		Cooldown := Cooldown * factor
+	
+	Modifier: TrackingFactor(factor)
+		Tracking := Tracking * factor

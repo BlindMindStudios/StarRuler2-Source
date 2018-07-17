@@ -1,0 +1,51 @@
+Subsystem: SupportMissileLauncher
+	Name: #MISSILELAUNCHER_NAME
+	Description: #MISSILELAUNCHER_DESC
+	BaseColor: #b746f9
+	TypeColor: #b746f9
+	Picture: SubsystemButtonArt::4
+	Elevation: 2
+	
+	Tags: WeaponBase, MissileBase, Category:Weapons, Rotatable, Homing
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsExplosiveWeapon, HasInternals
+	Hull: Support, Satellite
+	
+	Size := HexSize * Hexes
+	Range := Size + 500
+	Damage := Size * 8.8
+	Reload := 5.0 * min(1.0 + Size/512, 2.0)
+	Speed := 75
+	Tracking := 3
+	SupplyCost := Size * 3.0
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.LaborCost := 0.07 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := Hex.BuildCost * 5
+		Hex.Mass := Hex.Mass * 5
+
+		Sprite: MissileLauncher::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 28.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: Missile
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Reload

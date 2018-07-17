@@ -1,0 +1,153 @@
+#version 120
+const int nLightCount = 2;
+
+uniform sampler2D diffuseRGBspecA, cities;
+uniform float cycles[6];
+uniform float population;
+
+varying vec3 normal;
+varying vec3 npos;
+varying vec2 uv;
+
+const float waveHeight = 2.0;
+//Wave length must be an integer, or there will be hitches in the animation
+const float waveLength = 2.0;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+vec3 wave(vec3 epicenter, vec3 n, float t, float wl) {
+	float ndot = 1.0 + dot(epicenter, n);
+	float bend = cos((t + ndot * ndot) * 6.28318530718 * (waveLength + wl * 12.0)) * waveHeight / (1.0 + wl);
+	vec3 toward = cross(cross(n,epicenter),n);
+	return (toward * bend) + (n * (1.0 - abs(bend)));
+}
+
+vec3 waveGroup_0(vec3 n) {
+	vec3 nrm = vec3(0.0);
+	nrm += wave(vec3(0.165265,0.797878,0.579722), n, cycles[0], 0.0);
+	nrm += wave(vec3(-0.781471,-0.597439,0.179918), n, cycles[1], 0.0);
+	nrm += wave(vec3(-0.198213,-0.434398,-0.878641), n, cycles[2], 0.0);
+	nrm += wave(vec3(-0.386122,-0.899855,-0.202907), n, cycles[3], 0.0);
+	nrm += wave(vec3(0.698788,0.696115,0.164682), n, cycles[4], 0.0);
+	nrm += wave(vec3(-0.949896,0.303522,0.0746418), n, cycles[5], 0.0);
+	return nrm;
+}
+
+vec3 waveGroup_1(vec3 n) {
+	vec3 nrm = vec3(0.0);
+	nrm += wave(vec3(-0.646514,-0.557331,-0.520963), n, cycles[0], 1.0);
+	nrm += wave(vec3(-0.901481,0.415232,0.122129), n, cycles[1], 1.0);
+	nrm += wave(vec3(-0.484168,-0.102868,0.868907), n, cycles[2], 1.0);
+	nrm += wave(vec3(0.908183,-0.350865,0.228248), n, cycles[3], 1.0);
+	nrm += wave(vec3(-0.678018,-0.715496,0.168393), n, cycles[4], 1.0);
+	nrm += wave(vec3(-0.680885,0.544192,-0.490153), n, cycles[5], 1.0);
+	return nrm;
+}
+
+vec3 waveGroup_2(vec3 n) {
+	vec3 nrm = vec3(0.0);
+	nrm += wave(vec3(-0.460565,-0.0886464,-0.883188), n, cycles[0], 2.0);
+	nrm += wave(vec3(-0.948646,-0.284376,-0.138568), n, cycles[1], 2.1);
+	nrm += wave(vec3(-0.921532,0.114724,-0.370968), n, cycles[2], 2.2);
+	nrm += wave(vec3(-0.514358,-0.623654,0.588635), n, cycles[3], 2.3);
+	nrm += wave(vec3(0.664701,-0.730222,0.157952), n, cycles[4], 2.4);
+	nrm += wave(vec3(-0.648192,-0.645786,-0.403493), n, cycles[5], 2.5);
+	return nrm;
+}
+
+vec3 waveGroup_3(vec3 n) {
+	vec3 nrm = vec3(0.0);
+	nrm += wave(vec3(-0.863986,-0.267181,0.42678), n, cycles[0], 3.0);
+	nrm += wave(vec3(-0.391345,0.662204,-0.639011), n, cycles[1], 3.1);
+	nrm += wave(vec3(0.623301,0.247507,-0.741779), n, cycles[2], 3.2);
+	nrm += wave(vec3(0.071236,-0.976658,0.202645), n, cycles[3], 3.3);
+	nrm += wave(vec3(-0.459855,0.703215,0.542238), n, cycles[4], 3.4);
+	nrm += wave(vec3(-0.553626,0.678452,0.482909), n, cycles[5], 3.5);
+	return nrm;
+}
+
+vec3 waveGroup_4(vec3 n) {
+	vec3 nrm = vec3(0.0);
+	nrm += wave(vec3(-0.200851,0.941926,0.269135), n, cycles[0], 3.5);
+	nrm += wave(vec3(-0.555743,-0.510164,-0.656416), n, cycles[1], 3.6);
+	nrm += wave(vec3(0.778631,-0.545074,-0.31085), n, cycles[2], 3.7);
+	nrm += wave(vec3(0.497998,-0.636667,-0.588773), n, cycles[3], 3.8);
+	nrm += wave(vec3(-0.914133,0.301103,-0.271472), n, cycles[4], 3.9);
+	nrm += wave(vec3(0.412585,-0.796282,-0.442389), n, cycles[5], 4.0);
+	return nrm;
+}
+
+void main() {
+	vec3 color = gl_FrontMaterial.diffuse.rgb;
+	vec4 texSamp = texture2D(diffuseRGBspecA, uv);
+	vec3 matspec = gl_FrontMaterial.specular.rgb * texSamp.a;
+	float shininess = gl_FrontMaterial.shininess;
+
+	vec3 norm = normalize(normal);
+	vec3 v = normalize(npos);
+	
+	vec3 nfront = normalize(gl_NormalMatrix * vec3(1.0,0.0,0.0));
+	vec3 nleft = normalize(gl_NormalMatrix * vec3(0.0,0.0,1.0));
+	vec3 nup = cross(nfront,nleft);
+	
+	vec3 n = normalize(transpose(gl_NormalMatrix) * normal);
+	vec3 bent = 
+		waveGroup_0(n) + waveGroup_1(n) +
+		waveGroup_2(n) + waveGroup_3(n) +
+		waveGroup_4(n);
+	n = normalize(gl_NormalMatrix * bent);
+	
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+
+	vec3 diffuse = gl_LightModel.ambient.rgb * gl_FrontMaterial.ambient.rgb;
+	vec3 dNorm = normalize(n * 0.2 + norm * 0.8);
+  
+	vec3 specular = vec3(0.0,0.0,0.0);
+	{ //if(nLightCount > 0)
+		const int i = 0;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float surfaceNdL = pow(max(dot(norm, light[i]), 0.0), 0.5);
+		float nl = dot(dNorm, light[i]);
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * max(falloff * nl * surfaceNdL, 0.0);
+		
+		vec3 r = normalize(-reflect(normalize(light[i]), n));
+		
+		float specIntensity = pow(max(0.0, dot(r, v)), shininess);
+		specIntensity += max(pow(max(-dot(light[i],v),0.0),8.0) * pow(1.0 - n.z, 2.0),0.0);
+		
+		specular += gl_LightSource[i].specular.rgb * (specIntensity * falloff * surfaceNdL);
+	}
+	{ //if(nLightCount > 1)
+		const int i = 1;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float surfaceNdL = pow(dot(norm, light[i]), 0.5);
+		float nl = dot(dNorm, light[i]);
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * max(falloff * nl, 0.0);
+		
+		vec3 r = normalize(-reflect(normalize(light[i]), n));
+		
+		float specIntensity = pow(max(0.0, dot(r, v)), shininess);
+		specIntensity += max(pow(max(-dot(light[i],v),0.0),8.0) * pow(1.0 - n.z, 2.0),0.0);
+		
+		specular += gl_LightSource[i].specular.rgb * (specIntensity * falloff);
+	}
+	
+	float cityLevel = max(0.0, texture2D(cities, uv).r + (population / (population + 8.0)) - 1.0) * dot(n,norm);
+	
+	gl_FragColor.rgb = (diffuse * color) * texSamp.rgb + (specular * matspec) + cityLevel * vec3(1.0,0.9,0.55);
+	gl_FragColor.a = 1.0;
+}

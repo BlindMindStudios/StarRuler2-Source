@@ -1,0 +1,543 @@
+Shader: BaseTexture
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/base_ps.txt
+	
+	Variable: tex texture = 0
+
+Shader: Flat
+	Vertex: data/shaders/source/base_mesh_uv_vs.txt
+	Fragment: data/shaders/source/base_mesh_ps.txt
+	
+	Variable: tex texture = 0
+
+Shader: Skycube
+	Vertex: data/shaders/source/skybox_vs.txt
+	Fragment: data/shaders/source/skybox_detailed_ps.txt
+	Settings Reload: True
+
+	Variable: tex detail = 0
+	Variable: tex skybox = 1
+
+Shader: ColoredFlat
+	Vertex: data/shaders/source/base_mesh_uv_vs.txt
+	Fragment: data/shaders/source/base_mesh_colored_ps.txt
+
+	Variable: tex texture = 0
+	Variable: vec4 color = node_color
+
+Shader: Lighting
+	Vertex: data/shaders/source/smooth_light_vs.txt
+	Fragment: data/shaders/source/smooth_light_ps.txt
+
+	Variable: tex diffuseRGBspecA = 0
+
+Shader: NormalLighting
+	Vertex: data/shaders/source/smooth_light_normal_vs.txt
+	Fragment: data/shaders/source/smooth_light_normal_ps.txt
+
+	Variable: tex diffuseRGB = 0
+	Variable: tex normalMap = 1
+
+Shader: GlowLighting
+	Vertex: data/shaders/source/smooth_light_vs.txt
+	Fragment: data/shaders/source/smooth_light_glow_ps.txt
+
+	Variable: tex diffuseRGBglowA = 0
+
+Shader: GlowNormalLighting
+	Vertex: data/shaders/source/smooth_light_normal_vs.txt
+	Fragment: data/shaders/source/smooth_light_normal_glow_ps.txt
+
+	Variable: tex diffuseRGBglowA = 0
+	Variable: tex normalMap = 1
+
+Shader: SupportShip
+	Vertex: data/shaders/source/support_ship_vs.txt
+	Fragment: data/shaders/source/support_ship_ps.txt
+
+	Variable: tex diffuseRGB = 0
+	Variable: tex normalMap = 1
+	Variable: tex specularMap = 2
+	Variable: tex glossMap = 3
+	Variable: tex skybox = 4
+	Variable: tex masks = 5
+	Variable: vec4 ownerColor = node_color
+	Variable: vec3 glowColor = <1.0,0.9,0.1>
+	Variable: float thrust = 1.0
+	Variable: mat3 invView = inverse_view
+	Variable: float camDist = node_distance
+	Variable: float nodeScale = node_scale
+
+Shader: PBRShip
+	Vertex: data/shaders/source/pbr_ship_vs.txt
+	Fragment: data/shaders/source/pbr_ship_ps.txt
+
+	Variable: tex diffuse = 0
+	Variable: tex normalAOlights = 1
+	Variable: tex shield = 2
+	Variable: tex masks = 3
+	Variable: tex skybox = 4
+	Variable: vec4 ownerColor = node_color
+	Variable: vec3 glowColor = <1.0,0.9,0.1>
+	Variable: float thrust = 1.0
+	Variable: float camDist = node_distance
+	Variable: float nodeScale = node_scale
+
+Shader: GhoooostShip
+	Vertex: data/shaders/source/support_ship_vs.txt
+	Fragment: data/shaders/source/ghoooost_ship_ps.txt
+
+	Variable: tex normalMap = 0
+
+//Renders a ship model as if it were a blueprint
+Shader: Blueprint
+	Vertex: data/shaders/source/blueprint_vs.txt
+	Fragment: data/shaders/source/blueprint_ps.txt
+	
+	Variable: tex diffuse = 0
+	
+Shader: PlanetRing
+	Vertex: data/shaders/source/planet_ring_vs.txt
+	Fragment: data/shaders/source/planet_ring_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: tex hardNoise = 1
+	Variable: vec2 starDir = global STAR_DIRECTION
+	Variable: float plSize = global PLANET_RING_RATIO
+	Variable: float ringMin = global RING_MIN
+	Variable: float ringMax = global RING_MAX
+	
+Shader: AccretionDisk
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/accretion_disk_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float time = game_time_cycle 240
+	
+Shader: Nova
+	Vertex: data/shaders/source/nova_vs.txt
+	Fragment: data/shaders/source/nova_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float age = global NOVA_AGE
+	//Variable: float time = game_time_cycle 15
+	
+Shader: StarSurface
+	Vertex: data/shaders/source/star_anim_vs.txt
+	Fragment: data/shaders/source/star_anim_high_ps.txt
+	Settings Reload: True
+
+	Variable: tex[2] texture = 0 1
+	Variable: float[5] cycles = game_time_cycle 120 152 109.6 194.72 117.68
+	Variable: float temperature = state_vars Star::temperature
+	Variable: float nodeScale = node_scale
+	Variable: vec4 wsRot = node_rotation
+
+Shader: PopupStarSurface
+	Vertex: data/shaders/source/star_anim_gui_vs.txt
+	Fragment: data/shaders/source/star_anim_gui_ps.txt
+	Settings Reload: True
+
+	Variable: tex[2] texture = 0 1
+	Variable: float[5] cycles = game_time_cycle 15 19 13.7 24.34 14.71
+	Variable: float temperature = global STAR_TEMP
+
+Shader: Corona
+	Vertex: data/shaders/source/corona_vs.txt
+	Fragment: data/shaders/source/corona_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec4 color = node_color
+	Variable: vec4 sprite_pos = sprite_pos
+	Variable: float time = game_time_cycle 240
+	Variable: float temperature = global STAR_TEMP
+	Variable: float scale = node_scale
+
+Shader: Prominence
+	Vertex: data/shaders/source/prominence_vs.txt
+	Fragment: data/shaders/source/prominence_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec4[8] curve = global BEZIER_POINTS
+
+Shader: ColoredDisc
+	Vertex: data/shaders/source/disc_vs.txt
+	Fragment: data/shaders/source/disc_ps.txt
+
+Shader: ColorFlicker
+	Vertex: data/shaders/source/flicker_vs.txt
+	Fragment: data/shaders/source/base_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float[2] time = game_time_cycle 0.025 0.031
+	Variable: float tOffset = unique
+
+Shader: NodeColorFlicker
+	Vertex: data/shaders/source/flicker_node_color_vs.txt
+	Fragment: data/shaders/source/base_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float[2] time = game_time_cycle 0.025 0.031
+	Variable: float tOffset = unique
+	Variable: vec4 color = node_color
+
+Shader: MaskColored
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/mask_colored_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: tex mask = 1
+
+Shader: NodeColored
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/colored_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec4 color = node_color
+
+Shader: NodeColoredSelectable
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/colored_selectable_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float selected = node_selected
+
+Shader: ShipGroup
+	Vertex: data/shaders/source/approach_uv_vs.txt
+	Fragment: data/shaders/source/ship_group_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: vec4 color = node_color
+	Variable: float selected = node_selected
+	Variable: vec4 glowColor = global GLOW_COLOR
+	Variable: float cycle = time_cycle 1.25
+	Variable: float approach = global APPROACH
+
+Shader: ColoredAdd
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/colored_add_ps.txt
+	
+	Variable: tex texture = 0
+
+Shader: SignedAdd
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/signed_add_ps.txt
+	
+	Variable: tex texture = 0
+
+Shader: SignedInverted
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/signed_inverted_ps.txt
+	
+	Variable: tex texture = 0
+
+Shader: BeamFade
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/beam_fade_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float cycle = game_time_cycle 2.0
+	Variable: float offset = unique
+
+Shader: Tractor
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/tractor_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: tex noise = 1
+	Variable: float cycle = game_time_cycle 8.0
+
+Shader: ColoredAddPlain
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/colored_add_plain_ps.txt
+
+Shader: Tiled
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/tiled_ps.txt
+	
+	Variable: tex texture = 0
+
+#if fallback
+	Shader: GuiSkin
+		Vertex: data/shaders/source/gui_skin_vs.txt
+		Fragment: data/shaders/source/gui_skin_simple_ps.txt
+		
+		Variable: tex texture = 0
+		Variable: vec2 texSize = tex_size 0
+		Variable: vec4 margin_src = skin_margin_src
+		Variable: vec4 margin_dest = skin_margin_dest
+		Variable: vec2 pos = skin_src_pos
+		Variable: vec2 size = skin_src_size
+		Variable: vec2 size_out = skin_dst_size
+		Variable: vec2 dim_mode = skin_dim_modes
+		Variable: float gradientCount = skin_grd_count
+		Variable: float gradientMode = skin_grd_mode
+		Variable: vec4 gradientRect = skin_grd_rects
+		Variable: vec4[4] gradientColors = skin_grd_colors
+#else
+	Shader: GuiSkin
+		Vertex: data/shaders/source/gui_skin_vs.txt
+		Fragment: data/shaders/source/gui_skin_ps.txt
+		
+		Variable: tex texture = 0
+		Variable: vec2 texSize = tex_size 0
+		Variable: vec4 margin_src = skin_margin_src
+		Variable: vec4 margin_dest = skin_margin_dest
+		Variable: vec2 pos = skin_src_pos
+		Variable: vec2 size = skin_src_size
+		Variable: vec2 size_out = skin_dst_size
+		Variable: vec2 dim_mode = skin_dim_modes
+		Variable: float gradientCount = skin_grd_count
+		Variable: float gradientMode = skin_grd_mode
+		Variable: vec4[8] gradientRects = skin_grd_rects
+		Variable: vec4[32] gradientColors = skin_grd_colors
+#endif
+
+Shader: HSVPalette
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/hsv_palette_ps.txt
+	
+	Variable: float value = global HSV_VALUE
+	Variable: float minSat = global HSV_SAT_START
+	Variable: float maxSat = global HSV_SAT_END
+
+Shader: Fullscreen
+	Vertex: data/shaders/source/fullscreen_vs.txt
+	Fragment: data/shaders/source/fs_plain_ps.txt
+	
+	Variable: tex screen = 0
+
+Shader: FullscreenPostProcess
+    Vertex: data/shaders/source/fs_post_process_vs.txt
+    Fragment: data/shaders/source/fs_post_process_ps.txt
+	Settings Reload: True
+
+    Variable: tex screen = 0
+    Variable: tex depthTex = 7
+    Variable: vec2 texSize = tex_size 0
+    Variable: vec2[2] lightPos = light_screen_position 0 1
+    Variable: float[2] lightActive = light_active 0 1
+    Variable: float cycle = game_time_cycle 240.0
+    Variable: float[2] lightRadius = light_radius 0 1
+
+Shader: MenuRender
+	Vertex: data/shaders/source/fullscreen_vs.txt
+	Fragment: data/shaders/source/fs_menu_ps.txt
+	
+	Variable: tex screen = 0
+
+Shader: MenuBlur
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/fs_menu_ps.txt
+	
+	Variable: tex screen = 0
+
+Shader: MenuSaveBackground
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/fs_menu_save_ps.txt
+	
+	Variable: tex screen = 0
+
+Shader: TradeLine
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/trade_line_ps.txt
+	
+	Variable: float time = game_time_cycle 15
+
+Shader: Hex
+	Vertex: data/shaders/source/hex_vs.txt
+	Fragment: data/shaders/source/hex_ps.txt
+
+Shader: CutOff
+	Vertex: data/shaders/source/cutoff_vs.txt
+	Fragment: data/shaders/source/cutoff_ps.txt
+
+	Variable: tex texture = 0
+	Variable: float cutoff = global CUTOFF_PCT
+
+Shader: WireframeCutOff
+	Vertex: data/shaders/source/cutoff_vs.txt
+	Fragment: data/shaders/source/wireframe_cutoff_ps.txt
+
+	Variable: float cutoff = global CUTOFF_PCT
+
+Shader: Desaturate
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/desaturate_ps.txt
+
+	Variable: tex texture = 0
+	Variable: float level = global SATURATION_LEVEL
+
+Shader: RadialProgress
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/radial_progress_ps.txt
+
+	Variable: float progress = global PROGRESS
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: RadialDimmed
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/radial_dim_ps.txt
+
+	Variable: tex texture = 0
+	Variable: float progress = global PROGRESS
+	Variable: float dim_factor = global DIM_FACTOR
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: Circle
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/circle_ps.txt
+
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: OrbitCircle
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/orbit_circle_ps.txt
+
+	Variable: float circle_min = global CIRCLE_MIN
+	Variable: float circle_max = global CIRCLE_MAX
+	Variable: vec4 sprite_pos = sprite_pos
+	Variable: vec4 captureColor = global CAPTURE_COLOR
+	Variable: float capturePct = global CAPTURE_PROGRESS
+
+Shader: FleetCircle
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/fleet_circle_ps.txt
+
+	Variable: tex texture = 0
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: RangeCircle
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/range_circle_ps.txt
+
+	Variable: vec4 sprite_pos = sprite_pos
+	Variable: float dist = node_distance
+	Variable: float scale = node_scale
+	Variable: float minRad = plane_minrad
+	Variable: float maxRad = plane_maxrad
+
+Shader: FireArc2D
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/fire_arc_ps.txt
+
+	Variable: vec4 sprite_pos = sprite_pos
+	Variable: float minRad = global MIN_RAD
+	Variable: float maxRad = global MAX_RAD
+
+Shader: Ping
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/ping_ps.txt
+
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: SystemPlane
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/system_plane_ps.txt
+
+	Variable: float planeDist = global PLANE_DISTANCE
+	Variable: float radius = global RADIUS
+	Variable: float inner_radius = global INNER_RADIUS
+	Variable: vec4 glowColor = global GLOW_COLOR
+	Variable: float cycle = time_cycle 2.5
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: GalaxyPlane
+	Vertex: data/shaders/source/radial_uv_vs.txt
+	Fragment: data/shaders/source/galaxy_plane_ps.txt
+
+	Variable: float planeDist = global PLANE_DISTANCE
+	Variable: float radius = global RADIUS
+	Variable: vec4 sprite_pos = sprite_pos
+
+Shader: Territory
+	Vertex: data/shaders/source/territory_vs.txt
+	Fragment: data/shaders/source/territory_ps.txt
+	
+	Variable: vec4 stip_color = global STIPPLE_COLOR
+
+Shader: DistantIcon
+	Vertex: data/shaders/source/approach_uv_vs.txt
+	Fragment: data/shaders/source/base_ps.txt
+
+	Variable: tex texture = 0
+	Variable: float approach = global APPROACH
+
+Shader: DistantIconLayered
+	Vertex: data/shaders/source/distant_icon_vs.txt
+	Fragment: data/shaders/source/distant_icon_ps.txt
+
+	Variable: tex[3] textures = 0, 1, 2
+	Variable: float approach = global APPROACH
+	Variable: float fade = global DISTANT_SPRITE_FADE
+	Variable: float innerScale1 = global DISTANT_SPRITE_SCALE1
+	Variable: vec4 sprite1 = global DISTANT_SPRITE1
+	Variable: float innerScale2 = global DISTANT_SPRITE_SCALE2
+	Variable: vec4 sprite2 = global DISTANT_SPRITE2
+
+Shader: DistantPlanetIcon
+	Vertex: data/shaders/source/distant_icon_vs.txt
+	Fragment: data/shaders/source/distant_planet_icon_ps.txt
+
+	Variable: tex[4] textures = 0, 1, 2, 3
+	Variable: float approach = global APPROACH
+	Variable: float fade = global DISTANT_SPRITE_FADE
+	Variable: float innerScale1 = global DISTANT_SPRITE_SCALE1
+	Variable: vec4 sprite1 = global DISTANT_SPRITE1
+	Variable: float innerScale2 = global DISTANT_SPRITE_SCALE2
+	Variable: vec4 sprite2 = global DISTANT_SPRITE2
+	Variable: float isDisabled = global IS_DISABLED
+	Variable: float isUsed = global IS_USED
+	Variable: float isExported = global IS_EXPORTED
+	Variable: float isColonizing = global IS_COLONIZING
+	Variable: float isOwned = global IS_OWNED
+	Variable: float isDecaying = global IS_DECAYING
+	Variable: float classIcon = global RESOURCE_CLASS
+	Variable: vec4 captureColor = global CAPTURE_COLOR
+	Variable: float capturePct = global CAPTURE_PROGRESS
+	Variable: vec4 disableColor = global DISABLE_COLOR
+
+Shader: DistantFadedIcon
+	Vertex: data/shaders/source/distant_faded_icon_vs.txt
+	Fragment: data/shaders/source/distant_faded_icon_ps.txt
+
+Shader: MoveBeam
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/movebeam_ps.txt
+
+Shader: Shield
+	Vertex: data/shaders/source/shield_vs.txt
+	Fragment: data/shaders/source/shield_ps.txt
+	Variable: float strength = global SHIELD_STRENGTH
+
+Shader: ShipIcon
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/ship_icon_ps.txt
+
+	Variable: tex texture = 0
+
+Shader: ShipDistantIcon
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/ship_distant_icon_ps.txt
+
+	Variable: tex texture = 0
+	Variable: float selected = node_selected
+
+Shader: ResearchBeam
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/research_beam_ps.txt
+
+	Variable: tex texture = 0
+
+Shader: ParticleLance
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/particle_lance_ps.txt
+
+	Variable: tex texture = 0
+
+Shader: InterpolateColor
+	Vertex: data/shaders/source/base_uv_vs.txt
+	Fragment: data/shaders/source/interpolate_ps.txt
+	
+	Variable: tex texture = 0
+	Variable: float factor = global FACTOR

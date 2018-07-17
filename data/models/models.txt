@@ -1,0 +1,296 @@
+Model: Fighter
+	Tangents: On
+	Mesh: data/models/Ship10.obj
+
+Model: Debris
+	Mesh: data/models/debris.obj
+
+Model: Asteroid4_lod3
+	Mesh: data/models/asteroid4_lod3.ogex
+
+Model: Asteroid4_lod2
+	Mesh: data/models/asteroid4_lod2.ogex
+	LOD: Asteroid4_lod3 > 40
+
+Model: Asteroid4_lod1
+	Mesh: data/models/asteroid4_lod1.ogex
+	LOD: Asteroid4_lod2 > 24
+
+Model: Asteroid4
+	Mesh: data/models/asteroid4_lod0.ogex
+	LOD: Asteroid4_lod1 > 8
+
+Model: Asteroid3_lod3
+	Mesh: data/models/asteroid3_lod3.ogex
+
+Model: Asteroid3_lod2
+	Mesh: data/models/asteroid3_lod2.ogex
+	LOD: Asteroid3_lod3 > 40
+	
+Model: Asteroid3_lod1
+	Mesh: data/models/asteroid3_lod1.ogex
+	LOD: Asteroid3_lod2 > 24
+
+Model: Asteroid3
+	Mesh: data/models/asteroid3_lod0.ogex
+	LOD: Asteroid3_lod1 > 8	
+	
+Model: Asteroid2_lod3
+	Mesh: data/models/asteroid2_lod3.ogex
+
+Model: Asteroid2_lod2
+	Mesh: data/models/asteroid2_lod2.ogex
+	LOD: Asteroid2_lod3 > 40
+	
+Model: Asteroid2_lod1
+	Mesh: data/models/asteroid2_lod1.ogex
+	LOD: Asteroid2_lod2 > 24
+
+Model: Asteroid2
+	Mesh: data/models/asteroid2_lod0.ogex
+	LOD: Asteroid2_lod1 > 8
+
+Model: Asteroid1_lod3
+	Mesh: data/models/asteroid1_lod3.ogex
+
+Model: Asteroid1_lod2
+	Mesh: data/models/asteroid1_lod2.ogex
+	LOD: Asteroid1_lod3 > 40
+
+Model: Asteroid1_lod1
+	Mesh: data/models/asteroid1_lod1.ogex
+	LOD: Asteroid1_lod2 > 24
+
+Model: Asteroid1
+	Mesh: data/models/asteroid1_lod0.ogex
+	LOD: Asteroid1_lod1 > 8
+	
+Model: Warpgate
+	Mesh: data/models/gate.ogex
+
+Model: Shipyard
+	Mesh: data/models/shipyard.ogex
+
+Model: Prominence
+	Mesh: data/models/prominence.obj
+	
+Model: Obelisk
+	Mesh: data/models/anomalies/obelisk.ogex
+
+Model: Artifact
+	Tangents: On
+	Mesh: data/models/artifact.ogex
+
+Model: ArtifactAdvanced
+	Tangents: On
+	Mesh: data/models/artifact_advanced.ogex
+	
+Model: Ship_Debris_1
+	Mesh: data/models/ship_debris_1.obj
+	
+Model: Ship_Debris_2
+	Mesh: data/models/ship_debris_2.obj
+
+Model: PlanetRing
+	Tangents: On
+	Mesh: data/models/planet_disc_32.obj
+
+Model: SporeShip
+	Mesh: data/models/spore-ship.obj
+
+Model: ColonyShip
+	Mesh: data/models/colony-ship.ogex
+
+Model: Habitat
+	Mesh: data/models/habitat.ogex
+
+Model: RingworldOuter
+	Mesh: data/models/ringworld_outer.ogex
+
+Model: RingworldInner
+	Mesh: data/models/ringworld_inner.ogex
+
+Model: RingworldLiving
+	Mesh: data/models/ringworld_living.ogex
+
+Model: RingworldAtmosphere
+	Mesh: data/models/ringworld_atmosphere.ogex
+
+Model: CommerceStation
+	Mesh: data/models/commerce_station.ogex
+
+Model: SolarEngine
+	Mesh: data/models/solar_engine.ogex
+
+Model: ScaffoldRound
+	Mesh: data/models/scaffold_round.ogex
+
+Model: Mainframe
+	Mesh: data/models/mainframe.ogex
+
+Model: DefenseStation
+	Mesh: data/models/defense_station.ogex
+
+Model: Depot
+	Mesh: data/models/depot.ogex
+
+Model: Fling
+	Mesh: data/models/fling_beacon.ogex
+
+Model: FTLJammer
+	Mesh: data/models/ftl_jammer.ogex
+
+Model: Temple
+	Mesh: data/models/star_temple.ogex
+
+Model: Research_Station
+	Mesh: data/models/research_station.ogex
+
+Model: Observatory
+	Mesh: data/models/observatory.ogex
+	
+Model: Outpost
+	Mesh: data/models/outpost.ogex
+
+Model: Drydock
+	Mesh: data/models/drydock.ogex
+
+Model: Beacon
+	Mesh: data/models/beacon.ogex
+
+Model: FTLStorage
+	Mesh: data/models/ftl_storage.ogex
+
+Model: Forge
+	Mesh: data/models/stellar_forge.ogex
+	
+Model: Skybox
+	Mesh: data/models/skybox.obj
+
+	
+Model: RevenantCannon
+	Mesh: data/models/revenant_cannon.ogex
+
+	
+Model: RevenantCore
+	Mesh: data/models/revenant_core.ogex
+
+	
+Model: RevenantChassis
+	Mesh: data/models/revenant_chassis.ogex
+
+	
+Model: RevenantEngine
+	Mesh: data/models/revenant_engine.ogex
+
+	
+Model: Wreckage00
+	Mesh: data/models/wreckage_00.obj
+	
+Model: Wreckage01
+	Mesh: data/models/wreckage_01.obj
+	
+Model: Wreckage02
+	Mesh: data/models/wreckage_02.obj
+	
+Model: Wreckage03
+	Mesh: data/models/wreckage_03.obj
+		
+Model: Wreckage04
+	Mesh: data/models/wreckage_04.obj
+	
+Model: Wreckage05
+	Mesh: data/models/wreckage_05.obj
+	
+Model: Wreckage06
+	Mesh: data/models/wreckage_06.obj
+	
+Model: Wreckage07
+	Mesh: data/models/wreckage_07.obj
+	
+Model: Wreckage08
+	Mesh: data/models/wreckage_08.obj
+		
+Model: Wreckage09
+	Mesh: data/models/wreckage_09.obj
+
+Model: Wreckage10
+	Mesh: data/models/wreckage_10.obj
+	
+Model: Wreckage11
+	Mesh: data/models/wreckage_11.obj
+	
+Model: Wreckage12
+	Mesh: data/models/wreckage_12.obj
+	
+Model: Wreckage13
+	Mesh: data/models/wreckage_13.obj
+		
+Model: Wreckage14
+	Mesh: data/models/wreckage_14.obj
+	
+Model: Wreckage15
+	Mesh: data/models/wreckage_15.obj
+	
+Model: Wreckage16
+	Mesh: data/models/wreckage_16.obj
+	
+Model: Wreckage17
+	Mesh: data/models/wreckage_17.obj
+	
+Model: Wreckage18
+	Mesh: data/models/wreckage_18.obj
+		
+Model: Wreckage19
+	Mesh: data/models/wreckage_19.obj
+
+Model: Wreckage20
+	Mesh: data/models/wreckage_20.obj
+	
+Model: Wreckage21
+	Mesh: data/models/wreckage_21.obj
+	
+Model: Wreckage22
+	Mesh: data/models/wreckage_22.obj
+	
+Model: Wreckage23
+	Mesh: data/models/wreckage_23.obj
+		
+Model: Wreckage24
+	Mesh: data/models/wreckage_24.obj
+	
+Model: Wreckage25
+	Mesh: data/models/wreckage_25.obj
+	
+Model: Wreckage26
+	Mesh: data/models/wreckage_26.obj
+	
+Model: Wreckage27
+	Mesh: data/models/wreckage_27.obj
+	
+Model: Wreckage28
+	Mesh: data/models/wreckage_28.obj
+		
+Model: Wreckage29
+	Mesh: data/models/wreckage_29.obj
+
+Model: Wreckage30
+	Mesh: data/models/wreckage_30.obj
+	
+Model: Wreckage31
+	Mesh: data/models/wreckage_31.obj
+	
+Model: Wreckage32
+	Mesh: data/models/wreckage_32.obj
+	
+Model: Wreckage33
+	Mesh: data/models/wreckage_33.obj
+		
+Model: Wreckage34
+	Mesh: data/models/wreckage_34.obj
+	
+Model: Wreckage35
+	Mesh: data/models/wreckage_35.obj
+
+Model: MiningBase
+	Mesh: data/models/asteroid_base.ogex

@@ -1,0 +1,15 @@
+Module: HyperfieldActuator
+	Name: #ORB_HYPERFIELD_ACTUATOR
+	Blurb: #ORB_HYPERFIELD_ACTUATOR_BLURB
+	Description: #ORB_HYPERFIELD_ACTUATOR_DESC
+	Icon: ResourceIcon::3
+
+	Standalone: False
+	Core: False
+
+	Require Affinity: 2 Energy
+	Require Affinity: 1 Research
+	Build Cost: 500
+	Maintenance: 100
+
+	AddFTLIncome(+1)

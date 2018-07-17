@@ -1,0 +1,55 @@
+Model: MechanicaMiner
+	Tangents: on
+	Mesh: data/shipsets/mechanica/civilian_miner.ogex
+
+Model: MechanicaMissionary
+	Tangents: on
+	Mesh: data/shipsets/mechanica/civilian_missionary.ogex
+
+Model: MechanicaFreighter
+	Tangents: on
+	Mesh: data/shipsets/mechanica/civilian_freighter.ogex
+
+Model: MechanicaColony
+	Tangents: on
+	Mesh: data/shipsets/mechanica/civilian_colony.ogex
+
+Model: MechanicaTractor
+	Tangents: on
+	Mesh: data/shipsets/mechanica/civilian_tractor.ogex
+
+Model: MechanicaTiny
+	Tangents: on
+	Mesh: data/shipsets/mechanica/support_tiny.ogex
+
+Model: MechanicaSmall
+	Tangents: on
+	Mesh: data/shipsets/mechanica/support_small.ogex
+
+Model: MechanicaMedium
+	Tangents: on
+	Mesh: data/shipsets/mechanica/support_medium.ogex
+
+Model: MechanicaLarge
+	Tangents: on
+	Mesh: data/shipsets/mechanica/support_large.ogex
+
+Model: MechanicaFlagSmall
+	Tangents: on
+	Mesh: data/shipsets/mechanica/flagship_small.ogex
+
+Model: MechanicaFlagMedium
+	Tangents: on
+	Mesh: data/shipsets/mechanica/flagship_medium.ogex
+
+Model: MechanicaFlagLarge
+	Tangents: on
+	Mesh: data/shipsets/mechanica/flagship_large.ogex
+
+Model: MechanicaFlagVeryLarge
+	Tangents: on
+	Mesh: data/shipsets/mechanica/flagship_verylarge.ogex
+
+Model: MechanicaFlagHuge
+	Tangents: on
+	Mesh: data/shipsets/mechanica/flagship_huge.ogex

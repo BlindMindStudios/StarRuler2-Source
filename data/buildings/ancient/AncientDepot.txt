@@ -1,0 +1,21 @@
+Building: AncientDepot
+	Name: #BLD_ANCIENT_DEPOT
+	Description: #BLD_ANCIENT_DEPOT_DESC
+	Sprite: Depot
+
+	Category: Infrastructure
+
+	Size: 2x2
+
+	Base Cost: 100
+	Tile Cost: 10
+	Build Time: 60
+
+	Build Affinity: Desert
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ActiveWhenCargoConsumed(BaseMaterial, 1, 6, AddStatus(AncientDepot)), Inactive Status = AncientRequireBaseMat)

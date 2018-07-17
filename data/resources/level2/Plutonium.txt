@@ -1,0 +1,14 @@
+Resource: Plutonium
+	Name: #PLUTONIUM
+	Description: #PLUTONIUM_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIcons::34
+	Small Icon: ResourceIconsSmall::34
+
+	Level: 2
+	Affinity: Energy + Defense
+	Rarity: Uncommon
+
+	Pressure: 4 Energy
+	Pressure: 4 Defense

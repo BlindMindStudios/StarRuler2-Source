@@ -1,0 +1,33 @@
+Template: hexVar/BuildCost
+	Modifier: BuildCostFactor(factor)
+		Hex.BuildCost := Hex.BuildCost * factor
+
+Template: hexVar/MaintainCost
+	Modifier: MaintCostFactor(factor)
+		Hex.MaintainCost := Hex.MaintainCost * factor
+
+Template: hexVar/LaborCost
+	Modifier: LaborCostFactor(factor)
+		Hex.LaborCost := Hex.LaborCost * factor
+
+Template: hexVar/HP
+	Modifier: HpFactor(factor)
+		Hex.HP := Hex.HP * factor
+	Modifier: AddBaseHP(factor)
+		Hex.HP := Hex.HP + Base::Hex.HP * factor
+	
+Template: hexVar/Mass
+	Modifier: MassFactor(factor)
+		Hex.Mass := Hex.Mass * factor
+
+Template: var/Speed
+	Modifier: SpeedFactor(factor)
+		Speed := Speed * factor
+
+Template: var/SupplyCost
+	Modifier: SupplyCostFactor(factor)
+		SupplyCost := SupplyCost * factor
+
+Template: var/Repair
+	Modifier: RepairFactor(factor)
+		Repair := Repair * factor

@@ -1,0 +1,35 @@
+Shipset: Gevron
+	Name: Gevron
+
+	Hull: GevronFlagHuge
+	Hull: GevronFlagVeryLarge
+	Hull: GevronFlagLarge
+	Hull: GevronFlagMedium
+	Hull: GevronFlagTiny
+	Hull: GevronHuge
+	Hull: GevronLarge
+	Hull: GevronMedium
+	Hull: GevronSmall
+	Hull: GevronTiny
+	Hull: GevronStation
+	Hull: GevronSatellite
+
+	Skin: Miner
+		Model: GevronMiner
+		Material: GevronGenericPBR
+
+	Skin: Missionary
+		Model: GevronMissionary
+		Material: GevronGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: GevronFreighter
+		Material: GevronGenericPBR
+
+	Skin: Colonizer
+		Model: GevronColony
+		Material: GevronGenericPBR
+
+	Skin: Tractor
+		Model: GevronTractor
+		Material: GevronGenericPBR

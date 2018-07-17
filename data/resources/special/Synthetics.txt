@@ -1,0 +1,12 @@
+Resource: Synthetics
+	Name: #SYNTHETICS
+	Description: #SYNTHETICS_DESC
+
+	Icon: ResourceIcons::44
+	Small Icon: ResourceIconsSmall::44
+
+	Exportable: False
+	Distribution: 0
+	Artificial: True
+
+	Affinity: ALL

@@ -1,0 +1,65 @@
+const int nLightCount = 2;
+
+uniform sampler2D diffuseRGB, normalMap;
+
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+void main() {
+	vec3 color = gl_FrontMaterial.diffuse.rgb;
+	vec3 texSamp = texture2D(diffuseRGB, uv.xy).rgb;
+	vec3 matspec = gl_FrontMaterial.specular.rgb;
+	float shininess = gl_FrontMaterial.shininess;
+
+	vec3 normMap = (texture2D(normalMap, uv.xy).xyz * 2.0) - vec3(1.0);
+	float ao = length(normMap) - 0.5;
+	
+	vec3 n = normalize(normal) * normMap.z;
+	n += normalize(binormal) * normMap.x;
+	n += normalize(tangent) * normMap.y;
+	n = normalize(n);
+	
+	vec3 v = normalize(npos);
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+
+	vec3 diffuse = gl_LightModel.ambient.rgb * gl_FrontMaterial.ambient.rgb * (0.5 + ao);
+
+	vec3 specular = vec3(0.0);
+	if(nLightCount > 0) {
+		const int i = 0;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		specular += gl_LightSource[i].specular.rgb * (pow(max(0.0, dot(r, v)), shininess) * intensity);
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		specular += gl_LightSource[i].specular.rgb * (pow(max(0.0, dot(r, v)), shininess) * intensity);
+	}
+	gl_FragColor.rgb = (diffuse * color * texSamp.rgb) + (specular * matspec);
+	gl_FragColor.a = 1.0;
+}

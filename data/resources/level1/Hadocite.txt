@@ -1,0 +1,15 @@
+Resource: Hadocite
+	Name: #HADOCITE
+	Description: #HADOCITE_DESC
+	Native Biome: Volcanic
+
+	Icon: ResourceIcons::29
+	Small Icon: ResourceIconsSmall::29
+
+	Level: 1
+	Rarity: Epic
+	Affinity: Defense
+
+	Pressure: 5 Defense
+
+	IfType(Orbital, AddTurret(WaveBeam, Range=3000, DPS=100, Duration=4, Cooldown=0, Tracking=0.4)) #version<59

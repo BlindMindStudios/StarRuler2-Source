@@ -1,0 +1,12 @@
+Module: TradeDepot
+	Name: #ORB_TRADE_DEPOT
+	Blurb: #ORB_TRADE_DEPOT_BLURB
+	Description: #ORB_TRADE_DEPOT_DESC
+	Icon: ResourceIcon::0
+	Standalone: False
+	Core: False
+
+	Build Cost: 200
+	Require Affinity: 1 Money
+
+	FriendlyPlanetMoney(To Self = 150, To Other = 75)

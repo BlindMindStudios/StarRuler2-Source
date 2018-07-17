@@ -1,0 +1,19 @@
+Construction: BeaconTargetColonize
+	Name: #CONS_BEACON_TARGET_COLONIZE
+	Description: #CONS_BEACON_TARGET_COLONIZE_DESC
+
+	Category: Actions
+	In Context: True
+
+	Build Cost: 500
+	Time Cost: 20
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterNotQuarantined(targ)
+	TargetFilterNotSelf(targ)
+	ForClient(Either(TargetFilterSpace(targ), TargetFilterOwned(targ)))
+
+	RequireOnOrbital(Beacon)
+
+	Trigger(targ, gameplay.extragalactic::TriggerRefugees())

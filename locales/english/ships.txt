@@ -1,0 +1,309 @@
+COLONY_SHIP: Colony Ship
+SPORE_SHIP: Spore
+CRUISER: Cruiser
+TRANSFER_SUPPORT_SHIPS: Transfer Support Ships
+CREATE_SUPPORT_SHIPS: Create More Support Ships
+SCUTTLE_SUPPORT_SHIPS: Remove/Scuttle Support Ships
+MANAGE_SUPPORTS: Manage Support Ships
+ORDER_SUPPORT_COUNT: Order $1x $2
+ORDER_SUPPORT_CUSTOM: Order custom amount...
+ORDER_SUPPORT_DESIGN: Support Ship Design:
+ORDER_SUPPORT_AMOUNT: Amount:
+ORDER_SUPPORT_COST: Cost:
+ADD_SUPPORTS: Add Support Group
+SHIP_ORDERS: Orders
+SHIP_FORMATIONS: Formations
+CONSTRUCTOR_CONSTRUCT: Construct $1
+CONSTRUCTOR_CONSTRUCT_COST: Construct $1 ($2)
+SUPPLY: Supply
+STRENGTH: Strength
+PIRATE_HOARD: Pirate Hoard
+REBUY_GHOSTS: Rebuy ($1)
+FREIGHTER: Freighter
+TT_REBUY_GHOSTS: <<
+	Replace all remembered dead support ships by buying new ones. The fleet will need to be moved to a system with labor facilities before the ships are actually constructed.
+>>
+CLEAR_GHOSTS: Clear Dead
+TT_CLEAR_GHOSTS: <<
+	Clear all remembered dead support ships from the fleet.
+>>
+AUTO_FILL_SUPPORTS: Auto Fill
+TT_AUTO_FILL_SUPPORTS: <<
+	When checked, the fleet will automatically pick up support ships from nearby planets to replenish its strength.
+>>
+ALLOW_FILL_FROM_SUPPORTS: Fill From
+TT_ALLOW_FILL_FROM_SUPPORTS: <<
+	When checked, fleets with "Auto Fill" enabled will automatically pick up support ships from this planet.
+>>
+AUTO_BUY_SUPPORTS: Auto Buy
+TT_AUTO_BUY_SUPPORTS: <<
+	When checked, the fleet will automatically buy new support ships when in systems with labor facilities, until the fleet is full.
+>>
+REFRESH_SUPPORTS: Refresh Support Fleet from $1
+ABILITY_TRIGGER: $1
+ABILITY_ENERGY: "$1 Energy"
+ABILITY_COOLDOWN: " [cooldown: $1]"
+ABILITY_CD: " [cd: $1 remaining]"
+BUILD_RETROFIT: Retrofit Fleet: $1
+RETROFIT_OPTION: Retrofit Fleet ($1, $2 Labor)
+CAPTURE_OPTION: Capture Planet ($1 Supply, $2)
+PROTECTED_OPTION: Cannot Capture - Protected by Outpost or Decree
+REV_SPEC: " r$1"
+SUPPORT_CAPACITY: Support Capacity
+SLIPSTREAM_TEAR: Slipstream Tear
+ODDITY_GATE: Warp Through
+EFFECTIVENESS: Effectiveness
+SHIP_CARGO: Cargo:
+SHIP_CARGO_WORTH: [right][b][color=#0f0]$1[/color][/b] value[/right]
+CARGO_GOODS: [img=ResourceIconsSmall::32;21;#888/] [color=#aaa]Goods[/color]
+CIVILIAN_MERCHANT: Civilian Trader
+CIVILIAN_FREIGHTER: Civilian Freighter
+CIVILIAN_CARAVAN: Civilian Caravan
+CIVILIAN_STATION: Civilian Trade Station
+CIVILIAN: Civilian
+STATUS_BLOCKADED: Blockaded!
+STATUS_BLOCKADED_DESC: <<|
+	Some of the civilian trade ships carrying this planet's imports were shot down. As a result, the planet produces 1 less of a random empire resource for each stack of "Blockaded!".
+>>
+PICKUP_PROTECTING: Protecting
+PICKUP_UNPROTECTED: Unprotected
+VERB_PICKUP: Pick Up $1
+VERB_ACTIVATE: Activate $1
+JUMPDRIVE_SAFETY_WARNING: Warning: Causes damage to the fleet.
+JUMPDRIVE_SAFETY_WARNING_SEVERE: WARNING: Causes catastrophic damage.
+
+STATUS_INTERDICT_FTL: FTL Disabled
+STATUS_INTERDICT_FTL_DESC: <<|
+	This flagship's FTL capabilities have been disabled.
+>>
+SHIELD_STRENGTH: Shields
+
+PICKUP_RESEARCH: Research Data
+PICKUP_RESEARCH_DESC: Gain research points when picked up.
+
+PICKUP_INFLUENCE: Influential Knowledge
+PICKUP_INFLUENCE_DESC: Gain some influence points when picked up.
+
+PICKUP_DRYDOCK: Ancient Shipyard
+PICKUP_DRYDOCK_DESC: Gain 120 research points and contains 3 unfinished ancient vessels.
+
+PICKUP_ASTEROID: Mining Base
+PICKUP_ASTEROID_DESC: An activatable resource mining base ready to be used.
+
+PICKUP_ENERGY: Energy Cache
+PICKUP_ENERGY_DESC: Gain some stored energy when picked up.
+
+PICKUP_CARD: Luxury Tokens
+PICKUP_CARD_DESC: Gain Negotiate cards when picked up.
+
+PICKUP_ANCIENT_KNOWLEDGE: Ancient Knowledge
+PICKUP_ANCIENT_KNOWLEDGE_DESC: Gain an "Ancient Knowledge" card when picked up.
+
+PICKUP_DEFENSE_MEDIUM: Defense System
+PICKUP_DEFENSE_MEDIUM_DESC: Gain 5 filled global Defense Reserve when picked up.
+
+PICKUP_HPBOOST: Structural Matrix
+PICKUP_HPBOOST_DESC: The flagship that destroys this fleet immediately gains +25% Health.
+
+PICKUP_FLEETBOOST: Aegis Matrix
+PICKUP_FLEETBOOST_DESC: The flagship that destroys this fleet gains +50% Health, +25% Support Health.
+STATUS_PICKUP_FLEETBOOST: Aegis Matrix
+STATUS_PICKUP_FLEETBOOST_DESC: This flagship's health is boosted by 50%, all support ships in this fleet have their health boosted by 25%.
+
+PICKUP_FREEFOOD: Seed Repository
+PICKUP_FREEFOOD_DESC: Gain a "Harvest" card when picked up.
+
+PICKUP_MUCHINFLUENCE: Intelligence Equipment
+PICKUP_MUCHINFLUENCE_DESC: Gain 2 bonus Influence Stake when picked up.
+
+HOLD_POSITION: Hold Position
+HOLD_POSITION_DESC: Do not chase hostile fleets.
+AREA_BOUND: Engage Nearby Enemies
+AREA_BOUND_DESC: Chase after hostile fleets in the direct vicinity.
+REGION_BOUND: Engage Enemies in System
+REGION_BOUND_DESC: Chase after hostile fleets that are anywhere in this system.
+HOLD_FIRE: Hold Fire
+HOLD_FIRE_DESC: Hold all weapons fire and do not attack anything.
+
+BEH_CLOSE_IN: Close in on Enemies
+BEH_CLOSE_IN_DESC: Move to weapons range when attacking enemies.
+BEH_KEEP_DISTANCE: Keep Distance
+BEH_KEEP_DISTANCE_DESC: Move to weapons range and try to keep distance.
+
+ENG_FLAGSHIP_MIN: Flagship Closest Range
+ENG_FLAGSHIP_MIN_DESC: Move to the shortest flagship weapon's range.
+ENG_FLAGSHIP_MAX: Flagship Furthest Range
+ENG_FLAGSHIP_MAX_DESC: Move to the furthest flagship weapon's range.
+ENG_SUPPORT_MIN: Support Closest Range
+ENG_SUPPORT_MIN_DESC: Move to the closest support weapon's range.
+ENG_RAIDING_ONLY: Raiding Range
+ENG_RAIDING_ONLY_DESC: Move to the furthest distance this ship's supports can raid at.
+
+ABL_FULLBURST: Full Burst
+ABL_MISSILE_STORM: Missile Storm
+ABL_RELOCATE_ALL: Transistential Relocate
+ABL_CHARGE_ALL: Hyperspace Supplypulse
+ABL_MIGRATE_ALL: Accelerated Migration
+ABL_UNPACK_GATE: Deploy Gate
+ABL_UNPACK_GATE_DESC: Deploy this ship as an ftl gate, costs 100 FTL.
+ABL_PACK_ORBITAL: Pack up Orbital
+
+TT_OPEN_CONSTRUCTION: <<|
+	[b]Construction Queue[/b]
+
+	Open the construction queue and build menu.
+>>
+
+TT_MANAGE_SHIP_SUPPORTS: <<|
+	[b]Manage Supports[/b]
+
+	Manage the groups of support ships currently assigned to this fleet.
+>>
+
+TT_HYPERDRIVE: <<|
+	[b]Hyperdrive[/b]
+
+	Use the equipped hyperdrive to engage FTL movement.
+>>
+
+TT_JUMPDRIVE: <<|
+	[b]Jumpdrive[/b]
+
+	Use the equipped jumpdrive to engage FTL movement.
+>>
+
+TT_FLING: <<|
+	[b]Fling[/b]
+
+	Use the nearby fling beacon to engage FTL movement.
+>>
+
+TT_SLIPSTREAM: <<|
+	[b]Generate Slipstream Tear[/b]
+
+	Use the ship's slipstream generator to create a new tear to the target destination.
+>>
+
+TT_SHIP_HEALTH: <<
+	[font=Medium]Health[/font]
+	The remaining total health of the ship being displayed. Ships can die before their health runs out if all their bridge hexes are destroyed.
+
+	[b]Current Health[/b] [offset=230]$1[/offset]
+	[b]Maximum Health[/b] [offset=230]$2[/offset]
+
+	[b]Repair (In Combat)[/b] [offset=230]$3/sec[/offset]
+	[b]Repair (Outside Combat)[/b] [offset=230]$4/sec[/offset]
+>>
+
+TT_SHIP_SHIELD: <<
+	[font=Medium]Shield[/font]
+	Any incoming damage is first blocked by shields. The lower shields are, the more damage is let through instead of being blocked.
+
+	[b]Current Shield[/b] [offset=230]$1[/offset]
+	[b]Maximum Shield[/b] [offset=230]$2[/offset]
+
+	[b]Shield Regeneration[/b] [offset=230]$3/sec[/offset]
+>>
+
+TT_SHIP_SUPPLY: <<
+	[font=Medium]Fleet Supply[/font]
+	The total remaining supplies stored in this fleet. Supplies are used to fire weapons and to capture planets. Fleets are resupplied out of combat. Running low on supplies decreases the fleet's efficiency and DPS.
+
+	[b]Current Supply[/b] [offset=230]$1[/offset]
+	[b]Supply Storage[/b] [offset=230]$2[/offset]
+
+	[b]Resupply (Neutral Space)[/b] [offset=230]$3/sec[/offset]
+	[b]Resupply (Friendly Space)[/b] [offset=230]$4/sec[/offset]
+>>
+
+TT_SHIP_STRENGTH: <<
+	[font=Medium]Fleet Combat Strength[/font]
+	An estimate indicator of the fleet's overall combat strength. Fleets with more strength are more likely to win. Fleet efficiency increases overall DPS and strength.
+
+	[b]Current Strength[/b] [offset=230]$1[/offset]
+	[b]Original Strength[/b] [offset=230]$2[/offset]
+
+	[b]Current Fleet Total HP[/b] [offset=230]$3[/offset]
+	[b]Current Fleet Total DPS[/b] [offset=230]$4/sec[/offset]
+
+	[b]Fleet Efficiency[/b] [offset=230]$5[/offset]
+>>
+TT_SHIP_EFF_BONUS: [b]Fleet Strength Bonus[/b] [offset=230]$1[/offset]
+
+TT_SHIP_EXPERIENCE: <<
+	[font=Medium]Veterancy[/font]
+	The fleet gains experience as it defeats enemy flagships, allowing it to gain veterancy levels that increase its strength and support command.
+
+	[b]Current Veterancy[/b] [offset=230]Level $3[/offset]
+
+	[b]Experience[/b] [offset=230]$4 / $2[/offset]
+>>
+
+TT_SHIP_LEADER: <<
+	[font=Medium]$1[/font]
+
+	Flagship.
+>>
+
+TT_SHIP_GROUP: <<
+	[font=Medium]$1 ($2)[/font]
+
+	[b]Active[/b] [offset=120]$3x[/offset]
+	[b]Dead[/b] [offset=120]$4x[/offset]
+	[b]Ordered[/b] [offset=120]$5x[/offset]
+>>
+
+TT_EXPLORE: <<|
+	[b]Auto-Explore[/b]
+	
+	Automatically explores systems.
+>>
+
+TT_EXPLORE_FTL: <<|
+	[b]Auto-Explore with FTL[/b]
+	
+	Automatically explores systems.
+	Uses up to half the empire's FTL stores to explore quickly.
+>>
+
+STATUS_PIRATESHIP: Pirate Ship
+STATUS_PIRATESHIP_DESC: <<
+	This ship is a pirate ship and will raid civilian traders for their cargo.
+
+	It will periodically bring its loot to "Pirate Hoard" stations, hidden in deep space.
+>>
+
+SUPPORT_BEH: Behavior
+BEH_Brawler: Brawler
+BEH_Brawler_DESC: Opportunistically attacks supports, will raid enemy fleets if equipped with ammo stores.
+BEH_Shield: Shield
+BEH_Shield_DESC: Protects the flagship and supports from enemy fleets.
+BEH_Cavalry: Cavalry
+BEH_Cavalry_DESC: Finds openings to raid valuable enemy supports.
+BEH_Artillery: Artillery
+BEH_Artillery_DESC: Hides behind friendly fleet, launches long range volleys at key enemy targets.
+BEH_Bombardment: Bombardment
+BEH_Bombardment_DESC: Sieges enemy planets (Not yet implemented)
+BEH_Cannon: Cannon
+BEH_Cannon_DESC: Destroys support ships in the way of valuable enemy targets.
+BEH_Support: Fleet Support
+BEH_Support_DESC: Hide behind friendly fleet without attempting to engage targets.
+BEH_Bomber: Bomber
+BEH_Bomber_DESC: Focuses on enemy flagships, will raid if equipped with ammo stores.
+
+SUPPORT_RANGE: Engagement Range
+RANGE_Auto: Auto
+RANGE_Far: Far
+RANGE_Close: Close
+
+STATUS_FLUX_COOLDOWN: Flux Cooldown
+STATUS_FLUX_COOLDOWN_DESC: <<
+	This fleet has recently used the flux field to travel, and cannot use it again for a short period.
+>>
+
+STATUS_SHIPLEVEL: Veterancy
+STATUS_SHIPLEVEL_DESC: <<
+	The crew of this flagship consists of seasoned veterans, increasing its health and combat effectiveness by 20% and its support command by 10% for every veterancy level.
+
+	Destroy enemy flagships or use a simulator to train your crew to increase a ship's veterancy level.
+>>

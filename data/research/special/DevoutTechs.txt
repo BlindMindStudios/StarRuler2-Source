@@ -1,0 +1,9 @@
+Technology: SysShrine
+	Name: #R_SHRINE
+	Description: #R_SHRINE_DESC
+
+	Icon: AntimatterReactor * #408fc1
+	Color: #408fc1
+	Class: Unlock
+
+	Default Unlock: True

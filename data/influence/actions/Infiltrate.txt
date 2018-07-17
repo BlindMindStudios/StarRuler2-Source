@@ -1,0 +1,22 @@
+Card: Infiltrate
+	Name: #CARD_INFILTRATE
+	Description: #CARD_INFILTRATE_DESC
+
+	Icon: CardIcons::35
+	
+	Color: #802040
+	Class: Action
+	Rarity: Epic
+
+	ShowEffectiveness(-0.1)
+
+	Base Purchase Cost: 4
+	Base Play Cost: 6
+
+	Target: ship = Object
+	TargetFilterFlagship(ship)
+	TargetFilterNotAllied(ship)
+
+	Trigger(ship, AddStatus(Infiltrated, Set Origin Empire = True, Duration = 1800))
+
+	AI: PlayOnImportantFleets(ship, Enemies = True)

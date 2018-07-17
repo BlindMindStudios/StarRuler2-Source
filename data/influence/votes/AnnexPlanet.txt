@@ -1,0 +1,39 @@
+Card: AnnexPlanet
+	Name: #CARD_ANNEX_PLANET
+	Description: #CARD_ANNEX_PLANET_DESC
+
+	Icon: CardIcons::0
+
+	Target: planet = Object
+
+	Color: #ffa4a4
+	Class: Vote
+
+	Base Purchase Cost: 3
+
+	TargetFilterOtherEmpire(planet)
+	TargetFilterHasTradePresence(planet)
+	TargetFilterType(planet, Planet)
+	TargetRequireVision(planet)
+	ApplyRegionTargetCostMod(planet)
+
+	LoyaltyPlayCost(planet)
+
+	StartVote(AnnexPlanet, planet)
+
+	AI: PlayOnNearbyEnemyPlanet(planet)
+
+Vote: AnnexPlanet
+	Name: #VOTE_ANNEX_PLANET
+
+	Icon: CardIcons::0
+
+	Target: planet = Object
+	CancelOnDestroyed(planet)
+
+	ClaimPlanet(Pass, planet)
+	OnOwner(ModAttribute(AnnexVotesWon, Add, 1))
+
+	FailReturnCardIfAttributeSet(ReturnAnnexCards)
+
+	AI: BadFor(planet, Importance = 10)

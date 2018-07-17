@@ -1,0 +1,55 @@
+Model: GevronMiner
+	Tangents: on
+	Mesh: data/shipsets/gevron/civilian_miner.ogex
+
+Model: GevronMissionary
+	Tangents: on
+	Mesh: data/shipsets/gevron/civilian_missionary.ogex
+
+Model: GevronFreighter
+	Tangents: on
+	Mesh: data/shipsets/gevron/civilian_freighter.ogex
+
+Model: GevronColony
+	Tangents: on
+	Mesh: data/shipsets/gevron/civilian_colony.ogex
+
+Model: GevronTractor
+	Tangents: on
+	Mesh: data/shipsets/gevron/civilian_tractor.ogex
+
+Model: GevronTiny
+	Tangents: on
+	Mesh: data/shipsets/gevron/support_tiny.ogex
+
+Model: GevronSmall
+	Tangents: on
+	Mesh: data/shipsets/gevron/support_small.ogex
+
+Model: GevronMedium
+	Tangents: on
+	Mesh: data/shipsets/gevron/support_medium.ogex
+
+Model: GevronLarge
+	Tangents: on
+	Mesh: data/shipsets/gevron/support_large.ogex
+
+Model: GevronFlagSmall
+	Tangents: on
+	Mesh: data/shipsets/gevron/flagship_small.ogex
+
+Model: GevronFlagMedium
+	Tangents: on
+	Mesh: data/shipsets/gevron/flagship_medium.ogex
+
+Model: GevronFlagLarge
+	Tangents: on
+	Mesh: data/shipsets/gevron/flagship_large.ogex
+
+Model: GevronFlagVeryLarge
+	Tangents: on
+	Mesh: data/shipsets/gevron/flagship_verylarge.ogex
+
+Model: GevronFlagHuge
+	Tangents: on
+	Mesh: data/shipsets/gevron/flagship_huge.ogex

@@ -1,0 +1,343 @@
+#version 120
+const int nLightCount = 2;
+const float pi = 3.14159265358;
+const float tau = 6.28318530717;
+uniform sampler2D biomes, cities, differenceNoise, lookup, cityGlow, /*testSplat, */surfaceData;
+uniform samplerCube skybox;
+uniform float lightRadius[2];
+uniform vec4 ownerColor;
+// complimentary triad color harmony, should in theory always generate an appealing theme.
+vec3 colorLightsPrimary = ownerColor.rgb * 0.85 + 0.15;
+vec3 colorLightsSecondary = vec3(ownerColor.brg) * 0.85 + 0.15;
+vec3 colorLightsTertiary = vec3(ownerColor.gbr) * 0.85 + 0.15;
+ 
+////Amount of population considered 'half full'
+//const float basePopulation = 8.0;
+vec2 uvClamps = vec2(1.0, 1.0);
+ 
+varying vec2 uv, uv2, uv3;
+ 
+varying vec3 normal, v, vertCol, origo;
+varying vec4 uvNoise;
+varying float pulse;
+varying mat3 tcamrot;
+/*
+black biome is base biome, its biome color picks are also what controls the ocean color picks
+red biome is secondary biome, that will splat on top of base
+green biome is third biome, that will splat on top, the poles are hardcoded to be green biome, so keep it the coldest biome pick wise.
+ocean and cracks a bonus biomes, so with both there can be 5 i total. Blue > 0.5 is ocean, blue < 0.5 is cracks. Ocean is using the combined height for detail, cracks is using ao to spawn in cracks.
+alpha is city location and density, it rules over all others but will be build under water.
+*/
+ 
+//vec2(0.0, 0.0)    vulcanic
+//vec2(0.25, 0.0)   crystal
+//vec2(0.5, 0.0)    mountains
+//vec2(0.75, 0.0)   cracked
+//vec2(0.0, 0.5)    ice
+//vec2(0.25, 0.5)   barren
+//vec2(0.5, 0.5)    terran
+//vec2(0.75, 0.5)   desert 
+ 
+// x = 0-1 color wheel picker, y is intensity
+uniform vec4 cracksColorIntensityBiomeSeed;
+uniform vec4 biomeOffsets;
+ 
+varying vec2 polarGradients;
+varying vec3 light[nLightCount];
+varying float dist[nLightCount];
+ 
+ 
+//      /*varying */vec4 biomeOffsets = vec4(0.75, 0.0, 0.25, 0.5);
+//      /*varying */float biomePicks = (1.0 / 2048.0) * 470.0;
+ 
+        // parallax scale, bias and steps
+        const vec2 scaleBias = vec2(0.002, 0.001);
+        const int pStep = 0;
+       
+        float deriveZ(vec2 n) {
+       
+            float z = sqrt(abs(1.0 - n.x * n.x - n.y * n.y));
+           
+            return z;
+        }      
+       
+        vec3 toLinear(vec3 x) {
+            return pow(x, vec3(2.2));
+        }
+       
+        vec3 toGamma(vec3 x) {
+            return pow(x, vec3(0.45));
+        }
+       
+        // pow alternatives
+        vec3 square(vec3 x) {
+            return x*x;
+        }
+       
+        // pow alternatives
+        vec2 square(vec2 x) {
+            return x*x;
+        }
+       
+        vec3 paletteBlackBody( float t )
+        {
+            t *= t;
+            return square(min(vec3(1.0), 0.45 + 0.35*cos( tau*((t * 0.9)+vec3(0.45, 0.55, 0.65)) ) + (1.0 - t) * 0.25));
+        }
+       
+       
+        float square(float x) {
+            return x*x;
+        }
+       
+        float pow5(float x) {
+       
+            float y = x*x;
+            return y*y*x;
+        }
+       
+float pow8(float x) {
+ 
+    x = x*x;
+    x = x*x;
+    return x*x;
+}
+ 
+// speculer term part 1, GGX.
+float D_GGX(float HdotN, float Roughness)
+{
+    float denominator = HdotN * HdotN * (Roughness - 1.0) + 1.0;
+    return Roughness /( pi * denominator * denominator);
+}
+// specular term part 2, GGX.
+    float V_SchlickforGGX(float Roughness, float G1V, float NdotL)
+{
+    float G1L = NdotL * (1.0 - Roughness) + Roughness;
+    return 0.25f / (G1V * G1L);
+}
+ 
+// fresnel for specular term
+vec3 Fresnel(vec3 substance, vec3 l, vec3 h)
+{
+    return max(vec3(0.0), substance + (substance - 1.0) * pow5(1.0 - max(0.0,(dot(l, h)))));
+}
+// fresnel for ambient light for linear GGX.
+vec3 Fresnel2(vec3 substance, float dotProduct, float roughness)
+{
+    return substance + (1.0 - substance) * pow5((1.0 - dotProduct)) / (6.0 - 5.0 * roughness);
+}
+// diffuse term, fake fast approximation
+float OrenNayerforDiffuseOnly(float roughness, float NdotL, float NdotV)
+{
+    float O = 0.62 - pow(1.0 - NdotL * clamp(1.0-NdotV / 2.0, 0.0,1.0), pi) * 0.62;
+    return mix(O, NdotL, roughness);
+}
+// note feed it inverted roughness squared
+float sphereLightEnergyConservation(vec3 toLightCenter, float radius, float roughness)
+{
+    float invDistToLight = inversesqrt(dot(toLightCenter, toLightCenter));
+    float sphereAngle = max(0.0, radius * invDistToLight);
+    return square(roughness / max(0.0, roughness + 0.5 * sphereAngle));
+}
+ 
+vec3 sphereLightClosestPoint(vec3 l,vec3 r,float radius)
+{  
+    vec3 centerToRay = dot(l, r) * r - l;
+    return l + centerToRay * clamp(radius / length(centerToRay), 0.0, 1.0); // just max will make donut shaped highlights:oP
+}
+ 
+        // cosine based palette, 4 vec3 params
+        vec3 palette(float t, vec3 a, vec3 b, vec3 c, vec3 d )
+        {
+            return a + b*cos( 6.28318*(c*t+d) );
+        }
+       
+        vec3 dp1Calc(vec3 p)
+        {
+            return dFdx(p);
+        }
+       
+        vec3 dp2Calc(vec3 p)
+        {
+            return dFdy(p);
+        }
+       
+        vec4 duv1Calc(vec4 uv)
+        {
+            return dFdx(uv);
+        }
+       
+        vec4 duv2Calc(vec4 uv)
+        {
+            return dFdy(uv);
+        }
+ 
+const vec4 hashSeed = vec4(.16532,.17369,.15787, .14987);
+ 
+// random noise functions ahead
+float hash11(float p)
+{
+    vec2 p2 = fract(vec2(p) * hashSeed.x);
+    p2 += dot(p2.yx, p2.xy+19.19);
+    return fract(p2.x * p2.y);
+}
+ 
+float noise3D(vec3 x )
+{
+    vec3 p = floor(x);
+    vec3 f = fract(x);
+    f = f*f*(3.0-2.0*f);
+   
+    float n = p.x + p.y*157.0 + 113.0*p.z;
+    return mix(mix(mix( hash11(n+  0.0), hash11(n+  1.0),f.x),
+                   mix( hash11(n+157.0), hash11(n+158.0),f.x),f.y),
+               mix(mix( hash11(n+113.0), hash11(n+114.0),f.x),
+                   mix( hash11(n+270.0), hash11(n+271.0),f.x),f.y),f.z);
+}
+ 
+       
+    void main() {
+        vec3 test = vec3(0.0);
+        float splatMapNoise = noise3D(origo  * 0.5+ origo * vertCol.g);
+ 
+        float normalIntensity = 1.0;
+       
+        vec4 uvS = vec4(uv, uv2);
+       
+        // because we have two uvs, for poles and equator, to avoid polar distortions and hide tiling, we need two matrices for separated normal mapping
+        mat3 TBNA;
+        mat3 TBNB;
+   
+        // Normal and tangent setup
+        vec3 dp1 = dp1Calc(-v);
+        vec3 dp2 = dp2Calc(-v);
+        vec4 duv1 = duv1Calc(uvS);
+        vec4 duv2 = duv2Calc(uvS);
+       
+        // solve the linear system
+        vec3 dp2perp = cross(dp2, normal);
+        vec3 dp1perp = cross(normal, dp1);
+        vec3 tangent = dp2perp * duv1.x + dp1perp * duv2.x;
+        vec3 binormal = dp2perp * duv1.y + dp1perp * duv2.y;
+        // construct a scale-invariant frame
+        float invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+        TBNA = mat3(tangent * invmax, binormal * invmax, normal);
+   
+        tangent = dp2perp * duv1.z + dp1perp * duv2.z;
+        binormal = dp2perp * duv1.w + dp1perp * duv2.w;
+   
+        // construct a scale-invariant frame
+        invmax = pow(max(dot(tangent, tangent), dot(binormal, binormal)), -0.5);
+        TBNB = mat3(tangent * invmax, binormal * invmax, normal);
+       
+        vec4 parSamp = vec4(texture2D(biomes, uvS.xy + biomeOffsets.xy).a,texture2D(biomes, uvS.xy + biomeOffsets.zw).a,texture2D(biomes, uvS.zw + biomeOffsets.xy).a,texture2D(biomes, uvS.zw + biomeOffsets.zw).a);
+        vec2 splatMix = min(vec2(1.0), vec2((parSamp.r + parSamp.g + splatMapNoise), (parSamp.b + parSamp.a + splatMapNoise)) * splatMapNoise);
+       
+        // create combined detail texture and calculate weighted splat mapping for the two uv sets
+        parSamp.rg = vec2(mix(parSamp.r, parSamp.g, splatMix.r), mix(parSamp.b, parSamp.a, splatMix.g));   
+       
+        float NdotV = max(0.0, dot(normal, v));        
+ 
+        // do parallax
+        float fDet = dot(dp1, dp2perp);
+        vec2 vProjVScr = (1.0/fDet) * vec2(dot(dp2perp, v), dot(dp1perp, v));
+        vec4 vProjVTex = (duv1 * vProjVScr.x + duv2 * vProjVScr.y);
+        vec2 vProjVTexZ = mix(vec2(0.0), (vec2(parSamp.r, parSamp.g) * scaleBias.r - scaleBias.g), NdotV);
+   
+        uvS += (vProjVTex * vProjVTexZ.xxyy);
+   
+ 
+        // sample all four biomes once for each of the first two uv sets
+        vec4 firstbiomeA    = texture2D(biomes, uvS.xy + biomeOffsets.xy);
+        vec4 firstBiomeB    = texture2D(biomes, uvS.zw + biomeOffsets.xy);
+        vec4 secondbiomeA   = texture2D(biomes, uvS.xy + biomeOffsets.zw);
+        vec4 secondBiomeB   = texture2D(biomes, uvS.zw + biomeOffsets.zw);
+        // mix the normals cavity and resampled heightmap
+        vec4 dataSampA = mix(firstbiomeA, secondbiomeA, splatMix.r);
+        vec4 dataSampB = mix(firstBiomeB, secondBiomeB, splatMix.g);
+       
+        // create combined detail splatmask to mix the first two uv sets
+        float uvBlend = min(1.0, (dataSampA.a + dataSampB.a + vertCol.b) * vertCol.b);
+       
+        // perform TBN matrix multiplication for each of the two normal maps separately and mix, save instructions by mix in height in alpha.
+        vec4 n = vec4(dataSampA.xy, dataSampB.xy);
+        n *= 2.0;
+        n -=1.0;
+        n = mix(vec4(normalize(TBNA * normalize(vec3(n.xy, deriveZ(n.xy)))), (dataSampA.a + dataSampA.b) * 0.5), vec4(normalize(TBNB * normalize(vec3(n.zw, deriveZ(n.zw)))), (dataSampB.a + dataSampB.b) * 0.5), uvBlend);
+        // move these out of the mixing later
+        vec3 r = normalize(reflect(-v, n.xyz));
+        NdotV = max(0.0, dot(n.xyz, v));       
+       
+        // sample albedo and roughness from lookup table
+        vec4 albedo = texture2D(lookup,  vec2(cracksColorIntensityBiomeSeed.z, n.a)); //, 0.0
+        albedo.rgb = toLinear(albedo.rgb);
+        float metalness = 0.001;//clamp(((1.0 - dot(albedoR.xz, albedoR.xz)) - albedoR.y) * 2.0, 0.0, 1.0);// * waterMask;
+        vec3 substance = (0.04 - 0.04 * metalness) + albedo.rgb * metalness;// * clamp(2048.0 - 1780.0, 0.0,1.0);
+        albedo.rgb -= substance;
+        float ao = square(min(1.0,(n.a * 2.0)));
+ 
+        vec3 oceanColor = texture2D(lookup, vec2(cracksColorIntensityBiomeSeed.z, max(0.995, 0.05))).rgb; //  from 0.0065 to 0.0025
+   
+        // clamp to keep in PBR safe ranges - nothing in reality either albedo or roughness is 0 or 1 and can make the math fail
+        albedo = clamp(albedo, vec4(0.05), vec4(0.95));
+   
+   
+        // create sss mask
+        vec4 invertedAlbedo = 1.0 - albedo;  
+        float SSSmask = mix(NdotV * 0.5 + 0.5, 1.0 - min(1.0, pow8((1.0 - invertedAlbedo.a * invertedAlbedo.b) * (1.0 - invertedAlbedo.r * invertedAlbedo.g))) * n.a, n.a);
+ 
+ 
+//cracksColorIntensityBiomeSeed
+       
+        albedo.a = pow(albedo.a, 0.5);
+    // ambient reflections
+    vec3 ambientFresnel = Fresnel2(substance, NdotV ,albedo.a);
+    vec3 color = square((textureCube(skybox, r, sqrt(albedo.a) * 8.0).rgb) + 0.024) * ambientFresnel;
+ 
+    // ambient light
+    color += square(textureCube(skybox, n.xyz, 8.0).rgb + 0.024) * albedo.rgb * (1.0 - ambientFresnel);
+ 
+    // pbr calculations that would be done twice in loop
+    vec3 roughness = vec3(square(vec2(albedo.a, albedo.a * 0.5 + 0.5)), 0.0);
+    roughness.r = square(roughness.r);
+    roughness.g *=0.5;
+    roughness.b = 1.0 - square(albedo.a);
+    float G1V = NdotV * (1.0 - roughness.g) + roughness.g;
+   
+   for (int i = 0; i < nLightCount; i++) {
+       vec3 L = sphereLightClosestPoint((light[i]), r , lightRadius[i]);
+ 
+       float energy = (sphereLightEnergyConservation(L, lightRadius[i], roughness.b));
+       L = normalize(L);
+       vec2 NdotL = max(vec2(0.0), vec2(dot(mix(n.xyz, normal, 0.5),L) * 0.8 + 0.2, dot(n.xyz,L)));
+ 
+       float attenuation = 1.0f / (1.0f + dot(L ,L) / lightRadius[i]) * NdotL.x;
+       //citylights *= 1.0 - attenuation;
+     
+       if (attenuation >0.0){    
+           vec3 VplusL = L + v * 0.5;
+           vec3 halfVec = normalize(VplusL);
+           float HdotN = max(0.0, dot(halfVec, n.xyz));
+           vec3 F = Fresnel(substance, L, halfVec);
+           float D = max(0.0, D_GGX(HdotN, roughness.r));
+           float V = max(0.0, V_SchlickforGGX(roughness.g, G1V, NdotL.y));
+           float O = OrenNayerforDiffuseOnly(albedo.a, NdotL.y, NdotV);
+         
+       
+           // sub surface scattering model
+           float inScatter = pow(clamp(dot(L, -v), 0.0, 1.0), 12.0) * mix(8.0, 0.1, SSSmask);
+           float normalContribution = clamp(dot(mix(normal, n.xyz, SSSmask), halfVec) * SSSmask + 1.0 - SSSmask, 0.0, 1.0);
+           float backScatter = n.a * normalContribution / tau;
+           vec3 SSS = mix(backScatter, 1.0, inScatter) * square(oceanColor) * NdotL.x;    
+           SSS = vec3(0.0);
+ 
+           color += ((D * V * F * energy) + ((1.0 - F) * O * albedo.rgb) + SSS) * toLinear(gl_LightSource[i].diffuse.rgb) * attenuation;
+ 
+       }
+   }
+    // hard cavity multiplier
+    color *= n.a * 0.5 + 1.0;
+   
+    gl_FragColor.rgb = toGamma(vec3(color));
+    gl_FragColor.a = 1.0;
+}

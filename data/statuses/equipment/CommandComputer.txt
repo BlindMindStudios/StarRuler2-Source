@@ -1,0 +1,8 @@
+Status: CommandComputer
+	Name: #STATUS_COMMAND_COMPUTER
+	Description: #STATUS_COMMAND_COMPUTER_DESC
+	Icon: HexagonSubsystems::4
+
+	AddFleetCommand(300)
+	ArtifactOnDestroy(CommandComputer, Destroy Chance = 0.15)
+	WorthPoints(25)

@@ -1,0 +1,17 @@
+Construction: MoonBase
+	Name: #CONS_MOON_BASE
+	Description: #CONS_MOON_BASE_DESC
+
+	Category: Infrastructure
+
+	Time Cost: 120
+	Build Cost: 500
+
+	RequireMoreMoonsThanStatus(MoonBase)
+	RequireNotTrait(StarChildren)
+
+	OnStart(AddStatus(MoonBase))
+	OnCancel(RemoveStatusInstance(MoonBase))
+
+	AddSurfaceArea(Moon, (5, 5))
+	TriggerGeneric(AddMaxPopulation(2))

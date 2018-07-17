@@ -1,0 +1,14 @@
+Technology: KeyRailgunKnockback
+	Name: #R_KEY_RAILGUN_KNOCKBACK
+	Description: #R_KEY_RAILGUN_KNOCKBACK_DESC
+	Class: Keystone
+
+	Point Cost: 750
+	Time Cost: 60
+
+	Icon: Railgun::2
+	Color: #238f59
+
+	AddModifier(tag/IsRailgun::SpreadFactor(0.5))
+	AddModifier(tag/IsRailgun::PierceFactor(0.0))
+	AddModifier(RailgunBattery::AddRailgunKnockback(30))

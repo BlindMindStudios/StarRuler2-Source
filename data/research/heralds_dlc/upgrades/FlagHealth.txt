@@ -1,0 +1,35 @@
+Technology: FlagHealth
+	Name: #R_FLAG_HEALTH
+	Description: #R_FLAG_HEALTH_DESC:25%
+
+	Icon: AttributeIcons::1 * #00e5f7
+	Symbol: techMaterialScience1*#80ff80
+	Color: #80ff80
+
+	Category: Basic Upgrades
+	Class: Boost
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddModifier(HpFactor(1.25))
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.25))
+	ModAttribute(OrbitalHealthMod, Multiply, 1.25)
+
+Technology: FlagHealth2
+	Name: #R_FLAG_HEALTH2
+	Description: #R_FLAG_HEALTH_DESC:50%
+
+	Icon: AttributeIcons::1 * #00e5f7
+	Symbol: techMaterialScience2*#80ff80
+	Color: #80ff80
+
+	Category: Basic Upgrades
+	Class: Upgrade
+
+	Point Cost: 600
+	Time Cost: 80
+
+	AddModifier( HpFactor(1.5) )
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.5))
+	ModAttribute(OrbitalHealthMod, Multiply, 1.5)

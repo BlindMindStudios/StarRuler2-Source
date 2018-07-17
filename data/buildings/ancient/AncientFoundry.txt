@@ -1,0 +1,20 @@
+Building: AncientFoundry
+	Name: #BLD_ANCIENT_FOUNDRY
+	Description: #BLD_ANCIENT_FOUNDRY_DESC
+	Sprite: AncientFoundry
+
+	Category: Infrastructure
+
+	Size: 4x3
+
+	Base Cost: 100
+	Build Time: 60
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+
+	ActiveWhenCargoConsumed(Ore, 2, 1.0, AddStatus(AncientFoundry), Labor Use Linked = True)
+
+	ShowAttributeValue(#RESOURCE_LABOR, FactoryLaborMod, Base Amount = 4, Icon = ResourceIcon::6, Suffix = #PER_MINUTE)

@@ -1,0 +1,8 @@
+Status: FTLJammerCombat
+	Name: #STATUS_FTL_JAMMER_COMBAT
+	Description: #STATUS_FTL_JAMMER_COMBAT_DESC
+	Icon: OrbitalIcons::9 * #ff0000
+
+	ApplyToFlagships()
+
+	AddFleetEffectiveness(-0.30)

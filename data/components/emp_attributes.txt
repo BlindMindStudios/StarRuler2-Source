@@ -1,0 +1,19 @@
+Empire.Attributes : components.Attributes::Attributes {
+local:
+	safe double getAttribute(uint id);
+
+server:
+	void initAttributes();
+	void attributesTick(double time);
+	void syncAttributes();
+
+	int createAttributeMod(uint attrib, uint mode, double amount, double timer = -1.0);
+	void removeAttributeMod(uint attrib, int id);
+
+	void modAttribute(uint attrib, uint mode, double amount);
+
+	void writeAttributes(Message& msg, bool initial = false);
+
+shadow:
+	void readAttributes(Message& msg);
+}

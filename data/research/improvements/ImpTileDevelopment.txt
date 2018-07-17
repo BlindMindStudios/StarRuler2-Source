@@ -1,0 +1,25 @@
+Technology: ImpTileDevelopment
+	Name: #R_IMP_TILE_DEVELOPMENT
+	Blurb: #R_IMP_TILE_DEVELOPMENT_BLURB:20%
+	Description: #R_IMP_TILE_DEVELOPMENT_DESC:20%
+
+	Icon: DesignationIcons::10
+	Color: #a46c2f
+
+	Point Cost: 600
+	Time Cost: 100
+
+	ModAttribute(TileDevelopmentFactor, Multiply, 1.2)
+
+Technology: ImpTileDevelopment2
+	Name: #R_IMP_TILE_DEVELOPMENT2
+	Blurb: #R_IMP_TILE_DEVELOPMENT_BLURB:40%
+	Description: #R_IMP_TILE_DEVELOPMENT_DESC:40%
+
+	Icon: DesignationIcons::10
+	Color: #a46c2f
+
+	Point Cost: 900
+	Time Cost: 160
+
+	ModAttribute(TileDevelopmentFactor, Multiply, 1.4)

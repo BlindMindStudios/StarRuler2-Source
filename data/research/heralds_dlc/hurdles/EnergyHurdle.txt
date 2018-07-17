@@ -1,0 +1,15 @@
+Technology: EnergyHurdle
+	Name: #R_ENERGY_HURDLE
+	Description: #R_ENERGY_HURDLE_DESC
+
+	Icon: ResourceIcon::2
+	Symbol: QuickbarIcons::3
+	Color: #ff0000
+
+	Category: Hurdles
+	Class: Boost
+
+	Point Cost: 0
+	Time Cost: 80
+
+	SecondaryEnergyCost(1500)

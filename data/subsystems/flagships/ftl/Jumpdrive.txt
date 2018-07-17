@@ -1,0 +1,27 @@
+Subsystem: Jumpdrive
+	Name: #S_JUMPDRIVE
+	Description: #S_JUMPDRIVE_DESC
+	BaseColor: #67ad85
+	TypeColor: #67ad85
+	Elevation: 0
+	
+	Tags: BaseCost, Category:FTL
+	Tags: Engine, Jumpdrive, HasInternals, Hyperengine
+	Hull: Flagship
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	JumpRange := 170000 * Size / ShipSize
+	
+	Requires:
+		Command = max(floor(Hexes / 3), 1)
+	
+	Module: Default
+	
+	Module: Core
+		Sprite: Jumpdrive
+		Hex.BuildCost := 2 * Hex.BuildCost

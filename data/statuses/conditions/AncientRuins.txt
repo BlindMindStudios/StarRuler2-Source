@@ -1,0 +1,11 @@
+Status: AncientRuins
+	Name: #COND_ANCIENT_RUINS
+	Description: #COND_ANCIENT_RUINS_DESC
+	Icon: FTLStorage * #aa9aba
+
+	Condition Frequency: 0.25
+	Condition Tier: 1
+	Color: #8c4ec9
+
+	TriggerCreate( SpawnBuilding(AncientRuins, (2, 2)) )
+	TriggerColonized( AddResearchPoints(500:1000, Modified = False, Penalized = False) )

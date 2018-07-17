@@ -1,0 +1,8 @@
+Template: var/DamageResist
+	Modifier: ResistFactor(factor)
+		DamageResist := DamageResist * factor
+
+Template: tag/IsArmor
+	Modifier: PenResistMod(mod)
+		Hex.Resistance := Hex.Resistance + mod
+

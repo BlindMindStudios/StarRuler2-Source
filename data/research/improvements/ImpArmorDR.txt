@@ -1,0 +1,29 @@
+Technology: ImpArmorDR
+	Name: #R_IMP_ARMOR_DR
+	Blurb: #R_IMP_ARMOR_DR_BLURB:10%
+	Description: #R_IMP_ARMOR_DR_DESC:10%:1M
+
+	Icon: techReinforcement
+	Color: #a9a9a9
+
+	Point Cost: 500
+	Time Cost: 120
+
+	AddModifier(any::ArmorResistFactor(1.10))
+
+	SecondaryMoneyCost(1000)
+
+Technology: ImpArmorDR2
+	Name: #R_IMP_ARMOR_DR2
+	Blurb: #R_IMP_ARMOR_DR_BLURB:25%
+	Description: #R_IMP_ARMOR_DR_DESC:25%:1.5M
+
+	Icon: techReinforcement
+	Color: #a9a9a9
+
+	Point Cost: 750
+	Time Cost: 160
+
+	AddModifier(any::ArmorResistFactor(1.25))
+
+	SecondaryMoneyCost(1500)

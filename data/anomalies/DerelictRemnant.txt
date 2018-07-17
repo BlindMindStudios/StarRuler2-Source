@@ -1,0 +1,50 @@
+Anomaly: DerelictRemnant
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Broken
+		Narrative: #ANOMALY_NAR_DERELICT_BROKEN
+
+		Model: TyrantFlagshipMedium
+		Material: TyrantPBRAdvanced
+
+		Choice: Research
+		Choice: Scrap
+
+	State: Intact
+		Narrative: #ANOMALY_NAR_DERELICT_INTACT
+
+		Model: TyrantFlagshipMedium
+		Material: TyrantPBRAdvanced
+
+		Choice: Activate
+		Choice: Scrap
+
+	Option: Scrap
+		Icon: ResourceIcon::0
+		Description: #ANOMALY_DERELICT_SCRAP:400
+
+		AddMoney(400)
+
+	Option: Research
+		Icon: ResourceIcon::4
+		Description: #ANOMALY_DERELICT_RESEARCH
+
+		AddResearchPoints(300:700, Modified = False, Penalized = False)
+
+	Option: Activate
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_DERELICT_ACTIVATE
+		Safe: No
+
+		Result: 35%
+			SendMessage(#ANOMALY_DERELICT_DRYDOCK)
+			SpawnDryDock(Ixion, 0.5, 0.2)
+
+		Result: 35%
+			SendMessage(#ANOMALY_DERELICT_SUPPORTS)
+			SpawnSupports(Heavy Gunship, 20, Creep Design = True)
+
+		Result: 30%
+			SendMessage(#ANOMALY_DERELICT_CAMP)
+			SpawnCreepCamp()

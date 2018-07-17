@@ -1,0 +1,14 @@
+Resource: Fulrate
+	Name: #FULRATE
+	Description: #FULRATE_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::44
+	Small Icon: ResourceIconsSmall::43
+
+	Level: 0
+	Rarity: Uncommon
+	Affinity: Money
+
+	Pressure: 2 Money
+	GiveNativePressure(4)

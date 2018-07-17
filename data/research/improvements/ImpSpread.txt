@@ -1,0 +1,29 @@
+Technology: ImpSpread
+	Name: #R_IMP_SPREAD
+	Blurb: #R_IMP_SPREAD_BLURB:20%
+	Description: #R_IMP_SPREAD_DESC:20%:700k
+
+	Icon: TechModIcons::13 * #cd48ea
+	Color: #cd48ea
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddModifier( tag/Weapon::SpreadFactor(0.8) )
+
+	SecondaryMoneyCost(700)
+
+Technology: ImpSpread2
+	Name: #R_IMP_SPREAD2
+	Blurb: #R_IMP_SPREAD_BLURB:40%
+	Description: #R_IMP_SPREAD_DESC:40%:1M
+
+	Icon: TechModIcons::13 * #cd48ea
+	Color: #cd48ea
+
+	Point Cost: 750
+	Time Cost: 120
+
+	AddModifier( tag/Weapon::SpreadFactor(0.6) )
+
+	SecondaryMoneyCost(1000)

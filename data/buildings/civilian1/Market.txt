@@ -1,0 +1,9 @@
+Building: Market
+	Name: #BLD_MARKET
+	Description: #BLD_MARKET_DESC
+	Sprite: BuildingSprites::2
+
+	Civilian: True
+
+	Saturation: 1 Money
+	Production: 1 Money

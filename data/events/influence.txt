@@ -1,0 +1,28 @@
+Empire@ getSenateLeader() -> local server::influence_global::getSenateLeader
+StackInfluenceCard@[] getInfluenceCardStack() -> local server::influence_global::getInfluenceCardStack
+void buyCardFromInfluenceStack(int id) -> server::influence_global::buyCardFromInfluenceStack
+void playInfluenceCard(int id, Targets@ targets, uint voteId = uint(-1)) -> server::influence_global::playInfluenceCard
+double getInfluenceDrawInterval() -> local server::influence_global::getInfluenceDrawInterval
+double getInfluenceDrawTimer() -> local server::influence_global::getInfluenceDrawTimer
+InfluenceVote@[] getActiveInfluenceVotes() -> local server::influence_global::getActiveInfluenceVotes_client
+InfluenceVote@[] getInfluenceVoteByID(uint id) -> local server::influence_global::getInfluenceVoteByID_client
+InfluenceVote@[] getInfluenceVoteHistory(uint limit, int befoerId = -1, bool reverse = true) -> local server::influence_global::getInfluenceVoteHistory_client
+void leaveInfluenceVote(uint id) -> server::influence_global::leaveVote_client
+void makeInfluenceVoteOffer(uint id, InfluenceVoteOffer@ offer) -> server::influence_global::makeInfluenceVoteOffer_client
+void claimInfluenceVoteOffer(uint id, int offerId) -> server::influence_global::claimInfluenceVoteOffer_client
+void withdrawInfluenceVote(uint id) -> server::influence_global::withdrawVote_client
+void sendInfluenceVoteMessage(uint id, string message) -> server::influence_global::voteMessage_client
+InfluenceEffect@[] getActiveInfluenceEffects() -> local server::influence_global::getActiveInfluenceEffects_client
+void dismissInfluenceEffect(int id) -> server::influence_global::dismissEffect_client
+Empire@ getInfluenceEffectOwner(int id) -> local server::influence_global::getInfluenceEffectOwner
+bool canDismissInfluenceEffect(int id, Empire@ byEmp = null) -> local server::influence_global::canDismissInfluenceEffect
+void objectRenamed(Object@ obj, string name, bool setNamed = true) -> shadow::influence_global::objectRenamed
+void createTreaty(Treaty@ treaty) -> server::influence_global::createTreaty_client
+Treaty@[] getActiveTreaties() -> local server::influence_global::getActiveInfluenceTreaties_client
+void inviteToTreaty(int id, Empire@ emp) -> server::influence_global::inviteToTreaty_client
+void leaveTreaty(int id) -> server::influence_global::leaveTreaty_client
+void declineTreaty(int id) -> server::influence_global::declineTreaty_client
+void joinTreaty(int id) -> server::influence_global::joinTreaty_client
+void offerSurrender(Empire@ toEmp) -> server::influence_global::offerSurrender_client
+void demandSurrender(Empire@ ofEmp) -> server::influence_global::demandSurrender_client
+void makeDonation(Empire@ toEmp, DiplomacyOffer@ offer) -> server::influence_global::makeDonation_client

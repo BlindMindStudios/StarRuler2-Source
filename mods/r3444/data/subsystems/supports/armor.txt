@@ -1,0 +1,30 @@
+Subsystem: SupportPlateArmor
+	Name: Plate Armor
+	Description: Heavy, interlocked plates of metal form a protective layer. Damage has a harder time piercing through, and all damage taken is reduced by a flat amount.
+	BaseColor: #a9a9a9
+	Picture: SubsystemButtonArt::0
+	Elevation: 1
+
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, TankArmor
+	Hull: Support
+
+	Size := HexSize * Hexes
+	ProjResist := HexSize * 4
+	EnergyResist := HexSize * 8
+	ExplosiveResist := HexSize * 4
+
+	Hex.Resistance := 0.5
+	Hex.HP := 54 * HexSize
+	Hex.Mass := 2.5 * HexSize
+
+	Hex.BuildCost := 1.5 * HexSize
+	Hex.LaborCost := 0.14 * HexSize
+	
+	Effect: ReduceDamage
+		ProjResist = ProjResist
+		EnergyResist = EnergyResist
+		ExplResist = ExplosiveResist
+		MinimumPercent = 0.2
+
+	Module: Default
+		Sprite: HexagonSubsystems::0

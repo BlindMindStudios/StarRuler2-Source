@@ -1,0 +1,14 @@
+Technology: Defense
+	Name: #R_DEFENSE
+	Description: #R_DEFENSE_DESC:2
+
+	Icon: ResourceIcon::5
+	Color: #af7926
+
+	Category: Basic Upgrades
+	Class: Upgrade
+
+	Point Cost: 500
+	Time Cost: 80
+
+	AddGlobalDefenseIncome(2)

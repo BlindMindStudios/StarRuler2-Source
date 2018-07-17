@@ -1,0 +1,56 @@
+Style: Grid
+ 	Element: Normal
+		Rect:[0,0][256,256]
+
+Style: BoundingBox
+	Element: Normal
+		Margin: 4
+		Rect:[256,0][266,10]
+
+		Vertical: Scaled
+		Horizontal: Scaled
+
+Style: Anchor
+	Element: Normal
+		Rect:[267,0][279,12]
+
+Style: GridOptions
+	Element: Normal
+		Rect:[255,140][293,178]
+	Element: Active
+		Rect:[255,179][293,216]
+	Element: Hovered
+		Rect:[255,217][293,255]
+
+Style: ColSelect
+	Element: Normal
+		Rect:[294,140][332,178]
+	Element: Active
+		Rect:[294,179][332,216]
+	Element: Hovered
+		Rect:[294,217][332,255]
+
+Style: GridSnap
+	Element: Normal
+		Rect:[333,140][371,178]
+	Element: Active
+		Rect:[333,179][371,216]
+	Element: Hovered
+		Rect:[333,217][371,255]
+
+Style: AlignmentBoundVert
+	Element: Normal
+		Rect: [223,937][224,940]
+		Vertical: Tiled
+
+Style: AlignmentBoundHoriz
+	Element: Normal	
+		Rect: [222,941][225,942]
+		Horizontal: Tiled
+
+Style: EditHighlight
+	Element: Normal
+		Rect: [218,943][238,963]
+		Margin: 8
+		Horizontal: Tiled
+		Vertical: Tiled

@@ -1,0 +1,98 @@
+Anomaly: MorphBlue
+	Name: #ANOMALY_OBELISK
+	Description: #ANOMALY_MORPH_NAR
+
+	Model: Obelisk
+	Material: Obelisk
+	Frequency: 0
+
+	State: Scanned
+		Narrative: #ANOMALY_MORPH_BLUE_NAR
+
+		Choice: Morph
+		Choice: Harvest
+
+	Option: Morph
+		Icon: ResourceIconsSmall::44
+		Description: #ANOMALY_MORPH_BLUE
+
+		SendMessage(#ANOMALY_MORPH_RESPONSE)
+
+		MorphSystemPlanetResource(0, Water)
+		MorphSystemPlanetResource(1, Water)
+		MorphSystemPlanetResource(2, HeavyWater)
+
+		DestroyAnomalies(MorphRed)
+		DestroyAnomalies(MorphGreen)
+
+	Option: Harvest
+		Icon: ResourceIcon::2
+		Description: #ANOMALY_MORPH_HARVEST
+		
+		AddEnergy(300)
+
+Anomaly: MorphRed
+	Name: #ANOMALY_OBELISK
+	Description: #ANOMALY_MORPH_NAR
+
+	Model: Obelisk
+	Material: Obelisk
+	Frequency: 0
+
+	State: Scanned
+		Narrative: #ANOMALY_MORPH_RED_NAR
+
+		Choice: Morph
+		Choice: Harvest
+
+	Option: Morph
+		Icon: ResourceIconsSmall::44
+		Description: #ANOMALY_MORPH_RED
+
+		SendMessage(#ANOMALY_MORPH_RESPONSE)
+
+		MorphSystemPlanetResource(0, Aluminum)
+		MorphSystemPlanetResource(1, Titanium)
+		MorphSystemPlanetResource(2, Supercarbons)
+
+		DestroyAnomalies(MorphBlue)
+		DestroyAnomalies(MorphGreen)
+
+	Option: Harvest
+		Icon: ResourceIcon::2
+		Description: #ANOMALY_MORPH_HARVEST
+		
+		AddEnergy(300)
+
+Anomaly: MorphGreen
+	Name: #ANOMALY_OBELISK
+	Description: #ANOMALY_MORPH_NAR
+
+	Model: Obelisk
+	Material: Obelisk
+	Frequency: 0
+
+	State: Scanned
+		Narrative: #ANOMALY_MORPH_GREEN_NAR
+
+		Choice: Morph
+		Choice: Harvest
+
+	Option: Morph
+		Icon: ResourceIconsSmall::44
+		Description: #ANOMALY_MORPH_GREEN
+
+		SendMessage(#ANOMALY_MORPH_RESPONSE)
+
+		MorphSystemPlanetResource(0, Fruit)
+		MorphSystemPlanetResource(1, Grain)
+		MorphSystemPlanetResource(2, Salts)
+
+		DestroyAnomalies(MorphBlue)
+		DestroyAnomalies(MorphRed)
+
+	Option: Harvest
+		Icon: ResourceIcon::2
+		Description: #ANOMALY_MORPH_HARVEST
+		
+		AddEnergy(300)

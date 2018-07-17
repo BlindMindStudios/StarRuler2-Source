@@ -1,0 +1,16 @@
+Technology: DroneCount
+	Name: #R_DRONE_COUNT
+	Description: #R_DRONE_COUNT_DESC:50%
+
+	Icon: MissileLauncher::3
+	Symbol: techImpact*#af7600
+	Color: #e6ed00
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 160
+
+	AddModifier( DroneLauncher::DroneCountFactor(1.5) )
+	AddModifier( DroneLauncher::DamageFactor(1.3) )

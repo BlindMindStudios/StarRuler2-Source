@@ -1,0 +1,106 @@
+Building: Forge0
+	Name: #BLD_FORGE
+	Description: #BLD_FORGE_DESC
+	Sprite: Forge
+
+	Category: Production
+
+	Size: 3x3
+	Base Cost: 250
+	Base Maintenance: 50
+	Labor Cost: 50
+
+	ConstructibleIfAttribute(ForgeCount, 0)
+
+	RequireNotTrait(Ancient)
+
+	TriggerStartConstruction( ModAttribute(ForgeCount, Add, 1) )
+	TriggerCancelConstruction( ModAttribute(ForgeCount, Add, -1) )
+	TriggerConstructed( ModAttribute(ForgeCount, Add, -1) )
+
+	ModEmpireAttribute(ForgeCount, Add, 1)
+	AddLaborFactor(0.25)
+
+Building: Forge1
+	Name: #BLD_FORGE
+	Description: #BLD_FORGE_DESC
+	Sprite: Forge2
+
+	Category: Production
+
+	Size: 4x3
+	Base Cost: 400
+	Base Maintenance: 100
+	Labor Cost: 150
+
+	ConstructibleIfAttribute(ForgeCount, 1)
+
+	TriggerStartConstruction( ModAttribute(ForgeCount, Add, 1) )
+	TriggerCancelConstruction( ModAttribute(ForgeCount, Add, -1) )
+	TriggerConstructed( ModAttribute(ForgeCount, Add, -1) )
+
+	ModEmpireAttribute(ForgeCount, Add, 1)
+	AddLaborFactor(0.25)
+
+Building: Forge2
+	Name: #BLD_FORGE
+	Description: #BLD_FORGE_DESC
+	Sprite: Forge3
+
+	Category: Production
+
+	Size: 4x4
+	Base Cost: 600
+	Base Maintenance: 150
+	Labor Cost: 450
+
+	ConstructibleIfAttribute(ForgeCount, 2)
+
+	TriggerStartConstruction( ModAttribute(ForgeCount, Add, 1) )
+	TriggerCancelConstruction( ModAttribute(ForgeCount, Add, -1) )
+	TriggerConstructed( ModAttribute(ForgeCount, Add, -1) )
+
+	ModEmpireAttribute(ForgeCount, Add, 1)
+	AddLaborFactor(0.25)
+
+Building: Forge3
+	Name: #BLD_FORGE
+	Description: #BLD_FORGE_DESC
+	Sprite: Forge4
+
+	Category: Production
+
+	Size: 4x5
+	Base Cost: 1000
+	Base Maintenance: 200
+	Labor Cost: 900
+
+	ConstructibleIfAttribute(ForgeCount, 3)
+
+	TriggerStartConstruction( ModAttribute(ForgeCount, Add, 1) )
+	TriggerCancelConstruction( ModAttribute(ForgeCount, Add, -1) )
+	TriggerConstructed( ModAttribute(ForgeCount, Add, -1) )
+
+	ModEmpireAttribute(ForgeCount, Add, 1)
+	AddLaborFactor(0.25)
+
+Building: Forge4
+	Name: #BLD_FORGE
+	Description: #BLD_FORGE_DESC
+	Sprite: Forge5
+
+	Category: Production
+
+	Size: 5x5
+	Base Cost: 2000
+	Base Maintenance: 250
+	Labor Cost: 1800
+
+	ConstructibleIfAttributeGTE(ForgeCount, 4)
+
+	TriggerStartConstruction( ModAttribute(ForgeCount, Add, 1) )
+	TriggerCancelConstruction( ModAttribute(ForgeCount, Add, -1) )
+	TriggerConstructed( ModAttribute(ForgeCount, Add, -1) )
+
+	ModEmpireAttribute(ForgeCount, Add, 1)
+	AddLaborFactor(0.25)

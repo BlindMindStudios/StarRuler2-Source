@@ -1,0 +1,32 @@
+Subsystem: ShieldGen
+	Name: #SHIELDGEN_NAME
+	Description: #SHIELDGEN_DESC
+	BaseColor: #0044db
+	Elevation: 1
+
+	DamageOrder: -100
+
+	Tags: BaseCost
+	Tags: IsShield, Defense, Category:Defense, HasInternals
+	Tags: SecondaryDefense, HighPowerUse
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	ShieldCapacity := Size * 40
+	ShieldRegen := Size * 2
+	ShieldHexes := Hexes
+	PowerUse := 10 * Size
+
+	Hex.Resistance := 0.5
+	Hex.HP := 12 * HexSize
+	Hex.Mass := 2.5 * HexSize
+
+	Effect: ShieldDamage
+	
+	Requires:
+		Command = 1
+		Power = PowerUse
+	
+	Module: Core
+		Sprite: FissionReactor
+		Hex.BuildCost := 2 * Hex.BuildCost

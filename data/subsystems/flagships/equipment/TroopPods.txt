@@ -1,0 +1,45 @@
+Subsystem: TroopPods
+	Name: #S_TROOPPODS
+	Description: #S_TROOPPODS_DESC
+	BaseColor: #dd3b4e
+	TypeColor: #dd3b4e
+	Elevation: 2
+
+	Tags: HeraldsDLC
+	Tags: Category:Equipment, Troops, NonContiguous, NoCore
+	Tags: Ability:TroopPods
+	Tags: HasInternals
+	Hull: Flagship, Station
+
+	Hex.LaborCost := 0.10 * HexSize + 0.8
+	Hex.BuildCost := 2.0 * HexSize + 2
+	Hex.MaintainCost := 3 * HexSize + 5 - (4 * HexSize / ShipSize^0.5)
+
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+
+	MaxLoyalty := floor(Size / 9)
+	Duration := 2 * ceil(MaxLoyalty / 10) * 60
+
+	TroopCost := 50.0 * MaxLoyalty
+	TroopLabor := 2.0 * MaxLoyalty
+	TroopStorage := 1
+
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+
+	Hook: OnEnable(AddStatus(Troops))
+	Hook: LimitStatusStacks(Troops, TroopStorage)
+
+	Requires:
+		Command = ceil(Hexes * 0.6)
+
+	Assert: MaxLoyalty >= 1
+		Unique: True
+		Message: #ERROR_TOO_SMALL
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost + (TroopCost / Hexes)
+		Hex.LaborCost := Hex.LaborCost + (TroopLabor / Hexes)
+
+		Sprite: TroopPods

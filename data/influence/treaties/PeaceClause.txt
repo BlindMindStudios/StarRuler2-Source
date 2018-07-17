@@ -1,0 +1,11 @@
+Clause: PeaceClause
+	Name: #CLAUSE_PEACE
+	Description: #CLAUSE_PEACE_DESC
+
+	Icon: StatusPeace
+
+	MakePeace()
+	CannotInvite()
+	NotNormallyVisible()
+
+	RemoveOnCreate()

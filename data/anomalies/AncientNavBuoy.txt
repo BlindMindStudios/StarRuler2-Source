@@ -1,0 +1,24 @@
+Anomaly: AncientNavBuoy
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State:
+		Narrative: #ANOMALY_NAR_NAVBUOY
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Vision
+		Choice: Scrap
+
+	Option: Scrap
+		Icon: ResourceIcon::0
+		Description: #ANOMALY_NAVBUOY_SCRAP:200
+
+		AddMoney(200)
+
+	Option: Vision
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_NAVBUOY_VISION
+
+		MapVision(2)

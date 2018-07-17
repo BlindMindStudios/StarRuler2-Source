@@ -1,0 +1,5 @@
+Status: AddedDrugs
+	Visible To: Nobody
+
+	OnEnable(GainPlanetResource(Drugs))
+	IsTriggerStatus()

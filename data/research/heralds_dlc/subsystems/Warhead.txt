@@ -1,0 +1,17 @@
+Technology: Warhead
+	Name: #R_SYS_WARHEAD
+	Description: #R_SYS_WARHEAD_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: Warhead::0
+	Color: #df123d
+
+	DLC: Heralds
+	DLC Replace: SupportCap
+	
+	UnlockSubsystem(Warhead)
+	SkipOnUnlockedSubsystem(Warhead)

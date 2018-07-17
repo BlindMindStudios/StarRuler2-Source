@@ -1,0 +1,36 @@
+#define pi 3.141592653589793238462643383279
+#define twopi (pi * 2.0)
+uniform float minRad;
+uniform float maxRad;
+varying vec2 rcoords;
+
+void main() {
+	float r = length(rcoords);
+	float width = 0.7;
+	if(r >= 1.0 || r < 1.0 - width)
+		discard;
+
+	float ang = atan(rcoords.y, rcoords.x);
+	if(ang < minRad && ang > maxRad - twopi)
+		discard;
+	if(ang > maxRad && ang < minRad + twopi)
+		discard;
+	
+	float bdist = r - (1.0 - width);
+
+	vec4 col = gl_Color;
+	if(r < 0.95)
+		col.a *= 0.5;
+	else if(r < 0.96)
+		col.a *= 0.5 + ((r - 0.95) / 0.01) * 0.5;
+	else if(r > 0.99)
+		col.a *= (1.0 - r) / 0.01;
+
+	col.a *= bdist / width;
+
+	float adist = min(abs(ang - minRad), abs(ang - maxRad));
+	if(adist < 0.02)
+		col.a *= adist / 0.02;
+	
+	gl_FragColor = col;
+}

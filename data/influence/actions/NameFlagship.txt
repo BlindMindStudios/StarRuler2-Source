@@ -1,0 +1,32 @@
+Card: NameFlagship
+	Name: #CARD_NAMEFLAGSHIP
+	Description: #CARD_NAMEFLAGSHIP_DESC
+
+	Icon: CardIcons::18
+	
+	Color: #206080
+	Class: Action
+	Rarity: Rare
+
+	Max Quality: 3
+	ShowEffectiveness(0.1, Per Quality = 0.03)
+
+	Base Purchase Cost: 2
+	Base Play Cost: 4
+
+	Target: ship = Object
+	TargetFilterOwned(ship)
+	TargetFilterFlagship(ship)
+	TargetFilterUnnamed(ship)
+
+	Target: name = Text
+	TargetDefaultFlagshipName(name)
+
+	NameObject(ship, name)
+
+	Trigger(ship, AddPermanentEffectiveness(0.1))
+	Trigger(ship, AddPermanentEffectiveness(0.03), Per Quality = 1)
+
+	NotifyAll(#NAMEFLAGSHIP_NOTIFY)
+
+	AI: PlayOnImportantFleets(ship)

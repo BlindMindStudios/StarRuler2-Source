@@ -1,0 +1,26 @@
+varying vec2 uv[5], uvB;
+const vec2 fractions = vec2(0.984375, 0.0078125);
+uniform vec2 texSize;
+uniform vec2 fullSize;
+
+varying vec2 blur;
+
+void main() {
+	// make biome tiler
+	// to reuse the tiling planet surfaces we need to account for the bleed they have baked into the planet sphere uv's.
+    // each planet tile is 2016x2016 with 16 pixel tiled bleed on each side   
+	uvB = (vec2(gl_Color.x, gl_MultiTexCoord0.y) * fractions.x + fractions.y) / vec2(4.0, 2.0);
+	uvB.y = 1.0 - uvB.y;
+	
+	// make splatmap blurs
+	blur = vec2(1.0 / fullSize.x, 1.0 / fullSize.y);
+	uv[0] = gl_MultiTexCoord0.xy;
+	uv[1] = uv[0] + blur;
+	uv[2] = uv[0] + vec2(-blur.x, blur.y);
+	uv[3] = uv[0] + vec2(-blur.x, -blur.y);
+	uv[4] = uv[0] + vec2(blur.x, -blur.y);
+	
+	gl_Position = ftransform();
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

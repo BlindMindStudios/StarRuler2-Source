@@ -1,0 +1,14 @@
+Resource: NativeFish
+	Name: #NATIVE_FISH
+	Description: #NATIVE_FISH_DESC
+	Native Biome: Oceanic
+	Class: Food
+
+	Icon: ResourceIcons::2
+	Small Icon: ResourceIconsSmall::19 * #ff00e6
+
+	Distribution: 0
+	Exportable: False
+
+	Level: 0
+	AddResourceVanishBonus(+0.3)

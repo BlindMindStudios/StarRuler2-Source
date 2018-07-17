@@ -1,0 +1,7 @@
+Status: HasDefenses
+	Name: #STATUS_HAS_DEFENSES
+	Description: #STATUS_HAS_DEFENSES_DESC
+	Icon: GuiOrbitalIcons::6 * #80ff80
+	Collapses: True
+
+	Color: #80ff80

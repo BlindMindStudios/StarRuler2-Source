@@ -1,0 +1,10 @@
+Building: PowerPlant
+	Name: #BLD_POWERPLANT
+	Description: #BLD_POWERPLANT_DESC
+	Sprite: BuildingSprites::7
+
+	Civilian: True
+	Upgrades From: Generator
+
+	Saturation: 2 Energy
+	Production: 1.5 Energy

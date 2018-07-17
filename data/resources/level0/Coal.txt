@@ -1,0 +1,14 @@
+Resource: Coal
+	Name: #COAL
+	Description: #COAL_DESC
+	Native Biome: Mountains
+	Class: Fuel
+
+	Icon: ResourceIcons::43
+	Small Icon: ResourceIconsSmall::12
+
+	Rarity: Uncommon
+	Affinity: Energy
+
+	Pressure: 2 Energy
+	ModCivResourceMult(Labor, +0.3)

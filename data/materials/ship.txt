@@ -1,0 +1,20 @@
+Material: Ship10
+	Shader: NormalLighting
+	Texture: data/images/ships/ship10.png
+	Texture2: data/images/ships/ship10_nrm.png
+	Shininess: 20
+
+Material: SporeShip
+	Shader: NormalLighting
+	Texture: data/images/spore-ship-2_diff.png
+	Texture2: data/images/spore-ship-2_norm.png
+
+Material: Shield
+	Shader: Shield
+	Blend: Add
+	
+Material: HexBase
+	Shader: ColoredFlat
+	DepthWrite: Off
+	DepthTest: NoDepthTest
+	Texture: data/images/subsystems/hex_underlay.png

@@ -1,0 +1,5 @@
+Status: GalacticUtopia
+	Visible To: Nobody
+
+	IfLevel(2, AddDummyResource(Meat, 1))
+	IfLevel(3, AddDummyResource(Neutronium, 1))

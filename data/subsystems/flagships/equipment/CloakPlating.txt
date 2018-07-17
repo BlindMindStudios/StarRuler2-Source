@@ -1,0 +1,25 @@
+Subsystem: CloakPlating
+	Name: #S_CLOAKPLATING
+	Description: #S_CLOAKPLATING_DESC
+	BaseColor: #5188e6
+	Elevation: -3
+
+	Tags: Category:Equipment, NoWall, NoFloor, PassExterior
+	Tags: NoCore, NonContiguous, Ephemeral
+	Tags: Ability:Cloak
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	Ship.ExternalHexes := Ship.ExternalHexes + Hexes
+
+	Hex.BuildCost := 0.5 * ShipSize / Hexes
+	Hex.LaborCost := 0.05 * ShipSize / Hexes
+
+	Assert: Hexes == ExteriorHexes
+		Message: #ERROR_MUST_BE_EXTERIOR
+
+	OnCheckErrors: designs::checkCoversAllDirections
+
+	Module: Default
+		Sprite: PlateArmor * #5188e6a0

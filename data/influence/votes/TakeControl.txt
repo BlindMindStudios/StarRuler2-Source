@@ -1,0 +1,31 @@
+Card: TakeControl
+	Name: #CARD_CONTROL
+	Description: #CARD_CONTROL_DESC
+
+	Target: obj = Object
+
+	Color: #ffa4a4
+	Class: Vote
+	Rarity: Uncommon
+	Frequency: 0
+	
+	Icon: CardIcons::22
+
+	Base Purchase Cost: 2
+	Base Play Cost: 7
+
+	TargetFilterType(obj, Orbital)
+	TargetFilterOtherEmpire(obj)
+	//TargetFilterOrbitalCore(obj, EmbassyCore, AncientEmbassy)
+	TargetFilterHasTradePresence(obj, Allow Adjacent = True)
+	ApplyRegionTargetCostMod(obj)
+
+	StartVote(TakeControl, obj)
+
+Vote: TakeControl
+	Name: #VOTE_TAKE_CONTROL
+
+	Target: obj = Object
+
+	FlagContested(obj)
+	Trigger(obj, TakeControl())

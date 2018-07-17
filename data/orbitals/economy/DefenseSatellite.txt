@@ -1,0 +1,31 @@
+Module: DefenseSatellite
+	Name: #ORB_DEFENSE_SATELLITE
+	Blurb: #ORB_DEFENSE_SATELLITE_BLURB
+	Description: #ORB_DEFENSE_SATELLITE_DESC
+	Icon: GuiOrbitalIcons::14
+	Distant Icon: OrbitalIcons::14
+
+	Health: 15000
+	Armor: 10000
+	Size: 8
+
+	Build Cost: 250
+	Labor Cost: 20
+
+	ConsumeEnergy(500)
+
+	RequireUnlockTag(DefenseSatelliteUnlock)
+
+	Model: Outpost
+	Material: GenericPBR_Outpost
+
+	RepeatExtended(AddTurret(Missile, Range=350, Damage=6, Reload=1, Speed=150, Tracking=6), Base = 4, Multiply Attribute = StaticDamageFactor)
+	RepeatExtended(AddTurret(Laser, Range=250, DPS=5, Duration=2, Cooldown=0, Tracking=0.4), Base = 2, Multiply Attribute = StaticDamageFactor)
+
+	RepeatExtended(RecordBonusDPS(6), Base = 4, Multiply Attribute = StaticDamageFactor)
+	RepeatExtended(RecordBonusDPS(5), Base = 2, Multiply Attribute = StaticDamageFactor)
+
+	LimitInOrbitStatus(DefenseSatellite)
+
+	AddStatusToOrbitingPlanet(DefenseSatellite)
+	MatchOrbitingOwner(Destroy None = True)

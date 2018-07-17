@@ -1,0 +1,30 @@
+Subsystem: SupportAblativeArmor
+	Name: #ABLATIVEARMOR_NAME
+	Description: #ABLATIVEARMOR_DESC
+	BaseColor: #a9a9b9
+	Elevation: 1
+
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, TankArmor
+	Tags: NoWall, Category:Defense, FauxExterior, ExternalSpace
+	Tags: PrimaryArmor
+	Hull: Support, Satellite
+
+	Size := HexSize * Hexes
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	Hex.Resistance := 0.5
+	Hex.HP := 40 * HexSize
+	Hex.Mass := 2.5 * HexSize
+
+	Hex.BuildCost := 0.75 * HexSize
+	Hex.LaborCost := 0.14 * HexSize
+	
+	DamageResist := ShipSize / 9.0
+	Effect: ReduceDamage
+		ProjResist = DamageResist
+		EnergyResist = DamageResist
+		ExplResist = DamageResist
+
+	Module: Default
+		Sprite: PlateArmor * #9999ff

@@ -1,0 +1,26 @@
+Object.Cargo : components.Cargo::Cargo {
+local:
+	CargoStorage@[] getCargo();
+	safe double get_cargoCapacity();
+	safe double get_cargoStored();
+
+	double getCargoStored(uint type);
+	safe uint get_cargoTypes();
+	uint get_cargoType(uint index);
+
+server:
+	void modCargoStorage(double amount);
+	void addCargo(uint type, double amount);
+	void removeCargo(uint type, double amount);
+	double consumeCargo(uint type, double amount, bool partial = false);
+	void transferAllCargoTo(Object@ other);
+	void transferPrimaryCargoTo(Object@ other, double rate);
+	void transferCargoTo(uint type, Object@ other);
+
+	void writeCargo(Message& msg) const;
+	bool writeCargoDelta(Message& msg) const;
+
+shadow:
+	void readCargo(Message& msg);
+	void readCargoDelta(Message& msg);
+}

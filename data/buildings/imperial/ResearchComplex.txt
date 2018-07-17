@@ -1,0 +1,23 @@
+Building: ResearchComplex
+	Name: #BLD_RESEARCHCOMPLEX
+	Description: #BLD_RESEARCHCOMPLEX_DESC
+	Sprite: ResearchComplex
+
+	Category: Production
+	Build Affinity: Crystallic
+	Maintenance Affinity: Crystallic
+
+	Size: 2x2
+	Base Cost: 200
+	Tile Cost: 25
+	Base Maintenance: 100
+	Tile Maintenance: 15
+
+	RequireNotTrait(Ancient)
+
+	AddResource(Research, 1)
+	AddPressure(Research, 1)
+
+	ModEmpireAttribute(ResearchLabsBuilt, Add, 1)
+
+	AddPressureEmpireAttribute(Research, ResearchComplexExtraPressure) #version>=147

@@ -1,0 +1,16 @@
+Ability: EquipIonCannon
+	Name: #ABL_EQUIP_ION_CANNON
+	Description: #ABL_EQUIP_ION_CANNON_DESC
+	Icon: HexagonSubsystems::6 * #ff8d00
+	Activate Sound: generic_activate_1
+
+	Energy Cost: 500
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: targ = Object
+	TargetFilterFlagship(targ)
+	TargetFilterOwned(targ)
+	TargetFilterSameTerritory(targ)
+	TargetFilterNotStatus(targ, IonCannon)
+
+	Trigger(targ, AddStatus(IonCannon))

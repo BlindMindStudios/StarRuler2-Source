@@ -1,0 +1,44 @@
+Attitude: Tolerant
+	Name: #ATT_TOLERANT
+	Progress: #ATT_TOLERANT_PROGRESS
+	Color: #45e1ed
+	Sort: 60
+
+	ProgressFromScoutedSystems()
+	Conflict(Xenophobic)
+
+	Level:
+		Description: #ATT_TOLERANT_L1
+		Icon: AttributeIcons::0
+		Threshold: 5
+
+		EnableModifier(RocketEngine::ThrustFactor(1.25))
+		EnableModifier(SupportRocketEngine::ThrustFactor(1.25))
+
+	Level:
+		Description: #ATT_TOLERANT_L2
+		Icon: ResourceIcon::8
+		Threshold: 15
+
+		ModEmpireAttribute(PopulationGrowthFactor, Multiply, 1.3)
+
+	Level:
+		Description: #ATT_TOLERANT_L3
+		Icon: ThumbsDown
+		Threshold: 40
+
+		OnEmpires(ModEmpireAttribute(VoteStartSupport, Add, -2), On Owner = False, On Allied = False)
+
+	Level:
+		Description: #ATT_TOLERANT_L4
+		Icon: CardIcons::5
+		Threshold: 70
+
+		RemoveInfluenceCardStackTargeted()
+
+	Level:
+		Description: #ATT_TOLERANT_L5
+		Icon: HappyFace * #80ff80
+		Threshold: 150
+
+		MaintainInfluenceEffect(TolerantEffect)

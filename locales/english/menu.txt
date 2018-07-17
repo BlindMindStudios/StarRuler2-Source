@@ -1,0 +1,349 @@
+START_GAME: Start Game
+GAME_SETTINGS: Game Settings
+ADD_AI: Add AI
+MENU_EMPIRES: Empires
+MENU_GAME_SETTINGS: Game Settings
+MENU_GALAXIES: Galaxies
+MENU_GAMES: Games
+HANDICAP: Handicap
+MODS_MENU: Mods
+DISABLED_MOD: Disabled
+DISABLE_MOD: Disable Mod
+ENABLE_MOD: Enable Mod
+NEW_MOD: Create New Mod
+EDIT_MOD: Edit Mod
+MENU_CONTINUE_MAIN: Continue to Main Menu
+MENU_MOD_COUNTS: $1 Mod(s) Installed, $2 Mods(s) Enabled
+MANAGE_MODS: Manage Mods
+OPEN_WORKSHOP: View Steam Workshop
+MOD_INCOMPATIBLE: Cannot enable, mod is not compatible with '$1'.
+MOD_CONFLICT_BASE: Can only enable one base mod at a time.
+MOD_CONFLICT: Conflicting Files:
+MOD_COMPATIBILITY_WARN: [b][color=#f00][center]Warning: Not marked as compatible with this version of the game.[/center][/color][/b]\n\n
+MOD_COMPATIBILITY: <<
+	[font=Medium][color=#f00]WARNING[/color][/font]
+	This mod does not indicate that it is compatible with the current version of the game. Enabling it may break various or all aspects of the game until it is uninstalled.
+
+	Enable this mod anyway?
+>>
+MENU_LOADING: Loading...
+CHOOSE_RACE: Choose Race
+AI_CANNOT_PLAY: <<
+	The AI cannot play as this race at this time.
+>>
+ENABLE_INTERNET: Allow Internet Access
+
+MAIN_MENU: Main Menu
+PAUSED_MENU: Paused
+RESUME_GAME: Resume
+END_GAME: End Game
+RETURN_TO_GAME: Return to Game
+NEW_GAME: New Game
+CAMPAIGN: Campaign
+SAVE_GAME: Save Game
+LOAD_GAME: Load Game
+MULTIPLAYER: Multiplayer
+DISCONNECT: Disconnect
+MP_JOIN: Join
+MENU_BACK: Back
+MENU_OPTIONS: Options
+QUIT_GAME: Quit
+OPEN_IRC: Open IRC Chat
+CLOSE_IRC: Disconnect IRC Chat
+IRC_NICKNAME: Nick: $1
+NICKNAME: Nickname:
+CHANGE_NICK: Change
+SAVE_NO_COMPAT: <<|
+	The save you are attempting to load is from an older version of the game,
+	and can unfortunately not be loaded.
+
+	The development team apologizes for the inconvenience.
+>>
+SAVE_NO_MODS: <<
+	Cannot load save: one or more mods used in this save file are not installed.
+>>
+
+MP_OPTIONS: Multiplayer Options
+MP_HOST_OPTIONS: Host Options
+MP_HOST: Host
+MP_SERVER_NAME: Server Name
+MP_IP: IP
+MP_PORT: Port
+MP_HOST_LOAD: Host & Load
+MP_PUBLIC: Public Game
+MP_PUNCHTHROUGH: NAT Traversal
+MP_VERSION_MISMATCH: (INCOMPATIBLE VERSION)
+MP_MISSING_MODS: (MISSING MODS)
+MP_ENTER_PASSWORD: Password Required
+MP_CHAT_INTRO: [i][color=#aaa]Press Shift+Return to re-open the chat window after closing it...[/color][/i]
+MP_CHAT_ALL: To All
+MP_CHAT_ALLIES: To Allies
+MP_CHAT_PEACE: To Peaceful
+MP_CHAT_TO: To $1
+MP_NOT_READY: Ready Up
+MP_READY: Ready
+MP_PLAYER_READY: Player is ready to start the game.
+MP_PLAYER_NOT_READY: Player is not ready to start the game.
+MP_CONFIRM_NOT_READY: Not all players have indicated they are ready to start the game. Start the game anyway?
+MP_CANNOT_CONNECT: Unable to connect to server
+MP_WAITING_START: Waiting for host to start the game
+MP_WAITING_TRANSFER: Transfering Game
+MP_IRC_CHAT: Open IRC Chat Lobby
+MP_JOIN_IP: Join via IP
+MP_NO_GAMES: No active multiplayer games...
+INVITE_FRIEND: Invite Friend
+MP_CONNECT_EVENT: $1 has connected to the game.
+MP_DISCONNECT_EVENT: $1 has disconnected.
+MP_PLAY_EVENT: $1 is now playing as the $2 empire.
+MP_SPECTATING_EVENT: $1 is now spectating.
+MP_CHEATS_ENABLED: Cheats have been turned [color=#0f0]on[/color].
+MP_CHEATS_DISABLED: Cheats have been turned [color=#f00]off[/color].
+MP_QUEUE: Queue for Match
+MP_QUEUE_ACTIVE: In Queue...
+MP_QUEUE_ACTIVE_PLAYERS: In Queue... ($1 Players)
+MP_QUEUE_READY: Match Ready
+MP_QUEUE_ACCEPT: Accept
+MP_QUEUE_REJECT: Decline
+MP_QUEUE_LEAVE: Leave Queue
+MP_QUEUE_WAITING: Waiting for players ($1/$2)
+
+CHOOSE_MAP: Choose Map...
+ADD_GALAXY: Add Galaxy
+SYSTEM_COUNT: Systems
+SYSTEM_SPACING: Spacing
+CONNECT_ENDS: Loop with Wormhole
+TEAM: Team
+TEAM_TEXT: Team $1
+NO_TEAM: No Team
+
+NG_GAME_OPTIONS: Game Options
+
+NGTT_MAP_HW: Determines whether empire homeworlds can be spawned in this galaxy.
+NG_UNIVERSE_GENERATION: Universe Generation
+NG_ANOMALY_OCCURANCE: Anomaly Occurrence
+NG_REMNANT_OCCURANCE: Remnant Occurrence
+NG_ASTEROID_OCCURANCE: Minerals/Ore Asteroids
+NG_RESOURCE_ASTEROID_OCCURANCE: Resource Asteroids
+NG_UNIQUE_SYSTEM_OCCURANCE: Unique System Occurrence
+NG_UNIQUE_RESOURCE_OCCURANCE: Unique Resource Occurrence
+NG_PLANET_FREQUENCY: Planet Frequency
+NG_ARTIFACT_FREQUENCY: Artifact Frequency
+NG_SYSTEM_SIZE: System Size
+NG_RESET: Reset Page to Defaults
+NG_EMPIRE_OPTIONS: Empire Options
+NG_ENABLE_CIVILIAN_TRADE: Enable Civilian Trade Ships
+NG_CIVILIAN_TRADE: Civilian Trade Activity
+NGTT_CIVILIAN_TRADE: The amount of activity from civilian trade ships in your empire. Higher civilian activity creates more trade ships, but can have an impact on game performance and framerate.
+NG_VICTORY_OPTIONS: Victory Options
+NG_RANDOM_EVENTS: Random Events
+NG_TIME_LIMIT: Time Limit
+NGTT_TIME_LIMIT: <<|
+	Set a time limit for the game. After the indicated amount of minutes have expired, the empire with the most points is declared the winner.
+>>
+NG_REMNANT_AGGRESSION: Remnant Aggression
+NGTT_REMNANT_AGGRESSION: Allow remnant fleets to move to intercept nearby enemy fleets.
+NG_DISABLE_STARTING_FLEETS: Disable Starting Fleets
+NGTT_DISABLE_STARTING_FLEETS: Disable the free starting fleets that each empire gets from their Government trait.
+NG_ENABLE_REVENANT_PARTS: Enable Revenant Parts
+NGTT_ENABLE_REVENANT_PARTS: <<|
+	When checked, the 4 artifact parts of The Revenant will be spread around the universe.
+
+	Activating a part of The Revenant gives a bonus, and having all 4 of them active gives control over the most powerful warship in the universe.
+>>
+NG_ALLOW_TEAM_SURRENDER: Allow Surrender to Break Teams
+NGTT_ALLOW_TEAM_SURRENDER: <<
+	If checked, players in teams will be able to surrender to empires in other teams, breaking them away from their previous teammates and into being vassals of their new master's team.
+>>
+NG_ENABLE_DREAD_PIRATE: Enable Dread Pirate
+NGTT_ENABLE_DREAD_PIRATE: <<
+	When the Dread Pirate is enabled, a pirate ship will roam the galaxy preying on unarmed civilian trade ships.
+
+	The pirate stores its loot in multiple pirate hoard stations hidden in deep space. Kill one of the hoards or the dread pirate ship itself to get its stolen money as special funds.
+>>
+NG_RESOURCE_SCARCITY: Resource Scarcity
+NGTT_RESOURCE_SCARCITY: <<
+	When enabled, larger maps will contain barren planets to keep the amount of resources available to empires scarce and at a managable level.
+	
+	Percentages above 100% will further decrease the amount of resources in the universe, while percentages below 100% will limit the scarcity effect and generate more resources.
+>>
+NG_ENABLE_INFLUENCE_EVENTS: Enable Diplomacy Events
+NGTT_ENABLE_INFLUENCE_EVENTS: <<
+	When enabled, event cards will be seeded into the influence card deck that trigger when drawn.
+
+	Disabling this will prevent Zeitgeists and other diplomacy events from occuring.
+>>
+NG_START_EXPLORED_MAP: Fully Explored Map
+NGTT_START_EXPLORED_MAP: <<
+	When enabled, all systems in the map start out explored and all empires know where they are.
+
+	Otherwise, empires will need to scout for systems to reveal them.
+>>
+NG_ENABLE_TERRAFORMING: Enable Terraforming
+NGTT_ENABLE_TERRAFORMING: <<
+	When terraforming is enabled, empires will be able to change the resources on their planets to any basic Tier 1 resource at will.
+
+	To terraform a resource, select a planet with labor and right click another planet to terraform.
+>>
+NG_ENABLE_INFLUENCE_VICTORY: Enable Influence Victory
+NGTT_ENABLE_INFLUENCE_VICTORY: <<
+	Enable the influence victory that can be achieved by becoming senate leader, constructing a Senatorial Palace, and purchasing and activating both the Galactic Superpower and Galactic Utopia cards.
+>>
+
+FLATTEN: Flatten
+
+TEX_QUAL_2: Sad
+TEX_QUAL_3: Medium
+TEX_QUAL_4: High
+TEX_QUAL_5: Ultra
+
+RESOLUTION: Resolution
+RES_DESKTOP: Desktop
+FULLSCREEN: Fullscreen
+
+NG_DISABLE_TRADE: Disable Civilian Freight Trade
+NGTT_DISABLE_TRADE: <<|
+	Disable civilian trade ships from spawning in this game. Will remove all raiding mechanics, but can improve performance in very large galaxies.
+>>
+
+
+NG_WARN_PEREMP: <<|
+	[b][color=#f00]Warning:[/color][/b] You are creating a large map with more than 25 systems per empire,
+	your gameplay experience may be negatively affected by the much slower pace of
+	the game.
+
+	We recommend playing the game with around 10-20 systems per empire for
+	optimal gameplay results.
+
+	[b]Proceed anyway?[/b]
+>>
+NG_WARN_OPTIMAL: <<|
+	[b][color=#f00]Warning:[/color][/b] You are creating a large map of more than 150 systems. Games with
+	this many systems may not run optimally on lower-end PCs, and may
+	experience graphics lag or slowdowns later into the game.
+
+	Additionally, your gameplay experience may be negatively affected by the
+	much slower pace of the game. We recommend playing the game with around
+	10-20 systems per empire for optimal gameplay results.
+
+	[b]Proceed anyway?[/b]
+>>
+NG_WARN_BAD: <<|
+	[b][color=#f00]Warning:[/color][/b] You are creating an extremely large map of more than 400 systems.
+	Games with this many systems will not run optimally on anything but the
+	highest end PCs, and will experience graphics lag or slowdowns later into
+	the game.
+
+	Additionally, your gameplay experience will be negatively affected by the
+	much slower pace of the game. We recommend playing the game with around
+	10-20 systems per empire for optimal gameplay results.
+
+	[b]Proceed anyway?[/b]
+>>
+NG_WARN_OHGOD: <<|
+	[b][color=#f00]Warning:[/color][/b] You are creating a ludicrously large map of more than 1000 systems.
+
+	Unless you are from [b]the fuuuuuture[/b] and are running Star Ruler 2 on
+	a 2038 model Core i42, you [b]will[/b] experience lag and slowdowns later
+	into the game.
+
+	Additionally, your gameplay experience [b]will[/b] be negatively affected by the
+	much, much slower pace of the game. We recommend playing the game with around
+	10-20 systems per empire for optimal gameplay results.
+
+	[b]Proceed anyway? (You're crazy)[/b]
+>>
+
+IRC_HELP: <<
+	Available Commands:
+
+	/msg <user> <message> - Send a private message.
+	/me <message> - Send an action message.
+	/join #<channel> - Join a different channel.
+	/part - Part from the current channel.
+	/close - Close the current channel/pm window.
+	/nick <new_nickname> - Change your nickname.
+
+	Commands that require extra privileges:
+
+	/topic <new_topic> - Change the topic in the current channel.
+	/mode <params> - Change a channel mode.
+	/umode <params> - Change a user mode.
+	/kick <nickname> - Kick a user from the channel.
+>>
+
+IRC_JOIN: [color=$3]$1[/color] has joined $2
+IRC_PART: [color=$3]$1[/color] has left $2
+IRC_QUIT: [color=$3]$1[/color] has quit
+IRC_ACTION: [color=$3]$1[/color] $2
+IRC_NICK: [color=$3]$1[/color] is now known as [color=$4]$2[/color]
+IRC_KICK: [color=$3]$1[/color] has kicked [color=$4]$2[/color]
+IRC_TOPIC: [color=$3]$1[/color] has changed the topic to '$2'
+IRC_TOPIC_IS: Topic for $1 is: $2
+IRC_MODE: [color=$3]$1[/color] sets mode $2
+IRC_UMODE: [color=$3]$1[/color] sets your user mode $2
+IRC_DISCONNECT: [color=#f00]Disconnected from server.[/color]
+
+DISCONNECT_0: Connection timed out
+DISCONNECT_1: Connection error
+DISCONNECT_2: Connection closed
+DISCONNECT_3: Kicked by server
+DISCONNECT_4: Version mismatch
+DISCONNECT_5: Incorrect password
+
+SANDBOX: Designs Sandbox
+PROMPT_QUIT: Are you sure you want to quit the game? All unsaved progress will be lost.
+PROMPT_END: Are you sure you want to end the game? All unsaved progress will be lost.
+PROMPT_START_NEW: Are you sure you want to end your current game and start a new one? All unsaved progress will be lost.
+PROMPT_DISCONNECT: Are you sure you want to disconnect?
+PROMPT_TUTORIAL: Starting the tutorial now will end your current game. All unsaved progress will be lost. Proceed?
+PROMPT_SANDBOX: Loading the designs sandbox now will end your current game. All unsaved progress will be lost. Proceed?
+
+CHECK_FOR_UPDATES: Check for Updates
+CHECKING_UPDATES: Checking for updates....
+CHECK_UPDATE_FAIL: Failed to check for updates.
+CHECK_UPDATE_UPTODATE: Game version is up to date!
+UPDATE_PROGRESS: Downloading Update... $1%
+UPDATE_FAIL: Downloading update failed... (Code $1)
+
+AI_DIFF_EASY: Easy
+AI_DIFF_NORMAL: Normal
+AI_DIFF_HARD: Hard
+
+AI_DIFF_EASY_DESC: An easy opponent to start with.
+AI_DIFF_NORMAL_DESC: A moderate challenge.
+AI_DIFF_HARD_DESC: Unlocks the full abilities of the AI.
+
+AI_BEHAVIOR: Behavior
+AI_CHEATS: Cheats
+
+AI_AGGRESSIVE: Aggressive
+AI_AGGRESSIVE_DESC: <<
+	AIs set to aggressive behavior will always try to conquer other empires immediately whenever it seems advantageous to do so.
+>>
+
+AI_PASSIVE: Passive
+AI_PASSIVE_DESC: <<
+	AIs set to passive behavior will never declare war on anyone themselves, and will only fight people that declared war on them first.
+>>
+
+AI_BIASED: Biased
+AI_BIASED_DESC: <<
+	AIs set to biased behavior will always hate human players, and will attack them more often than other AIs.
+>>
+
+AI_WEALTH: Wealth
+AI_WEALTH_DESC: <<
+	Give the AI a static amount of free resources of all types for the entire game.
+>>
+
+AI_STRENGTH: Strength
+AI_STRENGTH_DESC: Increase the strength of the AI's combat fleets throughout the entire game.
+
+AI_ABUNDANCE: Abundance
+AI_ABUNDANCE_DESC: Increase the amount of resource income the AI gets from their planets.
+
+AI_PRIVILEGED: Privilege
+AI_PRIVILEGED_DESC: Give the AI a randomly selected Privilege, significantly improving their starting position in the game.
+
+AI_LEGACY: Legacy AI
+AI_LEGACY_DESC: Use the previous version of the Star Ruler 2 AI. The legacy AI does not support all new races and features.

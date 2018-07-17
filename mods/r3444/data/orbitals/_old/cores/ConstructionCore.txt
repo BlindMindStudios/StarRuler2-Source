@@ -1,0 +1,29 @@
+Module: ConstructionCore
+	Name: #ORB_CONSTRUCTION_CORE
+	Blurb: #ORB_CONSTRUCTION_CORE_BLURB
+	Description: #ORB_CONSTRUCTION_CORE_DESC
+	Icon: HullIcons::0
+
+	Core: True
+
+	Build Cost: 400
+	Maintenance: 200
+	Labor Cost: 20
+
+	Health: 7500
+	Armor: 5000
+
+	Model: Shipyard
+	Material: Shipyard
+
+	Strategic Icon: HullIcons::0
+
+	AllowConstruction(Ships = True, Orbitals = True, Asteroids = True)
+	AddLaborIncome(3)
+	AddLaborIncomePerImport(1)
+	AddLaborFactorPerImport(+0.25)
+
+	AllowLaborImport()
+	ForbidLaborExport()
+
+	CannotBuildManually()

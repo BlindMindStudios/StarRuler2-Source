@@ -1,0 +1,11 @@
+Trait: Terrestial
+	Name: #TRAIT_TERRESTIAL
+	Description: #TRAIT_TERRESTIAL_DESC
+	Order: 0
+
+	Icon: PlanetType::2
+	Color: #59d098
+
+	Category: Lifestyle
+	Unique: Lifestyle
+	Default: True

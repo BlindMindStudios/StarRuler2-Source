@@ -1,0 +1,16 @@
+Technology: SysLiquidArmor
+	Name: #R_SYS_LIQUID_ARMOR
+	Description: #R_SYS_LIQUID_ARMOR_DESC
+	Class: Unlock
+
+	Point Cost: 800
+	Time Cost: 120
+
+	Icon: PlateArmor * #91692c
+	Color: #91692c
+	
+	UnlockSubsystem(LiquidArmor)
+	UnlockSubsystem(SupportLiquidArmor)
+	SkipOnUnlockedSubsystem(LiquidArmor)
+
+	SecondaryMoneyCost(1000)

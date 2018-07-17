@@ -1,0 +1,20 @@
+Building: AncientInfuser
+	Name: #BLD_ANCIENT_INFUSER
+	Description: #BLD_ANCIENT_INFUSER_DESC
+	Sprite: AncientInfuser
+
+	Category: Infrastructure
+
+	Size: 8x3
+
+	Base Cost: 350
+	Base Maintenance: 50
+	Build Time: 100
+
+	In Queue: True
+
+	RequireStatus(AncientReplicator)
+	RequireStatusToProgress(AncientReplicator)
+	RequireNativeClass(Scalable)
+
+	ActiveWhenCargoConsumed(BaseMaterial, 3, 6, AddStatus(AncientScalable), Inactive Status = AncientRequireBaseMat, Inactive Status Count = 3)

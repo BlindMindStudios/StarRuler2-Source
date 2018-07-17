@@ -1,0 +1,38 @@
+Technology: ImpSupportCap
+	Name: #R_IMP_SUPPORT_CAP
+	Blurb: #R_IMP_SUPPORT_CAP_BLURB:10%
+	Description: #R_IMP_SUPPORT_CAP_DESC:10%
+
+	Icon: techOrganization*#00cffe
+	Color: #00cffe
+
+	Point Cost: 800
+	Time Cost: 180
+
+	AddModifier( SupportCapacityFactor(1.1) )
+
+Technology: ImpSupportCap2
+	Name: #R_IMP_SUPPORT_CAP2
+	Blurb: #R_IMP_SUPPORT_CAP_BLURB:20%
+	Description: #R_IMP_SUPPORT_CAP_DESC:20%
+
+	Icon: techOrganization*#00cffe
+	Color: #00cffe
+
+	Point Cost: 1200
+	Time Cost: 180
+
+	AddModifier( SupportCapacityFactor(1.2) )
+
+Technology: ImpSupportCapSmall
+	Name: #R_IMP_SUPPORT_CAP_SMALL
+	Blurb: #R_IMP_SUPPORT_CAP_BLURB:10%
+	Description: #R_IMP_SUPPORT_CAP_DESC:10%
+
+	Icon: ActionBarIcons::2
+	Color: #00cffe
+
+	Point Cost: 500
+	Time Cost: 60
+
+	AddModifier( SupportCapacityFactor(1.2) )

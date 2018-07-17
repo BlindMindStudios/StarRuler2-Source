@@ -1,0 +1,36 @@
+Anomaly: PrototypeWarehouse
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+	Frequency: 0
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_PROTO_WARES
+
+		Model: Depot
+		Material: GenericPBR_Depot
+
+		Choice: Study
+		Choice: Activate
+		Choice: Scrap
+
+	Option: Scrap
+		Icon: ResourceIcon::0
+		Description: #ANOMALY_PROTO_WARES_SCRAP:300
+
+		AddMoney(300)
+
+	Option: Study
+		Icon: ResourceIcon::5
+		Description: #ANOMALY_PROTO_WARES_INSIGHT
+
+	Option: Activate
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_PROTO_WARES_ACTIVATE
+
+		Result: 40%
+			SendMessage(#ANOMALY_PROTO_WARES_ACTIVATE_FAIL)
+			AddResearchPoints(100:300)
+			//PlayParticles(ShipExplosion, 2.0)
+
+		Result: 60%
+			SendMessage(#ANOMALY_PROTO_WARES_ACTIVATE_PASS)

@@ -1,0 +1,23 @@
+Model: TyrantFlagshipHuge
+	Mesh: data/shipsets/tyrant/flagship_huge.ogex
+
+Model: TyrantFlagshipVeryLarge
+	Mesh: data/shipsets/tyrant/flagship_verylarge.ogex
+
+Model: TyrantFlagshipLarge
+	Mesh: data/shipsets/tyrant/flagship_large.ogex
+
+Model: TyrantFlagshipMedium
+	Mesh: data/shipsets/tyrant/flagship_medium.ogex
+	
+Model: TyrantFlagshipSmall
+	Mesh: data/shipsets/tyrant/flagship_small.ogex
+
+Model: TyrantA
+	Mesh: data/shipsets/tyrant/support_a.ogex
+
+Model: TyrantB
+	Mesh: data/shipsets/tyrant/support_b.ogex
+
+Model: SeedShip
+	Mesh: data/shipsets/tyrant/seedship.ogex

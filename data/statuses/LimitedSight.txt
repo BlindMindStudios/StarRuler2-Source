@@ -1,0 +1,8 @@
+Status: LimitedSight
+	Name: #STATUS_LIMITED_SIGHT
+	Description: #STATUS_LIMITED_SIGHT_DESC
+	Icon: VoteIcons::3
+	Color: #ff0000
+
+	LimitSightRange(100)
+	LimitSeeableRange(100) #version>=104

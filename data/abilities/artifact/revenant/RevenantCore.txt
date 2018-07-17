@@ -1,0 +1,14 @@
+Ability: RevenantCore
+		Name: #ABL_REVENANT_CORE
+		Description: #ABL_REVENANT_CORE_DESC
+		Icon: ComputerCore
+		Activate Sound: revenant_activate
+
+		Energy Cost: 1500
+
+		OnAnyEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+		GiveAchievement(ACH_USE_ARTIFACT)
+		ReplaceWithOrbital(RevenantCore, Free = True)
+
+		NotifyAll(#NOTIFY_REVENANT_CORE, Icon = ComputerCore)

@@ -1,0 +1,36 @@
+<%def name="type(name)">
+<%
+	cname = name
+	if cname.startswith("const "):
+		cname = cname[6:]
+	if cname.endswith("@"):
+		cname = cname[:-1]
+	if cname.endswith("&"):
+		cname = cname[:-1]
+	cname = cname.strip()
+%>
+	% if cname in data["classmap"]:
+		<a href="${engine}.class.${cname}.html">${name}</a>
+	% elif cname in data["enummap"]:
+		<a href="${engine}.enum.${cname}.html">${name}</a>
+	% else:
+		${name}
+	% endif
+</%def>
+
+<%def name="func(f, link=None)">
+	${type(f["return"]["type"])}
+	% if link is not None:
+		<a href="${link}">${f["name"]}</a>(
+	% else:
+		${f["name"]}(
+	% endif
+	% for i, arg in enumerate(f["arguments"]):
+		${type(arg["type"])} ${arg["name"]}<%
+			d = ""
+			if "default" in arg:
+				d = " = "+arg["default"]
+		%>${d}${"," if i != len(f["arguments"]) - 1 else ""}
+	% endfor
+	) ${"const" if f["const"] else ""}
+</%def>

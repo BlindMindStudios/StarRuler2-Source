@@ -1,0 +1,54 @@
+Subsystem: TorpedoLauncher
+	Name: #S_TORPEDOLAUNCHER
+	Description: #S_TORPEDOLAUNCHER_DESC
+	BaseColor: #7946f9
+	TypeColor: #7946f9
+	Picture: SubsystemButtonArt::4
+	Elevation: 2
+
+	Tags: BaseCost
+	Tags: WeaponBase, MissileBase, Category:Weapons, Rotatable
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsExplosiveWeapon, HasInternals, SecondaryDPS, Homing
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Range := Size + 1200
+	Damage := Size * 7.0
+	Reload := 25.0 * min(1.0 + Size/512, 2.0)
+	Speed := max(40, Range / 90)
+	Tracking := 1.5
+	Radius := 10.0 + (log(Size) / log(2) * 10.0)
+	SupplyCost := Size * 4.0
+	Hex.Mass := HexSize
+
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+
+	Modifier: AoERadiusFactor(Factor)
+		Radius := Radius * Factor
+
+	Requires:
+		Command = 1
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := 5.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: MissileLauncher::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: Torpedo
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Radius = Radius
+		SupplyCost = SupplyCost * Reload

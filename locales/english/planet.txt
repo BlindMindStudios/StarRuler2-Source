@@ -1,0 +1,403 @@
+CONSTRUCTION: Construction
+UNCOLONIZED: Uncolonized
+SHIPS: Ships
+ORBITALS: Orbitals
+POPULATION: Population
+MAX_POPULATION: Maximum Population
+COLONIZE_GENERIC: Colonize
+COLONIZE_WITH: Colonize with $1 (ETA $2 minutes)
+COLONIZE_WITH_BASIC: Colonize with $1
+AUTO_COLONIZE: Colonize this
+AUTO_COLONIZE_BLOCKED: Colonize this (currently blocked)
+AUTO_COLONIZE_LEVEL: Colonize this and Auto-Import to Level $1
+AUTO_COLONIZE_SYSTEM: Colonize planets in $1
+AUTO_COLONIZE_SYSTEM_LEVEL: Colonize planets in $1 and Auto-Import
+STOP_COLONIZE_SYSTEM: Stop colonizing planets in $1
+CANCEL_AUTO_COLONIZE: Stop colonizing this
+COLONIZE_CONTINUE: Continue colonizing
+COLONIZE_CANCEL: Stop colonizing $1
+COLONIZE_UNSAFE_PROMPT: <<|
+	Ordering a colonization with this planet right now can drop its total population below what is required to sustain its current planet level.
+	
+	Are you sure you wish to colonize despite potentially deleveling?
+>>
+ONLY_PLANETS: May only target planets.
+LEVEL: Level
+MANAGE: Manage
+EXPORT_RESOURCE: Export $1 to $2
+EXPORT_RESOURCES: Export resources to $1
+QUEUE_EXPORT_RESOURCE: Queue export of $1 to $2
+STOP_EXPORT_RESOURCE: Stop exporting $1 to $2
+EXPORT_RESOURCE_PROMPT: Export $1
+EXPORT_RESOURCES_PROMPT: Export Resources
+STOP_EXPORT_RES_QUEUE: Cancel queued export of $1 to $2
+IMPORT_RESOURCE: Import $1 from $2
+QUEUE_IMPORT_RESOURCE: Queue import of $1 from $2
+STOP_IMPORT_RESOURCE: Stop importing $1 from $2
+STOP_IMPORT_RES_QUEUE: Cancel queued import of $1 from $2
+RESOURCE_POP_REQUIRED: Requires at least [b]$1 Billion[/b] population to produce.
+RESOURCE_LEVEL_REQUIRED: Requires level $1 planet to produce.
+RESOURCE_TIER_DESC: [b]Tier $1[/b] [img=$2;18/] resource: requires level $1 planet to produce.
+RESOURCE_EXPORTED_TO: Exporting to $1...
+RESOURCE_IMPORTED_FROM: Importing from $1...
+ONLY_WITH_RESOURCES: May only target planets or asteroids.
+INCOME: Income
+REQ_FOR_LEVEL: Required for level $1:
+POP_REQ: [img=ResourceIcon::8;20/] [color=#ff9000][b]$1[/b]+ population[/color]
+REQ_STOP_DECAY: Missing Resources! Decays back to level $1 in $2 unless needs are met:
+REQ_TYPE: [font=Subtitle]Any [b]$1[/b] [img=$2;26/] Resource[/font]
+REQ_TYPE_UNIQUE: Any unique type of $1:
+REQ_LEVEL: [font=Subtitle]Any [b]Tier $1[/b] [img=$2;26/] Resource[/font]
+REQ_LEVEL_UNIQUE: Any unique type of Level $1 resource:
+WAIT_CONSTRUCT: Will not start construction until resolved.
+CONSTRUCTION_REQUIRES_LEVEL: Requires level $1 planet to construct.
+ABANDON: Abandon Planet
+ABANDON_ACCEPT: Abandon
+PROMPT_ABANDON: Abandon $1? The entire population will perish.
+BUILDING_CONSTRUCTING_PCT: Under construction... $1%
+BUILDING_DISABLED_POP: Building is currently disabled.
+BUILDINGS: Buildings
+PROJECTS: Projects
+AVAILABLE_RESOURCES: Resources:
+REQUIRED_RESOURCES: Required for Lv$1
+RESOURCE_CLASS_Food: Food
+RESOURCE_CLASS_WaterType: Water
+RENAME_NOTIF: Renamed: $1
+RENAME_EVT: The $1 have renamed $2 to [b]$3[/b].
+DEFENSE_ON_OPTION: Start using defense for $1
+DEFENSE_OFF_OPTION: Stop using defense for $1
+TT_IS_DEFENDING: Marked to use defense. Defense provided by resources in your empire will be used to produce defense ships here.\n\nDefense ships produced are spread evenly amongst every location marked for defense.
+TERRAFORM: Terraform
+TERRAFORM_OPTION: Terraform...
+TERRAFORM_ITEM: $1 ($2, $3 Labor)
+BUILD_TERRAFORM: Terraform $2 on $1
+BUILD_DRY_DOCK: Dry Dock: $1
+EXPORT_LABOR: Export Labor to $1
+WORK_DRY_DOCK: Work on Dry Dock
+TT_DRY_DOCK: <<
+	[b]Construct a Dry Dock[/b]
+
+	Create a dry dock around the planet to construct a particular ship in. In a dry dock, a ship's build cost can be financed over multiple budget cycles.
+
+	Put more money into a dry dock by double clicking it in the galaxy view. To make a planet add its labor generation to a dry dock, select the planet, right click the dry dock and select "Work on Dry Dock".
+
+	Building a ship in a dry dock increases its build cost by 25%.
+>>
+TT_REPEAT_QUEUE: <<
+	[b]Toggle Repeat Queue[/b]
+
+	Toggle whether the current queue is set to repeat infinitely.
+>>
+FINANCE_OPTION: Finance...
+FINANCE_DRY_DOCK: Finance Dry Dock: $1
+FINANCE: Finance
+RENAME_OPTION: Rename... (1 Influence)
+AUTO_IMPORT_LEVEL: Auto-Import to Level $1
+AUTO_IMPORT_OPTION: Auto-Import $1 Resource
+AUTO_IMPORT_TWO_OPTION: Auto-Import $1 and $2 Resources
+CANCEL_AUTO_IMPORT: Cancel Auto-Imports
+QUEUED_AUTO_IMPORT: Queued auto import...
+DESTROY_BUILDING: Destroy $1
+CANCEL_BUILDING: Cancel $1
+STORED_LABOR: Stored Labor: $1 / $2
+TILE_BIOME_DEVELOPED: $1 (Developed)
+TILE_BIOME_UNDEVELOPED: $1 (Undeveloped)
+TILE_BIOME_GROWN: $1 (Grown)
+TILE_BIOME_UNGROWN: $1 (Ungrown)
+BUILD_TIME: Build Time
+CANCEL_CONSTRUCTION: Cancel this Construction
+OPT_CANCEL_IMPORT: Stop importing $1 from $2
+OPT_CANCEL_EXPORT: Stop exporting $1
+OPT_MAKE_IMPORT: Import $1 from $2
+OPT_IMPORT_AUTO: Auto-import resource of this type
+OPT_IMPORT_AUTO_CANCEL: Cancel queued auto-import of this type
+OPT_IMPORT_AUTO_CANCEL_ALL: Cancel all queued auto-imports to this planet
+
+EXPBLOCK_USE: [color=#f33][b]Cannot Use Resource:[/b][/color]\n$1
+EXPBLOCK_EXPORT: [color=#f33][b]Cannot Export Resource:[/b][/color]\n$1
+EXPBLOCK_IMPORT: [color=#f33][b]Cannot Import Resource:[/b][/color]\n$1
+EXPBLOCK_DISABLED: Planet is blocked from exporting.
+EXPBLOCK_DEEPSPACE: Can only trade from within systems.
+EXPBLOCK_UNOWNED: Can only trade within the same empire.
+EXPBLOCK_UNMINED: Asteroid must be mined.
+EXPBLOCK_UNCOLONIZED: Planet must be colonized.
+EXPBLOCK_LOWLEVEL: Planet must be at least level $1.
+EXPBLOCK_POP: Planet needs $1 Billion population to export resource.
+EXPBLOCK_DISCONNECTED: May only trade through connected systems.
+EXPBLOCK_UNUSABLE: Special circumstances prevent export.
+
+HINT_USE_PLANETS_TITLE: Idle Planets
+HINT_USE_PLANETS: <<|
+	Level 0 planets cost money to maintain.
+	
+	Export resources from your low level planets to build up higher level ones,
+	or abandon unused planets to free up your budget.
+>>
+
+HINT_COLONIZE_TITLE: Slow Colonization
+HINT_COLONIZE: <<|
+	Colonization requires populations and costs money. When in debt, the rate of colonization
+	can be greatly slowed.
+	
+	Focus on colonizing a small number of planets at first and grow those planets to support further
+	colonization. You may also cancel colonization orders to speed up the remaining orders.
+>>
+
+TT_MANAGE_PLANET: <<|
+	[b]Manage Planet[/b]
+
+	View detailed information about the planet's surface, resources and construction.
+>>
+
+TT_MANAGE_PLANET_SUPPORTS: <<|
+	[b]Manage Supports[/b]
+
+	Manage the groups of support ships currently assigned here.
+>>
+
+COLONIZE: Colonize
+TT_COLONIZE: <<|
+	[b]Colonize[/b]
+
+	Send 1B population from the planet to another unoccupied planet to colonize it.
+>>
+TT_COLONIZE_THIS: <<|
+	[b]Colonize This[/b]
+
+	Send 1B population from one of your planets to this planet to colonize it.
+>>
+
+DEFENSE_TARGET: Build Defense
+TT_DEFENSE_TARGET: <<|
+	[b]Build Defense for...[/b]
+
+	Instead of building defense ships around the planet itself, build defense ships
+	for use in another target system you control.
+>>
+
+PLANET_POPULATION_TIP: <<|
+	[b]Population[/b]
+	
+	How many billion people live on the planet. The more population a planet has, the higher its base income and pressure capacity.
+>>
+
+PLANET_INCOME_TIP: <<
+	[b]Income[/b]
+
+	The amount of money this planet makes or loses every budget cycle.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_INFLUENCE_TIP: <<
+	[b]Influence Stake[/b]
+	
+	Each influence stake on a planet increases your percentage of the galactic influence generation.
+
+	Influence is used to affect other empires diplomatically.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_ENERGY_TIP: <<
+	[b]Energy[/b]
+	
+	Energy is used to activate artifacts found around the galaxy.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_DEFENSE_TIP: <<
+	[b]Defense[/b]
+	
+	Periodically builds free defense support ships around the planet, or planets in
+	whichever other system this planet is set to produce defense for.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_LOYALTY_TIP: <<|
+	[b]Loyalty[/b]
+
+	Loyalty indicates how dedicated your subjects on this planet are.
+
+	Sieging a planet will gradually reduce its loyalty until it hits 0, after
+	which it will be captured by the sieging empire.
+
+	The more loyal a planet, the more influence it takes to annex.
+>>
+
+PLANET_PRESSURE_TIP: <<
+	[b]Pressure Capacity[/b]
+
+	Many types of planetary resources provide [b]Pressure[/b] to the planet they are on.
+
+	[b]Pressure[/b] causes the civilians on a planet to put down buildings that generate certain types of resources for you.
+
+	The amount of civilian structures a planet can support is limited by its [b]Pressure Capacity[/b]. If the pressure capacity is exceeded, lower efficiency civilian buildings will be constructed, leading to a loss of resource generation.
+
+	The higher a planet's [b]Population[/b], the higher its [b]Pressure Capacity[/b].
+
+	[b]Total Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Total Active Pressure:[/b] [offset=220]$2[/offset]
+	[b]Pressure Capacity:[/b] [offset=220]$3[/offset]
+>>
+
+PLANET_LABOR_TIP: <<
+	[b]Labor[/b]
+	
+	Labor affects the rate of construction at the planet.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_RESEARCH_TIP: <<
+	[b]Research[/b]
+	
+	Generates research points to spend in the research grid to unlock new technologies.
+
+	[b]Imported Pressure:[/b] [offset=220]$1[/offset]
+	[b]Active Pressure:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_REQUIREMENTS_TIP: <<|
+	[b]Level Requirements[/b]
+	
+	Importing these types of resources to this planet will cause it
+	to level up.
+>>
+
+STATUS_HAPPY: Happy
+STATUS_HAPPY_DESC: <<|
+	All empire resources already being produced on this planet gain 1 extra production.
+>>
+
+STATUS_VIRILE: Virile
+STATUS_VIRILE_DESC: <<|
+	Population is growing at twice the normal rate.
+>>
+
+COND_NATIVE_FISH: Native Fish
+COND_NATIVE_FISH_DESC: <<
+	Delicious, but extremely perishable aquatic lifeforms. Unexportable.
+>>
+NATIVE_FISH: Native Fish
+NATIVE_FISH_DESC: <<
+	Increases lifetime of consumed temporary resources by 30%.
+
+	[color=#ff7070][b]Cannot be exported.[/b][/color]
+>>
+
+COND_EXTRA_MONEY: Precious Metal Deposits
+COND_EXTRA_MONEY_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::0;20/] [color=#d1cb6aff]Money[/color] pressure[/b].
+>>
+
+COND_EXTRA_RESEARCH: Exotic Atmosphere
+COND_EXTRA_RESEARCH_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::4;20/] [color=#8c4ec9]Research[/color] pressure[/b].
+>>
+
+COND_EXTRA_INFLUENCE: Tropical Paradise
+COND_EXTRA_INFLUENCE_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::1;20/] [color=#0087c7]Influence[/color] pressure[/b].
+>>
+
+COND_EXTRA_LABOR: Low Gravity
+COND_EXTRA_LABOR_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::6;20/] [color=#b1b4b6]Labor[/color] pressure[/b].
+>>
+
+COND_EXTRA_DEFENSE: Volatile Minerals
+COND_EXTRA_DEFENSE_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::5;20/] [color=#af7926]Defense[/color] pressure[/b].
+>>
+
+COND_EXTRA_ENERGY: Geothermal Vents
+COND_EXTRA_ENERGY_DESC: <<|
+	This planet's resource gives [b]1 bonus [img=ResourceIcon::2;20/] [color=#42b4bd]Energy[/color] pressure[/b].
+>>
+
+COND_ANCIENT_CANNON: Ancient Planetary Defense
+COND_ANCIENT_CANNON_DESC: <<|
+	An ancient planetary cannon sits on the surface, deactivated but operational.
+>>
+BLD_ANCIENT_CANNON: Ancient Planetary Defense
+BLD_ANCIENT_CANNON_DESC: <<|
+	An ancient planetary cannon, found on this planet and activated.
+
+	The cannon is deactivated if there are enemy fleets sieging the planet, and
+	all the planet's orbital defenses are destroyed.
+>>
+
+COND_ANCIENT_RUINS: Ancient Ruins
+COND_ANCIENT_RUINS_DESC: <<|
+	When first colonized, gain a number of free research points.
+>>
+BLD_ANCIENT_RUINS: Ancient Ruins
+BLD_ANCIENT_RUINS_DESC: <<|
+	The ancient ruins of a military outpost constructed by an advanced race eons ago.
+>>
+
+COND_HIGH_YIELD: High Yield Resource
+COND_HIGH_YIELD_DESC: <<|
+	The resource gives double its normal pressure, but lowers pressure cap by 3.
+>>
+
+COND_NOXIOUS_ATMOSPHERE: Noxious Atmosphere
+COND_NOXIOUS_ATMOSPHERE_DESC: <<|
+	Reduces maximum population by 1.
+>>
+
+COND_SPARSE: Sparse Resource
+COND_SPARSE_DESC: <<|
+	The resource gives half its pressure, but requires one fewer Tier 1 [img=ResourceClassIcons::0;18/] to level.
+>>
+
+COND_BARREN: Barren
+COND_BARREN_DESC: <<|
+	A barren rock devoid of atmosphere or resources.
+>>
+
+COND_MOON: Moon
+COND_MOON_DESC: <<
+	This planet has a moon large enough to construct a moon base on.
+	
+	Multiple instances of this indicate more moons and more potential moon bases.
+>>
+
+COND_EXTRA_PRESSURE: Towering Mountains
+COND_EXTRA_PRESSURE_DESC: <<
+	This planet's resource gives [b]1 bonus pressure[/b] of its primary type.
+>>
+
+COND_DOUBLE_REQUIREMENT: Expansive Deserts
+COND_DOUBLE_REQUIREMENT_DESC: <<
+	This planet's resource counts twice for satisfying [b][img=ResourceClassIcons::0;20/] Tier 1 Requirements[/b].
+>>
+
+COND_GROWTH: Megafauna
+COND_GROWTH_DESC: <<
+	This resource increases population growth and tile development by 25%.
+>>
+
+COND_NEG_PRESSURE: Frozen Wasteland
+COND_NEG_PRESSURE_DESC: <<
+	This planet's resource reduces pressure capacity by 2.
+>>
+
+BIOME_CRYSTALLIC: Crystallic
+BIOME_DESERT: Desert
+BIOME_FOREST: Forest
+BIOME_ICE: Ice
+BIOME_MOUNTAINS: Mountains
+BIOME_OCEANIC: Oceanic
+BIOME_VOLCANIC: Volcanic
+BIOME_MOON: Moon
+BIOME_SPACE: Space
+BIOME_ARTIFICIAL: Artificial

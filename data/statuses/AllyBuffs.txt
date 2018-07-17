@@ -1,0 +1,54 @@
+//Statuses used to provide scaling buffs to fleets/planets in a system
+Status: AllyBuff5
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.05)
+
+Status: AllyBuff10
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.1)
+
+Status: AllyBuff15
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.15)
+
+Status: AllyBuff20
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.2)
+
+Status: AllyBuff25
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.25)
+
+Status: AllyBuff30
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.30)
+
+Status: AllyBuff35
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.35)
+
+Status: AllyBuff40
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.40)
+
+Status: AllyBuff60
+	Visible To: Nobody
+
+	ApplyToFlagships()
+	AddFleetEffectiveness(+0.60)

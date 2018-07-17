@@ -1,0 +1,155 @@
+Hull: VecturTiny
+	Name: Corvette
+	Background: VecturBlueprint
+	BackgroundScale: 0.5
+	ModelScale: 0.4
+	Material: VecturGenericPBR
+	Model: VecturTiny
+	Shape: data/shipsets/vectur/support_tiny.shape.png
+
+	Tags: Support
+	MinSize: 1
+	Subsystem: SupportHull
+
+Hull: VecturSmall
+	Name: Frigate
+	Background: VecturBlueprint
+	BackgroundScale: 0.7
+	ModelScale: 0.5
+	Material: VecturGenericPBR
+	Model: VecturSmall
+	Shape: data/shipsets/vectur/support_small.shape.png
+
+	Tags: Support
+	MinSize: 2
+	Subsystem: SupportHull
+
+Hull: VecturMedium
+	Name: Destroyer
+	Background: VecturBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 0.6
+	Material: VecturGenericPBR
+	Model: VecturMedium
+	Shape: data/shipsets/vectur/support_medium.shape.png
+
+	Tags: Support
+	MinSize: 4
+	Subsystem: SupportHull
+
+Hull: VecturLarge
+	Name: Cruiser
+	Background: VecturBlueprint
+	BackgroundScale: 2.0
+	ModelScale: 0.8
+	Material: VecturGenericPBR
+	Model: VecturLarge
+	Shape: data/shipsets/vectur/support_large.shape.png
+
+	Tags: Support
+	MinSize: 8
+	Subsystem: SupportHull
+
+Hull: VecturHuge
+	Name: Heavy Cruiser
+	Background: VecturBlueprint
+	BackgroundScale: 2.8
+	ModelScale: 1.0
+	Material: VecturGenericPBR
+	Model: VecturFlagSmall
+	Shape: data/shipsets/vectur/support_huge.shape.png
+
+	Tags: Support
+	MinSize: 80
+	Subsystem: SupportHull
+
+Hull: VecturFlagTiny
+	Name: Small Battleship
+	Background: VecturBlueprint
+	BackgroundScale: 2.8
+	ModelScale: 1.0
+	Material: VecturGenericPBRAdvanced
+	Model: VecturFlagSmall
+	Shape: data/shipsets/vectur/flagship_small.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: VecturFlagMedium
+	Name: Medium Battleship
+	Background: VecturBlueprint_Flag
+	BackgroundScale: 1.4
+	ModelScale: 1.0
+	Material: VecturGenericPBRAdvanced
+	Model: VecturFlagMedium
+	Shape: data/shipsets/vectur/flagship_medium.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: VecturFlagLarge
+	Name: Large Battleship
+	Background: VecturBlueprint
+	BackgroundScale: 1.45
+	ModelScale: 1.0
+	Material: VecturGenericPBRAdvanced
+	Model: VecturFlagLarge
+	Shape: data/shipsets/vectur/flagship_large.shape.png
+
+	Tags: Flagship
+	MinSize: 64
+	Subsystem: FlagshipHull
+
+Hull: VecturFlagVeryLarge
+	Name: Very Large Battleship
+	Background: VecturBlueprint
+	BackgroundScale: 1.45
+	ModelScale: 1.1
+	Material: VecturGenericPBRAdvanced
+	Model: VecturFlagVeryLarge
+	Shape: data/shipsets/vectur/flagship_verylarge.shape.png
+
+	Tags: Flagship
+	MinSize: 128
+	Subsystem: FlagshipHull
+
+Hull: VecturFlagHuge
+	Name: Huge Battleship
+	Background: VecturBlueprint
+	BackgroundScale: 1.65
+	ModelScale: 1.35
+	Material: VecturGenericPBRAdvanced
+	Model: VecturFlagHuge
+	Shape: data/shipsets/vectur/flagship_huge.shape.png
+
+	Tags: Flagship
+	MinSize: 256
+	Subsystem: FlagshipHull
+
+Hull: VecturStation
+	Name: Station
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/vectur/station.shape.png
+
+	Tags: Station
+	MinSize: 16
+	Subsystem: StationHull
+
+Hull: VecturSatellite
+	Name: Satellite
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/vectur/station.shape.png
+
+	Tags: Satellite
+	MinSize: 1
+	Subsystem: SatelliteHull

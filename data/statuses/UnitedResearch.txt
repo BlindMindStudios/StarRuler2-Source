@@ -1,0 +1,10 @@
+Status: UnitedResearch
+	Name: #STATUS_UNITED_RESEARCH
+	Description: #STATUS_UNITED_RESEARCH_DESC
+	Icon: BuildingSprites::9
+
+	AddResourceFromLevel(Research, Factor = 1.0)
+	AddResourceFromGlobal(Research, UnitedResearchCount, Factor = 2.0)
+	WorthPoints(200)
+
+	ModEmpireAttribute(HaveUnitedResearch, Add, 1)

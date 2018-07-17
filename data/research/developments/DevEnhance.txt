@@ -1,0 +1,13 @@
+Technology: DevEnhance
+	Name: #R_DEV_ENHANCE
+	Blurb: #R_DEV_ENHANCE_BLURB
+	Description: #R_DEV_ENHANCE_DESC
+	Class: Boost
+
+	Point Cost: 400
+	Time Cost: 120
+
+	Icon: CardIcons::20
+	Color: #20a0a0
+	
+	GainInfluenceCard(Enhance)

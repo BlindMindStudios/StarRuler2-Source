@@ -1,0 +1,95 @@
+#version 120
+uniform sampler2D texture;
+uniform vec2 texSize;
+//Margin setting in skin (pixels)
+uniform vec4 margin_src;
+uniform vec4 margin_dest;
+//Position and Size of region being rendered on the texture (pixels)
+uniform vec2 pos, size;
+//Size of region being rendered to (pixels)
+uniform vec2 size_out;
+//Mode of rendering (0=Uniform, 1=Scaled, 2=Tiled)
+uniform vec2 dim_mode;
+
+#define MAX_GRADIENTS 8
+//Number of gradients used
+uniform float gradientCount;
+//Gradient location (in pixels) relative to the rendered destination
+uniform vec4[MAX_GRADIENTS] gradientRects;
+//Gradient colors (tl, tr, bl, br)
+uniform vec4[MAX_GRADIENTS*4] gradientColors;
+//Gradient mode
+uniform float gradientMode;
+
+varying vec4 color;
+varying vec2 uv;
+varying vec2 qpos;
+
+float realPos(int dimension, float point) {
+	if(dim_mode[dimension] == 0.0) //Uniform
+		return pos[dimension] + (point * size[dimension]);
+	else {
+		//Margin expressed in 0-1 for the destination region
+		float l_margin = margin_dest[dimension] / size_out[dimension];
+		float r_margin = margin_dest[dimension+2] / size_out[dimension];
+		if(point <= l_margin)
+			return pos[dimension] + (point / l_margin * margin_src[dimension]);
+		else if(point >= 1.0 - r_margin)
+			return pos[dimension] + size[dimension] + (point-1.0) / r_margin * margin_src[dimension+2];
+		
+		float region_inner_size = size_out[dimension] - margin_dest[dimension] - margin_dest[dimension+2];
+		float inner_size = size[dimension] - margin_src[dimension] - margin_src[dimension+2];
+		
+		//point is now 0-1 through the inner destination region
+		point = (point - l_margin) * (size_out[dimension] / region_inner_size);
+		
+		if(dim_mode[dimension] == 1.0) { //Scaled
+			return pos[dimension] + margin_src[dimension] + (point * inner_size);
+		}
+		else { //Tiled
+			point = fract(point * region_inner_size / inner_size);
+			return pos[dimension] + margin_src[dimension] + (point * inner_size);
+		}
+	}
+}
+
+void main() {
+	vec2 tcoord =
+	vec2( realPos(0, uv.x) / float(texSize.x),
+		  realPos(1, uv.y) / float(texSize.y) );
+	
+	vec4 skinSample = texture2D(texture, tcoord, -4);
+	
+	if(skinSample.a < 0.01 && gradientMode == 0.0)
+		discard;
+	
+	//Apply gradients
+	for(int i = 0; i < int(min(float(gradientCount), float(MAX_GRADIENTS))); ++i) {
+		vec4 rect = gradientRects[i] / size_out.xyxy;
+		
+		vec2 gPos =
+		vec2( (uv.x - rect.x) / (rect.z - rect.x),
+			  (uv.y - rect.y) / (rect.w - rect.y) );
+		
+		//Make sure the tranformed rect is within (0,0) (1,1)
+		if( all( bvec4(greaterThanEqual(gPos, vec2(0.0,0.0)), lessThanEqual(gPos, vec2(1.0,1.0))) ) ) {
+			//Add noise
+			float rnd = dot(qpos, pos);
+			gPos.y = clamp(gPos.y + mod(rnd/max(mod(uv.x,0.01)/0.01, 0.001), 0.1)-0.05, 0.0, 1.0);
+			gPos.x = clamp(gPos.x + mod(rnd/max(mod(uv.y,0.01)/0.01, 0.001), 0.1)-0.05, 0.0, 1.0);
+			
+			//Bilinear interpolation for the gradient color
+			vec4 gCol = mix(
+				mix(gradientColors[i*4],   gradientColors[i*4+1], gPos.x),
+				mix(gradientColors[i*4+2], gradientColors[i*4+3], gPos.x),
+				gPos.y );
+		
+			if(gradientMode == 1.0)
+				skinSample = gCol;
+			else
+				skinSample.rgb = mix(skinSample.rgb, gCol.rgb, gCol.a);
+		}
+	}
+	
+	gl_FragColor = skinSample * color;
+}

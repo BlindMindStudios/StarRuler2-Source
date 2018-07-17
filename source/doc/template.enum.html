@@ -1,0 +1,19 @@
+<%namespace file="template.util.html" name="util" />
+<!DOCTYPE html>
+<title>${name}</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<section class="enumdoc">
+	<h1>${name}</h1>
+	% if doc:
+	<span>${doc}</span>
+	% endif
+</section>
+
+<section class="enumvalues">
+	<ul>
+		% for v in values:
+		<li>${v}</li>
+		% endfor
+	</ul>
+</section>

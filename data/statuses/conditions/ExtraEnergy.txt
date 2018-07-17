@@ -1,0 +1,11 @@
+Status: ExtraEnergy
+	Name: #COND_EXTRA_ENERGY
+	Description: #COND_EXTRA_ENERGY_DESC
+
+	Icon: ConditionIcons::3
+	Color: #42b4bd
+
+	Condition Frequency: 0.25
+	
+	AddToNativeResource( AddPressure(Energy, 1) ) #version<147
+	AddToNativeResource( AddPressureEmpireAttribute(Energy, PlanetConditionMultiplier) ) #version>=147

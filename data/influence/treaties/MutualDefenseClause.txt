@@ -1,0 +1,10 @@
+Clause: MutualDefenseClause
+	Name: #CLAUSE_MUTUAL_DEFENSE
+	Description: #CLAUSE_MUTUAL_DEFENSE_DESC
+
+	Icon: StatusWar
+
+	Free Clause: True
+	Team Clause: True
+
+	ShareWar()

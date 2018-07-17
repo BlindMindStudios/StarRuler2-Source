@@ -1,0 +1,15 @@
+Subsystem: StationHull
+	Tags: DefaultUnlock, NoCore, HullSystem
+	Hull: Station
+	EvaluationOrder: -100
+
+	Repair := HexSize * 4
+
+	Assert: Ship.Command > 0
+		Message: #ERROR_NEED_CONTROL
+
+	AddShipModifier: BuildCostFactor(0.75)
+	AddShipModifier: MaintCostFactor(0.25)
+	AddShipModifier: LaborCostFactor(0.3)
+	AddShipModifier: SupportCapacityFactor(0.33)
+	AddShipModifier: HpFactor(4.0)

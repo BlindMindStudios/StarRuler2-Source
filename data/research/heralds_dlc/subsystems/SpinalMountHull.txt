@@ -1,0 +1,16 @@
+Technology: SpinalMountHull
+	Name: #R_SYS_SPINAL_MOUNT_HULL
+	Description: #R_SYS_SPINAL_MOUNT_HULL_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: HullSubsystems::2
+	Color: #8edcef
+	
+	UnlockSubsystem(SpinalMountHull)
+	SkipOnUnlockedSubsystem(SpinalMountHull)
+
+	SecondaryMoneyCost(1000)

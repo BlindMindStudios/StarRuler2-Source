@@ -1,0 +1,103 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Star Ruler 2", "Star Ruler 2.vcxproj", "{50CA85BE-6640-4824-8CB6-9D65F77518F6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABEA2C04-40F0-4D98-9191-A026E1D0DF07} = {ABEA2C04-40F0-4D98-9191-A026E1D0DF07}
+		{623A7E07-EE8E-4F21-A177-4EF75E70456E} = {623A7E07-EE8E-4F21-A177-4EF75E70456E}
+		{A1E1942C-36D2-4824-9ECB-B4727543E958} = {A1E1942C-36D2-4824-9ECB-B4727543E958}
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B} = {4DA03747-F505-4A98-9124-03B3B73B9B3B}
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8} = {1D1C1D62-A273-4D60-A0EA-3C9032C408D8}
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD} = {39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43} = {3667F0B1-3E26-407C-841B-9FA2E554CB43}
+		{A70F9EB8-8109-4E35-847D-964A84D8BFE2} = {A70F9EB8-8109-4E35-847D-964A84D8BFE2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "angelscript", "..\..\angelscript\projects\msvc10\angelscript.vcxproj", "{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLFW", "..\..\glfw\GLFW.vcxproj", "{4DA03747-F505-4A98-9124-03B3B73B9B3B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sound", "..\..\sound\sound\sound.vcxproj", "{623A7E07-EE8E-4F21-A177-4EF75E70456E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43} = {3667F0B1-3E26-407C-841B-9FA2E554CB43}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "as_addons", "..\..\as_addons\as_addons\as_addons.vcxproj", "{A70F9EB8-8109-4E35-847D-964A84D8BFE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD} = {39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "os", "..\..\os\os\os.vcxproj", "{3667F0B1-3E26-407C-841B-9FA2E554CB43}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8} = {1D1C1D62-A273-4D60-A0EA-3C9032C408D8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "util", "..\..\util\util\util.vcxproj", "{1D1C1D62-A273-4D60-A0EA-3C9032C408D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network", "..\..\network\network\network.vcxproj", "{A1E1942C-36D2-4824-9ECB-B4727543E958}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43} = {3667F0B1-3E26-407C-841B-9FA2E554CB43}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SR2Loader", "..\..\loader\SR2Loader\SR2Loader.vcxproj", "{93B31A9C-7169-47CA-80DB-CF3BB398291E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libircclient", "..\..\libircclient\libircclient.vcxproj", "{ABEA2C04-40F0-4D98-9191-A026E1D0DF07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "patcher", "..\..\patcher\patcher\patcher.vcxproj", "{0ADCAA9F-2998-49CA-A58C-28D11046963F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Non-Steam Release|x64 = Non-Steam Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50CA85BE-6640-4824-8CB6-9D65F77518F6}.Debug|x64.ActiveCfg = Debug|x64
+		{50CA85BE-6640-4824-8CB6-9D65F77518F6}.Debug|x64.Build.0 = Debug|x64
+		{50CA85BE-6640-4824-8CB6-9D65F77518F6}.Non-Steam Release|x64.ActiveCfg = Non-Steam Release|x64
+		{50CA85BE-6640-4824-8CB6-9D65F77518F6}.Non-Steam Release|x64.Build.0 = Non-Steam Release|x64
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}.Debug|x64.ActiveCfg = Debug|x64
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}.Debug|x64.Build.0 = Debug|x64
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{39E6AF97-6BA3-4A72-8C61-BCEBF214EBFD}.Non-Steam Release|x64.Build.0 = Release|x64
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B}.Debug|x64.ActiveCfg = Release|x64
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B}.Debug|x64.Build.0 = Release|x64
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B}.Non-Steam Release|x64.Build.0 = Release|x64
+		{623A7E07-EE8E-4F21-A177-4EF75E70456E}.Debug|x64.ActiveCfg = Debug|x64
+		{623A7E07-EE8E-4F21-A177-4EF75E70456E}.Debug|x64.Build.0 = Debug|x64
+		{623A7E07-EE8E-4F21-A177-4EF75E70456E}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{623A7E07-EE8E-4F21-A177-4EF75E70456E}.Non-Steam Release|x64.Build.0 = Release|x64
+		{A70F9EB8-8109-4E35-847D-964A84D8BFE2}.Debug|x64.ActiveCfg = Debug|x64
+		{A70F9EB8-8109-4E35-847D-964A84D8BFE2}.Debug|x64.Build.0 = Debug|x64
+		{A70F9EB8-8109-4E35-847D-964A84D8BFE2}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{A70F9EB8-8109-4E35-847D-964A84D8BFE2}.Non-Steam Release|x64.Build.0 = Release|x64
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43}.Debug|x64.ActiveCfg = Debug|x64
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43}.Debug|x64.Build.0 = Debug|x64
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{3667F0B1-3E26-407C-841B-9FA2E554CB43}.Non-Steam Release|x64.Build.0 = Release|x64
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8}.Debug|x64.ActiveCfg = Debug|x64
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8}.Debug|x64.Build.0 = Debug|x64
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{1D1C1D62-A273-4D60-A0EA-3C9032C408D8}.Non-Steam Release|x64.Build.0 = Release|x64
+		{A1E1942C-36D2-4824-9ECB-B4727543E958}.Debug|x64.ActiveCfg = Debug|x64
+		{A1E1942C-36D2-4824-9ECB-B4727543E958}.Debug|x64.Build.0 = Debug|x64
+		{A1E1942C-36D2-4824-9ECB-B4727543E958}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{A1E1942C-36D2-4824-9ECB-B4727543E958}.Non-Steam Release|x64.Build.0 = Release|x64
+		{93B31A9C-7169-47CA-80DB-CF3BB398291E}.Debug|x64.ActiveCfg = Debug|Win32
+		{93B31A9C-7169-47CA-80DB-CF3BB398291E}.Non-Steam Release|x64.ActiveCfg = Release|Win32
+		{ABEA2C04-40F0-4D98-9191-A026E1D0DF07}.Debug|x64.ActiveCfg = Debug|x64
+		{ABEA2C04-40F0-4D98-9191-A026E1D0DF07}.Debug|x64.Build.0 = Debug|x64
+		{ABEA2C04-40F0-4D98-9191-A026E1D0DF07}.Non-Steam Release|x64.ActiveCfg = Release|x64
+		{ABEA2C04-40F0-4D98-9191-A026E1D0DF07}.Non-Steam Release|x64.Build.0 = Release|x64
+		{0ADCAA9F-2998-49CA-A58C-28D11046963F}.Debug|x64.ActiveCfg = Debug|Win32
+		{0ADCAA9F-2998-49CA-A58C-28D11046963F}.Non-Steam Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A909F8D-3455-4017-8F81-CE37353EAD0F}
+	EndGlobalSection
+EndGlobal

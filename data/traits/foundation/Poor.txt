@@ -1,0 +1,12 @@
+Trait: Poor
+	Name: #TRAIT_POOR
+	Description: #TRAIT_POOR_DESC
+	Category: Foundation
+	Order: 6
+
+	Color: #ffaaaa
+	Icon: Poor
+
+	Gives Points: 1
+	
+	ClearFirstBudget()

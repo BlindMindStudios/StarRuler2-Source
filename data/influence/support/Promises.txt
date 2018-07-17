@@ -1,0 +1,30 @@
+Card: Promises
+	Name: #CARD_PROMISES
+	Description: #CARD_PROMISES_DESC
+
+	Color: #fa00ff
+
+	Class: Support
+	Rarity: Uncommon
+	Side: Both
+	Frequency: 0
+	
+	Icon: CardIcons::24
+
+	Max Quality: 3
+
+	Base Purchase Cost: 1
+	Quality Purchase Cost: 1
+
+	Base Play Cost: 2
+	Quality Play Cost: 1
+
+	Base Weight: 5
+	Quality Weight: 2
+
+	ShowDuration(300)
+	OnOwner( ModAttributeTimed(SupportCardCostMod, Add, 1.0, Duration = 300.0) )
+
+	LogVoteEvent(Support = #CARD_PROMISES_LOG_Y, Oppose = #CARD_PROMISES_LOG_N)
+
+	AI: VoteSupport()

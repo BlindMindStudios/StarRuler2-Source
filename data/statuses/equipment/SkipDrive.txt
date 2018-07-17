@@ -1,0 +1,10 @@
+Status: SkipDrive
+	Name: #STATUS_SKIP_DRIVE
+	Description: #STATUS_SKIP_DRIVE_DESC
+	Icon: GuiOrbitalIcons::2 * #ff0000
+	Collapses: True
+
+	ArtifactOnDestroy(SkipDrive, Destroy Chance = 0.3)
+	WorthPoints(25)
+
+	GrantAbility(Blink)

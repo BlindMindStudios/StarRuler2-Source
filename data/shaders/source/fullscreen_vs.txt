@@ -1,0 +1,6 @@
+varying vec2 uv;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	gl_Position = vec4(2.0*(uv.x-0.5), 2.0*(uv.y-0.5),0.0,1.0);
+}

@@ -1,0 +1,20 @@
+Technology: CrystalArmor
+	Name: #R_SYS_CRYSTAL_ARMOR
+	Description: #R_SYS_CRYSTAL_ARMOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: ArmorHealth2
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: CrystalArmor
+	Color: #ef45ff
+	
+	UnlockSubsystem(CrystalArmor)
+	UnlockSubsystem(SupportCrystalArmor)
+	SkipOnUnlockedSubsystem(CrystalArmor)
+
+	SecondaryMoneyCost(1000)

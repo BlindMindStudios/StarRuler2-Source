@@ -1,0 +1,9 @@
+System: AncientSystem
+	Inherit: BaseSystem
+	Frequency: 0.25
+
+	MakeStar(Temperature = 1000:2500, Radius = 125:200)
+	AddQuality(+100)
+
+	RepeatModified(3, $PLANET_FREQUENCY)
+		MakePlanet()

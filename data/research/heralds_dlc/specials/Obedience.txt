@@ -1,0 +1,16 @@
+Technology: Obedience
+	Name: #R_OBEDIENCE
+	Description: #R_OBEDIENCE_DESC:1
+
+	Icon: techMilitia * #da742c
+	Color: #da742c
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 800
+	Time Cost: 100
+
+	AddGlobalLoyalty(+1)
+
+	SecondaryInfluenceCost(10)

@@ -1,0 +1,16 @@
+Technology: Simulator
+	Name: #R_SYS_SIMULATOR
+	Description: #R_SYS_SIMULATOR_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: Simulator
+	Color: #f17757
+	
+	UnlockSubsystem(Simulator)
+	SkipOnUnlockedSubsystem(Simulator)
+
+	SecondaryInfluenceCost(10)

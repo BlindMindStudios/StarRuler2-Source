@@ -1,0 +1,15 @@
+Ability: TroopPods
+	Name: #ABL_TROOPPODS
+	Description: #ABL_TROOPPODS_DESC
+	Icon: AbilityIcons::2
+
+	Range: 100
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterWar(targ)
+	TargetFilterLoyaltyMax(targ, Sys.MaxLoyalty)
+
+	ConsumeStatus(Troops, Hide = True)
+
+	AddStatusTo(targ, TroopInvasion, Sys.Duration, Set Origin Empire = True)

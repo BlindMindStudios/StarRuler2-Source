@@ -1,0 +1,25 @@
+Card: OpenElection
+	Name: #EVT_OPEN_ELECTION
+	Description: #EVT_OPEN_ELECTION_DESC
+
+	Color: #dccc64
+	Icon: CardIcons::41
+
+	Class: Event
+	Rarity: Epic
+	Frequency: 0.6
+
+	StartVote(OpenElection)
+
+Vote: OpenElection
+	Name: #EVT_OPEN_ELECTION
+	Description: #EVT_OPEN_ELECTION_DESC
+
+	Color: #dccc64
+	Icon: CardIcons::41
+
+	AddStartWeight(+1)
+
+	TriggerHighestContributor(MakeSenateLeader(), Pass, Multiple = False)
+
+	AI: BenefitRace(8.0)

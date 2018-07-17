@@ -1,0 +1,30 @@
+Subsystem: DevoutShrine
+	Name: #S_SHRINE
+	Description: #S_SHRINE_DESC
+	BaseColor: #408fc1
+	Elevation: 1
+
+	Tags: BaseCost, Prayer, RaceSpecial, Important
+	Tags: IsShield, Defense, Category:Control, HasInternals
+	Hull: Flagship, Station
+
+	Prayer := Hexes
+
+	Size := HexSize * Hexes
+	ShieldCapacity := Size * 100
+	ShieldRegen := Size
+	ShieldHexes := Hexes
+
+	Hex.Resistance := 0.5
+	Hex.HP := 12 * HexSize
+	Hex.Mass := 2.5 * HexSize
+
+	Effect: ShieldDamage
+
+	Assert: Sum.Prayer >= Sum.Command
+		Unique: True
+		Message: #ERROR_EQUAL_PRAYER
+	
+	Module: Core
+		Sprite: AntimatterReactor * #408fc1
+		Hex.BuildCost := 2 * Hex.BuildCost

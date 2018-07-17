@@ -1,0 +1,14 @@
+Trait: Frugal
+	Name: #TRAIT_FRUGAL
+	Description: #TRAIT_FRUGAL_DESC
+	Category: Personality
+	Order: 2
+
+	Conflict: Lavish
+
+	Color: #aaffaa
+	Icon: ResourceClassIcons::0
+
+	Costs Points: 1
+
+	AddStatusOwnedPlanets(Frugal)

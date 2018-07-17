@@ -1,0 +1,8 @@
+Artifact: AncientEmbassy
+	Name: #ART_ANCIENT_EMBASSY
+	Frequency: 0
+
+	Model: Research_Station
+	Material: VolkurGenericPBR
+
+	Ability: AncientEmbassy

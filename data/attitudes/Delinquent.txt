@@ -1,0 +1,44 @@
+Attitude: Delinquent
+	Name: #ATT_DELINQUENT
+	Progress: #ATT_DELINQUENT_PROGRESS
+	Color: #c73434
+	Sort: 35
+
+	ProgressFromAttribute(RemnantsCleared)
+	Conflict(Reverent)
+
+	Level:
+		Description: #ATT_DELINQUENT_L1
+		Icon: ResourceIcon::5
+		Threshold: 2
+
+		AddDefenseReserve(+10)
+
+	Level:
+		Description: #ATT_DELINQUENT_L2
+		Icon: GuiOrbitalIcons::12
+		Threshold: 5
+
+		ModEmpireAttribute(RemnantPickupMult, Add, 1)
+
+	Level:
+		Description: #ATT_DELINQUENT_L3
+		Icon: techImpact * #ff8000
+		Threshold: 10
+
+		EnableModifier(tag/Weapon::DamageFactor(1.1))
+
+	Level:
+		Description: #ATT_DELINQUENT_L4
+		Icon: techImpact * #00ff00
+		Threshold: 15
+
+		EnableModifier(tag/Weapon::CoreHealthFactor(2.0))
+		EnableModifier(tag/Weapon::CoreMassFactor(2.0))
+
+	Level:
+		Description: #ATT_DELINQUENT_L5
+		Icon: PointsIcon
+		Threshold: 20
+
+		TriggerNewFleets(GrantExperience(Size Factor = 1.0), Give To Stations = False)

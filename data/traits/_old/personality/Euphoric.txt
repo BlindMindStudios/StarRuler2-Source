@@ -1,0 +1,12 @@
+Trait: Euphoric
+	Name: #TRAIT_EUPHORIC
+	Description: #TRAIT_EUPHORIC_DESC
+	Category: Personality
+
+	Color: #aaffaa
+	Icon: HappyFace
+	Available: False
+
+	Costs Points: 1
+
+	AddStatusPlanetsReqLevel(2, Happy)

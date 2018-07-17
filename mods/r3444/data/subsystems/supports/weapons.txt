@@ -1,0 +1,140 @@
+Subsystem: Railgun
+	Name: Railgun
+	Description: A magnetic cannon which fires relatively small projectiles at immense velocities. Very effective at piercing armor.
+	BaseColor: #c5f946
+	TypeColor: #c5f946
+	Picture: SubsystemButtonArt::2
+	Elevation: 2
+
+	Tags: WeaponBase, ProjBase, Rotatable, HexLimitArc
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsProjWeapon, IsRailgun, HasInternals
+	Hull: Support
+
+	Size := HexSize * Hexes
+	
+	Range := log(1 + Size / 8) * 300 + 50
+	Damage := Size * 2.0
+	Reload := 2.0
+	Speed := 75
+	Spread := 0.12 * 4.0 / (4.0 + Size)
+	Tracking := 0.8
+	FireArc := 0.5 * pi
+	Pierce := 0.75
+	SupplyCost := Size * 1.5
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	Hex.BuildCost := 1.5 * HexSize
+	Hex.MaintainCost := 0
+	Hex.LaborCost := 0.14 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Sprite: HexagonSubsystems::1
+
+	Effector: Railgun
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		FireArc = FireArc
+		Tracking = Tracking
+		CapOnTarget = 0
+		Spread = Spread
+		TargetTolerance = Spread / 2
+		Pierce = Pierce
+		SupplyCost = SupplyCost * Reload
+
+Subsystem: SupportLaser
+	Name: Laser
+	Description: A highly focused beam of light, possessing great range and damage, but very poor penetration. The high damage is spread out over time, making lasers ineffective against armor.
+	BaseColor: #f9464d
+	TypeColor: #f9464d
+	Picture: SubsystemButtonArt::7
+	Elevation: 2
+	
+	Tags: BeamBase, Rotatable, HexLimitArc
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsBeamWeapon, HasInternals
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	BeamDPS := 1.5 * Size
+	Duration := 4
+	Cooldown := 6
+	Range := log(1 + Size / 8) * 200 + 150
+	Tracking := 0.5
+	SupplyCost := Size * 0.75
+	
+	Hex.HP := 12 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 2 * HexSize
+	Hex.LaborCost := 0.14 * HexSize
+	
+	Requires:
+		Command = 1
+
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Sprite: HexagonSubsystems::6
+	
+	Effector: Laser
+		Range = Range
+		DPS = BeamDPS
+		Duration = Duration
+		Cooldown = Cooldown
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Duration
+
+Subsystem: SupportMissileLauncher
+	Name: Missile Launcher
+	Description: Fires like... explosives, y'know? With this crazy, watzit... y'know thos flame thingies? Oh, rockets, yeah! Yeah, it fires bombs on rockets, it's pretty chill.
+	BaseColor: #b746f9
+	TypeColor: #b746f9
+	Picture: SubsystemButtonArt::4
+	Elevation: 2
+	
+	Tags: WeaponBase, MissileBase
+	Tags: ExteriorCore, Weapon, DefaultUnlock, IsExplosiveWeapon, HasInternals
+	Hull: Support
+	
+	Size := HexSize * Hexes
+	Range := log(1 + Size / 8) * 150 + 200
+	Damage := Size * 7.5
+	Reload := 6.0
+	Speed := 45
+	Tracking := 3
+	SupplyCost := Size * 4.0
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Hex.BuildCost := 1.5 * HexSize
+	Hex.LaborCost := 0.14 * HexSize
+	
+	Requires:
+		Command = 1
+	
+	Module: Default
+	
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Sprite: HexagonSubsystems::7
+
+	Effector: Missile
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Reload

@@ -1,0 +1,30 @@
+Subsystem: AblativeArmor
+	Name: #ABLATIVEARMOR_NAME
+	Description: #ABLATIVEARMOR_DESC
+	BaseColor: #a9a9b9
+	Elevation: 1
+
+	Tags: LowMaint, Category:Defense, FauxExterior
+	Tags: NoCore, NonContiguous, DefaultUnlock, Defense, IsArmor, ResistArmor, ExternalSpace
+	Tags: PrimaryArmor
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Hex.Resistance := 0.4
+	Hex.HP := 35 * HexSize
+	Hex.Mass := 3.5 * HexSize
+
+	Ship.ExternalHexes := Ship.ExternalHexes + ExteriorHexes
+
+	DamageResist := ShipSize / 16.0
+
+	Effect: ReduceDamage
+		ProjResist = DamageResist
+		EnergyResist = DamageResist
+		ExplResist = DamageResist
+		MinimumPercent = 1/6
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 2
+		Hex.LaborCost := Hex.LaborCost * 4
+		Sprite: PlateArmor * #9999ff

@@ -1,0 +1,29 @@
+Module: RemnantGateCore
+	Name: #ORB_GATE_CORE
+	Blurb: #ORB_GATE_CORE_BLURB
+	Description: #ORB_GATE_CORE_BLURB
+	Icon: GuiOrbitalIcons::1
+
+	Standalone: True
+	Solid: False
+	Spin: 0
+
+	Build Cost: 300
+	Labor Cost: 10
+
+	Health: 15000
+	Armor: 5000
+
+	Model: Warpgate
+	Material: GenericPBR_Gate
+	Size: 15
+	AddParticleSystem(GateWormhole, Size = 0.6)
+
+	Strategic Icon: OrbitalIcons::1
+	Icon Size: 0.03
+
+	IsGate()
+	GlobalTradeNode()
+
+	CannotBuildManually()
+	DisableOnFTLBlock()

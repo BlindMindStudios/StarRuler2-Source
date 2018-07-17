@@ -1,0 +1,8 @@
+bool hasDialogue() -> local server::scenario::hasDialogue_cl
+Dialogue@[] getActiveDialogue() -> local server::scenario::getActiveDialogue_cl
+Objective@[] getActiveDialogueObjective() -> local server::scenario::getActiveDialogueObjective_cl
+void skipDialogueObjective() -> local server::scenario::skipObjective_cl
+void guiDialogueAction(string id) -> client::dialogue::DialogueRemoteAction
+void guiObjectiveStart(string id, Object@ obj = null) -> client::dialogue::RemoteObjectiveStart
+void guiObjectiveEnd(string id) -> client::dialogue::RemoteObjectiveEnd
+void srvObjectiveComplete(string id) -> local server::dialogue::RemoteObjectiveComplete

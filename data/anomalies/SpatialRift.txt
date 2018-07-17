@@ -1,0 +1,22 @@
+Anomaly: SpatialRift
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State:
+		Narrative: #ANOMALY_NAR_RIFT
+
+		Model: Research_Station
+		Material: VolkurGenericPBR
+
+		Choice: Pulse
+		Choice: Destroy
+
+	Option: Pulse
+		Icon: CardCategoryIcons::2
+		Description: #ANOMALY_RIFT_PULSE
+
+		SpawnRandomSlipstream()
+
+	Option: Destroy
+		Icon: CardCategoryIcons::5
+		Description: #ANOMALY_RIFT_DESTROY

@@ -1,0 +1,8 @@
+varying vec2 uv;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	gl_Position = ftransform();
+	gl_FrontColor = gl_Color;
+	gl_BackColor = gl_Color;
+}

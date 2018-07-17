@@ -1,0 +1,13 @@
+Ability: PickupCargo
+	Name: #ABL_PICKUP_CARGO
+	Description: #ABL_PICKUP_CARGO_DESC
+	Icon: SupplyIcon * #91692c
+
+	Range: 100
+	Target: targ = Object
+
+	TargetFilterCargoStorage(targ)
+	TargetFilterOwned(targ)
+	TargetFilterHasCargoStored(targ)
+
+	PickupAllCargoFrom(targ)

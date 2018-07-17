@@ -1,0 +1,20 @@
+Building: FTLStorage
+	Name: #BLD_FTLSTORE
+	Description: #BLD_FTLSTORE_DESC
+	Sprite: FTLStorage
+
+	Category: Storage
+	Build Affinity: Crystallic
+
+	Size: 2x3
+	Base Cost: 140
+	Tile Cost: 10
+	Base Maintenance: 30
+	Tile Maintenance: 20
+
+	AddFTLStorage(250)
+	IfNative(FTL, AddFTLStorage(250))
+
+	RequireNotTrait(Sublight)
+
+	AI: AsFTLStorage()

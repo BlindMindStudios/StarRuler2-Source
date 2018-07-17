@@ -1,0 +1,28 @@
+Anomaly: StrangeBeauty
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_BEAUTY
+
+		Model: Artifact
+		Material: VolkurGenericPBR
+
+		Choice: Volunteer
+		Choice: Destroy
+
+	Option: Volunteer
+		Icon: ResourceIcon::4
+		Description: #ANOMALY_BEAUTY_VOLUNTEER
+		Result: 60%
+			AddResearchIncome(0.15)
+			AddInfluenceStake(1)
+			SendMessage(#ANOMALY_BEAUTY_SUCCESS:1:0.15)
+			
+		Result: 40%
+			SpawnPirateAgainst()
+			SendMessage(#ANOMALY_BEAUTY_FAIL)
+			
+	Option: Destroy
+		Icon: CardCategoryIcons::5
+		Description: #ANOMALY_BEAUTY_DESTROY

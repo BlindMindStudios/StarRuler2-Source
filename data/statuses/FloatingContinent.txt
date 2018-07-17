@@ -1,0 +1,5 @@
+Status: FloatingContinent
+	Visible To: Nobody
+	Collapses: True
+
+	GrantAbility(TransferFloatingContinent)

@@ -1,0 +1,96 @@
+//Define the different binds that keys can be assigned to.
+//The second value indicates the default key(s) bound to it.
+//Scripts should bind functions to the bind names.
+
+Group: Global
+	//Camera Control
+	WORLD_FORWARD: Up, W
+	WORLD_LEFT: Left, A
+	WORLD_BACKWARD: Down, S
+	WORLD_RIGHT: Right, D
+	ZOOM_IN: I
+	ZOOM_OUT: O
+	RESET_CAM: R
+
+	//Tab Control
+	TAB_NEXT: Ctrl+Tab
+	TAB_PREVIOUS: Ctrl+Shift+Tab
+	TAB_NEW: Ctrl+T
+	TAB_NEW_BG: -
+	TAB_CLOSE: Ctrl+F4
+	TAB_REOPEN: Ctrl+Shift+T
+	TAB_HOME: Ctrl+Home
+	TAB_1: Alt+1
+	TAB_2: Alt+2
+	TAB_3: Alt+3
+	TAB_4: Alt+4
+	TAB_5: Alt+5
+	TAB_6: Alt+6
+	TAB_7: Alt+7
+	TAB_8: Alt+8
+	TAB_9: Alt+9
+
+	//Game speed
+	PAUSE: F9
+	SPEED_SLOWER: F5
+	SPEED_DEFAULT: F6
+	SPEED_FASTER:  F7
+
+	//User interface
+	UI_ZOOM_IN: Ctrl++,Ctrl+=
+	UI_ZOOM_OUT: Ctrl+-
+	UI_ZOOM_RESET: Ctrl+0
+	TAKE_SCREENSHOT: F12
+	MP_CHAT: Shift+Enter
+	TOGGLE_FIREARCS: Ctrl+F
+
+	//Popups
+	TOGGLE_CONSOLE: `
+	TOGGLE_MENU: Esc
+	GO_MENU: Enter
+
+	//Misc
+	CHANGE_EMPIRE: F2
+
+	//Object grouping
+	GROUP_1: 1
+	GROUP_2: 2
+	GROUP_3: 3
+	GROUP_4: 4
+	GROUP_5: 5
+	GROUP_6: 6
+	GROUP_7: 7
+	GROUP_8: 8
+	GROUP_9: 9
+
+	//3D Interaction
+	FTL: F
+	HOLD_POSITION: Ctrl+H
+	PIN: P
+	PIN_FLOATING: Shift+P
+	PING: V
+	PING_ALL: Shift+V
+	EXPORT: E
+	CANCEL_EXPORT: Ctrl+E
+	AUTO_IMPORT: Shift+E
+	TRANSFER_SUPPORTS: T
+	COLONIZE: C
+	ZOOM_LOCK_OBJECT: Z
+	ATTACK: X
+	HOMEWORLD: H
+	STOP: Ctrl+S
+	MANAGE: Ctrl+Enter
+	MANAGE_SUPPORT: Ctrl+M
+	DEPLOY_DEFENSE: Ctrl+D
+
+Group: DesignEditor
+	DESIGN_DUPLICATE: Ctrl+D
+	DESIGN_UNDO: Ctrl+Z, U
+	DESIGN_REDO: Ctrl+Y, R
+	DESIGN_TOOL_PAINT: P
+	DESIGN_TOOL_MOVE: M
+	DESIGN_TOOL_DROP: D
+	DESIGN_TOOL_REPLACE: Ctrl+R
+	DESIGN_SAVE: Ctrl+Shift+S
+	DESIGN_SAVE_CLOSE: Ctrl+S
+	DESIGN_EXPORT: Ctrl+E

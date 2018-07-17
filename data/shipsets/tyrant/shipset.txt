@@ -1,0 +1,16 @@
+Shipset: Tyrant
+	Name: Tyrant
+	Available: No
+	
+	Hull: TyrantFrigate
+	Hull: TyrantDestroyer
+	Hull: TyrantCruiser
+	Hull: TyrantBattleship
+	Hull: TyrantTitan
+	Hull: TyrantSpooky
+	Hull: TyrantSpecial
+	Hull: TyrantFlagLarge
+	Hull: TyrantFlagMedium
+	Hull: GevronStation
+	Hull: GevronSatellite
+	Hull: SeedShip

@@ -1,0 +1,19 @@
+Technology: ShockMissiles
+	Name: #R_SYS_SHOCKMISSILES
+	Description: #R_SYS_SHOCKMISSILES_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Damage
+
+	Point Cost: 500
+	Time Cost: 90
+
+	Icon: MissileLauncher::0
+	Color: #444ca0
+	
+	UnlockSubsystem(ShockMissiles)
+	SkipOnUnlockedSubsystem(ShockMissiles)
+
+	SecondaryMoneyCost(750)

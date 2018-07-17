@@ -1,0 +1,17 @@
+Resource: Water
+	Name: #WATER
+	Blurb: #WATER_BLURB
+	Native Biome: Oceanic
+	Class: WaterType
+
+	Icon: ResourceIcons::0
+	Small Icon: ResourceIconsSmall::18
+
+	Distribution: 3.3
+
+	Level: 0
+
+	Asteroid Frequency: 0.03
+	Asteroid Labor: 25
+	
+	ResourceBonding(2 = HeavyWater, 4 = BoostWater, 8 = ClearWater, 16 = AwesomeWater) #version<105

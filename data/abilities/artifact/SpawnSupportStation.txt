@@ -1,0 +1,13 @@
+Ability: SpawnSupportStation
+	Name: #ABL_SPAWN_SUPPORT_STATION
+	Description: #ABL_SPAWN_SUPPORT_STATION_DESC
+	Icon: GuiOrbitalIcons::7
+	Activate Sound: generic_activate_2
+
+	Energy Cost: 750
+	ReduceEnergyCostSystemFlag(0.75, CheapArtifacts)
+
+	Target: dest = Point
+	TargetFilterInSystem(dest)
+
+	SpawnOrbitalAt(dest, SupportStation, Add Status = ConstructOrbital)

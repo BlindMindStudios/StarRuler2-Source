@@ -1,0 +1,11 @@
+PlanetType: Ice
+	Icon: PlanetType::4
+	DistantIcon: DistantPlanetType::4
+	Atmosphere: IceAtmosphere
+	
+	BiomeWeights:
+		Ice: 2
+		Oceanic: 1
+		Desert: -3
+		Forest: -3
+		Volcanic: -4

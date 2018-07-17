@@ -1,0 +1,21 @@
+attribute vec4 in_position;
+attribute vec3 in_normal;
+attribute vec2 in_uv;
+attribute vec4 in_tangent;
+
+varying vec3 npos;
+varying vec3 normal, binormal, tangent;
+varying vec2 uv;
+
+void main()
+{
+	normal = normalize(gl_NormalMatrix * in_normal);
+	tangent = normalize(gl_NormalMatrix * in_tangent.xyz);
+	binormal = normalize(gl_NormalMatrix * cross(normal, in_tangent.xyz * in_tangent.w));
+	
+	vec4 pos = gl_ModelViewMatrix * in_position;
+	npos = -pos.xyz;
+	
+	uv = in_uv;
+	gl_Position = gl_ProjectionMatrix * pos;
+} 

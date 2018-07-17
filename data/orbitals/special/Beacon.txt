@@ -1,0 +1,65 @@
+Module: Beacon
+	Name: #ORB_BEACON
+	Blurb: #ORB_BEACON_BLURB
+	Description: #ORB_BEACON_DESC
+	Icon: GuiOrbitalIcons::18
+	Strategic Icon: OrbitalIcons::18
+
+	Core: True
+	Standalone: True
+
+	Health: 50000
+	Armor: 10000
+
+	Size: 16
+	Icon Size: 0.04
+	Mass: 50000
+
+	Model: Beacon
+	Material: GenericPBR_Beacon
+
+	AutoMasterSlave()
+
+	AddResistance(10)
+	AddFleetCommand(256)
+	OnEnable(GenerateDefenseShips(15))
+
+	CannotBuildManually()
+	CountAsPlanet()
+
+	IfMaster(AllowConstruction(Ships = True, Orbitals = True, Asteroids = True, Enable Fill From = True))
+	IfNotMaster(AllowConstruction(Ships = False, Supports Only = True, Enable Fill From = True))
+	IfMaster(AddLaborIncome(5))
+	IfMaster(AddLaborEmpireAttribute(FactoryLaborMod))
+	CopyLaborFromMaster()
+	ForbidLaborExport()
+
+	IfMaster(RepeatEmpireAttribute(BeaconLaborUpgrades, AddLaborIncome(3)))
+	IfMaster(RepeatEmpireAttribute(BeaconLaborUpgrades, AddLaborEmpireAttribute(FactoryLaborMod)))
+
+	SetSystemFlag(JumpdriveSafety)
+
+	GlobalTradeNode()
+	GiveTrade()
+
+	AllowResourceImport()
+	AddCargoStorage(1000000)
+
+	gameplay.extragalactic::RefugeeColonization()
+
+	CopyPressureToMaster()
+	MoveCargoToMaster()
+	MoveImportsToMaster()
+
+	AddHealthEmpireAttribute(BeaconHealthUpgrades, 50000)
+	AddArmorEmpireAttribute(BeaconArmorUpgrades, 50000)
+	AddResistanceEmpireAttribute(BeaconArmorUpgrades, 50)
+
+	RepeatExtended(AddTurret(Railgun, Range=400, Damage=5, Reload=0.25, Speed=150, Spread=0.03, FireArc=3.14, Tracking=0.4, FireTolerance=0.78), Base Attribute = BeaconWeaponUpgrades, Multiplier = 4)
+	RepeatExtended(AddTurret(Laser, Range=300, DPS=5, Duration=2, Cooldown=0, Tracking=0.4), Base Attribute = BeaconWeaponUpgrades, Multiplier = 4)
+	RepeatEmpireAttribute(BeaconWeaponUpgrades, RecordBonusDPS(100))
+
+	IfMaster(RepeatPressure(Labor, AddLaborIncome(0.75)))
+	IfMaster(RepeatPressure(Defense, TriggerPeriodic(AddCargo(DefenseCargo, 1), Interval = 6)))
+	IfMaster(RepeatPressure(Research, TriggerPeriodic(AddCargo(ResearchCargo, 1), Interval = 6)))
+	IfMaster(RepeatPressure(Energy, TriggerPeriodic(AddCargo(EnergyCargo, 1), Interval = 6)))

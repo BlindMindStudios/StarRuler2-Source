@@ -1,0 +1,44 @@
+Technology: HabitatUpgrade
+	Name: #R_IMP_HABITAT
+	Blurb: #R_IMP_HABITAT_BLURB:50%:30%
+	Description: #R_IMP_HABITAT_DESC:50%:30%
+
+	Icon: ResourceIcon::8
+	Color: #ca6700
+
+	Point Cost: 600
+	Time Cost: 90
+
+	ModAttribute(HabitatUpgrade, Multiply, 1.5)
+	ModAttribute(StaticDamageFactor, Multiply, 1.3)
+
+Technology: MothershipLabor
+	Name: #R_IMP_MOTHERSHIP_LABOR
+	Blurb: #R_IMP_MOTHERSHIP_LABOR_BLURB:4
+	Description: #R_IMP_MOTHERSHIP_LABOR_DESC:4:12
+
+	Icon: ResourceIcon::6
+	Color: #b1b4b6
+	Class: Boost
+
+	Point Cost: 500
+	Time Cost: 60
+
+	ModAttribute(FactoryLaborMod, Add, 4)
+
+	SecondaryInfluenceCost(12)
+
+Technology: MothershipLabor2
+	Name: #R_IMP_MOTHERSHIP_LABOR2
+	Blurb: #R_IMP_MOTHERSHIP_LABOR_BLURB:8
+	Description: #R_IMP_MOTHERSHIP_LABOR_DESC:8:24
+
+	Icon: ResourceIcon::6
+	Color: #b1b4b6
+
+	Point Cost: 700
+	Time Cost: 80
+
+	ModAttribute(FactoryLaborMod, Add, 8)
+
+	SecondaryInfluenceCost(24)

@@ -1,0 +1,18 @@
+Ability: InvMoney
+	Name: #INV_ABL_MONEY
+	Description: #INV_ABL_MONEY_DESC
+	Icon: ResourceIcon::0
+
+	Energy Cost: 0
+
+	AddPermanentIncome(300)
+
+Ability: InvMoneyPlus
+	Name: #INV_ABL_MONEY_PLUS
+	Description: #INV_ABL_MONEY_PLUS_DESC
+	Icon: ResourceIcon::6
+
+	Energy Cost: 0
+
+	AddModifier( LaborCostFactor(0.9) )
+	AddInvasionStrength(1)

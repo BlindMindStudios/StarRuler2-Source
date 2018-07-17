@@ -1,0 +1,43 @@
+Card: ArtGeist
+	Name: #ZEITGEIST_ART
+	Description: #ZEITGEIST_ART_DESC
+
+	Color: #ff33a0
+	Icon: CardIcons::42
+
+	Class: Event
+	Rarity: Epic
+
+	StartVote(ArtGeist)
+
+Vote: ArtGeist
+	Name: #ZEITGEIST_ART
+	Description: #ZEITGEIST_ART_DESC
+
+	Color: #ff4f00
+	Icon: CardIcons::42
+
+	AddStartWeight(+1)
+
+	OnOwner(DismissTaggedEffects(Zeitgeist))
+
+	CreateEffect(Pass, ArtGeist, Give To Contributor = True)
+	TriggerLowestContributor(AddResearchPoints(800, Modified = False, Penalized = False), Fail, Require Negative = True)
+
+	EmpireStartWeightAttribute(ZeitgeistStartSupport)
+
+	AI: ZeitgeistVote()
+
+Effect: ArtGeist
+	Name: #ZEITGEIST_ART
+	Description: #ZEITGEIST_ART_DESC
+
+	Tag: Zeitgeist
+	Dismissable: False
+
+	Color: #ff4f00
+	Icon: CardIcons::42
+
+	ModInfluenceFactor(+0.2)
+
+	OnAllEmpires(UnlockTagWhileActive(MuseumUnlock))

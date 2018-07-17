@@ -1,0 +1,6 @@
+System: CoreBlackhole
+	MakeBlackhole(Radius = 20.0)
+	
+	MakePlanet(Orbit Spacing = 700:750)
+	MakeAsteroidBelt(6)
+	MakePlanet(Orbit Spacing = 850:900)

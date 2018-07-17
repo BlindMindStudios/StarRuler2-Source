@@ -1,0 +1,9 @@
+Status: AncientCannon
+	Name: #COND_ANCIENT_CANNON
+	Description: #COND_ANCIENT_CANNON_DESC
+	Icon: GuiOrbitalIcons::6 * #ff8080
+
+	Condition Frequency: 0.05
+	Color: #ff8080
+
+	TriggerCreate( SpawnBuilding(AncientCannon, (4, 2)) )

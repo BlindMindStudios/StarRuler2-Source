@@ -1,0 +1,18 @@
+Ability: AncientBuildTransmuter
+	Name: #ABL_ANCIENT_BUILD_TRANSMUTER
+	Description: #ABL_ANCIENT_BUILD_TRANSMUTER_DESC
+	Icon: AncientTransmuter
+
+	Range: 20
+	Target: targ = Object
+
+	IsToggleTarget(targ, Range Margin = 1.5, Channels = True)
+
+	TargetFilterType(targ, Planet)
+	TargetFilterNotQuarantined(targ)
+	ForClient(TargetFilterSpace(targ))
+	Either(TargetFilterSpace(targ), TargetFilterOwned(targ))
+	ForClient(TargetFilterNotStatus(targ, AncientClaim))
+
+	AfterChannel(targ, 5, QueueBuilding(AncientTransmuter, (5,3)), Clear = False)
+	ChannelWhileHaveQueue(targ, Delay = 15)

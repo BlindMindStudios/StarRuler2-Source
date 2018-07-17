@@ -1,0 +1,12 @@
+Resource: Supercarbons
+	Name: #SUPERCARBONS
+	Description: #SUPERCARBONS_DESC
+	Native Biome: Volcanic
+
+	Icon: ResourceIcons::39
+	Small Icon: ResourceIconsSmall::39
+
+	Level: 2
+	Affinity: Labor
+
+	Pressure: 12 Labor

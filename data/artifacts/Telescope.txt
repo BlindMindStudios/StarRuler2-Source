@@ -1,0 +1,8 @@
+Artifact: Telescope
+	Name: #ART_TELESCOPE
+	Description: #ART_TELESCOPE_DESC
+	Frequency: 0.5
+
+	Ability: Telescope
+
+	AI: AsVisionGain(1.0)

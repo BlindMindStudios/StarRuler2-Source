@@ -1,0 +1,7 @@
+WIKI_HOME: Home
+WIKI_BACK: Back
+WIKI_TITLE: Wiki: $1
+WIKI: Wiki
+WIKI_BROWSER: Open in Browser
+WIKI_LOADING: Loading...
+WIKI_404: Could not find page.

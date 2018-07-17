@@ -1,0 +1,15 @@
+GlobalStat: OreCost
+	Name: #S_OreCost
+	Description: #STT_OreCost
+	Icon: ResourceIconsSmall::11 * #91692c
+	Color: #91692c
+
+	Variable: Hex.OreCost
+
+GlobalStat: EnergyBuildCost
+	Name: #S_EnergyBuildCost
+	Description: #STT_EnergyBuildCost
+	Icon: ResourceIcon::2
+	Color: #41b4b0
+
+	Variable: EnergyBuildCost

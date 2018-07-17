@@ -1,0 +1,14 @@
+Resource: Oil
+	Name: #OIL
+	Description: #OIL_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::8
+	Small Icon: ResourceIconsSmall::7
+
+	Level: 1
+	Rarity: Uncommon
+	Affinity: Energy + Money
+
+	Pressure: 2 Energy
+	Pressure: 2 Money

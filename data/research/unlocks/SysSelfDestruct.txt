@@ -1,0 +1,15 @@
+Technology: SysSelfDestruct
+	Name: #R_SYS_SELF_DESTRUCT
+	Description: #R_SYS_SELF_DESTRUCT_DESC
+	Class: Unlock
+
+	Point Cost: 600
+	Time Cost: 180
+
+	Icon: AntimatterReactor * #ff0000
+	Color: #ff0000
+	
+	UnlockSubsystem(SelfDestruct)
+	SkipOnUnlockedSubsystem(SelfDestruct)
+
+	SecondaryEnergyCost(1000)

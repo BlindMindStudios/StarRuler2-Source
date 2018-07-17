@@ -1,0 +1,32 @@
+Effector: Warhead
+	Value: Range
+	Value: Damage
+	Value: Reload
+	Value: Speed
+	Value: Tracking
+	Value: Radius
+	
+	Range: Range
+	Speed: Speed
+	Tracking: Tracking
+	Lifetime: Range / Speed * 1.25
+	
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isDamageable
+	AutoTarget: isEnemy && isShip && tagFlagship
+	
+	Activation: VariableTimed(Reload, 0.025)
+	OnTrigger: heralds_combat::ConsumesWarhead()
+	
+	PhysicalType: Missile
+		GfxType: Sprite
+		GfxSize: 2.5
+		FireSfx: torpedo_launch
+		ImpactSfx: torpedo_impact
+		Trail: MissileTrail
+		TrailCol: ffffff00, 00000000
+		Material: Torpedo
+		
+	Effect: WarheadExpl
+		Damage = Damage
+		Radius = Radius

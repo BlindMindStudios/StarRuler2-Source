@@ -1,0 +1,12 @@
+Trait: SpaceProgram
+	Name: #TRAIT_SPACE_PROGRAM
+	Description: #TRAIT_SPACE_PROGRAM_DESC
+	Category: Foundation
+	Order: 0
+
+	Color: #aaffaa
+	Icon: SpaceProgram
+
+	Costs Points: 1
+
+	TriggerHomeworld( MapVision(3) )

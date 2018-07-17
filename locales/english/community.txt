@@ -1,0 +1,36 @@
+COMMUNITY_TITLE: $1 (Community)
+COMMUNITY_HOME_TITLE: Community
+COMMUNITY_WIKI: Wiki: Main Page
+UPLOAD: Upload
+FEATURED_DESIGNS: Featured Designs
+COMMUNITY_DESIGN_SPEC: Size $1, by $2 on $3
+COMMUNITY_DESIGN_CURLINE: [color=#aaa][img=ThumbsUp;20x20/] [b][color=#0f0]$1[/color][/b] [hspace=100/] [img=MenuIcons::6;20/] [b]$2[/b] Comment(s)[/color]
+DOWNLOAD_DESIGN_CLASS: Downloaded
+DOWNLOAD_TO_PROFILE: Download to Profile
+TT_DOWNLOAD_TO_PROFILE: <<|
+	Download the displayed design to your profile where you will be able to import it in this or any future games.
+>>
+SUCCESS_DOWNLOAD_TO_PROFILE: Design successfully downloaded to profile.
+DOWNLOAD_TO_EMPIRE: Download to Game
+TT_DOWNLOAD_TO_EMPIRE: <<|
+	Download the displayed design to your current game only, for immediate use in your empire.
+>>
+TT_DOWNLOAD_ERRORS: <<|
+	This design cannot be download into your current empire, because it has errors:
+>>
+SUCCESS_DOWNLOAD_TO_EMPIRE: Design successfully downloaded to the current game.
+DOWNLOAD_EDIT: Load in Editor
+TT_DOWNLOAD_EDIT: Open this design in the editor to make changes before saving.
+VOTES_BUTTON: $1
+TT_VOTES_BUTTON: Rate this design up.
+COMMENTS_BUTTON: $1 Comment(s)
+COMMENT_TEXT: Enter your comment....
+COMMENT_SUBMIT: Post Comment
+COMMUNITY_CONFIRM_DELETE_DESIGN: Are you sure you wish to delete this design from the online community? This cannot be undone.
+UPLOAD_DESIGN: Upload Design
+RECENT_DESIGNS: Recent Designs
+TOPRATED_DESIGNS: Top Rated Designs
+SEARCH_DESIGNS_PROMPT: Search Designs...
+DESIGN_DESCRIPTION_PROMPT: Enter a description for your design...
+DESIGN_CHOOSE_PROMPT: Choose a design...
+DESIGN_LINK_TIP: You can link to this design by typing [[design:$1]].

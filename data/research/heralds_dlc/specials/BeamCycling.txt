@@ -1,0 +1,17 @@
+Technology: BeamCycling
+	Name: #R_BEAM_CYCLING
+	Description: #R_BEAM_CYCLING_DESC:30%
+
+	Icon: Laser::3
+	Symbol: techCooling * #c680ff
+	Color: #80ffea
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 100
+
+	AddModifier( tag/BeamBase::DurationFactor(1.3) )
+
+	AffectsTaggedSubsystems(BeamBase)

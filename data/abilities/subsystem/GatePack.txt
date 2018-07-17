@@ -1,0 +1,8 @@
+Ability: GatePack
+	Name: #ABL_GATE_PACK
+	Description: #ABL_GATE_PACK_DESC
+	Icon: AbilityIcons::0
+	Hotkey: G
+
+	RemoveStatus(GateUnpacked)
+	AddStatus(GatePacked)

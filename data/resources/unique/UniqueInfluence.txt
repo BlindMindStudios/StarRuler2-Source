@@ -1,0 +1,16 @@
+Resource: UniqueInfluence
+	Name: #UNIQUE_INFLUENCE
+	Description: #UNIQUE_INFLUENCE_DESC
+	Native Biome: Oceanic
+
+	Icon: ResourceIconsSmall::55
+	Small Icon: ResourceIconsSmall::55
+
+	Level: 0
+
+	Rarity: Unique
+	Require Contestation: 60
+
+	Affinity: Influence
+
+	Pressure: 10 Influence

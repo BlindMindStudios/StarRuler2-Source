@@ -1,0 +1,15 @@
+Technology: ModQuantumBattery
+	Name: #R_MOD_QUANTUM_BATTERY
+	Description: #R_MOD_QUANTUM_BATTERY_DESC:1200
+	Class: Unlock
+
+	Point Cost: 800
+	Time Cost: 100
+
+	Color: #d8cc48
+	Icon: QuantumBattery
+	
+	UnlockModule(QuantumBattery)
+	SkipOnUnlockedModule(QuantumBattery)
+
+	SecondaryEnergyCost(1200)

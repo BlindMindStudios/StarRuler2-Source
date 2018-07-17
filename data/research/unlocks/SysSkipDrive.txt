@@ -1,0 +1,13 @@
+Technology: SysSkipDrive
+	Name: #R_SYS_SKIP_DRIVE
+	Description: #R_SYS_SKIP_DRIVE_DESC
+	Class: Unlock
+
+	Point Cost: 1000
+	Time Cost: 60
+
+	Icon: HexagonSubsystems::10 * #fff980
+	Color: #fff980
+	
+	UnlockSubsystem(SkipDrive)
+	SkipOnUnlockedSubsystem(SkipDrive)

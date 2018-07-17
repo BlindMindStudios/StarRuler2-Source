@@ -1,0 +1,18 @@
+Resource: Aluminum
+	Name: #ALUMINUM
+	Description: #ALUMINUM_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::1
+	Small Icon: ResourceIconsSmall::16
+
+	Level: 0
+	Distribution: 0.4
+	Affinity: Labor
+
+	Asteroid Frequency: 0.2
+	Asteroid Labor: 30
+
+	Pressure: 6 Labor
+
+	AddPressureCap(1)

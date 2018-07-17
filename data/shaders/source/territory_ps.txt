@@ -1,0 +1,24 @@
+varying vec2 uv;
+varying float depth;
+uniform vec4 stip_color;
+
+void main() {
+	vec4 color = gl_Color;
+	if(uv.x > 0.98)
+		color.a *= (1.0 - (uv.x - 0.98)/0.02);
+	else
+		color.a *= pow(uv.x,(10000.0 / depth));
+	color.a *= 0.6;
+
+	if(stip_color.a != 0.0 && uv.x < 0.8) {
+		float pos = mod(uv.y, 500.0) / 500.0;
+		float alph = pow(uv.x,(10000.0 / depth)) * 1.5;
+		if(pos > 0.5 && pos < 0.7)
+			color = stip_color * vec4(1.0, 1.0, 1.0, alph);
+	}
+	
+	if(color.a < 0.01)
+		discard;
+	
+	gl_FragColor = color;
+}

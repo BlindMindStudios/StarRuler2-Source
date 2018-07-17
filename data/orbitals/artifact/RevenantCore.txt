@@ -1,0 +1,28 @@
+Module: RevenantCore
+	Name: #ORB_REVENANT_CORE
+	Blurb: #ORB_REVENANT_BLURB
+	Description: #ABL_REVENANT_CORE_DESC
+	Icon: GuiOrbitalIcons::26
+
+	Core: True
+	Standalone: True
+
+	Health: 20000
+	Armor: 5000
+
+	Model: RevenantCore
+	Material: TyrantPBRAdvanced
+	Size: 14
+
+	Strategic Icon: OrbitalIcons::26
+
+	CannotBuildManually()
+	EnableModifier( SupportCapacityFactor(1.25) )
+
+	OnDisable( SpawnArtifact(RevenantCore) )
+	OnDisable( Destroy() )
+
+	ModEmpireAttribute(RevenantParts, Add, 1)
+	OnEmpireAttributeLT(RevenantParts, 0, Destroy())
+	
+	GloballyVisible()

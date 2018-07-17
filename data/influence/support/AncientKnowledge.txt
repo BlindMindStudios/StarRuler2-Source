@@ -1,0 +1,40 @@
+Card: AncientKnowledge
+	Name: #CARD_ANCIENT_KNOWLEDGE
+	Description: #CARD_ANCIENT_KNOWLEDGE_DESC
+
+	Icon: CardIcons::36
+	Color: #f88
+
+	Class: Support
+	Side: Both
+	Rarity: Rare
+
+	Base Purchase Cost: 2
+	Base Play Cost: 4
+
+	Base Weight: 3
+
+	WeightPerEmpirePresent(1, Weigh Self = True)
+	TriggerVotePresent(GainInfluenceCard(AncientIntuition))
+
+	LogVoteEvent(Support = #CARD_ANCIENT_KNOWLEDGE_LOG_Y, Oppose = #CARD_ANCIENT_KNOWLEDGE_LOG_N)
+
+	AI: VoteSupport()
+
+Card: AncientIntuition
+	Name: #CARD_ANCIENT_INTUITION
+	Description: #CARD_ANCIENT_INTUITION_DESC
+
+	Icon: CardIcons::37
+	Color: #e780ff
+
+	Class: Support
+	Side: Both
+	Rarity: Rare
+	Frequency: 0
+
+	Base Weight: 1
+
+	LogVoteEvent(Support = #CARD_ANCIENT_INTUITION_LOG_Y, Oppose = #CARD_ANCIENT_INTUITION_LOG_N)
+
+	AI: VoteSupport()

@@ -1,0 +1,11 @@
+PlanetType: TerranRock
+	Icon: PlanetType::3
+	DistantIcon: DistantPlanetType::3
+	Atmosphere: TerranAtmosphere
+	
+	BiomeWeights:
+		Forest: -1
+		Oceanic: 1
+		Mountains: 1
+		Desert: 2
+		Crystallic: -1

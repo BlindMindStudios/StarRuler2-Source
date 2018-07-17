@@ -1,0 +1,10 @@
+Building: Industry
+	Name: #BLD_INDUSTRY
+	Description: #BLD_INDUSTRY_DESC
+	Sprite: BuildingSprites::4
+
+	Civilian: True
+
+	Saturation: 2 Labor
+	Production: 2 Labor
+	Pressure Cap: 2

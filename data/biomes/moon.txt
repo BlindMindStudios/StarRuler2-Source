@@ -1,0 +1,11 @@
+Biome: Moon
+	Name: #BIOME_MOON
+	
+	Temperature: 0
+	Humidity: 0
+	
+	UseWeight: 0.2
+	Frequency: 0
+	
+	Color: FFFFFF
+	IsMoon: True

@@ -1,0 +1,9 @@
+Building: MediaCenter
+	Name: #BLD_MEDIACENTER
+	Description: #BLD_MEDIACENTER_DESC
+	Sprite: BuildingSprites::10
+
+	Civilian: True
+
+	Saturation: 1 Influence
+	Production: 1 Influence

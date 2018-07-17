@@ -1,0 +1,26 @@
+Technology: DevEnergyIncome
+	Name: #R_DEV_ENERGY_INCOME
+	Blurb: #R_DEV_ENERGY_INCOME_BLURB:1.5
+	Description: #R_DEV_ENERGY_INCOME_DESC:1.5
+	Class: Boost
+
+	Point Cost: 1000
+	Time Cost: 60
+
+	Icon: techIonization*#42b4bd
+	Color: #42b4bd
+
+	AddEnergyIncome(1.5)
+
+Technology: DevEnergyIncome2
+	Name: #R_DEV_ENERGY_INCOME2
+	Blurb: #R_DEV_ENERGY_INCOME_BLURB:3
+	Description: #R_DEV_ENERGY_INCOME_DESC:3
+
+	Point Cost: 1500
+	Time Cost: 100
+
+	Icon: techIonization*#42b4bd
+	Color: #42b4bd
+
+	AddEnergyIncome(3)

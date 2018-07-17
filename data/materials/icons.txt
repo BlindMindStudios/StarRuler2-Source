@@ -1,0 +1,279 @@
+Material: IconSet
+	Alpha: True
+	Lighting: False
+	DepthWrite: Off
+	DepthTest: NoDepthTest
+
+Material: DistantIcon
+	Shader: DistantIcon
+	Alpha: True
+	Lighting: False
+	DepthWrite: On
+	DepthTest: LessEqual
+	
+SpriteSheet: ResourceIcon
+	Inherit: IconSet
+	LoadPriority: Game
+	Texture: data/images/global_resources.png
+	Size: 40,40
+
+SpriteSheet: ConvertIcon
+	Inherit: IconSet
+	LoadPriority: Game
+	Texture: data/images/global_resources_convert.png
+	Size: 38,38
+	
+SpriteSheet: HullIcons
+	Inherit: IconSet
+	Shader: NodeColoredSelectable
+	LoadPriority: Game
+	Texture: data/images/shipIcons.png
+	Size: 18,18
+
+SpriteSheet: OrbitalIcons
+	Inherit: IconSet
+	Shader: NodeColoredSelectable
+	LoadPriority: Game
+	Texture: data/images/orbital_icons.png
+	Size: 64,64
+
+SpriteSheet: GuiOrbitalIcons
+	Inherit: IconSet
+	Texture: data/images/orbital_icons.png
+	Size: 64,64
+
+SpriteSheet: TechIcons
+	Inherit: IconSet
+	Texture: data/images/techIcons.png
+	Size: 96, 96
+
+SpriteSheet: TechModIcons
+	Inherit: IconSet
+	Texture: data/images/techModIcons.png
+
+SpriteSheet: RaceIcons
+	Inherit: IconSet
+	Texture: data/images/raceIcons.png
+	Size: 15,24
+	DepthTest: Always
+
+SpriteSheet: StatusIcons
+	Inherit: IconSet
+	Texture: data/images/statusIcons.png
+	Size: 24,24
+
+SpriteSheet: ShipIcons
+	Inherit: IconSet
+	LoadPriority: Game
+	Texture: data/images/shipIcons.png
+	Size: 18,18
+
+SpriteSheet: AsteroidIcon
+	Inherit: IconSet
+	Shader: NodeColoredSelectable
+	LoadPriority: Game
+	Texture: data/images/asteroidIcon.png
+	Size: 18,18
+
+SpriteSheet: OreAsteroidIcon
+	Inherit: IconSet
+	Shader: NodeColoredSelectable
+	LoadPriority: Game
+	Texture: data/images/oreAsteroidIcon.png
+	Size: 18,18
+
+SpriteSheet: AnomalyIcons
+	Inherit: IconSet
+	Shader: NodeColoredSelectable
+	LoadPriority: Game
+	Texture: data/images/anomaly_icons.png
+	Size: 18,18
+
+SpriteSheet: ShipGroupIcons
+	Inherit: IconSet
+	Shader: ShipGroup
+	Texture: data/images/shipGroups.png
+	Size: 32,32
+
+SpriteSheet: FileIcons
+	Inherit: IconSet
+	Texture: data/images/fileIcons.png
+	Size: 20,20
+
+SpriteSheet: DistantPlanetType
+	Inherit: DistantIcon
+	Size: 42,42
+	LoadPriority: Game
+	Texture: data/images/planet_type.png
+
+Material: FadedPlanet
+	Inherit: DistantIcon
+	Shader: DistantFadedIcon
+
+Material: PlanetLevel0
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_0.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+	
+Material: PlanetLevel1
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_1.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+	
+Material: PlanetLevel2
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_2.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+	
+Material: PlanetLevel3
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_3.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+	
+Material: PlanetLevel4
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_4.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+
+Material: PlanetLevel5
+	Inherit: DistantIcon
+	Shader: DistantPlanetIcon
+	LoadPriority: Game
+	Texture: data/images/planet_level_5.png
+	Texture2: data/images/planet_type.png
+	Texture3: data/images/planetary_resources_small.png
+	Texture4: data/images/planetary_resources_small_mods.png
+
+Material: DistantPlanetSelected
+	Inherit: DistantIcon
+	LoadPriority: Game
+	Texture: data/images/planet_icon_selected.png
+	Blend: Add
+	DepthWrite: Off
+	
+Material: ActiveEffects
+	Inherit: IconSet
+	Texture: data/images/diplomacy_effects.png
+	
+Material: Propositions
+	Inherit: IconSet
+	Texture: data/images/diplomacy_propositions.png
+	
+Material: DiplomacyActions
+	Inherit: IconSet
+	Texture: data/images/diplomacy_actions.png
+	
+SpriteSheet: ActionBarIcons
+	Inherit: IconSet
+	Texture: data/images/action_bar.png
+	Size: 32,32
+	
+SpriteSheet: AttributeIcons
+	Inherit: IconSet
+	LoadPriority: Menu
+	Texture: data/images/icon_attributes.png
+	Size: 32,32
+	
+SpriteSheet: CometIcon
+	Inherit: IconSet
+	Texture: data/images/icon_comet.png
+	Size: 32,32
+	
+SpriteSheet: ArtifactIcon
+	Inherit: IconSet
+	Texture: data/images/icon_artifact.png
+	Size: 32,32
+
+SpriteSheet: SpecialArtifactIcon
+	Inherit: IconSet
+	Texture: data/images/icon_artifact_special.png
+	Size: 32,32
+
+SpriteSheet: NotImplemented
+	Inherit: IconSet
+	Texture: data/images/icon_notimplemented.png
+	Size: 32,32
+	
+Material: DwarfPlanet
+	Inherit: IconSet
+	Texture: data/images/traits/dwarf_planet.png
+	
+Material: EnormousPlanet
+	Inherit: IconSet
+	Texture: data/images/traits/enormous_planet.png
+
+Material: Fortified
+	Inherit: IconSet
+	Texture: data/images/traits/fortified.png
+
+Material: Industrious
+	Inherit: IconSet
+	Texture: data/images/traits/industrious.png
+
+Material: Plantation
+	Inherit: IconSet
+	Texture: data/images/traits/plantation.png
+	
+Material: Revolutionaries
+	Inherit: IconSet
+	Texture: data/images/traits/revolutionaries.png
+	
+Material: SequesteredSociety
+	Inherit: IconSet
+	Texture: data/images/traits/sequestered_society.png
+	
+Material: Poor
+	Inherit: IconSet
+	Texture: data/images/traits/poor.png
+	
+Material: SpaceProgram
+	Inherit: IconSet
+	Texture: data/images/traits/space_program.png
+
+SpriteSheet: FleetIcons
+	Inherit: DistantIcon
+	DepthWrite: No
+	Shader: ShipGroup
+	LoadPriority: Game
+	Texture: data/images/fleet_icons.png
+	Size: 64,64
+
+Material: ShipIcon
+	Inherit: IconSet
+	DepthWrite: No
+	Shader: ShipIcon
+
+Material: ShipDistantIcon
+	Inherit: DistantIcon
+	DepthWrite: No
+	Shader: ShipDistantIcon
+
+Material: FleetIcon
+	Inherit: DistantIcon
+	DepthWrite: No
+	Shader: ShipGroup
+
+SpriteSheet: CargoIcons
+	Inherit: Image2D
+	Texture: data/images/cargo_icons.png
+	Size: 24,24

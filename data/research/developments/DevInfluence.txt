@@ -1,0 +1,14 @@
+Technology: DevInfluence
+	Name: #R_DEV_INFLUENCE
+	Blurb: #R_DEV_INFLUENCE_BLURB:5
+	Description: #R_DEV_INFLUENCE_DESC:5
+	Class: Boost
+
+	Icon: ResourceIcon::1
+	Color: #0087c7
+
+	Point Cost: 200
+	Time Cost: 90
+	
+	AddInfluencePoints(5)
+

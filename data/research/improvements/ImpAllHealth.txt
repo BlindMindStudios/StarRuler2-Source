@@ -1,0 +1,29 @@
+Technology: ImpAllHealth
+	Name: #R_IMP_ALL_HEALTH
+	Blurb: #R_IMP_ALL_HEALTH_BLURB:10%
+	Description: #R_IMP_ALL_HEALTH_DESC:10%
+
+	Icon: techMaterialScience1*#80ff80
+	Color: #80ff80
+
+	Point Cost: 700
+	Time Cost: 120
+
+	AddModifier(HpFactor(1.1))
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.1))
+	ModAttribute(OrbitalHealthMod, Multiply, 1.4)
+
+Technology: ImpAllHealth2
+	Name: #R_IMP_ALL_HEALTH2
+	Blurb: #R_IMP_ALL_HEALTH_BLURB:20%
+	Description: #R_IMP_ALL_HEALTH_DESC:20%
+
+	Icon: techMaterialScience2*#80ff80
+	Color: #80ff80
+
+	Point Cost: 1000
+	Time Cost: 120
+
+	AddModifier( HpFactor(1.2) )
+	AddModifier(ReactiveArmor::ImpactLevelFactor(1.2))
+	ModAttribute(OrbitalHealthMod, Multiply, 2.0)

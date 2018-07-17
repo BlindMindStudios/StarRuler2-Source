@@ -1,0 +1,40 @@
+Card: AnnexSystem
+	Name: #CARD_ANNEX_SYSTEM
+	Description: #CARD_ANNEX_SYSTEM_DESC
+
+	Icon: CardIcons::1
+
+	Target: system = Object
+
+	Color: #ffa4a4
+	Class: Vote
+	Rarity: Uncommon
+
+	Base Purchase Cost: 6
+
+	TargetFilterRegion(system)
+	TargetFilterHasTradePresence(system)
+	TargetFilterRegionOtherEmpire(system)
+	TargetRequireVision(system)
+	ApplyRegionTargetCostMod(system)
+
+	Base Play Cost: 5
+	RegionLoyaltyPlayCost(system)
+
+	StartVote(AnnexSystem, system)
+
+	AI: PlayOnNearbyEnemySystem(system)
+
+Vote: AnnexSystem
+	Name: #VOTE_ANNEX_SYSTEM
+
+	Icon: CardIcons::1
+
+	Target: system = Object
+
+	ClaimSystem(Pass, system)
+	OnOwner(ModAttribute(AnnexVotesWon, Add, 1))
+
+	FailReturnCardIfAttributeSet(ReturnAnnexCards)
+
+	AI: BadFor(system, Importance = 20)

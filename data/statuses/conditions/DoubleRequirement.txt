@@ -1,0 +1,15 @@
+Status: DoubleRequirement
+	Name: #COND_DOUBLE_REQUIREMENT
+	Description: #COND_DOUBLE_REQUIREMENT_DESC
+
+	Icon: ConditionIcons::10
+	Color: #80ff80
+
+	Condition Tier: 1
+	Condition Frequency: 1.0
+
+	ConditionMaxLevel(1)
+	ConditionBiome(Desert)
+	ConditionDLC(Heralds)
+
+	AddToNativeResource(AddDummyResource(Textiles))

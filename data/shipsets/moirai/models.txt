@@ -1,0 +1,42 @@
+Model: MoiraiTiny
+	Mesh: data/shipsets/moirai/support_tiny.ogex
+
+Model: MoiraiSmall
+	Mesh: data/shipsets/moirai/support_small.ogex
+
+Model: MoiraiMedium
+	Mesh: data/shipsets/moirai/support_medium.ogex
+
+Model: MoiraiLarge
+	Mesh: data/shipsets/moirai/support_large.ogex
+
+Model: MoiraiFlagSmall
+	Mesh: data/shipsets/moirai/flagship_small.ogex
+
+Model: MoiraiFlagMedium
+	Mesh: data/shipsets/moirai/flagship_medium.ogex
+
+Model: MoiraiFlagLarge
+	Mesh: data/shipsets/moirai/flagship_large.ogex
+//	Mesh2: data/shipsets/moirai/flagship_large_engines.obj
+	
+Model: MoiraiFlagVeryLarge
+	Mesh: data/shipsets/moirai/flagship_verylarge.ogex
+
+Model: MoiraiFlagHuge
+	Mesh: data/shipsets/moirai/flagship_huge.ogex
+	
+Model: MoiraiCivilianMissionary	
+	Mesh: data/shipsets/moirai/civilian_missionary.ogex
+
+Model: MoiraiCivilianMiner
+	Mesh: data/shipsets/moirai/civilian_miner.ogex
+
+Model: MoiraiCivilianFreighter
+	Mesh: data/shipsets/moirai/civilian_freighter.ogex
+
+Model: MoiraiCivilianColony
+	Mesh: data/shipsets/moirai/civilian_colony.ogex
+
+Model: MoiraiCivilianTractor
+	Mesh: data/shipsets/moirai/civilian_tractor.ogex

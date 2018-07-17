@@ -1,0 +1,11 @@
+Artifact: InvResearch
+	Name: #INV_ART_RESEARCH
+	Description: #INV_ART_RESEARCH_DESC
+
+	Frequency: 0
+	Tag: Invasion
+	
+	Ability: InvResearch
+	Ability: InvResearchPlus
+
+	AI: ActivateAsPressureBoost(4.0, 4)

@@ -1,0 +1,22 @@
+#define pi 3.141592653589793238462643383279
+#define twopi (pi * 2.0)
+varying vec2 rcoords;
+uniform float progress;
+
+const float maxRad = 0.8;
+const float minRad = 0.4;
+
+void main() {
+	float r = length(rcoords);
+	if(r < minRad || r > maxRad)
+		discard;
+	float ang = (atan(rcoords.y, rcoords.x) + pi) / twopi;
+	if(ang > progress)
+		discard;
+
+	float alpha = abs(r - (minRad + (maxRad - minRad) / 2.0));
+	alpha /= (maxRad - minRad);
+	alpha = 1.0 - alpha;
+	gl_FragColor.rgb = gl_Color.rgb;
+	gl_FragColor.a = alpha;
+}

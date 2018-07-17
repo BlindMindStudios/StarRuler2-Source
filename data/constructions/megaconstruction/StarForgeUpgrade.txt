@@ -1,0 +1,15 @@
+Construction: StarForgeUpgrade
+	Name: #CONS_STARFORGE_UPGRADE
+	Description: #CONS_STARFORGE_UPGRADE_DESC
+
+	Category: Infrastructure
+
+	OnStart(AddStatus(StarForgeUpgrade))
+	OnCancel(RemoveStatusInstance(StarForgeUpgrade))
+
+	ConsumeCargoStatusCount(Ore, StarForgeUpgrade, 1000, Allow Cancel = True)
+	AddBuildCostStatusCount(StarForgeUpgrade, 400)
+	AddLaborCostStatusCount(StarForgeUpgrade, 50)
+
+	RequireStatus(StarForge)
+	AddStatus(StarForge)

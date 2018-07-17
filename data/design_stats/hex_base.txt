@@ -1,0 +1,20 @@
+HexStat: HP
+	Name: #S_HexHP
+	Icon: AttributeIcons::6
+	Color: #80ff80
+
+	Variable: Hex.HP
+
+HexStat: DamageResist
+	Name: #S_DR
+	Color: #c6c33a
+	Icon: HexagonSubsystems::0
+
+	Variable: Hex.DamageResist
+
+HexStat: Mass
+	Name: #S_MASS
+	Icon: DesignationIcons::16
+	Color: #aaaaaa
+
+	Variable: Hex.Mass

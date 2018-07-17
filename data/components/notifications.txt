@@ -1,0 +1,20 @@
+Empire.Notifications : components.Notifications::Notifications {
+restricted local:
+	uint get_notificationCount() const;
+	Notification@[] getNotifications(uint limit, int beforeId = -1, bool reverse = true) const;
+server:
+	void notifyVote(int voteId, int eventId);
+	void notifyWarStatus(Empire@ withEmpire, uint type);
+	void notifyWarEvent(Object@ forObject, uint type);
+	void notifyRename(Object@ forObject, string fromName, string toName);
+	void notifyAnomaly(Object@ forObject);
+	void notifyFlagship(Object@ forObject);
+	void notifyStructure(Object@ atObject, uint type);
+	void notifyEmpireMet(Object@ atObject, Empire@ empire, bool gainsBonus = false);
+	void notifyGeneric(string title, string desc, string icon = "", Empire@ fromEmp = null, Object@ forObject = null);
+	void notifyTreaty(uint treatyId, uint eventType, Empire@ empOne = null, Empire@ empTwo = null);
+	void writeNotifications(Message& msg, bool delta);
+
+shadow:
+	void readNotifications(Message& msg, bool delta);
+}

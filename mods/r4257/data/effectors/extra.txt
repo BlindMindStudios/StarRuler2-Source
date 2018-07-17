@@ -1,0 +1,31 @@
+Effector: PurpleLaser
+	Value: Range
+	Value: DPS
+	Value: Duration
+	Value: Cooldown
+	Value: Tracking
+	Value: SupplyCost = 0
+
+	Range: Range
+	Lifetime: Duration
+	Tracking: Tracking
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isAttackable && !isPlanet
+	AutoTarget: isEnemy && (isShip || (isOrbital || isColonyShip || isCivilian) * 0.5)
+
+	EfficiencyMode: Duration Partial
+	Activation: VariableTimed(Cooldown+Duration, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	PhysicalType: Beam
+		GfxSize: 0.4
+		FirePitchVariance: 0.06
+		FireSfx: laser_fire
+		Material: Laser
+		ImpactGfx: ImpactFlareHyperLaserViolet
+		TrailCol: ff00ffff, ff00ffff
+
+	Effect: EnergyDamage
+		Amount = DPS
+

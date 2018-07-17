@@ -1,0 +1,15 @@
+Technology: BldMegacity
+	Name: #R_BLD_MEGACITY
+	Description: #R_BLD_MEGACITY_DESC:16
+	Class: Unlock
+
+	Point Cost: 600
+	Time Cost: 100
+
+	Icon: Megacity
+	Color: #00f3ff
+	
+	UnlockTag(MegacityUnlock)
+	SkipOnUnlockedTag(MegacityUnlock)
+
+	SecondaryInfluenceCost(16)

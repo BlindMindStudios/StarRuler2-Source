@@ -1,0 +1,17 @@
+uniform float tOffset;
+uniform float time[2];
+uniform vec4 color;
+const float twopi = 6.2828;
+const float range = 0.25;
+
+varying vec2 uv;
+
+void main() {
+	uv = gl_MultiTexCoord0.xy;
+	gl_Position = ftransform();
+	
+	vec4 col = color * ((1.0 - range) + range * sin((time[0] + tOffset) * twopi) * cos((time[1] + tOffset) * twopi));
+	
+	gl_FrontColor = col;
+	gl_BackColor = col;
+}

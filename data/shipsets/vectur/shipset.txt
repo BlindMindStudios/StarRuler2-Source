@@ -1,0 +1,36 @@
+Shipset: Vectur
+	Name: Vectur
+	DLC: Heralds
+
+	Hull: VecturFlagHuge
+	Hull: VecturFlagVeryLarge
+	Hull: VecturFlagLarge
+	Hull: VecturFlagMedium
+	Hull: VecturFlagTiny
+	Hull: VecturHuge
+	Hull: VecturLarge
+	Hull: VecturMedium
+	Hull: VecturSmall
+	Hull: VecturTiny
+	Hull: VecturStation
+	Hull: VecturSatellite
+
+	Skin: Miner
+		Model: VecturCivilianMiner
+		Material: VecturGenericPBR
+
+	Skin: Missionary
+		Model: VecturCivilianMissionary
+		Material: VecturGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: VecturCivilianFreighter
+		Material: VecturGenericPBR
+
+	Skin: Colonizer
+		Model: VecturCivilianColony
+		Material: VecturGenericPBR
+
+	Skin: Tractor
+		Model: VecturCivilianTractor
+		Material: VecturGenericPBR

@@ -1,0 +1,27 @@
+Building: Spire
+	Name: #BLD_SPIRE
+	Description: #BLD_SPIRE_DESC
+	Sprite: Spire
+
+	Category: Infrastructure
+
+	Size: 3x10
+
+	Base Cost: 1000
+	Build Time: 180
+
+	RequireUnlockTag(SpireUnlock)
+	ConstructibleIfAttribute(ForbidCityConstruction, 0)
+
+	ReplacesCities(20)
+
+	ConsumeCargo(Ore, 2500)
+
+	ModExistingPressure(Money, +3)
+	ModExistingPressure(Labor, +3)
+	ModExistingPressure(Research, +3)
+	ModExistingPressure(Influence, +3)
+	ModExistingPressure(Defense, +3)
+	ModExistingPressure(Energy, +3)
+
+	AddPlanetGfxFlag(SpaceElevator)

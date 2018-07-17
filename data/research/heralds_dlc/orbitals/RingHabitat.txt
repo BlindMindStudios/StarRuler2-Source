@@ -1,0 +1,14 @@
+Technology: RingHabitat
+	Name: #R_ORB_RING_HABITAT
+	Description: #R_ORB_RING_HABITAT_DESC
+	Class: Unlock
+	Category: Orbitals
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: GuiOrbitalIcons::11
+	Color: #ffdc40
+	
+	UnlockTag(RingHabitatUnlock)
+	SkipOnUnlockedTag(RingHabitatUnlock)

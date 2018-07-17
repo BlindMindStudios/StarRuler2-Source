@@ -1,0 +1,10 @@
+Building: LaunchPad
+	Name: #BLD_LAUNCHPAD
+	Description: #BLD_LAUNCHPAD_DESC
+	Sprite: BuildingSprites::13
+
+	Civilian: True
+	Upgrades From: Base
+
+	Saturation: 2 Defense
+	Production: 1.5 Defense

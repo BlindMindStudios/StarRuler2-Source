@@ -1,0 +1,14 @@
+Trait: Paranoid
+	Name: #TRAIT_PARANOID
+	Description: #TRAIT_PARANOID_DESC
+	Category: Personality
+	Order: 5
+
+	Conflict: Charismatic
+
+	Color: #ffaaaa
+	Icon: ThumbsDown
+
+	Gives Points: 1
+
+	ModAttribute(ExtraInfluenceBuyCost, Add, +1.0)

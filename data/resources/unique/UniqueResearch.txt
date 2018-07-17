@@ -1,0 +1,17 @@
+Resource: UniqueResearch
+	Name: #UNIQUE_RESEARCH
+	Description: #UNIQUE_RESEARCH_DESC
+	Native Biome: Volcanic
+
+
+	Icon: ResourceIconsSmall::56
+	Small Icon: ResourceIconsSmall::56
+
+	Level: 0
+
+	Rarity: Unique
+	Require Contestation: 60
+
+	Affinity: Research
+
+	Pressure: 10 Research

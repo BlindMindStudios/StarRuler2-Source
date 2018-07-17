@@ -1,0 +1,12 @@
+Biome: Forest
+	Name: #BIOME_FOREST
+	
+	Temperature: 0.6
+	Humidity: 0.6
+	
+	Frequency: 10
+	
+	Color: #488349
+
+	Picks: 0.5, 0.5
+	Lookup Range: 0.65

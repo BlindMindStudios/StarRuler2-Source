@@ -1,0 +1,23 @@
+Ability: MechanoidColonize
+	Name: #ABL_MECHANOID_COLONIZE
+	Description: #ABL_MECHANOID_COLONIZE_DESC
+	Icon: ActionBarIcons::1
+	Hotkey: C
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterNotQuarantined(targ)
+	TargetFilterNotSelf(targ)
+	RequireNotUnderSiege()
+	RequirePopulation(1)
+	ForClient(Either(TargetFilterSpace(targ), TargetFilterOwned(targ)))
+
+	TriggerIfOwnedOrSpace(targ, TakeControl())
+	TriggerIfOwnedOrSpace(targ, GivePopulation(1))
+
+	IfTargetOwnedOrSpace(targ, LosePopulation(1))
+	Trigger(targ, GiveMemory())
+
+	ConsumeDistanceFTL(targ, Base Cost = 20, Distance Cost = 0.002, Path Distance = True)
+
+	AutoCastAsColonizePopTransfer()

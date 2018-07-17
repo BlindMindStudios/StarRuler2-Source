@@ -1,0 +1,11 @@
+Status: ReverentOvercharge
+	Name: #STATUS_REVERENT_OVERCHARGE
+	Description: #STATUS_REVERENT_OVERCHARGE_DESC
+	Icon: AttributeIcons::1 * #00b3ff
+
+	ModSupplyConsumeFactor(-1.0)
+	AddFleetEffectiveness(0.25)
+
+	AddBonusHP(1.0)
+	AddBonusShield(Percentage = 1.0)
+	AddSupportBonusHP(1.0)

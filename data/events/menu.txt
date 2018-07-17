@@ -1,0 +1,5 @@
+void changeEmpireSettings(EmpireSettings@ settings) -> menu_server::new_game::changeEmpireSettings_client
+void menuChat(string text) -> menu_server::new_game::chatMessage
+void recvMenuChat(string text) -> menu_client::new_game::chatMessage_client
+void recvMenuJoin(string text) -> menu_client::new_game::chatJoin_client
+void recvMenuLeave(string text) -> menu_client::new_game::chatLeave_client

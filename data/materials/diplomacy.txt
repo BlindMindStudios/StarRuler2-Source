@@ -1,0 +1,89 @@
+Material: SenateBG
+	Inherit: Image2D
+	Texture: data/images/diplomacy_senatebg.png
+
+Material: ThumbsUp
+	Inherit: Image2D
+	Texture: data/images/thumb_icon.png
+
+Material: ThumbsDown
+	Inherit: Image2D
+	Texture: data/images/thumb_down_icon.png
+
+Material: StatusPeace
+	Inherit: Image2D
+	Texture: data/images/status_allied.png
+
+Material: StatusWar
+	Inherit: Image2D
+	Texture: data/images/status_atwar.png
+
+Material: StatusCeaseFire
+	Inherit: Image2D
+	Texture: data/images/status_ceasefire.png
+
+Material: LeaderIcon
+	Inherit: Image2D
+	Texture: data/images/senate_leader.png
+
+Material: SupportIcon
+	Inherit: Image2D
+	Texture: data/images/icon_support.png
+
+Material: SupportYeaIcon
+	Inherit: Image2D
+	Texture: data/images/icon_support_yea.png
+
+Material: SupportNayIcon
+	Inherit: Image2D
+	Texture: data/images/icon_support_nay.png
+
+Material: PointsIcon
+	Inherit: Image2D
+	Texture: data/images/icon_points.png
+
+Material: DownIcon
+	Inherit: Image2D
+	Texture: data/images/icon_down.png
+
+Material: PoliticalStrengthIcon
+	Inherit: Image2D
+	Texture: data/images/diplomacy_political.png
+
+Material: MilitaryStrengthIcon
+	Inherit: Image2D
+	Texture: data/images/diplomacy_military.png
+
+Material: TerritoryStrengthIcon
+	Inherit: Image2D
+	Texture: data/images/diplomacy_territory.png
+
+SpriteSheet: ActionCard
+	Inherit: Image2D
+	Size: 207,137
+	Mode: Vertical
+	Texture: data/images/action_overlay.png
+
+SpriteSheet: CardIcons
+	Inherit: Image2D
+	Size: 160,100
+	Spacing: 1
+	Texture: data/images/card_sheet.png
+
+SpriteSheet: CardCategoryIcons
+	Inherit: Image2D
+	Size: 39, 39
+	LoadPriority: Menu
+	Texture: data/images/card_sheet_category.png
+
+Material: MaskNeutral
+	Inherit: Image2D
+	Texture: data/images/mask_neutral.png
+
+Material: MaskHappy
+	Inherit: Image2D
+	Texture: data/images/mask_happy.png
+
+Material: MaskAngry
+	Inherit: Image2D
+	Texture: data/images/mask_angry.png

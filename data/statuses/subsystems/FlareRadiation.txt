@@ -1,0 +1,11 @@
+Status: FlareRadiation
+	Name: #STATUS_FLARE_RADIATION
+	Description: #STATUS_FLARE_RADIATION_DESC
+
+	Icon: MissileLauncher::0 * #e45500
+	Color: #e45500
+
+	ApplyToPlanets()
+
+	IfNotHaveTrait(Mechanoid, OnEnable(AbandonPlanet()))
+	MakeQuarantined()

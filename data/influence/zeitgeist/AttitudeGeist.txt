@@ -1,0 +1,43 @@
+Card: AttitudeGeist
+	Name: #ZEITGEIST_ATTITUDES
+	Description: #ZEITGEIST_ATTITUDES_DESC
+
+	Color: #ff33a0
+	Icon: CardIcons::43
+	DLC: Heralds
+
+	Class: Event
+	Rarity: Epic
+
+	StartVote(AttitudeGeist)
+
+Vote: AttitudeGeist
+	Name: #ZEITGEIST_ATTITUDES
+	Description: #ZEITGEIST_ATTITUDES_DESC
+
+	Color: #ff33a0
+	Icon: CardIcons::43
+
+	AddStartWeight(+1)
+
+	OnOwner(DismissTaggedEffects(Zeitgeist))
+
+	CreateEffect(Pass, AttitudeGeist, Give To Contributor = True)
+	TriggerLowestContributor(AddPermanentIncome(100), Fail, Require Negative = True)
+
+	EmpireStartWeightAttribute(ZeitgeistStartSupport)
+
+	AI: ZeitgeistVote()
+
+Effect: AttitudeGeist
+	Name: #ZEITGEIST_ATTITUDES
+	Description: #ZEITGEIST_ATTITUDES_DESC
+
+	Tag: Zeitgeist
+	Dismissable: False
+
+	Color: #ff33a0
+	Icon: CardIcons::43
+
+	ModEmpireAttribute(ResearchCostFactor, Multiply, 0.9)
+	OnAllEmpires(ModEmpireAttribute(AttitudeProgressFactor, Multiply, 1.30))

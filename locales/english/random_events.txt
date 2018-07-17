@@ -1,0 +1,80 @@
+EVT_REACTOR: A Reactor
+EVT_REACTOR_TEXT: <<
+	An exploration team on [target=Location/] has discovered an ancient remnant reactor, buried under many years of dirt and overgrown by native plants.
+
+	The reactor was constructed to siphon incredible amounts of energy directly from subspace, but was deactivated and abandoned by the remnants after merely one trial, for reasons unknown.
+	
+	One of your scientists believes he can override the system's safety protocols and reactivate the reactor, while shielding the complex from the exotic particles and radiation produced by it.
+>>
+EVT_REACTOR_ACTIVATE: Allow your scientist to override the security protocols and activate the reactor.
+EVT_REACTOR_IGNORE: Ignore the reactor and leave well enough alone - the security protocols are there for a reason.
+EVT_REACTOR_SUCCESS: <<
+	The reactivation was a success! The planet is now capable of producing vast amounts of energy when provided the right infrastructure.
+
+	The planet now has [b]+2 energy production[/b] as well as [b]+10 energy pressure[/b].
+>>
+EVT_REACTOR_FAILURE: <<
+	Insufficient isolation for the exotic particles released by the reaction has caused a catastrophic systems meltdown!
+
+	Truly astronomical amounts of energy are being emitted uncontrollably, causing the near-simultaneous detonation of five sixths of all matter in the solar system it was in.
+
+	Your team of scientists count as only few of many millions of your dead citizens. You hope it will spur future scientists to be a little more careful with remnant technology, next time.
+>>
+STATUS_EVT_REACTOR: Remnant Reactor
+STATUS_EVT_REACTOR_DESC: <<
+	A remnant reactor was succesfully activated on this planet, giving it [b]+2 energy production[/b] as well as [b]+10 energy pressure[/b].
+>>
+
+EVT_CLIQUE: A Mechanical Town
+EVT_CLIQUE_TEXT: <<
+	The seismic detectors on [target=Location/] located a strange phenomenon at a nondescript point on the surface. Examining the site, the team sent finds a tiny hyperspace exit. A single [target=race;Other/] managed to make it through before the exit collapses.
+
+	The lone mechanoid citizen of the [target=Other/] asks for an audience:
+
+	[offset=20][color=#aaa]Efforts of the [targer=Other/] to discover purpose deemed insufficient.
+	Purpose: Build more units to establish new [target=race;Other/] clique.
+	FTL device damaged in long jump.
+	Request for aid and shelter. Exchange for our labor.[/color][/offset]
+>>
+EVT_CLIQUE_ALLOW: <<
+	Allow the [target=race;Other/] to establish a new community on [target=Location/], making sure to make clear your position on the maximum amount of extra mechanoid units you will allow it to build.
+>>
+EVT_CLIQUE_SUCCESS: <<
+	The small community has flourished and integrated nicely into your regular industry on the planet. The mechanoids seem peaceful enough, using any left over processing time to analyze stellar telemetry in an effort to discover something about their race.
+
+	The planet now has [b]+5 Labor per minute[/b], and [b]Imperial Building construction speed +100%[/b].
+>>
+EVT_CLIQUE_FAILURE: <<
+	The lone unit unit quickly starts constructing more and more units, mining the planet's metal deposits and multiplying exponentially, far beyond the small limit you set for its community.
+
+	[offset=20][color=#aaa]More mechanoid are needed. Processing power must be raised to discover purpose.[/color][/offset]
+
+	All attempts to convince them to stop have failed, and with no other options remaining your troops engage them in a bloody ground war. Many civilians are killed, but eventually all the mechanoid invaders are successfully destroyed.
+>>
+EVT_CLIQUE_STUDY: <<
+	Kill and dissect the [target=race;Other/], studying its parts and trying to divine how its miniaturization technology works.
+>>
+EVT_CLIQUE_STUDY_R: <<
+	You kill and dissect the stray unit, but most of its internal parts are too damaged to operate correctly. You glean some small amount of research from the ones that aren't.
+>>
+EVT_CLIQUE_STUDY_F: <<
+	You kill and dissect the stray unit, finding an FTL Energy storage device many times smaller and denser than your own. You study the principles that allow it to contain so much FTL without leaking any into the surroundings, and in the process expand your own capacity.
+
+	Gained [b]+200 FTL Storage[/b].
+>>
+EVT_CLIQUE_RETURN: <<
+	Contain the unit and forcibly ship it back to its origin empire, the [target=Other/], explaining that it was malfunctioning and you are happy to return it to its intended place.
+>>
+EVT_CLIQUE_RETURN_R: <<
+	You return the malfunctioning unit to its original empire, who send a brief message in response.
+
+	[offset=20][color=#aaa]Gratitude. Unit will be repaired and returned to place.[/color][/offset]
+
+	Gained [b]+5 Influence[/b].
+>>
+STATUS_EVT_CLIQUE: Mechanoid Clique
+STATUS_EVT_CLIQUE_DESC: <<
+	A small community of mechanoid population from another empire lives here.
+
+	The planet has [b]+5 Labor per minute[/b], and [b]Imperial Building construction speed +100%[/b].
+>>

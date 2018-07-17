@@ -1,0 +1,25 @@
+Module: FTLJammer
+	Name: #ORB_FTL_JAMMER
+	Blurb: #ORB_FTL_JAMMER_BLURB
+	Description: #ORB_FTL_JAMMER_DESC
+	Icon: OrbitalIcons::9
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 500
+	Maintenance: 50
+	Labor Cost: 20
+
+	Health: 5000
+	Armor: 2500
+
+	Model: FTLJammer
+	Material: GenericPBR_Jammer
+
+	Strategic Icon: OrbitalIcons::9
+
+	IfNotFTLShortage(BlockSystemFTL())
+	FTLMaintenance(0.15)
+
+	IfAttributeGTE(FTLJammerCombat, 1, AddRegionStatusEnemies(FTLJammerCombat)) #version>=147

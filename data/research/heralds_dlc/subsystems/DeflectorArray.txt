@@ -1,0 +1,19 @@
+Technology: DeflectorArray
+	Name: #R_SYS_DEFLECTOR_ARRAY
+	Description: #R_SYS_DEFLECTOR_ARRAY_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: ShieldCap2
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: Dish
+	Color: #348c99
+	
+	UnlockSubsystem(DeflectorArray)
+	SkipOnUnlockedSubsystem(DeflectorArray)
+
+	SecondaryEnergyCost(1500)

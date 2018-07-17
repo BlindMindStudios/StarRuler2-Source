@@ -1,0 +1,113 @@
+#version 120
+const int nLightCount = 2;
+
+//Amount of population considered 'half full'
+const float basePopulation = 3.0;
+
+const float distortDist = 5.0 / 2048.0;
+const float baseSpec = 0.5;
+
+uniform sampler2D diffuseTex, glowTex, normalRGBspecA, cities, diffNoise;
+uniform float[4] uvOffsets;
+uniform float population;
+uniform vec3 glowGradient[2];
+
+varying vec3 normal, binormal, tangent;
+varying vec3 npos;
+varying vec2 uv;
+
+vec3 light[nLightCount];
+float dist[nLightCount];
+
+vec2 nightLights(vec3 incidentLight, float devLevel) {
+	float brightness = clamp(max(incidentLight.r, max(incidentLight.g, incidentLight.b)) * 0.9, 0.0, 1.0);
+	brightness /= 0.4;
+
+	float popDensity = population / (population + basePopulation);
+	float city = texture2D(cities, uv).r;
+	float buildup = clamp((popDensity - (1.0 - devLevel)) * 2.0, 0.0, 1.0);
+	
+	float lightFactor = sqrt(max(popDensity, 0.4));
+	
+	return vec2(lightFactor * max(1.0 - brightness, 0.0) * buildup, max(buildup - 0.5, 0.0) * 2.0) * city;
+}
+
+void main() {
+	vec3 color = gl_FrontMaterial.diffuse.rgb;
+	
+	vec3 diffuseSamp = texture2D(diffuseTex, uv).rgb;
+	float glow = texture2D(glowTex, uv).r;
+	vec4 normSpec = texture2D(normalRGBspecA, uv);
+	float cityLevel = texture2D(cities, uv).g;
+	
+	vec3 mapNorm = normSpec.xyz - vec3(0.5);
+	float gloss = (length(mapNorm) - 0.25) / 0.25;
+	float shininess = gl_FrontMaterial.shininess * (gloss + baseSpec);
+
+	vec3 n = normalize(normal) * mapNorm.z;
+	n += normalize(binormal) * mapNorm.x;
+	n += normalize(tangent) * mapNorm.y;
+	n = normalize(n);
+	vec3 v = normalize(npos);
+
+	
+	if(nLightCount > 0) {
+		const int i = 0;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		light[i] = gl_LightSource[i].position.xyz + npos;
+		dist[i] = length(light[i]);
+		light[i] = light[i] / dist[i];
+	}
+	
+	vec3 ambient = gl_LightModel.ambient.rgb * gl_FrontMaterial.ambient.rgb;
+	vec3 diffuse = vec3(0.0);
+	vec3 specular = vec3(0.0);
+	if(nLightCount > 0) {
+		const int i = 0;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		specular += gl_LightSource[i].specular.rgb * (pow(max(0.0, dot(r, v)), shininess) * intensity);
+	}
+	if(nLightCount > 1) {
+		const int i = 1;
+		float falloff = 1.0 / (1.0 + (gl_LightSource[i].quadraticAttenuation * dist[i] * dist[i]));
+		float intensity = max(0.0, dot(n, light[i])) * falloff;
+		
+		diffuse += gl_LightSource[i].diffuse.rgb * intensity;
+		
+		vec3 r = -reflect(light[i], n);
+		specular += gl_LightSource[i].specular.rgb * (pow(max(0.0, dot(r, v)), shininess) * intensity);
+	}
+	specular *= gl_FrontMaterial.specular.rgb * (0.5 + gloss);
+	
+	vec2 cityState = nightLights(diffuse, cityLevel);
+	vec3 surfaceMix = ((diffuse + ambient) * color * mix(diffuseSamp.rgb, vec3(0.5), cityState.y));
+	surfaceMix += specular;
+	
+	if(glow > 0.01) {
+		vec2 noiseCoord = uv * 4.0;
+		vec2 noise2Coord = noiseCoord + vec2( uvOffsets[2] * -1.0, uvOffsets[3] );
+		noiseCoord += vec2( uvOffsets[0], uvOffsets[1] );
+		
+		noiseCoord.y = mod(noiseCoord.y, 1.0);
+		noise2Coord.y = mod(noise2Coord.y, 1.0);
+		
+		glow *= (0.85 + (texture2D(diffNoise, noiseCoord).b * 0.42)) * (0.85 + (texture2D(diffNoise, noise2Coord).r * 0.32));
+		
+		gl_FragColor.rgb = surfaceMix + (glow * mix(glowGradient[0], glowGradient[1], glow)) + smoothstep(0.1,0.0,glow) * cityState.x * vec3(1.0,0.9,0.55);
+	}
+	else {
+		gl_FragColor.rgb = surfaceMix + cityState.x * vec3(1.0,0.9,0.55);
+	}
+	
+	gl_FragColor.a = 1.0;
+}

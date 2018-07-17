@@ -1,0 +1,4 @@
+Status: FleetLinked
+	Visible To: Nobody
+
+	ModEfficiencyDistanceToOrbital(Mainframe, +0.75, -0.5, 0, 25000)

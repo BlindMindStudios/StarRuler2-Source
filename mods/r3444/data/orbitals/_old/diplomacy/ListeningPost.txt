@@ -1,0 +1,12 @@
+Module: ListeningPost
+	Name: #ORB_LISTENING_POST
+	Blurb: #ORB_LISTENING_POST_BLURB
+	Description: #ORB_LISTENING_POST_DESC
+	Icon: CardIcons::5
+	Standalone: False
+	Core: False
+
+	Require Affinity: 1 Influence
+	Build Cost: 150
+
+	PeriodicNearbyIntelligence(Timer = 60)

@@ -1,0 +1,30 @@
+Card: Bribe
+	Name: #CARD_BRIBE
+	Description: #CARD_BRIBE_DESC
+
+	Icon: CardIcons::3
+
+	Color: #3893a8
+
+	Class: Support
+	Rarity: Uncommon
+	Side: Both
+	Frequency: 0
+
+	Max Quality: 4
+	Max Uses: 3
+
+	Base Purchase Cost: 1
+	Uses Purchase Cost: 1
+
+	Base Play Cost: 1
+
+	Base Weight: 0
+
+	LogVoteEvent(Support = #CARD_BRIBE_LOG_Y, Oppose = #CARD_BRIBE_LOG_N, MoneyArgument = 300, MoneyArgumentQuality = 100)
+
+	PlayMoneyCost(300, Per Quality = 100)
+	AddWeightToNextSupport(VoteSide, 2, Per Quality = 1.5)
+	GiveMoneyToNextSupport(VoteSide, 300, Per Quality = 100)
+
+	AI: VoteSupport()

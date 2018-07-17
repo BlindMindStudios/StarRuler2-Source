@@ -1,0 +1,61 @@
+Card: GalacticSuperpower
+	Name: #GALACTIC_SUPERPOWER
+	Description: #GALACTIC_SUPERPOWER_DESC
+
+	Color: #ff4f00
+	Class: Vote
+
+	Leader Only: True
+	DLC: Heralds
+
+	Rarity: Epic
+	Frequency: 0
+
+	Icon: CardIcons::49
+
+	Base Play Cost: 25
+
+	ShowUpkeep(0.25)
+	StartVote(GalacticSuperpower)
+
+	RequireAttributeLT(IsGalacticSuperpower, 1)
+	RequireAttributeGTE(SenatorialPalaceConstructed, 1)
+
+	AI: PlayWhenInfluenceStronk()
+
+Vote: GalacticSuperpower
+	Name: #GALACTIC_SUPERPOWER
+	Description: #GALACTIC_SUPERPOWER_DESC
+	Color: #ff4f00
+
+	Icon: CardIcons::49
+
+	CreateEffect(Pass, GalacticSuperpower)
+
+	MultiplyPositiveSpeed(0.5)
+	AddPositiveCostPenalty(1)
+
+	CancelIfNotLeader()
+	CancelIfAttributeLT(SenatorialPalaceConstructed, 1)
+
+	AI: Important(10)
+
+Effect: GalacticSuperpower
+	Name: #GALACTIC_SUPERPOWER
+	Description: #GALACTIC_SUPERPOWER_DESC
+	Color: #ff4f00
+
+	Icon: CardIcons::49
+
+	Upkeep: 0.25
+	Dismissable: False
+
+	ModEmpireAttribute(IsGalacticSuperpower, Add, 1)
+
+	CancelIfNotLeader()
+	CancelIfAttributeLT(SenatorialPalaceConstructed, 1)
+
+	OnFriendlyEmpires(EnableModifier( BuildCostFactor(0.75) ))
+	OnFriendlyEmpires(EnableModifier( LaborCostFactor(0.75) ))
+
+	GiveVisionCombatSystems()

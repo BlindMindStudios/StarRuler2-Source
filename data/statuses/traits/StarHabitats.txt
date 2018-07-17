@@ -1,0 +1,18 @@
+Status: StarHabitats
+	Name: #STATUS_STAR_HABITATS
+	Description: #STATUS_STAR_HABITATS_DESC
+	Icon: ResourceIcon::8
+	Collapses: True
+
+	AbandonOnDisableIfSameOrigin()
+	ForcePopulationToStacks()
+
+	ProduceAllPressure(Labor)
+	ProduceAllPressure(Money)
+	ProduceAllPressure(Research)
+	ProduceAllPressure(Energy)
+	ProduceAllPressure(Defense)
+	ProduceAllPressure(Influence)
+
+	CannotUseLabor()
+	ForbidLaborExport()

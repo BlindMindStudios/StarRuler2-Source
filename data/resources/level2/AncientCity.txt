@@ -1,0 +1,15 @@
+Resource: AncientCity
+	Name: #ANCIENT_CITY
+	Description: #ANCIENT_CITY_DESC
+	Native Biome: Mountains
+
+	Icon: ResourceIcons::38
+	Small Icon: ResourceIconsSmall::38
+
+	Level: 2
+	Rarity: Uncommon
+	Exportable: False
+	Affinity: Influence + Research
+
+	Pressure: 8 Influence
+	Pressure: 2 Research

@@ -1,0 +1,9 @@
+Status: DefenseSatellite
+	Visible To: Nobody
+
+	AddFleetEffectiveness(+1.0)
+	AddSupportBonusHP(+1.0)
+	AddFleetCommand(+256)
+
+	AllowFreeRaiding()
+	AddRaidRange(-10000000) //Negative range resolves to "in the current system"

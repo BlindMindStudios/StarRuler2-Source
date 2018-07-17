@@ -1,0 +1,90 @@
+#version 120
+#define pi 3.141592653589793238462643383279
+#define twopi (pi * 2.0)
+varying vec2 uv, uv1, uv2;
+uniform sampler2D textures[4];
+uniform vec4 sprite1;
+uniform vec4 sprite2;
+uniform float fade;
+uniform float isDisabled;
+uniform float isUsed;
+uniform float isExported;
+uniform float isColonizing;
+uniform float isOwned;
+uniform float isDecaying;
+uniform float classIcon;
+uniform vec4 captureColor;
+uniform float capturePct;
+uniform vec4 disableColor;
+
+const float w = 128.0;
+const float h = 256.0;
+const float modRatio = 26.0/21.0;
+const float modShift = 0.09;
+const float row = 4.0;
+const vec4 disabled_icon = vec4(28.0/w, 81.0/h, 55.0/w, 110.0/h);
+const vec4 unused_icon = vec4(83.0/w, 2.0/h, 108.0/w, 27.0/h);
+const vec4 decay_icon = vec4(29.0/w, 56.0/h, 54.0/w, 81.0/h);
+const vec4 exported_icon = vec4(29.0/w, 2.0/h, 54.0/w, 27.0/h);
+const vec4 colonizing_icon = vec4(2.0/w, 56.0/h, 29.0/w, 81.0/h);
+const vec4 class_icon = vec4(2.0/w, 29.0/h, 27.0/w, 54.0/h);
+const vec2 class_offset = vec2(27.0/w, 27.0/h);
+
+void main() {
+	vec4 result = texture2D(textures[0],uv);
+
+	vec2 uv3 = (uv2 / modRatio) + vec2(modShift);
+	vec4 disIcon = texture2D(textures[3], mix(disabled_icon.xy, disabled_icon.zw, uv1)) * disableColor;
+	vec4 uIcon = texture2D(textures[3], mix(unused_icon.xy, unused_icon.zw, uv3));
+	vec4 dIcon = texture2D(textures[3], mix(decay_icon.xy, decay_icon.zw, uv3));
+	vec4 expIcon = texture2D(textures[3], mix(exported_icon.xy, exported_icon.zw, uv3));
+	vec2 classOff = vec2(class_offset.x * mod(classIcon - 4.0, row), class_offset.y * floor((classIcon - 4.0)/row));
+	vec4 clsIcon = texture2D(textures[3], mix(class_icon.xy+classOff, class_icon.zw+classOff, uv3));
+	vec4 colIcon = texture2D(textures[3], mix(colonizing_icon.xy, colonizing_icon.zw, uv3-vec2(-0.4, -0.4)));
+	
+	result.rgb *= gl_Color.rgb;
+
+	//Base of black transparent if unowned
+	result *= isOwned;
+
+	vec4 icon1 = texture2D(textures[1], mix(sprite1.xy, sprite1.zw, uv1));
+
+	icon1.rgb = (fade * icon1.rgb) + ((1.0 - fade) * gl_Color.rgb);
+	if(all(bvec4( greaterThanEqual(uv1, vec2(0.0)), lessThanEqual(uv1, vec2(1.0))))) {
+		result = mix( result, vec4(icon1.rgb, 1.0), icon1.a );
+		result = mix( result, vec4(disIcon.rgb, 1.0), disIcon.a * fade * isDisabled );
+	}
+	
+	vec4 icon2 = texture2D(textures[2], mix(sprite2.xy, sprite2.zw, uv2));
+	if(all(bvec4( greaterThanEqual(uv2, vec2(0.0)), lessThanEqual(uv2, vec2(1.0))))) {
+		result = mix( result, vec4(icon2.rgb, 1.0), icon2.a * fade );
+	}
+	
+	if(all(bvec4( greaterThanEqual(uv3, vec2(0.0)), lessThanEqual(uv3, vec2(1.0))))) {
+		vec2 showCls = step(vec2(3.0, classIcon), vec2(classIcon, 20.0));
+		result = mix( result, vec4(clsIcon.rgb, 1.0), clsIcon.a * fade * showCls.x * showCls.y );
+		result = mix( result, vec4(dIcon.rgb, 1.0), dIcon.a * fade * isDecaying );
+		result = mix( result, vec4(uIcon.rgb, 1.0), uIcon.a * fade * (1.0 - isUsed) );
+		result = mix( result, vec4(expIcon.rgb, 1.0), expIcon.a * fade * isExported );
+	}
+
+	if(all(bvec4( greaterThanEqual(uv3, vec2(-0.4, -0.4)), lessThanEqual(uv3, vec2(0.6, 0.4))))) {
+		result = mix( result, vec4(colIcon.rgb, 1.0), colIcon.a * fade * isColonizing );
+	}
+
+	if(captureColor.a > 0.0) {
+		vec2 rcoords = (uv - vec2(0.5, 0.5)) * 2.0;
+		float radius = length(rcoords);
+		if(radius > 0.8 && radius < 1.0) {
+			float ang = (atan(rcoords.x, rcoords.y) + pi) / twopi;
+			if(ang < capturePct) {
+				/*float alpha = sqrt((radius - 0.8) * 5.0);*/
+				float alpha = 1.0 - (abs(radius - 0.9) * 11.0);
+				result = mix( result, vec4(captureColor.rgb, 1.0), alpha * captureColor.a);
+			}
+		}
+	}
+	
+	result.a *= gl_Color.a;
+	gl_FragColor = result;
+}

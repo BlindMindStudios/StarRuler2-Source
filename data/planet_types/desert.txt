@@ -1,0 +1,10 @@
+PlanetType: Desert
+	Icon: PlanetType::9
+	DistantIcon: DistantPlanetType::9
+	Atmosphere: DustyAtmosphere
+	
+	BiomeWeights:
+		Desert: 3
+		Ice: -1
+		Forest: -2
+		Oceanic: -4

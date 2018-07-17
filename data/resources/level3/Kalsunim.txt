@@ -1,0 +1,14 @@
+Resource: Kalsunim
+	Name: #KALSUNIM
+	Description: #KALSUNIM_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIconsSmall::48
+	Small Icon: ResourceIconsSmall::48
+
+	Level: 3
+	Affinity: Defense
+
+	Pressure: 16 Defense
+
+	PerIncomeAddResource(Labor, 0.2, Defense)

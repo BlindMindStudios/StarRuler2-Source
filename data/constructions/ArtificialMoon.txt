@@ -1,0 +1,20 @@
+Construction: ArtificialMoon
+	Name: #CONS_ARTIFICIAL_MOON
+	Description: #CONS_ARTIFICIAL_MOON_DESC
+
+	Category: Infrastructure
+
+	Build Cost: 750
+	Labor Cost: 50
+
+	RequirePlanet()
+	ConsumeCargo(Ore, 1000)
+
+	OnStart(AddStatus(ArtificialMoon))
+	OnCancel(RemoveStatusInstance(ArtificialMoon))
+	RequireNotStatus(ArtificialMoon)
+
+	RequireUnlockTag(ArtificialMoonUnlock)
+
+	AddSurfaceArea(Moon, (6, 10))
+	AddMoonGraphic(4)

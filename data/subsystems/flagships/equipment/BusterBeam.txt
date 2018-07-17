@@ -1,0 +1,22 @@
+Subsystem: BusterBeam
+	Name: #S_BUSTER_BEAM
+	Description: #S_BUSTER_BEAM_DESC
+	BaseColor: #e900ff
+	TypeColor: #e900ff
+	Elevation: 2
+	
+	Tags: BaseCost, Category:Equipment, HasInternals, ExteriorCore
+	Tags: Disabled, Ability:BusterBeam
+	Hull: Flagship
+	
+	Size := HexSize * Hexes
+	Hex.Mass := HexSize
+	
+	Hex.Resistance := 0.2
+	Hex.HP := 18 * HexSize
+
+	Requires:
+		Command = 1
+
+	Module: Core
+		Sprite: HexagonSubsystems::6 * #e900ff

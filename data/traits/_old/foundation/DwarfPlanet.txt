@@ -1,0 +1,11 @@
+//Trait: Dwarf Planet
+//	Name: #TRAIT_DWARF_PLANET
+//	Description: #TRAIT_DWARF_PLANET_DESC
+//	Category: Foundation
+//	
+//	Conflict: Enormous Planet
+//
+//	Color: #aaffaa
+//	Icon: DwarfPlanet
+//
+//	Gives Points: 1

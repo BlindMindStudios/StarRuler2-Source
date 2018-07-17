@@ -1,0 +1,20 @@
+varying vec2 uv;
+uniform float cycle;
+uniform float offset;
+uniform sampler2D texture, noise;
+
+void main() {
+	float y = 0.5 + (uv.y - 0.5) * 1.4 / (uv.x + 0.001);
+	y = clamp(y,0.0,1.0);
+
+	float sample = texture2D(texture,vec2((uv.x + cycle * 2.0) * 4.0, y)).r;
+	vec3 nSamp = texture2D(noise, vec2(cycle, y)).rgb;
+	
+	sample = pow((sample - 0.05) * 1.15, 1.4);
+	sample *= abs(mod(nSamp.r + nSamp.g, 1.0) - 0.5) * 2.0;
+	sample -= (nSamp.b + (uv.x - 0.95) * 20.0) * smoothstep(0.95, 1.0, uv.x);
+	sample *= smoothstep(0.0, 0.01, uv.x);
+
+	gl_FragColor.rgb = (vec3(sample) * gl_Color.rgb) * gl_Color.a;
+	gl_FragColor.a = 0.0;
+}

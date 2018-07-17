@@ -1,0 +1,46 @@
+Subsystem: HyperLaser
+	Name: Hyperdense Laser
+	Description: A brief laser with energy densities nearly high enough to spontaneously generate matter.
+	BaseColor: #f9394d
+	TypeColor: #f9394d
+	Picture: SubsystemButtonArt::7
+	Elevation: 2
+	
+	Tags: BaseCost
+	Tags: BeamBase, Rotatable, Category:Weapons
+	Tags: ExteriorCore, Weapon, IsBeamWeapon, HasInternals
+	Hull: Flagship, Station
+	
+	Size := HexSize * Hexes
+	BeamDPS := 15.0 * Size
+	Duration := 1.5
+	Cooldown := 6
+	Range := Size + 250
+	Tracking := 0.5
+	SupplyCost := Size * 4.5
+	
+	Hex.HP := 12 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+	
+	Requires:
+		Command = 1
+		Power = 10 * Size
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 2
+
+	Module: Core
+		Hex.HP := Hex.HP * 2
+		Hex.BuildCost := Hex.BuildCost * 5
+		Hex.Mass := Hex.Mass * 5
+		Sprite: HexagonSubsystems::6
+	
+	Effector: PurpleLaser
+		Range = Range
+		DPS = BeamDPS
+		Duration = Duration
+		Cooldown = Cooldown
+		Tracking = Tracking
+		SupplyCost = SupplyCost * Duration
+

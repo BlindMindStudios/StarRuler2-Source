@@ -1,0 +1,14 @@
+Resource: Deuterium
+	Name: #DEUTERIUM
+	Description: #DEUTERIUM_DESC
+	Native Biome: Ice
+
+	Icon: ResourceIcons::31
+	Small Icon: ResourceIconsSmall::31
+
+	Level: 1
+	Rarity: Uncommon
+	Affinity: Research + Defense
+
+	Pressure: 2 Research
+	Pressure: 2 Defense

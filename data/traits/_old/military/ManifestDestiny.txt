@@ -1,0 +1,13 @@
+Trait: Manifest Destiny
+	Name: #TRAIT_MANIFEST_DESTINY
+	Description: #TRAIT_MANIFEST_DESTINY_DESC
+
+	Category: Military
+
+	Costs Points: 1
+	Available: False
+	
+	Icon: StatusWar
+	Color: #aaffaa
+
+	ModAttribute(CaptureSupplyFactor, Multiply, 0.75)

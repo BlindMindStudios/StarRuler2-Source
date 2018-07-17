@@ -1,0 +1,15 @@
+Technology: FTLHurdle
+	Name: #R_FTL_HURDLE
+	Description: #R_FTL_HURDLE_DESC
+
+	Icon: ResourceIcon::3
+	Symbol: QuickbarIcons::3
+	Color: #ff0000
+
+	Category: Hurdles
+	Class: Boost
+
+	Point Cost: 0
+	Time Cost: 80
+
+	SecondaryFTLCost(500)

@@ -1,0 +1,19 @@
+Technology: BroadcastAntenna
+	Name: #R_SYS_BROADCAST_ANTENNA
+	Description: #R_SYS_BROADCAST_ANTENNA_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	DLC: Heralds
+	DLC Replace: Thrust
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: Antenna
+	Color: #f67bed
+	
+	UnlockSubsystem(BroadcastAntenna)
+	SkipOnUnlockedSubsystem(BroadcastAntenna)
+
+	SecondaryInfluenceCost(10)

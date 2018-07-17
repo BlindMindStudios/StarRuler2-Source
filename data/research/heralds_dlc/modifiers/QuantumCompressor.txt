@@ -1,0 +1,14 @@
+Technology: QuantumCompressor
+	Name: #R_MOD_QUANTUM_COMPRESSOR
+	Description: #R_MOD_QUANTUM_COMPRESSOR_DESC
+	Class: Unlock
+	Category: Modifiers
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Color: #69eaf2
+	Icon: QuantumCompressor
+	
+	UnlockModule(QuantumCompressor)
+	SkipOnUnlockedModule(QuantumCompressor)

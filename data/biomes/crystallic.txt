@@ -1,0 +1,13 @@
+Biome: Crystallic
+	Name: #BIOME_CRYSTALLIC
+	
+	Temperature: 0
+	Humidity: 0
+	IsCrystallic: True
+	
+	Frequency: 2
+	
+	Color: #FF00DF
+
+	Picks: 0.25, 0.0
+	Lookup Range: 0.99

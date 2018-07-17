@@ -1,0 +1,15 @@
+Ability: Enslave
+	Name: #ABL_ENSLAVE
+	Description: #ABL_ENSLAVE_DESC
+	Icon: CardIcons::14
+
+	Energy Cost: 200
+	Cooldown: 60
+
+	Target: targ = Object
+	TargetFilterOwned(targ)
+	TargetFilterType(targ, Planet)
+	TargetFilterNotStatus(targ, Enslaved)
+
+	Trigger(targ, AddStatus(Enslaved))
+	TriggerEffectOnce(targ, AddPlanetResource(SlaveLabor))

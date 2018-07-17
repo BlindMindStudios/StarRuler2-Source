@@ -1,0 +1,14 @@
+Trait: Pyromania
+	Name: #TRAIT_PYROMANIA
+	Description: #TRAIT_PYROMANIA_DESC
+
+	Category: Military
+
+	Costs Points: 1
+	Color: #aaffaa
+	Available: False
+	
+	Icon: StatusWar
+
+	AddModifier(tag/IsExplosiveWeapon::DamageFactor(1.25))
+	ModAttribute(FireDamageTakenFactor, Multiply, 2.0)

@@ -1,0 +1,15 @@
+Resource: Chemicals
+	Name: #CHEMICALS
+	Description: #CHEMICALS_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::11
+	Small Icon: ResourceIconsSmall::10
+
+	Level: 1
+	Affinity: Research
+
+	Terraform Cost: 500
+	Terraform Labor: 30
+
+	Pressure: 3 Research

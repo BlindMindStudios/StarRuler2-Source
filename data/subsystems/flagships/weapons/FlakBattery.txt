@@ -1,0 +1,69 @@
+Subsystem: FlakBattery
+	Name: #S_FLAK_BATTERY
+	Description: #S_FLAK_BATTERY_DESC
+	BaseColor: #41fdc1
+	TypeColor: #41fdc1
+	Elevation: 2
+
+	Tags: BaseCost, Category:Weapons
+	Tags: WeaponBase, Rotatable
+	Tags: ExteriorCore, Weapon, IsProjWeapon, IsRailgun, HasInternals, SecondaryDPS
+	Tags: IgnoreRange
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+	Range := (ShipSize^(1.0/2.5) * 10 + 20) * 3.5
+
+	Damage := Size * 4.0
+	Reload := 0.3
+
+	Speed := Range
+	Spread := 0
+
+	Tracking := 0.6
+
+	Pierce := 0.2
+	SupplyCost := Size * 0.5
+
+	PowerUse := 3 * Size
+	
+	Hex.HP := 18 * HexSize
+	Hex.Resistance := 0.2
+	Hex.Mass := HexSize
+
+	Modifier: RangeFactor(factor)
+		Range := Range * pow(factor, 1.0/5.0)
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+	
+	Module: Default
+
+	Module: Core
+		Hex.HP := Hex.HP * 6
+		Hex.BuildCost := 4.0 * Hex.BuildCost
+		Hex.Mass := 5.0 * Hex.Mass
+
+		Sprite: Flak::0
+		DrawMode: 1
+
+		Hex.DamageResist := ShipSize / 64.0
+		Effect: DamageResist
+			Resist = Hex.DamageResist
+
+	Effector: FlakBattery
+		Range = Range
+		Damage = Damage
+		Reload = Reload
+		Speed = Speed
+		Tracking = Tracking
+		Spread = Spread
+		FireArc = pi
+		TargetTolerance = pi
+		FireTolerance = Spread * 3
+		Pierce = Pierce
+		SupplyCost = SupplyCost * Reload
+		CapOnTarget = 24
+		FlagReduction = 0.1

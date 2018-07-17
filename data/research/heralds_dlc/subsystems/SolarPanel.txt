@@ -1,0 +1,16 @@
+Technology: SolarPanel
+	Name: #R_SYS_SOLARPANEL
+	Description: #R_SYS_SOLARPANEL_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: SolarPanel
+	Color: #64fff9
+	
+	UnlockSubsystem(SolarPanel)
+	SkipOnUnlockedSubsystem(SolarPanel)
+
+	SecondaryInfluenceCost(15)

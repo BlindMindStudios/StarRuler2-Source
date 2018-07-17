@@ -1,0 +1,25 @@
+Trait: Hyperdrive
+	Name: #TRAIT_HYPERDRIVE
+	Description: #TRAIT_HYPERDRIVE_DESC
+	Category: FTL
+	Order: 0
+
+	Icon: TraitIcons::2
+	Color: #a767ad
+
+	Default: True
+	Unique: FTL
+
+	UnlockSubsystem(Hyperdrive)
+
+	LoadDesigns(default)
+	LoadDesigns(hyperdrive)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/hyperdrive))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/hyperdrive))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/hyperdrive))

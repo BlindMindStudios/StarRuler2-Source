@@ -1,0 +1,37 @@
+Effector: Disruptor
+	Value: Range
+	Value: DPS
+	Value: Duration
+	Value: Cooldown
+	Value: Tracking
+	Value: SupplyCost = 0
+	Value: FireArc = pi
+
+	Range: Range
+	Lifetime: Duration
+	Tracking: Tracking
+	FireArc: FireArc
+
+	TargetAlgorithm: SingleTarget
+	CanTarget: isEnemy && isShip && tagIsReactor
+	AutoTarget: isEnemy && isShip && tagIsReactor
+
+	PassthroughInvalid: True
+
+	EfficiencyMode: Duration Partial
+	Activation: VariableTimed(Cooldown+Duration, 0.25)
+	OnTrigger: combat::WeaponFire(SupplyCost)
+
+	Effect: ReactorOverload
+		Damage = DPS
+
+	PhysicalType: Beam
+		GfxSize: 0.3
+		FirePitchVariance: 0.06
+		FireSfx: laser_fire
+		FireSfx: laser_fire_2
+		FireSfx: laser_fire_3
+		FireSfx: laser_fire_4
+		Material: Laser
+		ImpactGfx: ImpactFlareLaserRed
+		TrailCol: f0e5b5aa, f0e5b5aa

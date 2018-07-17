@@ -1,0 +1,25 @@
+Anomaly: SystemReactor
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_SYSREACTOR
+
+		Model: Research_Station
+		Material: GenericPBR_Research_Station
+
+		Choice: Disassemble
+		Choice: Reactivate
+
+	Option: Disassemble
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_SYSREACTOR_DISASSEMBLE
+
+		UnlockSubsystem(AntimatterGen)
+		AddModifier( AntimatterGen::PowerFactor(1.1) )
+
+	Option: Reactivate
+		Icon: AffinityIcons::2
+		Description: #ANOMALY_SYSREACTOR_REACTIVATE
+
+		SpawnOrbital(RemnantEnergyCore)

@@ -1,0 +1,7 @@
+Status: AncientRequireBaseMat
+	Name: #STATUS_ANCIENT_REQUIRE_BASE_MAT
+	Description: #STATUS_ANCIENT_REQUIRE_BASE_MAT_DESC
+	Collapses: True
+
+	Color: #ff0000
+	Icon: ResourceIconsSmall::73 * #ffaaaa

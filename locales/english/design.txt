@@ -1,0 +1,213 @@
+ERROR_NOT_UNLOCKED: $1 not unlocked.
+ERROR_MODULE_NOT_UNLOCKED: Module $1 not unlocked.
+ERROR_NO_CORE: $1 requires a core.
+ERROR_NEEDS_EXTERIOR_CORE: $1's Core should be exterior.
+ERROR_REQUIRED_MODULE: $1 missing required module $2.
+ERROR_UNIQUE_MODULE: Only one $2 allowed on $1.
+ERROR_INSUFFICIENT_Crew: Insufficient Crew.
+ERROR_INSUFFICIENT_Command: Insufficient Control.
+ERROR_INSUFFICIENT_Power: Insufficient Power.
+ERROR_DUPLICATE_DESIGN: Design with this name exists: renamed to '$1'.
+ERROR_INVALID_FILE: File is not a valid exported design.
+ERROR_INVALID_HULL: Cannot use $1 on this hull type.
+ERROR_MINIMUM_SIZE: '$1' Hull requires minimum size $2.
+ERROR_MAXIMUM_SIZE: '$1' Hull has a maximum size of $2.
+ERROR_MIN_SIZE: $1 has minimum size $2.
+ERROR_HULL_NOT_IN_SHIPSET: Design's hull is not available to the current shipset.
+ERROR_NEED_CONTROL: At least 1 Control required.
+ERROR_HEX_LIMIT_ARC: $1 turret must point outwards.
+ERROR_FACE_BACKWARDS: $1 exhaust must face backwards.
+ERROR_NOT_CONNECTED: Design must be a connected whole.
+ERROR_NOT_CONTIGUOUS: $1 must be a contiguous area.
+ERROR_TOO_SMALL: $1 too small.
+ERROR_GRID_SIZE: Invalid hex grid size.
+ERROR_HEX_COUNT: Too much interior space used.
+ERROR_MUST_BE_EXTERIOR: All $1 hexes must be exterior.
+ERROR_MUST_COVER: $1 must cover the ship in all directions.
+ERROR_ONE_APPLIED: Only one $1 may be applied.
+ERROR_CANNOT_APPLY: Cannot apply $1 subsystem.
+ERROR_MUST_ADJACENT: All hexes must be adjacent to at least one $1.
+ERROR_MUST_ADJACENT_INTERIOR: Interior hexes must be adjacent to at least one $1.
+ERROR_CONTIGUOUS: $1 must be a connected whole.
+ERROR_MUST_BE_FILLED: Interior space must be filled.
+ERROR_EXPOSE_LEFT_RIGHT: $1 must be exterior on both the left and right sides of the design.
+ERROR_ONLY_ONE: Only one $1 is allowed.
+ERROR_NEED_PRAYER: Ship requires a Shrine to generate prayer.
+ERROR_EQUAL_PRAYER: Must have at least as much Prayer as Control.
+ERROR_NEED_SHIELD: $1 can only be used if the ship has Shields.
+ERROR_CANNOT_HAVE_WEAPONS: $1 cannot have weapons.
+ERROR_ALL_POWER: All power must come from the $1.
+ERROR_BRIDGE_AI: Ship cannot be controlled by both crew and an AI.
+ERROR_REQUIRE_SCOOP: $1 must contain at least one Ramscoop.
+ERROR_SCOOP_FACE_FRONT: Ramscoops must be exterior and face the front of the ship.
+ERROR_MUST_SURROUND: $1 must be surrounded by $2 hexes.
+ERROR_NOT_ALLOWED_ON_MOTHERSHIP: $1 is not allowed on Mothership hulls.
+REQUIRE_CONSTRUCTION_BAY: $1 requires Construction Bay to feed labor into.
+APPLIED_HULL: Hull
+DESIGNS: Designs
+DSG_INSERT_NAME: Enter a name for the design...
+AUTO_SELECT_HULL: Automatically select hull model...
+FORCE_HULL: Hull Model: $1
+DESIGN_HEX_LIMIT: Interior Space: $1 / $2
+TT_DESIGN_HEX_LIMIT: <<
+	Designs can only contain up to a limited amount of interior hexes.
+
+	Certain subsystems like armor hexes placed on the outside of the ship do not count towards a ship's interior hex count.
+>>
+
+TIP_ROTATE: You can rotate a turret's facing by using the scroll wheel.
+
+SUBSYS_CORE: Core
+SUBSYS_AT: " at "
+SUBSYS_HEX: "Hex "
+
+HULL_DELETE_FILE_CONFIRM: Are you sure you wish to delete hull file '$1'?
+HULL_DELETE_HULL_CONFIRM: Are you sure you wish to delete hull '$1'?
+HULL_CLEAR: Clear Hulls
+HULL_CONFIRM_CLEAR: Are you sure you wish to clear hull working data?
+
+IMPORT_ERRORS: The following errors occurred during import:
+IMPORT_INTO_CLASS: Import into Class:
+SAVED_CLASS: <Saved Class>
+EXPORT_DESIGN: Export
+DUPLICATE_DESIGN: Duplicate
+
+SANDBOX_WAR: Fighting!
+SANDBOX_PEACE: Ceasing Fire...
+SPAWN_ALLIED: Spawn Allied
+SPAWN_ENEMY: Spawn Enemy
+SANDBOX_CLEAR: Clear Sandbox
+SANDBOX_CONFIRM_CLEAR: Are you sure you wish to destroy all ships in the sandbox?
+SANDBOX_DESC: Welcome to the designs sandbox!\nDesigns are auto-exported here.\nUse 'Import Designs' to load them in-game.
+SANDBOX_SAVE_EXPORT: Save + Export
+
+TT_EDIT_DESIGN: Edit this design.
+TT_OBSOLETE_DESIGN: Mark this design as obsolete. It will no longer appear in most design lists. Obsolete support designs will no longer be automatically built by Defense.
+TT_UNOBSOLETE_DESIGN: Put this design back into active use, removing its obsolete status.
+SHOW_OBSOLETE: Show Obsolete
+TT_SHOW_OBSOLETE: Toggle whether to show designs that have been marked as obsolete.
+TT_SUPPORT_DESIGN: This design uses a support ship hull. Support ships cannot move independently and can only act as part of a larger fleet, centered around a flagship or planet.
+TT_FLAGSHIP_DESIGN: This design uses a flagship hull. Flagships can move and act independently, and may be able to provide command for a support fleet. The amount of support ships a flagship can have is dependent on how much "Support Command" is in its design.
+TT_STATION_DESIGN: This design uses a station hull. Stations cannot move, but can be built remotely as orbitals.
+TT_SATELLITE_DESIGN: This design uses a support satellite hull. Support satellites can only be bought on planets, but have increased weapons range and stats.
+
+S_HP: Total Health
+S_HexHP: Health
+STT_HP: The sum hitpoints of all hexes on the design.
+
+S_REPAIR: Repair / Second
+STT_REPAIR: The amount of hitpoints the ship can repair per second. Reduced to 25% of the normal rate during combat.
+
+S_Shield: Shield Capacity
+STT_Shield: Maximum hitpoints of the shield.
+
+S_ShieldRegen: Shield Regen
+STT_ShieldRegen: Shield hitpoints regenerated per second.
+
+S_DPS: Damage / Second
+STT_DPS: Total damage per second (DPS) dealt by the ship in combat, when undamaged.
+
+S_SUPPLYCAP: Supply Capacity
+STT_SUPPLYCAP: The total amount of supply this flagship can store.
+
+S_SUPPLYCAP_SUPPORT: Ammo Stores
+STT_SUPPLYCAP_SUPPORT: The amount of supply this ship can take with it on an attack run made detached from its fleet. When the local supply stores run out, the support ship needs to return to the fleet to resupply for the next run. Not all support ship behaviors pefrom attack runs.
+
+S_SUPPORTCAP: Support Command
+STT_SUPPORTCAP: The sum size of support ships this flagship has the capacity to command.
+
+S_ACCEL: Acceleration
+STT_ACCEL: The maximum acceleration the ship can maintain in transit.
+
+S_BOOST_ACCELERATION: Boost Acceleration
+STT_BOOST_ACCELERATION: The extra acceleration boost the ship gains while it is raiding. This is added to the base acceleration.
+
+S_THRUST: Thrust
+STT_THRUST: Maximum amount of sublight thrust the ship's engines are capable of generating.
+
+S_TURN_THRUST: Turn Rate
+STT_TURN_THRUST: The speed at which the ship can rotate to change direction.
+
+S_MASS: Mass
+STT_MASS: Total mass of the ship.
+
+S_SUPPLYREGEN: Resupply Rate
+STT_SUPPLYREGEN: Amount of supply regenerated per second in friendly space.
+
+S_SUPPLYUSE: Combat Supply Use
+STT_SUPPLYUSE: Amount of supply used by this ship per second while firing all weapons in combat.
+
+S_POWER: Power
+STT_POWER: Amount of power generated and used up by the subsystems on the ship.
+
+S_CONTROL: Control
+STT_CONTROL: Amount of control generated and used up by the subsystems on the ship.
+
+S_HYPERDRIVESPEED: Hyperdrive Speed
+STT_HYPERDRIVESPEED: The speed this ship is capable of maintaining while traveling through hyperspace when undamaged.
+
+S_SLIPSTREAMTIME: Slipstream Time
+STT_SLIPSTREAMTIME: The duration any slipstream tears created by this ship stay open.
+
+S_SLIPSTREAMOPTDIST: Slipstream Opt. Distance
+STT_SLIPSTREAMOPTDIST: Any slipstreams created further away than this distance will incur FTL cost penalties.
+
+S_CargoStorage: Cargo Storage
+STT_CargoStorage: Used to store multiple types of materials, primarily those mined from asteroids.
+
+S_MiningRate: Mining Rate
+STT_MiningRate: Rate at which this ship's mining laser can mine materials from asteroids and put them into cargo storage.
+
+S_LaborIncome: Labor Generation
+STT_LaborIncome: The amount of labor generated per minute by this ship's construction bays.
+
+S_OreProcessRate: Ore Processing
+STT_OreProcessRate: Ore stored ore mined by this ship is processed into labor at this rate.
+
+S_LaborProcessRate: Processing Labor Output
+STT_LaborProcessRate: The amount of stored labor generated when enough ore is available to supply the full Ore Processing rate.
+
+S_OreCost: Ore Cost
+STT_OreCost: When building this ship, Ore mined from asteroids must be spent from local storage.
+
+S_PRAYER: Prayer
+STT_PRAYER: The amount of prayer the shrine on the ship provides. Ships must have at least as much Prayer as they do Control.
+
+S_DPS_SMALL: DPS
+S_DAMAGE: Damage
+S_BEAMDPS: Beam DPS
+S_DURATION: Duration
+S_COOLDOWN: Cooldown
+S_RELOAD: Reload
+S_RADIUS: Radius
+S_RANGE: Range
+S_SPEED: Speed
+S_PROJ_DR: Projectile DR
+S_BEAM_DR: Beam DR
+S_EXPL_DR: Explosive DR
+S_DR: Damage Resistance
+S_DamageThreshold: Damage Threshold
+S_SUPPLYCOST: Supply Cost
+S_BUILDCOST: Cost
+S_LABORCOST: Labor Cost
+S_RESUPPLY: Resupply
+S_ENERGYCOST: Energy Cost
+S_COST_FACTOR: Cost Factor
+S_STELLAR_DAMAGE: Stellar Damage
+S_EFFICIENCYBOOST: Strength Boost
+S_Chance: Chance
+S_Percentage: Percentage
+S_PowerUse: Power Used
+S_BonusShield: Bonus Shields
+S_EnergyBuildCost: Energy Build Cost
+STT_EnergyBuildCost: The amount of the empire's energy that must be expended when first starting construction on a ship of this type.
+S_DroneCount: Drone Count
+S_SupplyGain: Supply Gain
+S_DamageOverTime: DoT DPS
+S_ConvertInterval: Conversion Interval
+S_InfluenceBuildCost: Influence Build Cost
+STT_InfluenceBuildCost: The amount of the empire's influence that must be expended when first starting construction on a ship of this type.
+S_FTLBuildCost: FTL Build Cost
+STT_FTLBuildCost: The amount of the empire's FTL energy that must be expended when first starting construction on a ship of this type.
+S_Instances: Instances
+S_RaidRange: Raiding Range

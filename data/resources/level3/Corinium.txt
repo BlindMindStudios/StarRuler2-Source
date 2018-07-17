@@ -1,0 +1,14 @@
+Resource: Corinium
+	Name: #CORINIUM
+	Description: #CORINIUM_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIconsSmall::49
+	Small Icon: ResourceIconsSmall::49
+
+	Level: 3
+	Affinity: Money
+
+	Pressure: 16 Money
+
+	ModPressureCapMult(+1.0)

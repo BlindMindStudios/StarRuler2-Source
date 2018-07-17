@@ -1,0 +1,23 @@
+Status: BlockedColonization
+	Name: #STATUS_BLOCKED_COLONIZATION
+	Description: #STATUS_BLOCKED_COLONIZATION_DESC
+	Icon: QuickbarIcons::7 * #ff0000
+	Color: #ff8000
+
+	Visible To: Global
+
+	ApplyToUncolonizedPlanets()
+	MakeQuarantined()
+
+Status: RemnantBlockedColonization
+	Name: #STATUS_BLOCKED_COLONIZATION
+	Description: #STATUS_BLOCKED_COLONIZATION_DESC
+	Icon: QuickbarIcons::7 * #ff0000
+	Color: #ff8000
+
+	Visible To: Global
+
+	ApplyToUncolonizedPlanets()
+	MakeQuarantined()
+
+	RemoveIfNoRemnantsInSystem()

@@ -1,0 +1,24 @@
+Module: ArtificialPlanetoid
+	Name: #ARTIFICIAL_PLANETOID
+	Description: #ARTIFICIAL_PLANETOID_DESC
+	Icon: PlanetType::1
+
+	Core: True
+	Standalone: True
+
+	Build Cost: 1000
+	Labor Cost: 100
+	ConsumeCargo(Ore, 5000)
+
+	RequireUnlockTag(ArtificialPlanetoidUnlock)
+
+	Health: 50000
+	Armor: 50000
+
+	Model: Shipyard
+	Material: VolkurGeneric
+
+	Strategic Icon: PlanetType::1
+
+	OnEnable(SpawnPlanet(ArtificialPlanetoid, Owned = True, Add Status = ArtificialPlanetoid))
+	OnEnable(Destroy())

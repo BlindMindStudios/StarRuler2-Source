@@ -1,0 +1,31 @@
+Card: Assurances
+	Name: #CARD_ASSURANCES
+	Description: #CARD_ASSURANCES_DESC
+
+	Color: #00faff
+
+	Class: Support
+	Rarity: Epic
+	Side: Both
+	Frequency: 0
+	
+	Icon: CardIcons::24 * #ff0000
+
+	Max Quality: 3
+
+	Base Purchase Cost: 1
+	Quality Purchase Cost: 1
+
+	Base Play Cost: 2
+	Quality Play Cost: 1
+
+	Base Weight: 5
+	Quality Weight: 2
+
+	ShowDuration(600)
+
+	OnOwner( ModAttributeTimed(ExtraInfluenceBuyCost, Add, 1.0, Duration = 600.0) )
+
+	LogVoteEvent(Support = #CARD_ASSURANCES_LOG_Y, Oppose = #CARD_ASSURANCES_LOG_N)
+
+	AI: VoteSupport()

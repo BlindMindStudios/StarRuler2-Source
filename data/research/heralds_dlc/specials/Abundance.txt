@@ -1,0 +1,14 @@
+Technology: Abundance
+	Name: #R_ABUNDANCE
+	Description: #R_ABUNDANCE_DESC:50%
+
+	Icon: techEconomics * #2ffca8
+	Color: #2ffca8
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 800
+	Time Cost: 120
+
+	ModAttribute(Tier3PressureFactor, Multiply, 1.5)

@@ -1,0 +1,132 @@
+#version 120
+const float pi = 3.14159265358;
+const float tau = 6.28318530717;
+uniform sampler2D surfaceData, biomes, lookup;
+varying vec2 uv[5], uvB;
+uniform vec2 cracksColorIntensity;
+uniform vec4[3] biomesPicks;
+uniform vec2 texSize;
+uniform vec2 fullSize;
+ 
+varying vec2 blur;
+ 
+// calculates palette for cracks
+vec3 paletteCracks(float c)
+{
+    return 0.5 + 0.5 * cos(tau * (1.0 * c + vec3(0.0, 0.33, 0.67)) );
+}
+ 
+// pow alternatives
+vec3 square(vec3 x) {
+    return x*x;
+}
+ 
+// pow alternatives
+float dotter(vec3 x) {
+    return dot(x,x);
+}
+ 
+vec2 square(vec2 x) {
+    return x*x;
+}
+ 
+float square(float x) {
+    return x*x;
+}
+ 
+vec3 pow3(vec3 x) {
+    return x*x*x;
+}
+ 
+void main() {
+	// clamp so we don't get south poles blending into north poles an vice versa
+
+	vec2 uvL;
+	vec2 uvS = uv[0];
+	vec2 surfUV = texSize / fullSize;
+	vec2 surfMin = vec2(0.0, blur.y);
+	vec2 surfMax = vec2(1.0, 1.0 - blur.y);
+	if(uvS.x < surfUV.x) {
+		surfMin.x = blur.x;
+		surfMax.x = surfUV.x - blur.x * 0.5;
+	}
+	if(uvS.y < surfUV.y) {
+		surfMin.y = blur.y;
+		surfMax.y = surfUV.y - blur.y * 0.5;
+	}
+
+    vec4 splatMap = texture2D(surfaceData, clamp(uvS, surfMin, surfMax));
+	if(splatMap.a < 0.5 && splatMap.r < 0.5 && splatMap.g < 0.5)
+		discard;
+
+    vec3 albedo = vec3(0.0);
+    float cracks = 0.0;
+    vec2 cracksWaterMask = vec2(0.0);
+   
+    // make barren moon  
+    if(splatMap.a < 0.5 && splatMap.r > 0.5) {
+        vec2 moonBiome = texture2D(biomes,  uvB + vec2(0.25, 0.5)).ba;
+        moonBiome.g = clamp((1.0 - moonBiome.g), 0.00390625, 0.984375);    
+        albedo += texture2D(lookup,  vec2(0.4072265625, moonBiome.g)).rgb * (0.5 + moonBiome.r);
+    }
+    // else make terran continent  0.6103515625
+    else if(splatMap.a < 0.5 && splatMap.g > 0.5) {
+        vec2 continentBiome = texture2D(biomes,  uvB + vec2(0.5, 0.5)).ba;
+        continentBiome.g = clamp((1.0 - continentBiome.g), 0.00390625, 0.984375);      
+        albedo += texture2D(lookup,  vec2(0.4072265625, continentBiome.g)).rgb * (0.5 + continentBiome.r);
+    }
+    // make regular biome
+    else {
+
+        splatMap.rgb *= 2.0;
+		for (int i = 0; i < 4; i++) {   
+			uvL = uv[i+1];
+			vec2 blurUV = clamp(uvL, surfMin, surfMax);
+			splatMap.rgb += texture2D(surfaceData, blurUV).rgb;
+		}
+		splatMap.rgb *= 0.166666666;
+       
+        cracksWaterMask = vec2((splatMap.b - 0.5) * 2.0);
+        cracksWaterMask = max(vec2(0.0),vec2(-1.0 * cracksWaterMask.x, cracksWaterMask.y));
+       
+        // need to sample xy normal channels
+        vec2 firstBiome = texture2D(biomes,  uvB + biomesPicks[0].xy).ba;
+        vec2 secondBiome = texture2D(biomes, uvB + biomesPicks[1].xy).ba;
+        vec2 thirdBiome = texture2D(biomes,  uvB + biomesPicks[2].xy).ba;
+   
+        vec3 heightSamps = vec3(firstBiome.g, secondBiome.g, thirdBiome.g);
+   
+        vec2 splatMaskMixed = vec2(firstBiome.g + secondBiome.g, secondBiome.g + thirdBiome.g);
+        splatMaskMixed = min(vec2(1.0), (splatMaskMixed + splatMap.rg) * splatMap.rg);
+           
+        heightSamps = clamp((1.0 - heightSamps),  vec3(0.00390625), vec3(0.984375));
+   
+        // sample albedo, no need to sample roughness data
+        vec3 firstBiomesAlbedoR = texture2D(lookup,  vec2(biomesPicks[0].z, heightSamps.r)).rgb; //, 0.0
+        vec3 secondBiomesAlbedoR = texture2D(lookup, vec2(biomesPicks[1].z, heightSamps.g)).rgb; //, 0.0
+        vec3 thirdBiomesAlbedoR = texture2D(lookup,  vec2(biomesPicks[2].z, heightSamps.b)).rgb; //, 0.0
+   
+        vec2 dataSamp = mix(mix(firstBiome, secondBiome, splatMaskMixed.r), thirdBiome, splatMaskMixed.g);
+   
+        float ao = min(1.0,(dataSamp.r * 2.0));
+       
+        cracks = min(1.0, (1.0 - ao) * cracksWaterMask.r);
+ 
+        vec3 glow = pow3(paletteCracks(fract(cracks * 0.025 + cracksColorIntensity.x)) * cracks * cracksColorIntensity.y);
+       
+        albedo += mix(mix(firstBiomesAlbedoR, secondBiomesAlbedoR, splatMaskMixed.r), thirdBiomesAlbedoR, splatMaskMixed.g);
+   
+        albedo.rgb *= 0.25 + dataSamp.r;
+   
+        float waterDepth = max(0.0, 1.0 - (dataSamp.g + square(cracksWaterMask.y)));
+        vec3 oceanColor = texture2D(lookup, vec2(biomesPicks[0].z, max(0.995,waterDepth * 0.0025))).rgb * (waterDepth * 0.66 + 0.33); //  from 0.0065 to 0.0025
+       
+   
+        cracksWaterMask.y = max(0.0, ceil(dataSamp.g - cracksWaterMask.y));
+        albedo = mix(oceanColor, albedo, cracksWaterMask.y) * (1.0 - cracks) + glow * 8.0;
+	
+    }
+ 
+    gl_FragColor.rgb = albedo;
+    gl_FragColor.a = 1.0;
+}

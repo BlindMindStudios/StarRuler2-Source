@@ -1,0 +1,16 @@
+Card: Favors
+	Name: #CARD_FAVORS
+	Description: #CARD_FAVORS_DESC
+
+	Icon: CardIcons::11
+
+	Color: #ddff00
+	Class: Instant
+	Rarity: Uncommon
+
+	Placement Purchase Cost: 0
+	PurchaseMoneyCost(50, Per Placement = 75)
+
+	GainRandomCard()
+
+	AI: BuyWeight(0.5)

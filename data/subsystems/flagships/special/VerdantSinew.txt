@@ -1,0 +1,30 @@
+Subsystem: VerdantSinew
+	Name: #S_VERDANT_SINEW
+	Description: #S_VERDANT_SINEW_DESC
+	Elevation: 0
+	BaseColor: #00ff00
+	EvaluationOrder: -10
+
+	Tags: Category:Control, Control, NoCore, NonContiguous, IsArmor
+	Tags: BaseCost, PassExterior, RaceSpecial
+	Hull: Flagship, Station
+
+	HexLimit := Sum.HexLimit * -0.2
+	Ship.ExternalHexes := Hexes
+
+	Repair := 32 * HexSize
+
+	Hex.Resistance := 0.2
+	Hex.HP := 40 * HexSize
+	Hex.Mass := HexSize * 1.5
+
+	Effect: DestroyOnLowEfficiency
+		Threshold = 0.3
+
+	OnCheckErrors: designs::checkSinew
+
+	Provides:
+		Command = floor(Sum.HexLimit / 10)
+
+	Module: Default
+		Sprite: Sinew

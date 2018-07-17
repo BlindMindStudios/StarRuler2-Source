@@ -1,0 +1,15 @@
+Resource: PsionicReagents
+	Name: #PSIONIC_REAGENTS
+	Description: #PSIONIC_REAGENTS_DESC
+	Native Biome: Forest
+
+	Icon: ResourceIcons::37
+	Small Icon: ResourceIconsSmall::37
+
+	Level: 2
+	Rarity: Uncommon
+	Affinity: Influence
+
+	Pressure: 7 Influence
+	ProtectSystem(Timer = 180)
+	AddRegionStatus(PsionicProtected)

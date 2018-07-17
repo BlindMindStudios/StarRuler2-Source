@@ -1,0 +1,10 @@
+attribute vec4 in_position;
+attribute vec2 in_uv;
+varying vec3 uvs;
+varying vec2 uv;
+
+void main() {
+	uv = in_uv;
+	uvs = in_position.xyz;
+	gl_Position = gl_ProjectionMatrix * gl_ModelViewMatrix * in_position;
+}

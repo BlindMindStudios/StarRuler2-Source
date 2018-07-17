@@ -1,0 +1,43 @@
+Subsystem: DeflectorArray
+	Name: #S_DEFLECTOR_ARRAY
+	Description: #S_DEFLECTOR_ARRAY_DESC
+	BaseColor: #348c99
+	Elevation: 1
+
+	DamageOrder: -500
+
+	Tags: BaseCost
+	Tags: IsShield, Defense, Category:Defense, HasInternals
+	Tags: SecondaryDefense, HighPowerUse
+	Tags: ExteriorCore, HexLimitArc, Rotatable
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	Instances := pow(ShipSize / 200, 1.0/4.0) * 100 * (Size / ShipSize)
+
+	PowerUse := 10 * Size + (50 * HexSize)
+	Arc := 0.3 * pi
+
+	Hex.Resistance := 0.5
+	Hex.HP := 20 * HexSize
+	Hex.Mass := 3.0 * HexSize
+
+	Effector: Deflector
+		Disabled: True
+		Arc = Arc
+
+	State: double = 0
+
+	Effect: DeflectInstances
+		Instances = Instances
+
+	Requires:
+		Command = 1
+		Power = PowerUse
+	
+	Module: Core
+		Sprite: Dish
+		Hex.HP := 6 * Hex.HP
+		Hex.BuildCost := 5 * Hex.BuildCost

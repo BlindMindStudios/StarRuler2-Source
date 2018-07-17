@@ -1,0 +1,151 @@
+SCEN1_NAME: Inevitable Conquest
+SCEN1_DESC: <<|
+	[b]3277 CE:[/b]
+	A new coalition - the Gevron Initiative - has recently formed with the goal
+	of protecting its members from the hostility of newly discovered races. Their
+	desire for security has twisted their interactions from self defense to 
+	proactive destruction.
+	
+	The Initiative discovered a new and powerful enemy, the Nevillin Empire.
+	Though a peaceful race, the Nevillin's attempts at communication were ignored,
+	and war was brought to their space.
+	
+	The Nevillin Empire discovered an unstable wormhole and has been using to
+	expand into a distant, isolated region of space. The Initiative's paranoia refuses
+	to allow any colony to survive outside its control.
+>>
+
+SCEN1_PLAYER_EMP: Gevron Initiative
+SCEN1_ENEMY_EMP: Nevillin Empire
+
+SCEN1_INTRO_TITLE: Inevitable Conquest
+SCEN1_INTRO_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	Rear Admiral, you've been assigned control of a new batallion, the 5th Navy.
+	We've recently gained control of an unstable wormhole the Nevillin have been
+	sending military vessels and civilians through. You are to lead the 5th
+	through the wormhole to determine the strength of those forces, and conquer
+	any civilian occupied space.
+>>
+SCEN1_INTRO2_TITLE: Reinforcements
+SCEN1_INTRO2_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	We've deployed a scout and a small fleet through the wormhole. More will be on the way
+	as we can spare them. Treat this as a detached engagement - minimize losses.
+>>
+SCEN1_CONQUER_TITLE: Conquer and Destroy
+SCEN1_CONQUER_TEXT: <<|
+	You must destroy the Nevillin military, and capture its colonies.
+	
+	Engage smaller forces to minimize damage and losses, as well as to maintain supply necessary
+	for sieging their worlds.
+	
+	New fleets will arrive periodically through the wormhole in Varkus.
+>>
+SCEN1_CONQUER_ACT1_TITLE: Conquer the Nevillin Colonies
+SCEN1_CONQUER_ACT1_TEXT: Capture all colonies and defeat all flagships and stations.
+
+SCEN1_COMPLETE_TITLE: Victory!
+SCEN1_COMPLETE_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	Excellent work, Admiral. We no longer have to worry about the Nevillin sneaking up
+	from behind in the middle of the war. Unfortunately, the war back home isn't going as well.
+	You're being brought back immediately, along with the 5th. With our forces bolstered,
+	things should turn around quickly.
+	
+	[center][b]"Inevitable Conquest" Complete![/b][/center]
+>>
+
+SEC1_PLAYER_EMP: Nevillin Empire
+SEC1_ENEMY_EMP: Unknown Empire
+
+SEC1_INTRO_TITLE: A New Home
+SEC1_INTRO_TEXT: <<|
+	[i]High Command:[/i]
+	
+	Welcome to Varkus, Commander.
+	Until the wormhole is fully stabilized, these communiques will be rare and brief.
+	You’ll be commanding the new colony on Varkus III, a rare planet perfectly suited to our species.
+	
+	We need you to establish a sizeable construction infrastructure in this system.
+	There are plenty of common metals available in Varkus,
+	and the nearby star systems likely have other valuable resources as well.
+>>
+
+SEC1_GOAL1_TITLE: Getting Started
+SEC1_GOAL1_TEXT: <<|
+	[b]Varkus III[/b] will serve as the powerhouse for this sector.
+>>
+SEC1_GOAL1_ACT1_TITLE: Establish Varkus III as a new base
+SEC1_GOAL1_ACT1_TEXT: <<|
+	Get [b]Varkus III[/b] to level 2, and get its labor to 9 per minute.
+>>
+
+SEC1_GOAL1_DONE_TITLE: Making Progress
+SEC1_GOAL1_DONE_TEXT: <<|
+	[i]High Command:[/i]
+	
+	Things seem to be going very well. Varkus III appears to be fully capable
+	of constructing the necessary facilities to stabilize the wormhole.
+	We eagerly await your success.
+>>
+
+SEC1_GOAL2_TITLE: Interstellar Bypass
+SEC1_GOAL2_TEXT: <<|
+	[i]High Command:[/i]
+	
+	We've sent the necessary components for the stabilizer through to Varkus.
+	Assign Varkus's factories to construct it as quickly as possible so we may
+	open civilian trade lanes.
+>>
+SEC1_GOAL2_ACT1_TITLE: Construct the Stabilizer
+SEC1_GOAL2_ACT1_TEXT: <<|
+	Select Varkus III, right-click the Hyperfield Stabilizer in Varkus, and choose
+	'Work On' to begin construction.
+>>
+SEC1_STABILIZER: Hyperfield Stabilizer
+
+SEC1_TWIST_TITLE: Change of Plans
+SEC1_TWIST_TEXT: <<|
+	[i]High Command:[/i]
+	
+	Commander, we are at war. A previously unknown empire has begun raiding outlying colonies,
+	and a larger force buildup has been detected. Their scouts know of the wormhole and
+	we can no longer consider this a safe trade lane. We're cancelling the stabilization project
+	until the region has been secured.
+>>
+
+SEC1_BUILDUP_TITLE: Preparations
+SEC1_BUILDUP_TEXT: <<|
+	[i]Advisor:[/i]
+	
+	Sir, we can't know how the war will go back home with this limited information.
+	We should construct a sizeable fleet to help protect us should anything go wrong.
+>>
+SEC1_BUILDUP_ACT1_TITLE: Construct a Fleet
+SEC1_BUILDUP_ACT1_TEXT: Construct miliatry vessels at Varkus III until our military strength is at least 3,000.
+
+SEC1_COMBAT_TITLE: War!
+SEC1_COMBAT_TEXT: <<|
+	[i]Advisor:[/i]
+	
+	An unknown fleet has appeared! They match the descriptions High Command transmitted, consider them hostile.
+	
+	[b]The fleet transmits a fierce, urgent message repeatedly, but we are unable to translate it.[/b]
+>>
+SEC1_COMBAT_ACT1_TITLE: Defeat the Invaders
+SEC1_COMBAT_ACT1_TEXT: Destroy the attacking fleet to protect the system.
+
+SEC1_COMPLETE_TITLE: Isolation
+SEC1_COMPLETE_TEXT: <<|
+	[i]Advisor:[/i]
+	
+	Commander, you have my congratulations and thanks. We'll all be safe for now, though
+	we need to be prepared should they ever return. For now, our small population must 
+	try to find its own footing in this new region of space.
+	
+	[center][b]"A New Home" Complete![/b][/center]
+>>

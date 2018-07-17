@@ -1,0 +1,31 @@
+Technology: Construction
+	Name: #R_CONSTRUCTION
+	Description: #R_CONSTRUCTION_DESC:15%
+
+	Icon: techConstruction*#00cc8f
+	Color: #00cc8f
+
+	Class: Boost
+	Category: Basic Upgrades
+
+	Point Cost: 500
+	Time Cost: 100
+
+	ModAttribute(ImperialBldConstructionRate, Multiply, 1.15)
+	ModAttribute(BuildingCostFactor, Multiply, 0.85)
+
+Technology: Construction2
+	Name: #R_CONSTRUCTION2
+	Description: #R_CONSTRUCTION_DESC:30%
+
+	Icon: techConstruction*#00cc8f
+	Color: #00cc41
+
+	Class: Upgrade
+	Category: Basic Upgrades
+
+	Point Cost: 800
+	Time Cost: 140
+
+	ModAttribute(ImperialBldConstructionRate, Multiply, 1.3)
+	ModAttribute(BuildingCostFactor, Multiply, 0.7)

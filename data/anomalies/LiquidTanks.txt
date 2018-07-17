@@ -1,0 +1,26 @@
+Anomaly: LiquidTanks
+	Name: #ANOMALY_DEBRIS_FIELD
+	Description: #ANOMALY_NAR_DEBRIS
+
+	State: Initial
+		Narrative: #ANOMALY_NAR_LIQUIDTANKS
+
+		Choice: Infuse
+		Choice: Study
+
+	Option: Infuse
+		Icon: AffinityIcons::3
+		Description: #ANOMALY_LIQUIDTANKS_INFUSE
+		Safe: False
+
+		Target: obj = Object
+		TargetFilterType(obj, Ship)
+		TargetFilterOwned(obj)
+		TargetFilterFlagship(obj)
+
+		Trigger(obj, AddPermanentEffectiveness(+0.2))
+
+	Option: Study
+		Icon: AffinityIcons::5
+		Description: #ANOMALY_LIQUIDTANKS_STUDY
+		AddResearchPoints(500:1000, Modified = False, Penalized = False)

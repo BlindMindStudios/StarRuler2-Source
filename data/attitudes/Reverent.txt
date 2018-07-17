@@ -1,0 +1,45 @@
+Attitude: Reverent
+	Name: #ATT_REVERENT
+	Progress: #ATT_REVERENT_PROGRESS
+	Color: #3447c7
+	Sort: 30
+
+	ProgressFromAttribute(ArtifactsActivated)
+	Conflict(Delinquent)
+
+	Level:
+		Description: #ATT_REVERENT_L1
+		Icon: ResourceIcon::2
+		Threshold: 2
+
+		ModEmpireAttribute(FreeEnergyStorage, Add, 100)
+
+	Level:
+		Description: #ATT_REVERENT_L2
+		Icon: techPhaseContainment * #4040ff
+		Threshold: 5
+
+		EnableModifier(ShieldCapacityFactor(1.2))
+		EnableModifier(ShieldHarmonizer::BonusShieldFactor(1.2))
+
+	Level:
+		Description: #ATT_REVERENT_L3
+		Icon: ArtifactIcon::0
+		Threshold: 10
+
+		TriggerPeriodic(TriggerRandomSystem(SpawnArtifact(In System = True, Owned = True, Allow Natural = True), Has Planets = True), Interval = 300, Random Margin = 0.25)
+
+	Level:
+		Description: #ATT_REVERENT_L4
+		Icon: ResourceIcon::3
+		Threshold: 15
+
+		ModEmpireAttribute(FTLCostFactor, Multiply, 0.7)
+
+	Level:
+		Description: #ATT_REVERENT_L5
+		Icon: ResourceIcon::5
+		Threshold: 20
+
+		TiedAbility(ReverentOvercharge)
+		RepeatEnergyStored(500, ModEmpireAttribute(DefenseGenerationFactor, Add, 0.3))

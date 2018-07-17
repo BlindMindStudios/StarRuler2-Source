@@ -1,0 +1,25 @@
+Ability: InvStation
+	Name: #INV_ABL_STATION
+	Description: #INV_ABL_STATION_DESC
+	Icon: GuiOrbitalIcons::14
+
+	Energy Cost: 0
+
+	Target: targ = Object
+	TargetFilterStation(targ)
+	TargetFilterCreeps(targ)
+
+	Trigger(targ, RetrofitUpscale(Add = 256))
+
+Ability: InvStationPlus
+	Name: #INV_ABL_STATION_PLUS
+	Description: #INV_ABL_STATION_PLUS_DESC
+	Icon: ResourceIconsSmall::13
+
+	Energy Cost: 0
+
+	Target: targ = Object
+	TargetFilterRegion(targ)
+
+	Trigger(targ, DestroyAllEnemies())
+	AddInvasionStrength(1)

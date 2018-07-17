@@ -1,0 +1,26 @@
+Trait: Devout
+	Name: #TRAIT_DEVOUT
+	Description: #TRAIT_DEVOUT_DESC
+	Order: 3
+
+	Icon: ResourceIconsSmall::53
+	Color: #bd872e
+
+	Category: Lifestyle
+	Unique: Lifestyle
+
+	RepeatPopulationCoverage(AltarSupportedPopulation, 30, AddStatusOwnedPlanets(GodlessPlanet))
+	RepeatPopulationCoverage(AltarSupportedPopulation, 30, AddStatusOwnedFleets(GodlessFleet))
+	AddStatusOwnedPlanets(Devout)
+
+	UnlockSubsystem(DevoutShrine)
+	AddModifier(AddRequirePrayer(1))
+
+	OnHomeworld(AddDummyResource(Water)) #version<150
+	OnHomeworld(AddDummyResource(Meat)) #version<150
+	TriggerHomeworld(SpawnBuilding(Altar, (8, 4), Develop = True))
+	OnHomeworld(AddPlanetResource(BuildingWater)) #version>=150
+	OnHomeworld(AddPlanetResource(Soylent1)) #version>=150
+
+	ReplaceTechnologyNodes(SysShieldGen, SysShrine)
+	ReplaceTechnologyNodes(ShieldGen, SysShrine)

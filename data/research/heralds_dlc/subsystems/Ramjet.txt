@@ -1,0 +1,19 @@
+Technology: Ramjet
+	Name: #R_SYS_RAMJET
+	Description: #R_SYS_RAMJET_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	DLC: Heralds
+	DLC Replace: Thrust
+
+	Icon: ResearchIcons::0
+	Color: #629b26
+	
+	UnlockSubsystem(Ramjet)
+	SkipOnUnlockedSubsystem(Ramjet)
+
+	SecondaryMoneyCost(1000)

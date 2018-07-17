@@ -1,0 +1,11 @@
+Clause: VisionClause
+	Name: #CLAUSE_VISION
+	Description: #CLAUSE_VISION_DESC
+
+	Icon: VoteIcons::3
+
+	Free Clause: True
+	Default Clause: True
+	Team Clause: True
+
+	ShareVision()

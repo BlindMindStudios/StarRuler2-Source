@@ -1,0 +1,12 @@
+Resource: Microcline
+	Name: #MICROCLINE
+	Description: #MICROCLINE_DESC
+	Native Biome: Crystallic
+
+	Icon: ResourceIconsSmall::73
+	Small Icon: ResourceIconsSmall::73
+
+	Rarity: Mythical
+	
+	MorphAllResourcesInto(Microcline)
+	GiveAchievement(ACH_MICROCLINE)

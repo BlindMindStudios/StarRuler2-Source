@@ -1,0 +1,100 @@
+Object.RegionObjects : regions.RegionObjects::RegionObjects {
+local:
+	safe uint get_planetCount() const;
+	safe Planet@ get_planets(uint index) const;
+	safe uint getPlanetCount(Empire@ emp) const;
+	safe uint get_anomalyCount() const;
+	safe Anomaly@ get_anomalies(uint index) const;
+	safe uint get_asteroidCount() const;
+	safe Asteroid@ get_asteroids(uint index) const;
+	safe uint get_objectCount() const;
+	Object@ get_objects(uint index) const;
+	Object@ getOrbitObject(vec3d point) const;
+	safe uint get_starCount() const;
+	safe Star@ get_stars(uint index) const;
+	safe double get_starTemperature() const;
+	safe double get_starRadius() const;
+
+	safe Territory@ getTerritory(Empire@ forEmpire) const;
+	safe bool sharesTerritory(Empire& forEmpire, Region& region) const;
+	safe bool isTradableRegion(Empire& forEmpire) const;
+	safe Empire@ get_visiblePrimaryEmpire() const;
+	safe uint getContestedState(Empire@ forEmpire) const;
+	
+	void addShipDebris(vec3d position, uint count = 1);
+	
+server:
+	safe int getStrength(Empire@ emp) const;
+	double getTotalFleetStrength(uint empireMask, bool fleets = true, bool stations = true, bool planets = true) const;
+	Object@ findEnemy(Empire@ emp, uint empireMask, bool fleets = true, bool stations = true, bool planets = false) const;
+	Object@[] getEnemies(Empire@ emp, uint empireMask, bool fleets = true, bool stations = true, bool planets = false) const;
+	safe double getNeighbourLoyalty(Empire@ emp) const;
+	void modNeighbourLoyalty(Empire@ emp, double amount);
+	safe double getLocalLoyalty(Empire@ emp) const;
+	void modLocalLoyalty(Empire@ emp, double amount);
+	void setTerritory(Empire@ forEmpire, Territory@ territory);
+	void clearTerritory(Empire@ forEmpire, Territory@ oldTerritory);
+	void spawnSupportAtRandomPlanet(Empire@ owner, const Design@ design, bool free = true, Planet@ fallback = null);
+	void addStatusRandomPlanet(int statusType, double duration, uint mask = ~0);
+	void convertRandomSupport(Object@ toLeader, Empire@ toEmpire, uint mask = ~0, int maxSize = -1);
+	void updateRegionPlane() const;
+	void addRegionStatus(Empire@ emp, uint statusId, double timer = -1.0);
+	void removeRegionStatus(Empire@ emp, uint statusId);
+	void mirrorRegionStatusTo(Region& otherRegion);
+	void addSystemDPS(double dps);
+	void addStarDPS(double dps);
+	void dealStarDamage(double damage);
+	void destroyOwnedBy(uint mask, bool ships = true, bool planets = false);
+	async relocking void requestConstructionOn(Object& onObj, uint constrId);
+	async void renameSystem(string name);
+
+	safe Object@[] getPickups();
+	safe Object@[] getPlanets();
+	safe Object@[] getAnomalies();
+	safe Object@[] getArtifacts();
+	safe Object@[] getAsteroids();
+
+	void addStrategicIcon(int level, Object& obj, Node& node);
+	void removeStrategicIcon(int level, Node& node);
+
+	void grantMemory(Empire@ emp);
+	void grantVision(Empire@ emp);
+	void revokeVision(Empire@ emp);
+	void grantTrade(Empire@ emp);
+	void revokeTrade(Empire@ emp);
+	void addTemporaryVision(Empire@ emp, double timer);
+
+	void initRegion();
+	relocking void tickRegion(double time);
+	void leaveRegion(Object& obj);
+	void enterRegion(Object& obj);
+	void regionObjectOwnerChange(Object& obj, Empire@ prevOwner, Empire@ newOwner);
+	void modMilitaryStrength(Empire@ emp, int amount);
+
+	void registerShipyard(Object& obj);
+	void unregisterShipyard(Object& obj);
+	void regionBuildSupport(uint id, Object& obj, const Design@ dsg);
+	void refreshSupportsFor(Object& obj, bool keepGhosts = false);
+
+	void addTradePathing(int toSystem, Object@ from, Object@ to, int resId, uint resource);
+	void removeTradePathing(int toSystem, Object@ origin, int resId);
+
+	int addRegionEffect(Empire@ forEmpire, uint type);
+	void removeRegionEffect(int id);
+	void changeRegionEffectOwner(int id, Empire@ newOwner);
+
+	void forceSiegeAllPlanets(Empire@ emp, uint mask, uint doMask = ~0);
+	void clearForceSiegeAllPlanets(uint mask);
+
+	relocking void freeUpCivilian(Civilian@ civilian);
+	safe bool hasTradeStation(Empire@ emp);
+	safe bool hasTradeStations();
+	void getTradeStation(Civilian@ request, Empire@ emp, vec3d position);
+	void getTradePlanet(Civilian@ request, Empire@ emp);
+	safe void bumpTradeCounter(Empire@ emp);
+
+	void castOnRandomAsteroid(Object@ obj, int ablId);
+	void grantExperience(Empire@ toEmpire, double amount, bool combatOnly = false);
+
+	void regionPostLoad();
+};

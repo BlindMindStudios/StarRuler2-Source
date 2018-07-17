@@ -1,0 +1,7 @@
+Status: Propaganda
+	Name: #STATUS_PROPAGANDA
+	Description: #STATUS_PROPAGANDA_DESC
+	Icon: BuildingSprites::11 * #ff0000
+	Collapses: True
+
+	ImproveNativeResourcePressure(-1)

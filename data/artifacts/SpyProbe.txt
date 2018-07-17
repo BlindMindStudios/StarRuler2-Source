@@ -1,0 +1,7 @@
+Artifact: SpyProbe
+	Name: #ART_SPY_PROBE
+	Description: #ART_SPY_PROBE_DESC
+
+	Ability: SpawnSpyProbe
+
+	AI: AsVisionGain(2.5)

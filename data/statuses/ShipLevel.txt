@@ -1,0 +1,10 @@
+Status: ShipLevel
+	Name: #STATUS_SHIPLEVEL
+	Description: #STATUS_SHIPLEVEL_DESC
+	Icon: PointsIcon
+	Collapses: True
+
+	RepeatStacks(AddFleetEffectiveness(+0.20))
+	RepeatStacks(AddBonusHP(+0.20))
+	RepeatStacks(AddBonusShield(Percentage = +0.30))
+	RepeatStacks(AddBonusSupportCapPct(+0.10)) #version>=157

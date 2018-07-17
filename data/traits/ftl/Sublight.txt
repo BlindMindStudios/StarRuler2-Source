@@ -1,0 +1,30 @@
+Trait: Sublight
+	Name: #TRAIT_SUBLIGHT
+	Description: #TRAIT_SUBLIGHT_DESC
+	Order: 50
+	
+	Category: FTL
+	Unique: FTL
+	
+	Icon: TraitIcons::1
+	Color: #ffaaaa
+
+	Gives Points: 3
+	
+	LoadDesigns(default)
+	LoadDesigns(not_hyperdrive)
+
+	IfHaveTrait(Verdant, LoadDesigns(verdant/default))
+	IfHaveTrait(Verdant, LoadDesigns(verdant/not_hyperdrive))
+
+	IfHaveTrait(Devout, LoadDesigns(devout/default))
+	IfHaveTrait(Devout, LoadDesigns(devout/not_hyperdrive))
+
+	IfHaveTrait(Ancient, LoadDesigns(ancient/default))
+	IfHaveTrait(Ancient, LoadDesigns(ancient/not_hyperdrive))
+
+	ReplaceTechnologyNodes(FTLHurdle, EnergyHurdle)
+	ReplaceTechnologyNodes(FTL, Thrust)
+
+	AddFTLStorage(-250)
+	AddFTLIncome(-1)

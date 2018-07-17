@@ -1,0 +1,48 @@
+Subsystem: AICore
+	Name: #S_AICORE
+	Description: #S_AICORE_DESC
+	BaseColor: #ffa4a0
+	Elevation: 4
+	
+	Tags: Control, ControlCore, HasInternals
+	Tags: HeraldsDLC
+	Tags: NoBulkhead, BadFiller, Important
+	Tags: Category:Control
+	Hull: Support, Satellite
+	
+	EvaluationOrder: -10
+	
+	Size := HexSize * Hexes
+	Command := Hexes * 4
+
+	Repair := 3 * HexSize * (Hexes-1)
+	RepairSupplyCost := 0.25 * Repair
+	out SupplyDrain := RepairSupplyCost
+	
+	Hex.Resistance := 0.1
+	Hex.HP := 8 * HexSize
+	Hex.Mass := 0.5 * HexSize
+	
+	Hex.LaborCost := 0.03 * HexSize
+	Hex.BuildCost := 1.00 * HexSize
+
+	AddShipModifier: BuildCostFactor(1.25)
+	AddShipModifier: LaborCostFactor(0.75)
+
+	Assert: TagCount.Crewed == 0
+		Message: #ERROR_BRIDGE_AI
+		Unique: True
+
+	Effect: ControlCore
+	
+	Provides:
+		Command = Command
+	
+	Module: Default
+		Sprite: HexagonSubsystems::4 * #ffa4a0
+	
+	Module: Core
+		Sprite: ComputerCore
+		Hex.HP := 4 * Hex.HP
+		Hex.Resistance := 0.35
+		Hex.BuildCost := 2 * Hex.BuildCost

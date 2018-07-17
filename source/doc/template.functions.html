@@ -1,0 +1,38 @@
+<%namespace file="template.util.html" name="util" />
+<!DOCTYPE html>
+<title>${engine} - Functions</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<section class="functions">
+	<h2>Functions</h2>
+	<ul>
+		% for i, m in enumerate(functions):
+		<li>${util.func(m, "#"+str(i) if "doc" in m else None)}</li>
+		% endfor
+	</ul>
+</section>
+
+% for i, m in enumerate(functions):
+%  if "doc" in m:
+<section class="method">
+	<h3><a name="${i}" class="anchor">${util.func(m)}</a></h2>
+	<span>${m["doc"]}</span>
+
+	% if len(m["arguments"]):
+	<ul>
+		% for a in m["arguments"]:
+		% if "doc" in a and a["doc"]:
+		<li>
+			<b>${util.type(a["type"])} ${a["name"]}</b> &mdash; ${a["doc"]}
+		</li>
+		% endif
+		% endfor
+	</ul>
+	% endif
+
+	% if "doc" in m["return"]:
+		<span><b>Returns ${util.type(m["return"]["type"])}:</b> ${m["return"]["doc"]}</span>
+	% endif
+</section>
+%  endif
+% endfor

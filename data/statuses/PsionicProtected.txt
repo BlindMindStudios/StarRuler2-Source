@@ -1,0 +1,7 @@
+Status: PsionicProtected
+	Name: #STATUS_PSIONIC_PROTECTED
+	Description: #STATUS_PSIONIC_PROTECTED_DESC
+	Icon: ResourceIconsSmall::37
+
+	Unique: True
+	ApplyToPlanets()

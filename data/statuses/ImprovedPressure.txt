@@ -1,0 +1,8 @@
+Status: ImprovedPressure
+	Name: #STATUS_IMPROVED_PRESSURE
+	Description: #STATUS_IMPROVED_PRESSURE_DESC
+	Icon: AttributeIcons::0
+	Collapses: True
+
+	RepeatStacks(ImproveNativeResourcePressure(1))
+

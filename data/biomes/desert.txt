@@ -1,0 +1,12 @@
+Biome: Desert
+	Name: #BIOME_DESERT
+	
+	Temperature: 0.7
+	Humidity: 0
+	
+	Frequency: 10
+	
+	Color: #BC8E65
+
+	Picks: 0.75, 0.5
+	Lookup Range: 0.54

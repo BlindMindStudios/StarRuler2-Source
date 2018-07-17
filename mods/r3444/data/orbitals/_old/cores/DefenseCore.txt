@@ -1,0 +1,32 @@
+Module: DefenseCore
+	Name: #ORB_DEFENSE_CORE
+	Blurb: #ORB_DEFENSE_CORE_BLURB
+	Description: #ORB_DEFENSE_CORE_DESC
+	Icon: GuiOrbitalIcons::0
+
+	Core: True
+
+	Build Cost: 400
+	Maintenance: 200
+	Labor Cost: 25
+
+	Health: 10000
+	Armor: 5000
+
+	Model: Research_Station
+	Material: ResearchStation
+
+	Strategic Icon: OrbitalIcons::0
+
+	AddTurret(Railgun, Range=1500, Damage=20, Reload=1, Speed=200, Spread=0.0, FireArc=3.14, Tracking=0.8, FireTolerance=0.78)
+	Repeat(2, AddTurret(Railgun, Range=500, Damage=5, Reload=0.25, Speed=150, Spread=0.03, FireArc=3.14, Tracking=0.4, FireTolerance=0.78))
+	Repeat(3, AddTurret(Laser, Range=300, DPS=5, Duration=2, Cooldown=0, Tracking=0.4), Per Import = 2)
+	Repeat(2, AddTurret(Missile, Range=600, Damage=30, Reload=2, Speed=90, Tracking=3), Per Import = 1)
+
+	AddFleetCommand(100)
+	RecordOrbitalDPS(105, Per Import = 25)
+
+	AddHealth(Per Import = 2500)
+	AddArmor(Per Import = 1250)
+
+	CannotBuildManually()

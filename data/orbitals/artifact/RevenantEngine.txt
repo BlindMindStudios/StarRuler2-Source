@@ -1,0 +1,29 @@
+Module: RevenantEngine
+	Name: #ORB_REVENANT_ENGINE
+	Blurb: #ORB_REVENANT_BLURB
+	Description: #ABL_REVENANT_ENGINE_DESC
+	Icon: GuiOrbitalIcons::27
+
+	Core: True
+	Standalone: True
+
+	Health: 20000
+	Armor: 5000
+
+	Model: RevenantEngine
+	Material: TyrantPBRAdvanced
+	Size: 62
+
+	Strategic Icon: OrbitalIcons::27
+
+	CannotBuildManually()
+	EnableModifier( ThrustFactor(2.0) )
+	EnableModifier( Hyperdrive::SpeedFactor(1.5) )
+
+	OnDisable( SpawnArtifact(RevenantEngine) )
+	OnDisable( Destroy() )
+
+	ModEmpireAttribute(RevenantParts, Add, 1)
+	OnEmpireAttributeLT(RevenantParts, 0, Destroy())
+
+	GloballyVisible()

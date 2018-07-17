@@ -1,0 +1,22 @@
+Card: Enhance
+	Name: #CARD_ENHANCE
+	Description: #CARD_ENHANCE_DESC
+	
+	Icon: CardIcons::20
+
+	Color: #20a0a0
+	Class: Action
+	Rarity: Rare
+
+	Base Purchase Cost: 4
+	Base Play Cost: 0
+
+	Target: upgradeCard = Card
+	TargetFilterCardUses(upgradeCard, 1, Allow Unlimited = True)
+	TargetFilterHasQuality(upgradeCard)
+	TargetFilterUpgradableQuality(upgradeCard, Add Quality = 1)
+
+	GainCardCopy(upgradeCard, Uses = 1, Maximum Quality = True, Add Quality = 1)
+	TakeCardUse(upgradeCard)
+
+	AI: PlayOnValuableCard(upgradeCard)

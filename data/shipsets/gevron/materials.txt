@@ -1,0 +1,23 @@
+Material: GevronGenericPBRAdvanced
+	Shader: PBRShipFlag
+	Blend: Alpha
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/shipsets/gevron/gevron_emissives.png
+	Cubemap6: data/images/skycube.png
+
+// no flags, no shields and no transparency
+Material: GevronGenericPBR
+	Shader: PBRShipSupport	
+	Texture: data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/shipsets/gevron/gevron_emissives.png
+	Cubemap6: data/images/skycube.png
+
+Material: GevronBlueprint
+	Shader: Blueprint
+	Texture: data/shipsets/volkur/diffuse.png

@@ -1,0 +1,35 @@
+Shipset: Moirai
+	Name: Moirai
+
+	Hull: MoiraiFlagHuge
+	Hull: MoiraiFlagVeryLarge
+	Hull: MoiraiFlagLarge
+	Hull: MoiraiFlagMedium
+	Hull: MoiraiFlagTiny
+	Hull: MoiraiHuge
+	Hull: MoiraiLarge
+	Hull: MoiraiMedium
+	Hull: MoiraiSmall
+	Hull: MoiraiTiny
+	Hull: MoiraiStation
+	Hull: MoiraiSatellite
+
+	Skin: Miner
+		Model: MoiraiCivilianMiner
+		Material: MoiraiGenericPBR
+
+	Skin: Missionary
+		Model: MoiraiCivilianMissionary
+		Material: MoiraiGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: MoiraiCivilianFreighter
+		Material: MoiraiGenericPBR
+
+	Skin: Colonizer
+		Model: MoiraiCivilianColony
+		Material: MoiraiGenericPBR
+
+	Skin: Tractor
+		Model: MoiraiCivilianTractor
+		Material: MoiraiGenericPBR

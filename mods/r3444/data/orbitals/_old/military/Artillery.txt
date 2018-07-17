@@ -1,0 +1,16 @@
+Module: Artillery
+	Name: #ORB_ARTILLERY
+	Blurb: #ORB_ARTILLERY_BLURB
+	Description: #ORB_ARTILLERY_DESC
+	Icon: HexagonSubsystems::1
+	Standalone: False
+	Core: False
+
+	Require Affinity: 3 Defense
+
+	Maintenance: 500
+	Build Cost: 1000
+
+	AddTurret(StationArtillery, Range=15000, Damage=1000, Reload=5, Speed=500, Radius=50, Spread=0.001, Hits=10)
+
+	CannotBuildManually()

@@ -1,0 +1,4 @@
+Cargo: BioMass
+	Name: #C_BIOMASS
+	Description: #C_BIOMASS_DESC
+	Icon: ResourceIconsSmall::104

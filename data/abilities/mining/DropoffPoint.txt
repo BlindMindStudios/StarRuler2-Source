@@ -1,0 +1,16 @@
+Ability: DropoffPoint
+	Name: #ABL_DROPOFF_POINT
+	Description: #ABL_DROPOFF_POINT_DESC
+	Icon: CardCategoryIcons::0 * #91692c
+
+	Target: targ = Object
+
+	TargetFilterCargoStorage(targ)
+	TargetFilterOwned(targ)
+	IsToggleTarget(targ, Check Range = False, Channels = False)
+
+	CastWhenIdle(TransferCargo, targ, Require Cargo = True)
+
+	ClearOnMoveOrder(targ, Require Cargo = True)
+
+	AutoSetToOriginPlanet()

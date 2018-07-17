@@ -1,0 +1,8 @@
+Artifact: FloatingContinent
+	Name: #ART_FLOATING_CONTINENT
+	Description: #ART_FLOATING_CONTINENT_DESC
+	Frequency: 0.5
+
+	Ability: AddFloatingContinent
+
+	AI: ActivateOnBestPlanet(1.0)

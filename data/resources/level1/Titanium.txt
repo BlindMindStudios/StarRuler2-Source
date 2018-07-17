@@ -1,0 +1,15 @@
+Resource: Titanium
+	Name: #TITANIUM
+	Description: #TITANIUM_DESC
+	Native Biome: Desert
+
+	Icon: ResourceIcons::33
+	Small Icon: ResourceIconsSmall::33
+
+	Level: 1
+	Affinity: Labor
+
+	Terraform Cost: 500
+	Terraform Labor: 30
+
+	Pressure: 8 Labor

@@ -1,0 +1,138 @@
+SubsystemStat: DPS
+	Name: #S_DPS_SMALL
+	Icon: AttributeIcons::3
+	Color: #ff8080
+
+	Variable: DPS
+
+SubsystemStat: Duration
+	Name: #S_DURATION
+	Icon: ContextIcons::1 * #80baff
+	Color: #80baff
+	Suffix: s
+
+	Variable: Duration
+
+SubsystemStat: CostFactor
+	Name: #S_COST_FACTOR
+	Icon: ResourceIcon::2
+	Color: #8080ff
+	Suffix: x
+
+	Variable: CostFactor
+
+SubsystemStat: Cooldown
+	Name: #S_COOLDOWN
+	Icon: ContextIcons::1 * #c680ff
+	Color: #c680ff
+	Suffix: s
+
+	Variable: Cooldown
+
+SubsystemStat: Reload
+	Name: #S_RELOAD
+	Icon: ContextIcons::1 * #c680ff
+	Color: #c680ff
+	Suffix: s
+
+	Variable: Reload
+
+SubsystemStat: Damage
+	Name: #S_DAMAGE
+	Icon: AttributeIcons::3 * #ff8000
+	Color: #ff8000
+
+	Variable: Damage
+
+SubsystemStat: BeamDPS
+	Name: #S_BEAMDPS
+	Icon: AttributeIcons::3 * #ff8000
+	Color: #ff8000
+
+	Variable: BeamDPS
+
+SubsystemStat: StellarDamage
+	Name: #S_STELLAR_DAMAGE
+	Icon: AttributeIcons::3 * #ff8000
+	Color: #ff8000
+	Suffix: /s
+
+	Variable: StellarDamage
+
+SubsystemStat: Range
+	Name: #S_RANGE
+	Icon: ActionBarIcons::21
+	Color: #80ffea
+	Suffix: u
+
+	Variable: Range
+
+SubsystemStat: Radius
+	Name: #S_RADIUS
+	Icon: ActionBarIcons::21
+	Color: #80ff80
+
+	Variable: Radius
+
+SubsystemStat: Speed
+	Name: #S_SPEED
+	Icon: TimeHaste::1
+	Color: #ffc419
+	Suffix: u/s
+
+	Variable: Speed
+
+SubsystemStat: Thrust
+	 Name: #S_THRUST
+	 Color: #ffc419
+
+	 Variable: Thrust
+
+SubsystemStat: DamageResist
+	Name: #S_DR
+	Color: #c6c33a
+	Icon: HexagonSubsystems::0
+
+	Variable: DamageResist
+
+SubsystemStat: DamageThreshold
+	Name: #S_DamageThreshold
+	Color: #c33ac6
+	Icon: HexagonSubsystems::0
+
+	Variable: ImpactLevel
+
+SubsystemStat: SupplyCost
+	Name: #S_SUPPLYCOST
+	Icon: AttributeIcons::4
+	Color: #fefc61
+
+	Variable: SupplyFireCost
+
+SubsystemStat: Resupply
+	Name: #S_RESUPPLY
+	Icon: AttributeIcons::4
+	Color: #80ff80
+
+	Variable: Resupply
+
+SubsystemStat: EnergyCost
+	Name: #S_ENERGYCOST
+	Icon: ResourceIcon::2
+	Color: #8080ff
+
+	Variable: EnergyCost
+
+SubsystemStat: EfficiencyBoost
+	Name: #S_EFFICIENCYBOOST
+	Icon: AttributeIcons::3
+	Color: #ff8080
+
+	Variable: EfficiencyBoost
+
+SubsystemStat: PowerUse
+	Name: #S_PowerUse
+	Icon: ResourceIcon::2
+	Color: #41b4b0
+
+	Variable: PowerUse

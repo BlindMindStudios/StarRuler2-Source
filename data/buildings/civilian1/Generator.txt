@@ -1,0 +1,9 @@
+Building: Generator
+	Name: #BLD_GENERATOR
+	Description: #BLD_GENERATOR_DESC
+	Sprite: BuildingSprites::6
+
+	Civilian: True
+
+	Saturation: 1 Energy
+	Production: 1 Energy

@@ -1,0 +1,15 @@
+varying vec3 uvs;
+varying vec2 uv;
+uniform sampler2D texture;
+//uniform samplerCube texture;
+
+const float twopi = 6.28318530718;
+
+void main() {
+	vec3 dir = uvs;
+
+	vec4 color = texture2D(texture,uv);
+	//vec4 color = textureCube(texture,dir,0.0);
+	
+	gl_FragColor = color;
+}

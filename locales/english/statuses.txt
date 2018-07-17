@@ -1,0 +1,25 @@
+STATUS_DEVASTATE: Devastation
+STATUS_DEVASTATE_DESC: This planet is losing population over time.
+
+STATUS_GRAVITARSHIP: Gravitar Ship
+STATUS_GRAVITARSHIP_DESC: These ancient vessels recover artifacts that have wandered too far into deep space.
+
+STATUS_STARTING_PROTECTION: Establishing Protection
+STATUS_STARTING_PROTECTION_DESC: Full loyalty protection for the planets in this system is still being established. It will take time to become active.
+
+STATUS_BLOCKED_COLONIZATION: Colonization Blocked
+STATUS_BLOCKED_COLONIZATION_DESC: This planet cannot be colonized due to undefeated remnants in the system.
+
+STATUS_LIMITED_SIGHT: Limited Vision
+STATUS_LIMITED_SIGHT_DESC: The nebula in this system is limiting vision range.
+
+STATUS_GATE_PACKED: Packed Gate
+STATUS_GATE_PACKED_DESC: This gate is currently packed. Packed gates can move slowly, but cannot fire their weapons or establish any wormholes.
+
+STATUS_GATE_UNPACKED: Active Gate
+STATUS_GATE_UNPACKED_DESC: This is an active gate that wormholes can be established to.
+
+STATUS_IMPROVED_PRESSURE: Added Pressure
+STATUS_IMPROVED_PRESSURE_DESC: <<
+	This resource is granting additional pressure of its type wherever it is being consumed.
+>>

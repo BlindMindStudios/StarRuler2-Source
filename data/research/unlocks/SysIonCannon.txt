@@ -1,0 +1,13 @@
+Technology: SysIonCannon
+	Name: #R_SYS_ION_CANNON
+	Description: #R_SYS_ION_CANNON_DESC
+	Class: Unlock
+
+	Point Cost: 1000
+	Time Cost: 60
+
+	Icon: HexagonSubsystems::6 * #ff8d00
+	Color: #ff8d00
+	
+	UnlockSubsystem(IonCannon)
+	SkipOnUnlockedSubsystem(IonCannon)

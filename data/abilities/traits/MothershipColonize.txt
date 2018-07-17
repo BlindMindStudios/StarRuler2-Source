@@ -1,0 +1,21 @@
+Ability: MothershipColonize
+	Name: #ABL_MOTHERSHIP_COLONIZE
+	Description: #ABL_MOTHERSHIP_COLONIZE_DESC
+	Icon: ActionBarIcons::1
+	Hotkey: C
+
+	Range: 80
+
+	Target: targ = Object
+
+	TargetFilterType(targ, Planet)
+	TargetFilterNotQuarantined(targ)
+	Either(TargetFilterSpace(targ), TargetFilterOwned(targ))
+	TargetFilterBelowLimitMaxPop(targ)
+	TargetFilterNotInCombat(targ)
+
+	IsToggleTarget(targ)
+
+	AutoOrderOnAutoColonizeTarget()
+
+	SpendStatusForTrigger(MothershipPopulation, targ, SpawnOrbital(Habitat, In Orbit = True), Interval = 2)

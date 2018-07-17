@@ -1,0 +1,25 @@
+Module: HeraldDefense
+	Name: #CONS_HERALD_ORBITALS
+	Icon: GuiOrbitalIcons::0
+
+	Core: True
+	Standalone: True
+
+	Health: 10000
+	Armor: 5000
+
+	Model: DefenseStation
+	Material: VolkurGenericPBR
+
+	CannotBuildManually()
+
+	Strategic Icon: OrbitalIcons::0
+
+	Repeat(4, AddTurret(Railgun, Range=500, Damage=2, Reload=0.25, Speed=150, Spread=0.03, FireArc=3.14, Tracking=0.4, FireTolerance=0.78))
+	Repeat(3, AddTurret(Laser, Range=400, DPS=10, Duration=2, Cooldown=0, Tracking=0.4))
+	Repeat(4, AddTurret(Missile, Range=500, Damage=20, Reload=2, Speed=90, Tracking=3))
+	RecordBonusDPS(100)
+
+	OnEnable(AddStatus(Expire, Duration = 600))
+
+	ProtectSystem()

@@ -1,0 +1,265 @@
+Material: ParticleBase
+	Culling: None
+	Blend: Add
+	Lighting: False
+	DepthWrite: Off
+
+Material: ImpactFlare
+	Inherit: ParticleBase
+	Texture: data/images/sprites/laser_emit.png
+	
+Material: Explosion
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/dust_cloud.png
+	
+Material: Explosion2
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/dust_cloud_2.png
+	
+Material: ExplosionAdd
+	Inherit: ParticleBase
+	Blend: Add
+	Shader: SignedAdd
+	Texture: data/images/sprites/dust_cloud_blend.png
+	
+Material: Sparkler
+Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/sparkler.png
+	
+Material: ActionLine
+Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/action_line.png
+
+Material: Explosion_color
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/colored_explosion.png
+	
+Material: Glow
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/glow.png	
+	
+Material: DullGlow
+	Inherit: ParticleBase
+	Shader: SignedAdd
+	Texture: data/images/sprites/dull_glow.png
+	
+Material: DullShine
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/dull_shine.png
+	
+Material: PlasmaBall
+	Inherit: ParticleBase
+	Blend: Add
+	Shader: SignedAdd
+	Texture: data/images/sprites/plasma.png	
+	
+Material: WhitePlasmaBall
+	Inherit: ParticleBase
+	Alpha: True
+	Texture: data/images/sprites/white_plasma.png
+
+// Explosion frames - NOT for weapons, unless they're huge and rare
+
+Material: SignedInverted
+	Culling: None
+	Blend: Alpha
+	Lighting: False
+	DepthWrite: Off
+	Shader: SignedInverted
+
+Material: DarkCloud
+	Inherit: SignedInverted
+	Texture: data/images/sprites/smoke_cloud.png
+
+Material: SignedAddParticle
+	Culling: None
+	Blend: Add
+	Lighting: False
+	DepthWrite: Off
+	Shader: SignedAdd
+			
+Material: Explosion_Flash1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/explosion_flash1.png	
+
+Material: Sub_Explosion_Add_High1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/sub_explosion_add_high1.png
+	
+Material: Sub_Explosion_Add_high2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/sub_explosion_add_high2.png
+	
+Material: Fragment_Sparks_Add_High1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/fragment_sparks_add_high1.png
+	
+Material: Fragment_Sparks_Add_High2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/fragment_sparks_add_high2.png
+
+Material: Fragment_Sparks_Add_High3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/fragment_sparks_add_high3.png
+
+Material: Fragment_Sparks_Add_High4
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/fragment_sparks_add_high4.png
+	
+Material: Fragment_Sparks_Add_High5
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/fragment_sparks_add_high5.png
+
+Material: Prime_Blast_Add_High1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/prime_blast_add_high1.png
+	
+Material: Prime_Blast_Add_High2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/prime_blast_add_high2.png
+
+Material: Prime_Blast_Add_High3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/prime_blast_add_high3.png
+
+Material: Prime_Blast_Add_High4
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/prime_blast_add_high4.png
+	
+Material: Prime_Blast_Add_High5
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/prime_blast_add_high5.png
+	
+Material: Expansion_Add_High1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/expansion_add_high1.png
+	
+Material: Expansion_Add_High2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/expansion_add_high2.png
+
+Material: Expansion_Add_High3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/expansion_add_high3.png
+
+Material: Expansion_Add_High4
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/expansion_add_high4.png
+	
+Material: Expansion_Add_High5
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/expansion_add_high5.png
+
+Material: After_Expansion_Add_High1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/after_expansion_add_high1.png
+	
+Material: After_Expansion_Add_High2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/after_expansion_add_high2.png
+
+Material: After_Expansion_Add_High3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/after_expansion_add_high3.png
+
+Material: After_Expansion_Add_High4
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/after_expansion_add_high4.png
+
+Material: After_Expansion_Add_High5
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/after_expansion_add_high5.png
+
+// 128x128 - for weapon impacts
+
+			
+Material: Impact_Flash1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_flash1.png	
+
+Material: Impact_Sparks1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_sparks1.png
+	
+Material: Impact_Sparks2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_sparks2.png
+	
+Material: Impact_Sparks3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_sparks3.png
+
+	
+Material: Impact_Blast1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_blast1.png
+	
+Material: Impact_Blast2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_blast2.png
+	
+Material: Impact_Blast3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_blast3.png
+
+	
+Material: Impact_After_Expansion1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_after_expand1.png
+	
+Material: Impact_After_Expansion2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_after_expand2.png
+	
+Material: Impact_After_Expansion3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_after_expand3.png
+
+//Embers
+
+
+Material: Ember1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/ember1.png	
+
+Material: Ember2
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/ember2.png	
+
+Material: Ember3
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/ember3.png	
+
+Material: Ember4
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/ember4.png	
+
+//Blast ring and lightning implosion
+
+Material: Blast_Ring1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/blast_ring1.png
+
+Material: Core_Collapse1
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/core_collapse.png
+
+
+Material: ShieldImpactSmall
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_small.png
+
+Material: ShieldImpactMedium
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_medium.png
+
+Material: ShieldImpactLarge
+	Inherit: SignedAddParticle
+	Texture: data/images/sprites/impact_large.png

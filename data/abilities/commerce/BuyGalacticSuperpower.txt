@@ -1,0 +1,14 @@
+Ability: BuyGalacticSuperpower
+	Name: #ABL_BUY_GALACTIC_SUPERPOWER
+	Description: #ABL_BUY_GALACTIC_SUPERPOWER_DESC
+	Icon: CardIcons::49
+
+	Cooldown: 300
+
+	ShareCooldown(BuyGalacticSuperpower)
+	ShareCooldown(BuyGalacticUtopia)
+
+	ConsumeInfluence(15)
+	ShowInfluenceValue(15, #COST)
+
+	GainInfluenceCard(GalacticSuperpower)

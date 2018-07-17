@@ -1,0 +1,13 @@
+Status: ZealotGeist
+	Name: #STATUS_ZEALOT_GEIST
+	Description: #STATUS_ZEALOT_GEIST_DESC
+	Icon: VoteIcons::5
+
+	Visible To: Nobody
+	Unique: True
+
+	IfNotSiege(RepeatExtended(AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6), Base = 5, Per Level Bonus = 5, Per Gametime Bonus = 0.1, Multiply Attribute = StaticDamageFactor)) #version>=101
+
+	IfNotSiege(Repeat(5, AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6))) #version<101
+	IfLevel(1, IfNotSiege(Repeat(5, AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6)))) #version<101
+	IfLevel(2, IfNotSiege(Repeat(5, AddTurret(Missile, Range=450, Damage=25, Reload=1, Speed=150, Tracking=6)))) #version<101

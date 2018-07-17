@@ -1,0 +1,17 @@
+Technology: TroopPods
+	Name: #R_SYS_TROOP_PODS
+	Description: #R_SYS_TROOP_PODS_DESC
+	Class: Unlock
+	Category: Subsystems
+
+	Point Cost: 600
+	Time Cost: 120
+
+	Icon: TroopPods
+	Color: #dd3b4e
+
+	DLC: Heralds
+	DLC Replace: SupportCap
+	
+	UnlockSubsystem(TroopPods)
+	SkipOnUnlockedSubsystem(TroopPods)

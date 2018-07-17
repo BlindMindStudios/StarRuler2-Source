@@ -1,0 +1,211 @@
+Empire.ResourceManager : components.ResourceManager::ResourceManager {
+local:
+	double get_EstTotalPopulation() const;
+		@return Estimated amount of population in this empire, visible to everyone.
+
+restricted local:
+	double get_TotalPopulation() const;
+		@return Total exact amount of population in this empire.
+
+
+	double get_FTLIncome() const;
+		@return FTL income per second.
+
+	double get_FTLStored() const;
+		@return Current stored FTL.
+
+	double get_FTLCapacity() const;
+		@return Total FTL storage capacity.
+
+	double get_FTLUse() const;
+		@return Current used ftl per second.
+
+	bool get_FTLShortage() const;
+		@return Whether there isn't currently enough ftl to run.
+
+	bool isFTLShortage(double amt) const;
+		@return Whether we would be in ftl shortage using this much energy.
+
+
+	double get_EnergyIncome();
+		@return Energy income per second.
+
+	double get_EnergyStored();
+		@return Current stored Energy.
+
+	double get_EnergyUse();
+		@return Current used energy per second.
+
+	double get_EnergyEfficiency();
+		@return Current efficiency of energy income based on storage.
+
+	bool get_EnergyShortage();
+		@return Whether there isn't currently enough energy to run.
+
+	bool isEnergyShortage(double amt);
+		@return Whether we would be in energy shortage using this much energy.
+
+
+	int get_TotalBudget() const;
+		@return Money generated before reduction by maintenance.
+
+	int get_MaintenanceBudget() const;
+		@return Maintenance being paid every budget cycle.
+
+	int get_RemainingBudget() const;
+		@return Money still available for spending in this budget cycle.
+
+	int get_ForwardBudget() const;
+		@return Money added to the next budget as a single-time modifier.
+
+	int get_BonusBudget() const;
+		@return Special funds bonus budget gotten from one-time incomes.
+
+	int get_EstNextBudget() const;
+		@return Estimated value of the next budget amount.
+
+	int getMoneyFromType(uint type) const;
+		@return The contribution to the budget from a particular type of income/expense.
+	
+	uint get_WelfareMode() const;
+		@return The type of welfare exchange mode the empire is using.
+	
+	int getEstBudgetConsuming(int amount) const;
+		@return The estimated budget after consuming the given amount.
+
+	double get_BorrowRate() const;
+		@return Factor of borrowed money the next budget is reduced by.
+
+	double get_BudgetCycle() const;
+		@return Total amount of time a single budget cycle lasts.
+
+	double get_BudgetTimer() const;
+		@return Time that has passed since the beginning of this budget cycle.
+
+	bool canBorrow(int amount) const;
+		@arg Total amount of money that would be borrowed.
+		@return Whether it's possible to borrow that amount of money without getting a negative next budget.
+
+	bool canPay(int amount) const;
+		@arg Amount of money that would be spent.
+		@return Whether it's possible to spend that amount of money, including borrowing, without getting a negative next budget.
+
+	float get_DebtFactor() const;
+		@return The factor of income the empire is currently in debt.
+
+restricted remote:
+	void set_WelfareMode(uint mode);
+		@arg The type of welfare exchange mode the empire should use
+
+server:
+	void resourceTick(double time);
+		@doc Internal processing function.
+
+
+	void modFTLCapacity(double amount);
+		@doc Modify the FTL storage capacity.
+
+	void modFTLStored(double amount, bool obeyMaximum = false);
+		@doc Modify how much FTL is currently stored.
+		@arg Whether to limit the stored ftl to the maximum ftl cap.
+
+	void modFTLIncome(double amount);
+		@doc Modify the current FTL income.
+
+	void modFTLUse(double amount);
+		@doc Modify the current FTL use.
+
+	double consumeFTL(double amount, bool partial = true, bool record = true);
+		@doc Consume an amount of FTL resource.
+		@arg FTL to consume.
+		@arg Whether a partial amount can be consumed.
+		@arg Whether to immediately record the amount as 'Spent FTL'.
+		@return The amount of FTL that was consumed.
+
+	bool consumeFTLUse(double amount);
+		@doc Grab a chunk of ftl use for our purposes.
+		@arg FTL use to add.
+		@return Whether we can use this much ftl.
+
+
+	void modEnergyStored(double amount);
+		@doc Modify how much Energy is currently stored.
+
+	void modEnergyAllocated(double amount);
+		@doc Modify how much Energy is currently allocated. Allocated energy is considered stored for efficiency purposes, but does not appear as usable energy.
+
+	void modEnergyIncome(double amount);
+		@doc Modify the current Energy income.
+
+	void modEnergyUse(double amount);
+		@doc Modify the current Energy use.
+
+	double consumeEnergy(double amount, bool consumePartial = true);
+		@doc Consume an amount of global energy.
+		@arg Energy to consume.
+		@arg Whether a partial amount can be consumed.
+		@return The amount of energy that was consumed.
+
+	bool consumeEnergyUse(double amount);
+		@doc Grab a chunk of energy use for our purposes.
+		@arg Energy use to add.
+		@return Whether we can use this much energy.
+
+	void addFloatedEnergy(Empire@ other, double amount);
+		@doc Add energy floated for another empire, until spent.
+
+
+	int get_BudgetCycleId();
+		@return ID for the currently active budget cycle.
+
+	int consumeBudget(int amount, bool borrow = true);
+		@doc Spend a chunk of money from the remaining budget.
+		@arg Amount of money to spend.
+		@arg Whether to allow borrowing some or all of the money.
+		@return Budget cycle ID the money was spent in, -1 if unsuccesful.
+
+	int lowerBudget(int amount);
+		@doc Lower the available budget by an amount of money, always able to borrow.
+		@arg Amount of money to spend.
+		@return Budget cycle ID the money was spent in.
+
+	void refundBudget(int amount, int cycleId);
+		@doc Refunds money back to the budget, but only if the money was from this cycle.
+		@arg Amount of money to refund.
+		@arg Budget cycle ID the money was spent in.
+
+
+	void modMaintenance(int amount, uint type = 0);
+		@doc Modify current maintenance costs.
+
+	void modTotalBudget(int amount, uint type = 0);
+		@doc Modify total money income.
+
+	void modForwardBudget(int amount);
+		@doc Add money to the upcoming budget as a single-time modifier.
+
+	void addBonusBudget(int amount);
+		@doc Add money into the bonus budget. Will not go away until spent.
+
+	void modRemainingBudget(int amount);
+		@doc Add money to the current budget as a single-time modifier.
+
+	void resetBudget();
+		@doc Cycle the budget right now.
+
+	void multBorrowPenalty(double multiply);
+		@doc Multiply the penalty for borrowing money from the next cycle.
+		@arg Factor to multiply by.
+
+
+	void modTotalPopulation(double amount);
+		@doc Modify the total empire population remembered.
+
+
+	void writeResources(Message& msg);
+		@doc Internal message passing.
+
+shadow:
+	void readResources(Message& msg);
+		@doc Internal message passing.
+};

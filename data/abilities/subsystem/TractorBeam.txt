@@ -1,0 +1,16 @@
+Ability: TractorBeam
+	Name: #ABL_TRACTOR_BEAM
+	Description: #ABL_TRACTOR_BEAM_DESC
+	Icon: TractorGun::0
+
+	Range: 100
+
+	Target: targ = Object
+	TargetFilterAllowTractor(targ)
+
+	IsToggleTarget(targ, Check Range = False, Channels = False)
+	TractorObject(targ)
+	PersistentBeamEffect(targ, #b8b8d8, Tractor)
+
+	ApplyTargetStatusEffect(targ, InterdictFTL)
+	OffensiveToTarget(targ)

@@ -1,0 +1,14 @@
+Technology: Tactics
+	Name: #R_TACTICS
+	Description: #R_TACTICS_DESC:10%
+
+	Icon: PointsIcon
+	Color: #b0ba05
+
+	Category: Basic Upgrades
+	Class: Boost
+
+	Point Cost: 500
+	Time Cost: 60
+
+	ModAttribute(ExperienceGainFactor, Multiply, 1.1)

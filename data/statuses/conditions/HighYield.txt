@@ -1,0 +1,15 @@
+Status: HighYield
+	Name: #COND_HIGH_YIELD
+	Description: #COND_HIGH_YIELD_DESC
+
+	Icon: ConditionIcons::11
+	Color: #00b6a3
+
+	Condition Frequency: 1.0
+
+	ConditionMaxLevel(0)
+	ConditionMinPressure(1)
+	ConditionMaxPressure(4)
+	
+	ModResourceEfficiencyBonus(+1.0)
+	AddToNativeResource( AddPressureCap(-3) )

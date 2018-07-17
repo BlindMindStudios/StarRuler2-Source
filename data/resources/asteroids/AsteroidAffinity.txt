@@ -1,0 +1,15 @@
+Resource: AsteroidAffinity
+	Name: #ASTEROID_AFFINITY
+	Description: #ASTEROID_AFFINITY_DESC
+
+	Icon: ResourceIcons::44
+	Small Icon: ResourceIconsSmall::44
+
+	Distribution: 0
+	Asteroid Frequency: 0.85
+	Asteroid Labor: 20
+
+	Affinity: ALL
+	GiveNativePressure(2)
+
+	AI: DistributeAsLocalPressureBoost(2)

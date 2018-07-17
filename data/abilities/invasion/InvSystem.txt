@@ -1,0 +1,30 @@
+Ability: InvSystem
+	Name: #INV_ABL_SYSTEM
+	Description: #INV_ABL_SYSTEM_DESC
+	Icon: SystemUnderAttack * #80ff80
+	Activate Sound: genesis_activate
+
+	Energy Cost: 0
+
+	Target: dest = Point
+	TargetFilterInUniverseBounds(dest, 2000)
+	TargetFilterNotInSystem(dest, 2000)
+
+	SpawnStarAt(dest)
+	Repeat(3:6, SpawnArtifactAround(dest, 400:1000, ProtoPlanet))
+
+Ability: InvSystemPlus
+	Name: #INV_ABL_SYSTEM_PLUS
+	Description: #INV_ABL_SYSTEM_PLUS_DESC
+	Icon: ResourceIcon::2
+	Activate Sound: genesis_activate
+
+	Energy Cost: 0
+
+	Target: targ = Object
+	TargetFilterType(targ, Planet)
+	TargetFilterOwned(targ)
+
+	Trigger(targ, Destroy(Quiet = True))
+	AddEnergyUpTo(2500)
+	AddInvasionStrength(1)

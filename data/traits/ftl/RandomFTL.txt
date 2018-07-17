@@ -1,0 +1,13 @@
+Trait: RandomFTL
+	Name: #TRAIT_RANDOM_FTL
+	Description: #TRAIT_RANDOM_FTL_DESC
+	Order: 100
+
+	Icon: MenuIcons::4
+	Color: #ff0000
+
+	Category: FTL
+	Unique: FTL
+
+	GainInfluenceCard(Uprising, Quality = 1)
+	AddRandomTrait(FTL, Ignore Trait = Sublight)

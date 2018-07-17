@@ -1,0 +1,19 @@
+Technology: ProjTracking
+	Name: #R_ADVANCED_TRACKING
+	Description: #R_ADVANCED_TRACKING_DESC:40%
+
+	Icon: Railgun::3
+	Symbol: techHydraulics*#ffc419
+	Color: #80ffea
+
+	Category: Special Upgrades
+	Class: BigUpgrade
+
+	Point Cost: 750
+	Time Cost: 100
+
+	AddModifier( tag/IsProjWeapon::TrackingFactor(1.4) )
+	AddModifier( tag/IsProjWeapon::SpreadFactor(0.6) )
+	AddModifier( tag/IsProjWeapon::SupplyCostFactor(0.6) )
+
+	AffectsTaggedSubsystems(IsProjWeapon)

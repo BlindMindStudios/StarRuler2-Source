@@ -1,0 +1,23 @@
+Material: TyrantPBRAdvanced
+	Shader: PBRShipRemnant
+	Texture:  data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/shipsets/tyrant/remnant_emissives.png
+	Cubemap6: data/images/skycube.png
+
+Material: TyrantSpooky
+	Shader: GhoooostShip
+	Shininess: 12
+	Alpha: True
+	Texture: data/shipsets/volkur/normal.png
+
+Material: SeedShipPBR
+	Shader: PBRShipSeed
+	Texture:  data/shipsets/volkur/diffuse.png
+	Texture2: data/shipsets/volkur/normal.png
+	Texture3: data/shipsets/volkur/masks.png
+	Texture4: data/shipsets/volkur/damaged.png
+	Texture5: data/shipsets/tyrant/seedship_emissives.png
+	Cubemap6: data/images/skycube.png

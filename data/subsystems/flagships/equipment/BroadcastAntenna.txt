@@ -1,0 +1,40 @@
+Subsystem: BroadcastAntenna
+	Name: #S_BROADCAST_ANTENNA
+	Description: #S_BROADCAST_ANTENNA_DESC
+	BaseColor: #f67bed
+	TypeColor: #f67bed
+	Elevation: 3
+
+	Tags: Category:Equipment, HighMaint, HasInternals
+	Tags: HeraldsDLC
+	Hull: Flagship, Station
+
+	Size := HexSize * Hexes
+
+	InfluenceBuildCost := floor(5 * max(sqrt(ShipSize/128), 1.0))
+	PowerUse := 3.0 * Size
+
+	ConvertInterval := 5 / (Size / ShipSize) / if(ShipSize > 128, sqrt(ShipSize/128), ShipSize/128)
+
+	Hook: ApplyStatusRandomPlanets(Propaganda, 30, 300, Allow Self = False, Allow Allied = False)
+	Hook: RandomlyConvertSupports(ConvertInterval, Allow Allied = False, Interval Margin = 0.25)
+
+	Requires:
+		Command = 3
+		Power = PowerUse
+
+	Assert: ShipSize >= 64
+		Message: #ERROR_MIN_SIZE:$1:64
+
+	Assert: Size / ShipSize > 0.15
+		Message: #ERROR_TOO_SMALL
+
+	Module: Core
+		Hex.HP := Hex.HP * 3
+		Hex.BuildCost := Hex.BuildCost * 10
+		Hex.Mass := Hex.Mass * 5
+
+		Sprite: Antenna
+
+	Module: Default
+		Hex.BuildCost := Hex.BuildCost * 2

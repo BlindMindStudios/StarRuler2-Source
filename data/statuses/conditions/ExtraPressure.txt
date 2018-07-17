@@ -1,0 +1,14 @@
+Status: ExtraPressure
+	Name: #COND_EXTRA_PRESSURE
+	Description: #COND_EXTRA_PRESSURE_DESC
+
+	Icon: ConditionIcons::9
+	Color: #de49f1
+
+	Condition Frequency: 1.0
+
+	ConditionSinglePressureType()
+	ConditionBiome(Mountains)
+	ConditionDLC(Heralds)
+	
+	ImproveNativeResourcePressure(1)

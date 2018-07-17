@@ -1,0 +1,10 @@
+Clause: ConstClause
+	Name: #CLAUSE_CONST
+	Description: #CLAUSE_CONST_DESC
+
+	Icon: AttributeIcons::1
+	Team Clause: True
+
+	CannotBreak()
+	CannotInvite()
+	CannotAlter()

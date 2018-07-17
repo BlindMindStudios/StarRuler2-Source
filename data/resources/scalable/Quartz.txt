@@ -1,0 +1,25 @@
+Resource: Quartz
+	Name: #QUARTZ
+	Blurb: #QUARTZ_BLURB
+	Description: #QUARTZ_DESC
+	Native Biome: Crystallic
+	Class: Scalable
+
+	Small Icon: ResourceIconsSmall::60
+	Pressure: 2 Labor
+
+	Rarity Level: 3
+	Frequency: 2
+
+	Limitless Level: True
+	Exportable: False
+
+	AddLaborStorage(10)
+	RepeatPlanetLevel(AddLaborStorage(100))
+
+	TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(10, True))
+	IfLevel(1, TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(15, True)))
+	IfLevel(2, TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(25, True)))
+	IfLevel(3, TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(30, True)))
+	IfLevel(4, TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(40, True)))
+	IfLevel(5, TriggerOnAttributeIncrease(ArtifactsActivated, AddStoredLabor(80, True)))
