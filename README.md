@@ -24,7 +24,7 @@ visual studio solution in source/msvc/Star Ruler 2/, and build the "Star Ruler 2
 in either Debug or Non-Steam Release configuration.
 
 Please note that while the built exe ends up in the bin/win64/ directory, it expects to be
-started with its working directory set to the main direcotry (where the
+started with its working directory set to the main directory (where the
 launcher exe is). So when debugging from visual studio, make sure the 'Working
 Directory' configuration property is set to ../.../..
 
