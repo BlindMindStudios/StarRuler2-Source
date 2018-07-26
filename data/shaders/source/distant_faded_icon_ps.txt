@@ -4,5 +4,5 @@ void main() {
 	float rad = length(uv - vec2(0.5));
 	if(rad > 0.33)
 		discard;
-	gl_FragColor = vec4(gl_Color.rgb, (1.0 - max((rad - 0.28) / 0.05, 0)) * gl_Color.a);
+	gl_FragColor = vec4(gl_Color.rgb, (1.0 - max((rad - 0.28) / 0.05, 0.0)) * gl_Color.a);
 }
