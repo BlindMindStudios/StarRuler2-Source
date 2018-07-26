@@ -347,6 +347,7 @@ bool initGlobal(bool loadGraphics, bool createWindow) {
 	print("Registering mods");
 	devices.mods.registerDirectory("mods");
 	devices.mods.registerDirectory(getProfileRoot() + "mods");
+	devices.mods.registerDirectory("../../workshop/content/282590");
 
 	//Shortcut for the scene tree
 	if(devices.render)
