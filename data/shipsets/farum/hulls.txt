@@ -1,0 +1,155 @@
+Hull: FarumTiny
+	Name: Corvette
+	Background: VolkurBlueprint
+	BackgroundScale: 0.4
+	ModelScale: 0.4
+	Material: FarumGenericPBR
+	Model: FarumTiny
+	Shape: data/shipsets/farum/support_tiny.shape.png
+	
+	Tags: Support
+	MinSize: 1
+	Subsystem: SupportHull
+
+Hull: FarumSmall
+	Name: Frigate
+	Background: VolkurBlueprint
+	BackgroundScale: 0.5
+	ModelScale: 0.5
+	Material: FarumGenericPBR
+	Model: FarumSmall
+	Shape: data/shipsets/farum/support_small.shape.png
+
+	Tags: Support
+	MinSize: 2
+	Subsystem: SupportHull
+
+Hull: FarumMedium
+	Name: Destroyer
+	Background: VolkurBlueprint
+	BackgroundScale: 0.7
+	ModelScale: 0.6
+	Material: FarumGenericPBR
+	Model: FarumMedium
+	Shape: data/shipsets/farum/support_medium.shape.png
+
+	Tags: Support
+	MinSize: 4
+	Subsystem: SupportHull
+
+Hull: FarumLarge
+	Name: Cruiser
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 0.9
+	Material: FarumGenericPBR
+	Model: FarumLarge
+	Shape: data/shipsets/farum/support_large.shape.png
+
+	Tags: Support
+	MinSize: 8
+	Subsystem: SupportHull
+
+Hull: FarumHuge
+	Name: Heavy Cruiser
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.0
+	Material: FarumGenericPBR
+	Model: FarumFlagSmall
+	Shape: data/shipsets/farum/support_huge.shape.png
+
+	Tags: Support
+	MinSize: 80
+	Subsystem: SupportHull
+
+Hull: FarumFlagSmall
+	Name: Small Battleship
+	Background: VolkurBlueprint
+	ModelScale: 1.0
+	BackgroundScale: 1.0
+	Material: FarumGenericPBRAdvanced
+	Model: FarumFlagSmall
+	Shape: data/shipsets/farum/flagship_small.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: FarumFlagMedium
+	Name: Medium Battleship
+	Background: VolkurBlueprint
+	ModelScale: 1.05
+	BackgroundScale: 1.1
+	Material: FarumGenericPBRAdvanced
+	Model: FarumFlagMedium
+	Shape: data/shipsets/farum/flagship_medium.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: FarumFlagLarge
+	Name: Large Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.2
+	ModelScale: 1.1
+	Material: FarumGenericPBRAdvanced
+	Model: FarumFlagLarge
+	Shape: data/shipsets/farum/flagship_large.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: FarumFlagVeryLarge
+	Name: Very Large Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.25
+	ModelScale: 1.3
+	Material: FarumGenericPBRAdvanced
+	Model: FarumFlagVeryLarge
+	Shape: data/shipsets/farum/flagship_verylarge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: FarumFlagHuge
+	Name: Huge Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.5
+	ModelScale: 1.5
+	Material: FarumGenericPBRAdvanced
+	Model: FarumFlagHuge
+	Shape: data/shipsets/farum/flagship_huge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+	
+Hull: FarumStation
+	Name: Station
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/farum/station.shape.png
+
+	Tags: Station
+	MinSize: 16
+	Subsystem: StationHull
+	
+Hull: FarumSatellite
+	Name: Satellite
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/farum/station.shape.png
+
+	Tags: Satellite
+	MinSize: 1
+	Subsystem: SatelliteHull

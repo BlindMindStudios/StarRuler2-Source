@@ -1,0 +1,35 @@
+Shipset: Farum
+	Name: Farum
+	
+	Hull: FarumFlagHuge
+	Hull: FarumFlagVeryLarge
+	Hull: FarumFlagLarge
+	Hull: FarumFlagMedium
+	Hull: FarumFlagSmall
+	Hull: FarumHuge
+	Hull: FarumLarge
+	Hull: FarumMedium
+	Hull: FarumSmall
+	Hull: FarumTiny
+	Hull: FarumStation
+	Hull: FarumSatellite
+
+	Skin: Miner
+		Model: FarumMiner
+		Material: FarumGenericPBR
+
+	Skin: Missionary
+		Model: FarumMissionary
+		Material: FarumGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: FarumFreighter
+		Material: FarumGenericPBR
+
+	Skin: Colonizer
+		Model: FarumColony
+		Material: FarumGenericPBR
+
+	Skin: Tractor
+		Model: FarumTractor
+		Material: FarumGenericPBR

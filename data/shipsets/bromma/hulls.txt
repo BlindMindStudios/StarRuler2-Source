@@ -1,0 +1,155 @@
+Hull: BrommaTiny
+	Name: Corvette
+	Background: VolkurBlueprint
+	BackgroundScale: 0.4
+	ModelScale: 0.4
+	Material: BrommaGenericPBR
+	Model: BrommaTiny
+	Shape: data/shipsets/bromma/support_tiny.shape.png
+	
+	Tags: Support
+	MinSize: 1
+	Subsystem: SupportHull
+
+Hull: BrommaSmall
+	Name: Frigate
+	Background: VolkurBlueprint
+	BackgroundScale: 0.5
+	ModelScale: 0.5
+	Material: BrommaGenericPBR
+	Model: BrommaSmall
+	Shape: data/shipsets/bromma/support_small.shape.png
+
+	Tags: Support
+	MinSize: 2
+	Subsystem: SupportHull
+
+Hull: BrommaMedium
+	Name: Destroyer
+	Background: VolkurBlueprint
+	BackgroundScale: 0.7
+	ModelScale: 0.6
+	Material: BrommaGenericPBR
+	Model: BrommaMedium
+	Shape: data/shipsets/bromma/support_medium.shape.png
+
+	Tags: Support
+	MinSize: 4
+	Subsystem: SupportHull
+
+Hull: BrommaLarge
+	Name: Cruiser
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 0.9
+	Material: BrommaGenericPBR
+	Model: BrommaLarge
+	Shape: data/shipsets/bromma/support_large.shape.png
+
+	Tags: Support
+	MinSize: 8
+	Subsystem: SupportHull
+
+Hull: BrommaHuge
+	Name: Heavy Cruiser
+	Background: VolkurBlueprint
+	BackgroundScale: 1.0
+	ModelScale: 1.0
+	Material: BrommaGenericPBR
+	Model: BrommaFlagSmall
+	Shape: data/shipsets/bromma/support_huge.shape.png
+
+	Tags: Support
+	MinSize: 80
+	Subsystem: SupportHull
+
+Hull: BrommaFlagSmall
+	Name: Small Battleship
+	Background: VolkurBlueprint
+	ModelScale: 1.0
+	BackgroundScale: 1.0
+	Material: BrommaGenericPBRAdvanced
+	Model: BrommaFlagSmall
+	Shape: data/shipsets/bromma/flagship_small.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: BrommaFlagMedium
+	Name: Medium Battleship
+	Background: VolkurBlueprint
+	ModelScale: 1.05
+	BackgroundScale: 1.1
+	Material: BrommaGenericPBRAdvanced
+	Model: BrommaFlagMedium
+	Shape: data/shipsets/bromma/flagship_medium.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: BrommaFlagLarge
+	Name: Large Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.2
+	ModelScale: 1.1
+	Material: BrommaGenericPBRAdvanced
+	Model: BrommaFlagLarge
+	Shape: data/shipsets/bromma/flagship_large.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: BrommaFlagVeryLarge
+	Name: Very Large Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.25
+	ModelScale: 1.3
+	Material: BrommaGenericPBRAdvanced
+	Model: BrommaFlagVeryLarge
+	Shape: data/shipsets/bromma/flagship_verylarge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+
+Hull: BrommaFlagHuge
+	Name: Huge Battleship
+	Background: VolkurBlueprint
+	BackgroundScale: 1.5
+	ModelScale: 1.5
+	Material: BrommaGenericPBRAdvanced
+	Model: BrommaFlagHuge
+	Shape: data/shipsets/bromma/flagship_huge.shape.png
+
+	Tags: Flagship
+	MinSize: 16
+	Subsystem: FlagshipHull
+	
+Hull: BrommaStation
+	Name: Station
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/bromma/station.shape.png
+
+	Tags: Station
+	MinSize: 16
+	Subsystem: StationHull
+	
+Hull: BrommaSatellite
+	Name: Satellite
+	Background: VolkurBlueprint
+	BackgroundScale: 0.9
+	ModelScale: 1.0
+	Material: GenericPBR_Defense_Station
+	Model: DefenseStation
+	Shape: data/shipsets/bromma/station.shape.png
+
+	Tags: Satellite
+	MinSize: 1
+	Subsystem: SatelliteHull

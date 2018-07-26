@@ -1,0 +1,41 @@
+Model: FarumMiner
+	Mesh: data/shipsets/farum/farum_civilian_miner.ogex
+
+Model: FarumMissionary
+	Mesh: data/shipsets/farum/farum_civilian_missionary.ogex
+
+Model: FarumFreighter
+	Mesh: data/shipsets/farum/farum_civilian_freighter.ogex
+	
+Model: FarumColony
+	Mesh: data/shipsets/farum/farum_civilian_colonizer.ogex
+
+Model: FarumTractor
+	Mesh: data/shipsets/farum/farum_civilian_tractor.ogex
+
+Model: FarumTiny
+	Mesh: data/shipsets/farum/farum_support_tiny.ogex
+
+Model: FarumSmall
+	Mesh: data/shipsets/farum/farum_support_small.ogex
+
+Model: FarumMedium
+	Mesh: data/shipsets/farum/farum_support_medium.ogex
+
+Model: FarumLarge
+	Mesh: data/shipsets/farum/farum_support_large.ogex
+
+Model: FarumFlagSmall
+	Mesh: data/shipsets/farum/farum_flagship_small.ogex
+
+Model: FarumFlagMedium
+	Mesh: data/shipsets/farum/farum_flagship_medium.ogex
+
+Model: FarumFlagLarge
+	Mesh: data/shipsets/farum/farum_flagship_large.ogex
+
+Model: FarumFlagVeryLarge
+	Mesh: data/shipsets/farum/farum_flagship_verylarge.ogex
+
+Model: FarumFlagHuge
+	Mesh: data/shipsets/farum/farum_flagship_huge.ogex

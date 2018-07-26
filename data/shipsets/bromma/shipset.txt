@@ -1,0 +1,35 @@
+Shipset: Bromma
+	Name: Bromma
+	
+	Hull: BrommaFlagHuge
+	Hull: BrommaFlagVeryLarge
+	Hull: BrommaFlagLarge
+	Hull: BrommaFlagMedium
+	Hull: BrommaFlagSmall
+	Hull: BrommaHuge
+	Hull: BrommaLarge
+	Hull: BrommaMedium
+	Hull: BrommaSmall
+	Hull: BrommaTiny
+	Hull: BrommaStation
+	Hull: BrommaSatellite
+
+	Skin: Miner
+		Model: BrommaMiner
+		Material: BrommaGenericPBR
+
+	Skin: Missionary
+		Model: BrommaMissionary
+		Material: BrommaGenericPBRAdvanced
+
+	Skin: Freighter
+		Model: BrommaFreighter
+		Material: BrommaGenericPBR
+
+	Skin: Colonizer
+		Model: BrommaColony
+		Material: BrommaGenericPBR
+
+	Skin: Tractor
+		Model: BrommaTractor
+		Material: BrommaGenericPBR

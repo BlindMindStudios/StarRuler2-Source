@@ -1,0 +1,55 @@
+Model: BrommaMiner
+	Tangents: On
+	Mesh: data/shipsets/bromma/civilian_miner.ogex
+
+Model: BrommaMissionary
+	Tangents: On
+	Mesh: data/shipsets/bromma/civilian_missionary.ogex
+
+Model: BrommaFreighter
+	Tangents: On
+	Mesh: data/shipsets/bromma/civilian_freighter.ogex
+
+Model: BrommaColony
+	Tangents: On
+	Mesh: data/shipsets/bromma/civilian_colony.ogex
+
+Model: BrommaTractor
+	Tangents: On
+	Mesh: data/shipsets/bromma/civilian_tractor.ogex
+
+Model: BrommaTiny
+	Tangents: On
+	Mesh: data/shipsets/bromma/support_tiny.ogex
+
+Model: BrommaSmall
+	Tangents: On
+	Mesh: data/shipsets/bromma/support_small.ogex
+
+Model: BrommaMedium
+	Tangents: On
+	Mesh: data/shipsets/bromma/support_medium.ogex
+
+Model: BrommaLarge
+	Tangents: On
+	Mesh: data/shipsets/bromma/support_large.ogex
+
+Model: BrommaFlagSmall
+	Tangents: On
+	Mesh: data/shipsets/bromma/flagship_small.ogex
+
+Model: BrommaFlagMedium
+	Tangents: On
+	Mesh: data/shipsets/bromma/flagship_medium.ogex
+
+Model: BrommaFlagLarge
+	Tangents: On
+	Mesh: data/shipsets/bromma/flagship_large.ogex
+
+Model: BrommaFlagVeryLarge
+	Tangents: On
+	Mesh: data/shipsets/bromma/flagship_verylarge.ogex
+
+Model: BrommaFlagHuge
+	Tangents: On
+	Mesh: data/shipsets/bromma/flagship_huge.ogex
