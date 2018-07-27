@@ -343,18 +343,18 @@ public:
 
 FT_Library* library = 0;
 std::map<std::string, FT_Face*> faces;
-const int PAGE_SIZE = 512;
+const int FONT_PAGE_SIZE = 512;
 
 Font* loadFontFT2(render::RenderDriver& driver, const char* filename,
 					std::vector<std::pair<int,int>>& pages, int size) {
 	FontFT2* font = new FontFT2();
-	font->textureWidth = PAGE_SIZE;
-	font->textureHeight = PAGE_SIZE;
+	font->textureWidth = FONT_PAGE_SIZE;
+	font->textureHeight = FONT_PAGE_SIZE;
 
 	std::vector<Image*> images;
 	int cur_page = 0;
 
-	Image* img = new Image(PAGE_SIZE, PAGE_SIZE, FMT_Alpha, 0xff);
+	Image* img = new Image(FONT_PAGE_SIZE, FONT_PAGE_SIZE, FMT_Alpha, 0xff);
 	images.push_back(img);
 
 	int x = 0, y = 0;
@@ -428,7 +428,7 @@ Font* loadFontFT2(render::RenderDriver& driver, const char* filename,
 
 				//Find a fitting spot on the image
 				x += (unsigned)glyph.w + 2;
-				if(x > PAGE_SIZE) {
+				if(x > FONT_PAGE_SIZE) {
 					x = (unsigned)glyph.w + 2;
 					glyph.x = 0;
 
@@ -436,8 +436,8 @@ Font* loadFontFT2(render::RenderDriver& driver, const char* filename,
 					glyph.y += lineHeight + 1;
 					lineHeight = glyph.h;
 
-					if(y + font->glyphHeight + 1 > (unsigned)PAGE_SIZE) {
-						img = new Image(PAGE_SIZE, PAGE_SIZE, FMT_Alpha, 0xff);
+					if(y + font->glyphHeight + 1 > (unsigned)FONT_PAGE_SIZE) {
+						img = new Image(FONT_PAGE_SIZE, FONT_PAGE_SIZE, FMT_Alpha, 0xff);
 						images.push_back(img);
 
 						y = 0;
