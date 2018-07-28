@@ -10,7 +10,7 @@
 namespace render {
 
 struct VertexIndex {
-	int a, b, c;
+	unsigned int a, b, c;
 
 	VertexIndex(int A, int B, int C) : a(A), b(B), c(C) {}
 
