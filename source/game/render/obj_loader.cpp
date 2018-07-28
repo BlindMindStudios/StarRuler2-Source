@@ -12,7 +12,7 @@ namespace render {
 struct VertexIndex {
 	unsigned int a, b, c;
 
-	VertexIndex(int A, int B, int C) : a(A), b(B), c(C) {}
+	VertexIndex(unsigned int A, unsigned int B, unsigned int C) : a(A), b(B), c(C) {}
 
 	bool operator<(const VertexIndex& other) const {
 		return memcmp(this, &other, sizeof(int) * 3) < 0;
@@ -74,11 +74,11 @@ void loadMeshOBJ(const char* filename, Mesh& mesh) {
 				case 'f':
 					// Face
 					int vertsThisLine = 3;
-					int vertexIndex[4];
-					int uvIndex[4];
-					int normalIndex[4];
+					unsigned int vertexIndex[4];
+					unsigned int uvIndex[4];
+					unsigned int normalIndex[4];
 
-					int elemIndex[4];
+					unsigned int elemIndex[4];
 
 					int items = sscanf(line.c_str(), "f %d/%d/%d %d/%d/%d %d/%d/%d %d/%d/%d",
 						&vertexIndex[0], &uvIndex[0], &normalIndex[0],
@@ -87,9 +87,9 @@ void loadMeshOBJ(const char* filename, Mesh& mesh) {
 						&vertexIndex[3], &uvIndex[3], &normalIndex[3]);
 					vertsThisLine = items / 3;
 
-					int vertCount = (int)vertices.size();
-					int normCount = (int)normals.size();
-					int uvCount = (int)ucoord.size();
+					size_t vertCount = vertices.size();
+					size_t normCount = normals.size();
+					size_t uvCount = ucoord.size();
 
 					for(int i = 0; i < vertsThisLine; ++i) {
 						if(vertexIndex[i] > 0)
