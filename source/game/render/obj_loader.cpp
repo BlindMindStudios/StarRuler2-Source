@@ -9,6 +9,7 @@
 
 namespace render {
 
+namespace obj {
 struct VertexIndex {
 	int a, b, c;
 
@@ -18,6 +19,9 @@ struct VertexIndex {
 		return memcmp(this, &other, sizeof(int) * 3) < 0;
 	}
 };
+}
+
+using namespace obj;
 
 void loadMeshOBJ(const char* filename, Mesh& mesh) {
 	// Read all the appropriate separate data arrays

@@ -43,10 +43,7 @@ const char* bmfHead = "BMF ";
 
 namespace render {
 
-struct UV {
-	float u, v;
-};
-
+namespace bmf {
 struct VertexIndex {
 	unsigned a, b, c;
 
@@ -57,7 +54,14 @@ struct VertexIndex {
 		return memcmp(this, &other, sizeof(unsigned) * 3) < 0;
 	}
 };
+}
 
+using namespace bmf;
+
+
+struct UV {
+	float u, v;
+};
 
 void loadBinaryMesh(const char* filename, Mesh& mesh) {
 	static_assert(sizeof(vec3f) == 12, "vec3f must be the size of 3 floats");
