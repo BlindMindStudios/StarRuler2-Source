@@ -132,7 +132,7 @@ void Blueprint::create(Object* obj, const Design* design) {
 		data[i] = new CScriptAny(devices.scripts.server->engine);
 
 	memset(effectorStates, 0, design->effectorStateCount * sizeof(double));
-	memset(effectorTargets, 0, design->effectorCount * sizeof(EffectorTarget));
+	memset(reinterpret_cast<void *>(effectorTargets), 0, design->effectorCount * sizeof(EffectorTarget));
 
 	for(unsigned i = 0; i < cnt; ++i) {
 		auto& sys = design->subsystems[i];

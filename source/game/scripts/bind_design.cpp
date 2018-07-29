@@ -913,7 +913,7 @@ public:
 		type.grab();
 		states = new double[type.type.stateCount]();
 
-		memset(&target, 0, sizeof(EffectorTarget));
+		memset(reinterpret_cast<void *>(&target), 0, sizeof(EffectorTarget));
 		target.tracking = vec3d::front();
 	}
 
