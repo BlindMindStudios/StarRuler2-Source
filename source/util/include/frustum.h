@@ -25,7 +25,7 @@ struct frustum {
 	}
 
 	void operator=(const frustum& other) {
-		memcpy(this, &other, sizeof(frustum));
+		memcpy(reinterpret_cast<void *>(this), &other, sizeof(frustum));
 	}
 
 	bool overlaps(const vec3d& center, double radius) const {
