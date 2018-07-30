@@ -1386,7 +1386,7 @@ void passSettings(scripts::Manager* man) {
 	auto& modules = man->modules;
 	for(auto it = modules.begin(); it != modules.end(); ++it) {
 		scripts::Module& mod = *it->second;
-		if(mod.callbacks[scripts::SC_game_settings] > 0) {
+		if(mod.callbacks[scripts::SC_game_settings] != nullptr) {
 			game_settings.rewind();
 			scripts::Call cl = mod.call(scripts::SC_game_settings);
 			cl.push(&game_settings);
