@@ -37,7 +37,9 @@ Afterward, run the `StarRuler2.sh` shell script to start the game.
 
 Several dependencies are required to build on linux, including libpng, zlib,
 GLEW, GLU, freetype2, libvorbisfile, libvorbis, libogg, libopenal, libbz2,
-libXRandR, and libcurl.
+libXRandR, and libcurl. If your distro does not package suiable versions of each
+dependency, this project includes a Vagrantfile that can build Star Ruler 2 out
+of the box.
 
 
 ## Differences with Commercial Version
