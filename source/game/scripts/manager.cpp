@@ -1495,7 +1495,7 @@ MultiCall Manager::call(ScriptCallback cb) {
 	
 	for(auto it = modules.begin(), end = modules.end(); it != end; ++it) {
 		Module& mod = *it->second;
-		if(mod.callbacks[cb] > 0)
+		if(mod.callbacks[cb] != nullptr)
 			calls.calls.push_back(mod.call(cb));
 	}
 
