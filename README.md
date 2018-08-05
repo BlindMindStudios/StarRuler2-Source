@@ -39,6 +39,10 @@ Several dependencies are required to build on linux, including libpng, zlib,
 GLEW, GLU, freetype2, libvorbisfile, libvorbis, libogg, libopenal, libbz2,
 libXRandR, and libcurl.
 
+#### Snap Install
+If you want to install this in a snap then install it has a snap with the command sudo 
+```snap install starruler2```
+
 
 ## Differences with Commercial Version
 * The music is not part of the open source release of Star Ruler 2. The data/music/ directory from the commercial
