@@ -12,7 +12,6 @@ ifeq ($(ARCH), 32)
 	ARCHNAME = x86
 else
 	#Global
-	CXXFLAGS += -m64 -march=athlon64 -mtune=generic
 
 	#Arch name
 	ARCHNAME = x64
