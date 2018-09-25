@@ -341,7 +341,7 @@ COND_ANCIENT_RUINS_DESC: <<|
 >>
 BLD_ANCIENT_RUINS: Ancient Ruins
 BLD_ANCIENT_RUINS_DESC: <<|
-	The ancient ruins of a military outpost constructed by an advanced race eons ago.
+	The ancient ruins of a military outpost constructed by an advanced race eons ago. When first colonized, gain a number of free research points.
 >>
 
 COND_HIGH_YIELD: High Yield Resource
