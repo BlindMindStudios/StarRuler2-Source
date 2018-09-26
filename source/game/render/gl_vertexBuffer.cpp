@@ -237,7 +237,7 @@ namespace render {
 		bufferFlushes += 1;
 		vbFlushCounts[reason] += 1;
 
-		RenderStep* pSteps = &steps.front();
+		RenderStep* pSteps = steps.data();
 		for(unsigned i = 0, cnt = (unsigned)steps.size(); i < cnt; ++i) {
 			auto& step = pSteps[i];
 			shaderUniforms = step.shaderCache;

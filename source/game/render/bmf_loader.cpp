@@ -92,7 +92,7 @@ void loadBinaryMesh(const char* filename, Mesh& mesh) {
 		return;
 
 	vertices.resize(count);
-	file.read((char*)&vertices.front(), sizeof(vec3f) * count);
+	file.read((char*)vertices.data(), sizeof(vec3f) * count);
 
 	//Normals
 	file.read((char*)&count, sizeof(count));
@@ -100,7 +100,7 @@ void loadBinaryMesh(const char* filename, Mesh& mesh) {
 		return;
 
 	normals.resize(count);
-	file.read((char*)&normals.front(), sizeof(vec3f) * count);
+	file.read((char*)normals.data(), sizeof(vec3f) * count);
 
 	//UVs
 	file.read((char*)&count, sizeof(count));
@@ -108,7 +108,7 @@ void loadBinaryMesh(const char* filename, Mesh& mesh) {
 		return;
 
 	uvs.resize(count);
-	file.read((char*)&uvs.front(), sizeof(UV) * count);
+	file.read((char*)uvs.data(), sizeof(UV) * count);
 
 	//Faces
 	file.read((char*)&count, sizeof(count));
