@@ -60,7 +60,6 @@ for arg in $args; do
 			export ARCH=32
 		;;
 		64)
-			export ARCHFLAGS="-m64 -march=athlon64 -mtune=generic"
 			export ARCH=64
 		;;
 		debug)

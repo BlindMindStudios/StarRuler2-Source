@@ -55,7 +55,6 @@ ifeq ($(ARCH), 32)
 	ARCHNAME = x86
 else
 	#Global
-	ARCHFLAGS = -m64 -march=athlon64 -mtune=generic
 	CXXFLAGS += $(ARCHFLAGS)
 
 	#Angelscript
