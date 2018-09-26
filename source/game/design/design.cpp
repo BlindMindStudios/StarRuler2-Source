@@ -824,7 +824,7 @@ Design::Design(SaveFile& file) : initialized(true), data(nullptr), clientData(nu
 
 	unsigned hexesCount = file;
 	hexes.resize(hexesCount);
-	file.read(&hexes.front(), sizeof(vec2u) * hexesCount);
+	file.read(hexes.data(), sizeof(vec2u) * hexesCount);
 
 	cropMin = vec2u(grid.width, grid.height);
 	cropMax = vec2u(0, 0);
@@ -948,7 +948,7 @@ void Design::save(SaveFile& file) const {
 	file.write(hexStatusIndex.data, sizeof(int) * hexStatusIndex.width * hexStatusIndex.height);
 
 	file << (unsigned)hexes.size();
-	file.write(&hexes.front(), sizeof(vec2u) * (unsigned)hexes.size());
+	file.write(hexes.data(), sizeof(vec2u) * (unsigned)hexes.size());
 
 	unsigned cnt = getShipVariableCount();
 	file << cnt;

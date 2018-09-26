@@ -3646,7 +3646,7 @@ void Subsystem::init(SaveFile& file) {
 
 	unsigned hexCount = file;
 	hexes.resize(hexCount);
-	file.read(&hexes.front(), hexes.size() * sizeof(vec2u));
+	file.read(hexes.data(), hexes.size() * sizeof(vec2u));
 	hexEffects.resize(hexCount);
 
 	if(file >= SFV_0010) {
@@ -3799,7 +3799,7 @@ void Subsystem::save(SaveFile& file) const {
 	file << dataOffset;
 
 	file << unsigned(hexes.size());
-	file.write(&hexes.front(), hexes.size() * sizeof(vec2u));
+	file.write(hexes.data(), hexes.size() * sizeof(vec2u));
 
 	for(unsigned i = 0; i < hexes.size(); ++i) {
 		file << (unsigned)hexEffects[i].size();
