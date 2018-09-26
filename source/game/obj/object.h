@@ -16,7 +16,7 @@
 #endif
 
 const unsigned ObjectTypeBitOffset = 26;
-const unsigned ObjectTypeMask = (unsigned)(0xFF << ObjectTypeBitOffset);
+const unsigned ObjectTypeMask = 0xFFU << ObjectTypeBitOffset;
 const unsigned ObjectIDMask = 0xFFFFFFFF >> (32 - ObjectTypeBitOffset);
 extern unsigned ObjectTypeCount;
 
