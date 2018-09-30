@@ -731,7 +731,7 @@ bool Object::setFlagSecure(ObjectFlag flag, bool flagOn) {
 		//See what the new value would be, and keep trying until we are sure of the result
 		newVal = flagOn ? (prevVal | flag) : (prevVal & ~flag);
 
-	} while(flags.compare_exchange_strong(newVal, prevVal) != prevVal);
+	} while( ! flags.compare_exchange_strong(prevVal, newVal));
 
 	return true;
 }

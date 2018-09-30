@@ -64,58 +64,6 @@ void idle() {
 #endif
 }
 
-int atomic_int::operator++() {
-	return __sync_add_and_fetch(&value, 1);
-}
-
-int atomic_int::operator++(int) {
-	return __sync_fetch_and_add(&value, 1);
-}
-
-int atomic_int::operator--() {
-	return __sync_add_and_fetch(&value, -1);
-}
-
-int atomic_int::operator--(int) {
-	return __sync_fetch_and_add(&value, -1);
-}
-	
-int atomic_int::operator+=(int _add) {
-	return __sync_fetch_and_add(&value, _add);
-}
-
-int atomic_int::operator-=(int _sub) {
-	return __sync_fetch_and_sub(&value, _sub);
-}
-
-void atomic_int::operator=(int _value) {
-	value = _value;
-}
-
-int atomic_int::operator&=(int _value) {
-	return __sync_and_and_fetch(&value, _value);
-}
-
-int atomic_int::operator|=(int _value) {
-	return __sync_or_and_fetch(&value, _value);
-}
-
-int atomic_int::exchange(int _xchg) {
-	return __sync_lock_test_and_set(&value, _xchg);
-}
-
-int atomic_int::compare_exchange_strong(int _xchg, int compareTo) {
-	return __sync_val_compare_and_swap(&value, compareTo, _xchg);
-}
-
-int atomic_int::get_basic() {
-	return value;
-}
-
-void atomic_int::set_basic(int val) {
-	value = val;
-}
-
 _threadlocalPointer::_threadlocalPointer() {
 	pthread_key_create(&key, 0);
 }

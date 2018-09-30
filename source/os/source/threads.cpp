@@ -39,7 +39,8 @@ bool Mutex::try_lock() {
 	int id = getThreadID();
 	if(owningThread != id) {
 		for(unsigned i = 0; i < spinCount; ++i) {
-			if(owningThread.compare_exchange_strong(id, invalidThreadID) == invalidThreadID) {
+			int invalidThreadIdCopy = invalidThreadID;
+			if(owningThread.compare_exchange_strong(invalidThreadIdCopy, id)) {
 				lockCount = 1;
 #ifdef PROFILE_LOCKS
 				++profileCount;
@@ -66,17 +67,6 @@ void Mutex::release() {
 
 bool Mutex::hasLock() {
 	return owningThread == getThreadID();
-}
-
-void atomic_int::wait_compare_exchange(int xchg, int compareTo, const int spinCount) {
-	int spins = 0;
-	while(compare_exchange_strong(xchg, compareTo) != compareTo) {
-		++spins;
-		if(spins == spinCount) {
-			sleep(0);
-			spins = 0;
-		}
-	}
 }
 
 Threaded(ReadWriteMutex*) rw_locks[8];
@@ -207,7 +197,7 @@ bool Signal::check(int checkFor) const {
 }
 
 bool Signal::checkAndSignal(int waitFor, int newSignal) {
-	return flag.compare_exchange_strong(newSignal, waitFor) == waitFor;
+	return flag.compare_exchange_strong(waitFor, newSignal);
 }
 
 void Signal::wait(int waitFor) const {

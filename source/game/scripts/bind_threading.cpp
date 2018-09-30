@@ -398,7 +398,8 @@ struct ScriptThread {
 	}
 
 	void stop() {
-		runThread.compare_exchange_strong(1, 2);
+		std::int32_t comparand = 2;
+		runThread.compare_exchange_strong(comparand, 1);
 	}
 
 	bool start(const std::string& func) {
@@ -413,7 +414,8 @@ struct ScriptThread {
 		asIScriptFunction* localFunc = localMan->getFunction(func, "(double, ScriptThread&)", "double");
 
 		if(localFunc) {
-			if(runThread.compare_exchange_strong(2, 0) == 0) {
+			std::int32_t comparand = 0;
+			if(runThread.compare_exchange_strong(comparand, 2)) {
 				function = localFunc;
 				manager = localMan;
 				++systemRefs;
