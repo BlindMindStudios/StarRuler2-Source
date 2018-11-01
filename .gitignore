@@ -13,3 +13,14 @@
 *.sdf
 *.db-shm
 *.db-wal
+*.a
+*.o
+*.d
+*.bin
+/source/glfw/**/CMakeCache.txt
+/source/glfw/**/CMakeFiles/
+/source/glfw/**/Makefile
+/source/glfw/docs/Doxyfile
+/source/glfw/**/*.cmake
+/source/glfw/src/config.h
+/source/glfw/src/glfw3.pc
