@@ -231,9 +231,8 @@ static void updateKeyCodeLUT(void)
     // keyboard layout
 
     // Get keyboard description
-    descr = XkbGetKeyboard(_glfw.x11.display,
-                            XkbAllComponentsMask,
-                            XkbUseCoreKbd);
+    descr = XkbGetMap(_glfw.x11.display, 0, XkbUseCoreKbd);
+    XkbGetNames(_glfw.x11.display, XkbKeyNamesMask, descr);
 
     // Find the X11 key code -> GLFW key code mapping
     for (keyCode = descr->min_key_code; keyCode <= descr->max_key_code; ++keyCode)
@@ -304,8 +303,8 @@ static void updateKeyCodeLUT(void)
     }
 
     // Free the keyboard description
-    XkbFreeKeyboard(descr, 0, True);
-
+    XkbFreeNames(descr, XkbKeyNamesMask, True);
+    XkbFreeClientMap(descr, 0, True);
     // Translate the un-translated key codes using traditional X11 KeySym
     // lookups
     for (keyCode = 0;  keyCode < 256;  keyCode++)
