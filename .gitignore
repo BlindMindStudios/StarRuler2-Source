@@ -1,3 +1,8 @@
+# IDE
+.vscode
+.idea
+*.iml
+
 *.obj
 *.log
 *.pdb
