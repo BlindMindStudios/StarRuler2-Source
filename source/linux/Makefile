@@ -323,7 +323,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 #Complete binary compile
 $(BINDIR)/$(BIN): makelibs $(OBJ_FILES) $(LIB_FILES) $(COPY_LIBS)
 	@mkdir -p $(BINDIR)
-	@$(CC) $(CXXFLAGS) $(LDFLAGS) $(OBJ_FILES) $(LIB_FILES) -o $@
+	@$(CC) $(CXXFLAGS) $(OBJ_FILES) $(LIB_FILES) $(LDFLAGS) -o $@
 
 makelibs:
 	@mkdir -p $(BINDIR)
@@ -346,7 +346,7 @@ $(BINDIR)/$(MS_BIN): $(OBJDIR)/master_server.o $(LIBDIR)/libnetwork.a $(LIBDIR)/
 	@$(CC) $(CXXFLAGS) -lstdc++ -lpthread -lm $^ -o $@
 
 patcher: $(LIB_FILES)
-	@$(CC) $(CXXFLAGS) $(LDFLAGS) source/patcher/patcher/patcher.cpp $(LIB_FILES) -o $(BINDIR)/Patcher.bin
+	@$(CC) $(CXXFLAGS) source/patcher/patcher/patcher.cpp $(LIB_FILES) $(LDFLAGS) -o $(BINDIR)/Patcher.bin
 
 version:
 	bash /source/linux/build.sh version
