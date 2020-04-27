@@ -35,58 +35,6 @@ void setThreadPriority(ThreadPriority priority) {
 void createThread(unsigned long threadcall entry(void*), void* arg) {
 	CreateThread(NULL, 0, entry, arg, 0, NULL);
 }
-	
-int atomic_int::operator++() {
-	return _InterlockedIncrement(&value);
-}
-
-int atomic_int::operator++(int) {
-	return (int)_InterlockedIncrement(&value) - 1;
-}
-
-int atomic_int::operator--() {
-	return (int)_InterlockedDecrement(&value);
-}
-
-int atomic_int::operator--(int) {
-	return (int)_InterlockedDecrement(&value) + 1;
-}
-	
-int atomic_int::operator+=(int _add) {
-	return (int)_InterlockedExchangeAdd(&value, (long)_add);
-}
-
-int atomic_int::operator-=(int _sub) {
-	return (int)_InterlockedExchangeAdd(&value, -(long)_sub);
-}
-
-int atomic_int::operator&=(int mask) {
-	return (int)_InterlockedAnd(&value, (long)mask);
-}
-
-int atomic_int::operator|=(int mask) {
-	return (int)_InterlockedOr(&value, (long)mask);
-}
-
-void atomic_int::operator=(int _value) {
-	value = _value;
-}
-
-int atomic_int::exchange(int _xchg) {
-	return (int)_InterlockedExchange(&value, (long)_xchg);
-}
-
-int atomic_int::compare_exchange_strong(int _xchg, int compareTo) {
-	return (int)_InterlockedCompareExchange(&value, (long)_xchg, (long)compareTo);
-}
-
-int atomic_int::get_basic() {
-	return value;
-}
-
-void atomic_int::set_basic(int val) {
-	value = val;
-}
 
 _threadlocalPointer::_threadlocalPointer() : index(TlsAlloc()) {
 }

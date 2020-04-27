@@ -1,12 +1,13 @@
 #pragma once
 
+#include <atomic>
+
 #ifdef _MSC_VER
     #define Threaded(type) __declspec(thread) type
 
 	#define threadcall __stdcall
 
 #else
-	#include <atomic>
 	#include <pthread.h>
 
 	#define Threaded(type) __thread type
@@ -38,40 +39,77 @@ typedef unsigned long threadreturn;
 typedef threadreturn threadcall threadfunc(void*);
 #endif
 
-class atomic_int {
-#ifdef _MSC_VER
-	volatile long value;
-#else
-	volatile int value;
-#endif
+class atomic_int : public std::atomic<int32_t>
+{
 public:
-	int get_basic();
-	void set_basic(int val);
+	// Offered for backwards compatibility
+	int32_t get_basic()
+	{
+		return load();
+	}
 
-	int operator++();
-	int operator++(int);
-	int operator--();
-	int operator--(int);
-	
-	int operator+=(int value);
-	int operator-=(int value);
+	// Offered for backwards compatibility
+	void set_basic(int32_t val)
+	{
+		store(val);
+	}
 
-	int operator|=(int value);
-	int operator&=(int value);
-
-	void operator=(int value);
-
-	int exchange(int value);
-	int compare_exchange_strong(int value, int compareTo);
+	// Offered for backwards compatibility
+	int32_t get() const
+	{
+		return load();
+	}
 
 	//Like compare_exchange_strong, but will not return until the value is exchanged
-	void wait_compare_exchange(int xchg, int compareTo, const int spinCount);
+	void wait_compare_exchange(const int32_t xchg, const int32_t compareToOriginal, const int32_t spinCount) {
+		int32_t spins = 0;
+		int32_t compareTo = compareToOriginal;
+		while( ! compare_exchange_strong(compareTo, xchg)) {
+			// We want to *always* compare against the passed in compareToOriginal
+			// As this function is primarily used in mutex code in the cpp file.
+			compareTo = compareToOriginal;
+			++spins;
+			if(spins == spinCount) {
+				sleep(0);
+				spins = 0;
+			}
+		}
+	}
 
-	int get() const { return value; }
-	operator int() const { return value; }
+	atomic_int() : std::atomic<int32_t>(0) {}
+	atomic_int(int32_t v) : std::atomic<int32_t>(v) {}
 
-	atomic_int() : value(0) {}
-	atomic_int(int v) : value(v) {}
+	using std::atomic<int32_t>::operator=;
+
+	/*
+	 * This is a big hack. We're not atomicly copying the value.
+	 * We're loading the value from the source atomically. And then
+	 * some unspecified time later, we're storing that value atomically
+	 * into the destination. In the mean time, the value might have changed.
+	 * Addressing the code using this properly will take a lot of thought and effort.
+	 */
+	atomic_int(const atomic_int & src)
+	 : std::atomic<int32_t>{src.load()}
+	{ }
+	atomic_int(const std::atomic<int32_t> &src)
+	 : std::atomic<int32_t>{src.load()}
+	{ }
+	atomic_int& operator=( const std::atomic<int32_t>& desired) {
+		std::atomic<int32_t>::operator=(desired.load());
+		return *this;
+	}
+	volatile atomic_int& operator=( const std::atomic<int32_t>& desired) volatile {
+		std::atomic<int32_t>::operator=(desired.load());
+		return *this;
+	}
+	atomic_int& operator=( const atomic_int& desired) {
+		std::atomic<int32_t>::operator=(desired.load());
+		return *this;
+	}
+	volatile atomic_int& operator=( const atomic_int& desired) volatile {
+		std::atomic<int32_t>::operator=(desired.load());
+		return *this;
+	}
 };
 
 //Swap a value atomically
