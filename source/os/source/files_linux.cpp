@@ -9,7 +9,7 @@
 #include "str_util.h"
 #include "threads.h"
 #include <unordered_map>
-#ifndef __APPLE__
+#if !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__OpenBSD__)
 #include <sys/inotify.h>
 #endif
 
@@ -161,7 +161,7 @@ std::string path_join(const std::string& one, const std::string& two) {
 	return one.substr(0, endpos) + '/' + two.substr(startpos, std::string::npos);
 }
 
-#ifndef __APPLE__
+#if !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__OpenBSD__)
 int inotify_fd = -1;
 threads::Mutex inotify_mtx;
 

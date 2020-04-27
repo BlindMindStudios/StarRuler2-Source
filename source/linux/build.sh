@@ -9,7 +9,7 @@ build_glfw() {
     if [[ "$(uname)" == "Darwin" ]]; then
         export CC=/usr/bin/gcc
     fi
-    CFLAGS="${ARCHFLAGS}" cmake -DCMAKE_AR=$(which $AR) -DCMAKE_RANLIB=$(which $RANLIB) .
+    CFLAGS="${ARCHFLAGS} ${CFLAGS}" cmake -DCMAKE_AR=$(which $AR) -DCMAKE_RANLIB=$(which $RANLIB) .
 	CFLAGS="${ARCHFLAGS}" make glfw
 	cd ../../
 	cp source/glfw/src/libglfw3.a $ODIR/libglfw3.a
@@ -18,7 +18,7 @@ build_glfw() {
 build_angelscript() {
 	cd source/angelscript/projects/gnuc
 	make clean
-	CXXFLAGS="$ARCHFLAGS" make all -j6
+	CXXFLAGS="${ARCHFLAGS} ${CFLAGS}" make all -j6
 	cd ../../../../
 	cp source/angelscript/lib/libangelscript.a $ODIR/libangelscript.a
 }
@@ -78,6 +78,8 @@ for arg in $args; do
 			else
 				export ARCHFLAGS="$ARCHFLAGS -fno-lto"
 			fi
+			export CFLAGS="-I/usr/local/include -I/usr/X11R6/include"
+			export LDFLAGS="-L/usr/local/lib -L/usr/X11R6/lib"
 			export ODIR="obj/$OSNAME$ARCH"
 			mkdir -p "$ODIR"
 		;;

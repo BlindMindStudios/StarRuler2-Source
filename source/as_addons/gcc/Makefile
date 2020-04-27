@@ -52,6 +52,13 @@ else
 endif
 endif
 
+ifneq (,$(findstring BSD, $(UNAME)))
+	CXXFLAGS += -I/usr/local/include
+	CXXFLAGS += -I/usr/X11R6/include
+	LDFLAGS += -L/usr/local/lib
+	LDFLAGS += -L/usr/X11R6/lib
+endif
+
 ifndef CC
 	CC = g++
 endif

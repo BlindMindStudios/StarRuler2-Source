@@ -21,9 +21,11 @@ WFLAGS = -Wmissing-prototypes \
          -Wsequence-point
 CFLAGS = $(WFLAGS) \
          -g \
-         -I $(TOP_DIR)/include
+         -I $(TOP_DIR)/include \
+	 -I /usr/local/include
 LIBS = -lm \
        -L $(OBJ_DIR) \
+       -L /usr/local/lib \
        -lfreetype \
        -lz
 

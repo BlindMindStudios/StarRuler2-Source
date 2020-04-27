@@ -14,6 +14,9 @@ if [ `uname` == "Darwin" ]; then
 elif [ `uname -m` = "x86_64" ]; then
     chmod +x ./bin/lin64/StarRuler2.bin
     LD_LIBRARY_PATH="./bin/lin64/:$LD_LIBRARY_PATH" exec ./bin/lin64/StarRuler2.bin $@
+elif [ `uname -m` = "amd64" ]; then
+    chmod +x ./bin/lin64/StarRuler2.bin
+    LD_LIBRARY_PATH="./bin/lin64/:$LD_LIBRARY_PATH" exec ./bin/lin64/StarRuler2.bin $@
 else
     chmod +x ./bin/lin32/StarRuler2.bin
     LD_LIBRARY_PATH="./bin/lin32/:$LD_LIBRARY_PATH" exec ./bin/lin32/StarRuler2.bin $@
