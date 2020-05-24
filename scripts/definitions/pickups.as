@@ -9,6 +9,7 @@ export getDistributedPickupType;
 tidy final class PickupType {
 	uint id = 0;
 	string ident;
+	bool picked = false;
 
 	string name;
 	string description;
@@ -29,6 +30,10 @@ tidy final class PickupType {
 		return 1.0 / frequency;
 	}
 
+	void setPicked() {
+		picked = true;
+	}
+
 	string getName(Pickup& pickup) const {
 		return name;
 	}
@@ -42,6 +47,10 @@ tidy final class PickupType {
 	}
 
 	void onPickup(Pickup& pickup, Object& obj) const {
+		if(picked)
+			return;
+		setPicked();
+
 		uint repeats = obj.owner.RemnantPickupMult;
 		if(frequency == 0.0)
 			repeats = 1;
