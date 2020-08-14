@@ -1,0 +1,36 @@
+COMMUNITY_TITLE: $1(社区)
+COMMUNITY_HOME_TITLE: 社区
+COMMUNITY_WIKI: 百科:主页
+UPLOAD: 上传
+FEATURED_DESIGNS: 精选蓝图
+COMMUNITY_DESIGN_SPEC: 尺寸 $1， 由$3的$2设计
+COMMUNITY_DESIGN_CURLINE: [color=#aaa][img=ThumbsUp;20x20/] [b][color=#0f0] $1[/color][/b] [hspace=100/] [img=MenuIcons::6;20/] [b]$2[/b]评论(s)[/color]
+DOWNLOAD_DESIGN_CLASS: 已下载
+DOWNLOAD_TO_PROFILE: 下载至个人资料
+TT_DOWNLOAD_TO_PROFILE: <<|
+	将显示的蓝图下载至你的个人资料， 这样你就可以将其导入至此游戏， 或者以后相关的游戏。 
+>>
+SUCCESS_DOWNLOAD_TO_PROFILE: 蓝图成功下载至个人资料。 
+DOWNLOAD_TO_EMPIRE: 下载至游戏
+TT_DOWNLOAD_TO_EMPIRE: <<|
+	仅将显示的蓝图下载至你当前的游戏， 这样它立刻可以被你的帝国使用。 
+>>
+TT_DOWNLOAD_ERRORS: <<|
+	发生错误， 这个蓝图无法被下载至你当前的帝国:
+>>
+SUCCESS_DOWNLOAD_TO_EMPIRE: 蓝图成功下载至当前游戏。 
+DOWNLOAD_EDIT: 在编辑器中载入
+TT_DOWNLOAD_EDIT: 在编辑器中载入此蓝图， 对其进行修改然后保存。 
+VOTES_BUTTON: $1
+TT_VOTES_BUTTON: 对这个蓝图评分。 
+COMMENTS_BUTTON: $1条评论(s)
+COMMENT_TEXT: 输入你的评论... 
+COMMENT_SUBMIT: 发布评论
+COMMUNITY_CONFIRM_DELETE_DESIGN: 你确定要将此蓝图从在线社区上删除吗? 该操作无法撤销。 
+UPLOAD_DESIGN: 上传蓝图
+RECENT_DESIGNS: 最近的蓝图
+TOPRATED_DESIGNS: 高评分蓝图
+SEARCH_DESIGNS_PROMPT: 搜索蓝图... 
+DESIGN_DESCRIPTION_PROMPT: 为你的蓝图添加描述... 
+DESIGN_CHOOSE_PROMPT: 选择一个蓝图... 
+DESIGN_LINK_TIP: 你可以输入[[design: $1]]以链接到此蓝图。 

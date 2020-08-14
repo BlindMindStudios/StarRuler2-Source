@@ -1,0 +1,7 @@
+WIKI_HOME: 主页
+WIKI_BACK: 返回
+WIKI_TITLE: 百科: $1
+WIKI: 百科
+WIKI_BROWSER: 在浏览器中打开
+WIKI_LOADING: 读取中... 
+WIKI_404: 无法找到页面。 

@@ -1,0 +1,131 @@
+ATTITUDES_TAB: 态度 
+ATT_MAX_LEVEL: 态度已达最高值 
+ATT_TAKE_ATT: [b]获得 $1[/b] [color=$Influence]([vspace=-2][img=$Influence;20/][/vspace] $2)[/color]
+ATT_TAKE_COST: 获得更多态度 ： [color=$Influence][img=$Influence;22/] $1[/color]
+ATT_DISCARD: 丢弃 ： [color=$Influence][vspace=-3][img=$Influence;22/][/vspace] $1[/color]
+ATT_CONFIRM_DISCARD: 你确定要抛弃 [b]$1[/b]态度 ？ 
+ATT_HEADER_DESC: <<
+ [font=Medium][color=#63ebdb]倾向 [/color][/font]
+ [vspace=6/][offset=8][i][color=#aaa]影响你的政府和人民的态度是可能的 。 每种态度都可以通过某种行为来将其升级 ， 不同级别有不同奖励 。 使用影响力可以获得更多态度或者抛弃某种已有态度 。 [/color][/i][/offset]
+>>
+ATT_HAVE_ATTITUDE: 已获得该态度 。 
+ATT_CANNOT_ATTITUDE: 无法获得该态度 。 
+
+ATT_DELINQUENT: 拖欠 
+ATT_DELINQUENT_PROGRESS: 摧毁 [b]$1 Remnant舰队 [/b]。 
+ATT_DELINQUENT_L1: 获得 5防御后备 。 
+ATT_DELINQUENT_L2: 从 Remnant 处获得的所有效果提升为双倍 。 
+ATT_DELINQUENT_L3: 提升所有武器伤害 10%。 
+ATT_DELINQUENT_L4: 炮塔的生命值和质量变为双倍 。 
+ATT_DELINQUENT_L5: 所有新建旗舰最低等级为 1。 
+
+ATT_REVERENT: 虔诚 
+ATT_REVERENT_PROGRESS: 激活 [b]$1 Ar古物 [/b]。 
+ATT_REVERENT_L1: 提升帝国自由能量储备 100。 
+ATT_REVERENT_L2: 提升船体护盾上限 20%
+ATT_REVERENT_L3: 每 3分钟在你的星系中产生一个古物 。 
+ATT_REVERENT_L4: 所有折跃的消耗降低 30%。 
+ATT_REVERENT_L5: 每储存 500能量 ， 提升军工生产 30%。 获得 “ 过度虔诚 ” 能力 。 
+ABL_REVERENT_OVERCHARGE: 过度虔诚 
+ABL_REVERENT_OVERCHARGE_DESC: <<
+ 激活过度虔诚会用掉所有的虔诚态度并把它归为等级 0， 并失去所有相关收益 。 
+
+ 为你的舰队提供 6分钟的增益效果 。 
+
+ 所有获得增益的舰队生命值暂时变为双倍 ， 战斗力量提升 25%， 而且修复和开火不需要消耗补给 。 
+>>
+STATUS_REVERENT_OVERCHARGE: 过度虔诚 
+STATUS_REVERENT_OVERCHARGE_DESC: <<
+ 虔诚态度带来的暂时性效果 。 
+
+ 舰队生命值变为双倍 ， 战斗力量提升 25%， 开火和修复不消耗补给 。 
+>>
+
+ATT_MATERIALISM: 物质主义 
+ATT_MATERIALISM_PROGRESS: 向这个态度投资 § $1k 。 
+ABL_SPEND_ATTITUDE_MONEY: 投资 § 500k 
+ABL_SPEND_ATTITUDE_MONEY_DESC: <<
+ 从帝国预算中拿出 § 500k， 用于升级这个态度 。 
+>>
+ATT_MATERIALISM_L1: 提升 50%殖民船只的加速度 。 
+ATT_MATERIALISM_L2: 获得任何融资时 ， 融资总额提升 25%。 
+ATT_MATERIALISM_L3: 从下一任预算中支取金钱不再需要额外的花费 。 
+ATT_MATERIALISM_L4: 轨道和站点的人力成本降低 33%。 
+ATT_MATERIALISM_L5: 所有 2阶及以上资源生产 2 额外压力 。 
+
+ATT_GENEROSITY: 慷慨 
+ATT_GENEROSITY_PROGRESS: 从 stack处购买 [b]$1 外交牌 [/b] 。 
+ATT_GENEROSITY_L1: 你所接触的每个帝国都会使你获得 1影响 ， 最高获得 3。 
+ATT_GENEROSITY_L2: 地表建筑速度提升 35%。 
+ATT_GENEROSITY_L3: 你在投票中使用的所有 ‘ 谈判 ’ 牌获得额外 1支持或者反对 。 
+ATT_GENEROSITY_L4: 每个时代精神的投票立即为你获得 5支持 。 
+ATT_GENEROSITY_L5: 你购买的每一张外交牌都会有一个额外的星级。 
+
+ATT_INDIVIDUALISM: 个人主义 
+ATT_INDIVIDUALISM_PROGRESS: 建造 [b]$1 帝国建筑或轨道 [/b]。 
+ATT_INDIVIDUALISM_L1: 家乡的压力上限提升 6。 
+ATT_INDIVIDUALISM_L2: 地表上的城市 ， 大城市和超级城市的建造会在瞬间完成 。 
+ATT_INDIVIDUALISM_L3: 每 15个人口会使你在帝国的影响增加 1。 
+ATT_INDIVIDUALISM_L4: 所有导弹推进武器的射程提高 50%。 
+ATT_INDIVIDUALISM_L5: 所有新建旗舰会获得命名 。 
+
+ATT_COLLECTIVISM: 集体主义 
+ATT_COLLECTIVISM_PROGRESS: 建造 [b]$1 行星矿点 [/b]。 
+ATT_COLLECTIVISM_L1: 自己的所有行星压力上限提升 1。 
+ATT_COLLECTIVISM_L2: 工厂提供的人力增加 2。 
+ATT_COLLECTIVISM_L3: [b]星球状态 [/b]带来的积极影响变为双倍 。 
+ATT_COLLECTIVISM_L4: 每 4分钟在你的星系中产生一个小行星 。 
+ATT_COLLECTIVISM_L5: 星球上的每个工厂都会给所制造的船体提供 10%的额外生命值 。 
+CONS_HP_BONUS: 船体生命值奖励 
+
+ATT_WARMONGERING: 好战 
+ATT_WARMONGERING_PROGRESS: 通过攻击占领 [b]$1 星球 [/b]
+ATT_WARMONGERING_L1: 你的星球衰退和等级下降所需时间变为双倍 。 
+ATT_WARMONGERING_L2: 当你摧毁地方军队旗舰时 ， 你的所有舰队永久提升 1%战斗力量 。 
+ATT_WARMONGERING_L3: 旗舰支持上限提升 15%。 
+ATT_WARMONGERING_L4: 建造旗舰和站点的人力消耗降低 15%。 
+ATT_WARMONGERING_L5: 根据交战国数量的多少 ， 你的防御和能量生成最多可以获得 50%的提升 。 
+
+ATT_SCHEMING: 策划 
+ATT_SCHEMING_PROGRESS: 赢得 [b]$1 附件投票 [/b]。 
+ATT_SCHEMING_L1: 附件投票失败后 ， 你会获得你所使用的那张牌 。 
+ATT_SCHEMING_L2: 你的帝国发起的投票获得额外 1的支持 。 
+ATT_SCHEMING_L3: 每次有人发起投票 ， 你的影响增加 3。 
+ATT_SCHEMING_L4: 其它帝国通过攻击占领你的星球所需的时间变为双倍 。 
+ATT_SCHEMING_L5: 每次他人购买影响力牌的时候 ， 50%几率获得相同的一张牌 。 
+
+ATT_STABLE: 稳定 
+ATT_STABLE_PROGRESS: 一次将 [b]$1 星球 [/b]升到 3或更高等级 。 
+ATT_STABLE_L1: 提升旗舰获得补给的速率 20%。 
+ATT_STABLE_L2: 你的所有星球对你的忠诚提高 2。 
+ATT_STABLE_L3: 地表建筑建造成本降低 50%。 
+ATT_STABLE_L4: [b]快乐 [/b] 状态的影响变为双倍 。 
+ATT_STABLE_L5: 战斗中船只被毁时 ， 获得该船只 20%的建造成本作为特殊融资 。 
+
+ATT_PROGRESSIVE: 进步 
+ATT_PROGRESSIVE_PROGRESS: 该区域的科技研究 [b]$1已解锁 [/b] 
+ATT_PROGRESSIVE_L1: 获得额外 1基地研究 。 
+ATT_PROGRESSIVE_L2: 提高折跃发生速率 1/s。 
+ATT_PROGRESSIVE_L3: 每当你使用折跃能量时 ， 根据消耗的能量获得科研点数 。 
+ATT_PROGRESSIVE_L4: 把预算中的钱花在福利上时 ， 效果加倍 。 
+ATT_PROGRESSIVE_L5: 旗舰的规格提升 14。 
+
+ATT_TOLERANT: 容忍 
+ATT_TOLERANT_PROGRESS: 搜索其它帝国的星系寻找 [b]$1分钟 * 星系 [/b]
+ATT_TOLERANT_L1: 火箭推动力提升 25%。 
+ATT_TOLERANT_L2: 你的星球人口增长提升 30%。 
+ATT_TOLERANT_L3: 非联盟帝国发起的投票开始时的支持率为 -1。 
+ATT_TOLERANT_L4: 任何针对你的牌会被从外交牌中移除 。 
+ATT_TOLERANT_L5: 与你交战的帝国会损失 50%影响和能量 ， 并且在接下来的 6 分钟里 ， 影响 ， 能量和科研的产生降低 50%。 
+TOLERANT_EFFECT: 容忍与友好 
+TOLERANT_EFFECT_DESC: <<
+ 每个人都喜欢这个帝国 。 如果与他们交战 ， 你会损失 50%影响和能量 ， 并且在接下来的 6分钟里 ， 影响 ， 能量和科研的产生降低 50%。 
+>>
+
+ATT_XENOPHOBIC: 排外 
+ATT_XENOPHOBIC_PROGRESS: 把星系中的 [b]$1哨所 [/b]作为与他国的边疆 。 
+ATT_XENOPHOBIC_L1: 所有轨道生命值提升 50%。 
+ATT_XENOPHOBIC_L2: 哨所支持上限提升 128。 
+ATT_XENOPHOBIC_L3: 哨所的支援型飞船会单独行动并攻击敌船 。 
+ATT_XENOPHOBIC_L4: 支援型飞船的建造成本降低 30%。 
+ATT_XENOPHOBIC_L5: 当你摧毁地方船只时 ， 获得其 20%的维护费用 。 

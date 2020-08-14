@@ -1,0 +1,228 @@
+ERROR_NOT_UNLOCKED: $1 未解锁。 
+ERROR_MODULE_NOT_UNLOCKED: $1 模块未解锁。 
+ERROR_NO_CORE: $1 需要一个核心。 
+ERROR_NEEDS_EXTERIOR_CORE: $1 的核心应置于舰体外表面。 
+ERROR_REQUIRED_MODULE: $1 缺少所需的 $2 模块。 
+ERROR_UNIQUE_MODULE: 只允许在 $1 上放置一个 $2 。 
+ERROR_INSUFFICIENT_Crew: 船员不足。 
+ERROR_INSUFFICIENT_Command: 控制不足。 
+ERROR_INSUFFICIENT_Power: 能源不足。 
+ERROR_DUPLICATE_DESIGN: 存在同名蓝图: 重命名为  '$1' 。 
+ERROR_INVALID_FILE: 非有效蓝图导出文件。 
+ERROR_INVALID_HULL: 无法在此类型船体上使用 $1 。 
+ERROR_MINIMUM_SIZE:  '$1' 船体最小尺寸为 $2 。 
+ERROR_MAXIMUM_SIZE:  '$1' 船体最大尺寸为 $2 。 
+ERROR_MIN_SIZE: $1 的最小尺寸为 $2 。 
+ERROR_HULL_NOT_IN_SHIPSET: 当前舰组无法使用此蓝图的船体。 
+ERROR_NEED_CONTROL: 至少需要 1 单位控制。 
+ERROR_HEX_LIMIT_ARC: $1 炮台必须指向飞船外部。 
+ERROR_FACE_BACKWARDS: $1 排气口必须指向飞船后侧。 
+ERROR_NOT_CONNECTED: 蓝图必须构成相互连接的整体。 
+ERROR_NOT_CONTIGUOUS: $1 必须是相互连接的整体。 
+ERROR_TOO_SMALL: $1 太小了。 
+ERROR_GRID_SIZE: 无效的网格尺寸。 
+ERROR_HEX_COUNT: 使用的内部空间过大。 
+ERROR_MUST_BE_EXTERIOR: 所有 $1 网格必须都是外表面网格。 
+ERROR_MUST_COVER: $1 必须覆盖飞船的所有方向。 
+ERROR_ONE_APPLIED: 只能使用一个 $1 。 
+ERROR_CANNOT_APPLY: 不能使用 $1 子系统。 
+ERROR_MUST_ADJACENT: 所有 六角块必须调整为至少一个 $1 。 
+ERROR_MUST_ADJACENT_INTERIOR: 内部 六角块必须调整为至少一个 $1 。 
+ERROR_CONTIGUOUS: $1 必须要有连接孔 。 
+ERROR_MUST_BE_FILLED: 内部空间必须填满 。 
+ERROR_EXPOSE_LEFT_RIGHT: 左边和右边的 $1 必须放在外面 。 
+ERROR_ONLY_ONE: 只能使用一个 $1 。 
+ERROR_NEED_PRAYER: 船体需要一个神龛来进行祈祷 。 
+ERROR_EQUAL_PRAYER: 祈祷的数量至少要和控制一样 。 
+ERROR_NEED_SHIELD: 只有当飞船有护盾时才能使用 $1 。 
+ERROR_CANNOT_HAVE_WEAPONS: $1 不能装备武器 。 
+ERROR_ALL_POWER: 所有能源必须来自 $1 。 
+ERROR_BRIDGE_AI: 飞船不能被船员和 AI同时控制 。 
+ERROR_REQUIRE_SCOOP: $1 至少要包括一个冲压进气斗。 
+ERROR_SCOOP_FACE_FRONT: 冲压进气斗必须放在外面且要正对飞船 。 
+ERROR_MUST_SURROUND: $1 必须被 $2 六角块围绕 。 
+ERROR_NOT_ALLOWED_ON_MOTHERSHIP: $1 不允许在母船船壳上.
+REQUIRE_CONSTRUCTION_BAY: $1 需要建造港湾来引入劳力 。 
+APPLIED_HULL: 船体
+DESIGNS: 蓝图
+DSG_INSERT_NAME: 为蓝图取名... 
+AUTO_SELECT_HULL: 自动选择船体模型... 
+FORCE_HULL: 船体模型: $1 
+DESIGN_HEX_LIMIT: 内部空间: $1 / $2 
+TT_DESIGN_HEX_LIMIT: <<
+	蓝图所能使用的内部网格数量是有上限的。 
+
+	某些子系统， 比如装甲， 只能放在船体外表面， 这些子系统网格则不算在内部网格数量内。 
+>>
+
+TIP_ROTATE: 你可以使用滚轮改变炮台的指向。 
+
+HULL_EDITOR: 船体编辑器
+HULL_FILES: 档案: 
+HULL_HULLS: 船体: 
+HULL_EDITOR_HELP: 左键单击激活六边网格。 \n右键单击取消六边网格。 \n滚轮单击切换外壳。 
+HULL_ID: ID: 
+HULL_NAME: 名称: 
+HULL_BACKGROUND: 背景: 
+HULL_MODEL: 模型: 
+HULL_MATERIAL: 材料: 
+HULL_ICON: 图标列表: 
+HULL_ICON_INDEX: 图标目录: 
+HULL_HEX_SIZE: 六边格大小: 
+HULL_GRID_OFFSET: 网格偏移量: 
+HULL_BACKGROUND_SCALE: 背景大小: 
+HULL_INTEGRITY: 船体完整性: 
+SUBSYS_CORE: 核心
+SUBSYS_AT: " 在 "
+SUBSYS_HEX: "六边形网格"
+
+HULL_DELETE_FILE_CONFIRM: 你确定要删除船体文件 '$1' 吗?
+HULL_DELETE_HULL_CONFIRM: 你确定要删除船体 '$1' 吗?
+HULL_CLEAR: 清空船体
+HULL_CONFIRM_CLEAR: 你确定要清除船体工作数据吗?
+
+IMPORT_ERRORS: 导入时发生以下错误: 
+IMPORT_INTO_CLASS: 导入至类型: 
+SAVED_CLASS: （已保存类型）
+EXPORT_DESIGN: 导出
+DUPLICATE_DESIGN: 复制
+
+SANDBOX_WAR: 战斗!
+SANDBOX_PEACE: 停火... 
+SPAWN_ALLIED: 生成友军
+SPAWN_ENEMY: 生成敌军
+SANDBOX_CLEAR: 清空沙盒
+SANDBOX_CONFIRM_CLEAR: 确认要销毁沙盒里的所有舰船吗?
+SANDBOX_DESC: 欢迎来到蓝图沙盒! \n蓝图将自动导出到这里。 \n在游戏中使用'导入蓝图'来读取他们。 
+SANDBOX_SAVE_EXPORT: 保存并导出
+
+TT_EDIT_DESIGN: 编辑此蓝图。 
+TT_OBSOLETE_DESIGN: 将此蓝图标记为过时设计。 它将不再于蓝图列表中显示。 过时的支援舰蓝图将不会被产出的防御自动建造。 
+TT_UNOBSOLETE_DESIGN: 将该蓝图再次投入使用， 移除它的过时状态。 
+SHOW_OBSOLETE: 显示过时蓝图
+TT_SHOW_OBSOLETE: 切换是否显示被标记为过时的蓝图。 
+TT_SUPPORT_DESIGN: 该蓝图使用了支援舰船体。 支援舰不能独立移动， 而只能作为大型舰队的一份子， 以旗舰或行星为核心而存在。 
+TT_FLAGSHIP_DESIGN: 该蓝图使用了旗舰船体。 旗舰可以独立自主地行动， 并可为支援舰队提供指挥。 一艘旗舰可以带领的支援舰数量取决于该蓝图拥有多少"支援舰指挥"值。 
+TT_STATION_DESIGN: 该蓝图使用了太空站船体。 太空站不能自主移动， 但可以作为轨道卫星远程建造。 
+TT_SATELLITE_DESIGN: 该蓝图使用了支援卫星船体 。 支援卫星只能在星球上购买， 增加武器射程和状态。。 
+
+S_HP: 总生命值
+S_HexHP: 生命值
+STT_HP: 蓝图中所有网格生命值的总和。 
+
+S_REPAIR: 每秒修理量
+STT_REPAIR: 飞船每秒可以修理的生命值。 在战斗中时该速率减少至该数值的25%。 
+
+S_Shield: 护盾承载力
+STT_Shield: 护盾的最大生命值。 
+
+S_ShieldRegen: 护盾回复
+STT_ShieldRegen: 每秒护盾生命值回复量。 
+
+S_DPS: 每秒伤害值
+STT_DPS: 飞船在战斗中未受伤害时每秒可以造成的伤害值(DPS)。 
+
+S_SUPPLYCAP: 补给上限
+STT_SUPPLYCAP: 这艘旗舰可贮藏的总补给量。 
+
+S_SUPPLYCAP_SUPPORT: 弹 药 存 储 
+STT_SUPPLYCAP_SUPPORT: 发 动 进 攻 的 回 合 ， 这 艘 船 能 携 带 的 弹 药 。 本 地 物 资 消 耗 完 之 后 ， 支 援 船 需 要 回 到 舰 队 中 进 行 补 给 。 并 非 所 有 支 援 船 都 按 照 同 样 的 节 奏 进 行 回 合 制 攻 击 。 
+
+S_SUPPORTCAP: 支援舰指挥
+STT_SUPPORTCAP: 这艘旗舰最多所能指挥的支援舰的总规模之和。 
+
+S_ACCEL: 加速
+STT_ACCEL: 这艘飞船工作时所能维持的最大加速速度。 
+
+S_BOOST_ACCELERATION: 加 速 度 
+STT_BOOST_ACCELERATION: 冲 锋 时 船 只 能 获 得 的 额 外 速 度 。 这 个 速 度 对 基 础 速 度 有 加 成 。 
+
+S_THRUST: 推力
+STT_THRUST: 这艘飞船在亚光速下能产生的最大推力。 
+
+S_TURN_THRUST: 转 身 速 度 
+STT_TURN_THRUST: 飞 船 改 变 方 向 的 速 度 。 
+
+S_MASS: 重量
+STT_MASS: 飞船的总重量。 
+
+S_SUPPLYREGEN: 重填速率
+STT_SUPPLYREGEN: 在友好领地的每秒补给重填量。 
+
+S_SUPPLYUSE: 战斗补给消耗
+STT_SUPPLYUSE: 在战斗中所有武器同时开火时的每秒补给消耗量。 
+
+S_POWER: 能源
+STT_POWER: 飞船上所有子系统产生和消耗的能源量。 
+
+S_CONTROL: 控制
+STT_CONTROL: 飞船上所有子系统产生和消耗的控制量。 
+
+S_HYPERDRIVESPEED: 跃迁引擎速度
+STT_HYPERDRIVESPEED: 该飞船在为受伤害的情况下所能维持的跃迁速度。 
+
+S_SLIPSTREAMTIME: 滑流时间
+STT_SLIPSTREAMTIME: 这艘飞船创造的滑流裂缝所能维持的时间。 
+
+S_SLIPSTREAMOPTDIST: 滑流选择 。 距离 
+STT_SLIPSTREAMOPTDIST: 产生的滑流大于这个距离时， 折跃会受到惩罚。 
+
+S_CargoStorage: 货物存储 
+STT_CargoStorage: 用来存储多种材料， 主要是小行星上的矿物 。 
+
+S_MiningRate: 采矿速度 
+STT_MiningRate: 飞船采矿激光将矿体采集下来并储存起来的速率 。 
+
+S_LaborIncome: 人力生成 
+STT_LaborIncome: 在飞船的建造湾中每分钟生成的人力 。 
+
+S_OreProcessRate: 矿物加工 
+STT_OreProcessRate: 飞船采集或储存的矿物都会被按照这个速度加工成产品。 
+
+S_LaborProcessRate: 物力输出 
+STT_LaborProcessRate: 当矿物加工速度满负荷时， 生成的物力量 。 
+
+S_OreCost: 矿物消耗 
+STT_OreCost: 建造飞船时， 储存中的矿物就会被消耗 。 
+
+S_PRAYER: 祈祷 
+STT_PRAYER: 飞船神龛中提供的祈祷。 祈祷的数量至少要和控制一样。 
+
+S_DPS_SMALL: DPS
+S_DAMAGE: 伤害
+S_BEAMDPS: 激光DPS
+S_DURATION: 持续时间
+S_COOLDOWN: 冷却时间
+S_RELOAD: 重填速度
+S_RADIUS: 半径
+S_RANGE: 射程
+S_SPEED: 速度
+S_PROJ_DR: 炮弹伤害半径
+S_BEAM_DR: 激光伤害半径
+S_EXPL_DR: 爆炸物伤害半径
+S_DR: 伤害抗性
+S_DamageThreshold: 伤害极限值
+S_SUPPLYCOST: 补给消耗
+S_BUILDCOST: 成本
+S_LABORCOST: 产能成本
+S_RESUPPLY: 重填速率
+S_ENERGYCOST: 能量消耗
+S_COST_FACTOR: 成本参数
+S_STELLAR_DAMAGE: 星际伤害
+S_EFFICIENCYBOOST: 力量提升 
+S_Chance: 几率 
+S_Percentage: 百分比 
+S_PowerUse: 使用的能量 
+S_BonusShield: 额外护盾 
+S_EnergyBuildCost: 能量建造消耗 
+STT_EnergyBuildCost: 第一次建造这样的船只时 ， 所必须消耗的能量 。 
+S_DroneCount: 无人机数量 
+S_SupplyGain: 物资获取 
+S_DamageOverTime: DoT DPS
+S_ConvertInterval: 转换间隔 
+S_InfluenceBuildCost: 影响建造消耗 
+STT_InfluenceBuildCost: 第一次建造这样的船只时 ， 所必须消耗的影响 。 
+S_FTLBuildCost: FTL建造消耗 
+STT_FTLBuildCost: 第一次建造这样的船只时 ， 所必须消耗的 FTL。 
+S_Instances: 实体
+S_RaidRange: 袭击距离

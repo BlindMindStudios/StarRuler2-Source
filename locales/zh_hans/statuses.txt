@@ -1,0 +1,24 @@
+STATUS_DEVASTATE: 衰败
+STATUS_DEVASTATE_DESC: 这颗星球上的人口正在随时间消逝。 
+
+STATUS_GRAVITARSHIP: 探空船
+STATUS_GRAVITARSHIP_DESC: 这艘远古飞船可以收集迷失在深空中的神器。 
+
+STATUS_STARTING_PROTECTION: 正在建立保护
+STATUS_STARTING_PROTECTION_DESC: 此星系中的完全忠诚保护还在建立中。 在激活前还要等待一段时间。 
+
+STATUS_BLOCKED_COLONIZATION: 殖民被封锁
+STATUS_BLOCKED_COLONIZATION_DESC: 由于星系中仍有未被消灭的游敌， 该星球不能被殖民。 
+
+STATUS_LIMITED_SIGHT: 有限视野
+STATUS_LIMITED_SIGHT_DESC: 此星系中的星云正限制着你的视野。 
+STATUS_GATE_PACKED: 压紧的门 
+STATUS_GATE_PACKED_DESC: 这扇门当前被压紧了 。 压紧的门可以慢慢移动 ， 但不能发射武器或建立任何虫洞 。 
+
+STATUS_GATE_UNPACKED: 活动的门 
+STATUS_GATE_UNPACKED_DESC: 这是一扇活动的门 ， 可以建立虫洞连到这扇门上 。 
+
+STATUS_IMPROVED_PRESSURE: 额外的压力 
+STATUS_IMPROVED_PRESSURE_DESC: <<
+ 此资源在它被使用的地方给予它的类型的额外的压力 。 
+>>

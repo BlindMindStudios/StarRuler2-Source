@@ -1,0 +1,137 @@
+SCEN1_NAME: 不可避免的征服
+SCEN1_DESC: <<|
+	[b]公元3277年:[/b]
+	一个新的合作议案 - Gevron议案 - 最近通过了保护其签署国免受敌对新种族侵害的提议。 
+	这些签署国为了免受外界伤害， 从之前自卫性的外交政策， 变成了如今的先手进攻。 
+	
+	提案提到了一个新的具有威慑性的敌人 - Nevillin帝国。 
+	虽然该种族崇尚和平， 但是他们开展和平对话的请求被忽视了， 战争也因此要在他们的领土上展开。 
+	
+	Nevillin帝国发现了一个不稳定的虫洞， 并且在利用它扩张到一个偏远的地区。 
+	议案签署国偏执地认为不应该有任何国家在他们的控制之外建立殖民地。 
+>>
+
+SCEN1_PLAYER_EMP: Gevron议案
+SCEN1_ENEMY_EMP: Nevillin帝国
+
+SCEN1_INTRO_TITLE: 不可避免的征服
+SCEN1_INTRO_TEXT: <<|
+	[i]Kollo将军:[/i]
+	
+	少将， 你刚刚受到了新的指派， 从现在开始你将指挥第5海军舰队。 
+	我们最近控制了一个之前由Nevillin掌控的不稳定虫洞， 他们用这个虫洞输送军队和平民飞船。 
+	你必须带领第5海军舰队穿过虫洞， 探查他们的兵力， 并征服所有被平民占据的星系。 
+>>
+SCEN1_INTRO2_TITLE: 增援
+SCEN1_INTRO2_TEXT: <<|
+	[i]Kollo将军:[/i]
+	
+	我们通过虫洞送去了一艘侦查舰和一支小型舰队。 只要我们腾得出手， 以后还会送去更多增援舰队。 
+	你将在遥远的他国作战 - 因此尽量减少损失。 
+>>
+SCEN1_CONQUER_TITLE: 征服和摧毁
+SCEN1_CONQUER_TEXT: <<|
+	你必须消灭Nevillin的军队， 并且占领他们的殖民地。 
+	
+	将他们的小型舰队各个击破来减少损失和存留必要的补给。 
+	
+	新的舰队会不时地通过Varkus的虫洞抵达。 
+>>
+SCEN1_CONQUER_ACT1_TITLE: 征服Nevillin殖民地
+SCEN1_CONQUER_ACT1_TEXT: 占领所有殖民地， 并摧毁所有旗舰和太空站。 
+
+SCEN1_COMPLETE_TITLE: 胜利!
+SCEN1_COMPLETE_TEXT: <<|
+	[i]Kollo将军:[/i]
+	
+	干得漂亮， 少将。 我们不需要再担心Nevillin在战争中从背后偷袭我们了。 
+	但也有坏消息， 我们在主战场屡战不利。 
+	你必须立刻率领第5舰队返程。 聚集我们军力以后， 扭转战局应该不是问题。 
+	
+	[center][b]"不可避免的征服"完成! [/b][/center]
+>>
+
+SEC1_PLAYER_EMP: Nevillin帝国
+SEC1_ENEMY_EMP: 未知帝国
+
+SEC1_INTRO_TITLE: 新的家园
+SEC1_INTRO_TEXT: <<|
+	[i]最高指挥官:[/i]
+	
+	欢迎来到Varkus， 指挥官。 
+	直到虫洞恢复稳定前， 这种官报都会很少并且很简短。 
+	你将指挥Varkus III上新兴的殖民地， 那是一个少有的十分适合我们种族的星球。 
+	
+	我们需要你在这个星系里建立可观的基础设施。 
+	Varkus里有充足的普通金属， 并且附近的星系也应该会有其他更有价值的资源。 
+>>
+
+SEC1_GOAL1_TITLE: 新手上路
+SEC1_GOAL1_TEXT: <<|
+	[b]Varkus III[/b]会成为这片宇宙的军事经济重地。 
+>>
+SEC1_GOAL1_ACT1_TITLE: 将Varkus III建立成新的基地
+SEC1_GOAL1_ACT1_TEXT: <<|
+	将[b]Varkus III[/b]升至2级， 并使其产能提升到每分钟9点。 
+>>
+
+SEC1_GOAL1_DONE_TITLE: 步步为营
+SEC1_GOAL1_DONE_TEXT: <<|
+	[i]最高指挥官:[/i]
+	
+	进展不错。 Varkus III看起来完全可以建立稳定虫洞所需要的建筑了。 
+	我们急切期待着你的成功。 
+>>
+
+SEC1_GOAL2_TITLE: 星际穿越
+SEC1_GOAL2_TEXT: <<|
+	[i]最高指挥官:[/i]
+	
+	我们已经向Varkus送去了虫洞稳定器所需的原件。 
+	让Varkus的工厂尽快开始建造， 这样我们的平民贸易路线才能打通。 
+>>
+SEC1_GOAL2_ACT1_TITLE: 建造虫洞稳定器
+SEC1_GOAL2_ACT1_TEXT: <<|
+	选择Varkus III， 右击Varkus的虫洞稳定器， 并选择'开始工作'来开始建造。 
+>>
+SEC1_STABILIZER: 虫洞稳定器
+
+SEC1_TWIST_TITLE: 计划改变
+SEC1_TWIST_TEXT: <<|
+	[i]最高指挥官:[/i]
+	
+	指挥官， 战争已经打响了。 有一个之前从未遇到过的帝国开始侵略我们的边境， 
+	而且似乎有更大型的敌军舰队正在集结。 他们的侦查舰已经知道了虫洞的存在， 因此这条商路已经不再安全。 
+	我们决定取消虫洞稳定计划， 直到这片区域恢复安全。 
+>>
+
+SEC1_BUILDUP_TITLE: 整军待战
+SEC1_BUILDUP_TEXT: <<|
+	[i]顾问:[/i]
+	
+	先生， 只有这么有限的信息， 我们没办法得知国内的战事如何。 
+	我们应该建造一支有足够规模的舰队来保护这个星系， 免得被敌军打个措手不及。 
+>>
+SEC1_BUILDUP_ACT1_TITLE: 建造一支舰队
+SEC1_BUILDUP_ACT1_TEXT: 在Varkus III建造军舰， 直到我们的战力达到3， 000。 
+
+SEC1_COMBAT_TITLE: 战争!
+SEC1_COMBAT_TEXT: <<|
+	[i]顾问:[/i]
+	
+	有一支不明舰队已经出现! 他们符合最高指挥官讯息里的描述， 请立即将他们认定为敌军。 
+	
+	[b]这支舰队正在重复发送一段简短紧急的讯息， 但我们无法翻译。 [/b]
+>>
+SEC1_COMBAT_ACT1_TITLE: 击败侵略者
+SEC1_COMBAT_ACT1_TEXT: 消灭敌军舰队， 保卫星系。 
+
+SEC1_COMPLETE_TITLE: 孤军奋战
+SEC1_COMPLETE_TEXT: <<|
+	[i]顾问:[/i]
+	
+	太感谢你了， 指挥官。 我们获得了暂时的宁静， 但还是得小心他们可能会卷土重来。 
+	现在来说， 我们应该让自己的人民找到新的落脚点。 
+	
+	[center][b]"新的家园"完成! [/b][/center]
+>>

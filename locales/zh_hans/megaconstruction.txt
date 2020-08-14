@@ -1,0 +1,71 @@
+ARTIFICIAL_PLANETOID: 人造小行星 
+ARTIFICIAL_PLANETOID_DESC: <<
+ 一个完全人工建造的小行星 ， 有自身的大气和重力 。 
+
+ 人造小行星自给自足 ， 并可以制造大型加工厂来满足他们的需求 。 小行星还可以升级并增加更多表面空间 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]建造一个人造的小行星或者任何它的升级都需要从小行星上开采大量的矿石。 [/color][/b][/img]
+>>
+CONS_PLANETOID_UPGRADE: 额外小行星层 
+CONS_PLANETOID_UPGRADE_DESC: <<
+ 给人工小行星增加额外一层表面空间 ， 让其可以建造更多建筑 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要大量小行星矿石 。 [/color][/b][/img]
+>>
+BLD_PLANETOID_LV1: 第一级加工厂 
+BLD_PLANETOID_LV1_DESC: <<
+ 一个专门的加工厂可以代替人工小行星的一个第一级资源需求 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要大量小行星矿石 。 [/color][/b][/img]
+>>
+BLD_PLANETOID_LV2: 第二级加工厂 
+BLD_PLANETOID_LV2_DESC: <<
+ 一个专门的加工厂可以代替人工小行星的一个第二级资源需求 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要大量小行星矿石 。 [/color][/b][/img]
+>>
+
+STARFORGE: 恒星熔炉 
+STARFORGE_BLURB: 撕裂并吸收大量星系恒星来产生劳力 。 
+STARFORGE_DESC: <<
+ 一个直接从恒星外层汲取能量和物质的高级建造厂 。 
+
+ 以缓慢伤害星系中的恒星为代价每分钟产生 25劳力 。 恒星熔炉可以升级来增加其劳力产出量 ， 同时也会加速恒星的损伤 。 
+
+ 所有在恒星熔炉中的建造有 50%建造花费减免 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]建造一个恒星熔炉需要大量小行星矿石 。 [/color][/b][/img]
+>>
+CONS_STARFORGE_UPGRADE: 升级恒星熔炉 
+CONS_STARFORGE_UPGRADE_DESC: <<
+ 增加恒星熔炉每分钟产出劳力 25。 这个还会增加星系中恒星的损伤 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要大量小行星矿石 。 [/color][/b][/img]
+>>
+CONS_CANNIBALIZE_PLANET: 同类相食的行星 
+CONS_CANNIBALIZE_PLANET_DESC: <<
+ 使用恒星熔炉的 matter acquisition beam来完全撕裂一个星系中未拥有或者被抛弃的行星 ， 在过程中获得矿石和储存劳力 。 
+
+ 目标未殖民行星被摧毁 ， 获得 5000矿石和 250存储的劳力 。 
+>>
+
+VACUUM_TELESCOPE: 真空望远镜 
+VACUUM_TELESCOPE_BLURB: 给予所有舰队深空景象 。 
+VACUUM_TELESCOPE_DESC: <<
+ 通过侦测超级领域中与真实空间真空能量改变保持一致的分钟波动 ， 集中质量的族群可以被精准地找到 。 这已经很少使用太阳能系统重力井 ， 因为大量的明星制造太多的噪音检测其他对象 ， 但可以非常准确地检测舰队穿越浩瀚的太空深处 ， 没有其他重要的集群的大规模存在 。 
+
+ 给予所有舰队深空景象 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要大量小行星矿石来建造 。 [/color][/b][/img]
+>>
+
+RINGWORLD: 环世界 
+RINGWORLD_DESC: <<
+ 围绕一个星系恒星的巨大环 ， 面对恒星的环内部表面有可居住空间 。 
+
+ 环世界有 [levels=$1;#ffb4b6]+0/+10/+20/+30/+40/+50[/levels] 增加最大人口数量 。 
+
+ 每种资源类型 ， 如果环世界接收任何资源压力 ， 它获得 [levels=$1;#ffb4b6]2/4/6/8/10/12[/levels] 额外资源压力 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]需要特别大量小行星矿石 。 [/color][/b][/img]
+>>

@@ -1,0 +1,8 @@
+MOVE_TO: 移动至
+ATTACK: 攻击
+ATTACK_TARGET: 攻击 $1
+ONLY_ATTACKABLE: 只能攻击飞船， 轨道卫星， 和星球。 
+ONLY_WAR: 必须处于交战状态。 
+PICK_UP: 拾取
+RALLY_TO: 集结至 $1
+STOP_RALLY: 清除集结点

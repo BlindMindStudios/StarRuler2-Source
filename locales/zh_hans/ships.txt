@@ -1,0 +1,310 @@
+COLONY_SHIP: 殖民舰
+SPORE_SHIP: 孢子船
+CRUISER: 巡洋舰
+TRANSFER_SUPPORT_SHIPS: 转移支援舰
+CREATE_SUPPORT_SHIPS: 创建更多的支援舰
+SCUTTLE_SUPPORT_SHIPS: 移除/凿沉支援舰
+MANAGE_SUPPORTS: 管理支援舰
+ORDER_SUPPORT_COUNT: 订购 $1x $2
+ORDER_SUPPORT_CUSTOM: 自定义订购数量... 
+ORDER_SUPPORT_DESIGN: 支援舰蓝图:
+ORDER_SUPPORT_AMOUNT: 数量:
+ORDER_SUPPORT_COST: 成本:
+ADD_SUPPORTS: 添加支援舰
+SHIP_ORDERS: 命令
+SHIP_FORMATIONS: 阵型
+CONSTRUCTOR_CONSTRUCT: 建造 $1
+CONSTRUCTOR_CONSTRUCT_COST: 建造 $1 ($2)
+SUPPLY: 补给
+STRENGTH: 战力
+PIRATE_HOARD: 海盗贮藏
+REBUY_GHOSTS: 重买( $1)
+FREIGHTER: 货船
+TT_REBUY_GHOSTS: <<
+	通过购买新的支援舰来填补已被消灭的所有支援舰的空白。 舰队需要在支援舰开始生产前移动到一个有产能设施的星系。 
+>>
+CLEAR_GHOSTS: 清除死亡记录
+TT_CLEAR_GHOSTS: <<
+	清除该舰队所有支援舰的死亡记录。 
+>>
+AUTO_FILL_SUPPORTS: 自动填充
+TT_AUTO_FILL_SUPPORTS: <<
+	选中此项后， 舰队会自动从附近的行星填补支援舰来恢复战力。 
+>>
+ALLOW_FILL_FROM_SUPPORTS: 从来源自动填充
+TT_ALLOW_FILL_FROM_SUPPORTS: <<
+ 在检查时 ， 带 “ 自动填充 ” 功能的舰队将自动从此行星上装载辅助船只 。 
+>>
+AUTO_BUY_SUPPORTS: 自动购买
+TT_AUTO_BUY_SUPPORTS: <<
+	选中此项后， 舰队会自动在拥有产能设施的星系购买新的支援舰， 直到舰队达到支援舰数量上限。 
+>>
+REFRESH_SUPPORTS: 从 $1 刷新支援舰队
+ABILITY_TRIGGER: $1
+ABILITY_ENERGY: " (能量: $1)"
+ABILITY_COOLDOWN: " [冷却时间: $1]"
+ABILITY_CD: " [冷却: $1 剩余]"
+BUILD_RETROFIT: 翻新舰队: $1
+RETROFIT_OPTION: 翻新舰队 ( $1， $2 产能)
+CAPTURE_OPTION: 占领星球( $1 补给， $2)
+PROTECTED_OPTION: 无法占领 - 被哨站或协议保护
+REV_SPEC: " r $1"
+SUPPORT_CAPACITY: 支援舰上限
+SLIPSTREAM_TEAR: 滑流裂缝
+ODDITY_GATE: 曲速前进
+EFFECTIVENESS: 效能
+SHIP_CARGO: 货物:
+SHIP_CARGO_WORTH: [right][b][color=#0f0] $1[/color][/b]价值[/right]
+CARGO_GOODS: [img=ResourceIconsSmall::32;21;#888/] [color=#aaa]货物[/color]
+CIVILIAN_MERCHANT: 平民商船
+CIVILIAN_FREIGHTER: 平民货船
+CIVILIAN_CARAVAN: 平民商队
+CIVILIAN_STATION: 平民交易站
+CIVILIAN: 平民
+STATUS_BLOCKADED: 被封锁!
+STATUS_BLOCKADED_DESC: <<|
+	几艘载有该星球进口物资的平民贸易舰被击落了。 因此每有一个"被封锁! "警告， 该行星减少1种随机帝国资源。 
+>>
+PICKUP_PROTECTING: 保护中
+PICKUP_UNPROTECTED: 未被保护
+VERB_PICKUP: 拾取 $1
+VERB_ACTIVATE: 激活 $1
+JUMPDRIVE_SAFETY_WARNING: 警告 ： 对舰队造成伤害 。 
+JUMPDRIVE_SAFETY_WARNING_SEVERE: 警告 ： 引起毁灭性伤害 。 
+
+STATUS_INTERDICT_FTL: 跃迁被关闭
+STATUS_INTERDICT_FTL_DESC: <<|
+	这艘旗舰的跃迁能力被关闭了。 
+>>
+SHIELD_STRENGTH: 护盾
+
+PICKUP_RESEARCH: 科研数据
+PICKUP_RESEARCH_DESC: 捡起以获得科研点。 
+
+PICKUP_INFLUENCE: 影响力知识
+PICKUP_INFLUENCE_DESC: 捡起以获得影响力。 
+
+PICKUP_DRYDOCK: 远古船坞
+PICKUP_DRYDOCK_DESC: 获得120个科研点， 包含3个未完成的远古飞船。 
+
+PICKUP_ASTEROID: 采矿基地
+PICKUP_ASTEROID_DESC: 可以使用的， 可激活的采矿基地。 
+
+PICKUP_ENERGY: 能量贮藏
+PICKUP_ENERGY_DESC: 捡起以获得能量。 
+
+PICKUP_CARD: 奢侈代币
+PICKUP_CARD_DESC: 捡起以获得讨价还价卡。 
+
+PICKUP_ANCIENT_KNOWLEDGE: 先驱知识
+PICKUP_ANCIENT_KNOWLEDGE_DESC: 捡起以获得一张先驱知识卡。 
+
+PICKUP_DEFENSE_MEDIUM: 防御系统 
+PICKUP_DEFENSE_MEDIUM_DESC: 在习得时获得 5个填满的球形防御储备 。 
+
+PICKUP_HPBOOST: 建筑矩阵 
+PICKUP_HPBOOST_DESC: 摧毁此舰队的器件立刻获得 +25%生命值 。 
+
+PICKUP_FLEETBOOST: 埃癸斯矩阵 
+PICKUP_FLEETBOOST_DESC: 摧毁此舰队的器件立刻获得 +50%生命值 ， +25%辅助生命值 。 
+STATUS_PICKUP_FLEETBOOST: 埃癸斯矩阵 
+STATUS_PICKUP_FLEETBOOST_DESC: 此旗舰的生命值提升 50%， 所有在此舰队中辅助船只生命值提升 25%。 
+
+PICKUP_FREEFOOD: 种子储存库 
+PICKUP_FREEFOOD_DESC: 在习得时获得 “ 收获 ” 卡片 。 
+
+PICKUP_MUCHINFLUENCE: 情报装备 
+PICKUP_MUCHINFLUENCE_DESC: 在习得时获得 2点影响股份增益 。 
+PICKUP_INSIGHT: R&D贮藏
+PICKUP_INSIGHT_DESC: 捡起以获得理论灵感。 
+
+HOLD_POSITION: 守住阵地
+HOLD_POSITION_DESC: 不要追赶敌军舰队。 
+AREA_BOUND: 与附近的敌人交战
+AREA_BOUND_DESC: 追赶附近的敌军舰队。 
+REGION_BOUND: 与星系内的敌人交战
+REGION_BOUND_DESC: 在此星系的任何地方追逐敌对的舰队。 
+HOLD_FIRE: 停止射击
+HOLD_FIRE_DESC: 停止所有武器开火， 不攻击任何东西。 
+
+BEH_CLOSE_IN: 接近敌军
+BEH_CLOSE_IN_DESC: 攻击敌军时接近他们， 使他们进入射程。 
+BEH_KEEP_DISTANCE: 保持距离
+BEH_KEEP_DISTANCE_DESC: 使敌军进入射程， 但保持与他们的距离。 
+
+ENG_FLAGSHIP_MIN: 保证旗舰最短射程
+ENG_FLAGSHIP_MIN_DESC: 使旗舰上射程最短的武器也能打击到敌军。 
+ENG_FLAGSHIP_MAX: 保证旗舰最远射程
+ENG_FLAGSHIP_MAX_DESC: 只让旗舰上射程最远的武器可以攻击到敌军。 
+ENG_SUPPORT_MIN: 保证支援舰最短射程
+ENG_SUPPORT_MIN_DESC: 使支援舰上射程最短的武器可以打击到敌军。 
+ENG_RAIDING_ONLY: 袭击范围
+ENG_RAIDING_ONLY_DESC: 让旗舰保持在支援舰可以袭击到的最远距离。 
+ABL_FULLBURST: 全弹发射
+ABL_MISSILE_STORM: 导弹风暴
+ABL_RELOCATE_ALL: 瞬移传送器
+ABL_CHARGE_ALL: 超空间补给脉冲
+ABL_MIGRATE_ALL: 加速移民
+ABL_UNPACK_GATE: 部署星门
+ABL_UNPACK_GATE_DESC: 部署这艘舰船作为一个跃迁星门， 花费100 跃迁能。 
+ABL_PACK_ORBITAL: 收起轨道卫星
+
+TT_OPEN_CONSTRUCTION: <<|
+ [b]建筑队列 [/b]
+
+ 打开建筑队列和建造菜单 。 
+>>
+
+TT_MANAGE_SHIP_SUPPORTS: <<|
+	[b]管理支援舰[/b]
+
+	管理目前部署在这个舰队下的支援舰。 
+>>
+
+TT_HYPERDRIVE: <<|
+	[b]跃迁引擎[/b]
+
+	用装备的跃迁引擎进行跃迁。 
+>>
+
+TT_JUMPDRIVE: <<|
+ [b]超空间跳跃引擎 [/b]
+
+ 使用装备的超空间跳跃引擎进行超光速移动 。 
+>>
+
+TT_FLING: <<|
+	[b]弹射[/b]
+
+	用附近的弹射信标进行跃迁。 
+>>
+
+TT_SLIPSTREAM: <<|
+	[b]生成滑流裂缝[/b]
+
+	用舰船的滑流生成器制造一个新的通往目的地的裂缝。 
+>>
+
+TT_SHIP_HEALTH: <<
+	[font=Medium]生命值[/font]
+	显示当前舰船的剩余生命值。 如果所有舰桥网格都被毁坏， 舰船会在生命值耗尽前被摧毁。 
+
+	[b]当前生命值[/b] [offset=230] $1[/offset]
+	[b]最大生命值[/b] [offset=230]$2[/offset]
+
+	[b]维修速率(交战状态)[/b] [offset=230]$3/秒[/offset]
+	[b]维修速率(未交战状态)[/b] [offset=230]$4/秒[/offset]
+>>
+
+TT_SHIP_SHIELD: <<
+	[font=Medium]护盾[/font]
+	任何飞船将要受到的伤害都会先消耗护盾值。 护盾总量越小， 透过护盾的伤害就越大。 
+
+	[b]当前护盾[/b] [offset=230] $1[/offset]
+	[b]最大护盾[/b] [offset=230]$2[/offset]
+
+	[b]护盾回复[/b] [offset=230]$3/秒[/offset]
+>>
+
+TT_SHIP_SUPPLY: <<
+	[font=Medium]舰队补给[/font]
+	舰队贮藏的全部剩余补给。 补给可用来发射武器和占领星球。 未交战时舰队会重新补给。 补给过低会降低舰队效能及伤害输出。 
+
+	[b]当前补给[/b] [offset=230] $1[/offset]
+	[b]补给余量[/b] [offset=230]$2[/offset]
+
+	[b]重新补给速率(中立领地)[/b] [offset=230]$3/秒[/offset]
+	[b]重新补给速率(友方领地)[/b] [offset=230]$4/sec[/offset]
+>>
+
+TT_SHIP_STRENGTH: <<
+	[font=Medium]舰队战力[/font]
+	显示舰队整体战力的估计值。 战力越高的舰队获胜概率越大。 舰队效能增加伤害输出及整体战力。 
+
+	[b]当前战力[/b] [offset=230] $1[/offset]
+	[b]初始战力[/b] [offset=230]$2[/offset]
+
+	[b]当前舰队总生命值[/b] [offset=230]$3[/offset]
+	[b]当前舰队总伤害输出[/b] [offset=230]$4/sec[/offset]
+
+	[b]舰队效能[/b] [offset=230]$5[/offset]
+>>
+TT_SHIP_EFF_BONUS: [b]舰队力量奖励 [/b][offset=230]$1[/offset]
+
+TT_SHIP_EXPERIENCE: <<
+ [font=Medium]老练 [/font]
+ 当舰队击败敌旗舰时 ， 舰队获得经验值 ， 从而获得老练等级来增加其强度并支持命令 。 
+
+ [b]当前老练 [/b][offset=230]等级 $3[/offset]
+
+ [b]经验值 [/b][offset=230]$4 / $2[/offset]
+>>
+
+TT_SHIP_LEADER: <<
+	[font=Medium] $1[/font]
+
+	旗舰。 
+>>
+
+TT_SHIP_GROUP: <<
+	[font=Medium] $1 ($2)[/font]
+
+	[b]存活[/b] [offset=120]$3x[/offset]
+	[b]死亡[/b] [offset=120]$4x[/offset]
+	[b]已订购[/b] [offset=120]$5x[/offset]
+>>
+
+TT_EXPLORE: <<|
+	[b]自动探索[/b]
+	
+	自动探索星系。 
+>>
+
+TT_EXPLORE_FTL: <<|
+	[b]自动跃迁探索[/b]
+	
+	自动探索星系。 
+	用不超过一半的帝国跃迁能储备快速探索。 
+>>
+
+STATUS_PIRATESHIP: 海盗船
+STATUS_PIRATESHIP_DESC: <<
+	这艘飞船是一艘海盗船， 它会劫掠平民贸易舰的货物。 
+
+	它可能会把它抢到的货物放在"海盗贮藏"空间站内， 藏在宇宙深处。 
+>>
+
+SUPPORT_BEH: 行为 
+BEH_Brawler: 争吵者 
+BEH_Brawler_DESC: 投机的攻击补给部队 ， 如果装备了弹药储备 ， 会突袭敌舰队 。 
+BEH_Shield: 护盾 
+BEH_Shield_DESC: 保护旗舰和补给部队 。 
+BEH_Cavalry: 装甲部队 
+BEH_Cavalry_DESC: 找到开口来突袭有价值的敌补给部队 。 
+BEH_Artillery: 炮队 
+BEH_Artillery_DESC: 躲在友军舰队后面 ， 对敌关键目标发射远程齐射 。 
+BEH_Bombardment: 轰炸 
+BEH_Bombardment_DESC: 围攻敌行星 （ 未开发 ） 
+BEH_Cannon: 大炮 
+BEH_Cannon_DESC: 消灭有价值的敌目标的补给部队 。 
+BEH_Support: 舰队支持 
+BEH_Support_DESC: 躲在友军舰队后面 ， 不试图打击目标 。 
+BEH_Bomber: 轰炸机 
+BEH_Bomber_DESC: 专注于敌旗舰 ， 如果配备弹药储备 ， 将突袭敌人 。 
+
+SUPPORT_RANGE: 交火范围 
+RANGE_Auto: 自动 
+RANGE_Far: 远 
+RANGE_Close: 关闭 
+
+STATUS_FLUX_COOLDOWN: 磁通冷却 
+STATUS_FLUX_COOLDOWN_DESC: <<
+ 此舰队最近使用了磁通场来旅行 ， 在短期内无法再次使用它 。 
+>>
+
+STATUS_SHIPLEVEL: 经验 
+STATUS_SHIPLEVEL_DESC: <<
+ 此旗舰的船员由经验丰富的老兵组成 ， 在每个老练等级增加 20％ 旗舰生命值和作战效率 ， 增加 10％ 其保障指挥 。 
+
+ 摧毁敌旗舰或者使用模拟器来训练你的船员 ， 以增加舰船的老练等级 。 
+>>

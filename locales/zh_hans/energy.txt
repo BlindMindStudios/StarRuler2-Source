@@ -1,0 +1,162 @@
+ABL_FLEET_EFFICIENCY: 超载舰队
+ABL_FLEET_EFFICIENCY_DESC: <<|
+	永久提升舰队的效能30%。 
+>>
+
+STATUS_OVERCHARGED: 已超载
+STATUS_OVERCHARGED_DESC: <<|
+	战斗效能已提升30%。 
+>>
+
+ABL_PLANET_GROWTH: 活跃提升
+ABL_PLANET_GROWTH_DESC: <<|
+	在3分钟内星球的人口增长和开发速度翻倍。 
+>>
+
+STATUS_PLANET_GROWTH: 已提升
+STATUS_PLANET_GROWTH_DESC: <<|
+	人口增长和开发速度已暂时翻倍。 
+>>
+
+ABL_ASTEROID_LIMIT: 升级基地
+ABL_ASTEROID_LIMIT_DESC: <<|
+	升级小行星采矿基地， 使其可以开采一种额外的资源。 
+>>
+
+ABL_FLEET_SUPPORT: 扩充支援舰队
+ABL_FLEET_SUPPORT_DESC: <<|
+	提升舰队的支援舰上限300。 
+>>
+
+STATUS_EXPANDED: 已扩充
+STATUS_EXPANDED_DESC: <<|
+	舰队的支援舰上限已提升了300。 
+>>
+
+ABL_ORBITAL_DEFENSE: 布置防御
+ABL_ORBITAL_DEFENSE_DESC: <<|
+	在这个轨道上安设近程加特林炮， 用于局部防御。 
+>>
+
+STATUS_DEFENDED: 布设防御
+STATUS_DEFENDED_DESC: <<|
+	拥有近程加特林炮用于防御。 
+>>
+
+ABL_PRESS_ATTACK: 抑制进攻
+ABL_PRESS_ATTACK_DESC: <<|
+	目标舰队获得双倍的基础效能， 并且每秒生命值回复50点。 
+
+	你当前每拥有一个能量电池， 该效果持续15秒。 
+>>
+
+STATUS_PRESS_ATTACK: 发动进攻
+STATUS_PRESS_ATTACK_DESC: <<|
+	基础效能已翻倍。 舰队每秒回复50点生命值。 
+>>
+
+ABL_FLOAT_BUDGET: 战争集资
+ABL_FLOAT_BUDGET_DESC: <<|
+	花费当前所有预算并获得下期的预算作为额外利润。 
+
+	距离预算周期开始时间点越近， 以及当前持有的能量
+	电池越多， 得到的额外资金越多。 
+>>
+
+ABL_ENTANGLE: 无效化
+ABL_ENTANGLE_DESC: <<|
+	阻断一艘目标旗舰的加速， 并使其引擎和跃迁能力失效， 
+	可持续20秒。 
+
+	你每拥有一个能量电池， 该效果的持续时间额外延长20秒。 
+>>
+
+STATUS_ENTANGLED: 已无效化
+STATUS_ENTANGLED_DESC: <<|
+	旗舰无法移动或使用跃迁能。 
+>>
+
+ABL_PILGRIMAGE: 朝圣
+ABL_PILGRIMAGE_DESC: <<|
+	[b]花费你所有的能量电池。 [/b]
+
+	你每花费一个电池， 就可获得2张随机权势卡。 
+
+	你每花费一个电池， 就可从每个其他帝国窃取最多2点影响力。 
+>>
+
+PILGRIMAGE_NOTIF: [color=$2] $1[/color]:煽动了[b]朝圣[/b]
+PILGRIMAGE_NOTIF_DESC: <<|
+	[color=$2] $1[/color]已经煽动了一场宏大的朝圣之旅， 获得了多张随机的权势卡并从其他帝国窃取了影响力。 
+>>
+
+OT_Ship: 舰船
+OT_Planet: 星球
+OT_Orbital: 轨道卫星
+OT_Star: 恒星
+OT_Artifact: 神器
+OT_Anomaly: 异像
+OT_Asteroid: 小行星
+
+NTRG_NOT_SPACE: 无法以太空为目标。 
+NTRG_SPACE: 必须选择无主的 。 
+NTRG_NOT_SELF: 无法以自身为目标。 
+NTRG_TRADE_PRESENCE: 需要有贸易存在。 
+NTRG_NOT_WAR: 不能以敌人为目标。 
+NTRG_TYPE: 必须以 $1为目标。 
+NTRG_ORBITAL_CORE: 必须以 $1为目标。 
+NTRG_FLAGSHIP: 必须以旗舰为目标。 
+NTRG_STATION: 必须选择站点 。 
+NTRG_VISION: 需要视野。 
+NTRG_OWNED: 必须以自身为目标。 
+NTRG_ALLIED: 必须以自己或者盟军为目标。 
+NTRG_NOT_ALLIED: 不能以盟军为目标... 
+NTRG_UNNAMED: 无法作用于已命名的目标。 
+NTRG_STATUS: 已拥有此状态。 
+NTRG_FTL: 不能以处于跃迁状态的舰船为目标。 
+NTRG_TERRITORY: 必须以同一领土内的单位为目标。 
+NTRG_SAME_REGION: 必须选择同一星系 。 
+NTRG_PLLEV: 必须以 $1级或更低级的行星为目标。 
+NTRG_PLLEVA: 必须选择 $1级或以上 。 
+NTRG_PLLEVE: 必须选择 $1级 。 
+NTRG_RSLEV: 必须选择 $1阶或以下 。 
+NTRG_RSLEVA: 必须选择 $1阶或以上 。 
+NTRG_RSLEVE: 必须选择 $1阶 。 
+NTRG_REGION: 必须以地区为目标。 
+NTRG_TERRAFORM: 必须能够进行星球改造。 
+NTRG_NOT_NATURAL: 不能以自然神器为目标。 
+NTRG_NATURAL: 必须以自然神器为目标。 
+NTRG_OWN_SYSTEM: 必须拥有所有星球。 
+NTRG_CONTACT: 必须与其他帝国邻接。 
+NTRG_IN_SYSTEM: 必须放置于星系内。 
+NTRG_NOT_SYSTEM: 必须放置于星系外。 
+NTRG_IN_UNIVERSE: 必须放置于宇宙边境。 
+NTRG_NEED_WAR: 必须以敌军为目标。 
+NTRG_CONSTRUCTION: 必须可以使用产能。 
+NTRG_UNIQUE: 不能以特殊资源为目标。 
+NTRG_ARTIFICIAL: 无法选择人工资源 。 
+NTRG_NO_COLONIZE: 行星被遗族封锁 。 
+NTRG_CARGO: 必须选择有货物存储的物体 。 
+NTRG_NO_HOME: 无法选择家园星系 。 
+NTRG_REQUIRE: 需求 $1
+NTRG_CANNOT: 无法选择 $1
+NTRG_STORAGE_FULL: $1存储已满 。 
+NTRG_LOYALTY_MAX: 忠诚度太高 。 
+NTRG_MIN_MAXPOP: $1最大人口需求 
+
+ABL_ENSLAVE: 奴役
+ABL_ENSLAVE_DESC: <<|
+	生成临时的苦工产能来源。 
+	每颗行星只能用一次。 
+>>
+
+STATUS_ENSLAVED: 已奴役
+
+STATUS_SEEDSHIP: 神器种舰
+STATUS_SEEDSHIP_DESC: <<|
+	这艘古老战舰在星系之间不断航行， 制造神器并将它们留给更加年轻的
+	种族们去搜寻。 
+>>
+
+ENERGY_COST: 能源消耗
+COOLDOWN: 冷却时间

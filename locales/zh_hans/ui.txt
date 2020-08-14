@@ -1,0 +1,185 @@
+BLUEPRINTS: 蓝图
+OPTIONS: 选项
+TAB: 标签页
+RESEARCH_OVERVIEW: 研究概览
+DESIGN_OVERVIEW: 蓝图概览
+GALAXY_CAMERA: 星系视角
+GALAXY: 星系
+STATS_TAB: 数据
+SYSTEM_TAB: 系统
+PLANETS_TAB: 行星
+PLANETS_MODE_NORMAL: 正常
+PLANETS_MODE_MONEY: 收入
+PLANETS_MODE_PRODUCTION: 产出
+PLANETS_MODE_REQS: 需求
+PLANETS_MODE_TILES: 表层地块
+PLANETS_MODE_PRESSURE: 压力 
+NOTICE: 注意
+
+EMPIRE_ENERGY: "能量: "
+EMPIRE_SOLARGENS: "太阳能发电机: "
+EMPIRE_SUPPLY: $1/$2
+EMPIRE_SUPPLY_OUTPUT: $1%
+
+PLANET_INFO: $1 ($2B/$3B)
+PLANET_POPULATION: $1十亿殖民者
+
+ANOMALY_FIELD: 异常区
+SCAN_ANOMALY: 扫描异常区
+INVESTIGATE_ANOMALY: 调查异常区
+
+BACK_TO_OVERVIEW: 返回到概览
+
+CONCEPT: 概念
+CONSTRUCTION: 工程
+MISSION_GOALS: 任务目标
+REVIEW: 回顾
+
+BUILT_NOTIFICATION: $1已经建成。 
+BUILT_AT_NOTIFICATION: $1已在$2建成。 
+BUILT_ON_NOTIFICATION: $1已在$2建成。 
+
+QUEUE_SIZE: 队列中还有 $1。 
+BUILDING_THING: 正在建造 $1($2%)
+BUILDING_NOTHING: 没有正在建造的项目
+
+DESIGN_SIZE: 规模 $1
+CREATE_DESIGN: 创建蓝图
+CREATE_DESIGN_CLASS: 创建分类
+IMPORT_DESIGNS: 导入蓝图
+SEARCH_DESIGNS: 搜索蓝图... 
+DESIGN_CLASS_NAME: 蓝图分类名称:
+
+DESIGN_NAME_INPUT: 名称:
+DESIGN_CLASS_INPUT: 分类:
+DESIGN_SIZE_INPUT: 规模:
+DESIGN_HULL_INPUT: 船体:
+MINSIZE_SUPPORT: 规模 $1+， 支援舰
+MINSIZE_FLAGSHIP: 规模 $1+， 旗舰
+MINSIZE_STATION: 规模 $1+， 太空站
+DESIGN_FLAGSHIP: 旗舰
+DESIGN_SUPPORT: 支援舰
+DESIGN_STATION: 空间站
+DESIGN_SATELLITE: 支援卫星 
+
+DESIGN_SHOW_ARCS: 切换是否持续显示武器炮台[b]火力覆盖范围[/b]。 
+DESIGN_SHOW_HULL: 切换是否在编辑蓝图时显示你的蓝图的整体外观。 
+DESIGN_CENTER: 将蓝图居中显示。 
+DESIGN_RANDOMIZE: 为此战舰类型生成完全随机的蓝图。 
+DESIGN_RANDOMIZE_CONFIGURE: 设定随机蓝图生成参数。 
+DESIGN_CONFIGURE: 随机生成编辑器
+DESIGN_UNDO: 撤销上一步操作。 ( $1)
+DESIGN_REDO: 恢复已撤销的操作。 ( $1)
+DESIGN_PAINT_TOOL: <<
+	[b]画图工具( $1)[/b]
+	[color=#0f0]按住左键来放置选定的子系统类型。 [/color]
+	[color=#f00]按住右键来删除网格。 [/color]
+	强化， 核心和炮台网格可以通过按住左键拖动来移动。 
+
+	[i]左键点击时按住Ctrl可以创建新的核心网格， 而不是向已存在的子系统添加网格。 [/i]
+
+	[i]按住Alt或者鼠标滚轮来快速取样。 [/i]
+>>
+DESIGN_MOVE_TOOL: <<
+	[b]移动工具( $1)[/b]
+	移动当前选定的网格。 
+
+	[i]按住Shift来移动整个子系统。 [/i]
+
+	[i]按住Ctrl来拖拽复制子系统。 [/i]
+>>
+DESIGN_DROP_TOOL: <<
+	[b]取样工具( $1)[/b]
+	左键单击来取样想要创建的子系统类型。 
+>>
+DESIGN_REPLACE_TOOL: <<
+ [b]替换工具 ($1)[/b]
+ 点击一个子系统来使用已选子系统替换它 。 
+>>
+DESIGN_CLEAR: 清空蓝图。 操作可以撤销。 
+
+DESIGN_RND_WEAPONCOUNT: 武器数量
+DESIGN_RND_ENGINESIZE: 引擎尺寸
+DESIGN_RND_HYPERSIZE: 跃迁引擎尺寸
+DESIGN_RND_SUPPLIES: 提升补给上限。 
+DESIGN_RND_SUPPORT: 提升支援舰上限。 
+
+GRAPHICS_EDITOR: 图形编辑器
+MODULES: 模块
+
+WEAPONS: 武器
+DEFENSES: 防御
+
+SAVE_GAME_DATA: 保存到游戏数据
+SAVE_GAME_DATA_CONFIRM: 你确定要覆盖游戏数据吗?
+RESET_GAME_DATA: 重置游戏数据
+RESET_GAME_DATA_CONFIRM: 你确定要重置游戏数据吗?
+MUTATION_CHANCE: 突变概率:
+NAME_COUNT: $1名称
+
+CONFIRM_OVERWRITE: 你确定要覆盖' $1'吗?
+CONFIRM_DELETE_FILES: 你确定要删除以下所有文件/目录以及其内容吗?
+FILENAME_LABEL: 文件名:
+NEW_DIRECTORY: 新目录
+CREATE_DIRECTORY: 创建目录
+DIRECTORY_LABEL: 目录:
+
+PLAY_EMPIRE_TITLE: 选择帝国
+SPECTATE: 旁观
+PLAY_EMPIRE: 启用帝国
+
+FREE_RESOURCES: 未使用资源
+DISABLED_RESOURCES: 不可用资源
+NO_POP_RESOURCES: 生产所需人口不足
+DECAYING_PLANETS: 正在衰变的星球
+LABOR_PLANETS: 提供产能的星球/轨道
+COLONIZING_PLANETS: 部分殖民
+INFLUENCE_STACK: 权势卡商店
+WONDER_PLANETS: 拥有的奇观
+UNDER_SIEGE_PLANETS: 被围攻的行星
+DEFENSE_TARGETS: 产出防御舰的地点
+ALL_FLEETS: 所有旗舰
+CIVILIAN_FLEETS: 平 民 旗 舰 
+MOTHERSHIPS: 母 舰 
+DEFENSE_STATIONS: 防御太空站
+COMBAT_FLEETS: 战斗中的舰队
+FLEETS_LOW_SUPPLY: 支援舰不足的舰队
+AVAIL_ARTIFACTS: 可用的神器
+COLONIZE_SAFE_PLANETS: 殖民所需人口充足
+AUTO_IMPORTS: 等待中的自动进口
+TT_AUTO_IMPORTS: 星球正在等待[img=$3;20/] [b] $1份$2资源(s)[/b]才能开始自动进口。 
+OVERPRESSURE_PLANETS: 星球压力达到上限 
+
+ASTEROID_UNOWNED: <<
+ 选 择 有 劳 动 力 的 星 球 并 右 击 这 个 陨 石 来 建 造 一 个 [b][color=#8c4ec9]采 矿 基 地 [/color][/b] 来 开 采 资 源 。 
+>>
+ASTEROID_UNOWNED_TOOLTIP: 必须有拥有产能的行星在此小行星上建造矿场。 
+ASTEROID_OWNED: <<
+ 这 陨 石 上 有 一 座 采 矿 基 地 。 如 果 失 去 贸 易 路 线 ， 这 座 采 矿 基 地 会 被 移 除 。 
+>>
+ASTEROID_OWNED_TOOLTIP: 这个小行星正在被一个行星开采。 占领该行星就可以占据这里的矿场。 
+
+ASTEROID_MINING: <<
+ 这个小行星有一种特殊矿石， 需要一艘[color=#91692c][b]采矿船[/b][/color], 然后才能运到星球 上 使 用 。 
+>>
+MOVE_TO_OBJ: 移动到 $1
+
+GO_RESOURCE: $1
+GO_RESOURCE_TYPE: 寻找资源
+
+TT_GAMETIME: <<|
+	显示游戏开始以来的时间。 
+
+	[i]点击以切换至真实时间。 [/i]
+>>
+TT_REALTIME: <<|
+	显示当前真实时间。 
+
+	[i]点击以切换至游戏时间。 [/i]
+>>
+TT_PAUSE: 切换游戏暂停。 
+TT_SLOWER: 减慢游戏速度
+TT_FASTER: 加快游戏速度
+PAUSED: 已暂停
+WAITING: 等待中
+NOTIFICATION_LOG: 事件记录 
