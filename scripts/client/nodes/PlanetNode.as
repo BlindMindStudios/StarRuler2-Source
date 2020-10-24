@@ -262,6 +262,19 @@ class DynTex {
 			return;
 		}
 
+		// Try to fail more gracefully than causing a CTD if the
+		// grid size is wrong
+		// If the netcode messes up this can sometimes be way larger than any
+		// actual grid size. In that scenario, trying to create the Image
+		// can easily cause a Crash To Desktop and completely stop the game.
+		if (size.x > 3000 || size.y > 3000) {
+			print("Read grid size that is way too high, aborting texture cache to avoid CTD");
+			print(string(size.x)+"x"+string(size.y));
+			print("Has the netcode or PlanetSurface gone haywire?");
+			@this.obj = null;
+			return;
+		}
+
 		Image img(size, 4);
 
 		uint shown = obj.getSurfaceData(img);

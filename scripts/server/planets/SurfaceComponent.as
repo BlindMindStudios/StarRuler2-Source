@@ -2591,6 +2591,17 @@ tidy class SurfaceComponent : Component_SurfaceComponent, Savable {
 			msg.write0();
 		}
 		msg.writeBit(needsPopulationForLevel);
+		// Tell the client the LevelChainId before it tries to use it, fixes
+		// bug where the client was reading the max level of a planet before
+		// it found out the level chain of that planet. This meant that any
+		// planet with a level chain that had a different max level to the
+		// level chain with an id of 0 would be decoded incorrectly, and offset
+		// the rest of the message by some number of bits, completely breaking
+		// all decoding that followed. In the worst case, the broken decoding
+		// would cause a Crash To Desktop as the PlanetNode tried to create
+		// an Image with a ludicrous size, or the PlanetSurface tried to
+		// create an array for a ludicrous grid size that ran out of memory.
+		msg.writeLimited(LevelChainId,getLevelChainCount());
 		msg.writeLimited(ResourceLevel,maxLevel);
 		msg.writeBit(isSendingColonizers);
 	}
