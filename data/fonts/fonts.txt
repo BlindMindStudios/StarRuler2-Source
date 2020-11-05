@@ -220,3 +220,95 @@ Font: JP_20
 	Page6: 3000 - 30FF
 	Page7: FF00 - FFEF
 	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_8
+	Locale: zh_hans
+	Replace: DroidSans_8
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_10
+	Locale: zh_hans
+	Replace: DroidSans_10
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 10
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_11
+	Locale: zh_hans
+	Replace: DroidSans_11
+	Replace: DroidSans_11_Bold
+	Replace: OpenSans_11_Italic
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 11
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_14
+	Locale: zh_hans
+	Replace: DroidSans_14
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 14
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_16
+	Locale: zh_hans
+	Replace: DroidSans_16
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 16
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
+
+Font: Zh_Hans_20
+	Locale: zh_hans
+	Replace: DroidSans_20
+
+	File: data/fonts/DroidSansFallbackFull.ttf
+	Size: 20
+	Page1: 0000 - 024F
+	Page2: 0370 - 03FF
+	Page3: 0400 - 04FF
+	Page4: 2200 - 22FF
+	Page5: 2000 - 20FF
+	Page6: 3000 - 30FF
+	Page7: FF00 - FFEF
+	Page8: 4E00 - 9FAF
