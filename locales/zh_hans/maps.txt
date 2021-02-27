@@ -1,0 +1,29 @@
+SPIRAL_GALAXY: 螺旋星系
+SPIRAL_GALAXY_DESC: 有许多螺旋状旋臂的星系。 
+
+CORKSCREW_GALAXY: 螺纹星系
+CORKSCREW_GALAXY_DESC: 沿同一条螺纹分布的星系。 
+
+CLUSTERS_MAP: 星团星系
+CLUSTERS_MAP_DESC: 由狭窄的通道连接的若干较小的星团。 
+
+DUMBBELL_MAP: 哑铃星系
+DUMBBELL_MAP_DESC: 中间由一条宽阔的通道连接的两个较大的星团。 
+
+PERFECT_MIRROR: 完美镜像
+TT_PERFECT_MIRROR: <<|
+	令星际的两端形成完美的镜像， 包括生成的行星， 神器， 异常区， 游民等等都会被复制。 
+
+	该地图可用于公平的1v1或团队游戏。 
+>>
+
+EXPANSE_MAP: 无尽太空
+EXPANSE_MAP_DESC: <<|
+	占领游民的家园或者向无尽的外太空扩张。 
+>>
+EXPANSE_MAP_TEXT: <<
+	[i][color=#aaa]帝国围绕着游民的家园分布。 游民的舰队可以被击败， 他们的行星也可以被殖民。 在星际的外边缘也同样有游民军队守卫， 击败他们就可以向更远的未被发现的星系扩张。 [/color][/i]
+>>
+
+RINGS_MAP: 环
+RINGS_MAP_DESC: 大型连环星系 。 

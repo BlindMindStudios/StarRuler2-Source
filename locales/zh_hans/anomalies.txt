@@ -1,0 +1,437 @@
+ANOMALY_DEBRIS_FIELD: 残骸区
+ANOMALY_NOTIFICATION: $1的异常已经扫描完毕。 
+SCAN_PROGRESS: 用舰船扫描来访问选项... 
+ANOMALY_CHOICES: 选项
+
+ANOMALY_DEBRIS_FIELD: 残骸区
+ANOMALY_NAR_DEBRIS: <<|
+	在无尽的残骸之中， 唯有一个信号在闪烁， 时近
+	时远。 
+>>
+
+ANOMALY_NAR_DERELICT_BROKEN: <<|
+	找到信号的来源后， 出现在你眼前的是一艘古老的战舰残骸。 
+
+	看起来受损很严重， 但上面也许还有我们能用的东西。 
+>>
+ANOMALY_DERELICT_SCRAP: <<|
+	拆解战舰的零件， 并将得到的科技在黑市上出售。 
+
+	[b][color=#d1cb6a][right]获得 §$1k[/right][/color][/b]
+>>
+ANOMALY_DERELICT_RESEARCH: <<|
+	派一队科学家到战舰上研究尚且完好的子系统。 
+
+	[b][color=#842cdb][right]获得随机数量的科研点。 [/right][/color][/b]
+>>
+ANOMALY_NAR_DERELICT_INTACT: <<|
+	找到信号的来源后， 出现在你眼前的是一艘基本没有受损的古老战舰。 
+
+	由于战舰的系统对于我们来说太陌生， 重启它可能会导致
+	难以预计的后果。 
+>>
+ANOMALY_DERELICT_ACTIVATE: <<|
+	尝试启动， 获得战舰的控制权。 
+
+	[b][color=#ff0000][right]后果不明。 [/right][/color][/b]
+>>
+ANOMALY_DERELICT_CAMP: <<|
+	对核心引擎系统做了些修理后， 战舰成功启动， 
+	引擎飞速运转。 
+
+	但是你的工程师们没能破解高科技AI系统， 
+	只好把这堆废铁丢进了太空， 恢复了战舰的自动防御机制。 
+>>
+ANOMALY_DERELICT_DRYDOCK: <<|
+	战舰的内部比我们想象的要破败， 
+	可能需要大规模的整修。 
+
+	幸好我们成功破解了战舰的控制系统。 
+	这样等它维修完成我们就可以
+	顺利操作了。 
+>>
+ANOMALY_DERELICT_SUPPORTS: <<|
+	在激活了战舰的中控电脑后， AI系统检测到了
+	引擎系统的异常， 并自动发射了战舰的
+	支援舰。 
+
+	我们的工程师及时逃离了战舰的爆炸， 
+	但还是没能破解自动
+	支援舰的密码。 
+>>
+
+ANOMALY_NAR_ANCIENT_GATE: <<|
+	微弱的重力异常让我们发现了一个漂浮在太空中的
+	星环。 可能是受长久的辐射影响， 
+	它的外部结构磨损的只剩下一层薄壳。 
+	
+	而它的内部含有各种不明材料， 探测
+	区中随处可见跃迁扭曲的残迹。 
+>>
+ANOMALY_GATE_ACTIVATE: <<|
+	星环的很大一部分仍然完好， 应该还能被激活。 
+
+	[b][color=#d1cb6a][right]建造一个跃迁星门。 [/right][/color][/b]
+>>
+ANOMALY_GATE_HARVEST: <<|
+	很小的能量输入就让星环放射出了
+	可用的超光速场粒子。 
+
+	[b][color=#d1cb6a][right]每秒跃迁能产量增加 $1。 [/right][/color][/b]
+>>
+ANOMALY_GATE_REPURPOSE: <<|
+	星门的核心可以在分拆后用于储存超光速场
+	粒子。 
+
+	[b][color=#d1cb6a][right]跃迁能储量增加 $1。 [/right][/color][/b]
+>>
+
+ANOMALY_NAR_NAVBUOY: <<|
+	一个老旧的航标在残骸区里漂浮着， 它的能量
+	早已耗尽， 但是它的数据库里还存有大量的信息。 
+>>
+ANOMALY_NAVBUOY_SCRAP: <<|
+	拆解航标的零件， 并将得到的科技在黑市上出售。 
+
+	[b][color=#d1cb6a][right]获得 §$1k[/right][/color][/b]
+>>
+ANOMALY_NAVBUOY_VISION: <<|
+	分拆航标并下载数据库里的信息。 
+
+	[b][color=#96d16a][right]获得附近星系中行星的情报。 [/right][/color][/b]
+>>
+
+ANOMALY_NAR_MINING_OUTPOST: <<|
+	在一个大型的小行星上有一座废弃的矿站。 它的系统
+	还在等待下一步的指令， 但是其中的采矿设备已经
+	损坏而无法修复。 
+>>
+ANOMALY_NAR_MINING_OUTPOST_VOLAT: <<|
+	在一个大型的小行星上有一座废弃的矿站。 它的系统
+	还在等待下一步的指令， 但是其中的采矿设备已经
+	损坏而无法修复。 
+
+	你的探测器检测到了矿层下某种不明材料反射回的
+	微弱信号。 
+>>
+ANOMALY_MINING_OUTPOST_MINE: <<|
+	准备修复采矿设备， 重新开始采矿。 
+
+	[b][color=#72cbe0][right]开采[template=resource_ref;Iron/]， [template=resource_ref;AsteroidLabor/]， 或者[template=resource_ref;Water/]。 [/right][/color][/b]
+>>
+ANOMALY_MINING_OUTPOST_CONVERT: <<|
+	准备改造一些采矿设备来提纯更有价值的材料。 
+
+	[b][color=#e072c9][right]开采[template=resource_ref;RareMetals/]或者[template=resource_ref;NativeGold/]。 [/right][/color][/b]
+>>
+ANOMALY_MINING_OUTPOST_EXPLODE: <<|
+	引爆小行星表层， 找到深层的那个不明矿藏。 
+
+	[b][color=#ff0000][right]开采藏在深层的矿藏。 [/right][/color][/b]
+>>
+
+ANOMALY_NAR_RIFT: <<|
+	你在附近的奇点发现了一个奇怪的不时发射出超光速脉冲的
+	空间站。 空间站的供能系统仍在运转， 
+	但是发射器的瞄准系统已经损坏。 
+
+	我们如果修好发射器， 就可以拓宽这个异常区
+	以便通过。 
+>>
+ANOMALY_RIFT_PULSE: <<|
+	修理发射器的瞄准系统。 
+
+	[b][color=#96d16a]打开一个通往不明地点的裂隙。 [/color][/b]
+>>
+ANOMALY_RIFT_DESTROY: <<|
+	[b][color=#ff0000]摧毁空间站， 使奇点崩塌。 [/color][/b]
+>>
+
+ANOMALY_NAR_PLANT: <<|
+	在残骸中你很快就发现了一个有趣的空间站。 
+
+	它控制着很多无人舰， 让它们有序地
+	搜集残骸， 再通过未知的方式把残骸
+	转化成类似凝胶的化学物。 
+
+	正当你研究这个空间站时， 它把一个装有这种化学物
+	的太空舱以高速发射了出去。 太空舱的轨迹
+	显示它要依靠一个行星加速后飞向
+	更远的星系。 
+>>
+ANOMALY_PLANT_SIPHON: <<|
+	在一个化学物储库上快速的钻出孔洞， 
+	提取出其中的化学物进行研究。 
+
+	[b][color=#ff0000][right]后果不明。 [/right][/color][/b]
+>>
+ANOMALY_PLANT_SIPHON_SUCCESS: <<|
+	你的船员成功的提取出了化学物的样本。 
+	初步的结果显示它是一种极其有效的肥料， 能够
+	极大地提升你的某个星球上的食物产量。 
+
+	[color=#96d16a]你获得了一张[b]朝耕暮耘[/b]权势卡。 [/color]
+
+	不幸的是， 你在试图提取更多化学物时被发现， 
+	空间站因此启动了自爆机制。 
+>>
+ANOMALY_PLANT_SIPHON_FAIL: <<|
+	你试图提取的化学物其实是一种高爆物， 
+	它在你钻孔时被引燃了。 空间站因为外壳遭到破坏而
+	被摧毁。 
+
+	幸好你的科学家们预计到了这个结果， 因此你的船员
+	没有遭受损失。 
+>>
+ANOMALY_PLANT_CATCH: <<|
+	等待下一个太空舱发射， 并在它飞离星系前
+	截住。 
+
+	[b][right][color=#842cdb]获得20个科研点。 [/color][color=#ff0000]这也许会很危险。 [/color][/right][/b]
+>>
+ANOMALY_PLANT_CATCH_SUCCESS: <<|
+	空间站看起来没发现你截住了它的
+	货物， 仍在继续从残骸中提取化学物。 
+>>
+ANOMALY_PLANT_CATCH_FAIL: <<|
+	空间站发现了你截住了它的货物， 它的无人舰
+	全部启动了武器系统。 准备战斗! 
+>>
+ANOMALY_PLANT_BOARD: <<|
+	登上空间站， 尝试检验化学物的成分。 
+
+	[b][color=#ff0000][right]后果不明。 [/right][/color][/b]
+>>
+ANOMALY_PLANT_BOARD_FAIL: <<|
+	空间站的内部感应系统发现了你派出的船员。 
+	在摧毁了入侵物， 杀死了我们的科学家后， 
+	空间站的所有无人舰启动了武器系统。 
+>>
+ANOMALY_PLANT_BOARDED: <<|
+	你派出的船员成功入侵了空间站。 
+
+	空间站里似乎有某种外星系空气， 包含着
+	大量的反应元素。 
+
+	你的科学家在空间站里发现了很多
+	独特的化学物储库， 但是看起来它们大多对我们
+	的物种没有任何作用。 
+>>
+ANOMALY_PLANT_BOARD_HAPPY: <<|
+	科学家们发现空间站上的某种化学物
+	对我们的物种很有帮助， 应该可以延长我们
+	的寿命。 
+
+	[b][color=#72cbe0][right]目标行星进入幸福状态。 [/right][/color][/b]
+>>
+ANOMALY_PLANT_HAPPY_BLURB: 提供幸福
+ANOMALY_PLANT_BOARD_CULTIVATION: <<|
+	其中一种化学物看起来是极其有效的肥料， 能够
+	大大提升你的某个行星的食物产量。 
+
+	[b][color=#e072c9][right]获得一张朝耕暮耘权势卡。 [/right][/color][/b]
+>>
+ANOMALY_PLANT_BOARD_STATION: <<|
+	忽略空间站里储存的化学物， 控制它的
+	防御系统来帮助抵御入侵者。 
+
+	[b][color=#e0ba72][right]获得一个防御中枢。 [/right][/color][/b]
+>>
+ANOMALY_PLANT_DESTROY: <<|
+	[b][color=#ff0000]远距离摧毁空间站。 [/color][/b]
+>>
+
+
+ANOMALY_NAR_PROTO_WARES: <<|
+	你发现了一个老旧的储物空间站。 
+	空间站里沉睡着新旧不一的神器。 
+>>
+ANOMALY_PROTO_WARES_INSIGHT: <<|
+	小心地将其中的神器拆解， 分类， 研究。 
+	
+	[b][color=#842cdb][right]获得不明灵感。 [/right][/color][/b]
+>>
+ANOMALY_PROTO_WARES_ACTIVATE: <<|
+	激活任何组装好的神器， 查看它们的用途。 
+	
+	[b][color=#db2c84][right]可以获得一个特别科研项目。 [/right][/color][/b]
+>>
+ANOMALY_PROTO_WARES_ACTIVATE_FAIL: <<|
+	其中的一个设备十分不稳定， 它摧毁了整个空间站。 
+	现在我们只能获得很小的碎片用于研究。 
+>>
+ANOMALY_PROTO_WARES_ACTIVATE_PASS: <<|
+	我们的科学家从这些奇怪的外形制品获取的灵感
+	对我们的科研大为有利。 
+>>
+ANOMALY_PROTO_WARES_SCRAP: <<|
+	这里储存的每样东西都能卖个好价钱。 。 
+
+	[b][color=#d1cb6a][right]获得 §$1k[/right][/color][/b]
+>>
+
+
+ANOMALY_OBELISK: 方尖碑
+ANOMALY_MORPH_NAR: <<|
+	一个巨大的方尖碑漂浮在恒星轨道上， 并向各个方向
+	发射着微弱的能量。 
+>>
+ANOMALY_MORPH_BLUE_NAR: <<|
+	这个古老的装置泛着蓝宝石般的光芒， 它的能量数据显示
+	其中有着巨大的能量核心。 
+
+	方尖碑的表面散发着蒸汽， 分布均匀， 
+	看起来就像它的环绕轨道一样。 
+>>
+ANOMALY_MORPH_BLUE: <<|
+	激活这个装置。 
+
+	[b][color=#008eff][right]改变行星资源。 [/right][/color][/b]
+>>
+ANOMALY_MORPH_RED_NAR: <<|
+	这个古老的装置泛着红宝石般的光芒， 它的能量数据显示
+	其中有着巨大的能量核心。 
+
+	方尖碑的表面覆盖着巨大的利刺， 
+	并缓缓地震颤着。 
+>>
+ANOMALY_MORPH_RED: <<|
+	激活这个装置。 
+
+	[b][color=#8d5d69][right]改变行星资源。 [/right][/color][/b]
+>>
+ANOMALY_MORPH_GREEN_NAR: <<|
+	这个古老的装置泛着绿宝石般的光芒， 它的能量数据显示
+	其中有着巨大的能量核心。 
+
+	方尖碑的表面覆盖着某种生物物质， 绿绿的， 
+	油油的， 看起来就像活体一样。 
+>>
+ANOMALY_MORPH_GREEN: <<|
+	激活这个装置。 
+
+	[b][color=#80ff00][right]改变行星资源。 [/right][/color][/b]
+>>
+ANOMALY_MORPH_HARVEST: <<|
+	拆解方尖碑， 提取能量核心中的能量化为几用。 
+
+	[b][color=#42b4bd][right]获得100点能量。 [/right][/color][/b]
+>>
+ANOMALY_MORPH_RESPONSE: <<|
+	在被激活后， 方尖碑向星系中的所有行星和小行星
+	放射出了强大的粒子波， 刺激了各个行星上的资源， 
+	让它们发生了飞速的转变。 
+>>
+
+ANOMALY_NAR_DATACENTER: <<|
+	一个内部被挖空的小行星被设计成了一个数据中枢。 
+	其中沉睡着数以十万计的存储节点， 很多都还可以使用。 
+>>
+ANOMALY_DATACENTER_READ: <<|
+	复制并分析所有仍可以使用的存储信息。 
+
+	[b][color=#96d16a][right]获得一个随机星系的行星情报。 [/right][/color][/b]
+>>
+ANOMALY_DATACENTER_RECOVER: <<|
+	尝试修复整个系统来恢复其中已经损毁的记录。 
+
+	[b][color=#d1966a][right]可能会使一些数据丢失。 [/right][/color][/b]
+>>
+ANOMALY_DATACENTER_RECOVER_FAIL: <<|
+	这个古老的空间站没能恢复， 巨大的电流使得残余的数据也损失殆尽。 
+>>
+ANOMALY_DATACENTER_RECOVER_SUCCEED: <<|
+	数据中枢成功重启。 我们的科学家靠这些数据突破了一些科研壁垒。 
+>>
+
+ANOMALY_NAR_SYSREACTOR: <<|
+	这个设施里有一个大型发电机。 看起来它以前是这个星系的能量来源。 
+>>
+ANOMALY_SYSREACTOR_DISASSEMBLE: <<|
+	通过研究发电机的原理， 我们得到了制造它的方法。 
+	
+	[b][color=#842cdb]解锁并提升反物质发电机。 [/color][/b]
+>>
+ANOMALY_SYSREACTOR_REACTIVATE: <<|
+	根据这个空间站的现状， 我们可以将其激活来获取大量的产能。 
+
+	[b][color=#e0ba72][right]建造一个产能轨道卫星。 [/right][/color][/b]
+>>
+
+ANOMALY_NAR_LIQUIDTANKS: <<|
+	我们发现了一艘巨大运输船的残骸。 
+	找到了一个特制的运输罐， 其中装着一种不明液体。 
+>>
+ANOMALY_LIQUIDTANKS_INFUSE: <<|
+	这一物质渗入了容器内部， 使容器变得格外坚固。 
+	我们可以将这种物质用在我们的舰船上。 
+
+	[b][color=#96d196][right]将一艘战舰的效能提升20%。 [/right][/color][/b]
+>>
+ANOMALY_LIQUIDTANKS_STUDY: <<|
+	这种物质看上去独一无二。 对其进行研究应该能够提升我们对材料科学的认识。 
+>>
+ANOMALY_NAR_BEAUTY: 调查队被一块奇怪的水晶吸引。 一个小时以后， 他们之中都没有任何人想到要进行汇报。 他们决定与水晶保持距离， 从远处观察， 也没有获得任何有价值的情报。 
+ANOMALY_BEAUTY_DESTROY: 这个水晶显然对我们的种族会产生某种奇怪的作用， 最好尽快摧毁它以免后患。 
+ANOMALY_BEAUTY_VOLUNTEER: 有一个科学家为了研究这个特殊的物体， 自愿前往体验其效果。 
+ANOMALY_BEAUTY_SUCCESS: <<
+	志愿者花了好多天研究这个水晶， 历经不解， 困惑， 疑虑， 最终得到了启示。 我们将可以利用从中取得的知识。 
+
+	[b][color=#4141ff]影响力产出+ $1[/color]
+	[color=#af0baf]科研收入+$2/秒[/color][/b]
+>>
+ANOMALY_BEAUTY_FAIL: <<
+	志愿者彻底被水晶附身， 他的意识已经被腐蚀。 
+
+	[b][color=#ff2121]生成了一艘新的海盗舰。 [/color][/b]
+>>
+ANOMALY_NAR_NEUTRONPLATE: 这片区域内的所有金属和石块都经历了大量的辐射。 其中有一块特别的， 扭曲的石块是这种辐射的来源。 用远程探测器进行研究后， 我们发现这个石头是一次远古的恒星爆炸留下的遗迹。 得到它的核心后， 我们发现了少量的中子。 
+ANOMALY_NEUTRONPLATE_INFUSE: <<
+	这一数量的中子足够提升我们所有舰队的装甲了。 
+
+	[b][color=#96d196][right]所有装甲生命值提升 $1%。 [/right][/color][/b]
+>>
+ANOMALY_NEUTRONPLATE_STUDY: <<
+	这个样本可以给科学家提供材料生产的灵感。 
+	[right][b][color=#80ff80]解锁[/color][template=subsys_ref;NeutronArmor/][/b][/right]
+>>
+
+ANOMALY_NAR_HIDDEN_OUTPOSTS: <<
+ 你找到了一个小型哨所 ， 在隐身设施的影响下 ， 你的传感器几乎无法侦测到它 。 幸运的是 ， 哨所的遗弃协议已生效 ， 因此它一直在发射着某种信号 。 
+
+ 下载其中的源代码并进行研究之后 ， 你发现这是一个由古代外星帝国设置的一个研究站控制点 。 
+
+ 这个哨所里的信息可能包含了那个研究站的位置所在 。 
+>>
+ANOMALY_HIDDEN_ACTIVATE: <<
+ 下载哨所的数据并侦测那个隐藏的研究站的方位 。 
+>>
+ANOMALY_HIDDEN_STUDY: <<
+ 分解研究站的隐身装置 ， 并学习隐身科技 。 
+
+ [right][b][color=#5186e6]解锁 [/color] [template=subsys_ref;CloakPlating/][/b][/right]
+>>
+
+ANOMALY_NAR_HIDDEN: <<
+ 你发现了一个隐身的研究哨所 ， 里面存放着一些机密的信息 。 
+>>
+ANOMALY_HIDDEN_1_TAKE: <<
+ 从哨所中下载数据 。 
+
+ [b][color=#96d196][right]引擎效率提升 25%。 [/right][/color][/b]
+>>
+ANOMALY_HIDDEN_2_TAKE: <<
+ 从哨所中下载数据 。 
+
+ [b][color=#96d196][right]提升舰船物资储存上限 25%。 [/right][/color][/b]
+>>
+ANOMALY_HIDDEN_3_TAKE: <<
+ 从哨所中下载数据 。 
+
+ [b][color=#96d196][right]提升星球和站点的支持上限 128。 [/right][/color][/b]
+>>
+ANOMALY_HIDDEN_4_TAKE: <<
+ 从哨所中下载数据 。 
+
+ [b][color=#96d196][right]提升工厂的劳动成果 3。 [/right][/color][/b]
+>>

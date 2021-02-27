@@ -1,0 +1,154 @@
+INVASION_MAP: 入侵 
+INVASION_MAP_DESC: <<
+ 保护银河不受更强大的入侵部队侵犯 。 
+>>
+INVASION_MAP_TEXT: <<
+ [i][color=#aaa]一连串的遗族防御站保护银河免于毁灭 ， 但受到日益强大的侵略力量的威胁 。 保护防线 ， 否则将面临毁灭 ！ [/color][/i]
+>>
+
+REMNANT_DEFENSE_LINE: 遗族防线 
+INVADER: 入侵者 
+VERB_COLLECT: 收集 
+NEXT_WAVE: 下一波 ： 
+NEXT_STRENGTH: 力量 ： 
+INV_DIFFICULTY: 难度 ： 
+
+INV_PICKUP_MONEY: 经济助推器 
+INV_PICKUP_MONEY_DESC: <<
+ [color=#afa]永久增加你的预算 § 500k。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_PICKUP_LABOR: 劳动力助推器 
+INV_PICKUP_LABOR_DESC: <<
+ [color=#afa]家园劳动力增加 10。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_PICKUP_FOOD: 食品生产 
+INV_PICKUP_FOOD_DESC: <<
+ [color=#afa]获得 4张耕作外交卡 。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_PICKUP_WATER: 水生产 
+INV_PICKUP_WATER_DESC: <<
+ [color=#afa]在星系中产生 4颗彗星 。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_PICKUP_RESOURCE2: 外来资源 
+INV_PICKUP_RESOURCE2_DESC: <<
+ [color=#afa]获得一个 2阶资源行星 。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_PICKUP_RESOURCE1: 重要资源 
+INV_PICKUP_RESOURCE1_DESC: <<
+ [color=#afa]获得一个 1阶资源行星 。 [/color]
+ [color=#faa]增加侵犯力量 。 [/color]
+>>
+
+INV_ART_PLANET: 物质碎片 
+INV_ART_PLANET_DESC: <<
+ 创建一个新的随机行星 。 
+ [color=#f00]附加优势 :[/color] 产生的行星有 [b]药物 [/b]。 
+>>
+INV_ABL_PLANET: 随机星球 
+INV_ABL_PLANET_DESC: <<
+ 在目标位置创造一个新的星球 。 
+>>
+INV_ABL_PLANET_PLUS: 药物星球 
+INV_ABL_PLANET_PLUS_DESC: <<
+ 在目标位置创造一个新的药物星球 。 
+
+ [b][color=#f00]增加入侵力量。 [/color][/b]
+>>
+
+INV_ART_MONEY: 稀有碎片 
+INV_ART_MONEY_DESC: <<
+ 增加你的收入 § 300000。 
+ [color=#f00]附加强度:[/color] 舰船劳力花费 -10%
+>>
+INV_ABL_MONEY: § 300000收入 
+INV_ABL_MONEY_DESC: <<
+ 增加你的预算收入 § 300000。 
+>>
+INV_ABL_MONEY_PLUS: 建造 
+INV_ABL_MONEY_PLUS_DESC: <<
+ 所有舰船和站点花费减少 10%劳动力 。 
+
+ [b][color=#f00]增加入侵力量。 [/color][/b]
+>>
+
+INV_ART_STATION: 挥发性碎片 
+INV_ART_STATION_DESC: <<
+ 升级遗族站点尺寸 256。 
+ [color=#f00]附加强度:[/color] 立即摧毁星系中的所有敌人。 
+>>
+INV_ABL_STATION: 站点升级 
+INV_ABL_STATION_DESC: <<
+ 目标遗族防御站点尺寸增大 256。 
+>>
+INV_ABL_STATION_PLUS: 摧毁 
+INV_ABL_STATION_PLUS_DESC: <<
+ 所有被瞄准的敌方舰队瞬间被摧毁 。 
+
+ [b][color=#f00]增加入侵力量。 [/color][/b]
+>>
+
+INV_ART_RESEARCH: 毒素碎片 
+INV_ART_RESEARCH_DESC: <<
+ 增加资源压力 4
+ [color=#f00]附加强度:[/color] 所有的研究都有+1的研究压力。 
+>>
+INV_ABL_RESEARCH: 资源 
+INV_ABL_RESEARCH_DESC: <<
+ 目标资源种类给予 4额外压力 。 
+>>
+INV_ABL_RESEARCH_PLUS: 实验室 
+INV_ABL_RESEARCH_PLUS_DESC: <<
+ 你的所有研究设施都给予额外研究压力 。 
+
+ [b][color=#f00]增加入侵力量。 [/color][/b]
+>>
+
+INV_ART_SYSTEM: 奇点碎片 
+INV_ART_SYSTEM_DESC: <<
+ 创造一个有原行星的新星系 。 
+ [color=#f00]附加强度:[/color] 为能源牺牲一个星球。 
+>>
+INV_ABL_SYSTEM: 生成 
+INV_ABL_SYSTEM_DESC: <<
+ 创造一个被原行星环绕的新恒星 。 
+>>
+INV_ABL_SYSTEM_PLUS: 转换能量 
+INV_ABL_SYSTEM_PLUS_DESC: <<
+ 你的目标行星被摧毁 。 你存储的能量变为 2500。 
+
+ [b][color=#f00]增加入侵力量。 [/color][/b]
+>>
+
+HELP_INVASION: <<
+ [font=Big]入侵 [/font][vspace=4/]
+ 你选择在 [color=#aaffaa]入侵[/color]地图上进行游戏 。 这里是你一些要注意的东西 。 
+ [color=#aaa][i]在任何时候通过按下屏幕右侧的 [img=MenuIcons::3;22/] 按钮显示此提示。 [/i][/color]
+
+ [font=Medium]合作 [/font][vspace=4/]
+ [color=#ccc]入侵是一个合作的地图 。 帝国之间无法宣战 。 然而外交默许没有问题 ！ [/color]
+
+ [font=Medium]防御 ！ [/font][vspace=4/]
+ [color=#ccc]你的主星系与其他三个包含遗族防御站点的星系相邻 。 这些星系会被更加强大的入侵者摧毁 。 [/color]
+
+ [font=Medium]击败 [/font][vspace=4/]
+ [color=#ccc]你必须 [b]保护遗族防御站点 [/b]。 当一个星系中所有三个站点都被摧毁 ， 星系就会爆炸 。 当你防御的三个星系都被摧毁 ， 你的帝国就会爆炸 。 [/color]
+
+ [font=Medium]维护费用 [/font][vspace=4/]
+ [color=#ccc]不同于一般地图 ， 你的旗舰不需要维护费用 ， 所以请随意建造旗舰 ！ [/color]
+
+ [font=Medium]人造碎片 [/font][vspace=4/]
+ [color=#ccc]当你击败一波入侵者 ， 他们会掉落 [b]人造碎片 [/b]。 这些可以加速你帝国的发展 。 [/color]
+
+ [font=Medium]次要碎片 [/font][vspace=4/]
+ [color=#ccc]每个人造碎片都有一个次要 ， 强力的使用方式 。 然而用这个会增强所与人们入侵波数的力量 ！ [/color]
+>>

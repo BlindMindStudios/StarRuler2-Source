@@ -1,0 +1,26 @@
+BCAT_Actions: 行动 
+BCAT_Beacons: 灯塔 
+BCAT_Upgrades: 升级 
+
+CONS_MOON_BASE: 月球基地 
+CONS_MOON_BASE_DESC: <<
+ 在星球的月亮上建立一个大型的基础设施 ， 因此增加建筑物的建造土地 ， 并提升 2星球人口 。 
+
+ 每个月球只能设置一个月球基地 。 
+>>
+
+CONS_FLARE_BOMB: 耀斑炸弹 
+CONS_FLARE_BOMB_DESC: <<
+ 使用残存古物中的设计来制作一个耀斑炸弹 。 
+
+ 耀斑炸弹可以在星球上使用 。 60秒充能过后 ， 这可星球就会发射一道致命光波 ， 杀掉太阳系中所有的人 ， 但是其它东西则不受影响 。 这个星系中的星球受到辐射 ， 5分钟之内不能殖民 。 
+
+ 在爆炸过程中 ， 装备耀斑炸弹的飞船也被毁了 。 
+>>
+
+CONS_ARTIFICIAL_MOON: 人造月球 
+CONS_ARTIFICIAL_MOON_DESC: <<
+ 制造一个人造月球围绕这个行星转动 。 一个星球附近只能制造一个人造月亮 。 
+
+ [img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]建造人造月亮需要从小行星上获得矿物 。 [/color][/b][/img]
+>>

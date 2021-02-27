@@ -1,0 +1,510 @@
+TUTORIAL: 教程
+TUT_PLAYER_EMP: 地球帝国
+TUT_ENEMY_EMP: 修西奥
+TUT_FLAGSHIP_NAME: Superion
+
+
+TUT_INTRO_TITLE: 公元3876年: 地球帝国
+TUT_INTRO_TEXT: <<|
+	"这是帝国的第四个千年， 人类的探索和殖民正如火如荼地进行着， 新的纪元已经到来! 
+	
+	在帝国富饶的边境线上， 来自各地的开拓者努力用辛勤劳作改写自己的命运。 
+
+	至少新闻里都是这么说的... "
+>>
+TUT_INTRO2_TITLE: 公元3876年: 地球帝国
+TUT_INTRO2_TEXT: <<|
+	"实际上， 帝国边境是江洋大盗和无良律师的庇护所， 
+	因此， 帝国也不得不假借保卫受修西奥人威胁的殖民地的理由， 
+	频繁地派出舰队来维持这些地方的秩序。 
+
+	当然， 这种以暴制暴的方式只能保证临时的和平， 
+	只要军队离开， 这些殖民地就又成为抢劫， 谋杀， 刑事案件的温床。 
+	
+	大多数地球舰队指挥官已经放弃了重振前沿地带的希望... "
+>>
+TUT_INTRO3_TITLE: 公元3876年:地球帝国
+TUT_INTRO3_TEXT: <<|
+	"但119舰队的霍普准将并不属于这类人。 
+
+	他是我们的将军， 一直以前沿阵地的稳定为己任， 并崇尚用最激进的手段达到目的。 
+	霍普准将命令一艘穿梭舰前往星球上最大的城市， 来和那里的居民商讨剿匪计划和合作条件。 
+
+	但他很快就因为痢疾去世了。 
+
+	很不幸， 这就让我成为了舰队的指挥官。 "
+>>
+
+TUT_CAM_TITLE: 操控视角
+TUT_CAM_TEXT: <<|
+	熟悉视角操控界面。 如果连自己的舰队都找不着， 
+	给它们下达命令就会很难。 
+	
+	[i]如果教程窗口挡住了视线， 你可以随时拖拽它到别的地方。 [/i]
+>>
+TUT_CAM_ACT1_TITLE: 查看四周
+TUT_CAM_ACT1_TEXT: 将光标移动到[color=#0f0]屏幕边缘[/color]或者使用[color=#0f0]WASD[/color]。 
+TUT_CAM_ACT2_TITLE: 放大和缩小视角
+TUT_CAM_ACT2_TEXT: 使用[color=#0f0]鼠标滚轮[/color]或者同时按住[b]鼠标左右键[/b]并[b]拖拽[/b]。 
+TUT_CAM_ACT3_TITLE: 旋转视角
+TUT_CAM_ACT3_TEXT: 按住[color=#0f0]鼠标右键[/color]并[color=#0f0]拖拽[/color]。 
+
+TUT_TIME_TITLE: 控制时间
+TUT_TIME_TEXT: <<|
+	在星系标签页， 屏幕左上角会显示时间控制器。 
+	
+	你可以用它减慢或加速时间的流逝， 时间调节的速率从1/10到10x不等。 
+	
+	你也可以随时暂停或继续游戏。 
+>>
+
+TUT_SCAN_TITLE: 驱散敌军
+TUT_SCAN_TEXT: <<|
+	旗舰的远距传感器探测到了修西奥跃迁星门在这个
+	星系中的踪迹， 它有两支小型舰队保护。 
+
+	摧毁星门， 防止更多的敌军从那里出现! 
+>>
+TUT_SCAN_ACT1_TITLE: 选择你的舰队
+TUT_SCAN_ACT1_TEXT: [color=#0f0]左键单击[/color]旗舰以选中舰队。 
+TUT_SCAN_ACT2_TITLE: 摧毁敌军舰队
+TUT_SCAN_ACT2_TEXT: [color=#0f0]右击[/color]一支敌人的舰队然后选择[color=#0f0#]攻击[/color]。 
+TUT_SCAN_ACT3_TITLE: 摧毁敌人的星门
+TUT_SCAN_ACT3_TEXT: [color=#0f0]攻击[/color]并且摧毁敌人的舰队和跃迁星门。 
+
+TUT_FTL_TITLE: 返回基地
+TUT_FTL_TEXT: <<|
+	我们正在保护的殖民地位于与这里相邻的星系， [b]Lihls[/b]。 舰队该返回那里了。 
+	
+	现在用旗舰的跃迁引擎前进， 靠亚光速飞行得耗上半辈子。 
+>>
+TUT_FTL2_TITLE: 返回基地
+TUT_FTL2_TEXT: <<|
+	各种形式的超光速跃迁都受到[color=#00c0ff][img=ResourceIcon::3;20/]跃迁能[/color]的限制。 
+	这种能量可以利用一些行星上产出的调谐水晶获得， 
+	能量随后会被传输到拥有使用权限的飞船上。 
+
+	跃迁的距离越远， 消耗的跃迁能就越多。 
+	命令你的舰队使用跃迁引擎抵达目的地， 这将消耗你所储存的跃迁能。 
+>>
+TUT_FTL2_ACT1_TITLE: 超光速跃迁至Lihls
+TUT_FTL2_ACT1_TEXT: <<|
+	选择你的舰队后， 按' $1'键或者点击屏幕底部左边的跃迁引擎图标来下达跃迁指令。 
+>>
+
+TUT_ARRIVE_TITLE: 舰长日志
+TUT_ARRIVE_TEXT: <<|
+	"到达殖民地后， 我们为霍普准将举行了一个简短的葬礼， 他此时已被追封为了少将。 
+	当地的承办人很好地遮掩了他前额上被激光割开的伤口。 
+
+	舰队最终同意将继续保护殖民地并协助殖民地向附近的星系扩张， 
+	我们会在这里等待地球帝国官方宣布对这片区域拥有主权。 "
+>>
+
+TUT_RES_TITLE: 资源
+TUT_RES_TEXT: <<|
+	大多数行星都可以依靠自身的自然资源产出可用于大规模持续出口的某种特定资源。 
+
+	这些资源可能是食物和水， 金刚石和铀， 或是FTL晶体。 
+	并不是每一种资源都可以直接产出， 有的资源可能需要将行星提升到更高的[b]等级[/b]才能够产出。 
+>>
+
+TUT_LEVEL_TITLE: 扩张和发展
+TUT_LEVEL_TEXT: <<|
+	每一个有人居住的星球都有[b]等级[/b]， 等级范围从0级到4级。 
+	行星等级表示着星球上基础设施， 人口和发展水平的情况。 
+	更高等级的行星在很多方面都更优异。 
+
+	要想让一个行星升级， 你需要给它提供各种资源， 
+	这些资源要从不同的行星进口。 比如1级的行星需要[b][img=ResourceClassIcons::3;22/]食物和[img=ResourceClassIcons::4;22/]水[/b]。 
+>>
+TUT_LEVEL2_TITLE: 扩张和发展
+TUT_LEVEL2_TEXT: <<|
+	当你出口一种资源时， 产出地就不能将这种资源化为己用。 
+
+	因为每个需要升级的星球都要从其他星球进口资源， 所以不是所有星球都可以成为高等级的战略基地。 
+	合理的选择和规划资源的分配方式， 以及决定产出哪一个高等级资源都是很重要的。 
+
+	现在对我们来说， 我们想要将Spacewood升级到2级来获得更大的收益和人口。 
+>>
+
+TUT_EXPAND_TITLE: 殖民和出口
+TUT_EXPAND_TEXT: <<|
+	为了达到[b]2级[/b]， Spacewood需要一种[b][img=ResourceClassIcons::0;22/]1级资源[/b](比如[template=resource_ref;NativeGold/])
+	和另一份食物(比如[template=resource_ref;Grain/])。 
+	
+	[b]选择[/b]Spacewood然后[b]右击[/b]一个你想要殖民的星球， 之后选择'从Spacewood殖民。 '
+	你也可以[b]右键单击[/b]那个星球然后选择'殖民到这里， ' 那样电脑会自动选择一个殖民的发起地。 
+>>
+TUT_EXPAND_ACT1_TITLE: 殖民至有食物资源的星球， 以及有1级资源的星球
+TUT_EXPAND_ACT1_TEXT: <<|
+	殖民到一个拥有[b][img=ResourceClassIcons::0;22/]1级资源[/b]的星球和一个拥有[b][img=ResourceClassIcons::3;22/]食物[/b]的星球。 
+>>
+
+TUT_IMPORT1_TITLE: 殖民和出口
+TUT_IMPORT1_TEXT: <<|
+	现在你拥有了一个有着1级资源的星球， 你必须为它进口[b][img=ResourceClassIcons::3;22/]食物[/b]和[b][img=ResourceClassIcons::4;22/]水[/b]才能利用它的本土资源。 
+	
+	殖民拥有这两样资源的星球然后将它们出口到这里。 在资源产出星球[b]左击并拖拽[/b]， 然后将资源投放到目的地。 你也可以[b]右击[/b]一个星球然后命令它[b]自动进口[/b]升级所需的资源。 
+>>
+TUT_IMPORT1_ACT1_TITLE: 升级1级行星
+TUT_IMPORT1_ACT1_TEXT: <<|
+	殖民拥有[b][img=ResourceClassIcons::3;22/]食物[/b]和[b][img=ResourceClassIcons::4;22/]水[/b]的星球， 
+	将它们出口到1级星球。 
+
+	记住资源只能在同一个[b]贸易区[/b]内进出口， 贸易区边界由灰色边界线标记， 
+	边界会在你殖民更多星系后拓宽。 
+>>
+
+TUT_IMPORT2_TITLE: 殖民和出口
+TUT_IMPORT2_TEXT: <<|
+	出口一个[b][img=ResourceClassIcons::0;22/]1级[/b]资源和另一个[b][img=ResourceClassIcons::3;22/]食物[/b]资源到Spacewood， 
+	让它升至2级。 
+	
+	每个行星同时只能向一个其他星球出口， 所以确保你拥有所有所需的资源行星。 
+	
+	星球必须达到足够的人口才能使用更高等级的资源， 所以你的1级行星可能需要一段时间才能开始出口。 
+>>
+TUT_IMPORT2_ACT1_TITLE: 将Spacewood升至2级
+TUT_IMPORT2_ACT1_TEXT: <<|
+	获取并将所需资源出口至Spacewood使其升至2级。 
+>>
+
+TUT_EXPAND_SUCC_TITLE: 成功!
+TUT_EXPAND_SUCC_TEXT: <<|
+	恭喜你! 你提供了足够的让Spacewood升至2级的资源。 
+	当其人口增长到2级所需的60亿后， 它就会最终升级。 
+
+	选择一个星球后， 你可以在屏幕底部左侧信息面板上看到它当前的等级和升至下一级所需进口的资源。 
+>>
+
+TUT_BUDGET_TITLE: 预算周期
+TUT_BUDGET_TEXT: <<|
+	建造， 购买和维护设施都需要
+	[b][color=#d1cb6a][img=ResourceIcon::0;20/]资金[/color][/b]。 
+
+	资金和大多数资源一样， 是由你的平民人口和设施产出的。 一个行星的等级越高， 产出的资金就越多。 
+>>
+TUT_BUDGET2_TITLE: 预算周期
+TUT_BUDGET2_TEXT: <<|
+	你的收入会在每3分钟后到来， 这就是你的[b]预算周期[/b]。 
+	每个周期完成后， 你的预算会被重新计算， 你就可以在下面的3分钟里使用你刚得到的资金。 
+
+	而在每个预算周期结束前没用完的资金则要被用在由你选择的福利选项上。 
+	
+	你没办法将上一个周期的资金留到下一个周期使用， 但是你可以从未来的周期预支资金， 
+	同时支付高额的利息。 
+>>
+
+TUT_BUILD_TITLE: 建造侦查舰
+TUT_BUILD_TEXT: <<|
+	我们应该建造一艘侦查舰来查看Xaste的情况， 
+	也就是Spacewood所邻接的星系。 敌人可能正在试图靠另一个超光速星门溜进来。 
+>>
+TUT_BUILD_ACT1_TITLE: 管理星球
+TUT_BUILD_ACT1_TEXT: <<|
+	[b]双击[/b]Spacewood来打开它的的星球管理界面， 
+	或者点击屏幕底部左端的'管理星球'图标。 
+>>
+TUT_BUILD_ACT2_TITLE: 建造一艘侦查舰
+TUT_BUILD_ACT2_TEXT: <<|
+	在飞船建造列表右端里点击"侦查舰(16)"蓝图来开始建造。 
+>>
+
+TUT_BUILD2_TITLE: 强化舰队
+TUT_BUILD2_TEXT: <<|
+	注意侦查舰的蓝图上标明其耗资为[img=ResourceIcon::0;20/]§40k / §69k。 
+	第一个数字表示它的[b]建造成本[/b]为§40k， 这部分钱将立刻从预算中扣除。 
+	第二个数字表示它的[b]维护成本[/b]为§69k， 这部分钱会在每个将来的预算周期扣除。 
+
+	在等待侦查舰完成的同时， 让我们给现有的泰坦舰队购置一些额外的[b]支援舰[/b]吧。 
+>>
+TUT_BUILD2_ACT1_TITLE: 退出星球管理界面
+TUT_BUILD2_ACT1_TEXT: [b]右击[/b]以退出星球管理界面。 
+TUT_BUILD2_ACT2_TITLE: 管理战列舰舰队
+TUT_BUILD2_ACT2_TEXT: [b]双击[/b]战列舰来打开舰队管理面板。 
+TUT_BUILD2_ACT3_TITLE: 购置激光舰
+TUT_BUILD2_ACT3_TEXT: 点击[b]'添加支援舰'[/b]并为战列舰舰队购置10艘额外的[b]激光舰[/b]。 
+TUT_BUILD2_ACT4_TITLE: 结束侦察舰生产
+TUT_BUILD2_ACT4_TEXT: 等待Spacewood完成侦查舰的建造。 支援舰是更大型的工程， 因此可以与侦查舰同时生产。 
+
+TUT_SCOUT_TITLE: 侦查Xaste
+TUT_SCOUT_TEXT: <<|
+	太好了! 舰队会从附近有产能的星球自动购置排在生产队列中的支援舰。 
+	不同的旗舰可以拥有不同数量的支援舰， 这一数量由支援舰列表顶部的[b]"支援舰上限"[/b]标志来表示。 
+
+	在舰队购置支援舰的同时， 我们可以派侦查舰到敌军的阵地一探究竟。 
+>>
+TUT_SCOUT_ACT1_TITLE: 侦查Xaste
+TUT_SCOUT_ACT1_TEXT: <<|
+	派遣你新建造的侦查舰到Xaste星系。 你可以使用它的跃迁引擎。 
+>>
+
+TUT_CONQ_TITLE: 占领Xaste
+TUT_CONQ_TEXT: <<|
+	我们的侦查舰在Xaste星系发现了一个敌军殖民地 - 一个拥有菲斯合金的星球。 
+	菲斯合金是一种0级的资源， 可以产出科研点。 
+	
+	由于周围看起来似乎没什么大型敌军舰队， 
+	我们应该派出舰队强行占领这个星球:
+	摧毁星球本身的防御舰队， 然后围攻这个星球， 降低它的忠诚度。 
+	当忠诚度耗尽时， 这个星球就是你的了! 
+>>
+TUT_CONQ_ACT1_TITLE: 让战列舰跃迁至Xaste
+TUT_CONQ_ACT1_TEXT: 使用跃迁引擎让战列舰舰队跃迁至Xaste。 
+TUT_CONQ_ACT2_TITLE: 消灭防御部队
+TUT_CONQ_ACT2_TEXT: 把你的舰队派往Xaste IV行星消灭其轨道上的防御舰队。 
+TUT_CONQ_ACT3_TITLE: 占领星球
+TUT_CONQ_ACT3_TEXT: 选择你的舰队， [b]右击[/b]Xaste IV， 再选择"占领"选项。 等待占领完成。 
+
+TUT_CAPT_TITLE: 胜利!
+TUT_CAPT_TEXT: <<|
+	敌人的星球在你的围攻下陷落了! 殖民地现在听从你的命令。 
+
+	要想利用它所生产的菲斯合金产出科研点， 将它出口到Spacewood。 
+>>
+TUT_CAPT_ACT1_TITLE: 出口菲斯合金
+TUT_CAPT_ACT1_TEXT: 将Xaste IV的菲斯合金出口到Spacewood。 
+
+TUT_PRES_TITLE: 资源与负荷
+TUT_PRES_TEXT: <<|
+	特定种类的资源除了可以帮助星球升级， 
+	它们还会给消耗这些资源的星球带来[b]负荷[/b]。 
+	
+	一个星球上的平民人口会自动在星球表面建造[b]平民建筑[/b]来利用各种进口的负荷
+	(资金， 影响力， 能量， 科研， 防御， 或者产能)。 
+
+	一个星球只能承受有限的负荷， 这个上限取决于它的总人口。 
+	进口的负荷如果超过这一上限， 就会使生产效率降低。 
+>>
+
+TUT_BLD_TITLE: 帝国建筑
+TUT_BLD_TEXT: <<|
+	虽然星球的生产力主要由民用设施提供， 但你还是可以将一部分预算用在建造[b]帝国建筑[/b]上。 
+
+	这些建筑大多需要大量的资金来建造和维护， 但是也能给你带来其他方式得不到的好处。 
+>>
+TUT_BLD_ACT1_TITLE: 管理Spacewood
+TUT_BLD_ACT1_TEXT: [b]双击[/b]Spacewood来打开它的星球管理界面。 
+TUT_BLD_ACT2_TITLE: 打开建筑列表
+TUT_BLD_ACT2_TEXT: 点击右边的[b]建筑[/b]按钮来打开帝国建筑列表。 
+TUT_BLD_ACT3_TITLE: 建造一个科研所
+TUT_BLD_ACT3_TEXT: 选择[b]科研所[/b]后把它放在左边的星球表面上， 这将加速你的科研。 
+
+TUT_RSC_TITLE: 科研领域
+TUT_RSC_TEXT: <<|
+	提供[color=#8c4ec9][img=ResourceIcon::4;20/][b]科研负荷[/b][/color]的资源会不断产出科研点。 
+
+	科研点可以用来解锁科技树上的科技， 科技可以给你的帝国带来各种提升。 
+	
+	你只能选择和已研究科技相邻的科技进行研究。 可以研究的科技会以亮色显示。 
+>>
+TUT_RSC_ACT1_TITLE: 浏览科研标签页
+TUT_RSC_ACT1_TEXT: 切换到标签栏中的[b]科研标签页[/b]。 
+TUT_RSC_ACT2_TITLE: 研究装甲学
+TUT_RSC_ACT2_TEXT: 研究科学结点右上角的'装甲'科技。 
+TUT_RSC_ACT3_TITLE: 研究气密隔舱
+TUT_RSC_ACT3_TEXT: 研究现在解锁了的'气密隔舱'科技。 
+
+TUT_DSG_TITLE: 战舰蓝图
+TUT_DSG_TEXT: <<|
+	你的每艘战舰的建造， 不管是旗舰还是支援舰， 都是基于某种蓝图。 
+	要想让战舰装备我们刚刚解锁的气密隔舱， 
+	我们需要改变某些战舰的设计图纸。 
+>>
+TUT_DSG_ACT1_TITLE: 打开重型航母图纸
+TUT_DSG_ACT1_TEXT: 在蓝图标签页中， [b]双击[/b]重型航母设计图来进行编辑。 
+TUT_DSG2_TITLE: 子系统
+TUT_DSG2_TEXT: <<|
+	每个战舰蓝图都包括不同的[b]子系统[/b]。 子系统可能拥有任意数量的六边形网格， 
+	也可以被画成任何形状。 一个子系统占据的网格越多 ， 就比其他小型的子系统更优越。 
+
+	有的子系统还有着'核心'网格: 比如炮台， 引擎排气口等等。 
+
+	如果核心网格在战斗中遭到破坏， 整个子系统就会失效， 直到被维修好。 
+>>
+TUT_DSG3_TITLE: 添加装甲
+TUT_DSG3_TEXT: <<|
+	让我们把重型航母设计得更坚固， 为它添加一些电镀装甲网格来保护各种核心网格。 
+
+	在左侧的子系统列表中先点击"防御"分类， 然后点击"电镀装甲"子系统来选定[b]电镀装甲[/b]。 
+>>
+TUT_DSG3_ACT1_TITLE: 添加电镀装甲
+TUT_DSG3_ACT1_TEXT: 添加至少[b]3个[/b]电镀装甲网格。 
+TUT_DSG4_TITLE: 强化
+TUT_DSG4_TEXT: <<|
+	除了添加子系统， 在特定的子系统里我们还可以添加[b]子系统强化[/b]。 比如气密隔舱和瞄准传感器这些东西， 它们可以提升或者改变子系统的性能。 
+
+	但要小心的是， 给一个子系统添加太多强化也会使它变得极其昂贵。 
+>>
+TUT_DSG4_ACT1_TITLE: 添加一个气密隔舱
+TUT_DSG4_ACT1_TEXT: 给至少一个炮台添加气密隔舱来提升其生命值。 
+TUT_DSG4_ACT2_TITLE: 保存蓝图
+TUT_DSG4_ACT2_TEXT: 点击屏幕顶端右侧的[b]保存[/b]来保存你的"重型航母"蓝图。 
+
+TUT_FLT_TITLE: 建造一支新舰队
+TUT_FLT_TEXT: <<|
+	我们可以在Spacewood建造一支新舰队来部署刚刚修改的旗舰。 
+	同时我们还应该为旗舰配备一些支援舰来提升舰队的火力。 
+>>
+TUT_FLT_ACT1_TITLE: 管理Spacewood
+TUT_FLT_ACT1_TEXT: [b]双击[/b]Spacewood来打开星球管理界面。 
+TUT_FLT_ACT2_TITLE: 建造重型航母
+TUT_FLT_ACT2_TEXT: 在右边的战舰列表里点击"重型航母"。 
+TUT_FLT_ACT3_TITLE: 建造激光舰
+TUT_FLT_ACT3_TEXT: 在建造队列里点击重型航母， 然后点击[b]激光舰[/b]图纸来向其舰队添加10艘激光舰。 
+TUT_FLT_ACT4_TITLE: 建造更多的支援舰
+TUT_FLT_ACT4_TEXT: 向正在组建的舰队添加其他种类的支援舰。 
+TUT_FLT_ACT5_TITLE: 结束建造
+TUT_FLT_ACT5_TEXT: 注意， 支援舰是和旗舰同时平行建造的。 
+
+TUT_ENG_TITLE: 能量和神器
+TUT_ENG_TEXT: <<|
+	一些特定的资源会产出[b]能量[/b]。 这个数值代表着你所储存的用来激活远古设备的能量， 
+	这些远古神器分布在星系的各个角落。 
+
+	我们在Xaste星系检测到了一个[b]能量核心[/b]， 
+	它可以装备在我们的新舰队上。 
+>>
+TUT_ENG_ACT1_TITLE: 激活神器
+TUT_ENG_ACT1_TEXT: 选择能量核心， 然后点击屏幕底部左侧的装备图标， 或者在屏幕顶端右侧快捷菜单栏选择神器。 
+TUT_ENG_ACT2_TITLE: 装备至舰队
+TUT_ENG_ACT2_TEXT: 点击你刚刚建造的舰队， 消耗500点能量， 将能量核心装备至舰队。 这将提升舰队的战斗力。 
+
+TUT_INF_TITLE: 外交行动
+TUT_INF_TEXT: <<|
+	你可以消耗[b]影响力[/b]点数来进行外交， 影响力由你的星球依靠特定的资源产生。 
+	这些点数可用来购买和激活[b]外交行动[/b]。 
+>>
+TUT_INF2_TITLE: 权势卡卡堆
+TUT_INF2_TEXT: <<|
+	每个帝国都会从大家共享的列表购买他们自己的[b]外交行动[/b]， 
+	这个列表可在外交标签页查看， 它被称作[b]"权势卡卡堆"[/b]。 
+	新的卡片会以一定的时间间隔从右侧加入卡堆， 而旧的卡片就会从左边消失。 
+
+	外交行动在卡堆中等待的时间越长， 价格就越低， 
+	但是等待太长时间也会给别的帝国机会， 让他们以低价抢走卡片! 
+>>
+TUT_INF3_TITLE: 购买一张外交卡片
+TUT_INF3_TEXT: <<|
+	我们想看看我们的敌人修西奥人在这个地区做些什么。 
+	很幸运， 卡堆中正有一张[b]帘窥壁听[/b]卡， 
+	它可以让我们获得观察他们行动的视野。 
+>>
+TUT_INF3_ACT1_TITLE: 购买帘窥壁听卡
+TUT_INF3_ACT1_TEXT: 在外交标签页， 点击卡堆中的"帘窥壁听(修西奥)"， 然后点击[b]购买[/b]键。 
+TUT_INF3_ACT2_TITLE: 激活帘窥壁听
+TUT_INF3_ACT2_TEXT: 在你的可用行动列表中点击"帘窥壁听(修西奥)"， 然后点击[b]激活[/b]按钮。 
+TUT_INF4_TITLE: 正在进行间谍行动
+TUT_INF4_TEXT: <<|
+	注意， "间谍"效果被加入了当前已激活的权势卡
+	效果列表。 长期的外交效果常常需要消耗[b]影响力维护费[/b]。 
+
+	此时此刻， 你的"间谍"效果就让影响力产出减少了
+	20%， 这将持续到卡片失效或者你取消间谍行动。 
+>>
+
+TUT_SPY_TITLE: 发现敌军星系!
+TUT_SPY_TEXT: <<|
+	我们的间谍发现了附近的一个敌军星系， 我们应该去看看星系界面。 
+>>
+TUT_SPY_ACT1_TITLE: 查看Yingmow
+TUT_SPY_ACT1_TEXT: 在地图上查看我们的间谍行动所探测到的星系。 
+
+TUT_ANNEX_TITLE: 兼并Yingmow
+TUT_ANNEX_TEXT: <<|
+	地球帝国是一个伟大的帝国， 在星际议会中拥有极其重要的地位。 
+	这对我们来说很有利， 因为我们可以靠这个影响力来[b]兼并[/b]Yingmow星系。 
+>>
+TUT_ANNEX_ACT1_TITLE: 激活星系兼并
+TUT_ANNEX_ACT1_TEXT: 激活你所拥有的[b]星系兼并[/b]卡， 然后点击Yingmow星系的恒心来选择它。 
+
+TUT_VOTE_TITLE: 影响力投票
+TUT_VOTE_TEXT: <<|
+	某些外交行动会要求你通过星际议会的[b]投票[/b]才能生效。 
+	兼并一个星系就是这样的。 
+
+	所有的投票状态都有一个当前[b]支持等级[/b]， 表示着所有支持票减去反对票后的结果。 
+	大多数情况下， 一次投票都会以+1支持的状态开始。 
+
+	各个帝国可以通过消耗影响力来使用[b]支持卡[/b]， 
+	提升或降低支持等级， 或者是增加各种其他效果。 
+>>
+TUT_VOTE2_TITLE: 通过投票
+TUT_VOTE2_TEXT: <<|
+	当一个影响力投票， 或者称作"提案"， 有着正面支持等级时， 
+	它的蓝色进度条就会逐步填满， 你可以看到[b]通过[/b]提案所需时间。 
+
+	当支持等级是负时， 绿色进度条上的进度会消失。 
+	红色进度条开始逐步填满。 当失败所需时间到达
+	0秒时， 投票会被[b]否决[/b]。 
+
+	影响力投票是一场星际议会中各个帝国都可以改变其结果的拉锯战。 
+>>
+TUT_VOTE3_TITLE: 支持一个提案
+TUT_VOTE3_TEXT: <<|
+	修西奥人使用了他们的"花言巧语"卡来对你的兼并提案投了反对票。 
+	快， 使用你自己的卡片来提升[b]支持等级[/b]到绿色区域， 
+	别让投票到达红色进度条顶端导致提案失败。 
+>>
+TUT_VOTE3_ACT1_TITLE: 使用"讨价还价"卡
+TUT_VOTE3_ACT1_TEXT: 点击你的一张[b]讨价还价[/b]卡片并点击[b]支持票[/b]按钮。 
+TUT_VOTE3_ACT2_TITLE: 赢得投票
+TUT_VOTE3_ACT2_TEXT: 通过使用你自己的卡片来回应敌人的反对票， 填满支持进度条获得胜利。 
+
+TUT_ANNEX2_TITLE: 兼并完成!
+TUT_ANNEX2_TEXT: <<|
+	通过说服星际议会， 他们承认Yingmow星系理应归你所有， 
+	你成功地将这个星系[b]兼并[/b]。 星系中已殖民的星球都是你的了! 
+
+	不幸的是， 我们在地球帝国中的线人告诉我们， 
+	一支大型的修西奥军队正在向Yingmow星系进发， 我们必须准备防御部队来抵御他们的进攻。 
+>>
+
+TUT_DEFCORE_TITLE: 建造防御太空站
+TUT_DEFCORE_TEXT: <<|
+	我们应该在Yingmow星系建造一个轨道防御太空站作为我们的第一道防线。 
+>>
+TUT_DEFCORE_ACT1_TITLE: 管理Spacewood
+TUT_DEFCORE_ACT1_TEXT: [b]双击[/b]Spacewood来打开星球管理界面。 
+TUT_DEFCORE_ACT2_TITLE: 打开轨道卫星列表
+TUT_DEFCORE_ACT2_TEXT: 点击右侧的[b]轨道卫星[/b]按键来打开轨道飞行器列表。 
+TUT_DEFCORE_ACT3_TITLE: 建造一个防御平台
+TUT_DEFCORE_ACT3_TEXT: 点击列表中的"防御平台"。 
+TUT_DEFCORE_ACT4_TITLE: 放置轨道卫星
+TUT_DEFCORE_ACT4_TEXT: 点击Yingmow星系中的任何位置来放置轨道卫星。 
+
+TUT_DEFPROJ_TITLE: 防御生成
+TUT_DEFPROJ_TEXT: <<|
+	Spacewood的当地部队高速我们他们已经建成了自卫舰队。 
+
+	[b][color=#af7926][img=ResourceIcon::5;20/]防御[/color][/b]可以用来在你的帝国各地生成支援舰。 
+
+	你需要给星系或星球标记生成防御舰来决定什么地方能获得这些战舰。 
+>>
+TUT_DEFPROJ_ACT1_TITLE: 为Yingmow建立防御体系
+TUT_DEFPROJ_ACT1_TEXT: [b]右击[/b]Yingmow的恒星， 然后选择"开始在Yingmow产出防御舰"。 
+TUT_DEFPROJ_ACT2_TITLE: 转移重型航母
+TUT_DEFPROJ_ACT2_TEXT: 在我们等待轨道卫星和战舰完成建造前， 将你的重型航母舰队转移到Yingmow。 
+
+TUT_DEF_TITLE: 坚守阵地!
+TUT_DEF_TEXT: <<|
+	当你准备好抵御修西奥的进攻时， 点击"战斗! "按钮。 
+>>
+ENTER_COMBAT: 战斗!
+TUT_DEF2_TITLE: 战争!
+TUT_DEF2_TEXT: 敌军舰队入侵了我们刚刚占领的星系。 我们必须不惜一切代价地反击!
+TUT_DEF2_ACT1_TITLE: 保卫Yingmow星系
+TUT_DEF2_ACT1_TEXT: 击退所有入侵舰队。 
+
+TUT_FINAL_TITLE: 恭喜!
+TUT_FINAL_TEXT: <<|
+	你成功将敌人击退， 并且在这片空域稳固了自己的地位， 打得漂亮! 
+
+	[i]教程到此结束， 你可以在这个地图中继续体验， 
+	也可以开始一局与AI或者其他玩家进行的游戏。 [/i]
+
+	你可以查看游戏内置的[b]百科[/b]来获取更多信息和游戏机制， 
+	或者加入官方星际统治者[b]IRC频道[/b]来和其他玩家交流心得， 
+	或是与游戏开发者对话! 
+>>

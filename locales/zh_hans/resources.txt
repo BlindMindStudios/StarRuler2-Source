@@ -1,0 +1,732 @@
+FTL: 超光速
+FTL_COST: $1超光速
+INSUFFICIENT_FTL: 超光速能量不足
+NEED_FLING_BEACON: 需要一个弹射信标
+OUT_OF_BEACON_RANGE: 距离弹射信标太远了
+PER_SECOND: /秒
+PER_MINUTE: /分
+PER_MIN: /分
+BUILD_FOR: 建造时间: $1
+BUILD_TIME: 建造时间
+EST_BUILD_TIME: 预计建造时间
+EST_COOLDOWN: 预计冷却时间
+BUILD_TIME_S: $1秒
+BUILD_TIME_MS: $1分$2秒
+CONSTRUCTION: 建造
+RESOURCES_OF: $1x， 总计
+TYPES_OF: $1种(s)
+NEED_BORROW: 当前预算不足以支付款项， 将会借贷[color=#ff0] $1[/color]， 并从下次预算中支出[color=#ff0]$2[/color]。 
+CANNOT_BORROW: 当前预算不足以支付款项， 下次预算也不足以借贷。 
+CANNOT_EXPORT: \n[right]不可以被出口[/right]
+BUILD_ASTEROID: $1采矿基地
+BUILD_ASTEROID_OPTION: 建造 $1采矿基地($2产能)
+VANISH_TIP: 将于 $1耗尽。 
+VANISH_TIP_NOUSE: 将于使用 $1次后耗尽。 
+RESOURCE: 资源
+RES_PROVIDES_PRESSURE: 负荷:
+
+WELFARE_TT: <<|
+	每次预算周期结束时所有预算剩余资金将会被抽出并转化为您自下拉
+	菜单中所选的一项资源。 
+>>
+
+WELFARE_INFLUENCE: <<
+	提供福利
+	将每 $1未用预算用于产出影响力。 
+>>
+
+WELFARE_ENERGY: <<
+	电力补贴
+	将每 $1未用预算用于产出能量。 
+>>
+
+WELFARE_RESEARCH: <<
+	研发资助
+	将每 $1未用预算用于产出科研。 
+>>
+
+WELFARE_LABOR: <<
+	公共建筑
+	将每 $1未用预算用于母星产出产能。 
+>>
+
+WELFARE_DEFENSE: <<
+ 战备 
+ 每 $1未用预算转化为全球防御 。 
+>>
+
+GTT_MONEY: <<
+	[font=Medium]资金[/font]
+	[i]每3分钟的预算周期结束后你将得到新的资金。 任何没有在上一周期结束前花完的钱将被投入到[img=$4;20/]福利中。 [/i]
+
+	剩余预算:[right] $1[/right]
+	剩余时间:[right]$3[/right]
+	即将获得的预算:[right]$2[/right]
+>>
+
+GTT_BONUS_MONEY: <<|
+	[font=Subtitle][b]专项资金:[/b] [right][color=#0f0]$1[/color][/right][/font]
+
+	[i]专项资金由各种一次性的来源得到， 比如
+	贪财好利权势卡， 异常区， 并且若不被耗尽的话可以留到
+	下一个预算周期。 [/i]
+>>
+
+GTT_DEBT_PENALTY: <<
+	[color=#f00][b]债务人口惩罚:[/b] [right]$1[/right][/color]
+	[i]负债状态下你所有星球的人口增长率降低。 [/i]
+>>
+
+GTT_FLEET_PENALTY: <<
+	[color=#f00][b]债务战力惩罚:[/b] [right]$1[/right][/color]
+	[i]债务达到一定数量， 你所有的舰队战力降低。 [/i]
+>>
+
+GTT_INFLUENCE: <<|
+	[font=Medium]影响力[/font]
+	[i]影响力可以用来完成外交行动， 或是赢取星际议会投票。 如果储存的点数大于你的最佳储存上限
+	(该数值基于你的影响力产量)。 影响力产出速率将会降低。 [/i]
+
+	可用点数:[right]$1[/right]
+	最佳储量:[right]$2[/right]
+	产出速率:[right]$3[/right]
+
+	星系产出比例:[right]$4[/right]
+	影响力份额: [right]$5[/right]
+ 	[i]影响力建筑物可提供影响力份额 。 当前所有掌控帝国的总影响力百分比决定影响力生成率 。 [/i]
+ >>
+
+GTT_ENERGY: <<|
+	[font=Medium]能量[/font]
+	[i]能量可以用于激活你所拥有的神器的特殊能力。 当前储存的能量超出免费能量储量上限越多， 
+	对能量产出速率的惩罚就越大。 [/i]
+
+	可用能量:[right]$1[/right]
+	产出速率:[right]$2[/right]
+	免费储量:[right]$3[/right]
+	储量惩罚:[right]$4[/right]
+>>
+
+GTT_FTL: <<
+	[font=Medium]超光速能量[/font]
+	[i]使用你的飞船的超光速跃迁需要消耗跃迁能。 [/i]
+
+	可用跃迁能:[right]$1[/right]
+	最大储量:[right]$2[/right]
+	产出速率:[right]$3[/right]
+>>
+
+GTT_RESEARCH: <<
+	[font=Medium]科研点[/font]
+	[i]研究各种科研领域可以解锁不同的效果和新的项目。 [/i]
+
+	可用科研点:[right]$1[/right]
+	产出速率:[right]$2[/right]
+>>
+
+GTT_RESEARCH_TECH: <<
+	当前科研项目: [right][b][color=$3] $1[/color][/b](预计完成时间:$2)[/right]
+>>
+
+GTT_DEFENSE: <<
+	 [font=Medium]全球防御 [/font]
+	 [i]全球防御会在指明要使用的行星或星系上自动产生支援舰 。 右击标记星系星球 ， 可用作全球防御 。 每点防御点可产生 2劳动力的支援舰 。 [/i]
+
+	 全球防御率 ： [right]$1[/right]
+	 防御后备 ： [right]$3 / $2[/right]
+
+	 [i]在舰船自动产生之前，国防储备已经被填满。如果防御后备满了 ， 可部署在任意星球上产生防御战舰 。 \n当全球防御系统完全的时候，就会像往常一样自动产生舰船[/i]
+>>
+TT_DEPLOY: 部署防御后备 
+RESOURCE_BUDGET: 预算
+RESOURCE_MONEY: 资金
+RESOURCE_INFLUENCE: 影响力
+RESOURCE_ENERGY: 能量
+RESOURCE_FTL: 跃迁能
+RESOURCE_RESEARCH: 科研点
+RESOURCE_DEFENSE: 防御
+RESOURCE_LABOR: 产能
+LOYALTY: 忠诚
+
+PRESSURE_Money: 为帝国产出预算 。 
+PRESSURE_Influence: <<|
+	产出影响力点， 提升其上限。 
+>>
+PRESSURE_Defense: <<|
+	为消费行星产出免费支援舰。 
+>>
+PRESSURE_Labor: <<|
+	提升舰船和轨道卫星建造速度。 
+>>
+PRESSURE_Energy: <<|
+产出激活神器所需的能量 。 
+>>
+PRESSURE_Research: <<|
+	提升已激活的研究领域的研究进度。 
+>>
+
+MONEY_TYPE_0: 其他
+MONEY_TYPE_1: 建造
+MONEY_TYPE_2: 轨道卫星
+MONEY_TYPE_3: 建筑
+MONEY_TYPE_4: 舰船
+MONEY_TYPE_5: 行星维护费
+MONEY_TYPE_6: 行星收入
+MONEY_TYPE_7: 殖民者
+MONEY_TYPE_8: 阻碍
+MONEY_TYPE_9: 交易
+MONEY_TYPE_10: 臣属
+
+MOD_SPEED: 速度
+MOD_TIME: 时间
+
+EFFECT_ADDPRESSURECAP: 负荷上限
+EFFECT_MODCIVRESOURCE: 平民 $1
+EFFECT_ADDRESOURCE: $1
+EFFECT_ADDPRESSURE: $1负荷
+EFFECT_EFFICIENCY: 负荷
+EFFECT_OVERPOPULATION: 人口过剩
+EFFECT_BLDMAINTREFUND: 建筑维护费
+EFFECT_VANISHBONUS: 临时资源
+EFFECT_POPRESEARCH: 每 $1十亿人口产生的科研点。 
+
+WATER: 水
+WATER_BLURB: 将行星升至1级需要[img=ResourceClassIcons::4;20/]水 。 
+FOOD_BLURB: 将行星升级需要[img=ResourceClassIcons::3;20/]食物 。 
+FOOD: 食物
+
+GRAIN: 谷物(食物)
+GRAIN_EFFECT: 人口增长率
+
+MEAT: 肉(食物)
+MEAT_EFFECT: 建造建筑
+
+FRUIT: 水果(食物)
+FRUIT_EFFECT: 未开发维护费
+
+FISH: 鱼(食物)
+FISH_EFFECT: 已开发地块
+
+HYPER_OATS: 奈林麦(食物)
+HYPER_OATS_DESC: <<
+	在计算星球升级所需资源时， 可算作两份食物。 
+>>
+
+ALUMINUM: 铝
+ALUMINUM_DESC: <<
+	增加1点负荷上限。 
+>>
+
+IRON: 铁
+IRON_EFFECT: 支援舰建造
+IRON_DESC: <<
+	支援舰建造速度增加30%。 
+>>
+
+COAL: 煤
+COAL_EFFECT: 平民产能
+COAL_DESC: <<
+	民用建筑提供的产能增加30%。 
+>>
+
+SALTS: 盐(食物)
+SALTS_DESC: <<
+	可以被视作食物。 所有产出的资源所对应的负荷增加。 
+>>
+
+PHASITE: 菲斯合金
+PHASITE_DESC: <<
+	每50亿人口增加1点科研产出。 
+>>
+
+FULRATE: 福瑞特
+FULRATE_DESC: <<
+	消耗该资源的行星得到额外4点与其本土资源匹配的负荷。 
+>>
+
+GEMS: 宝石
+GEMS_DESC: <<
+	当平民商人送来宝石时可以使消费行星幸福。 
+>>
+
+PEKELM: 帕克
+PEKELM_EFFECT: 殖民舰加速
+PEKELM_DESC: <<
+	从此星球出发的殖民舰速度增加100%。 
+>>
+
+SPICE: 香料
+SPICE_EFFECT: 忠诚
+SPICE_DESC: <<
+	行星忠诚度增加6点。 
+>>
+
+UNOBTANIUM: 超导矿
+UNOBTANIUM_EFFECT: 转化:\n[right]等待进口。 。 。 [/right]
+UNOBTANIUM_DESC: <<
+	不能被出口。 可以转化成任何一种你所拥有的资源。 
+>>
+ABL_MORPH_UNOBTANIUM: 转化超导矿
+ABL_MORPH_UNOBTANIUM_DESC: <<|
+	将这个星球上的超导矿石转化为另一种你所拥有的资源。 
+>>
+
+TEXTILES: 纺织品
+TEXTILES_DESC: <<
+>>
+
+ELECTRONICS: 电子产品
+ELECTRONICS_DESC: <<
+>>
+
+GLASS: 玻璃
+GLASS_EFFECT: 能量
+GLASS_DESC: 提供1点[img=ResourceIcon::2;20/]能量产出。 
+
+NATIVE_GOLD: 原生金
+NATIVE_GOLD_EFFECT: 影响力
+NATIVE_GOLD_DESC: 提供1点[img=ResourceIcon::1;20/]影响力产出。 
+
+DEUTERIUM: 氘
+DEUTERIUM_DESC: <<
+>>
+
+CHEMICALS: 化工产品
+CHEMICALS_DESC: <<
+>>
+
+RARE_METALS: 稀有金属
+RARE_METALS_DESC: <<
+>>
+
+OIL: 石油
+OIL_DESC: <<
+>>
+
+NATURAL_GAS: 天然气
+NATURAL_GAS_DESC: <<
+>>
+
+PLASTICS: 塑料
+PLASTICS_DESC: <<
+>>
+
+LUXURY_MATERIALS: 奢侈材料
+LUXURY_MATERIALS_DESC: <<
+	消费行星变得幸福。 
+>>
+
+TITANIUM: 钛
+TITANIUM_DESC: <<
+>>
+
+LOCAL_ASTEROID_FIELD: 本地小行星群
+LOCAL_ASTEROID_FIELD_DESC: <<
+	平民产能产出增加 50%。 
+
+	[color=#ff7070][b]无法被出口。 [/b][/color]
+>>
+
+EXPLOSIVES: 爆炸物
+EXPLOSIVES_DESC: <<
+>>
+
+HADOCITE: 闪电石
+HADOCITE_DESC: <<
+>>
+
+PLUTONIUM: 钚
+PLUTONIUM_DESC: <<
+>>
+
+THORIUM: 钍
+THORIUM_DESC: <<
+>>
+
+URANIUM: 铀
+URANIUM_DESC: <<
+>>
+
+MEDICINES: 药物
+MEDICINES_DESC: <<
+>>
+
+JEWELRY: 珠宝
+JEWELRY_DESC: <<
+>>
+
+NEUTRONIUM: 中子
+NEUTRONIUM_DESC: <<
+>>
+
+DEGENERATE_MATTER: 简并物质
+DEGENERATE_MATTER_DESC: <<
+>>
+
+PSIONIC_REAGENTS: 灵能试剂
+PSIONIC_REAGENTS_EFFECT: 保证忠诚
+PSIONIC_REAGENTS_DESC: <<
+	保护消费该资源的星系内所有行星的忠诚度。 
+
+	需要3分钟才能在新的恒星系生效。 
+>>
+STATUS_PSIONIC_PROTECTED: 灵能保护
+STATUS_PSIONIC_PROTECTED_DESC: <<
+	这颗行星受到保护，不会被输入到该系统中某个行星上的灵能试剂捕获。
+>>
+
+ANCIENT_CITY: 古城
+ANCIENT_CITY_DESC: [color=#ff7070][b]无法被出口。 [/b][/color]
+
+SUPERCARBONS: 金刚石
+SUPERCARBONS_DESC: <<
+>>
+
+HYDROCONDUCTORS: 水导体
+HYDROCONDUCTORS_EFFECT: 复叠效应
+HYDROCONDUCTORS_DESC: <<|
+	消费该资源的行星上所有产能产出增加50%。 
+>>
+
+ANTIMATTER: 反物质
+ANTIMATTER_DESC: <<|
+	为消耗该资源的行星或轨道卫星增加2048支援舰上限。 在轨支援舰工作效能变为400%。 
+>>
+
+EXOTIC_MATTER: 奇异物质
+EXOTIC_MATTER_DESC: <<
+	消费该资源的行星上的建筑可以立刻建造完成。 
+>>
+
+CORINIUM: 科里尼翁
+CORINIUM_DESC: <<
+	消费该资源的行星的负荷上限翻倍。 
+>>
+
+ILLINIUM: 钇
+ILLINIUM_DESC: <<
+	消费该资源的行星上0级资源产生的负荷翻倍。 
+>>
+
+KALSUNIM: 卡苏宁
+KALSUNIM_DESC: <<
+	消费该资源的行星上的基本产能产出可提升其防御。 
+>>
+
+DRUGS: 毒品
+DRUGS_EFFECT: [b]1[/b]级减轻需求
+DRUGS_DESC: <<|
+	可以代替任何一种资源， 作为行星升级的需求。 在每个星球上只能作用一次。 
+>>
+
+FTL_CRYSTALS: FTL晶体
+FTL_CRYSTALS_EFFECT: 跃迁能产出
+FTL_CRYSTALS_BLURB: <<
+	每秒产出[levels=$1;#00c0ff]0.1/0.5/1/2/3/8[/levels] [img=ResourceIcon::3;20/]跃迁能。 
+	[b]等级4+:[/b]从此星系出发的跃迁不耗费跃迁能。 
+>>
+FTL_CRYSTALS_DESC: <<
+	每秒产出[levels= $1;#00c0ff]0.1/0.5/1/2/3/8[/levels] [img=ResourceIcon::3;20/]跃迁能。 
+
+	[b]如果此行星等级不少于4级:[/b]
+	[offset=30]所有从此星系出发的跃迁不消耗跃迁能。 [/offset]
+
+	[b]如果此行星等级是5级:[/b]
+	[offset=30]所有的FTL跳转都是免费的。[/offset]
+
+	[i][color=#aaa]该资源是一种可扩展的资源， 无法被出口， 也不能用来升级行星。 其效果与行星等级相关。 [/color][/i]
+>>
+
+UNIQUE_RESEARCH: 褐硅锰矿
+UNIQUE_RESEARCH_DESC: <<|
+	[b]独特资源[/b]。 产出10点[img=$Research;20/] [color=$Research]科研[/color]负荷。 
+>>
+
+UNIQUE_INFLUENCE: 铱铬矿
+UNIQUE_INFLUENCE_DESC: <<|
+	[b]独特资源[/b]。 产出10点[img=$Influence;20/] [color=$Influence]影响力[/color]负荷。 
+>>
+
+UNIQUE_DEFENSE: 凯利石
+UNIQUE_DEFENSE_DESC: <<|
+	[b]独特资源[/b]。 产出10点[img=$Defense;20/] [color=$Defense]防御[/color]负荷。 
+>>
+
+UNIQUE_ENERGY: 金红石
+UNIQUE_ENERGY_DESC: <<|
+	[b]独特资源[/b]。 产出10点[img=$Energy;20/] [color=$Energy]能量[/color]负荷。 
+>>
+
+MARENIUM: Maremium
+MARENIUM_BLURB: [b]特殊 [/b]。 解锁 [b]Maremium反应堆 [/b]为船舰提供动力 。 
+MARENIUM_DESC: <<|
+ [b]特殊 [/b]。 解锁 [b]Maremium 反应堆 [/b]为船舰提供动力 。 
+
+ 使用Maremium反应堆的船舰获得 [levels=$1;#ff8000]5%/10%/15%/20%/25%/30%[/levels] 额外战斗力量 。 
+
+ 使用Maremium反应堆的船舰获得 [levels=$1;#ff8000]50.1/0.2/0.4/0.7/1.5/4.0[/levels] 额外加速 。 
+
+ 如果此行星丢失 ， 你拥有的任何使用Maremium反应堆作为代替的船舰战斗力量会显著下降 。 
+>>
+
+ASTEROID_FTL: FTL晶粒
+ASTEROID_FTL_DESC: <<|
+	每秒产出0.5点跃迁能。 
+	
+	不需要被出口
+>>
+
+ASTEROID_GROWTH: 经济材料
+ASTEROID_GROWTH_EFFECT: 增长
+ASTEROID_GROWTH_DESC: <<|
+	(民用及帝国)建筑建造速度增加100%。 
+
+	行星最大人口增加2。 
+>>
+
+ASTEROID_INFLUENCE: 灵能晶粒
+ASTEROID_INFLUENCE_EFFECT: 额外影响力
+ASTEROID_INFLUENCE_DESC: <<|
+	产出影响力， 产出值与消耗该资源的星球的科研点
+	产出成正比。 
+>>
+
+ASTEROID_LABOR: 建筑材料
+ASTEROID_LABOR_EFFECT: 平民产能
+ASTEROID_LABOR_DESC: <<
+	给消耗该资源的星球增加4点基本产能产出。 
+	提升产能产出率100%。 
+
+	只在该星球有正在进行的建造任务时有效。 
+>>
+
+ASTEROID_DEFENSE: 挥发性物质
+ASTEROID_DEFENSE_DESC: <<
+	给消耗该资源的星球提供一系列的近程武器。 
+
+	只能被出口一次， 而后其出口地就被锁定， 无法再改变。 
+
+	只有在用于战斗中时有效。 
+>>
+
+ASTEROID_AFFINITY: 变异材料
+ASTEROID_AFFINITY_DESC: <<
+	为该行星的本土资源增加2点相应的负荷。 
+>>
+
+SOYLENT1: 蓝色食品
+SOYLENT1_DESC: <<
+	看起来应该是吃的。 
+>>
+
+SOYLENT2: 红色食品
+SOYLENT2_DESC: <<
+	看到有人吃它， 我猜应该是种食品。 
+>>
+
+SOYLENT3: 红外食品
+SOYLENT3_DESC: <<
+	又好吃又暖和。 
+>>
+
+SOYLENT4: 绿色食品
+SOYLENT4_DESC: <<
+	我保证这东西肯定不是人肉。 
+>>
+
+HEAVY_WATER: 重水
+HEAVY_WATER_DESC: <<|
+	通过结合2种水资源获得。 
+
+	每过一段时间会产出 $1单位随机负荷。 
+	负荷的种类每3分钟改变一次。 
+>>
+
+BOOST_WATER: 活性水
+BOOST_WATER_DESC: <<|
+	通过结合4种水资源获得。 
+
+	[b]改善本土资源:[/b]
+	[nl/][offset=30]额外负荷获得+ $1。 [/offset]
+>>
+
+CLEAR_WATER: 清水
+CLEAR_WATER_DESC: <<|
+	通过结合8种水资源获得。 
+
+	将所有平民影响力， 防御， 科研和能量产出
+	变为资金产出。 
+>>
+
+AWESOME_WATER: 凤凰水
+AWESOME_WATER_DESC: <<|
+	通过结合16种水资源获得。 
+
+	所有平民产出+ $1。 
+>>
+
+SYNTHETICS: 合成纤维
+SYNTHETICS_DESC: <<|
+	获得一个外卡特性。 不可以被出口。 
+>>
+
+MICROCLINE: 微斜长石
+MICROCLINE_DESC: <<|
+	随处可见的完全没有用处的资源。 
+
+	但是它所碰到的任何东西都会变成微斜长石。 真是无奇不有。 
+>>
+
+SLAVE_LABOR: 苦工
+SLAVE_LABOR_DESC: <<
+	增加5点基本产能产出。 
+
+	只有在建造时有效。 
+>>
+
+PLAINS: 辽阔平原
+PLAINS_BLURB: <<
+	该行星拥有巨大的表面。 每升一级地块开发速度都会提升。 
+>>
+PLAINS_DESC: <<
+ 行星拥有巨大的平面 。 
+
+ 单位格发展速度增加至 [levels=$1;#ffb4b6]100%/150%/200%/250%/300%/350%[/levels]。 
+
+ 在此行星的总计建筑维护花费最多减少 [levels=$1;#d1cb6a]§50k/§150k/§300k/§500k/§750k/§1.1M[/levels]。 
+>>
+
+
+QUARTZ: 石英
+QUARTZ_BLURB: <<
+	每个激活的神器带来[levels= $1;#ffb4b6]10/25/50/80/120/200[/levels]产能储量奖励。 
+>>
+QUARTZ_DESC: <<
+	每当你激活一个神器后， 这个星球获得[levels= $1;#ffb4b6]10/25/50/80/120/200[/levels]产能储量奖励， 但前提是星球的储量上限足够。 
+
+	此行星获得[levels= $1;#ffb4b6]10/110/210/310/410/510[/levels]的额外产能储量。 
+
+	[i][color=#aaa]该资源是一种可扩展的资源， 无法被出口， 也不能用来升级行星。 其效果与行星等级相关。 [/color][/i]
+>>
+
+ALLONDIUM: Allondium
+ALLONDIUM_BLURB: <<
+	提升平民影响力产出。 
+	产出随机外交卡片。 
+>>
+ALLONDIUM_DESC: <<
+	此星球的影响力产出提升[levels= $1;#ffb4b6]10%/20%/30%/40%/50%/60%[/levels]。 
+
+	降低购买外交卡的影响力花费 [levels=$1;#ffb4b6]0/0/1/1/2/2[/levels] 点。 
+
+ [b]如果此行星的等级为 4或者更高 :[/b]
+ [offset=30]此行星将获得随意购买 '命名旗舰 '或者 '吞并行星 ' 卡片 。 [/offset]
+
+ [b]如果此行星的等级为 5:[/b]
+ [offset=30]用于投票卡片消费最多减少 3影响力 。 [/offset]
+
+	[i][color=#aaa]该资源是一种可扩展的资源， 无法被出口， 也不能用来升级行星。 其效果与行星等级相关。 [/color][/i]
+>>
+ABL_BUY_NAME_FLAGSHIP: 购买 '命名旗舰 '
+ABL_BUY_NAME_FLAGSHIP_DESC: <<
+ 使用此星球能力购买 '命名旗舰 ' 外交卡片 。 
+
+ [i][color=#aaa]冷却分配至 "购买 '吞并行星 '" 能力 。 [/color][/i]
+>>
+ABL_BUY_ANNEX_PLANET: 购买 '吞并行星 '
+ABL_BUY_ANNEX_PLANET_DESC: <<
+ 使用此星球能力购买 '吞并行星 ' 外交卡片 。 
+
+ [i][color=#aaa]冷却分配至 "购买 '命名旗舰 '" 能力 。 [/color][/i]
+>>
+
+PHOSPHATE: 磷酸盐
+PHOSPHATE_BLURB: <<
+	盟友星系中的战舰战力提升[levels= $1;#ffb4b6]5%/10%/15%/25%/40%/60%[/levels]。 
+>>
+PHOSPHATE_DESC: <<
+	在你所控制的星系中战斗的舰队战力提升[levels= $1;#ffb4b6]5%/10%/15%/25%/40%/60%[/levels]。 
+
+	[i][color=#aaa]该资源是一种可扩展的资源， 无法被出口， 也不能用来升级行星。 其效果与行星等级相关。 [/color][/i]
+>>
+
+CYLLIUM: 西里姆
+CYLLIUM_BLURB: <<
+	提升平民能量产出。 
+	过一段时间会生成一个神器。 
+>>
+CYLLIUM_DESC: <<
+	这个星球上的能量产出提升[levels= $1;#ffb4b6]10%/20%/30%/40%/50%/60%[/levels]。 
+
+	每2分钟在星系中生成一个随机神器， 保留[levels=$1;#ffb4b6]1/2/3/5/8/15[/levels]个神器在星系中，旧的神器将过期。 
+
+ [b]如果此行星的等级为 4或者更高 :[/b]
+ [offset=30]在此星系中的神器将便宜 25% 进行激活 。 [/offset]
+	[i][color=#aaa]该资源是一种可扩展的资源， 无法被出口， 也不能用来升级行星。 其效果与行星等级相关。 [/color][/i]
+>>
+
+R_SPACEFERNS: 乳化蕨类 
+R_SPACEFERNS_BLURB: <<
+ [font=Small]引擎维护费用减少 [levels=$1;#ffb4b6]5% / 10% / 25% / 50% / 75% / 90%[/levels]。 每个等级获得各类压力 。 [/font]
+>>
+R_SPACEFERNS_DESC: <<|
+ 这种杂事蕨类已经进化覆盖了星球的整个表面有大量实用和有趣的性能 。 它们的茎是好几种物种的食材 ， 它们进行高效的新陈代谢时会产生极端高效的可燃气体副产品 。 
+
+ 此星球只需要大量的食物和水进行升级 。 
+
+ 拥有此行星能够减少 [levels=$1;#ffb4b6]5%/10%/25%/50%/75%/90%[/levels]你船舰所有引擎的维修花费 。 
+
+ 在行星升级时将获得各种额外压力 ； 在等级 1获得 2点能量压力 ， 在等级 2时 3点金钱压力 ， 在等级 3时 4点影响力压力 ， 在等级 4时 5点能量压力 ， 在等级 5时 6点影响力压力 。 
+>>
+
+C_ORE: 矿石 
+C_ORE_DESC: <<
+ 从小行星开采的普通建筑材料并通过各种方式用于建造 。 
+>>
+
+R_SILICON: 硅 
+R_SILICON_DESC: <<
+ 增加 30%人口增长率 。 
+>>
+
+R_MARBLE: 大理石 
+R_MARBLE_DESC: <<
+ 增加 50%建筑建造速度 。 
+>>
+
+R_ATIUM: 阿提姆 
+R_ATIUM_DESC: <<
+ 提升前往此星系内的阿提姆行星所有舰队的视野 。 
+>>
+
+R_SYRUP: 糖浆 
+R_SYRUP_DESC: <<
+ 可以被用作食物 。 增加 30%影响力压力 。 
+>>
+
+R_LATTICES: 晶体结构 
+R_LATTICES_DESC: <<
+ 增加 40%研究压力 。 增加 40%能量压力 。 
+>>
+
+R_HYPERVOLATILES: 超体结构 
+R_HYPERVOLATILES_DESC: <<
+ 增加 40%防御压力 。 减少 40%影响力压力 。 
+>>
+
+R_ORE_RATE: 矿石 
+R_ORE_RATE_DESC: <<
+ 每分钟产出 60矿石 。 可以被出口到其他行星 。 
+>>
+
+C_BASE_MATERIAL: 基础材料 
+C_BASE_MATERIAL_DESC: <<
+ 基础型建筑砖块可被用于产出很多不同的东西 。 
+
+ 可以被用于生产的特定建筑所消耗 。 
+>>
+
+R_BASE_MATERIAL: 基础材料 
+R_BASE_MATERIAL_DESC: <<
+ 每分钟产出 10基础材料 。 可以被出口到其他行星 。 
+>>

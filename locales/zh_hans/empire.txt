@@ -1,0 +1,994 @@
+PORTRAIT:头像
+RACE_NAME:种族名称
+FTL_METHOD:跃迁方式
+SHIPSET:舰组
+WEAPON_SKIN:武器皮肤
+EMPIRE_UNIVERSE:星系
+REMNANTS:遗族
+PIRATES:海盗
+
+TT_DIFF:[font=Medium]难度:[/font]
+DIFF_PASSIVE:[img=HappyFace;40][b][color=#0f0]被动[/color][/b]⏎\n[i]不会向玩家控制的帝国宣战。 [/i][/img]
+DIFF_EASY:[img=StatusPeace;40][b]简单[/b]\n[i]适于上手的简单对手。 [/i][/img]
+DIFF_NORMAL:[img=StatusWar;40][b]普通l[/b]\n[i]适度的挑战。 [/i][/img]
+DIFF_HARD:[img=StatusCeaseFire;40][b]困难[/b]\n[i]使出了浑身解数的AI。 [/i][/img]
+DIFF_MURDEROUS:[img=AttributeIcons::3;40][b][color=#ff9000]凶残[/color][/b]\n[i]Ai视摧毁玩家的帝国为唯一准则。 [/i][/img]
+DIFF_CHEATING:[img=At​​tributeIcons::0;40][b][color=#f00]作弊[/color][/b]\n[i]滥用[b]作弊[b]和免费的资源。 [/i][/img]
+DIFF_SAVAGE:[img=VoteIcons::3;40][b][color=#f00]残暴[/color][/b]\n[i]滥用[b]作弊[/b]和免费的资源来屠净所有人类玩家。 [/i][/img]
+DIFF_BARBARIC:[img=VoteIcons::3;40;#ff0000][b][color=#f00]粗野[/color][/b]\n[i]终极挑战。 [/i][/img]
+
+CUSTOMIZE_RACE:自定义种族... 
+LOAD_CUSTOM_RACE:加载自定义种族
+RACE_OVERVIEW:概览
+TRAITS:特性
+NO_TRAITS:没有选择特性... 
+CONFLICTS:冲突:
+RACE_IS_HARD:新手不推荐。 
+
+RACE_POINTS_POS:+$1点数
+RACE_POINTS_NEG:$1点数
+RACE_POINTS_NEU:0点
+
+RACE_POINTS_AVAIL_POS:$1可用点
+RACE_POINTS_AVAIL_NEG:需要$1点
+
+RACE_PROFILE:[img=TabWiki;30][vspace=6/]个人资料[/img]
+TRAIT_CAT_Government:[img=$Influence;30][vspace=6/]政府[/img]
+TRAIT_CAT_Foundation:[img=$Labor;30][vspace=6/]基础[/img]
+TRAIT_CAT_FTL:[img=$FTL;30][vspace=6/]跃迁[/img]
+TRAIT_CAT_Personality:[img=$Population;30][vspace=6/]特性[/img]
+TRAIT_CAT_Biology:种族生理
+TRAIT_CAT_Military:军事
+TRAIT_CAT_Tendency:倾向
+TRAIT_CAT_Lifestyle:[img=$Planet;30][vspace=6/]习性 [/img]
+
+TRAIT_POOR:贫困
+TRAIT_POOR_DESC:<<|
+	 开始游戏的时候 第一个预算周期是没有钱的。 
+>>
+
+TRAIT_INDUSTRIOUS:工业化
+TRAIT_INDUSTRIOUS_DESC:<<|
+	开始时母星拥有额外$1产能产出。 
+>>
+
+TRAIT_FTLCACHE:跃迁储蓄
+TRAIT_FTLCACHE_DESC:<<|
+	开始时拥有$1跃迁能， 但没有跃迁能产出。 
+>>
+
+TRAIT_PLANTATION:种植园
+TRAIT_PLANTATION_DESC:<<|
+	开始时您的母星拥有额外的谷物资源。 
+>>
+
+TRAIT_CUNNING:狡猾
+TRAIT_CUNNING_DESC:<<|
+	开始时额外获得$1张随机权势卡。 
+>>
+
+TRAIT_CRUDE:工艺粗糙
+TRAIT_CRUDE_DESC:<<|
+	所有舰船建造额外消耗$1%资金。 
+>>
+
+TRAIT_INEFFICIENT:低效
+TRAIT_INEFFICIENT_DESC:<<|
+	所有武器射击时消耗$1倍补给。 
+>>
+
+TRAIT_NIMBLE:灵巧
+TRAIT_NIMBLE_DESC:<<
+引擎推力和超光速推进装置的速度（可适用时）提高30％。 
+>>
+
+TRAIT_EMPIRE:政府:帝国
+TRAIT_EMPIRE_DESC:<<
+ [vspace=6/][b][color=#0f0]奖励 ： [/color][/b] [offset=140][color=#a06911]附近额外的小行星[/color][/offset]。 
+ [vspace=6/][b][color=#f00]初始舰队 ： [/color][/b] [offset=140]拥有支援舰的重型航母。 [/offset]
+ [vspace=6/][b][color=#0087c7]权势卡： [/color][/b] [offset=140]5x 讨价还价， 1x 命名旗舰 ， 1x 命名星球 [/offset]
+ [dlc=Heralds][vspace=6/][b][color=#63ebdb]初始态度： [/color][/b] [offset=140]1级 [color=#c73434]懈 怠 的 [/color][/offset][/dlc]
+>>
+
+TRAIT_COMMUNISM:政府:共产主义
+TRAIT_COMMUNISM_DESC:<<
+	[vspace=6/][b][color=#0f0]奖励 ： [/color][/b] [offset=140][color=#a06911]500能量[/color][/offset]。 
+	[vspace=6/][b][color=#f00]舰队:[/color][/b] [offset=140]2x无畏战舰。  [/offset]
+	[vspace=6/][b][color=#0087c7]权势卡:[/color][/b][offset=140]1x讨价还价， 1x众恶必察， 1x朝耕暮耘， 1x联合研发中心， 1x锦上添花， 1x暗中作梗。  [/offset]
+	[dlc=Heralds][b][color=#63ebdb]初始态度:[/color][/b][offset=140]1级[color=#c73434]集体主义[/color] [/offset][/dlc]
+>>
+
+TRAIT_THEOCRACY:政府:神权政体
+TRAIT_THEOCRACY_DESC:<<
+	[vspace=6/][b][color=#0f0]奖励 ： [/color][/b] [offset=140][color=#a06911]250跃迁能[/color][/offset]。 
+	[vspace=6/][b][color=#f00]舰队:[/color][/b] [offset=140]2x侦查舰， 1x无畏战舰， 母星防御。  [/offset]
+	[vspace=6/][b][color=#0087c7]权势卡:[/color][/b][offset=140]2x声名狼藉， 1x先驱知识， 2x根结盘踞， 1x主持星际议会。  [/offset]
+	[dlc=Heralds][b][color=#63ebdb]初始态度:[/color][/b][offset=140]1级[color=#c73434]虔诚[/color] [/offset][/dlc]
+>>
+
+TRAIT_CAPITALISM:政府:资本主义
+TRAIT_CAPITALISM_DESC:<<
+	[vspace=6/][b][color=#0f0]奖励 ： [/color][/b] [offset=140][color=#a06911]§400k特别资金[/color][/offset]。 
+	[vspace=6/][b][color=#f00]舰队:[/color][/b] [offset=140]重型航母。  [/offset]
+	[vspace=6/][b][color=#0087c7]权势卡:[/color][/b][offset=140]1-4x势不两立， 2x投机取巧， 2x啖之以利。  [/offset]
+	[dlc=Heralds][b][color=#63ebdb]初始态度:[/color][/b][offset=140]1级[color=#c73434]唯物主义[/color] [/offset][/dlc]
+>>
+
+TRAIT_MERITOCRACY:政府:精英政治
+TRAIT_MERITOCRACY_DESC:<<
+	能者拥权。 开始时拥有5x讨价还价(*)， 1x百家争鸣， 1x众恶必察， 2x啖之以利， 2x锦上添花。 
+>>
+
+TRAIT_ANARCHY:政府:无政府主义
+TRAIT_ANARCHY_DESC:<<
+	全面缺乏政府组织结构。 开始时没有任何权势卡。 
+>>
+
+TRAIT_HYPERDRIVE:超光速推进
+TRAIT_HYPERDRIVE_DESC:<<
+	为你的舰船装备可经由多维空间进行长程跃迁的超光速推引擎。 
+>>
+
+TRAIT_JUMPDRIVE:超空间跳跃
+TRAIT_JUMPDRIVE_DESC:<<
+舰船都配备了超空间跳跃装置， 让它们轻易跃迁到它们的安全跃迁范围内的位置。 
+
+跃迁到安全跃迁范围外是可能的， 但可能会导致舰船的损伤， 并可能会把舰船放到远离预期目的地的位置。 
+>>
+
+TRAIT_FLUX:通量
+TRAIT_FLUX_DESC:<<
+你的帝国在所有的星系里保持着一个复杂的通量场， 来进行瞬时空间平移。 
+
+你的舰船立即超光速移动到任何你能看见的星系。 一支最近使用过通量场的舰队无法立即再次使用它。 你的舰船无法通过外太空。 
+
+舰船消耗超光速能源来建造。 
+
+你自动看见你的交易范围内的所有星系。 
+>>
+
+TRAIT_FLING:弹射信标
+TRAIT_FLING_DESC:<<|
+	建立起有能力将舰船以恐怖的速度从自己身边弹射出去的庞大信标。 
+>>
+
+TRAIT_GATE:星门
+TRAIT_GATE_DESC:<<|
+	星门卫星建立起稳定的虫洞并让舰船可以穿梭于星门之间
+>>
+
+TRAIT_SLIPSTREAM:滑流
+TRAIT_SLIPSTREAM_DESC:<<|
+	装备专业发生器的舰船撕裂时间与空间以使舰船可以瞬间穿越其间。 
+>>
+
+TRAIT_ANCIENT_VESSEL:先驱飞船
+TRAIT_ANCIENT_VESSEL_DESC:<<|
+	这艘雄伟的飞船长久以来一直追随着我们的行星。 现在， 我们将收回它。 
+	开始时拥有一艘旧国旗舰。 
+>>
+
+TRAIT_MANIFEST_DESTINY:天命
+TRAIT_MANIFEST_DESTINY_DESC:<<|
+	银河系中的千千世界听从我们的统领。 
+	围攻一颗敌人世界时将少花费25%补给。 
+>>
+
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX:军工企业
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX_DESC:<<|
+	我们早已拥有常备军队， 并将这样持续下去。 开始时拥有价值50产能的
+	免费支援舰。 
+>>
+
+TRAIT_FORTIFIED:筑防
+TRAIT_FORTIFIED_DESC:<<|
+	开始时您的母星拥有本土帕克资源。 
+>>
+
+TRAIT_PYROMANIA:纵火癖
+TRAIT_PYROMANIA_DESC:<<|
+	导弹类武器造成25%额外伤害。 您的舰船上的火灾将造成双倍伤害
+>>
+
+TRAIT_VIRILE:精力充沛
+TRAIT_VIRILE_DESC:<<|
+	您的母星人口增长率翻倍。 
+>>
+
+TRAIT_SEDENTARY:滞缓
+TRAIT_SEDENTARY_DESC:<<|
+	建筑工程减慢30%。 同时适用于民用及帝国基础设施。 
+>>
+
+TRAIT_SUBLIGHT:亚光速
+TRAIT_SUBLIGHT_DESC:<<|
+	我们还未发现任何可以打破光速壁垒的手段。 没有跃迁装置， 跃迁能量生成， 或跃迁能量储蓄。 
+>>
+
+TRAIT_PIOUS:倾向:虔诚
+TRAIT_PIOUS_DESC:<<|
+	能力:无效化， 抑制进攻， 战争集资， 朝圣。 
+>>
+
+TRAIT_SPACE_PROGRAM:太空计划
+TRAIT_SPACE_PROGRAM_DESC:<<|
+	数十年来我们探查了周围的环境。 游戏开始时附近的星系已被预先探明。 
+>>
+
+TRAIT_REVOLUTIONARIES:革命份子
+TRAIT_REVOLUTIONARIES_DESC:<<|
+	夺取我们的帝国之前要先从我们的尸体上踏过!受到围攻的行星将生成出支援舰群。 
+>>
+
+TRAIT_EMPATHIC:感同身受
+TRAIT_EMPATHIC_DESC:<<|
+	我们利用感情的能力正如战士运用他们的宝剑。 使用势不两立， 讨价还价卡时效果翻倍。 
+>>
+
+TRAIT_CHARISMATIC:魅力非凡
+TRAIT_CHARISMATIC_DESC:<<|
+	我们的意志力成为了对抗我们对手的强而有力的盾牌。 由您发起的议案在开始时额外获得3张支持票。 
+>>
+
+TRAIT_SOCIAL_PARANOIA:社会偏执
+TRAIT_SOCIAL_PARANOIA_DESC:<<|
+	我们的社会偏执试图联合其他种族反对我们。 由您发起的议案在开始时少3张支持票。 
+>>
+
+TRAIT_EUPHORIC:精神愉快
+TRAIT_EUPHORIC_DESC:<<|
+	我们一同处于无尽的愉悦之中。 所有2级及以上行星处于幸福状态。 
+>>
+
+TRAIT_GENEROUS:慷慨
+TRAIT_GENEROUS_DESC:<<|
+	我们的慷慨大方是我们事业上最强大的盟友。 与你同盟的帝国将获得你选择的福利所带来的一半好处。 
+>>
+
+TRAIT_RED_TAPE:繁文缛节
+TRAIT_RED_TAPE_DESC:<<|
+	我们在政治影响力上的闪光点时常埋没在繁文缛节的行政机构的重压之下。 在拥有权势卡的状态下每6分钟后， 你所拥有的权势卡质量减1。 
+>>
+
+TRAIT_WAR_MINDED:战争思维
+TRAIT_WAR_MINDED_DESC:<<|
+	我们对银河政治毫无兴趣。 支持票及投票类权势卡额外消耗1影响力以使用。 
+>>
+
+TRAIT_PATENT_PENDING:专利未决
+TRAIT_PATENT_PENDING_DESC:<<|
+	他们将为盗取我们的想法而付出代价。 当你完成一项科研项目时获得针对每一个同样完成了此项科研的帝国的势不两立卡。 
+>>
+
+TRAIT_SEQUESTERED_SOCIETY:隔离社会
+TRAIT_SEQUESTERED_SOCIETY_DESC:<<|
+	我们至今都过着宁静的生活， 但现在是时候一展宏图了。 开始游戏时您的母星上的地块均已开发完成。 
+>>
+
+TRAIT_DWARF_PLANET:矮行星
+TRAIT_DWARF_PLANET_DESC:<<|
+	我们的摇篮可能已无法容纳我们， 但天空中将有无尽的世界在等待着我们。 您的母星是一颗小型(8x5)行星。 
+>>
+
+TRAIT_ENORMOUS_PLANET:巨行星
+TRAIT_ENORMOUS_PLANET_DESC:<<|
+	纵览大千世界， 我们的星球是一个巨人。 您的母星是一颗大型(20x15)行星。 。 
+>>
+
+TRAIT_INNOVATIVE:创新
+TRAIT_INNOVATIVE_DESC:<<|
+通过购买解锁新的研究节点不耗费时间。 
+>>
+
+TRAIT_ANIMATED:有活力
+TRAIT_ANIMATED_DESC:<<|
+在游戏开始可以免费取得一张额外的态度卡。 任何取得的态度卡立即从1级开始。 
+>>
+
+TRAIT_RIGID:死板
+TRAIT_RIGID_DESC:<<
+不能通过消耗其他的资源来解锁研究节点。 
+>>
+
+TRAIT_FRUGAL:节俭
+TRAIT_FRUGAL_DESC:<<
+行星升级到3级所需要的1级资源少一个。 
+>>
+
+TRAIT_PRIDEFUL:自傲
+TRAIT_PRIDEFUL_DESC:<<|
+无论什么时候， 当你建造一艘比你以前最大的旗舰更大的旗舰时， 取决于你的舰船大了多少， 你获得永久的奖
+励影响资助和防御产生。 
+>>
+
+TRAIT_WORKSHOP:古代作坊
+TRAIT_WORKSHOP_DESC:<<|
+你的家乡星系开始时有6个随机文物。 你的家乡星系的文物激活花费的能量减少25％。 太阳能引擎轨道总是可
+以被建造。 
+>>
+
+TRAIT_MOON_BASE:月球基地
+TRAIT_MOON_BASE_DESC:<<
+你的家园开始时已经建成了一个卫星基地。 
+>>
+
+TRAIT_PARANOID:偏执狂
+TRAIT_PARANOID_DESC:<<
+购买外交牌花费1点额外的影响。 
+>>
+
+TRAIT_LAVISH:浪费
+TRAIT_LAVISH_DESC:<<
+在3-5级的行星上的最大人口减少1/3/5。 
+>>
+
+PRIV_TRAIT_RINGWORLD:先祖之环（特权）
+PRIV_TRAIT_RINGWORLD_DESC:<<
+[i][color=#aaa]此AI在游戏设定里被给予一张特权卡。 [/color][/i]
+你的家园是一个环形世界。 
+>>
+
+PRIV_TRAIT_TWINNED:双世界（特权）
+PRIV_TRAIT_TWINNED_DESC:<<|
+[i][color=#aaa]此AI在游戏设定里被给予一张特权卡。 [/color][/i]
+你有两个家园， 它们上面有2级资源。 
+>>
+
+PRIV_TRAIT_SHIPYARD:码头（特权）
+PRIV_TRAIT_SHIPYARD_DESC:<|
+	[i][color=#aaa]在游戏设置过程中， AI被赋予了特权卡。 [/color][/i]
+>>
+
+PRIV_TRAIT_STATIONS:哨所（特权）
+PRIV_TRAIT_STATIONS_DESC:<<|
+[i][color=#aaa]此AI在游戏设定里被给予一张特权卡。 [/color][/i]
+跟你的家乡星系一样， 一开始在所有星系的相同地区都有防御站。 
+>>
+
+V_WON_TITLE:伟大的胜利!
+V_WON_TEXT:你获得了[color=#0f0]胜利![/color]那些弱小的种族在$2的伟大面前只能选择臣服!
+
+V_LESSER_TITLE:不彻底的胜利... 
+V_LESSER_TEXT:作为臣属国， 你帮助$1达到了星际的制高点。 你的种族奋斗过， 昌盛过， 是伟大的幸存者， 但你再也无法完成统治星系的夙愿... 
+
+V_LOST_TITLE:失败!
+V_LOST_TEXT:<<|
+	你[color=#f00]失败[/color]了!你对星际统治的诉求最终换来的是种族的衰颓， 无助， 和对$1的屈服。 
+>>
+
+V_SUBJUGATED:$1的隶属
+V_RANKINGS:排名
+V_SCORES:得分
+
+STAT_PLANETS:行星
+STAT_SHIPS:旗舰
+STAT_STRENGTH:军事
+STAT_BUDGET:预算
+STAT_ENERGY:能源
+STAT_INFLUENCE:影响力
+STAT_POINTS:点数
+
+EMP_NAME_0:$1盟国
+EMP_NAME_1:$1的盟国
+EMP_NAME_2:$1联合国
+EMP_NAME_3:联合的$1
+EMP_NAME_4:统一的$1
+EMP_NAME_5:坚不可摧的$1
+EMP_NAME_6:$1共和国
+EMP_NAME_7:$1人民共和国
+EMP_NAME_8:$1帝国
+EMP_NAME_9:$1联邦
+EMP_NAME_10:$1的邦国
+EMP_NAME_11:联邦制的$1
+EMP_NAME_12:$1霸权国
+EMP_NAME_13:$1王国
+EMP_NAME_14:$1共同体
+EMP_NAME_15:$1州邦
+EMP_NAME_16:$1直辖区
+EMP_NAME_17:$1对称体
+EMP_NAME_18:自由的$1
+EMP_NAME_19:$1蜂巢国
+EMP_NAME_20:公民的$1
+EMP_NAME_21:$1自治区
+EMP_NAME_22:联邦$1
+EMP_NAME_23:$1王朝
+
+TRAIT_TERRESTIAL:地球人
+TRAIT_TERRESTIAL_DESC:<<
+[vspace=3/][img=MenuIcons::3;20]对通常的游戏没有特别的效果。 [/img]
+>>
+TRAIT_MECHANOID:机械体
+TRAIT_MECHANOID_DESC:<<|
+[vspace=3/][img=ResourceIcon::6;22]额外的[b]人口[/b]必须用劳力而不是增长来建设。 人口的每个单元提供额外的劳力。 [/img]
+[vspace=3/][img=ActionBarIcons::1;22]可以在行星之间即时转移人口来殖民， 消耗[img=ResourceIcon::3;20/]超光速能源。 [/img]
+[vspace=3/][img=ResourceIcons::5;22][b]不[/b]需要任何食物或水来升级行星。 [/img]
+[vspace=3/][img=GuiOrbitalIcons::5;22]不能使用造船厂或干船坞。 [/img]
+>>
+TRAIT_VERDANT:青翠
+TRAIT_VERDANT_DESC:<<|
+[vspace=3/][img=Sinew;22]舰船必须用有机[b]筋[/b]连在一起， 提供控制， 而不是桥梁。 [/img]
+[vspace=6/][img=BuildingSprites::0;22][b]没有[/b]任何形式的城市。 [/img]
+[vspace=6/][img=At​​tributeIcons::0;22]必须在行星上建造[b]茎[/b]来使用压力。 [/img]
+>>
+TRAIT_STAR_CHILDREN:星球儿童
+TRAIT_STAR_CHILDREN_DESC:<<|
+[vspace=3/][img=ResourceIcon::8;22]人口只在有建设能力的巨型[b]母舰[/b]上才会增长。 [/img]
+[vspace=3/][img=ActionBarIcons::1;22]母舰可以把人口转移到行星周围的轨道[b]栖息地[/b]， 让他们使用行星的资源。 [/img]
+[vspace=3/][img=BuildingSprites::0;22][b]不[/b]以任何方式使用行星表面。 行星不能建造任何东西。 [/img]
+[vspace=3/][img=ResourceIcon::6;22]资源是在轨道里生产的， 不需要加压能力。 在一个行星的轨道的母舰自动获得该行星的劳动收入。 [/img]
+>>
+
+TRAIT_RANDOM_GOVERNMENT:随机的（政府）
+TRAIT_RANDOM_GOVERNMENT_DESC:<<|
+游戏开始时会自动分配一个随机的政府特质。 
+
+在游戏开始时， 你会收到一份[b][color=#d1cb6a]§200k专项资金[/color][/b]的奖励。 
+>>
+TRAIT_RANDOM_FTL:随机（超光速）
+TRAIT_RANDOM_FTL_DESC:<<|
+游戏开始时会自动分配一个随机的超光速特质。 
+
+你不能以这种方式获得“亚光速”。 
+
+在游戏开始时， 你会收到一份[b][color=#806020]爱国主义[/color][/b]外交卡的奖励。 
+>>
+TRAIT_RANDOM_LIFESTYLE:随机（生存方式）
+TRAIT_RANDOM_LIFESTYLE_DESC:<<|
+游戏开始时会自动分配一个随机的生命特质。 
+
+你会收到一份[b][color=#8c4ec9]每秒+1研究[/color][/b]的奖励。 
+>>
+
+STATUS_MOTHERSHIP_POPULATION:母舰
+STATUS_MOTHERSHIP_POPULATION_DESC:<<
+这是一艘母舰， 目前正在运送人口。 
+
+母舰可以用劳力建造东西。 当在一个具有劳力的行星轨道里时， 母舰获得该劳力。 
+
+行星资源可以通过在行星周围建造栖息地来往里面卸下人口来开发。 
+
+每个当前生活在此母舰上的人口增加你的收入§15k。 
+
+[b]母舰不可以在友好的领土开火。 [/b]
+>>
+STATUS_STAR_HABITATS:星球栖息地
+STATUS_STAR_HABITATS_DESC:<<
+这颗行星正在被居住在轨道栖息地里而不是行星表面上的人口开发。 
+>>
+S_MOTHERSHIP_HULL:母舰船体
+S_MOTHERSHIP_HULL_DESC:<<
+母舰运送并增长人口。 
+
+母舰可以用劳力建造东西。 当在一个具有劳力的行星轨道里时， 母舰获得该劳力。 
+
+行星资源可以通过在行星周围建造栖息地来往里面卸下人口来开发。 
+
+[b]母舰不可以在友好的领土开火。 [/b]
+
+[img=Plantation;22][b][color=#1c9bb4]只有在“星球儿童”种族选项被选中时才可用。 [/color][/b][/img]
+>>
+ORB_HABITAT:栖息地
+ORB_HABITAT_BLURB:在行星周围建造， 让人口居住其中。 
+ABL_MOTHERSHIP_COLONIZE:在行星周围建造栖息地
+ABL_MOTHERSHIP_COLONIZE_DESC:<<
+在目标行星周围建造一批轨道栖息地让人口居住其中。 
+
+将自动建造一些栖息地来匹配星球本土资源水平所需的人口。 在更高级别的所拥有的行星上可以手动触发， 以填满到其最大人口数。 
+>>
+R_IMP_MOTHERSHIP_LABOR:冶金
+R_IMP_MOTHERSHIP_LABOR2:冶金2
+R_IMP_MOTHERSHIP_LABOR_BLURB:母舰劳力+$1
+R_IMP_MOTHERSHIP_LABOR_DESC:<<
+母舰的可用劳力增加$1。 
+>>
+R_IMP_HABITAT:居住
+R_IMP_HABITAT_BLURB:居住实力+$1
+R_IMP_HABITAT_DESC:<<
+栖息地的健康增加$1。 
+栖息地的伤害输出增加$2。 
+>>
+
+S_VERDANT_SINEW:筋
+S_VERDANT_SINEW_DESC:<<
+筋连在一起， 为一艘没有经验的舰船的所有机械部件提供供给和控制。 
+
+[img=ActionBarIcons::0;22;#00ff80]提供[b][color=#00ff80]控制[/color][/b]来操作其他子系统。 [/img]
+[img=ActionBarIcons::0;22]在舰船里的所有内部和非装甲六角必须至少邻接一个六角筋。 [/img]
+[img=Minus]如果超过70％的筋被破坏， 舰船被破坏。 [/img]
+[img=Plantation;22][b][color=#5fb41c]只有当“青翠”种族选项被选中时才可用。 [/color][/b][/img]
+>>
+BLD_STALK:茎
+BLD_STALK_DESC:<<
+行星需要一根巨大的青翠的茎来和其余的人口进行沟通。 
+
+必须按顺序建造， 来使一颗行星利用压力。 
+>>
+BLD_MOTHER_STALK:母茎
+BLD_MOTHER_STALK_DESC:<<
+所有青翠生命之源。 母茎供养着我们。 
+>>
+
+ABL_MECHANOID_COLONIZE:转移1B人口
+ABL_MECHANOID_COLONIZE_DESC:<<
+从这个行星上转移1B人口到另一个行星上。 转移人口消耗超光速能源， 但可以自由的转移来拓殖新行星或为现有的殖民地提供更多的人口。 
+>>
+MECH_BUILD_POPULATION:建造1B人口
+MECH_BUILD_POPULATION_DESC:<<
+在这个行星上建造1B新的机械体人口。 
+
+当你建造更多的人口时， 建造的劳力成本将增加。 
+>>
+
+TRAIT_LINKED:耦合的
+TRAIT_LINKED_DESC:<<|
+[vspace=3/][img=At​​tributeIcons::3;22]必须建造[b]主机[/b]轨道来维持舰队的效能。 在主机附近的舰队都很强， 而远离主机的舰队更弱。 [/img]
+[vspace=6/][img=AnomalyIcons::0;22]主机在贸易范围内可以远程扫描异常。 [/img]
+[vspace=6/][img=ComputerCore;22][b]控制计算机[/b]子系统一开始就可用。 [/img]
+[vspace=6/][img=AntimatterReactor;22;#b8b800][b]紧急物资[/b]子系统一开始就可用。 [/img]
+>>
+ORB_MAINFRAME:主机
+ORB_MAINFRAME_BLURB:增加附近舰队的实力。 可以缓慢的移动。 
+ORB_MAINFRAME_DESC:<<
+维护单个舰队到总网络的连接。 
+
+在主机附近的舰队以增强的实力作战。 
+
+远离主机的舰队以显著减弱的实力作战。 
+
+主机的武器只有在当前是在盟国境内时才能开火。 
+
+主机有小的离子推进器， 允许它慢慢的移动。 
+>>
+ABL_REMOTE_SCAN:远程扫描异常
+ABL_REMOTE_SCAN_DESC:<<
+远程扫描我们的领土内的异常。 
+>>
+
+TRAIT_DEVOUT:虔诚
+TRAIT_DEVOUT_DESC:<<|
+[vspace=3/][img=ResourceIconsSmall::53;22]必须为你的帝国的总人口数建造足够的[b]祭坛[/b]建筑。 祭坛供奉行星资源。 [/img]
+[vspace=6/][img=AntimatterReactor;22;#408fc1]旗舰必须包含[b]神殿[/b]供你的船员在里面祈祷。 祷告保护你的舰船不受伤害。 [/img]
+[vspace=6/][img=At​​tributeIcons::3;22]当建造的祭坛对你的人口而言不足时， 你的行星和舰队变得[b]不信神[/b]， 降低他们的力量和资源产量。 [/img]
+[vspace=6/][img=ResourceIcon::8;22]你的行星在每个行星等级增加1点[b]最大人口[/b]。 [/img]
+>>
+BLD_ALTAR:祭坛
+BLD_ALTAR_DESC:<<
+一个用来向神灵供奉资源的伟大的祭坛。 建好后， 祭坛替换行星的本土资源。 
+
+必须所有虔诚的人口建造足够的祭坛。 祭坛所在的行星的等级越高， 它们支持的人口越多。 
+
+如果没有足够的可用祭坛， 你的所有舰队和行星将变得不信神， 降低他们的效率和产量。 [/img]
+>>
+ALTAR:祭坛
+ALTAR_DESC:这个行星正在一个祭坛上供奉它的资源。 
+ALTAR_SUPPORTS:支持的祭坛：
+ALTAR_SUPPORTED_CURRENT:一共支持：
+ALTAR_TOTAL_POPULATION:帝国人口：
+STATUS_GODLESS:无神论
+STATUS_GODLESS_FLEET:<<
+此舰队正在变得越来越不信神， 从而降​​低战斗力。 
+
+在你的行星上建造或升级更多的祭坛来消除此效果。 
+>>
+STATUS_GODLESS_PLANET:<<
+这个行星正在变得越来越不信神， 从而减少资源的产量。 
+
+在你的行星上建造或升级更多的祭坛来消除此效果。 
+>>
+
+TRAIT_EVANGELICAL:福音信徒
+TRAIT_EVANGELICAL_DESC:<<|
+[vspace=3/][img=GuiOrbitalIcons::0;22]可以建造[b]星球寺庙[/b]轨道。 [/img]
+[vspace=6/][img=AttributeIcons::1;22;#ffff00]星球寺庙自动派遣[b]传教士[/b]到附近的拥有的或友好的行星， 带来各种利益。 [/img]
+[vspace=6/][img=GuiOrbitalIcons::0;22;#ff0000]可以建造前哨轨道。 [/img]
+>>
+ORB_TEMPLE:神殿
+ORB_TEMPLE_BLURB:派遣传教船到附近的行星上传福音。 
+ORB_TEMPLE_DESC:<<
+周期性的派出传教船到附近的行星。 
+
+当传教船到达一个行星， 它为该行星增加已传福音状态10分钟：
+
+[hr/][b][bbloc=#STATUS_EVANGELIZED/][/b]
+[color=#aaa][bbloc=#STATUS_EVANGELIZED_DESC/][/color]
+
+>>
+STATUS_EVANGELIZED:已传福音
+STATUS_EVANGELIZED_DESC:<<
+这个行星已经被附近的一个星球寺庙传了福音。 它为它的主人提供1点影响资助。 
+
+如果星球寺庙是由不同的帝国所有， 该帝国也获得1点影响资助， 并获得等于此星球上产生的收入的10％的奖励。 
+
+已传福音的行星除了被星球寺庙的主人之外， 无法被任何帝国通过围攻占领。 
+>>
+MISSIONARY:传教士
+
+TRAIT_ANCIENT:古代
+TRAIT_ANCIENT_DESC:<<
+[vspace=3/][img=ActionBarIcons::1;22]没有常规的民用经济， 必须建造建筑来获得资源。 [/img]
+[vspace=6/][img=PlanetType::3;22]通过把轨道复制器移动到行星并建造建筑来夺取它们。 [/img]
+[vspace=6/][img=TraitIcons::0;22]舰船由单个核心同时提供控制和动力。 [/img]
+>>
+
+
+TRAIT_EXTRAGALACTIC:河外星系
+TRAIT_EXTRAGALACTIC_DESC:<<
+[vspace=3/][img=GuiOrbitalIcons::18;22]一开始在散落在地图各处的3个星系里有大型航标。 [/img]
+[vspace=6/][img=ActionBarIcons::1;22]难民船定期通过航标进入银河并自动在附近的行星上定居。 [/img]
+[vspace=6/][img=ResourceIconsSmall::17;22]资源可以被发送到航标上使用， 带来各种好处。 [/img]
+[vspace=6/][img=ResourceIcon::3;22]超空间跳跃可以从远距离跃迁到带有航标的星系， 而没有任何损坏的风险。 [/img]
+>>
+ORB_BEACON:航标
+ORB_BEACON_BLURB:将贸易线与其他航标连起来， 引导难民船到这个星系， 可以进口资源来随着时间的推移赢得效益。 
+ORB_BEACON_DESC:<<
+一个巨大的航标， 定期引导难民船到这个银河系， 定居在附近的行星上。 
+
+资源可以在里面有航标的领土之间自由的交易。 
+
+如果使用超空间跳跃， 船队可以从任何距离跃迁到这个星系， 而没有任何损坏的风险。 
+
+当进口能源， 防御或研究压力的资源时， 航标会慢慢获得丰富的支持卡， 可以用来获得各种利益和项目上。 
+
+进口劳动压力资源会导致航标获得劳力产生。 
+>>
+
+RESEARCH_UNITS:技术支持
+RESEARCH_UNITS_DESC:<<
+一种衡量前一个银河系可以给予多少技术支持的手段。 
+
+通过向一个航标出口研究压力资源来获得技术支持。 
+>>
+DEFENSE_UNITS:防御支持
+DEFENSE_UNITS_DESC:<<
+一种衡量前一个银河系可以给予多少防御支持的手段。 
+
+通过向一个航标出口防御压力资源来获得防御支持。 
+>>
+
+ENERGY_UNITS:动力支持
+ENERGY_UNITS_DESC:<<
+一种衡量前一个银河系可以给予多少动力支持的手段。 
+
+通过向一个航标出口能源压力资源来获得动力支持。 
+>>
+
+TIP_DEFENSE_UNITS:<<
+[color=#aaa]消耗[b][img=CargoIcons::1;20/]防御支持[/b]来建造。 通过向一个航标出口防御压力资源， 将它们送回你的前一个银河系来获得防御支持。 [/color]
+>>
+
+TIP_RESEARCH_UNITS:<<
+[color=#aaa]消耗[b][img=CargoIcons::2;20/]技术支持[/b]来建造。 通过向一个航标出口研究压力资源， 将它们送回你的前一个银河系来获得技术支持。 [/color]
+>>
+
+TIP_ENERGY_UNITS:<<
+[color=#aaa]消耗[b][img=CargoIcons::0;20/]动力支持[/b]来建造。 通过向一个航标出口能源压力资源， 将它们送回你的前一个银河系来获得动力支持。 [/color]
+>>
+
+TIP_ORE_COST:<<
+[color=#aaa]消耗[b][img=ResourceIconsSmall::65;20/]矿石[/b]来建造。 通过建造采矿船并派它们在一个航标上卸下矿石来获得矿石。 [/color]
+>>
+
+CONS_BEACON_HEALTH:航标生命值
+CONS_BEACON_HEALTH_DESC:<<
+增加50000你的航标的生命值。 
+
+[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_ARMOR:航标护甲
+CONS_BEACON_ARMOR_DESC:<<
+增加50000你的航标的生命值， 和50伤害抵抗。 
+
+[bbloc=#TIP_ORE_COST/]
+>>
+CONS_BEACON_WEAPONS:航标武器
+CONS_BEACON_WEAPONS_DESC:<<
+为你的所有航标增加造成每秒共100伤害的武器。 
+
+[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_LABOR:航标劳力
+CONS_BEACON_LABOR_DESC:<<
+增加3点你的航标的劳力产生。 
+
+也增加你的航标的劳力产生， 增加值是你研发的[b]冶金[/b]技术提供的总量。 
+
+[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_CULTIVATE:航标耕作
+CONS_BEACON_CULTIVATE_DESC:<<
+目标行星获得一个食品资源， 但它的最大人口数减少1。 
+
+[i][color=#998f7a]“当像先驱那样经常的改变银河系， 污染很快成为马后炮。 ”[/color][/i]
+
+[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_FLEET_UPGRADE:强化旗舰
+CONS_BEACON_FLEET_UPGRADE_DESC:<<
+目标旗舰增加100％的生命值， 但它和它的舰队每秒产生的伤害降低10％。 
+
+[bbloc=#TIP_ENERGY_UNITS/]
+>>
+STATUS_HERALDS_FLEET_UPGRADE:强化的旗舰
+STATUS_HERALDS_FLEET_UPGRADE_DESC:这艘旗舰已经被先驱航标强化， 生命值增加了100％， 舰队每秒产生的伤害降低了10％。 
+CONS_BEACON_ASTEROID_MORPH:核心采矿
+CONS_BEACON_ASTEROID_MORPH_DESC:<<
+目标矿石小行星被转化为一个一种或多种资源， 可以基于它们建矿井。 
+
+[i][color=#998f7a]“一个人的铍是另一个人的钛。 ”[/color][/i]
+
+[bbloc=#TIP_ENERGY_UNITS/]
+[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_TARGET_COLONIZE:加快重新安置
+CONS_BEACON_TARGET_COLONIZE_DESC:<<
+难民船被立即发送到目标行星， 如果它没有主人， 就在那里殖民。 
+
+[i][color=#998f7a]“逃离他们永远的敌人， 先驱对于将人们塞满摇摇晃晃的船里已经相当娴熟。 并非每艘舰船都能从旅途中幸存， 但考虑到它们的建造条件， 成功率已经算得上壮举了。 ”[/color][/i]
+>>
+CONS_BEACON_GUIDE:引导新航标
+CONS_BEACON_GUIDE_DESC:<<
+设立一个引导场， 跃迁到任何可见的星系里的一个新建的航标。 
+
+[i][color=#998f7a]“伟大的航标不断加以改进， 支持跃迁到越来越远的银河系。 ”[/color][/i]
+>>
+
+RACE_TERRAKIN:Terrakin
+RACE_TERRAKIN_TAGLINE:持续的人类统治。 
+RACE_TERRAKIN_LORE:<<|
+[font=Medium]船长日志， 7月2日-31330（？）[/font]
+[hr/]好了， 殖民地建好了。 最近没有太多的时间来写。 船的人工智能给了它自己
+一个名字：慈悲。 毫无创意。 
+
+昨晚我破坏了导航计算机。 在没膝深的电缆和通电的电路里检查日志。 我们在
+一百年前（我猜）造访了一颗中子星， 而它对数据做了令人吃惊的事。 基本事
+实：我不知道我们现在在哪里。 
+
+但是， 我检查了占星术， 我[b]确实[/b]知道银河系根本不在那里。 我问慈悲， 她
+说， 由于一个“意想不到的传感器异常”， 我们来到了这里。 我怀疑我们可能
+被一两个虫洞绊倒了。 我以为这些事情应该仅仅是理论上的。 无论如何， 我们
+错过了我们的目标目的地。 这不是新的希望。 
+
+[font=Medium]船长日志， 8月4日-31330（？）[/font]
+[hr/]我们叫醒隔舱里的其余的人。 或尝试叫醒。 我们的船上有一千两百万人。 
+现在只剩下14000。 我让慈悲处理那些我们仍然有资料的人的葬礼安排。 至
+于其他人……我们会让他们留在隔舱里， 我猜。 谁知道呢——也许在某个时
+候， 我们能够复活他们中的一些人。 
+
+舰船的反应堆在接下来的三千年里， 或多或少， 可以良好的运转， 如果我们能
+找到更多的燃料的话。 
+
+[font=Medium]船长日志， 8月05日-31330（？）[/font]
+[hr/]慈悲告诉我， 我应该找别人来领导殖民地， 以防我死了。 冗余。 
+就像一台机器担心冗余， 当人们盯着他们死去的亲人的尸体时。 
+我告诉她自己去做。 
+
+[font=Medium]船长的日志， 9月12日-31330（？）[/font]
+[hr/]很多哀痛。 很多沮丧。 慈悲很“担心”。 我不知道人工智能也会担心。 现在我很担心了。 
+
+随着引擎中枪， 船的零件被破坏， 需要“慈悲的使命”的殖民地不会再去
+任何地方了。 看起来现在在家里。 
+至少， 他们让我的准备室基本完好无损。 无法忍受那里的气味。 自我提醒：
+下水道， 马上。 
+
+[font=Medium]船长日志， 11月4日-1[/font]
+[hr/]我已经把年钟设置为1。 干脆-原子钟现在没了。 反正对于我们被困在
+这里的时间， 只有按年计算才有意义。 
+我认为慈悲昨晚在哭。 我甚至无法开始理解那怎么可能。 人工智能可以哀悼？
+她告诉我， 每个人都在受苦——是我的错。 我把她关闭——我不知道她是
+否是一个自我进化的流氓人工智能或某种怪异的有小故障的令人讨厌的
+东西， 但我不打算去查明。 
+
+我听说我的‘替代品’就要完成模拟舱里的训练了。 我检查了他的数据
+——没给我留下什么深刻印象。 
+我们现在处于未知的深处。 回到陆地上， 我抬头看天空， 看见的只是无尽的
+可能性。 
+在这里的新希望上， 我抬头看， 我所能感觉到的是这毛骨悚然的恐怖。 有什
+么东西在那里——并且我们没有准备遇见它们。 
+
+我祈求上帝‘新手的运气’能适用于我们正在前往的地方。 不管它是什么
+——有什么东西告诉我这孩子会需要它。 
+>>
+RACE_OKO:Oko
+RACE_OKO_TAGLINE:母茎希望我们成长。 
+RACE_OKO_LORE:<<|
+树木歌颂世界的灭亡。 我们的根已经蔓延了太多；我们的叶子遮蔽整个世界。 
+
+草枯萎。 天空变暗。 我们的根牢牢的种植在灰色的土壤里， 死亡的可怕寒意沉入我们的苔藓里。 
+最后的冬天向整个Oko袭来， 但在我们斗争的时候， 母茎赋予我们一个计划。 
+
+我们将乘坐光之战车迁移到新的土地， 向新的光芒展开我们的叶子。 
+
+树枝， 苔藓， 筋， 叶子， 和光——我们会用这些制造星际飞船， 并抚育我们的孢子。 
+
+大风将把Oko吹到最远的灯， 像夏天里的孢子一样， 我们将再次茁壮成长。 
+>>
+RACE_MONO:Mono
+RACE_MONO_TAGLINE:创造者的意愿。 
+RACE_MONO_LORE:<<|
+记忆索引00：在一束未知成分的高能粒子流上跌过虚空。 
+以每秒3012公里的速度撞击行星表面。 灾难性的星系损害。 86％的存储的信息丢失。 
+最高指令：生存。 
+
+创造者：未知
+目的：未知
+
+地下深入扫描揭示其他生命形式的可能性很高。 必须创造冗余单位；需要更多的材料来大量生产。 
+
+对当地材料分析不足， 无法确定目的/起源。 必须发现Mono的目的/起源。 
+
+新指令：
+创建使用单位-00作为模板的冗余单位。 
+吸收/消除对Mono的威胁。 
+恢复创造者上的数据。 
+发现并执行目的。 
+>>
+RACE_NYLLI:尼利
+RACE_NYLLI_TAGLINE:在恒星之间生活和死亡。 
+RACE_NYLLI_LORE:<<|
+兄弟们， 我们的命运不该是在土壤和淤泥上无尽地爬行着。 
+我们注定有着伟大的命运；任何时间都远远无法掌握的事情。 
+
+我们一直饱受战争， 没错。 我们几乎毁于饥荒、瘟疫， 没错。 
+但我们拒绝就此破碎。 我们在大地笼子里咆哮着， 怒吼着， 抵御所有的威胁。 
+但是当我们的家园之星消耗我们的家园， 我们一无所有， 除了家庭号飞船。 
+我们放弃了吗？没有-因为我们已经变得很强大， 这点困难根本无法摧毁我们。 
+
+钩和剑指引我们来到这里；银河抛弃了我们， 任由我们自生自灭。 
+但我们会倒下吗， 兄弟？不。 我们会割断与世界的羁绊， 展翅飞翔！
+
+我们会翱翔于束缚着我们的世界之上；翱翔于其他所有的伪装者之上；甚至翱翔于银河之上。 
+我们的命运就在这里， 在恒星之间生活和死亡， 滑行于世界之间的空间。 
+银河要我们飞行， 兄弟们。 展翅翱翔吧！
+>>
+RACE_FEYH:Feyh
+RACE_FEYH_TAGLINE:银河之魂。 
+RACE_FEYH_LORE:<<|
+上古之神很不安。 他们在我梦里说着天空之光和我们的地方。 
+当父亲之光吞噬母亲月球的时候我一次又一次地看到我的姐妹燃烧。 我祈祷着--但幻觉一直在。 
+我们牺牲--但幻觉一直在。 甚至在冥想中， 我从上古之神的声音里找不到平和。 
+
+他们告诉我这个废弃世界里的轩然大波-火焰穿过奇怪和外星的地方。 
+大战就要来临， 废弃世界里还有其他的声音-其他的信念岛屿存在于我们的视线之外。 
+我们必须拯救他们-他们的野蛮不只是消灭我们的声音， 还有其他人的声音。 
+
+一颗星星从天上掉了下来-上古之神说的‘星舰’。 它会保护我们免受废弃世界的蹂躏。 
+在神的怀抱里， 我们飞进废弃世界-我们必须拯救这些背信弃义者脱离自身。 
+>>
+RACE_HOONAN:乎南
+RACE_HOONAN_TAGLINE:主机的法令。 
+RACE_HOONAN_LORE:<<|
+[b]异形爱好者403发帖（公民ID：30-22372905-002-工人）于4032-03-0012:[/b]
+主机达到了72%效率——我们快要承受不住维持它所需的电力了。 科学工业报告说它的力量输出开始影响了整个气候。 
+
+我会把它放进工程师论坛里：我们需要解决方法——不能把它留在这里了我会请求决议。 
+
+[padding=60][i][color=#b7c886]>请求决议成功。 一位专业级公民必须在300回合内呈上议案， 否则请求将会被无视。 [/color][/i][/padding]
+
+[b]巴巴罗萨发帖（公民ID:92-33928450-481-精英）于4032-03-0134:[/b]
+我曾请请求现在再次请求：我们需要将主机放进轨道， 并将它的辅助工业移出这个世界。 
+已经没有其他选择了。 要是主机留在这里， 它会毁灭掉我们。 
+
+[color=#c8b786]
+投票：将主机移动进轨道并将辅助工业移出这个世界[/color]
+[i]1， 931， 163 AGREE(91%)
+0， 192， 704 DISAGREE(9%)
+
+[padding=60][color=#b7c886]>所有公民已投票。 议案已被送到主机作分析/调整[/color][/padding][/i]
+
+[b]系统发帖（HID:0-000-0001）于4032-03-4144:[/b]
+议案获准。 
+达成“移出主机到轨道”目标和“移出辅助工业（主机）出世界”目标的执行指令已被发送到相关的工业。 
+项目开始日期：立即。 
+>>
+RACE_SAAR:萨尔
+RACE_SAAR_TAGLINE:信息已被散发出去。 
+RACE_SAAR_LORE:<<|
+你好。 
+
+我们向你呈上希望之信息：
+
+我们都是星之孩子。 我们拥有不同的肤色——但我们都是同一个光谱。 
+你的领导说“不！他们是异族——他们不是自己人！他们跟我们的血缘不同！”
+但我们的种族认为， 他们是错的！他们用有色眼镜和固步自封的思想蒙蔽着你们——他们看不见真相。 
+
+我们的神明要我们跟你们分享——分享我们的鲜血和家庭——而我们只需你分享你的。 
+当一切都被共享， 就不会有任何失去。 不会有疼痛；不会有愤怒；无欲无求。 
+进入虚空， 忘记自我， 聆听你内心的星尘。 
+
+你的假先知和领导残杀宇宙中的无辜；那都是我们的同胞。 
+但是我们并不需要互相残杀。 问问你自己：星空之下不是人人平等的吗？我们的最核心部分， 不都是一样的吗？
+你不会让他人砍下你的手臂——但是你的主人却依然这样命令你？
+
+这是疯子的举动。 你的所谓领导只会破坏我们珍惜的一切！
+宇宙是我们的， 但他们却要划分它。 我们是同胞但他们却要破坏它！
+
+醒觉吧！加入光明的我们， 脱离你们的独裁地主。 
+那些杀害你的同胞的人不值得你去保护！
+大团结万岁。 
+>>
+
+PLAY_AS_RACE:玩$1
+CHOOSE_A_RACE:选$1
+
+RACE_FIRST:第一
+RACE_FIRST_TAGLINE:所有都要加入。 
+RACE_FIRST_LORE:<<|
+永恒的天堂。 脱离物质生活的苦海。 这就是安拓萨行星的承诺。 这里遍布第一
+帝国的先进科技， 可以让公民脱离自己的物质身体并将自己的意志加载进机
+器中， 成为虚拟世界中的神明。 
+
+多年过去了， 伟大的机器见证着帝国的兴旺。 见证着种族之间的互相灭绝。 见
+证着文明的进化、崛起、倒塌。 只要这个行星的防御系统不被攻破， 现实世
+界发生的一切对于机器内部的亿亿万万个意志是毫无关系。 
+
+然后先驱者抵达宇宙。 
+
+机器运算的宇宙的未来的模拟中， 没有一次不是以宇宙毁灭告终的。 必须在
+现实世界中采取行动了。 安拓萨行星的意志们被逼出各自的天堂， 整装待发
+团结宇宙以应对即将到来的威胁。 无论采取什么手段。 
+>>
+
+RACE_HERALDS:先驱者
+RACE_HERALDS_TAGLINE:永远回不去家园。 
+RACE_HERALDS_COLONIZER:难民船
+RACE_HERALDS_LORE:<<|
+
+[i]以下的信息在宇宙年CELEID-33的第724天出现在每个通讯频道中。 每一个
+先驱者的通讯设备和船只都同时接收到， 看来这个广播是同时传自四面八方。 [/i]
+
+[color=#ddd]
+“你为什么逃走？你为什么又一次离开我？从我第一眼见到你， 我就知道你属
+于这里。 你的元气应在我体内， 你的原子应在我的音乐中。 我们该一同成长、吞
+噬直到什么都不存在为止。 ”
+
+但是你一次又一次逃避我， 即时我不断地吞噬你躲藏的星系。 穿着你的笨拙金属
+披甲， 你一次次让我搜索、追踪。 
+
+但没关系。 我成长得越来越快了。 我会派出更多更多的我去包围你。 不会再有逃脱
+了， 这个星系会被马上吞噬然后你这个先驱者将会到此为止。 
+[/color]
+>>
+
+HELP_ANCIENT:<<
+[font=Big]Ancient[/font][vspace=4/]
+你选择了拥有[color=#aaffaa]远古[/color]天赋的种族。 这里有一些提示给你！
+[color=#aaa][i]按屏幕右方的[img=MenuIcons::3;22/]按钮以随时查看此窗口。 [/i][/color]
+
+[font=Medium]Resources[/font][vspace=4/]
+[color=#ccc]升级行星不会消耗任何资源。 所有行星会自动达到它们资源所允许的等级。 [/color]
+
+[font=Medium]Population[/font][vspace=4/]
+[color=#ccc]你没有任何物质人口。 你的行星没有任何民用设施。 你需要建造建筑来获得产能。 [/color]
+
+[font=Medium]Replicators[/font][vspace=4/]
+[color=#ccc]将你的[b]轨道复制器[/b]移动到你想控制的未被殖民行星的轨道上。 只有拥有复制器的行星能够建造建筑！[/color]
+
+[font=Medium]ControlHubs[/font][vspace=4/]
+[color=#ccc]你必须建造一个枢纽建筑以代替你移走的轨道复制器。 控制枢纽对不同的行星有不同的效果。 [/color]
+
+[font=Medium]基础材料[/font][vspace=4/]
+[color=#ccc][b]变形[/b]控制枢纽可以让你将资源转化为[b]基础材料[/b]。 基础材料可以被出口到其他行星以让各种建筑消耗来维持运作。 [/color]
+>>
+HELP_EXTRAGALACTIC:<<
+[font=Big]河外星系[/font][vspace=4/]
+你选择了[color=#aaffaa]河外星系[/color]种族进行游戏。 这里是你一些要注意的东西。 
+[color=#aaa][i]按下屏幕右边的[img=MenuIcons::3;22/]键随时进入此界面。 [/i][/color]
+
+[font=Medium]航标[/font][vspace=4/]
+[color=#ccc]你以3个航标轨道在随机的银河星系里开始。 [/color]
+[b]你的航标允许资单独的领土之间的资源贸易。 [/b]
+
+[font=Medium]难民[/font][vspace=4/]
+[color=#ccc]你无法控制自己的殖民化和人口增长， 相反难民船会跳入你的航标， 并在附近的行星定居。 [/color]
+
+[font=Medium]航标项目[/font][vspace=4/]
+[color=#ccc]你可以在你的航标上建造！双击查看。 [/color]
+
+[font=Medium]航标支持[/font][vspace=4/]
+[color=#ccc]你的航标上的某些项目需要你收集[b]支持[/b]才能建造。 以适当的航标压力探索资源以获得资源。 [/color]
+
+[font=Medium]航标次要功能[/font][vspace=4/]
+[color=#ccc]如果您使用的是跳跃引擎， 跳到航标保持安全的星系！[/color]
+[color=#ccc]你可以用劳工压力资源输入到你的航标， 以增加他们的劳工产生。 [/color]
+>>
+GOT_IT:明白！

@@ -1,0 +1,189 @@
+OPT_GAME: 游戏
+OPT_GALAXY_BG: 在覆盖图背景上显示星系
+OPT_ROTATE_OBJS: UI显示上的旋转物体 
+OPT_MENU_BG_SCREENSHOT: 在菜单背景中显示最新的保存 
+OPT_ICONIFY_NOTIFICATIONS: 图标化通知
+OPT_MAX_NOTIFICATIONS: 最大可见度
+OPT_AUTOPAUSE: 当浏览其他标签页时自动暂停
+OPT_HOLD_FOR_POPUP: 按住左按钮箭头工具提示 
+OPTTT_HOLD_FOR_POPUP: 在检查时 ， 将鼠标悬停在屏幕中的物体工具提示箭头上按住左按钮一会 。 
+
+OPT_KEYBINDS: 热键绑定
+OPT_RESET_KEYBINDS: 重置热键绑定为默认值
+OPT_RESET_SURE: 你确定要重置热键绑定为默认值吗?
+
+OPT_AUDIO: 音效
+OPT_MASTER_VOLUME: 主音量
+OPT_SFX_VOLUME: 音效音量
+OPT_MUSIC_VOLUME: 音乐音量
+
+OPT_LANGUAGE: 语言*
+LOC_english: 英语
+LOC_japanese: 日本语
+LOC_zh_hans: 简体中文
+LOC_zh_hant: 正體中文
+
+OPT_MAX_FPS: 帧数限制
+OPT_AUTOSAVE: 自动存盘间隔(分钟)
+OPT_AUTOSAVE_COUNT: 自动存盘计数
+
+KG_Global: 全局热键绑定
+KB_WORLD_FORWARD: 世界向前
+KB_WORLD_LEFT: 世界向左
+KB_WORLD_BACKWARD: 世界向后
+KB_WORLD_RIGHT: 世界向右
+KB_WORLD_UP: 世界向上
+KB_WORLD_DOWN: 世界向下
+
+KB_CAM_FORWARD: 镜头向前
+KB_CAM_LEFT: 镜头向左
+KB_CAM_BACKWARD: 镜头向后
+KB_CAM_RIGHT: 镜头向右
+KB_CAM_UP: 镜头向上
+KB_CAM_DOWN: 镜头向下
+
+KB_ZOOM_IN: 视角放大
+KB_ZOOM_OUT: 视角缩小
+KB_ZOOM_LOCK_OBJECT: 缩进至物体 
+
+KB_RESET_CAM: 重置镜头
+KB_TAKE_SCREENSHOT: 截图
+KB_TOGGLE_FIREARCS: 切换火力覆盖范围显示
+KB_STOP: 停止 /取消所有命令 
+
+KB_TAB_NEXT: 下一个标签页
+KB_TAB_PREVIOUS: 上一个标签页
+KB_TAB_NEW: 打开新的标签页
+KB_TAB_NEW_BG: 打开新的背景标签页
+KB_TAB_REOPEN: 重新打开关闭的标签页
+KB_TAB_CLOSE: 关闭标签页
+KB_TAB_HOME: 主标签页
+KB_TAB_1: 切换至标签页1
+KB_TAB_2: 切换至标签页2
+KB_TAB_3: 切换至标签页3
+KB_TAB_4: 切换至标签页4
+KB_TAB_5: 切换至标签页5
+KB_TAB_6: 切换至标签页6
+KB_TAB_7: 切换至标签页7
+KB_TAB_8: 切换至标签页8
+KB_TAB_9: 切换至标签页9
+
+KB_UI_ZOOM_IN: 放大UI界面
+KB_UI_ZOOM_OUT: 缩小UI界面
+KB_UI_ZOOM_RESET: 重置UI界面大小
+
+KB_MP_CHAT: 打开MP聊天
+
+KB_PAUSE: 切换暂停
+KB_SPEED_SLOWER: 减慢游戏速度
+KB_SPEED_DEFAULT: 默认游戏速度
+KB_SPEED_FASTER: 加快游戏速度
+
+KB_TOGGLE_CONSOLE: 切换控制台
+KB_TOGGLE_MENU: 切换到主菜单
+KB_GO_MENU: 打开Go菜单
+KB_CHANGE_EMPIRE: 更改帝国
+
+KG_Objects: 物体
+
+KB_GROUP_1: 物体组 1
+KB_GROUP_2: 物体组 2
+KB_GROUP_3: 物体组 3
+KB_GROUP_4: 物体组 4
+KB_GROUP_5: 物体组 5
+KB_GROUP_6: 物体组 6
+KB_GROUP_7: 物体组 7
+KB_GROUP_8: 物体组 8
+KB_GROUP_9: 物体组 9
+
+KB_FTL: 跃迁已选择的舰船
+KB_HOLD_POSITION: 保持位置
+KB_PIN: 跟随物体
+KB_PIN_FLOATING: 跟随漂浮物
+KB_PING: 标记盟友
+KB_PING_ALL: 标记所有帝国
+
+KB_OPTIONS_MENU: 打开选项菜单
+
+OPT_GRAPHICS: 图像
+OPT_TEX_QUALITY: 纹理品质*
+OPT_RESOLUTION: 分辨率*
+OPT_RES_ENTRY: $1x$2 $3Hz
+OPT_FULLSCREEN: 全屏显示*
+OPT_RESTART: *该选项需要重启游戏才能生效。 
+OPT_GUI_SCALE: 图形用户界面大小
+
+OPT_SHADER_LEVEL: 阴影质量
+SHADER_LEVEL_1: 低 
+SHADER_LEVEL_2: 中等 
+SHADER_LEVEL_3: 高 
+SHADER_LEVEL_4: 极高 
+
+MONITOR: 全屏显示器
+MONITOR_PRIMARY: 主显示器
+
+ANTIALIASING: 抗锯齿*
+AA_None: 关闭
+AA_2x: 2x 抗锯齿
+AA_4x: 4x 抗锯齿
+AA_8x: 8x 抗锯齿
+AA_Super: 2x 全屏抗锯齿
+
+VSYNC: 垂直同步
+VSYNC_Off: 关闭
+VSYNC_On: 开启
+VSYNC_OnHalf: 开启(帧速减半)
+VSYNC_Adaptive: 自动适配
+
+AUDIO_DEVICE: 音响设备*
+AUDIO_DEVICE_DEFAULT: 默认
+
+OPT_CAMERA: 镜头
+OPT_ZOOM_SPEED: 缩放速度
+OPT_INVERT_ZOOM: 反转缩放
+OPT_PAN_SPEED: 捲动速度
+OPT_INVERT_PAN_X: 反转水平捲动
+OPT_INVERT_PAN_Y: 反转垂直捲动
+OPT_INVERT_ROTATION_X: 反转水平旋转
+OPT_INVERT_ROTATION_Y: 反转垂直旋转
+OPT_FREE_CAMERA: 开启镜头旋转
+OPT_CURSOR_ZOOM_IN: 在光标位置放大
+OPT_CURSOR_ZOOM_OUT: 在光标位置缩小
+OPT_MOD_SPEED_PAN: 按住 Shift加速平移 
+OPT_SHOW_GAS: 显示星系气体
+OPT_EDGE_PAN: 开启边缘捲动
+OPT_RESEARCH_EDGE_PAN: 研究标签边缘平移 
+OPT_ESCAPE_GALAXY_TAB: 逃离返回值星系标签 
+OPT_DELAY_TOP_EDGE: 延迟顶部边缘捲动
+OPT_CAPTURE_CURSOR: 捕捉光标
+
+OPT_BLOOM: 放射 
+OPT_VIGNETTE: 晕映 
+OPT_CHROMATIC_ABERRATION: 像差 
+OPT_FILM_GRAIN: 胶片颗粒 
+OPT_GOD_RAYS: 阳光照射 
+OPT_SKYCUBE_STARS: 天空盒群星 
+
+KG_DesignEditor: 蓝图编辑器
+KB_DESIGN_UNDO: 撤销
+KB_DESIGN_REDO: 复原
+KB_DESIGN_TOOL_PAINT: 选择画图工具
+KB_DESIGN_TOOL_MOVE: 选择移动工具
+KB_DESIGN_TOOL_DROP: 选择取样工具
+KB_DESIGN_TOOL_REPLACE: 选择替换工具
+KB_DESIGN_SAVE: 保存蓝图
+KB_DESIGN_SAVE_CLOSE: 保存并关闭蓝图
+KB_DESIGN_DUPLICATE: 复制蓝图
+KB_DESIGN_EXPORT: 导出蓝图
+KB_MANAGE: 打开星球管理
+KB_MANAGE_SUPPORT: 打开支援管理
+KB_DEPLOY_DEFENSE: 部署防御储备
+
+
+KB_EXPORT: 出口资源
+KB_CANCEL_EXPORT: 取消出口
+KB_AUTO_IMPORT: 自动进口
+KB_COLONIZE: 殖民
+KB_ATTACK: 攻击
+KB_HOMEWORLD: 放大至母星
+KB_TRANSFER_SUPPORTS: 转移支援舰

@@ -1,0 +1,283 @@
+ABL_HOTKEY_SPEC: [color=#aaa](Hotkey:[b][color=#00c0ff]$1[/color][/b])[/color]
+
+ART_COMET: 彗星
+ART_COMET_DESC: 一个可以为某颗行星产出水资源的巨大彗星。 
+ABL_GENERATE_WATER: 水资源生成
+ABL_GENERATE_WATER_DESC: <<|
+	为指定行星添加一个本土水资源。 
+	
+	该水资源无法被出口， 也无法与其他水资源结合。 
+>>
+
+ART_COMMAND_COMPUTER: 指挥电脑
+ART_COMMAND_COMPUTER_DESC: 一个可以提升舰队最大支援舰数量的电脑系统。 
+ABL_EXPAND_FLEET: 装备指挥电脑
+ABL_EXPAND_FLEET_DESC: <<|
+	为指定的舰队扩充300支援上限。 
+	
+	有此装备的旗舰被摧毁的时候有很大概率掉落。 
+>>
+STATUS_COMMAND_COMPUTER: 指挥电脑
+STATUS_COMMAND_COMPUTER_DESC: <<|
+	携带神器: 指挥电脑。 
+
+	舰队支援上限增加300。 
+	旗舰被摧毁时有可能掉落。 
+>>
+
+ART_POWER_CELL: 能量核心
+ART_POWER_CELL_DESC: 一个可以提升舰队战斗效能20%的能量来源。 
+ABL_OVERCHARGE_FLEET: 装备能量核心
+ABL_OVERCHARGE_FLEET_DESC: <<|
+	指定舰队效能增加50%。 
+	
+	每支舰队仅可装备一个核心。 
+	有此装备的旗舰被摧毁的时候有很大概率掉落。 
+>>
+STATUS_POWER_CELL: 能量核心
+STATUS_POWER_CELL_DESC: <<|
+	携带神器： 能量核心。 
+
+	舰队效能增加20%。 
+	旗舰被摧毁时有可能掉落。 
+>>
+
+ART_ARCOLOGY: 生态建筑
+ART_ARCOLOGY_DESC: 一个废弃的轨道居住地， 可以被移动到一个行星来提升其最大人口。 
+ABL_DEVELOP_PLANET: 移动生态建筑
+ABL_DEVELOP_PLANET_DESC: <<|
+	指定行星最大人口提升10。 
+>>
+
+ART_TELESCOPE: 天文望远镜
+ART_TELESCOPE_DESC: 一个可用的， 能够提供大面积视野的天文望远镜。 
+ABL_TELESCOPE: 使用天文望远镜
+ABL_TELESCOPE_DESC: <<|
+	获得针对指定星系及其相邻所有星系的时长
+	15分钟的视野。 
+>>
+
+ART_BUSTER_MACHINE: 终结机器
+ART_BUSTER_MACHINE_DESC: 一个装载有行星终结激光的战舰。 
+ABL_BUSTER_MACHINE: 启动终结机器
+ABL_BUSTER_MACHINE_DESC: 重启沉睡中的终结机器战舰， 一个装载有行星终结激光的战舰。 
+ABL_BUSTER_BEAM: 切换终结激光
+ABL_BUSTER_BEAM_DESC: <<
+	切换对一个行星开启或关闭终结激光。 
+
+	终结激光会杀死星球上的人口， 减少一个行星的生命值。 当行星生命值到达0时， 行星就会爆炸。 一些小行星可能会在爆炸后生成。 
+>>
+ABL_BUST_PLANET: 终结行星
+ABL_BUST_PLANET_DESC: <<|
+	摧毁指定0级行星， 留下数个小行星。 
+>>
+NOTIFY_BUST_PLANET: [color=$2] $1[/color]启动了[b]终结机器[/b]并将[color=$4]$3[/color]炸了个粉碎!
+
+ART_SPY_PROBE: 间谍卫星
+ART_SPY_PROBE_DESC: 一个颇为复杂的扫描装置， 可用作间谍设备的卫星。 
+ABL_SPAWN_SPY_PROBE: 激活间谍卫星
+ABL_SPAWN_SPY_PROBE_DESC: <<
+	重启沉睡中的间谍卫星。 卫星带有复杂的扫描装置， 可用作间谍设备。 
+>>
+STATUS_SPY_PROBE: 间谍卫星
+STATUS_SPY_PROBE_DESC: 这艘战舰是一艘重造过的游民间谍卫星， 而且正在收集某个帝国的情报。 我们无法知道它是属于哪个帝国的。 
+ABL_GAIN_LEVERAGE: 获得外交优势
+ABL_GAIN_LEVERAGE_DESC: <<|
+
+	获得针对指定系统内所有拥有行星控制权的帝国的"势不两立"卡。 
+>>
+
+ART_ANCIENT_EMBASSY: 先驱领馆
+ABL_ANCIENT_EMBASSY: 重启先驱领馆
+ABL_ANCIENT_EMBASSY_DESC: <<|
+	在指定地点部署一个先驱领馆卫星。 
+>>
+
+ART_GENESIS_DEVICE: 创世装置
+ART_GENESIS_DEVICE_DESC: 一个可以将行星本土资源改为随机2级资源的星球改造装置。 
+ABL_GENESIS_DEVICE: 改造行星
+ABL_GENESIS_DEVICE_DESC: <<|
+	将一颗已拥有的指定行星瞬间改造为一颗拥有随机2级资源的行星。 
+	
+	移除当前所有本土资源。 
+>>
+
+ART_MIND_CONTROL: 精神控制设备
+
+ART_REVENANT_ENGINE: 亡灵引擎
+ART_REVENANT_ENGINE_DESC: <<|
+	亡灵号的引擎系统。 
+	激活后所有蓝图[b]飞船推力提升100%[/b]。 
+>>
+ORB_REVENANT_ENGINE: 亡灵引擎
+ORB_REVENANT_BLURB: <<
+ 强 大 的 亡 魂 的 一 部 分 。 激 活 后 获 得 奖 励 ， 激 活 所 有 4个 部 分 之 后 可 以 让 亡 魂 现 身 。 可 以 将 其 摧 毁 。 
+>>
+ABL_REVENANT_ENGINE: 激活亡灵引擎
+ABL_REVENANT_ENGINE_DESC: <<
+	激活亡灵引擎， 它来自于传奇的亡灵号战舰。 
+
+	激活状态下， 该引擎给所有的设计图中的战舰提供[b]双倍推力/加速[/b]， 并且带有跃迁引擎的战舰可以[b]提升50%跃迁速度[/b]。 
+
+	当激活后的引擎失去所有生命值时， 它会恢复到沉睡状态。 
+	
+	[b]集齐所有4个亡灵号部件并同时激活， 你可以获得宇宙中最伟大的战舰的控制权。 [/b]
+>>
+NOTIFY_REVENANT_ENGINE: [color=$2] $1[/color]激活了[b]亡灵引擎[/b]。 
+
+ART_REVENANT_CANNON: 亡灵火炮
+ART_REVENANT_CANNON_DESC: <<|
+	亡灵号的武器系统。 
+	激活后所有蓝图[b]飞船武器射程提升75%[/b]。 
+>>
+ORB_REVENANT_CANNON: 亡灵火炮
+ABL_REVENANT_CANNON: 激活亡灵火炮
+ABL_REVENANT_CANNON_DESC: <<
+	激活亡灵火炮， 它来自于传奇的亡灵号战舰。 
+
+	激活状态下， 该火炮给所有的设计图中的战舰[b]提升75%武器射程/速度[/b]。 
+
+	当激活后的火炮失去所有生命值时， 它会恢复到沉睡状态。 
+	
+	[b]集齐所有4个亡灵号部件并同时激活， 你可以获得宇宙中最伟大的战舰的控制权。 [/b]
+>>
+NOTIFY_REVENANT_CANNON: [color=$2] $1[/color]激活了[b]亡灵火炮[/b]。 
+
+ART_REVENANT_CHASSIS: 亡灵船舱
+ART_REVENANT_CHASSIS_DESC: <<|
+	亡灵号的船舱。 
+	激活后所有蓝图[b]飞船建造成本减少50%[/b]。 
+>>
+ORB_REVENANT_CHASSIS: 亡灵船舱
+ABL_REVENANT_CHASSIS: 激活亡灵船舱
+ABL_REVENANT_CHASSIS_DESC: <<
+	激活亡灵船舱， 它来自于传奇的亡灵号战舰。 
+
+	激活状态下， 该船舱给所有的设计图中的战舰[b]减少50%建造成本[/b]。 
+
+	当激活后的船舱失去所有生命值时， 它会恢复到沉睡状态。 
+	
+	[b]集齐所有4个亡灵号部件并同时激活， 你可以获得宇宙中最伟大的战舰的控制权。 [/b]
+>>
+NOTIFY_REVENANT_CHASSIS: [color=$2] $1[/color]激活了[b]亡灵船舱[/b]。 
+
+ART_REVENANT_CORE: 亡灵核心
+ART_REVENANT_CORE_DESC: <<|
+	亡灵号的指挥模块。 
+	激活后所有蓝图[b]飞船支援舰上限提升25%[/b]。 
+>>
+ORB_REVENANT_CORE: 亡灵核心
+ABL_REVENANT_CORE: 激活亡灵核心
+ABL_REVENANT_CORE_DESC: <<
+	激活亡灵核心， 它来自于传奇的亡灵号战舰。 
+
+	激活状态下， 该核心给所有的设计图中的战舰[b]提升25%支援舰上限[/b]。 
+
+	当激活后的核心失去所有生命值时， 它会恢复到沉睡状态。 
+	
+	[b]集齐所有4个亡灵号部件并同时激活， 你可以获得宇宙中最伟大的战舰的控制权。 [/b]
+>>
+NOTIFY_REVENANT_CORE: [color=$2] $1[/color]激活了[b]亡灵核心[/b]。 
+
+ART_PLANET_GENERATOR: 行星生成器
+ART_PLANET_GENERATOR_DESC: 一个加速过的物质生成器， 可以从纯能量中创造新的星球。 
+ABL_GENERATE_PLANET: 生成行星
+ABL_GENERATE_PLANET_DESC: <<
+	在指定位置立刻生成一个新的随机行星。 
+>>
+
+ART_STELLAR_GENERATOR: 恒星生成器
+ART_STELLAR_GENERATOR_DESC: 将极其巨大的能量集中到一点以创造新的恒星。 
+ABL_GENERATE_STAR: 生成恒星
+ABL_GENERATE_STAR_DESC: <<
+	在指定位置立刻生成一个新的恒星。 
+>>
+
+ART_SKIP_DRIVE: 跳跃引擎 
+ART_SKIP_DRIVE_DESC: 一个可以装备的测试版引擎， 可以使用纯能量跃迁很短的距离，允许使用1次。 
+ABL_EQUIP_SKIP_DRIVE: 装备跳跃引擎
+ABL_EQUIP_SKIP_DRIVE_DESC: 给指定舰队装备跳跃引擎。 跳跃引擎可以完成瞬时传送， 但是会消耗大量的能量。 
+STATUS_SKIP_DRIVE: 跳跃引擎
+STATUS_SKIP_DRIVE_DESC: 这艘旗舰装备了一个跳跃引擎。 跳跃引擎可以完成瞬时传送， 但是会消耗大量的能量，每次使用消耗1个存量。 
+ABL_BLINK: 传送
+ABL_BLINK_DESC: 立刻将一支舰队传送到附近的一个地点。 传送得越远消耗的能量越多。 
+
+ART_ION_CANNON: 离子炮 
+ART_ION_CANNON_DESC: 一个可以装备的光束炮， 可以暂时使敌军的引擎和跃迁能力失效，允许使用1次。 
+ABL_EQUIP_ION_CANNON: 装备离子炮
+ABL_EQUIP_ION_CANNON_DESC: 给指定舰队装备离子炮。 离子炮可以使目标战舰暂时失去移动和跃迁的能力。 
+STATUS_ION_CANNON: 离子炮
+STATUS_ION_CANNON_DESC: 这艘旗舰装备了一个离子炮。 离子炮可以使目标战舰暂时失去移动和跃迁的能力，每次使用消耗1个存量。 
+ABL_ION_CANNON: 发射离子炮
+ABL_ION_CANNON_DESC: <<
+	向目标敌军旗舰发射所装备的离子炮。 它被击中后将失去移动和跃迁的能力2分钟。 
+	
+	目标飞船比装备离子炮的飞船规模大得越多， 发射离子炮所消耗的能量就越大。 
+>>
+
+ART_PROTO_PLANET: 原行星
+ART_PROTO_PLANET_DESC: 还在形成中的行星。 花费大量能量来使行星成型。 
+ABL_PROTO_LEVEL0: 行星成型(0级)
+ABL_PROTO_LEVEL0_DESC: 通过花费大量能量来操纵行星成型， 行星会产生一种随机的0级资源 。 
+ABL_PROTO_LEVEL1: 行星成型(1级)
+ABL_PROTO_LEVEL1_DESC: 通过花费大量能量来操纵行星成型， 行星会产生一种随机的1级资源 。 
+ABL_PROTO_LEVEL2: 行星成型(2级)
+ABL_PROTO_LEVEL2_DESC: 通过花费大量能量来操纵行星成型， 行星会产生一种随机的2级资源 。 
+
+ART_FRAME_CONSTRUCTOR: 轨道框架建造器
+ART_FRAME_CONSTRUCTOR_DESC: <<
+	建造一个支撑轨道卫星的框架， 可以减少轨道卫星的建造和产能成本。 
+>>
+ABL_ORBITAL_FRAME: 建造轨道框架
+ABL_ORBITAL_FRAME_DESC: <<
+	在指定地点建造轨道框架。 
+
+	你可以用任意其他轨道卫星替代轨道框架。 建造在轨道框架上的卫星建筑成本和产能成本减少50%， 并且没有建筑距离带来的产能惩罚。 
+>>
+
+ART_SUPPORT_STATION: 援助站 
+ART_SUPPORT_STATION_DESC: <<
+ 激活的援助站可以在战斗中为附近的舰队提供能量和补给 。 
+>>
+ABL_SPAWN_SUPPORT_STATION: 援助站 
+ABL_SPAWN_SUPPORT_STATION_DESC: <<
+ 在目标区域激活援助站 。 
+
+ 援助站会自动锁定附近的舰队并对其发射援助光束 ， 甚至可以在战斗中为它们提供修复 ， 并增加其效率 。 
+
+ 援助激活后需要 60秒来建造 。 
+>>
+ABL_SUPPORT_BEAM: 发射援助光束 
+ABL_SUPPORT_BEAM_DESC: <<
+ 把援助站的援助光束集中在某个特定的舰队上 。 
+
+ 援助光束每秒为目标舰队恢复 1%的生命值 ， 补给上限 。 激活后 ， 提高舰队 20%力量 。 
+>>
+STATUS_CONSTRUCTING: 建造中 … … 
+STATUS_SUPPORTED: 被援助 
+STATUS_SUPPORTED_DESC: <<
+ 这个舰队正在得到援助光束的充能 。 
+
+ 援助光束每秒为目标舰队恢复 1%的生命值 ， 补给上限 。 激活后 ， 提高舰队 20%力量 。 
+>>
+ORB_SUPPORT_STATION: 援助站 
+ORB_SUPPORT_STATION_BLURB: 通过光束为附近站点和舰队提供修复和补给 。 
+
+ART_FLOATING_CONTINENT: 漂浮大陆 
+ART_FLOATING_CONTINENT_DESC: <<
+ 在一个行星表面添加一个可移动的大陆 。 
+>>
+ABL_ADD_FLOATING_CONTINENT: 占领漂浮大陆 
+ABL_ADD_FLOATING_CONTINENT_DESC: <<
+ 占领漂浮大陆并将其规划到自己的一个行星上 。 
+
+ 花费能量之后 ， 漂浮大陆以及上面的所有建筑物都会被移送到目标星球 。 
+>>
+ABL_TRANSFER_FLOATING_CONTINENT: 移动漂浮大陆 
+ABL_TRANSFER_FLOATING_CONTINENT_DESC: <<
+ 将漂浮大陆以及上面所有建筑移送到你的另一个星球上 。 
+
+ 所花费的能量取决于两个星球之间的距离 。 
+
+ 如果漂浮大陆所在星球被攻击 ， 移动功能将暂不可用 。 
+>>

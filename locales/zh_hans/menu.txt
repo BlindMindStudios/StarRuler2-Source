@@ -1,0 +1,349 @@
+START_GAME: 开始游戏
+GAME_SETTINGS: 游戏设置
+ADD_AI: 增加 AI
+MENU_EMPIRES: 帝国
+MENU_GAME_SETTINGS: 游戏设置
+MENU_GALAXIES: 星系
+MENU_GAMES: 游戏
+HANDICAP: 阻碍
+MODS_MENU: Mods
+DISABLED_MOD: 已禁用
+DISABLE_MOD: 禁用Mod
+ENABLE_MOD: 启用Mod
+NEW_MOD: 创建新Mod
+EDIT_MOD: 编辑Mod
+MENU_CONTINUE_MAIN: 继续前往主菜单
+MENU_MOD_COUNTS: 已安装 $1个Mod， 已启用$2个Mod
+MANAGE_MODS: 管理Mod
+OPEN_WORKSHOP: 查看Steam Workshop
+MOD_INCOMPATIBLE: 无法启用， 该Mod与' $1'不匹配。 
+MOD_CONFLICT_BASE: 每次只能启用一个基本Mod。 
+MOD_CONFLICT: 冲突文件:
+MOD_COMPATIBILITY_WARN: [b][color=#f00][center]警告 :没有标记为与这个游戏版本相兼容 。 [/center][/color][/b]\n\n
+MOD_COMPATIBILITY: <<
+ [font=Medium][color=#f00]警告 [/color][/font]
+ 该游戏模组与当前游戏版本不兼容 。 启用将破坏多种或所有游戏内容 ， 直到被卸载 。 
+
+ 仍然启动该游戏模组 ?
+>>
+MENU_LOADING: 载入中... 
+CHOOSE_RACE: 选择种族
+AI_CANNOT_PLAY: <<
+ AI此次不能使用该种族 。 
+>>
+ENABLE_INTERNET: 允许网络连接 
+
+MAIN_MENU: 主菜单
+PAUSED_MENU: 暂停
+RESUME_GAME: 继续
+END_GAME: 结束游戏
+RETURN_TO_GAME: 返回游戏
+NEW_GAME: 新游戏
+CAMPAIGN: 剧情模式
+SAVE_GAME: 保存游戏
+LOAD_GAME: 读取游戏
+MULTIPLAYER: 多人游戏
+DISCONNECT: 断开
+MP_JOIN: 加入
+MENU_BACK: 返回
+MENU_OPTIONS: 选项
+QUIT_GAME: 退出
+OPEN_IRC: 打开IRC聊天
+CLOSE_IRC: 断开IRC聊天
+IRC_NICKNAME: 昵称: $1
+NICKNAME: 昵称:
+CHANGE_NICK: 修改
+SAVE_NO_COMPAT: <<|
+	你想要载入的存档来自于一个较老的游戏版本， 
+	因此不能被加载。 
+
+	开发团队对此不便表示深深的歉意。 
+>>
+SAVE_NO_MODS: <<
+	无法载入存档: 此存档所使用的一个或多个Mod没有安装。 
+>>
+
+MP_OPTIONS: 多人游戏选项
+MP_HOST_OPTIONS: 主机选项
+MP_HOST: 建立主机
+MP_SERVER_NAME: 服务器名称
+MP_IP: IP
+MP_PORT: 端口号
+MP_HOST_LOAD: 创建 & 加载
+MP_PUBLIC: 公开游戏
+MP_PUNCHTHROUGH: 内网互联
+MP_VERSION_MISMATCH: (未完成版本)
+MP_MISSING_MODS: (缺少Mod)
+MP_ENTER_PASSWORD: 需要密码
+MP_CHAT_INTRO: [i][color=#aaa]按下Shift+Return可以重新打开被关闭的聊天窗口... [/color][/i]
+MP_CHAT_ALL: 对所有人 
+MP_CHAT_ALLIES: 对盟友 
+MP_CHAT_PEACE: 对和平的 
+MP_CHAT_TO: 对 $1
+MP_NOT_READY: 准备
+MP_READY: 已准备
+MP_PLAYER_READY: 玩家已准备开始游戏。 
+MP_PLAYER_NOT_READY: 玩家尚未准备开始游戏。 
+MP_CONFIRM_NOT_READY: 并不是所有玩家都准备好开始游戏了。 确定要开始游戏吗?
+MP_CANNOT_CONNECT: 无法连接至服务器
+MP_WAITING_START: 正在等待主机开始游戏
+MP_WAITING_TRANSFER: 转手游戏
+MP_IRC_CHAT: 打开IRC聊天室
+MP_JOIN_IP: 通过IP加入
+MP_NO_GAMES: 没有可以加入的多人游戏... 
+INVITE_FRIEND: 邀请好友
+MP_CONNECT_EVENT: $1连接到了游戏。 
+MP_DISCONNECT_EVENT: $1失去了连接。 
+MP_PLAY_EVENT: $1现在控制$2帝国。 
+MP_SPECTATING_EVENT: $1正在旁观。 
+MP_CHEATS_ENABLED: 作弊功能已经[color=#0f0]启动[/color]。 
+MP_CHEATS_DISABLED: 作弊功能已经[color=#f00]关闭[/color]。 
+MP_QUEUE: 排队等待分配
+MP_QUEUE_ACTIVE: 正在排队... 
+MP_QUEUE_ACTIVE_PLAYERS: 正在排队... ( $1名玩家)
+MP_QUEUE_READY: 分配完成
+MP_QUEUE_ACCEPT: 接受
+MP_QUEUE_REJECT: 拒绝
+MP_QUEUE_LEAVE: 离开队列
+MP_QUEUE_WAITING: 正在等待其他玩家( $1/$2)
+
+CHOOSE_MAP: 选择地图... 
+ADD_GALAXY: 添加星系
+SYSTEM_COUNT: 系统
+SYSTEM_SPACING: 间隔
+CONNECT_ENDS: 循环虫洞
+TEAM: 队
+TEAM_TEXT: $1队
+NO_TEAM: 没有队伍
+
+NG_GAME_OPTIONS: 游戏选项
+
+NGTT_MAP_HW: 决定帝国的家园能否在此星系生成。 
+NG_UNIVERSE_GENERATION: 宇宙生成
+NG_ANOMALY_OCCURANCE: 异常区频率
+NG_REMNANT_OCCURANCE: 游民频率
+NG_ASTEROID_OCCURANCE: 小行星频率
+NG_RESOURCE_ASTEROID_OCCURANCE: 资源小行星 
+NG_UNIQUE_SYSTEM_OCCURANCE: 特殊星系频率
+NG_UNIQUE_RESOURCE_OCCURANCE: 特殊资源频率
+NG_PLANET_FREQUENCY: 行星频率
+NG_ARTIFACT_FREQUENCY: 神器频率
+NG_SYSTEM_SIZE: 星系规模
+NG_RESET: 重置页面到默认值
+NG_EMPIRE_OPTIONS: 帝国选项
+NG_ENABLE_CIVILIAN_TRADE: 启用平民货船贸易
+NG_CIVILIAN_TRADE: 民间贸易活动 
+NGTT_CIVILIAN_TRADE: 你的帝国内民间贸易舰船活动数量 。 高频率民间活动会创造更多的贸易舰船 ， 但是会影响游戏性能及帧数 。 
+NG_VICTORY_OPTIONS: 胜利选项
+NG_RANDOM_EVENTS: 随机事件
+NG_TIME_LIMIT: 时间限制
+NGTT_TIME_LIMIT: <<|
+	为游戏设置时间限制。 在指定的分钟后， 拥有最多点数的帝国获得胜利。 
+>>
+NG_REMNANT_AGGRESSION: 遗族态度
+NGTT_REMNANT_AGGRESSION: 允许遗族舰队移动并拦截附近的敌对舰队。 
+NG_DISABLE_STARTING_FLEETS: 禁用初始舰队
+NGTT_DISABLE_STARTING_FLEETS: 禁用每个帝国通过他们的政府特性得到的免费初始舰队。 
+NG_ENABLE_REVENANT_PARTS: 启用亡灵零件
+NGTT_ENABLE_REVENANT_PARTS: <<|
+	选中此项后， 亡灵的4个神器零件将会分布在宇宙之中。 
+
+	获得一个亡灵零件将可以得到一项好处， 得到所有的4个零件可以获得宇宙中最强战舰的控制权。 
+>>
+NG_ALLOW_TEAM_SURRENDER: 允许投降者破坏队伍
+NGTT_ALLOW_TEAM_SURRENDER: <<
+	选中此项后， 队伍内的玩家可以向敌对队伍投降， 这将破坏原来的队伍构成， 使得他们成为另一个队伍的臣属。 
+>>
+NG_ENABLE_DREAD_PIRATE: 启用疯狂海盗
+NGTT_ENABLE_DREAD_PIRATE: <<
+	疯狂海盗模式启用后， 一艘海盗船会在星系内游荡， 打劫没有武器的平民舰船。 
+
+	海盗会将战利品存放在深空中不同的海盗贮藏站中。 消灭太空站或者海盗船本身来获得他们偷来的资金， 这笔钱将作为特别资金。 
+>>
+NG_RESOURCE_SCARCITY: 资源匮乏
+NGTT_RESOURCE_SCARCITY: <<
+	选中此项后， 地图上会有很多贫瘠的星球， 使得帝国所能得到的资源变得极其疏松， 但仍不影响游戏进行。 
+	
+	超过100%的数值将减少宇宙中的资源， 低于100%的数值将约束资源匮乏的发生， 并提供更多的资源。 
+>>
+NG_ENABLE_INFLUENCE_EVENTS: 启用外交事件
+NGTT_ENABLE_INFLUENCE_EVENTS: <<
+	启用后， 权势卡卡堆会出现外交事件卡， 被抽中后会引发外交事件。 
+
+	禁用此项会阻止时代精神和其他外交事件的发生。 
+>>
+NG_START_EXPLORED_MAP: 完全探索地图
+NGTT_START_EXPLORED_MAP: <<
+	启用后， 地图上的所有星系在开始时就已经被探索， 且所有帝国都能看到全地图。 
+
+	不启用时， 所有帝国都必须通过自行探索才能发现各个星系。 
+>>
+NG_ENABLE_TERRAFORMING: 开启土地改造 
+NGTT_ENABLE_TERRAFORMING: <<
+ 开启土地改造后 ， 帝国能自由更改其星球上任意 1级资源 。 
+
+ 选择有劳动力的星球 ， 然后右击另一个星球进行土地改造 。 
+>>
+NG_ENABLE_INFLUENCE_VICTORY: 开启影响力胜利 
+NGTT_ENABLE_INFLUENCE_VICTORY: <<
+ 开启影响力胜利 ， 成为议员领袖 ， 建立议员殿 ， 并且购买激活银河超级大国和银河乌托邦卡片 ， 可获得胜利 。 
+>>
+
+FLATTEN: 很低
+
+TEX_QUAL_2: 低
+TEX_QUAL_3: 中等
+TEX_QUAL_4: 高
+TEX_QUAL_5: 超高
+
+RESOLUTION: 分辨率
+RES_DESKTOP: 桌面
+FULLSCREEN: 全屏显示
+
+NG_DISABLE_TRADE: 禁用平民货船贸易
+NGTT_DISABLE_TRADE: <<|
+	在游戏中禁用平民交易舰船生成。 会移除所有的抢劫功能， 但是在非常大的星系中游戏时可以提升性能。 
+>>
+
+
+NG_WARN_PEREMP: <<|
+	[b][color=#f00]警告:[/color][/b] 你正在创建一个每个帝国可拥有超过25个星系的巨大地图， 
+	你的游戏体验可能会
+	被蜗牛般的速度影响。 
+
+	我们推荐每个帝国拥有大约10-20个星系
+	以达到最好的游戏体验。 
+
+	[b]仍要继续吗? [/b]
+>>
+NG_WARN_OPTIMAL: <<|
+	[b][color=#f00]警告:[/color][/b] 你正在创建一个拥有超过150个星系的巨大地图， 
+	对于低配置的电脑， 
+	过多的星系会造成不能以最佳性能运行游戏， 还会导致图形卡顿或者长时间运行后速度减慢。 
+
+	另外， 你的游戏体验可能会
+	被蜗牛般的速度影响。 我们推荐每个帝国拥有大约
+	10-20个星系以达到最好的游戏体验。 
+
+	[b]仍要继续吗? [/b]
+>>
+NG_WARN_BAD: <<|
+	[b][color=#f00]警告:[/color][/b] 你正在创建一个拥有超过400个星系的巨大地图， 
+	除非是最高配置的电脑， 过多的星系会导致不能以最佳性能运行游戏， 
+还会导致图形卡顿或者长时间运行后
+	速度减慢。 
+
+	另外， 你的游戏体验可能会
+	被蜗牛般的速度影响。 我们推荐每个帝国拥有大约
+	10-20个星系以达到最好的游戏体验。 
+
+	[b]仍要继续吗? [/b]
+>>
+NG_WARN_OHGOD: <<|
+	[b][color=#f00]警告:[/color][/b] 你正在创建一个拥有超过1000个星系的史无前例的地图。 
+
+	除非你是从[b]未来[/b]穿越而来， 正在使用
+	2038年的酷睿i42处理器运行Star Ruler 2， 不然你[b]将会[/b]遇到图形卡顿或者长时间运行导致的
+	速度减慢。 
+
+	另外， 你的游戏体验可能会
+	被蜗牛般的速度影响。 我们推荐每个帝国拥有大约
+	10-20个星系以达到最好的游戏体验。 
+
+	[b]仍要继续吗? (你疯了)[/b]
+>>
+
+IRC_HELP: <<
+	可用命令:
+
+	/msg <user> <message> - 发送悄悄话。 
+	/me <message> - 发送一个行动信息。 
+	/join #<channel> - 加入一个不同的频道。 
+	/part - 从当前频道离开。 
+	/close - 关闭当前频道/pm窗口。 
+	/nick <new_nickname> - 更改你的昵称。 
+
+	需要额外特权的命令:
+
+	/topic <new_topic> - 更改目前频道的话题。 
+	/mode <params> - 更改频道模式。 
+	/umode <params> - 更改一个用户模式。 
+	/kick <nickname> - 从频道中踢出一个用户。 
+>>
+
+IRC_JOIN: [color=$3] $1[/color] 加入了$2
+IRC_PART: [color=$3] $1[/color]离开了$2
+IRC_QUIT: [color=$3] $1[/color]退出了
+IRC_ACTION: [color=$3] $1[/color] $2
+IRC_NICK: [color=$3] $1[/color]已改名为[color=$4]$2[/color]
+IRC_KICK: [color=$3] $1[/color]踢出了[color=$4]$2[/color]
+IRC_TOPIC: [color=$3] $1[/color]已经改变话题为'$2'
+IRC_TOPIC_IS: $1的话题是: $2
+IRC_MODE: [color=$3] $1[/color] 设定模式为$2
+IRC_UMODE: [color=$3] $1[/color] 设定你的用户模式为$2
+IRC_DISCONNECT: [color=#f00]Disconnected from server。 [/color]
+
+DISCONNECT_0: 连接超时
+DISCONNECT_1: 连接错误
+DISCONNECT_2: 连接已断开
+DISCONNECT_3: 被主机踢出游戏
+DISCONNECT_4: 版本不匹配
+DISCONNECT_5: 密码错误
+
+SANDBOX: 设计沙盒
+PROMPT_QUIT: 你确定要退出游戏吗? 所有未保存的进度都会丢失。 
+PROMPT_END: 你确定要退出游戏吗? 所有未保存的进度都会丢失。 
+PROMPT_START_NEW: 你确定要结束当前的游戏重新开始吗? 所有未保存的进度都会丢失。 
+PROMPT_DISCONNECT: 你确定要断开连接么?
+PROMPT_TUTORIAL: 开始教程将会结束您当前的游戏。 所有未保存的进度将会丢失。 确定继续吗?
+PROMPT_SANDBOX: 进入设计沙盒将会结束您当前的游戏。 所有未保存的进度将会丢失。 确定继续吗?
+
+CHECK_FOR_UPDATES: 检查更新
+CHECKING_UPDATES: 检查更新 … … 
+CHECK_UPDATE_FAIL: 检查更新失败 。 
+CHECK_UPDATE_UPTODATE: 游戏版本已过期 ！ 
+UPDATE_PROGRESS: 加载更新 … … $1%
+UPDATE_FAIL: 下载更新失败 … … (Code $1)
+
+AI_DIFF_EASY: 简单 
+AI_DIFF_NORMAL: 普通 
+AI_DIFF_HARD: 困难 
+
+AI_DIFF_EASY_DESC: 以简单对手开始 。 
+AI_DIFF_NORMAL_DESC: 适中难度挑战 。 
+AI_DIFF_HARD_DESC: 解锁 AI的全部能力 。 
+
+AI_BEHAVIOR: 行为 
+AI_CHEATS: 作弊 
+
+AI_AGGRESSIVE: 好斗 
+AI_AGGRESSIVE_DESC: <<
+ 被设置为好斗型的 AI只要有优势就会一直立即尝试征服其他帝国 。 
+>>
+
+AI_PASSIVE: 消极 
+AI_PASSIVE_DESC: <<
+ 被设计为消极的 AI永远不会主动对其他人宣战 ， 只会与向他们宣战的人进行交战 。 
+>>
+
+AI_BIASED: 偏见 
+AI_BIASED_DESC: <<
+ AI被设置为有偏见行为的会一直要讨厌人类玩家 ， 并且比起其他 AI会攻击他们更加频繁 。 
+>>
+
+AI_WEALTH: 财富 
+AI_WEALTH_DESC: <<
+ 给予 AI在整场游戏所有类型的静态免费资源数量 。 
+>>
+
+AI_STRENGTH: 力量 
+AI_STRENGTH_DESC: 增加 AI战术舰队在整场游戏中的力量 。 
+
+AI_ABUNDANCE: 富裕 
+AI_ABUNDANCE_DESC: 增加 AI从他们的行星获得资源收入量 。 
+
+AI_PRIVILEGED: 特权 
+AI_PRIVILEGED_DESC: 给予 AI随机选择的特权 ， 明显改善它们在游戏开始时的地位 。 
+
+AI_LEGACY: 遗留 AI
+AI_LEGACY_DESC: 使用星际统治者 2上一版本的 AI。 遗留 AI无法支持所有新的种族和特征 。 

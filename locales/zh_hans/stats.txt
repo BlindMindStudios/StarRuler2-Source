@@ -1,0 +1,21 @@
+STAT_Ships: 飞船
+STAT_ShipsBuilt: 飞船建成
+STAT_ShipsLost: 飞船损失
+STAT_ShipsDestroyed: 飞船毁坏
+
+STAT_Planets: 行星
+STAT_Planets_EVT_Lost: 失去 $1
+STAT_Planets_EVT_Colonized: $1完成殖民
+STAT_Planets_EVT_Conquered: 已征服 $1
+STAT_Planets_EVT_Glassed: $1结晶化
+
+STAT_SupplyGen: 补给产量
+STAT_SupplyUse: 补给消耗量
+STAT_MetalsGen: 金属产量
+STAT_MetalsUse: 金属消耗量
+
+STAT_NET_BUDGET: 净收入
+STAT_ENERGY_INCOME: 能量/秒
+STAT_INFLUENCE_INCOME: 影响力/分
+STAT_RESEARCH_INCOME: 科研点/秒
+STAT_RESEARCH_TOTAL: 科研

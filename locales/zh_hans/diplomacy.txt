@@ -1,0 +1,969 @@
+DIPLOMACY: 外交
+POLITICAL: 政治
+POLITICAL_STRENGTH: 政治实力:
+MILITARY_STRENGTH: 军事实力:
+TERRITORY_STRENGTH: 领土:
+MILITARY: 军事
+STR_WEAK: 贫弱
+STR_AVERAGE: 一般
+STR_STRONG: 强大
+PEACEFUL: 和平
+WAR: 战争
+WAR_STATUS: $1: 外交关系
+WAR_STATUS_WAR: $1向[color=#f00]宣战[/color]了!
+WAR_STATUS_PROPOSE: $1想要[color=#0f0]议和[/color]!
+WAR_STATUS_ACCEPT: $1[color=#0f0]同意[/color]了我们的议和!
+WAR_EVT: [color=#fb0]发生冲突:[/color] $1
+WAR_EVT_CONTEST: $1 [color=#fb0]受到攻击[/color]!
+WAR_EVT_LOST: 我们[color=#f00]失去[/color]了 $1... 
+EMPIRE_INFLUENCE: $1影响力
+EMPIRE_POINTS: $1点数
+EMPIRE_STRENGTH: $1战力
+EMPIRE_PLANETS: $1星球
+ACTIVE_VOTES: 交涉中的议案
+ACTIVE_INFLUENCE_EFFECTS: 已激活的效果
+ACTIVE_TREATIES: 外交协议
+SIGNED_BY: 签署者
+INVITED_TO: 邀请签署
+SURRENDER_NAME: $1的[b][color=#f00]从属提案[/color][/b]
+SURRENDER_OFFER: $1的[b][color=#f00]归降提案[/color][/b]
+SURRENDER_DEMAND: $1的[b][color=#f00]要求归降提案[/color][/b]
+SURRENDER_OPTION: 提出你将无条件投降
+PEACE_OFFER: 来自 $1的[b][color=#0f0]议和提案[/color][/b]
+DEMAND_SURRENDER_OPTION: 要求他们投降
+OFFER_SUBJUGATE_OPTION: 请求成为他们的属国
+DEMAND_SUBJUGATE_OPTION: 要求他们成为你的属国
+SURRENDER_PROMPT: <<|
+	如果你对 $1提出的归降和从属提案被接受， 你将成为一个
+	属国， 并不再有能力提出或参与外交协议。 
+	你的宗主国会决定对那个国家宣战， 而你也不能真正取得游戏的胜利， 
+	而只能在你的宗主国获胜后获得[b]不彻底的胜利[/b]。 
+	这个状态是永久性的。 
+
+	你确定要提出自己将无条件从属吗? 
+>>
+PERMANENT_PROMPT: <<|
+	你将要签署的外交协议是永久性的， 永远无法取消。 
+
+	你确定要签署这份永久性协议吗? 
+>>
+TT_RELATION: <<
+ [b]你和 $1的关系 :[/b]
+ [offset=20]$2[/offset]
+>>
+RELATION_WAR: [img=StatusWar;22] 与 $1开战 。 [/img]
+NOTIF_VASSAL: $2成为了$3的属国。 
+VASSAL_TEXT: $1的属国
+PARENT_VASSAL_TEXT: [b][color=#0f0]你的宗主国[/color][/b]
+PROPOSE_TREATY: 提出新的外交协议... 
+NO_SIGNATORIES: [i][color=#aaa]还没有国家签署... [/color][/i]
+JOIN_TREATY: 签署协议
+DECLINE_TREATY: 拒绝协议
+LEAVE_TREATY: 放弃协议
+DISMISS_TREATY: 收回协议
+INVITE_TO_TREATY: 邀请签署[b] $1[/b]
+TREATY_NAME_GEN: $1协议
+PROPOSE: 提案
+TREATY_DESC: 用已选择的条款提出一个新的外交协议。 协议生成后， 可以邀请更多的帝国来签署此协议。 
+NOTIF_TREATY_INVITE: $2邀请你签署[b]$5 $1[/b]。 
+NOTIF_TREATY_INVITE_OTHER: $2邀请$3签署[b]$5 $1[/b]。 
+NOTIF_TREATY_LEAVE: $2放弃了[b]$5 $1[/b]。 
+NOTIF_TREATY_DISMISS: $2收回了[b]$5 $1[/b]。 
+NOTIF_TREATY_DECLINE: $2拒绝签署[b]$5 $1[/b]。 
+NOTIF_TREATY_JOIN: $2签署了[b]$5 $1[/b]。 
+ELECT_VOTE: 竞选议会主席
+UNIFY_VOTE: 达成星际统一
+SAY_LABEL: 说:
+TIME_REMAINING: 剩余时间:
+DIPLOMACY_BACK: 回到外交面板
+VIEW_NEGOTIATIONS: 查看谈判
+VIEW_VOTE_HISTORY: 查看历史
+VOTE_HISTORY: 提案历史
+CARD_STACK: 权势卡贩售及事件
+AVAILABLE_CARDS: 可用的外交行动
+CARD_COST: $1影响
+CARD_COST_SPLIT: $1+$2影响
+CARD_WEIGHT: $1支持
+VOTING_HEADER: 正在投票
+VOTE_PETITIONER: 发起人
+VOTE_TARGET: 目标
+SENATE_LEADER: 星际议会主席
+TT_SENATE_LEADER: <<
+ [b]银河参议院领袖 [/b]
+ 这个帝国目前是银河议员 ， 能够得到特殊的牌 。 
+
+ 议员会周期性地得到只有他们能用的牌 。 
+>>
+TT_LEADER_CARD: <<
+ 只有当你成为 [b]银河参议院领袖 [/b]时才能使用这些牌 。 
+>>
+NOTIFY_LEADER_CARD: 获得议员领袖牌 
+NOTIFY_LEADER_CARD_DESC: 作为当前的议员领袖 ， 你获得了 1x [b]$1[/b]。 
+PLAY_SUPPORT: 支持票
+PLAY_OPPOSE: 反对票
+PLAY_NEUTRAL: 激活行动
+USES_UNLIMITED: 无限制
+PURCHASE_CARD: 购买
+PLAY_CARD: 激活
+PLAY_CARD_OPTION: $1 ($2影响)
+SUPPORT: 支持
+OPPOSE: 反对
+EFFECT_DISMISS: 离会
+EFFECT_UPKEEP: $1%维护费
+INFLUENCE_UPKEEP: 维护费:
+CARD_GENERIC: 任何
+CARD_DESC_COST: 影响力消耗:
+CARD_DESC_WEIGHT: 权重:
+CARD_PURCHASE_MONEY: 购买成本:
+CARD_PURCHASE_INFLUENCE: 购买成本:
+CARD_PLAY_MONEY: 使用成本:
+CARD_PLAY_ENERGY: 能量消耗:
+INFLUENCE_POPULATION: 人口
+NO_MET_EMPIRES: 还没有发现外星种族... 
+NOTIF_MET_EMPIRE: 你与$2星系的 $1第一次接触了。 
+NOTIF_MET_EMPIRE_BONUS: 作为第一个接触$2的帝国， 你获得了$3额外影响力!
+VOTES_FOR: $1 支持
+VOTES_AGAINST: $1 反对
+OFFER_FOR: 提出提案\n要求支持
+OFFER_FOR_TITLE: 提出提案要求支持
+OFFER_FOR_TEXT: 给另一个帝国提出提案， 以一定的回报换取他们在此次投票中投[b][color=#0f0]支持票[/color][/b]。 
+OFFER_AGAINST: 提出提案\n要求反对
+OFFER_AGAINST_TITLE: 提出提案要求反对
+OFFER_AGAINST_TEXT: 给另一个帝国提出提案， 以一定的回报换取他们在此次投票中投[b][color=#f00]反对票[/color][/b]。 
+OFFER: 出价
+OFFER_MONEY: 提供资金
+OFFER_ENERGY: 提供能量
+OFFER_CARD: 提供权势卡
+OFFER_FLEET: 提供舰队
+OFFER_PLANET: 提供星球
+OFFER_ARTIFACT: 提供神器
+DONATE_MONEY: 捐出资金
+DONATE_ENERGY: 捐出能量
+DONATE_CARD: 捐出权势卡
+DONATE_FLEET: 捐出舰队
+DONATE_PLANET: 捐出星球
+DONATE_ARTIFACT: 捐出神器
+OFFER_REQ_SUPPORT: 支持票要求
+OFFER_REQ_OPPOSE: 反对票要求
+OFFER_FOR_BTN: [center]答应要求([b][color=#0f0]$3/$2支持[/color][/b])[/center]
+OFFER_AGAINST_BTN: [center]答应要求([b][color=#f00]$3/$2反对[/color][/b])[/center]
+OFFER_TT: $1的出价。 
+OFFER_TT_OBJ: $1已被作为出价。 \n\n[b]单击[/b]以查看它在星际中的位置。 
+LOG_OFFER_FOR: * $1要求其他帝国添加至少[color=#0f0][b]$3支持票[/b][/color]， 为此他们提供$2作为回报。 
+LOG_OFFER_AGAINST: * $1要求其他帝国添加至少[color=#f00][b]$3反对票[/b][/color]， 为此他们提供$2作为回报。 
+LOG_CLAIM_OFFER_FOR: * $1答应了$4的要求， 提供[color=#0f0][b]支持[/b][/color]的同时也获得了$2。 
+LOG_CLAIM_OFFER_AGAINST: * $1答应了$4的要求， 提供[color=#f00][b]反对[/b][/color]的同时也获得了$2。 
+DONATE: 捐助
+DONATE_OPTION: 提出捐助
+DONATE_TEXT: 慷慨地给另一个帝国捐助物资。 
+NOTIF_DONATION: $1为你捐出了$2。 
+EFFECT_CONFIRM_DISMISS: <<|
+	你确定要停止此影响力效果? 
+
+	你将不再需要支付任何影响力维护费， 但相应效果也将立即停止。 此操作不能撤销。 
+>>
+EDICT_FROM_MASTER: 来自 $1的诏令: $2
+TT_EDICT_FROM_MASTER: 你的宗主国， $1， 发布了一条诏令:\n\n$2
+EDICT_TO_VASSALS: 给属国发布诏令: $2
+TT_EDICT_TO_VASSALS: 你为你的属国发布了一条诏令:\n\n$2
+EDICT_CONQUER_OPTION: 给属国发布诏令: [b][color=#f00]征服[/color][/b]
+EDICT_CLEAR_OPTION: 清除诏令
+EDICT_1: [color=#f00][b]征服 $1[/b][/color]
+TT_EDICT_1: 征服 $1。 每占领一个星球或摧毁一艘旗舰， 都可以获得少量的资源奖励。 
+TT_HIGHEST_CONTRIBUTOR: $1是对此提案[color=#00ff00][b]贡献最大的帝国[/b][/color]之一。 
+TT_LOWEST_CONTRIBUTOR: $1是对此提案[color=#ff0000][b]贡献最小的帝国[/b][/color]之一。 
+
+INFLUENCE_TT_ACTION: <<|
+	这是一个[b]外交行动[/b]。 购买后您将可以随时使用， 
+	虽然它可能需要先行收取激活费用
+>>
+
+INFLUENCE_TT_INSTANT: <<|
+	这是一个[b]即时行动[/b]。 当购买之后， 其效果将立即触发。 
+>>
+
+INFLUENCE_TT_VOTE: <<|
+	这是一个[b]投票行动[/b]。 当激活此项行动时， 
+	一场星际议会的投票将决定它的结果。 
+>>
+
+INFLUENCE_TT_EFFECT: <<|
+	这是一个[b]效应行动[/b]。 激活此行动将产生一个持续的效果。 
+	效果可能有有效时长并常常在激活时按某个百分比减少你的总影响力生成。 
+>>
+
+INFLUENCE_TT_EVENT: <<|
+	这是一个[b]影响力事件[/b]。 当此行动处于权势卡卡堆中时多项效果将被激活。 
+>>
+
+INFLUENCE_TT_SUPPORT: <<|
+	这是一个[b]支持行动[/b]。 这个行动只能在星际议会投票中
+	使用， 而且根据其权重可以改变投票结果的走向。 
+>>
+
+INFLUENCE_TT_QUALITY: <<|
+	这个行动有更好的[b]质量[/b]， 说明它在各方面都比低质量的同行要强。 
+>>
+
+INFLUENCE_TT_BUY_COST: <<|
+	购买这个行动将花费[b] $1 影响力[/b]。 
+>>
+
+INFLUENCE_TT_PLAY_COST: <<|
+	激活这个行动将花费[b] $1 影响力[/b]。 
+>>
+
+INFLUENCE_TT_PLAY_COST_UNKNOWN: <<|
+	激活这个行动的成本取决于其具体用途。 
+>>
+
+INFLUENCE_TT_WEIGHT: <<|
+	这个行动为投票提供[b] $1权重[/b]。 
+>>
+
+INFLUENCE_TT_WEIGHT_NEXT: <<|
+	这个行动为将来的某次支持行动提供[b] $1权重[/b]。 
+>>
+
+INFLUENCE_TT_WEIGHT_UNKNOWN: <<|
+	这个行动提供的权重取决于其具体用途。 
+>>
+
+INFLUENCE_TT_UPKEEP: <<|
+	这个行动的效果在激活时会降低你的总影响力产出 $1作为维护费。 
+>>
+
+INFLUENCE_DURATION: 持续时间
+INFLUENCE_TT_DURATION: <<|
+	这个行动产生的效果会持续 $1。 
+>>
+
+INFLUENCE_TT_FAIL: <<|
+	当投票计时器到达终点， 且[color=#f00][b]红色[/b][/color]进度条完全填满时， 提案会被[b]否决[/b]， 其所有效果都无法生效。 
+>>
+INFLUENCE_TT_PASS: <<|
+	当投票计时器到达终点， 且[color=#0f0][b]绿色[/b][/color]进度条完全填满时， 提案就会[b]通过[/b]， 其所有效果都会生效。 
+>>
+
+INFLUENCE_TT_BOUGHTBY: 被 $1购买。 
+
+DECLARE_WAR: 宣战
+PROPOSE_PEACE: 议和
+RETRACT_PEACE: 收回议和提案
+ACCEPT_PEACE: 同意议和提案
+OPTION_INFLUENCE_COST: $1 ($2影响力)
+
+PROMPT_WAR: 您确定要向 $1宣战吗?
+
+VOTE_LOG_START: * 由 $1提出的提案。 
+VOTE_LOG_START_CARD: * 由 $1提出的[b][color=$3]$2[/color][/b]提案。 
+VOTE_LOG_MESSAGE: $1: [offset=140]$2[/offset]
+VOTE_LOG_LEAVE: * $1离开了谈判。 
+VOTE_LOG_WITHDRAW: * $1撤回了提案。 
+VOTE_LOG_SUCCESS: * [color=#0f0]提案已通过! [/color]
+VOTE_LOG_FAIL: * [color=#f00]提案被否决。 [/color]
+
+VS: vs
+VOTE_LOG: 议会记录
+VOTE_YEA: 支持
+VOTE_NAY: 反对
+VOTES_YEA: $1支持
+VOTES_NAY: $1反对
+
+NO_VOTES: 没有正在交涉的提案... 
+NO_EFFECTS: 没有已激活的效果... 
+NO_TREATIES: 当前没有外交协议... 
+
+VOTE_LEAVE: 离开谈判
+PROMPT_LEAVE: <<|
+	你确定要离开关于这个提案的谈判吗? 
+	你投出的所有支持或反对票都会被取消。 
+
+	你将无法看到提案的后续发展， 但仍会受到其结果的影响。 
+>>
+
+VOTE_WITHDRAW: 撤回提案
+PROMPT_WITHDRAW: <<|
+	你确定要撤回这个提案吗? 
+
+	如果你这么做， 投票将会立即失败。 
+	所有的效果都会像提案被否决一样消失。 
+>>
+
+
+CARD_NEGOTIATE: 讨价还价
+CARD_NEGOTIATIONS_LOG_Y: * $1 [b]讨价还价[/b]可以添加[color=#0f0]$2支持票[/color]。 
+CARD_NEGOTIATIONS_LOG_N: * $1 [b]讨价还价[/b]可以添加[color=#f00]$2反对票[/color]。 
+CARD_NEGOTIATE_DESC: <<|
+	通过雇佣谈判高手， 我们可以保证一定数量的星际议员
+	在特定的场合上支持我们。 
+
+	[i]为投票的某一方添加1权重。 质量越高， 权重也会越高。 [/i]
+>>
+
+CARD_SPY: 帘窥壁听 ( $1)
+CARD_SPY_DESC: <<|
+	通过神秘的情报机构， 我们可以获得另一个帝国的通讯系统密码。 
+	这能让我们在一段时间里看到他们领土上的行动， 直到效果消失。 
+
+	[i]提供时长5分钟的视野。 质量每高一级， 持续时间延长3分钟。 [/i]
+>>
+CARD_SPY_EFFECT: 作用帘窥壁听于 $1
+CARD_SPY_EFFECT_DESC: <<|
+	 $1目前正在被监视， 你将可以看到他们所有的星系和舰队。 
+>>
+
+CARD_OPENFORUM: 百家争鸣
+CARD_OPENFORUM_DESC: <<|
+	举行关于为政治操作和媒体掌控提供更多机会的开放式论坛。 
+
+	[i]权势卡堆卡牌上限加1。 你购买新卡牌的成本减一。 [/i]
+>>
+EFFECT_OPENFORUM: 百家争鸣
+
+CARD_BUREAUCRACY: 官僚主义
+CARD_BUREAUCRACY_DESC: <<|
+	为星际议会建立起一套晦涩难懂的官僚主义办事手续， 这将使得
+	各个势力都将依赖你来给他们提供指导。 
+	
+	[i]每当别的帝国开始一场新的投票， 或者一个持续效果生效时， 
+	你获得对他们的外交优势。 [/i]
+>>
+EFFECT_BUREAUCRACY: 官僚主义
+
+CARD_ANNEX_PLANET: 行星兼并
+CARD_ANNEX_PLANET_DESC: <<|
+	不管当下战局如何， 宇宙中的某些领土理应归你所有! 
+	我们可以向星际议会提出情愿以改变现状， 
+	说服他们让我们成为这些领土的主人。 
+	
+	[i]激活此行动的影响力成本取决于目标星球的忠诚。 
+	如果此卡带来的投票通过， 你获得该星球的控制权。 
+	目标星球必须处于你的贸易边界内。 [/i]
+>>
+VOTE_ANNEX_PLANET: 行星兼并 $1
+
+CARD_ANNEX_SYSTEM: 星系兼并
+CARD_ANNEX_SYSTEM_DESC: <<|
+	对星际议会施压， 告诉他们这个星系在我们仁爱的管理下才能更美好。 
+	而当前他们的统治者则是残暴无情的。 
+	
+	[i]激活此行动的影响力成本取决于目标星系中星球的忠诚。 
+	如果此卡带来的投票通过， 你获得目标星系中所有行星的控制权。 
+	目标星系必须处于你的贸易边界内。 [/i]
+>>
+VOTE_ANNEX_SYSTEM: 星系兼并 $1
+
+CARD_PROFITEERING: 贪财好利
+CARD_MONEY_GAIN: 获得资金
+CARD_PROFITEERING_DESC: <<|
+	与你势力下的金融巨鳄们交易后， 你获得了大量的资金。 
+
+	[i]购买此行动后， 你将立即获得相应资金。 [/i]
+>>
+
+CARD_GIFT: 啖之以利
+CARD_GIFT_DESC: <<|
+	慷慨地向另一个帝国提供你的政治资金以帮他们解决难题， 
+	并将这一事件作为未来交涉时的外交优势。 
+
+	[i]将任一张权势卡赠予另一个势力。 获得对相应帝国的随机程度外交优势， 
+	外交优势程度取决于购买所赠卡牌时花费的成本。 
+	无法作用于正与你交战的帝国。 [/i]
+>>
+GIFT_NOTIFY: $1 赠予了你$5。 
+
+CARD_SABOTAGE: 暗中作梗
+CARD_SABOTAGE_DESC: <<|
+	利用一系列经过精密策划的政治手段， 我们可以破坏另一个帝国正在进行的活动。 
+
+	[i]永久性地取消任意目标权势卡效果。 其所有者获得对你的外交优势。 [/i]
+>>
+SABOTAGE_NOTIFY: $1破坏了$2的"$5"效果。 
+
+CARD_INVESTIGATE: 众恶必察
+CARD_INVESTIGATE_DESC: <<|
+	在小心地散播了关于另一个帝国的负面谣言之后， 
+	我们向星际议会提案对相关的事件进行调查以澄清谣言。 
+	此调查可以对未来获取相应帝国的情报提供帮助。 
+
+	[i]如果此卡带来的投票通过， 所有帝国都可以获得对目标帝国的10分钟视野。 
+	无法作用于正与你交战的帝国。 只有你需要支付该效果的维护费。 [/i]
+>>
+VOTE_INVESTIGATE: 调查 $1
+EFFECT_INVESTIGATE: 正在对 $1进行调查
+
+CARD_RIDER: 投机取巧
+CARD_RIDER_DESC: <<|
+	通过为正在进行的星际议会提案附上看似微不足道的条款， 
+	我们可以在未来利用这些条款获取外交优势。 
+
+	[i]如果此卡所附属的提案投票通过， 你会获得对该提案发起帝国的外交优势。 
+	每次投票时只能使用此卡一次。 无法作用于
+	还有不到一分钟就要结束的投票。 [/i]
+>>
+CARD_RIDER_LOG: * $1给提案附上了[b]投机取巧[/b]。 
+
+CARD_LEVERAGE: 势不两立 ( $1)
+CARD_LEVERAGE_LOG_Y: * $1对$3使用了他们的[b]势不两立[/b]， 并增加了[color=#0f0]$2支持票[/color]。 
+CARD_LEVERAGE_LOG_N: * $1对$3使用了他们的[b]势不两立[/b]， 并增加了[color=#f00]$2反对票[/color]。 
+CARD_LEVERAGE_DESC: <<|
+	使用你在之前积累的对 $1的外交优势来达到你的目的。 
+
+	[i]只能在 $1在你的对立方投票后使用。 [/i]
+>>
+
+CARD_BLACKMAIL: 敲诈勒索: $1
+CARD_BLACKMAIL_LOG_Y: * $1对$2使用了[b]敲诈勒索[/b]， 使其[color=#0f0]支持提案[/color]。 
+CARD_BLACKMAIL_LOG_N: * $1对$2使用了[b]敲诈勒索[/b]， 使其[color=#f00]反对提案[/color]。 
+CARD_BLACKMAIL_DESC: <<|
+	基于先前积累的情报， 对一个帝国进行勒索， 使其支持或反对提案。 
+
+	如果提案的结果与此牌打出的目的相悖， 且目标帝国仍处于谈判中， 
+	则目标帝国失去随机数量的影响力。 
+>>
+
+CARD_SUBDUE: 一劳永逸: $1
+CARD_SUBDUE_LOG: * $1对$2使用了[b]一劳永逸[/b]， 将他们[color=#f0f]移出了谈判[/color]。 
+CARD_SUBDUE_DESC: <<|
+	将目标帝国强制移出谈判。 
+
+	只能在目标帝国试图影响提案结果后使用。 
+>>
+
+CARD_FAVORS: 小恩大惠
+CARD_FAVORS_DESC: <<|
+	通过帮助外交大国， 我们也能得到一定的外交优势。 毕竟这些忙也不容易帮。 
+
+	[i]购买此卡后你立即获得一张完全随机的卡片。 
+	获得的卡片不需要影响力进行购买， 但是会耗费你很多预算。 [/i]
+>>
+
+CARD_BRIBE: 贿赂公行
+CARD_BRIBE_DESC: <<|
+	贿赂下一个在谈判中支持我们的帝国。 通过与他们的合作， 
+	我们也能为当前的投票添加更多权重。 
+
+	[i]下一个在当前投票中投支持票的帝国获得这些贿赂。 
+	此贿赂也会为投票增加的权重。 [/i]
+>>
+CARD_BRIBE_LOG_Y: * $1使用了[b]贿赂公行[/b]， 为下一个[color=#0f0]支持当前提案[/color]的帝国提供[color=#d1cb6a]$5[/color]。 
+CARD_BRIBE_LOG_N: * $1使用了[b]贿赂公行[/b]， 为下一个[color=#f00]反对当前提案[/color]的帝国提供[color=#d1cb6a]$5[/color]。 
+
+CARD_CALLOUT: 声名狼藉( $1)
+CARD_CALLOUT_DESC: <<|
+	我们点名向另一个帝国发出挑战， 要求他们公开在当前提案中投票， 
+	否则就承认自己是胆小鬼。 当然， 给它们提供这次机会也会让他们
+	之后的行动更为有效， 不管他们是否是我们的盟友。 
+
+	[i]打出此卡后， 当投票结束时， 若目标帝国没有参与投票， 
+	你获得对他们的外交优势。 每次投票只能使用一次。 
+	这张卡的权重会被加入到目标帝国下次投支持票的行动中。 
+	若当前投票剩余时间不足60秒， 则其会被延长至60秒。 [/i]
+>>
+CARD_CALLOUT_LOG: * $1使用了[b]声名狼藉[/b]， 要求$3投票。 
+CARD_CALLOUT_NOTIFICATION: $1[b][color=#f00]要求你[/color][/b]投票。 
+
+CARD_EJECT: 驱逐 
+CARD_EJECT_DESC: <<|
+ 作为议员领袖 ， 无视政治后果强行要求一个帝国离开谈判桌 ， 并将他们的支持和反对全都无效化 。 
+
+ [i]被移除的目标帝国将不能再参加这个谈判 。 这样做会让目标帝国得到对抗你的政治筹码 。 每次投票只能用一次 。 [/i]
+
+ [img=LeaderIcon;30] 只有当你是 [b][color=#8d79a8]银河参议院领袖 [/color][/b]时才能这么做 。 使用 [b]选举 [/b] 牌成为议员领袖 。 [/img]
+>>
+CARD_EJECT_LOG: *$1从投票中 [b]驱逐 [/b]了 $3。 
+CARD_EJECT_NOTIFICATION: $1从投票中将你 [b][color=#f00]驱逐 [/color][/b] 出去 。 
+
+CARD_EMPOWER: 支援 
+CARD_EMPOWER_DESC: <<|
+ 作为参议院的领袖 ， 特殊照顾其他某个特定的帝国的话 ， 就会获得额外的立场加成 。 
+
+ [i]目标帝国在投票中使用任何支持卡片的话都会获得额外 1点支持或反对 。 每次投票只能作用一次 。 [/i]
+
+ [img=LeaderIcon;30]你只有是现任 [b][color=#8d79a8]银河参议院领袖 [/color][/b]才可以使用 。 使用 [b]选举 [/b]卡来成为参议院领袖 。 [/img]
+>>
+CARD_EMPOWER_LOG: * $1 [b][color=#4996bb]支援 [/color][/b] $3 影响这一票 。 
+
+CARD_COMMITTEE: 委员会 
+CARD_COMMITTEE_DESC: <<|
+ 作为参议院的领袖 ， 你可以建立一个委员会来进深入讨论表决 ， 同时利用此可以巧妙地影响审议结果 。 
+
+ [i]增加 10点支持或者反对 ， 并且拖延两分钟投票计时 。 每次投票只能作用一次 。 [/i]
+
+ [img=LeaderIcon;30]你只有是现任 [b][color=#8d79a8]银河参议院领袖 [/color][/b]才可以使用 。 使用 [b]选举 [/b]卡来成为参议院领袖 。 [/img]
+>>
+CARD_COMMITTEE_LOG_Y: *$1建立了 [b]委员会 [/b]并增加了 [color=#0f0]$2支持 [/color]， 拖延了 2分钟的投票计时 。 
+CARD_COMMITTEE_LOG_N: *$1建立了 [b]委员会 [/b]并增加了 [color=#f00]$2反对 [/color]， 拖延了 2分钟的投票计时 。 
+
+CARD_DEVELOPMENT: 发展 
+CARD_DEVELOPMENT_DESC: <<|
+ 作为参议院的领袖 ， 开选择一颗行星开始发展和基础建设项目 。 
+
+ [i]目标星球的最大人口提高 2， 并且军工产业永久加 1。 [/i]
+
+ [img=LeaderIcon;30]你只有是现任 [b][color=#8d79a8]银河参议院领袖 [/color][/b]才可以使用 。 使用 [b]选举 [/b]卡来成为参议院领袖 。 [/img]
+>>
+CARD_NAMEPLANET: 命名星球
+CARD_NAMEPLANET_DESC: <<|
+	牛叉的星球就该有牛叉的名字。 通过说服当地的掌权者组织盛大的
+	命名典礼， 你为这个星球想出的名字将会流传千古。 这样的盛会自然也会
+	带来名誉和成功。 
+
+	[i]为一个你所拥有的星球重新命名。 该星球永久获得人口上限+2和产能+1的效果。 
+	每个星球只能被重命名一次。 质量每高一级， 人口上限就额外提升1单位。 [/i]
+>>
+NAMEPLANET_NOTIFY: $1为[b]$3[/b]改名。 
+
+CARD_NAMESYSTEM: 命名星系
+CARD_NAMESYSTEM_DESC: <<|
+	为了让这片领土真正成为你的资本， 你需要给它一个合适的名字。 
+	一个可以激励保卫它的勇士们的士气的名字。 
+
+	[i]给一个完全受你控制的星系重命名。 你的舰队效能+20%
+	/在一个你命名的星系中战斗时战力提升。 [/i]
+>>
+NAMESYSTEM_NOTIFY: $1为[b]$3[/b]星系举行了盛大的命名仪式。 
+STATUS_SYSTEM_MORALE: 士气高涨
+STATUS_SYSTEM_MORALE_DESC: <<|
+	此舰队正由于在一个改名过的星系中战斗而获得士气提升。 
+	在此星系中作战时， 舰队效能+20%， 战力+20%。 
+>>
+
+CARD_NAMEFLAGSHIP: 命名旗舰
+CARD_NAMEFLAGSHIP_DESC: <<|
+	旗舰是战争的胜负手， 为帝国的追随者提供信仰的支撑。 
+	一个口耳相传的名称可以激发人民的信心， 提升船员的气质。 
+	他们等待着用新的名字来装饰自己乘风破浪的英勇故事。 
+
+	[i]为一艘你所拥有的战舰重新命名。 该战舰及其支援舰永久获得效能
+	增加10%的效果。 每艘旗舰只能重命名一次。 质量每高一级， 效能就额外提升3%。 [/i]
+>>
+NAMEFLAGSHIP_NOTIFY: $1重命名了他们的旗舰$3。 
+
+CARD_PROTECT_SYSTEM: 根结盘据
+CARD_PROTECT_SYSTEM_DESC: <<|
+	我们以人道主义为由， 说服了星际议会宣布我们星系中的星球应受到
+	我们帝国的保护， 防止其他任何星球攫取它们的企图。 
+
+	[i]防止目标星系中的星球忠诚度降低。 默认持续
+	5分钟。 质量每高一级， 持续时间额外延长5分钟。 [/i]
+>>
+PROTECT_SYSTEM_EFFECT: 保护 $1星系
+PROTECT_SYSTEM_NOTIFY: $1宣布了$3是一个受保护的星系。 
+
+CARD_UPRISING: 爱国浪潮
+CARD_UPRISING_DESC: <<|
+	人民的力量沉睡得太久了。 海盗， 入侵者， 飞掠的小行星。 
+	这些竟然都没能带来人民的觉醒! 是时候发动全国的力量了! 
+
+	[i]激励目标星球的人民， 让他们组建自己的防御民兵团。 
+	回复5点忠诚， 并生成价值25产能的防御舰。 
+	质量每高一级， 生成的防御舰价值额外增加25。 [/i]
+>>
+
+CARD_CULTIVATION: 朝耕暮耘
+CARD_CULTIVATION_DESC: <<|
+	政府和民间企业的协同合作让生产养育一种全新的水果物种成为可能， 
+	这种水果与这颗星球的自然环境十分契合。 
+
+	[i]你所拥有的目标行星获得一个本土水果资源。 [/i]
+>>
+
+CARD_HARVEST: 收获 
+CARD_HARVEST_DESC: <<|
+ 经过地方政府和民营企业的一致努力 ， 
+ 将引进一种全新的谷物 ， 并且能在 
+ 这个星球的特殊环境下生长 。 
+
+ [i]目标行星获得天然粮食 。 [/i]
+>>
+
+CARD_ENHANCE: 锦上添花
+CARD_ENHANCE_DESC: <<|
+	持续不懈地对更高的外交地位的追求收到了回报， 
+	我们现在可以在某些外交领域投入更多的力量。 
+
+	[i]将某张卡片的一次使用效果提升到最高质量。 。 
+	如果可以， 质量会再额外提升一个等级。 [/i]
+>>
+
+CARD_RHETORIC: 花言巧语
+CARD_RHETORIC_DESC: <<|
+	巧舌如簧的外交官和持续不懈的外交努力让公众的观点向我方倾斜， 
+	那些反对我们的声音渐渐被淹没。 其他势力自然也会顺应潮流。 
+
+	[i]如果这张卡片所支持的一方在投票中胜出， 三张随机生成的权势卡
+	会被分发给其他在这一方投票的帝国， 
+	每个帝国获取的卡数量与他们投出的票数成正比。 
+	若在同一方使用多张花言巧语， 则后续的每张卡片的成本和权重都会提升。 [/i]
+>>
+CARD_RHETORIC_LOG_Y: * $1使用了[color=#ff8044][b]花言巧语[/b][/color]来投了[color=#0f0]$2支持票[/color]。 
+CARD_RHETORIC_LOG_N: * $1使用了[color=#ff8044][b]花言巧语[/b][/color]来投了[color=#f00]$2反对票[/color]。 
+
+CARD_CONTROL: 推波助澜
+CARD_CONTROL_DESC: <<|
+	我们需要获取领地内某个外交空间站的控制权， 用我们的力量来影响它的决策。 
+
+	[i]如果此卡带来的投票通过， 你获得你的贸易区内目标领事中枢卫星的控制权。 [/i]
+>>
+VOTE_TAKE_CONTROL: 控制 $1
+
+CARD_INTELLIGENCE: 幕后黑手( $1)
+CARD_INTELLIGENCE_LOG_Y: * 某势力对$3使用的[b]幕后黑手[/b]提供了[color=#0f0]$2支持票[/color]。 
+CARD_INTELLIGENCE_LOG_N: * 某势力对$3使用的[b]幕后黑手[/b]提供了[color=#f00]$2反对票[/color]。 
+CARD_INTELLIGENCE_DESC: <<|
+	匿名散播关于某个帝国提案的负面信息。 
+
+	[b]由此卡产生的投票是匿名的， 没有人会知道是你干的。 [/b]
+
+	[i]只有当 $1在提案的对立方投票后才可使用。 
+	此后对同一个帝国使用的幕后黑手卡将失去2权重。 
+	
+	你同时只能对同一帝国使用3张此卡片。 如果没有幕后黑手卡正在生效， 
+	其他未使用的此卡片也会逐渐失效。 [/i]
+>>
+
+CARD_PROMISES: 一诺千金
+CARD_PROMISES_LOG_Y: * $1使用了[b][color=#fa00ff]一诺千金[/color][/b]并投了[color=#0f0]$2支持票[/color]。 
+CARD_PROMISES_LOG_N: * $1使用了[b][color=#fa00ff]一诺千金[/color][/b]并投了[color=#f00]$2反对票[/color]。 
+CARD_PROMISES_DESC: <<|
+	我们为了获得支持而做的承诺会在将来给我们造成损失， 
+	但这看起来并不能遮盖当前所获得支持的重要性。 
+
+	[i]给一次投票的支持或反对方增加权重。 在接下来的5分钟内， 
+	你在任何投票中使用的支持卡片要额外消耗1点影响力才能打出。 [/i]
+>>
+
+CARD_ASSURANCES: 一诺千金
+CARD_ASSURANCES_LOG_Y: * $1做出[b][color=#00faff]承诺[/color][/b]提供[color=#0f0]$2支持票[/color]。 
+CARD_ASSURANCES_LOG_N: * $1做出[b][color=#00faff]承诺[/color][/b]提供[color=#f00]$2反对票[/color]。 
+CARD_ASSURANCES_DESC: <<|
+	为未来的信誉做出承诺， 我们借此可以为我们的事业建立更好的形象。 
+	我们未来的努力都仰赖这些承诺才能成功。 
+
+	[i]给一次投票中的支持方或者反对方增加权重。 在接下来的10分钟内， 
+	你从权势卡商店购买任何卡片成本加1。 [/i]
+>>
+
+CARD_CLAIM_ARTIFACT: 独占鳌头
+CARD_CLAIM_ARTIFACT_DESC: <<|
+	我们是唯一一个有资格使用这个神器的帝国! 只要星际议会同意， 
+	我们会派出民间支持的探险队去取回并保护它不遭到他人滥用。 
+
+	[i]如果此卡带来的投票通过， 目标神器会被移动到你帝国中的一个星系， 
+	并且从此以后只有你能使用它。 [/i]
+>>
+VOTE_CLAIM_ARTIFACT: 索要神器: $1
+
+CARD_SENATE_BUILDING: 固本培元
+CARD_SENATE_BUILDING_DESC: <<|
+	在你的一个星球上主办星际议会可以带来无穷的权势和名声， 
+	其中的特权是所有帝国都在追求的。 
+
+	[i]如果此卡带来的投票通过， 目标行星会成为星际议会大楼的所在地。 
+	基于该星球的等级， 其将获得影响力产出的提升， 
+	并让你提出的所有投票提案额外获得2张支持票。 每次议会主办地更换后， 
+	这张卡片的成本和影响力产出值都会提升。 [/i]
+>>
+VAR_INFLUENCE_INCOME: 影响力产出
+VOTE_SENATE_BUILDING: 在 $1召开星际议会
+STATUS_SENATE_BUILDING: 正在主办星际议会
+STATUS_SENATE_BUILDING_DESC: <<|
+	这个星球上建有星际议会大楼。 
+	
+	星球每级产出的影响力都有提升， 而且你发起的投票可以获得额外2张支持票。 
+>>
+
+CARD_UNITED_RESEARCH: 联合研发中心
+CARD_UNITED_RESEARCH_DESC: <<|
+	在你的一个星球上建立联合研发中心， 通过共享科技情报获取其中的利益。 
+
+	[i]如果此卡带来的投票通过， 目标行星会成为联合研发中心所在地。 
+	基于该星球的等级， 其将获得科研产出的提升， 
+	并提升你获得随机灵感的速率。 每次研发中心所在地更换后， 
+	这张卡片的成本和科研产出都会提升。 [/i]
+>>
+VAR_RESEARCH_INCOME: 科研产出
+VOTE_UNITED_RESEARCH: 在 $1设立联合研发中心
+STATUS_UNITED_RESEARCH: 正在主持联合研发中心
+STATUS_UNITED_RESEARCH_DESC: <<|
+	这个星球正在支持联合研发中心。 
+	
+	星球每级产出的科研都有提升， 而且你获取随机灵感的速率提升。 
+>>
+
+CARD_GALAXY_MALL: 星贸中心
+CARD_GALAXY_MALL_DESC: <<|
+	建造星际最伟大的贸易中心可以让各种资源都在我们的星球流通， 
+	提升我们的建筑效率。 
+
+	[i]目标行星成为宇贸中心所在地。 星球上所有建造项目成本降低。 
+	每次宇贸中心所在地更换后， 这张卡片的成本和效果都会提升。 [/i]
+>>
+VAR_BUILD_COST_DECREASE: 降低成本
+NOTIFY_GALAXY_MALL: $1在$3建造了最气派的星贸中心。 
+STATUS_GALAXY_MALL: 星贸中心
+STATUS_GALAXY_MALL_DESC: <<|
+	这个星球是星贸中心所在地。 
+	
+	这个星球上的建造项目成本降低。 
+>>
+
+CARD_DENOUNCE: 公开谴责( $1)
+CARD_DENOUNCE_DESC: <<|
+	不用再承受他人的无端指责了， 我们对我们的对手公开提出谴责， 
+	并将我们的资源用在任何对抗他们的行动中。 
+	
+	[i]接下来进入权势卡卡堆的卡片都会对目标帝国拥有外交优势。 
+	打出此卡后立刻重洗权势卡卡堆。 [/i]
+>>
+DENOUNCE_NOTIFY: $1公开谴责了$3!
+
+CARD_ANCIENT_KNOWLEDGE: 先驱知识
+CARD_ANCIENT_KNOWLEDGE_DESC: <<|
+	通过揭示失传已久的远古知识在公众支持率上占据上风， 
+	但其他势力从此以后也可以利用这些知识。 
+
+	[i]根据现存的帝国数量给当前投票增加支持或反对票。 
+	其他所有现存帝国则可以获得一张0成本， 1权重的"贤者指路"卡。 [/i]
+>>
+CARD_ANCIENT_KNOWLEDGE_LOG_Y: * $1揭示了[color=#f88][b]先驱知识[/b][/color]并添加了[color=#0f0]$2支持票[/color]。 
+CARD_ANCIENT_KNOWLEDGE_LOG_N: * $1揭示了[color=#f88][b]先驱知识[/b][/color]并添加了[color=#f00]$2反对票[/color]。 
+
+CARD_ANCIENT_INTUITION: 贤者指路
+CARD_ANCIENT_INTUITION_DESC: <<|
+	在已揭示的先驱知识上获取的灵感可以改变公众的观念。 
+
+	[i]给当前投票的任意一方增加1权重。 [/i]
+>>
+CARD_ANCIENT_INTUITION_LOG_Y: * $1通过[color=#e780ff][b]贤者指路[/b][/color]添加了[color=#0f0]$2支持票[/color]。 
+CARD_ANCIENT_INTUITION_LOG_N: * $1通过[color=#e780ff][b]贤者指路[/b][/color]添加了[color=#f00]$2反对票[/color]。 
+
+CARD_ENERGY_CLASH: 能量激荡
+CARD_ENERGY_CLASH_LOG_Y: * $1使用了[color=#42b4bd][b]能量激荡[/b][/color]， 添加了[color=#0f0]$2支持票[/color]。 
+CARD_ENERGY_CLASH_LOG_N: * $1使用了[color=#42b4bd][b]能量激荡[/b][/color]， 添加了[color=#f00]$2反对票[/color]。 
+CARD_ENERGY_CLASH_DESC: <<|
+	如果说世上有一个所有人的生活都离不开的东西， 那肯定是能源。 
+	能源帮助家庭， 企业和城市正常运转， 因而帝国的战略能源储备可以
+	轻松地扭转公众观点为我们所用。 
+
+	[i]给当前投票的任意一方增加权重。 需要消耗能量才能激活。 
+	每当一张能量激荡卡在一次投票上作用后， 
+	后续打出的同名卡片成本和权重都将提升。 [/i]
+>>
+
+CARD_RUSH: 迅速果断
+CARD_RUSH_DESC: <<|
+	使用我们的影响力来呼吁这个提案所涉及的各方尽快回应， 
+	我们可以减少提案通过所需要的时间。 
+
+	[i]此次提案只需要往常一半的时间就可以通过， 但所有支持卡的影响力成本加1。 你只有在支持当前提案的情况下才可以使用此卡。 每次提案中只能有一张声闻四野卡被激活。 [/i]
+>>
+CARD_RUSH_LOG: * $1使用了[color=#fa00ff][b]千呼万唤[/b][/color]， 缩短了投票的通过时间。 
+
+CARD_FILIBUSTER: 阻挠
+CARD_FILIBUSTER_DESC: <<|
+ 不管怎样都要延缓投票提议 。 
+
+ [i]阻止接下来 3分钟的投票进展 。 [/i]
+>>
+CARD_FILIBUSTER_LOG: *$1[color=#fe5c99][b]阻挠 [/b][/color]了 3分钟投票 。 
+CARD_INFILTRATE: 渗透
+CARD_INFILTRATE_DESC: <<|
+	派出特工潜入一支敌军舰队内部， 准备在战斗中让这支舰队失去作战能力， 并让该舰队的指挥官们失去斗志。 
+
+	[i]你获得目标敌军舰队所处星系的视野。 在接下来的60秒内， 敌军舰队的效能和战力逐渐永久性地减少10%。 该效果持续30分钟。 [/i]
+>>
+STATUS_INFILTRATED: 已潜入
+STATUS_INFILTRATED_DESC: <<
+	你有一名特工潜入了这支舰队。 这将给你提供其视野， 并使得该舰队的战力和效能减少。 
+>>
+
+CARD_HEDGE: 避险 
+CARD_HEDGE_DESC: <<|
+ 留下后路 ， 如果这次失败 ， 能够在未来再次提出类似的提案 。 
+
+ [i]如果投票失败 ， 你就可以得到使用这张卡的权利 。 每次投票只能使用一次 。 延长投票 ， 以确保至少剩余 60秒 。 [/i]
+>>
+CARD_HEDGE_LOG: *$1启动了 [color=#fff700][b]避险 [/b][/color]以防投票失败 。 
+
+CARD_INNOVATION: 改革 
+CARD_INNOVATION_DESC: <<
+ 大力鼓励和资助其他研究 ， 发展创造新事物 。 
+
+ [i]当使用时 ， 立即揭示研究表上先前未知的 [b]秘密项目 [/b]。 如果不是这样 ， 你无法进行新的秘密项目 。 [/i]
+>>
+
+CARD_ELECTION: 竞选 
+CARD_ELECTION_DESC: <<
+ 开展一场竞选 ， 以使你的帝国成为银河议会的领导人 。 
+
+ [/i]如果投票通过 ， 你将成为银河议会领导人 ， 让你可以使用特别受限制的卡片并得到你现在没有的特别卡片 。 [/i]
+>>
+VOTE_ELECTION: 参选议会领导人 
+
+EVT_OPEN_ELECTION: 事件 ： 公开选举 
+EVT_OPEN_ELECTION_DESC: <<
+ 即将举行一次公开的银河议会领导人选举 ， 允许每个帝国推出一名代表 。 
+
+ [img=QuickbarIcons::6;32]如果投票通过 ， 最支持的帝国将成为银河议会领导人 。 [/img]
+
+ [i]最支持的帝国由随着时间的推移增加的支持来决定 ， 而不仅仅是一个帝国在投票结束时的总支持数 。 越早发出的支持越有价值 ， 当前最支持的帝国由他们的肖像上的一个图标来显示 。 [/i]
+>>
+
+EVT_EXPEDITION: 事件 ： 考察 
+EVT_EXPEDITION_DESC: <<
+ 一个微弱的亚空间信号显示检测到了一个以前未发现的星系 。 银河议会提出派遣一支考察队去检查并将其在地图上标出 。 
+
+ [img=QuickbarIcons::6;32]如果投票通过 ， 被强大遗族保护的新星系将在最支持的帝国附近公布 ， 并且他们将永远可以看见它 。 [/img]
+
+ [i]最支持的帝国由随着时间的推移增加的支持来决定 ， 而不仅仅是一个帝国在投票结束时的总支持数 。 越早发出的支持越有价值 ， 当前最支持的帝国由他们的肖像上的一个图标来显示 。 [/i]
+>>
+
+ZEITGEIST_ENERGY: 思潮 ： 权力 
+ZEITGEIST_ENERGY_DESC: <<
+	[b]时代精神特效[/b]
+
+	如果此卡带来的投票通过， 所有帝国的能量产出会提升25%， 并且所有帝国都可以建造太阳能引擎来产出更多能量。 
+
+	[img=QuickbarIcons::6;32]如果此卡带来的投票通过， 投支持票最多的帝国还可以在该时代精神激活时， 获得[b]每秒能量产出+2[b]的基础产出奖励。 [/img]
+	[img=QuickbarIcons::3;32]如果此卡带来的投票失败， 投反对票最多的帝国立刻获得[b]§800k特别资金[/b]。 [/img]
+	[i]同一时刻只能有一个时代精神被激活。 激活一个新的时代精神会移除之前的时代精神。 [/i]
+>>
+
+ZEITGEIST_COOPERATION: 时代精神: 合作
+ZEITGEIST_COOPERATION_DESC: <<
+	[b]时代精神特效[/b]
+ [img=QuickbarIcons::6;32]如果投票通过 ， 最支持的帝国和任何其他当前与他们不处于战争状态的帝国将获得 [b]他们即将到来的预算估计的 10％ 作为额外的专项资金 ， 在每分钟内 [/b]， 在此思潮的持续时间内 。 [/img]
+ [img=QuickbarIcons::3;32]如果投票失败 ， 最反对的帝国将获得 [b]600超光速能源的即时奖励 [/b]。 [/img]
+	[i]同一时刻只能有一个时代精神被激活。 激活一个新的时代精神会移除之前的时代精神。 [/i]
+>>
+
+ZEITGEIST_PROGRESS: 时代精神: 进步
+ZEITGEIST_PROGRESS_DESC: <<
+	[b]时代精神特效[/b]
+
+	如果此卡带来的投票通过， 所有星球和平民建筑的能量产出会被转化为科研产出。 
+
+	[img=QuickbarIcons::6;32]如果此卡带来的投票通过， 投支持票最多的帝国还可以在该时代精神激活时， 获得[b]每秒能量产出+3[b]的基础产出奖励。 [/img]
+	[img=QuickbarIcons::3;32]如果此卡带来的投票失败， 投反对票最多的帝国立刻获得[b]800能量[/b]。 [/img]
+	[i]同一时刻只能有一个时代精神被激活。 激活一个新的时代精神会移除之前的时代精神。 [/i]
+>>
+STATUS_PROGRESS_GEIST: 时代精神: 进步
+STATUS_PROGRESS_GEIST_DESC: 此星球表面的所有能量产出都被转化为了科研产出。 
+
+ZEITGEIST_ZEALOT: 时代精神: 狂热
+ZEITGEIST_ZEALOT_DESC: <<
+	[b]时代精神特效[/b]
+
+	如果此卡带来的投票通过， 所有被帝国拥有的星球获得导弹发射器。 获得的数量和行星的等级相关。 行星导弹发射器会在所有轨道支援舰都被摧毁， 并且敌军开始围攻星球后失效。 
+
+	[img=QuickbarIcons::6;32]如果此卡带来的投票通过， 投支持票最多的帝国还可以在该时代精神激活时， 获得[b]每分钟防御产出+5[b]的奖励。 [/img]
+	[img=QuickbarIcons::3;32]如果此卡带来的投票失败， 投反对票最多的帝国立刻获得[b]4张随机权势卡[/b]。 [/img]
+	[i]同一时刻只能有一个时代精神被激活。 激活一个新的时代精神会移除之前的时代精神。 [/i]
+>>
+STATUS_ZEALOT_GEIST: 时代精神: 狂热
+STATUS_ZEALOT_GEIST_DESC: 这个星球在未被围攻时拥有导弹防御系统。 
+
+ZEITGEIST_ART: 时代精神: 艺术
+ZEITGEIST_ART_DESC: <<
+	[b]时代精神特效[/b]
+
+	当次时代精神激活时， 所有帝国都可以在他们的行星上建造博物馆。 博物馆的建造要消耗产能， 但在建成后立刻给予10点影响力奖励。 
+
+	[img=QuickbarIcons::6;32]如果此卡带来的投票通过， 投支持票最多的帝国还可以在该时代精神激活时， 获得[b]影响力产出+20%[b]的奖励。 [/img]
+	[img=QuickbarIcons::3;32]如果此卡带来的投票失败， 投反对票最多的帝国立刻获得[b]800科研点[/b]。 [/img]
+	[i]同一时刻只能有一个时代精神被激活。 激活一个新的时代精神会移除之前的时代精神。 [/i]
+>>
+
+ZEITGEIST_ATTITUDES: 思潮： 实现
+ZEITGEIST_ATTITUDES_DESC: <<
+ [b]思潮效果 [/b]
+ 如果投票通过 ， 它就成为当前的思潮效果 。 在活跃的时候 ： 
+
+ [b]*[/b] [offset=20]当获得态度等级时 ， 所有帝国的发展加快 30％ 。 [/offset]
+
+ [img=QuickbarIcons::6;32]如果投票通过 ， 最支持的帝国将 [b]减少 10％ 的研发成本 [/b]， 当此思潮活跃时 。 [/img]
+ [img=QuickbarIcons::3;32]如果投票失败 ， 最反对的帝国将获得 [b]§ 100k永久收入的即时奖励 [/b]。 [/img]
+ [/i]同一时间只能有一个思潮效果处于活跃状态 。 通过一个新的思潮将移除之前活跃的思潮 。 [/i]
+>>
+
+CLAUSE_VISION: 情报共享
+CLAUSE_VISION_DESC: <<|
+	所有签署此协议的帝国将可以共享情报， 
+	给予协议中所有帝国自己的舰队和行星信息。 
+>>
+
+CLAUSE_TRADE: 商贸协议
+CLAUSE_TRADE_DESC: <<|
+	签署此协议的帝国可以通过彼此的领地建立民间商路， 
+	使得每个帝国可以通过其他帝国的星系出口资源。 
+
+>>
+
+CLAUSE_ALLIANCE: 同盟协议
+CLAUSE_ALLIANCE_DESC: <<|
+	签署此协议的帝国承诺共同繁荣。 
+
+	彼此之间无法宣战。 
+>>
+
+CLAUSE_CONST: 永久
+CLAUSE_CONST_DESC: <<|
+	此协议是永久性的， 无法以任何方式打破或修改。 
+>>
+
+CLAUSE_SUBJUGATE: 从属协议
+CLAUSE_SUBJUGATE_DESC: <<|
+	签署从属协议的国家成为另一个国家的属国。 属国无法独自签署任何协议， 
+	并且与他们的宗主国在对外宣战时同进同退。 
+
+	任何帝国成为属国后无法再取得游戏胜利， 而只能获得
+	帮助其宗主国获胜后的[b]不彻底的胜利[/b]。 
+>>
+
+CLAUSE_MUTUAL_DEFENSE: 防御协议
+CLAUSE_MUTUAL_DEFENSE_DESC: <<|
+	签署此协议的帝国承诺彼此合作防御外敌侵略。 
+	
+	如果任何签署此协议的国家与他国宣战， 协议中的其他国家都会自动也与该国宣战。 
+>>
+
+CLAUSE_PEACE: 议和提案
+CLAUSE_PEACE_DESC: <<
+	如果此协议通过， 两国间的战争将立即停止。 
+>>
+
+
+GALACTIC_SUPERPOWER: 银河超级大国 
+GALACTIC_SUPERPOWER_DESC: <<
+ 成为银河超级大国来加入和影响任何冲突 。 
+
+ 你和任何不与你处于交战状态的帝国的所有舰船建造和劳动力成本都减少 25％ 。 
+
+ 看见任何正在发生战斗的星系的信息 。 
+
+ 获得这种效果的投票需要两倍的时间来取得成功 ， 并且需要花费额外的影响力来打支持牌 。 
+
+ [img=LeaderIcon30]只有当你是现任的 [b][color=#8d79a8]银河议会领导人 [/color][/b]并且已经建造了一个 [b]议会宫 [/b]， 你才能打这张牌 。 使用 [b]竞选 [/b]卡成为议会领导人 。 [/img]
+
+ 如果你不再是议会领导人 ， 或者你的议会宫被摧毁 ， 效果会丢失 。 
+
+ [color=#8f8][font=Subtitle]如果你的银河超级大国和银河乌托邦都处于活跃状态 ， 其他帝国的与你的星系接壤的行星会自动开始加入你这边 。 [/font][/color]
+>>
+
+GALACTIC_UTOPIA: 银河乌托邦 
+GALACTIC_UTOPIA_DESC: <<
+ 成为其他所有帝国向往的拥有财富和尖端产品的银河乌托邦 。 
+
+ 你和任何没有与你处于交战状态的帝国拥有的行星获得 3级及以上的等级需要的食物要少 1个 ， 获得 4级及以上的等级需要的二级资源要少 1个 。 
+
+ 获得这种效果的投票需要两倍的时间来取得成功 ， 并且需要花费额外的影响力来打支持牌 。 
+
+ [img=LeaderIcon30]只有当你是现任的 [b][color=#8d79a8]银河议会领导人 [/color][/b]并且已经建造了一个 [b]议会宫 [/b]， 你才能打这张牌 。 使用 [b]竞选 [/b]卡成为议会领导人 。 [/img]
+
+ 如果你不再是议会领导人 ， 或者你的议会宫被摧毁 ， 效果会丢失 。 
+
+ [color=#8f8][font=Subtitle]如果你的银河超级大国和银河乌托邦都处于活跃状态 ， 其他帝国的与你的星系接壤的行星会自动开始加入你这边 。 [/font][/color]
+>>

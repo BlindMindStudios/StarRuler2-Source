@@ -20,6 +20,8 @@ OPT_MUSIC_VOLUME: Music Volume
 OPT_LANGUAGE: Language*
 LOC_english: English
 LOC_japanese: Japanese
+LOC_zh_hans: Simplified Chinese
+LOC_zh_hant: Traditional Chinese
 
 OPT_MAX_FPS: FPS Limit
 OPT_AUTOSAVE: Autosave Interval (Minutes)

@@ -1,0 +1,30 @@
+AI_STANDING_POSITIVE: 他们喜欢和平 ， 并乐于助人 。 
+AI_STANDING_VERY_POSITIVE: 他们把我们当作朋友和同伴 。 
+
+AI_STANDING_NEGATIVE: 他们对我们抱有成见 ， 不太可能和我们合作 。 
+AI_STANDING_VERY_NEGATIVE: 他们把我们看作敌人 。 
+
+AI_STANDING_NEUTRAL: 他们对我们没有什么特别的看法 。 
+AI_STANDING_TRUE_NEUTRAL: 他们对我们没有什么强烈的看法 。 
+
+AI_STANDING_OFFENSE_WAR: 宣战已经破坏了我们之间的关系 。 
+AI_STANDING_OFFENSE_INFLUENCE: 外交上的对立破坏了我们之间的关系 。 
+AI_STANDING_OFFENSE_PLANET: 争夺他们的土地破坏了我们之间的关系 。 
+AI_STANDING_GLAD_DONATION: 我们慷慨的捐赠改善了我们之间的关系 。 
+
+AI_STANDING_WAR: 我们的穷兵黩武制约了我们的关系 。 
+AI_STANDING_WAR_FEAR: 他们害怕我们皇帝的力量 ， 因此不在与我们针锋相对 。 
+AI_STANDING_ALLIES: 我们之间的盟约加强了我们的关系 。 
+AI_STANDING_ALLIES_WEAK: 我们之间不稳固的联盟很难维护我们的地位 。 
+
+AI_STANDING_BORDER: 我们的边疆将来可能会变成一个必争之地 。 
+AI_STANDING_EXPANDING: 他们想要扩展疆域 ， 很有可能会进攻我们的边疆 。 
+AI_STANDING_BORDER_WAR: 他们想攻击我们的边疆星系 。 
+
+AI_STANDING_IGNORE: 只要我们不激怒他们 ， 他们就不会来惹我们 。 
+AI_STANDING_WAAGH: 他们不讲道理 ， 只能用战争解决争端 。 
+AI_STANDING_WAIT: 他们在短期之内不打算接受外交提议 。 
+AI_STANDING_GIVE_UP: 他们很弱 ， 打算投降 。 
+
+AI_STANDING_CHEATS: 他们采用不正当竞争 。 
+AI_STANDING_EASY: 他们更喜欢能从中获利的关系 。 

@@ -1,0 +1,1021 @@
+RESEARCH_COST_OR:或者
+RESEARCH_COST_JOIN:"， "
+RESEARCH_STUDY:研究
+RESEARCH_COST:科研成本
+RESEARCH_TIME:研究时间
+QUEUE_RESEARCH:队列研究
+UNQUEUE_RESEARCH:取消队列研究
+QUEUED:队列中
+NOT_RESEARCHING:没有正在进行的研究 。  。  。  
+RESEARCH_SECRET:[b][color=#0ff]秘密项目:[/color][/b][color=#aaa][i]这是一项秘密项目研究， 需要解锁额外的需求， 不会在每次结尾出现 。 [/i][/color]
+RESEARCH_AFFECTS:[i][color=#aaa]效果:[offset=100]$1[/offset][/color][/i]
+
+RESEARCH_REQ:[b]需求:[/b]\n[offset=30][color=$2]$1[/color][/offset]
+RESEARCH_REQ_BUILDSHIPS:用$2建造$1飞船 。 [b]($3/$1)[/b]
+RESEARCH_REQ_MEGACITIES:建造$2大都市 。 [b]($1/$2)[/b]
+RESEARCH_REQ_ARTIFACTS:激活$2神器 。 [b]($1/$2)[/b]
+RESEARCH_REQ_LABS:运作$2研究实验室建筑 。 [b]($1/$2)[/b]
+RESEARCH_REQ_FTLSPENT:花费总共$2FTL能源 。 [b]($1/$2)[/b]
+RESEARCH_REQ_RING_HABITATS:建造$2环形栖息地 。 [b]($1/$2)[/b]
+
+ALT_UNLOCK_ENERGY:[color=#42b4bd][b]研究解锁:[/b]花费$1能源 。 [/color]
+ALT_UNLOCK_INFLUENCE:[color=#0087c7][b]研究解锁:[/b]花费$1影响点数 。 [/color]
+ALT_UNLOCK_MONEY:[color=#d1cb6a][b]研究解锁:[/b]花费$1 。 [/color]
+ALT_UNLOCK_FTL:[color=$FTL][b]研究解锁:[/b]花费$1FTL能源 。 [/color]
+
+R_SCIENCE:科学
+R_SCIENCE_DESC:[i]所有知识的起源 。  在游戏开始时解锁 。  [/i]
+
+R_DEV_ENERGY:能量科学
+R_DEV_ENERGY_DESC:<<
+	[i][color=#aaa]能量的收集和利用的科学 。  [/color][/i]
+
+	正常研发完成后立刻产出$1单位奖励能量 。  能量储量越多， 获取的能量值越少 。  
+
+	[offset=40][color=#f88][i]使用其他解锁方式时不会获得奖励能量 。  [/i][/color][/offset]
+>>
+
+R_DEV_MONEY:经济学
+R_DEV_MONEY_BLURB:§$1特别资金
+R_DEV_MONEY_DESC:<<
+	[i][color=#aaa]关于宏观市场和经济行为的更深层研究 。  [/color][/i]
+
+	解锁后立刻让你获得§$1额外特别资金 。  
+>>
+
+R_DEV_BUDGET:贸易
+R_DEV_BUDGET_SMALL:商业
+R_DEV_BUDGET_BLURB:+§$1预算
+R_DEV_BUDGET_DESC:<<
+	[i][color=#aaa]提升贸易的效率 。  [/color][/i]
+
+	解锁后你的预算永久提升§$1 。  
+>>
+
+R_DEV_FTL:跃迁能储存
+R_DEV_FTL_BLURB:$1跃迁能储蓄库
+R_DEV_FTL_DESC:<<
+	[i][color=#aaa]关于如何储存与运输跃迁能的科技 。  [/color][/i]
+
+	解锁后立刻将你储蓄的跃迁能以及跃迁能储蓄上限增加$1 。  
+>>
+
+R_DEV_FTL_INCOME:跃迁能调谐
+R_DEV_FTL_INCOME_BLURB:每秒跃迁能+$1
+R_DEV_FTL_INCOME_DESC:<<
+	[i][color=#aaa]可以更好地收集和净化跃迁能 。  [/color][/i]
+
+	帝国每秒跃迁能产量增加$1 。  
+>>
+
+R_DEV_SURGE:媒体利用
+R_DEV_SURGE_BLURB:1x爱国浪潮
+R_DEV_SURGE_DESC:<<
+	[i][color=#aaa]研究如何运用传媒煽动群众的力量 。  [/color][/i]
+
+	解锁科技后立即获得一张"爱国浪潮"权势卡 。  
+>>
+
+R_DEV_NEGOTIATE:政治科学
+R_DEV_NEGOTIATE_BLURB:1x讨价还价(*)
+R_DEV_NEGOTIATE_DESC:<<
+	[i][color=#aaa]研究对资本的运用来获取政治利益 。  [/color][/i]
+
+	解锁科技后立即获得一张"讨价还价"权势卡 。  
+>>
+
+R_DEV_ENHANCE:协同合作
+R_DEV_ENHANCE_BLURB:1x锦上添花
+R_DEV_ENHANCE_DESC:<<
+	[i][color=#aaa]开发更好地利用现有策略的方式 。  [/color][/i]
+
+	解锁科技后立即获得一张"锦上添花"权势卡 。  
+>>
+
+R_DEV_INFLUENCE:外交
+R_DEV_INFLUENCE_BLURB:5影响力
+R_DEV_INFLUENCE_DESC:<<
+	[i][color=#aaa]专注于研究各势力的行为特点 。  [/color][/i]
+
+	解锁后立即获得$1影响力 。  
+>>
+
+R_SYS_ANTIMATTER:反物质发电机
+
+R_SYS_ANTIMATTER:反物质发电机
+R_SYS_ANTIMATTER_DESC:<<
+	[color=#aaa][i]解锁反物质发电机子系统 。  [/i][/color]
+
+	[bbloc=#AMGEN_DESC/]
+>>
+
+R_SYS_EMERGENCY_SUPPLIES:紧急补给
+R_SYS_EMERGENCY_SUPPLIES_DESC:<<
+	[color=#aaa][i]解锁紧急补给子系统 。  [/i][/color]
+
+	[bbloc=#S_EMERGENCY_SUPPLIES_DESC/]
+>>
+
+R_SYS_CONSTRUCTION_BAY:建设湾
+R_SYS_CONSTRUCTION_BAY_DESC:<<
+[color=#aaa][i]解锁建造湾子系统 。 [/i][/color]
+
+[bbloc=#S_CONSTRUCTION_BAY_DESC/]
+>>
+
+R_SYS_ORE_PROCESSOR:矿石处理器
+R_SYS_ORE_PROCESSOR_DESC:<<
+[color=#aaa][i]解锁矿石处理器子系统 。 [/i][/color]
+
+[bbloc=#S_ORE_PROCESSOR_DESC/]
+>>
+
+R_SYS_GRAVITY_ENGINE:重力子引擎
+R_SYS_GRAVITY_ENGINE_DESC:<<
+	[color=#aaa][i]解锁重力子引擎子系统 。  [/i][/color]
+
+	[bbloc=#GRAVITYENGINE_DESC/]
+>>
+
+R_SYS_HYPERLASER:高能激光
+R_SYS_HYPERLASER_DESC:<<
+	[color=#aaa][i]解锁高能激光子系统 。  [/i][/color]
+
+	[bbloc=#S_HYPERLASER_DESC/]
+>>
+
+R_SYS_NEUTRON_ARMOR:中子装甲
+R_SYS_NEUTRON_ARMOR_DESC:<<
+	[color=#aaa][i]解锁中子装甲子系统 。  [/i][/color]
+
+	[bbloc=#NEUTRONARMOR_DESC/]
+>>
+
+R_SYS_NILINGARMOR:逆鳞纤维装甲
+R_SYS_NILINGARMOR_DESC:<<
+[color=#aaa][i]解锁逆鳞纤维装甲子系统 。 [/i][/color]
+
+[bbloc=#S_NILINGARMOR_DESC/]
+>>
+
+R_SYS_LIQUID_ARMOR:液态装甲
+R_SYS_LIQUID_ARMOR_DESC:<<
+[color=#aaa][i]解锁液态装甲子系统 。 [/i][/color]
+
+[bbloc=#S_LIQUIDARMOR_DESC/]
+>>
+
+R_SYS_SELF_DESTRUCT:自毁装置
+R_SYS_SELF_DESTRUCT_DESC:<<
+	[color=#aaa][i]解锁自毁装甲子系统 。  [/i][/color]
+
+	[bbloc=#S_SELF_DESTRUCT_DESC/]
+>>
+
+R_SYS_SHIP_COMPUTER:指挥电脑
+R_SYS_SHIP_COMPUTER_DESC:<<
+	[color=#aaa][i]解锁指挥电脑子系统 。  [/i][/color]
+
+	[bbloc=#SHIPCOMPUTER_DESC/]
+>>
+
+R_SYS_ION_CANNON:离子炮
+R_SYS_ION_CANNON_DESC:<<
+	[color=#aaa][i]解锁离子炮子系统 。  [/i][/color]
+
+	[bbloc=#S_ION_CANNON_DESC/]
+>>
+
+R_SYS_SKIP_DRIVE:跳跃引擎
+R_SYS_SKIP_DRIVE_DESC:<<
+	[color=#aaa][i]解锁跳跃引擎子系统 。  [/i][/color]
+
+	[bbloc=#S_SKIP_DRIVE_DESC/]
+>>
+
+R_SYS_GRAVITON_CONDENSER:重力压缩器
+R_SYS_GRAVITON_CONDENSER_DESC:<<
+	[color=#aaa][i]解锁重力压缩器子系统 。  [/i][/color]
+
+	[bbloc=#S_GRAVITON_CONDENSER_DESC/]
+>>
+
+R_SYS_CLOAKPLATING:隐形涂层
+R_SYS_CLOAKPLATING_DESC:<<
+	[color=#aaa][i]解锁隐形涂层子系统 。  [/i][/color]
+
+	[bbloc=#S_CLOAKPLATING_DESC/]
+>>
+
+R_MOD_TARGET_SENSOR:瞄准传感器
+R_MOD_TARGET_SENSOR_DESC:<<
+	[color=#aaa][i]解锁瞄准传感器[/i][/color]
+
+	[bbloc=#TARGETINGSENSOR_DESC/]
+>>
+
+R_MOD_BULKHEAD:气密隔舱
+R_MOD_BULKHEAD_DESC:<<
+	[color=#aaa][i]解锁气密隔舱[/i][/color]
+
+	[bbloc=#BULKHEAD_DESC/]
+>>
+
+R_MOD_AUGMENT_RELOAD:冷却系统
+R_MOD_AUGMENT_RELOAD_DESC:<<
+[color=#aaa][i]解锁‘冷却系统’武器修正 。 [/i][/color]
+
+[bbloc=#S_AUGMENT_RELOAD_DESC/]
+>>
+
+R_MOD_AUGMENT_DAMAGE:负载放大器
+R_MOD_AUGMENT_DAMAGE_DESC:<<
+[color=#aaa][i]解锁‘负载放大器’武器修正 。 [/i][/color]
+
+[bbloc=#S_AUGMENT_DAMAGE_DESC/]
+>>
+
+R_MOD_AUGMENT_SUPPLY:平滑机制
+R_MOD_AUGMENT_SUPPLY_DESC:<<
+[color=#aaa][i]解锁‘平滑机制’武器修正 。 [/i][/color]
+
+[bbloc=#S_AUGMENT_SUPPLY_DESC/]
+>>
+
+R_MOD_QUANTUM_BATTERY:量子电池
+R_MOD_QUANTUM_BATTERY_DESC:<<
+[color=#aaa][i]解锁‘量子电池’武器修正 。 [/i][/color]
+
+[bbloc=#S_QUANTUM_BATTERY_DESC/]
+>>
+
+R_MOD_QUANTUM_COMPRESSOR:量子压缩机
+R_MOD_QUANTUM_COMPRESSOR_DESC:<<
+[color=#aaa][i]解锁‘量子压缩机’武器修正 。 [/i][/color]
+
+[bbloc=#S_QUANTUM_COMPRESSOR_DESC/]
+>>
+
+R_IMP_DAMAGE:动力学
+R_IMP_DAMAGE2:动力学2
+R_IMP_DAMAGE_SMALL:冲击学
+R_IMP_DAMAGE_BLURB:武器伤害+$1
+R_IMP_DAMAGE_DESC:<<
+	[i][color=#aaa]研究如何造成伤害， 引爆和摧毁敌军星舰 。  [/color][/i]
+
+	所有舰载武器伤害提升$1 。  
+>>
+
+R_IMP_PLANET_DAMAGE:弹道学
+R_IMP_PLANET_DAMAGE2:弹道学2
+R_IMP_PLANET_DAMAGE_BLURB:行星杀伤力+$1
+R_IMP_PLANET_DAMAGE_DESC:<<
+	星球和静态防御武器的每秒伤害值提升$1 。  
+>>
+
+R_IMP_FLAG_DAMAGE:武器学
+R_IMP_FLAG_DAMAGE2:武器学2
+R_IMP_FLAG_DAMAGE_BLURB:旗舰伤害+$1
+R_IMP_FLAG_DAMAGE_DESC:<<
+	所有旗舰武器伤害提升$1 。  
+>>
+
+R_IMP_SUPPORT_DAMAGE:破坏学
+R_IMP_SUPPORT_DAMAGE2:破坏学2
+R_IMP_SUPPORT_DAMAGE_BLURB:支援舰伤害+$1
+R_IMP_SUPPORT_DAMAGE_DESC:<<
+	所有支援舰武器伤害提升$1 。  
+>>
+
+R_IMP_ALL_HEALTH:材料科学
+R_IMP_ALL_HEALTH2:材料科学2
+R_IMP_ALL_HEALTH_BLURB:子系统生命值+$1
+R_IMP_ALL_HEALTH_DESC:<<
+	[i][color=#aaa]研究如何提升星舰结构的强度， 提升它们承载伤害的能力 。  [/color][/i]
+
+	所有舰船子系统生命值提升$1 。  
+>>
+
+R_IMP_REPAIR:修理
+R_IMP_REPAIR2:修理2
+R_IMP_REPAIR_BLURB:修理+$1
+R_IMP_REPAIR_DESC:<<
+飞船修复率增加$1 。 
+>>
+
+R_IMP_CIV_HEALTH:大规模生产
+R_IMP_CIV_HEALTH2:平民装甲
+R_IMP_CIV_HEALTH_BLURB:平民单位生命值+$1
+R_IMP_CIV_HEALTH_DESC:<<
+	[i][color=#aaa]通过改造军用装甲和系统， 为平民单位提供价格合理的装甲， 以提升它们的生命值 。  [/color][/i]
+
+	所有平民单位生命值提升$1 。  
+>>
+
+R_IMP_DECAY:贮藏学
+R_IMP_DECAY2:紧密贮藏
+R_IMP_DECAY_BLURB:行星衰退速度减缓$1
+R_IMP_DECAY_DESC:<<
+	[i][color=#aaa]通过改善物资贮藏方法， 提升贮藏量， 使得行星在补给不足的情况下支持更久 。  [/color][/i]
+
+	行星缺少必要资源时的衰退速度减缓$1 。  
+>>
+
+R_IMP_ALL_RANGE:标靶学
+R_IMP_ALL_RANGE2:标靶学2
+R_IMP_ALL_RANGE_BLURB:武器射程+$1
+R_IMP_ALL_RANGE_DESC:<<
+	[i][color=#aaa]提升武器瞄准， 追踪和微型化的能力， 使得它们可以瞄准更远的目标 。  [/color][/i]
+
+	所有武器射程提升$1 。  
+>>
+
+R_IMP_ARMOR_HEALTH:装甲学
+R_IMP_ARMOR_HEALTH2:装甲学2
+R_IMP_ARMOR_HEALTH_BLURB:装甲生命值+$1
+R_IMP_ARMOR_HEALTH_DESC:<<
+	[i][color=#aaa]研究更好的强化装甲的方式 。  [/color][/i]
+
+	所有装甲生命值提升$1 。  
+>>
+
+R_IMP_ARMOR_DR:强化学
+R_IMP_ARMOR_DR2:强化学2
+R_IMP_ARMOR_DR_BLURB:装甲抗性+$1
+R_IMP_ARMOR_DR_DESC:<<
+	所有装甲的伤害抗性提升$1 。  
+>>
+
+R_IMP_FACTORY_LABOR:冶金学
+R_IMP_FACTORY_LABOR2:冶金学2
+R_IMP_FACTORY_LABOR_BLURB:工厂产能+$1
+R_IMP_FACTORY_LABOR_DESC:<<
+	[i][color=#aaa]改善材料的利用方式和产能的分配方式 。  [/color][/i]
+
+	工厂建筑的产能产出提升$1 。  
+>>
+
+R_IMP_PLANET_SUPPORT:轨道卫星指挥学
+R_IMP_PLANET_SUPPORT2:轨道卫星指挥学 2
+R_IMP_PLANET_SUPPORT_BLURB:哨站支援舰 +$1
+R_IMP_PLANET_SUPPORT_DESC:<<
+	[i][color=#aaa]更有效的轨道防御舰指挥方式 。  [/color][/i]
+
+	提升己方[b][img=PlanetType::2;20/]行星[/b]和[b][img=GuiOrbitalIcons::0;20/]哨站[/b]的防御舰上限 $1 。  
+
+	提升己方[b][img=PlanetType::2;20/]行星[/b]的防御舰上限，每个行星等级提升 $2 。  
+
+	并提升[b][img=GuiOrbitalIcons::0;20/]哨站[/b]的[img=Plus;20/]生命值和本地防御舰产出速度 。  
+>>
+
+R_IMP_SUPPLY_STORAGE:后勤学
+R_IMP_SUPPLY_STORAGE2:后勤学2
+R_IMP_SUPPLY_STORAGE_BLURB:旗舰补给量+$1
+R_IMP_SUPPLY_STORAGE_DESC:<<
+	[i][color=#aaa]更好的战斗补给贮藏和运输方式 。  [/color][/i]
+
+	所有旗舰补给仓库储量提升$1 。  
+>>
+
+R_IMP_SUPPORT_CAP:组织学
+R_IMP_SUPPORT_CAP2:组织学2
+R_IMP_SUPPORT_CAP_SMALL:指挥
+R_IMP_SUPPORT_CAP_BLURB:旗舰支援舰数量+$1
+R_IMP_SUPPORT_CAP_DESC:<<
+	[i][color=#aaa]改善的通讯和定位系统使得旗舰支援舰数量上限提升 。  [/color][/i]
+
+	所有旗舰的支援舰上限提升$1 。  
+>>
+
+R_IMP_THRUST:推进学
+R_IMP_THRUST2:推进学2
+R_IMP_THRUST_BLURB:动力+$1
+R_IMP_THRUST_DESC:<<
+	[i][color=#aaa]研究和试验如何提升星舰引擎的动力输出 。  [/color][/i]
+
+	所有舰船引擎推力提升$1 。  
+
+	使用跃迁引擎时， 跃迁速度也提升$1 。  
+>>
+
+R_IMP_CIV_CONSTRUCT:基础设施
+R_IMP_CIV_CONSTRUCT2:基础设施2
+R_IMP_CIV_CONSTRUCT_BLURB:平民建造 +$1
+R_IMP_CIV_CONSTRUCT_DESC:<<
+	平民建筑的建造速度提升 $1 。  
+>>
+
+R_IMP_IMP_CONSTRUCT:建筑学
+R_IMP_IMP_CONSTRUCT2:建筑学2
+R_IMP_IMP_CONSTRUCT_BLURB:帝国建造 +$1
+R_IMP_IMP_CONSTRUCT_DESC:<<
+	帝国建筑的建造速度提升 $1 。  
+>>
+
+R_IMP_TILE_DEVELOPMENT:开发学
+R_IMP_TILE_DEVELOPMENT2:开发学2
+R_IMP_TILE_DEVELOPMENT_BLURB:地块开发 +$1
+R_IMP_TILE_DEVELOPMENT_DESC:<<
+	平民地块开发速度提升 $1 。  
+>>
+
+R_IMP_TRACKING:水力学
+R_IMP_TRACKING2:水力学2
+R_IMP_TRACKING_BLURB:炮台追踪能力+$1
+R_IMP_TRACKING_DESC:<<
+	炮台的追踪速度提升$1 。  
+>>
+
+R_IMP_FIRE_RATE:冷却学
+R_IMP_FIRE_RATE2:冷却学2
+R_IMP_FIRE_RATE_BLURB:武器装填速度+$1
+R_IMP_FIRE_RATE_DESC:<<
+	所有武器系统射速提升$1 。  
+>>
+
+R_IMP_PROJ_SPEED:射弹学
+R_IMP_PROJ_SPEED2:射弹学2
+R_IMP_PROJ_SPEED_BLURB:炮弹速度+$1
+R_IMP_PROJ_SPEED_DESC:所有武器炮弹和导弹速度提升$1 。  
+
+R_IMP_SUPPLY_USE:立法学
+R_IMP_SUPPLY_USE2:立法学2
+R_IMP_SUPPLY_USE_BLURB:旗舰补给使用-$1
+R_IMP_SUPPLY_USE_DESC:所有旗舰武器补给消耗减少$1 。  
+
+R_IMP_SUPPLY_REGEN:补给学
+R_IMP_SUPPLY_REGEN2:补给学2
+R_IMP_SUPPLY_REGEN_BLURB:补给重填+$1
+R_IMP_SUPPLY_REGEN_DESC:旗舰补给重填速度提升$1 。  
+
+R_IMP_SUPPORT_SUPPLY_USE:效益学
+R_IMP_SUPPORT_SUPPLY_USE2:效益学2
+R_IMP_SUPPORT_SUPPLY_USE_BLURB:支援舰补给使用-$1
+R_IMP_SUPPORT_SUPPLY_USE_DESC:所有支援舰武器补给消耗减少$1 。  
+
+R_IMP_ENERGY_STORAGE:电容学
+R_IMP_ENERGY_STORAGE2:电容学2
+R_IMP_ENERGY_STORAGE_BLURB:能量储存+$1
+R_IMP_ENERGY_STORAGE_DESC:<<
+	帝国的免费能量储量提升$1 。  
+	
+	处于免费能量储量上限以内的能量不会带来能量储量惩罚 。  
+>>
+
+R_IMP_AOE:爆炸学
+R_IMP_AOE2:爆炸学2
+R_IMP_AOE_BLURB:爆炸物杀伤范围+$1
+R_IMP_AOE_DESC:爆炸型武器， 如鱼雷， 的杀伤范围提升$1 。  
+R_SYS_SHIELDGEN_DESC:<<
+	[color=#aaa][i]解锁护盾发生器子系统 。  [/i][/color]
+
+	[bbloc=#SHIELDGEN_DESC/]
+>>
+R_SYS_SHIELDGEN:护盾发生器
+R_SYS_SHIELD_HARDENER:护盾强化
+R_SYS_SHIELD_HARDENER_DESC:<<
+[color=#aaa][i]子系统解锁：护盾强化 。 [/i][/color]
+
+[bbloc=#S_SHIELD_HARDENER_DESC/]
+>>
+
+R_SHRINE:神龛
+R_SHRINE_DESC:<<
+[color=#aaa][i]子系统解锁：神龛 。 [/i][/color]
+
+[bbloc=#S_SHRINE_DESC/]
+>>
+
+R_BLD_MEGACITY:规划学
+R_BLD_MEGACITY_DESC:<<
+	[color=#aaa][i]解锁巨型都市建筑 。  [/i][/color]
+
+	[bbloc=#BLD_MEGACITY_DESC/]
+>>
+R_IMP_SHIELDCAP:相位控制
+R_IMP_SHIELDCAP2:相位控制2
+R_IMP_SHIELDCAP_BLURB:护盾生命值+$1
+R_IMP_SHIELDCAP_DESC:护盾的容量提升$1 。  
+R_IMP_SHIELDREG_BLURB:护盾回复+$1
+R_IMP_SHIELDREG:相位协调
+R_IMP_SHIELDREG2:相位协调2
+R_IMP_SHIELDREG_DESC:护盾回复速度提升$1 。  
+
+R_ORB_ARTIFICIAL_PLANETOID:人造小行星
+R_ORB_ARTIFICIAL_PLANETOID_DESC:<<
+[color=#aaa][i]轨道解锁：人造小行星 。 [/i][/color]
+
+[bbloc=#ARTIFICIAL_PLANETOID_DESC/]
+>>
+
+R_ORB_STARFORGE:恒星熔炉
+R_ORB_STARFORGE_DESC:<<
+[color=#aaa][i]轨道解锁：铸星 。 [/i][/color]
+
+[bbloc=#STARFORGE_DESC/]
+>>
+
+R_ORB_VACUUM_TELESCOPE:真空望远镜
+R_ORB_VACUUM_TELESCOPE_DESC:<<
+[color=#aaa][i]轨道解锁：真空望远镜 。 [/i][/color]
+
+[bbloc=#VACUUM_TELESCOPE_DESC/]
+>>
+
+R_ORB_RINGWORLD:环世界
+R_ORB_RINGWORLD_DESC:<<
+[color=#aaa][i]轨道解锁：环形世界 。 [/i][/color]
+
+[bbloc=#RINGWORLD_DESC/]
+>>
+
+R_BLD_PLANET_ENGINE:行星推进器
+R_BLD_PLANET_ENGINE_DESC:<<
+	[color=#aaa][i]解锁行星推进器建筑 。  [/i][/color]
+
+	[bbloc=#BLD_PLANET_ENGINE_DESC/]
+>>
+R_SYS_MUON_CANNON:介子炮
+R_SYS_MUON_CANNON_DESC:<<
+	[color=#aaa][i]解锁介子电池和介子炮子系统 。  [/i][/color]
+
+	[bbloc=#MUONBATTERY_DESC/]
+>>
+
+R_SYS_TITAN_HULL:泰坦船体
+R_SYS_TITAN_HULL_DESC:<<
+	[color=#aaa][i]解锁泰坦船体子系统 。  [/i][/color]
+
+	[bbloc=#S_TITAN_HULL_DESC/]
+>>
+
+R_SYS_COLOSSUS_HULL:巨像船体
+R_SYS_COLOSSUS_HULL_DESC:<<
+[color=#aaa][i]子系统解锁：巨像船体 。 [/i][/color]
+
+[bbloc=#S_COLOSSUS_HULL_DESC/]
+>>
+
+R_DEV_ENERGY_INCOME:离子学
+R_DEV_ENERGY_INCOME2:离子学2
+R_DEV_ENERGY_INCOME_BLURB:每秒能量产量+$1
+R_DEV_ENERGY_INCOME_DESC:<<
+	每秒基础能量产量提升$1 。  
+>>
+
+R_DEV_INFLUENCE_INCOME:政策学
+R_DEV_INFLUENCE_INCOME2:政策学2
+R_DEV_INFLUENCE_INCOME_BLURB:影响力股本+$1
+R_DEV_INFLUENCE_INCOME_DESC:<<
+	你的影响力股本提升$1 。  
+
+	影响力股本会影响与其他帝国相关的影响力产出 。  
+>>
+
+R_DEV_DEFENSE:防御学
+R_DEV_DEFENSE_BLURB:立即生成防御+$1
+R_DEV_DEFENSE_DESC:<<
+	立即生成价值$1产能的防御舰， 会在所有被标记产出防御舰的地点之间分配 。  
+>>
+
+R_DEV_DEFENSE_INCOME:民兵学
+R_DEV_DEFENSE_INCOME2:民兵学2
+R_DEV_DEFENSE_INCOME_BLURB:每分钟防御产出+$1
+R_DEV_DEFENSE_INCOME_DESC:<<
+	你的帝国的每分钟产出防御价值提升$1 。  
+>>
+
+R_IMP_SPREAD:制导学
+R_IMP_SPREAD2:制导学2
+R_IMP_SPREAD_BLURB:精度+$1
+R_IMP_SPREAD_DESC:<<
+	轨道炮和其他动能武器的炮弹精度提升$1 。  
+>>
+
+R_KEY_RAILGUN_KNOCKBACK:飞弹冲击
+R_KEY_RAILGUN_KNOCKBACK_DESC:<<
+旗舰轨道炮增加显著击退效果 。 飞弹会击退被击中的战舰 。 
+
+所有轨道炮精准提高， 但是冲击穿刺力移除 。 
+>>
+
+R_KEY_BUILD_COST:分散化建造
+R_KEY_BUILD_COST_DESC:<<
+旗舰所有建造消耗减半 。 
+
+旗舰所有劳力消耗加倍 。 
+
+干船坞建造费用不再提高25%， 但是可无惩戒使用 。 
+>>
+
+R_KEY_EMERGENCY_SHIELDS:紧急护盾
+R_KEY_EMERGENCY_SHIELDS_DESC:<<
+只要触发“紧急护盾”子系统， 护盾重生会暂时提升到极致 。 
+
+提升持续时间由紧急补给子系统规模决定 。 
+>>
+STATUS_EMERGENCY_SHIELDS:紧急护盾
+STATUS_EMERGENCY_SHIELDS_DESC:<<
+由于激活升级版“紧急补给”子系统， 此战舰护盾重生已提升 。 
+>>
+
+R_SYS_DISRUPTOR:干扰者
+R_SYS_DISRUPTOR_DESC:<<
+[color=#aaa][i]子系统解锁：干扰者 。 [/i][/color]
+
+[bbloc=#S_DISRUPTOR_DESC/]
+>>
+
+R_SYS_DRONELAUNCHER:无人机发射器
+R_SYS_DRONELAUNCHER_DESC:<<
+[color=#aaa][i]子系统解锁：无人机发射器 。 [/i][/color]
+
+[bbloc=#S_DRONELAUNCHER_DESC/]
+>>
+
+R_SYS_PARTICLELANCE:质子长矛导弹
+R_SYS_PARTICLELANCE_DESC:<<
+[color=#aaa][i]子系统解锁：质子长矛导弹 。 [/i][/color]
+
+[bbloc=#S_PARTICLELANCE_DESC/]
+>>
+
+R_SYS_SHOCKMISSILES:电击导弹
+R_SYS_SHOCKMISSILES_DESC:<<
+[color=#aaa][i]子系统解锁：质子长矛导弹 。 [/i][/color]
+
+[bbloc=#S_SHOCKMISSILES_DESC/]
+>>
+
+R_SYS_SHIELD_HARMONIZER:护盾协和器
+R_SYS_SHIELD_HARMONIZER_DESC:<<
+[color=#aaa][i]子系统解锁：护盾协和器 。 [/i][/color]
+
+[bbloc=#S_SHIELD_HARMONIZER_DESC/]
+>>
+
+R_BLD_SPIRE:螺旋塔
+R_BLD_SPIRE_DESC:<<
+[color=#aaa][i]建筑解锁：螺旋塔 。 [/i][/color]
+
+[bbloc=#BLD_SPIRE_DESC/]
+>>
+
+R_FLARE_BOMB:耀斑炸弹
+R_FLARE_BOMB_DESC:<<
+研究已收集的遗族遗物， 重获遗族超级武器计划 。 
+
+解锁耀光弹， 需要消耗大量矿石和能量 。 
+
+耀光弹能对星体使用 。 引导阶段需60秒， 然后会触发星体释放出危险的耀斑， 清除太阳系所有人口， 而不损害其他物质 。 5分钟内星系内星球受到辐射， 不能殖民 。 
+
+发射耀光弹的战舰也会被摧毁 。 
+>>
+
+R_HYPERFIELD_SEQUENCING:超域定序
+R_HYPERFIELD_SEQUENCING_DESC:<<
+使用超光速引擎无需充能， 但是跃迁会大额增加间接消耗 。 
+
+在激活超光速引擎前， 战舰仍需转向跃迁方向 。 
+>>
+
+R_ORB_RING_HABITAT:生态环
+R_ORB_RING_HABITAT_DESC:<<
+[color=#aaa][i]轨道解锁：环形栖息地 。 [/i][/color]
+
+[bbloc=#ORB_RING_HABITAT_DESC/]
+>>
+
+R_ORB_SOLAR_SATELLITE:太阳能卫星
+R_ORB_SOLAR_SATELLITE_DESC:<<
+[color=#aaa][i]轨道解锁：太阳卫星 。 [/i][/color]
+
+[bbloc=#ORB_SOLAR_SATELLITE_DESC/]
+>>
+
+R_ORB_DEFENSE_SATELLITE:战术卫星
+R_ORB_DEFENSE_SATELLITE_DESC:<<
+[color=#aaa][i]轨道解锁：战术卫星 。 [/i][/color]
+
+[bbloc=#ORB_DEFENSE_SATELLITE_DESC/]
+>>
+
+R_ORB_HYDROPONICS_SATELLITE:水培卫星
+R_ORB_HYDROPONICS_SATELLITE_DESC:<<
+[color=#aaa][i]轨道解锁：水培卫星 。 [/i][/color]
+
+[bbloc=#ORB_HYDROPONICS_SATELLITE_DESC/]
+>>
+
+R_SYS_CARRIER_HULL:运送者船体
+R_SYS_CARRIER_HULL_DESC:<<
+[color=#aaa][i]为旗舰解锁运送者船体 。 [/i][/color]
+
+[bbloc=#S_CARRIER_HULL_DESC/]
+>>
+
+R_SYS_DESTROYER_HULL:毁灭者船体
+R_SYS_DESTROYER_HULL_DESC:<<
+[color=#aaa][i]为旗舰解锁毁灭者船体 。 [/i][/color]
+
+[bbloc=#S_DESTROYER_HULL_DESC/]
+>>
+
+R_SYS_SUPERSTRUCTURE_HULL:上层建造船体
+R_SYS_SUPERSTRUCTURE_HULL_DESC:<<
+[color=#aaa][i]为旗舰解锁上层建造船体 。 [/i][/color]
+
+[bbloc=#S_SUPERSTRUCTURE_HULL_DESC/]
+>>
+
+R_SYS_SPINAL_MOUNT_HULL:脊载船体
+R_SYS_SPINAL_MOUNT_HULL_DESC:<<
+[color=#aaa][i]为旗舰解锁脊载船体 。 [/i][/color]
+
+[bbloc=#S_SPINAL_MOUNT_HULL_DESC/]
+>>
+
+R_SYS_FLEET_COMPUTER:舰队电脑
+R_SYS_FLEET_COMPUTER_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：舰队电脑 。 [/i][/color]
+
+[bbloc=#S_FLEETCOMPUTER_DESC/]
+>>
+
+R_SYS_SOLARPANEL:太阳能电池板
+R_SYS_SOLARPANEL_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：太阳能电池板 。 [/i][/color]
+
+[bbloc=#S_SOLARPANEL_DESC/]
+>>
+
+R_SYS_FLAK_BATTERY:高射炮
+R_SYS_FLAK_BATTERY_DESC:<<
+[color=#aaa][i]旗舰武器解锁：高射炮 。 [/i][/color]
+
+[bbloc=#S_FLAK_BATTERY_DESC/]
+>>
+
+R_SYS_WARHEAD:弹头
+R_SYS_WARHEAD_DESC:<<
+[color=#aaa][i]为旗舰解锁弹头武器 。 [/i][/color]
+
+[bbloc=#S_WARHEAD_DESC/]
+>>
+
+R_SYS_PLASMA_THROWER:等离子投射器
+R_SYS_PLASMA_THROWER_DESC:<<
+[color=#aaa][i]旗舰及支援舰解锁等离子投射器 。 [/i][/color]
+
+[bbloc=#S_PLASMATHROWER_DESC/]
+>>
+
+R_SYS_PULSE_BOLT:电能脉冲
+R_SYS_PULSE_BOLT_DESC:<<
+[color=#aaa][i]武器解锁：支援舰子电能脉冲 。 [/i][/color]
+
+[bbloc=#S_PULSE_BOLT_DESC/]
+>>
+
+R_SYS_SUBSPACE_SHREDDER:子空间粉碎器
+R_SYS_SUBSPACE_SHREDDER_DESC:<<
+[color=#aaa][i]武器解锁：支援舰子空间粉碎器 。 [/i][/color]
+
+[bbloc=#S_SUBSPACE_SHREDDER_DESC/]
+>>
+
+R_SYS_RAMJET:冲压式喷气发动机
+R_SYS_RAMJET_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：冲压式喷气发动机 。 [/i][/color]
+
+[bbloc=#S_RAMJET_DESC/]
+>>
+
+R_SYS_BOOSTER_ENGINE:助推引擎
+R_SYS_BOOSTER_ENGINE_DESC:<<
+[color=#aaa][i]武器解锁：支援舰助推引擎 。 [/i][/color]
+
+[bbloc=#S_BOOSTERENGINE_DESC/]
+>>
+
+R_SYS_BROADCAST_ANTENNA:广播天线
+R_SYS_BROADCAST_ANTENNA_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：广播天线 。 [/i][/color]
+
+[bbloc=#S_BROADCAST_ANTENNA_DESC/]
+>>
+
+R_SYS_SIMULATOR:拟态
+R_SYS_SIMULATOR_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：拟态 。 [/i][/color]
+
+[bbloc=#S_SIMULATOR_DESC/]
+>>
+
+R_SYS_TROOP_PODS:士兵舱
+R_SYS_TROOP_PODS_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：士兵舱 。 [/i][/color]
+
+[bbloc=#S_TROOPPODS_DESC/]
+>>
+
+R_SYS_CRYSTAL_ARMOR:结晶护甲
+R_SYS_CRYSTAL_ARMOR_DESC:<<
+[color=#aaa][i]旗舰及支援舰解锁结晶护甲 。 [/i][/color]
+
+[bbloc=#S_CRYSTALARMOR_DESC/]
+>>
+
+R_SYS_NANOMESH:纳米网
+R_SYS_NANOMESH_DESC:<<
+[color=#aaa][i]旗舰及支援舰解锁纳米网 。 [/i][/color]
+
+[bbloc=#NANOMESH_DESC/]
+>>
+
+R_SYS_DEFLECTOR_ARRAY:偏转阵列
+R_SYS_DEFLECTOR_ARRAY_DESC:<<
+[color=#aaa][i]旗舰子系统解锁：偏转阵列 。 [/i][/color]
+
+[bbloc=#S_DEFLECTOR_ARRAY_DESC/]
+>>
+
+R_MISSILE_RANGE:微型推进
+R_MISSILE_RANGE_DESC:<<
+所有导弹类武器范围增加$1 。 
+>>
+
+R_DRONE_COUNT:无人机掌控
+R_DRONE_COUNT_DESC:<<
+子系统无人机发射器发射的无人机数量增加50% 。 
+>>
+
+R_FLAG_HEALTH:旗舰生命值
+R_FLAG_HEALTH2:旗舰完整度
+R_FLAG_HEALTH_DESC:<<
+所有旗舰和空间站设计生命值提高$1 。 
+>>
+
+R_ENERGY:能量涌动
+R_ENERGY_DESC:每秒能量生成增加$1 。 
+
+R_DEFENSE:军队
+R_DEFENSE_DESC:每分钟防御生成增加$1 。 
+
+R_POWER_GENERATION:动能生成
+R_POWER_GENERATION_DESC:<<
+旗舰引擎动能生成增加$1 。 
+>>
+
+R_BEAM_CYCLING:光线循环
+R_BEAM_CYCLING_DESC:<<
+所有射线类武器持续时间增加$1 。 
+>>
+
+R_ADVANCED_TRACKING:高级精准
+R_ADVANCED_TRACKING_DESC:<<
+所有飞弹类武器精准增加$1 。 
+
+所有飞弹类武器补给成本增加$1 。 
+>>
+
+R_FTL_COST:超域稳定
+R_FTL_COST_DESC:<<
+所有超光速能量消耗减少$1 。 
+>>
+
+R_LABORATORIES:科研室
+R_LABORATORIES_DESC:<<
+研发复杂建筑物额外增加$1研发压力 。 
+>>
+
+R_FTL_JAMMER_COMBAT:超光速干扰机缩短
+R_FTL_JAMMER_COMBAT_DESC:<<
+给星系装载超光速干扰机， 可让敌方舰队电路超载并短路 。 
+
+在装载有超光速干扰机星系的敌方旗舰战斗力减少30% 。 
+>>
+STATUS_FTL_JAMMER_COMBAT:超光速干扰机缩短
+STATUS_FTL_JAMMER_COMBAT_DESC:<<
+敌军超光速干扰机会让此艘战舰电路短路， 战力降低25% 。 
+>>
+
+R_WEALTH:财富
+R_WEALTH_DESC:帝国总收入提高$1 。 
+
+R_PROSPERITY:繁荣
+R_PROSPERITY_DESC:超额预算资金用在福利上效益提升$1 。 
+
+R_OBEDIENCE:服从
+R_OBEDIENCE_DESC:所有行星忠诚度提高$1 。 
+
+R_ABUNDANCE:富裕
+R_ABUNDANCE_DESC:所有三级资源带来的压力提高$1 。 
+
+R_GRAVITON_CHANNELING:重力引导
+R_GRAVITON_CHANNELING_DESC:<<
+[b]重力引擎[/b]提供的推进力提高$1， 但是能耗加倍 。 
+>>
+
+R_SUPPORT_SIZE:复合建筑
+R_SUPPORT_SIZE_DESC:<<
+所有支援舰设计规格提高$1六角模块 。 
+>>
+
+R_STATION_MAINTENANCE:空间站供给
+R_STATION_MAINTENANCE_DESC:<<
+所有空间站设计保养费用降低$1 。 
+>>
+
+R_TACTICS:策略
+R_TACTICS_DESC:<<
+所有战舰经验获取提高10% 。 
+>>
+
+R_POPULATION:基础设施
+R_POPULATION_DESC:<<
+等级3或更高等级行星人口最大值增加$1 。 
+>>
+
+R_CONSTRUCTION:建造
+R_CONSTRUCTION2:建造2
+R_CONSTRUCTION_DESC:<<
+帝国地面建筑消耗费用和时间减少$1 。 
+>>
+
+R_ORBITAL_CONSTRUCTION:轨道建筑
+R_ORBITAL_CONSTRUCTION2:轨道建筑2
+R_ORBITAL_CONSTRUCTION_DESC:<<
+轨道和空间站建筑费用和劳力消耗减少$1 。 
+>>
+
+R_INFINITE_HEALTH:底座战力
+R_INFINITE_HEALTH_DESC:<<
+所有战舰和空间站升级生命值提高$1 。 
+
+能进行多次研发 。 费用和时间会随研发次数增加而增加 。 
+>>
+
+R_INFINITE_DAMAGE:武器杀伤力
+R_INFINITE_DAMAGE_DESC:<<
+所有战舰和驻地伤害增加$1 。 
+
+能进行多次研发 。 费用和时间会随研发次数增加而增加 。 
+>>
+
+R_INFINITE_THRUST:引擎输出功率
+R_INFINITE_THRUST_DESC:<<
+所有引擎推进功率增加$1 。 
+
+能进行多次研发 。 费用和时间会随研发次数增加而增加 。 
+>>
+
+R_INFINITE_SUPPORT:舰队协同
+R_INFINITE_SUPPORT_DESC:<<
+所有设计承载力增加$1 。 
+
+能进行多次研发 。 费用和时间会随研发次数增加而增加 。 
+>>
+
+R_INFINITE_SHIELDS:护盾调制
+R_INFINITE_SHIELDS_DESC:<<
+所有护盾设计承载力和再生提高$1 。 
+
+能进行多次研发 。 费用和时间会随研发次数增加而增加 。 
+>>
+
+R_FTL_HURDLE:超光学领悟
+R_FTL_HURDLE_DESC:<<
+为了进一步发展， 我们必须了解超光速能量准则和超域的运作 。 
+
+[i]此科技没有利益， 并且只能投入超光速能量研发 。 [/i]
+>>
+
+R_ENERGY_HURDLE:能量实验
+R_ENERGY_HURDLE_DESC:<<
+为了进一步发展吗， 我们必须了解超高能粒子的相互作用 。 
+
+[i]此科技没有利益， 并且只能投入能量研发 。 [/i]
+>>
+
+R_INFLUENCE_HURDLE:社会学
+R_INFLUENCE_HURDLE_DESC:<<
+为了进一步发展， 我们必须了解大规模人口行为及反应 。 
+
+[i]此科技没有利益， 并且只能投入影响力研发 。 [/i]
+>>
+
+R_ARTIFICIAL_MOON:人造卫星
+R_ARTIFICIAL_MOON_DESC:<<
+解锁人造卫星建造：
+
+[bbloc=#CONS_ARTIFICIAL_MOON_DESC/]
+>>
+
+R_IMP_FOUNDRY_LABOR:冶金
+R_IMP_FOUNDRY_LABOR2:冶金2
+R_IMP_FOUNDRY_LABOR_DESC:<<
+[i][color=#aaa]行星地面工厂材料使用和劳工分工的改善 。 [/color][/i]
+
+铸造类建筑物劳动力增加 $1 。 
+>>

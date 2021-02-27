@@ -1,0 +1,477 @@
+ORBITAL_REPACK: 收回轨道卫星
+PROMPT_SCUTTLE: 摧毁 $1?
+ORB_TT_COST: 花费: $1， $2 产能
+ORBITAL_MODULES: 模块
+TRADE: 贸易
+OERR_SYSTEM: 无法在星系外建造轨道卫星。 
+OERR_TRADE: 必须在贸易边境内建造。 
+OERR_VISION: 无法在视野外建造。 
+OERR_LIMIT: 每个星系只能有一个。 
+OERR_BLACKHOLE: 只能建造在黑洞附近。 
+OERR_PLANET_ORBIT: 必须建造在行星轨道上 。 
+OERR_CLOSE_TO_STAR: 必须放置在星星附近 。 
+OERR_PLANET_LIMIT: 只有单一行星轨道被允许 。 
+
+LAB_RESOURCES: 进口的资源:
+LAB_AVAIL_AFFINITIES: 可利用的特性:
+
+ORB_REQ_AFFINITY: 需要[b] $1[/b] [img=$3;24/]份$2资源(s)。 
+ORB_REQ_RESOURCE: 需要[img=$2;24/] $1。 
+
+TT_MANAGE_ORBITAL: <<|
+	[b]管理轨道卫星[/b]
+
+	检视和修改这枚轨道卫星上安装的模块。 
+>>
+
+TT_PACKUP_ORBITAL: <<|
+	[b]收回轨道卫星[/b]
+
+	将轨道卫星收入船中以便于转移。 
+>>
+
+DRY_DOCK: 干船坞
+DRY_DOCK_NAME: 干船坞: $1
+
+FLING_BEACONS: 弹射信标
+ORB_FLING_CORE: 弹射信标
+ORB_FLING_CORE_BLURB: 附近舰船增加弹射能力
+ORB_FLING_CORE_DESC: <<|
+	允许信标附近基于弹射式跳跃的跃迁。 
+
+	距弹射信标10， 000距离单位内的的舰船可以跃迁
+	至星际内的任意地点。 
+
+	[b][color=#00c0ff]投射信标花费 250 FTL 能量进行建造 ， and 0.15 FTL/s 进行维护 。 [/color][/b]
+>>
+
+ORB_GATE_CORE: 星门
+ORB_GATE_CORE_BLURB: 允许瞬间移动到其他任意星门。 
+ORB_GATE_CORE_DESC: <<|
+	允许瞬间移动至其他任意星门。 
+
+	星门每秒需要0.15跃迁能进行维护。 
+	星门可以被收起。 
+	展开收起的星门将消耗150单位跃迁能。 
+>>
+
+ORB_DRY_DOCK:干船坞
+ORB_DRY_DOCK_BLURB: 一次性太空旗舰工程。 
+ORB_DRY_DOCK_DESC: <<|
+ 可以在太空中建造旗舰 ， 让其他行星更容易将 
+ 他们的劳工贡献至建筑中 。 
+>>
+
+ORB_REMNANT_DEFENSE_CORE: 遗族防御站点
+ORB_REMNANT_DEFENSE_CORE_BLURB: <<
+ 对附近敌方船舰开火 。 
+>>
+ORB_REMNANT_ENERGY_CORE: 反应堆
+ORB_REMNANT_ENERGY_CORE_BLURB: 产生大量的能量。 
+ORB_REMNANT_ENERGY_CORE_DESC: <<|
+	每分钟生产36点能量。 
+>>
+
+ORB_ANCIENT_EMBASSY: 先驱领馆
+ORB_ANCIENT_EMBASSY_BLURB: 世人所敬仰的工程奇迹。 
+ORB_ANCIENT_EMBASSY_DESC: <<|
+	星系内所有己方行星忠诚度加5。 
+	任何帝国针对此星系所发动的影响行动将少花费5点影响点启动。 
+
+	如果该轨道卫星被摧毁， 则其所有者及其友邦帝国将获得对摧毁该卫星的帝国的[b]显著[/b]外交优势。 
+
+	保护此轨道卫星所属的星系内所有己方星球免于被占领。 
+
+	拥有500支援舰上限， 可容纳支援舰。 
+
+	可与贸易中枢进行自由贸易。 
+>>
+
+ORB_SHIPYARD: 造船厂
+ORB_SHIPYARD_BLURB: 可建造舰船， 从行星进口产能。 
+ORB_SHIPYARD_DESC: <<|
+	一个可以在太空中建造舰队的巨型造船厂。 
+
+	在造船厂建造的飞船成本减少20%。 
+
+	每分钟固有6点产能产出。 行星出口本身的产能至贸易范围内造船厂的速率减少75%。 
+
+	从冶金厂获取科研的速率减少75%。 
+>>
+ORB_ARTILLERY_PLATFORM: 火炮平台
+ORB_ARTILLERY_PLATFORM_BLURB: 远程防空炮。 
+ORB_ARTILLERY_PLATFORM_DESC: <<|
+	一个独立的轨道炮， 可以打击星系内所有位置的敌人。 
+>>
+ORB_DEFENSE_PLATFORM: 防御平台
+ORB_DEFENSE_PLATFORM_BLURB: 拥有近程武器的防御平台。 
+ORB_DEFENSE_PLATFORM_DESC: <<|
+	一个拥有近程武器的轨道防御平台， 可以保卫自己的领空。 
+>>
+ORB_TRADE_OUTPOST: 哨站
+ORB_TRADE_OUTPOST_BLURB: 允许星系内的贸易。 
+ORB_TRADE_OUTPOST_DESC: <<|
+	一个小型的哨站， 让平民飞船可以在其所在的星系自由通行。 
+
+	哨站提供最多价值[b]3点防御产出[/b]的本地防御舰， 其数值取决于有几个相邻星系也拥有哨站。 
+
+	如果哨站的所有支援舰指挥都被使用， 并且防御舰已满， 其防御产出就会被加入帝国的防御产出池。 
+
+	拥有哨站至少2分钟后， 该星系就会进入[b]受保护[/b]状态， 并无法在哨站存在的情况下被占领。 
+
+	[i]可以建在没有你的星球的星系， 以扩展你帝国的疆界。 
+	每个星系中只能有一个哨站。 [/i]
+>>
+
+ORB_TRADE_STATION: 贸易站
+ORB_TRADE_STATION_BLURB: 开放与其他贸易太空站的全星系贸易。 
+ORB_TRADE_STATION_DESC: <<|
+	一个大型的贸易太空站， 任何地区都可以与贸易太空站进行资源交易。 
+
+	另外， 在每个贸易太空站上， 每3分钟你都可以用资金购买一定数量的科研点， 能量， 影响力或者产能。 
+
+	[i]正常情况下， 被别的星系分割开的星球不能互相出口资源。 
+	在两个星球所属星系中都建造贸易太空站后， 你就可以和你帝国内最偏远的地区进行资源交易。 [/i]
+>>
+ABL_BUY_ENERGY: 购买能量
+ABL_BUY_ENERGY_DESC: 从市场购买一定数量的能量。 与其他购买能力共用冷却时间。 
+ABL_BUY_INFLUENCE: 购买影响力
+ABL_BUY_INFLUENCE_DESC: 交易获得一定数量的影响力。 与其他购买能力共用冷却时间。 
+ABL_BUY_RESEARCH: 购买科研点
+ABL_BUY_RESEARCH_DESC: 投资获得一定数量的科研点。 与其他购买能力共用冷却时间。 
+ABL_BUY_LABOR: 购买产能
+ABL_BUY_LABOR_DESC: 为一个目标星球或者造船厂购买产能。 与其他购买能力共用冷却时间。 
+
+ORB_SUPPLY_DEPOT: 补给站
+ORB_SUPPLY_DEPOT_BLURB: 提升星系内的弹药补给速率。 
+ORB_SUPPLY_DEPOT_DESC: <<|
+	特别设计来加速补给舰队弹药的设施。 
+
+	该星系内所有的舰队都可以更快速地补给。 
+>>
+STATUS_FAST_RESUPPLY: 正在获取补给
+STATUS_FAST_RESUPPLY_DESC: <<|
+	正在从星系内的一个补给站获取补给。 
+	这将使未交战状态下的弹药补给速率大大提升。 
+>>
+ORB_FTL_JAMMER: 超光速干扰器
+ORB_FTL_JAMMER_BLURB: 防止交战帝国启动跃迁引擎。 
+ORB_FTL_JAMMER_DESC: <<|
+	一系列经过精确校准的超光速场激激发器， 
+	可以阻碍特定频率的跃迁引擎启动。 
+
+	正与你交战的帝国无法在此星系内使用他们的跃迁引擎。 
+
+	[b][color=#00c0ff]每秒消耗0.15点跃迁能进行维护。 [/color][/b]
+>>
+
+ORB_SCAFFOLDING: 脚手架
+ORB_SCAFFOLDING_BLURB: 这里正在建造一个轨道卫星船体。 
+ORB_SCAFFOLDING_DESC: <<|
+	这里正在建造一个轨道卫星。 
+>>
+NAME_SCAFFOLDING: $1(施工中)
+
+ORB_SOLAR_ORBITAL: 太阳能引擎
+ORB_SOLAR_ORBITAL_BLURB: 根据该星系的恒星温度每秒产生能量 。 
+ORB_SOLAR_ORBITAL_DESC: <<
+	每秒的能量产出增加。 星系内恒星的温度越高， 产出的能量越多。 
+
+	每个星系中只能建造一个。 
+>>
+
+ORB_FRAME: 轨道框架
+ORB_FRAME_BLURB: 建造在该框架上的轨道飞行器建造花费降低 。 
+ORB_FRAME_DESC: <<
+	一个预先装好的建造框架， 可以改造成别的形状。 
+
+	建造在该框架上的轨道卫星的建造和产能成本减少50%， 而且没有建造距离带来的产能惩罚。 
+>>
+
+ORB_SINGULARITY_LAB: 奇点实验室
+ORB_SINGULARITY_LAB_BLURB: <<
+ 在奇点附近俘获独特的物质以产生电力和获得科学知识 。 
+>>
+ORB_SINGULARITY_LAB_DESC: <<
+	利用处于奇点附近这一独特优势产出能源并获取科研成果。 
+
+	只能建于拥有黑洞的星系中。 每个星系中只能建造一个。 
+>>
+
+ORB_FTL_STORAGE: 折跃存储 
+ORB_FTL_STORAGE_DESC: <<
+ 储存 300超光速能量 。 
+>>
+
+ORB_SENATORIAL_PALACE: 参议院宫 
+ORB_SENATORIAL_PALACE_BLURB: <<
+ 一座用于银河参议员外交事务的宏伟宫殿 。 能够购买影响胜利组成卡 。 
+>>
+ORB_SENATORIAL_PALACE_DESC: <<
+ 一座用于银河参议员外交事务的宏伟宫殿 。 
+
+ 只能在你是当前参议长的情况下建造 。 
+
+ 所有其它帝国获得参议院宫所在的星系的视野 。 
+
+ 你可以用影响来购买选举 ， 银河超级强权和银河乌托邦在参议院宫博弈 ， 这让合适的出牌能够得到影响胜利 。 
+>>
+NOTIFY_SENATORIAL_PALACE: [color=$2]$1[/color]建造了一座 [b]参议院宫 [/b]。 
+ABL_BUY_ELECTION: 购买 “ 选举 ” 
+ABL_BUY_ELECTION_DESC: <<
+ 使用影响购买一张 “ 选举 ” 卡以供将来使用 。 
+>>
+ABL_BUY_GALACTIC_UTOPIA: 购买 “ 银河乌托邦 ” 
+ABL_BUY_GALACTIC_UTOPIA_DESC: <<
+ 使用影响购买一张 “ 银河乌托邦 ” 卡以供将来使用 。 
+
+ 银河乌托邦提供诸多好处 。 如果你同时将它和银河超级强权启用 ， 你就赢了 。 
+>>
+ABL_BUY_GALACTIC_SUPERPOWER: 购买 “ 银河超级强权 ” 
+ABL_BUY_GALACTIC_SUPERPOWER_DESC: <<
+ 使用影响购买一张 “ 银河超级强权 ” 卡以供将来使用 。 
+
+ 银河超级强权提供诸多好处如果你同时将它和银河乌托邦启用 ， 你就赢了 。 
+>>
+
+ORB_RING_HABITAT: 生态环 
+ORB_RING_HABITAT_BLURB: 增加可以居住在行星周围的人口 。 
+ORB_RING_HABITAT_DESC: <<
+ 建造在低轨道的生态环会增加居住于内部和周围的人口 ， 让能买得起的人过上奢侈的太空生活 。 
+
+ 必须建造在一颗行星的轨道上 。 该行星的最大人口增加 2。 
+
+ 2人口从正在建造生态环的行星转移到上面 。 
+
+ 除了建设成本外 ， 花费 10影响进行建造 。 
+
+ 每颗行星只能在轨道上建造一个生态环 。 
+>>
+
+ORB_SOLAR_SATELLITE: 太阳能卫星 
+ORB_SOLAR_SATELLITE_BLURB: 增加行星的本地资源压力 1
+ORB_SOLAR_SATELLITE_DESC: <<
+ 一颗建造在低轨道的太阳能卫星将能量传送到地表以供内部使用 ， 改善地面的经济活动效率 。 
+
+ 必须建造在一颗行星的轨道上 。 在可能的地方为行星的本地资源给予的压力增加 1。 
+
+ 除了建设成本外 ， 花费 500能量进行建造 。 
+
+ 每个行星的轨道上只能建造一颗太阳能卫星 。 
+>>
+
+ORB_DEFENSE_SATELLITE: 战术卫星 
+ORB_DEFENSE_SATELLITE_BLURB: 增加补给力度 、 发射导弹 、 允许独立补给行动 。 
+ORB_DEFENSE_SATELLITE_DESC: <<
+ 一颗建造在低轨道的军用卫星 ， 为行星提供强化防御能力和补给飞船 。 
+
+ 必须建造在一颗行星的轨道上 。 
+
+ 分配给该行星的补给飞船会提高战斗力 ， 并且可以独立在星系中移动以攻击敌对舰队 。 补给飞船设定为防卫 ， 补给或炮击行为不会离开行星的轨道 。 
+
+ 除了建设成本外 ， 花费 500能量进行建造 。 
+
+ 每个行星的轨道上只能建造一颗战术卫星 。 
+>>
+
+ORB_HYDROPONICS_SATELLITE: 水培卫星 
+ORB_HYDROPONICS_SATELLITE_BLURB: 为它所环绕的行星增加 1食物 。 
+ORB_HYDROPONICS_SATELLITE_DESC: <<
+ 一颗卫星 ， 装备有高产零重力水培栏 ， 生长着暴露在阳光直射下的转基因作物 。 
+
+ 必须建造在一颗行星的轨道上 。 
+
+ 为它所环绕的行星增加 1食物资源 。 
+
+ 除了建设成本外 ， 花费 250研究点数进行建造 。 
+>>
+
+ORB_ANCIENT_REPLICATOR: 轨道复制器 
+ORB_ANCIENT_REPLICATOR_BLURB: 为它所环绕的行星建造地面建筑 。 生产防御卫星 。 
+ORB_ANCIENT_REPLICATOR_DESC: <<
+ 一座巨大的低轨道空间站 ， 能够复制材料并将它们转移至地表 。 只有在有一座复制器运行于轨道上时 ， 才能在行星上建造建筑物 。 
+
+ 复制空间站可以在行星间移动以在其它行星上建造设施 。 
+
+ 如果该行星的复制器处于拥有浮现补给能力的轨道 ， 它就会不断自动建造防御卫星 。 
+>>
+
+SHIPYARD: 船坞
+SHIPYARD_DESC: <<|
+	可以建造旗舰和支援舰。 
+	
+	进口"产能生成资源"以增加
+	用于建造的产能。 
+>>
+
+SPACEPORT: 太空港
+SPACEPORT_DESC: <<|
+	允许经由此星系的贸易。 
+	
+	如果其他帝国可以在此星系内进行贸易， 则会将大多数的资源卖出换取金钱。 
+>>
+
+RESEARCH_STATION: 科研站
+RESEARCH_STATION_DESC: <<|
+	生成科研点。 
+
+	进口"科研生成资源"以增加
+	科研点产出量。 
+
+	进口"能量生成资源"以少量增加
+	科研点产出量。 
+>>
+
+OBSERVATORY: 天文观测台
+OBSERVATORY_DESC: <<|
+	使用广域传感器阵列侦测远距离的舰船和行星。 
+
+	进口"能源生成资源"以增加天文观测台的视野范围。 
+>>
+
+DEFENSE_PLATFORM: 防御平台
+DEFENSE_PLATFORM_DESC: <<|
+	向攻击者发射远程炮弹的高防御轨道炮击平台。 
+
+	进口"防御生成"资源以增加平台上的火炮数量。 
+>>
+
+ORB_DEFENSE_CORE: 防御中枢
+ORB_DEFENSE_CORE_BLURB: 每项进口资源将增加生命值， 装甲和武器数量。 
+ORB_DEFENSE_CORE_DESC: <<|
+	装备了多种武器。 
+
+	每种进口入站的资源将给予其2500点生命值， 1250点装甲和数种额外武器。 
+>>
+
+ORB_TRADE_CORE: 贸易中枢
+ORB_TRADE_CORE_BLURB: 每项进口资源都将提供贸易活动。 
+ORB_TRADE_CORE_DESC: <;|
+	生产穿梭于附近随机星球的货舰， 交付货物。 
+	货物使目的地在接下来的3分钟内处于幸福状态， 并为您的帝国产出§50k。 
+	当与其他帝国进行贸易时， 双方都将产出额外的§50k。 
+
+	为每一项进口入站的资源每3分钟创建另一艘货舰。 
+
+	如果星系之间有贸易线相连， 资源将会在包含贸易中枢的星系之间进行自由贸易。 
+>>
+
+ORB_CONSTRUCTION_CORE: 建造中枢
+ORB_CONSTRUCTION_CORE_BLURB: 可使用产能。 每项进口资源都将增加额外的产能。 
+ORB_CONSTRUCTION_CORE_DESC: <<|
+	可使用产能建造舰船， 轨道卫星及采矿基地。 
+
+	初始时每分钟产生3点产能。 每项进口的资源将使每分钟产能增加1点。 每项进口资源将增加25%产能产出。 
+
+	星球可以出口他们的产能至此轨道卫星以作使用。 
+>>
+
+ORB_EMBASSY_CORE: 领事中枢
+ORB_EMBASSY_CORE_BLURB: 每项进口资源都将增加星球忠诚度。 
+ORB_EMBASSY_CORE_DESC: <<|
+	星系内所有己方行星忠诚度加3。 
+	每项进口资源额外增加1点忠诚。 
+
+	任何帝国针对此星系发动的影响力行动将少花费3点影响点启动。 
+
+	如果该轨道卫星被摧毁， 则其拥有者及其友邦将获得对摧毁该卫星的帝国的外交优势。 
+>>
+
+ORB_TRADE_CORE: 贸易中枢
+ORB_TRADE_CORE_BLURB: 每项进口资源都将提供贸易活动。 
+ORB_TRADE_CORE_DESC: <;|
+	生产穿梭于附近随机星球的货舰， 交付货物。 
+	货物使目的地在接下来的3分钟内处于幸福状态， 并为您的帝国产出§50k。 
+	当与其他帝国进行贸易时， 双方都将产出额外的§50k。 
+
+	为每一项进口入站的资源每3分钟创建另一艘货舰。 
+
+	如果星系之间有贸易线相连， 资源将会在包含贸易中枢的星系之间进行自由贸易。 
+>>
+
+ORB_LISTENING_POST: 监听哨
+ORB_LISTENING_POST_BLURB: 生成关于附近帝国的情报。 
+ORB_LISTENING_POST_DESC: <<|
+	每分钟生成针对邻邦的"幕后黑手"卡。 
+
+	对某一特定帝国每次只能保有最多3张"幕后黑手"卡。 
+>>
+
+ORB_ARMOR_PLATING: 电镀装甲
+ORB_ARMOR_PLATING_BLURB: +5000 装甲， +100% 抗性。 
+ORB_ARMOR_PLATING_DESC: <<|
+	为轨道卫星增加5000装甲。 
+	装甲的伤害抗性翻倍。 
+>>
+
+ORB_DEFENSE_OUTPOST: 防御前哨
+ORB_DEFENSE_OUTPOST_BLURB: 保护星球不被占领。 增加支援舰上限。 
+ORB_DEFENSE_OUTPOST_DESC: <<|
+	保护此轨道卫星所属的星系内所有己方星球免于被占领。 
+
+	为此轨道卫星增加500支援舰上限， 使其可以容纳支援舰。 
+>>
+
+ORB_SOLAR_COMPLEX: 太阳能阵列
+ORB_SOLAR_COMPLEX_BLURB: 每分钟产生18点能量。 
+ORB_SOLAR_COMPLEX_DESC: <<
+	每分钟产生18点能量。 
+>>
+
+ORB_THINK_TANK: 智库
+ORB_THINK_TANK_BLURB: 每3分钟生成一张权势卡。 
+ORB_THINK_TANK_DESC: <<
+	每3分钟生成一张高质量"命名旗舰， " "命名星球， " "锦上添花， "或者"朝耕暮耘"影响卡。 
+>>
+
+ORB_TRADE_DEPOT: 贸易站
+ORB_TRADE_DEPOT_BLURB: 通过每个友邦星球获取资金。 
+ORB_TRADE_DEPOT_DESC: <<|
+	该星系内每个友邦帝国所拥有的行星将为每次预算周期增添§150k资金。 
+
+	这些友邦帝国也将为每个他们在该星系内所拥有的行星而获得§75k预算。 
+>>
+
+
+ORB_FTL_INTERDICTION: 跃迁抑制器
+ORB_FTL_INTERDICTION_BLURB: 阻止其他帝国在该星系使用跃迁。 
+ORB_FTL_INTERDICTION_DESC: <<|
+	[b]其他帝国[/b]将无法在此星系使用跃迁装置:
+
+	使用跃迁引擎的舰船将会在进入该星系前离开跃迁状态。 
+
+	该星系内的星门及弹射信标将会失效。 
+
+	[b]而且:[/b]
+
+	没有帝国可以建立抵达该星系或从该星系出发的滑流， [b]包括你自己[/b]。 
+
+	[i]抑制器开启后需要60秒时间激活。 [/i]
+>>
+
+ORB_HYPERFIELD_ACTUATOR: 超光速力场发生器
+ORB_HYPERFIELD_ACTUATOR_BLURB: 每秒生成1单位跃迁能。 
+ORB_HYPERFIELD_ACTUATOR_DESC: <<|
+	利用超光速力场人为生成跃迁能。 
+
+	每秒生成1单位跃迁能。 
+>>
+
+ORB_ARTILLERY: 星际火炮
+ORB_ARTILLERY_BLURB: 射程惊人的火炮。 
+ORB_ARTILLERY_DESC: <<|
+	运作着一台可以向附近星系进行炮击并造成范围爆炸伤害的超远程火炮。 
+>>
+
+ORB_MINING_BAY: 矿井
+ORB_MINING_BAY_BLURB: 允许采集小行星上的所有资源。 
+ORB_MINING_BAY_DESC: <<|
+	该轨道卫星所在星系内的小行星上将可以建造采矿基地， 使其可以同时开采
+	所有可用的资源， 而不仅是其中一种。 
+>>
+
+
+
+
+
+
