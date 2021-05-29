@@ -346,7 +346,7 @@ bool initGlobal(bool loadGraphics, bool createWindow) {
 	//Add mod sources
 	print("Registering mods");
 	devices.mods.registerDirectory("mods");
-	devices.mods.registerDirectory(getProfileRoot() + "mods");
+	devices.mods.registerDirectory(path_join(getProfileRoot(), "mods"));
 	devices.mods.registerDirectory("../../workshop/content/282590");
 
 	//Shortcut for the scene tree
