@@ -1,0 +1,403 @@
+CONSTRUCTION: Edificios
+UNCOLONIZED: Sin Colonizar
+SHIPS: Naves
+ORBITALS: Orbitales
+POPULATION: Población
+MAX_POPULATION: Población Máxima
+COLONIZE_GENERIC: Colonizar
+COLONIZE_WITH: Colonizar con $1 (ETA $2 minutes)
+COLONIZE_WITH_BASIC: Colonizar con $1
+AUTO_COLONIZE: Colonizar esto
+AUTO_COLONIZE_BLOCKED: Colonizar esto (actualmente bloqueado)
+AUTO_COLONIZE_LEVEL: Colonizar y Autoimportar a Nivel $1
+AUTO_COLONIZE_SYSTEM: Colonizar planetas en $1
+AUTO_COLONIZE_SYSTEM_LEVEL: Colonizar planetas en $1 y Autoimportar
+STOP_COLONIZE_SYSTEM: Parar colonización de planetas en $1
+CANCEL_AUTO_COLONIZE: Parar colonización
+COLONIZE_CONTINUE: Continuar colonizando
+COLONIZE_CANCEL: Parar colonización $1
+COLONIZE_UNSAFE_PROMPT: <<|
+	Ordenar una colonización , ahora, en el planeta, bajará la población total mínima para mantener el actual nivel del planeta colonizador.
+
+	¿Estas seguro que deseas colonizar a pesar de potencialmente bajar su nivel?
+>>
+ONLY_PLANETS: Solo se puede usar en planetas.
+LEVEL: Nivel
+MANAGE: Gestionar
+EXPORT_RESOURCE: Exportar $1 a $2
+EXPORT_RESOURCES: Exportar recursos a $1
+QUEUE_EXPORT_RESOURCE: Encolar exportación de $1 a $2
+STOP_EXPORT_RESOURCE: Parar exportación de $1 a $2
+EXPORT_RESOURCE_PROMPT: Exportar $1
+EXPORT_RESOURCES_PROMPT: Exportar Recursos
+STOP_EXPORT_RES_QUEUE: Cancelar cola de exportación de $1 a $2
+IMPORT_RESOURCE: $1 Importado desde $2
+QUEUE_IMPORT_RESOURCE: Encolar importación de $1 a $2
+STOP_IMPORT_RESOURCE: Parar importación de $1 a $2
+STOP_IMPORT_RES_QUEUE: Cancelar cola de importación de $1 a $2
+RESOURCE_POP_REQUIRED: Población mínima de producción: [b]$1 Billón/es [/b].
+RESOURCE_LEVEL_REQUIRED: Nivel Mínimo Prod: $1.
+RESOURCE_TIER_DESC: Recurso [b]Grado [/b][img=$2;18/]. Mínimo Prod: $1.
+RESOURCE_EXPORTED_TO: Exportado a $1...
+RESOURCE_IMPORTED_FROM: Importado desde $1...
+ONLY_WITH_RESOURCES: Solo se puede usar en planetas o asteroides.
+INCOME: Ingresos
+REQ_FOR_LEVEL: Para Subir A Nivel $1:
+POP_REQ: [img=ResourceIcon::8;20/] [color=#ff9000]+[b]$1[/b] de población[/color]
+REQ_STOP_DECAY: ¡Faltan Recursos! Decae de vuelta al nivel $1 en $2 a menos que las necesidades sean cubiertas:
+REQ_TYPE: [font=Subtitle] Recurso [b]$1[/b][img=$2;26/][/font]
+REQ_TYPE_UNIQUE: Recurso único de $1:
+REQ_LEVEL: [font=Subtitle]Recurso de [b]Grado $1[/b][img=$2;26/][/font]
+REQ_LEVEL_UNIQUE: Recurso tipo único de Nivel $1:
+WAIT_CONSTRUCT: No se empezará a construir hasta que este resuelto.
+CONSTRUCTION_REQUIRES_LEVEL: Requiere que el planeta tenga nivel $1 para construir.
+ABANDON: Abandonar Planeta
+ABANDON_ACCEPT: Abandonar
+PROMPT_ABANDON: ¿Abandonar $1? Toda la población perecerá.
+BUILDING_CONSTRUCTING_PCT: Bajo Construcción... $1%
+BUILDING_DISABLED_POP: La construcción esta actualmente deshabilitada.
+BUILDINGS: Edificios
+PROJECTS: Proyectos
+AVAILABLE_RESOURCES: Recursos:
+REQUIRED_RESOURCES: Para Subir A Nv$1
+RESOURCE_CLASS_Food: Comida
+RESOURCE_CLASS_WaterType: Agua
+RENAME_NOTIF: Renombrado: $1
+RENAME_EVT: $1 ha renombrado a $2 como [b]$3[/b].
+DEFENSE_ON_OPTION: Empezar a usar defensa para $1
+DEFENSE_OFF_OPTION: Parar a usar defensa para $1
+TT_IS_DEFENDING: Marcado para usar defensa. La defensa provista por recursos en tu imperio será utilizada para producir naves de defensa aquí.\n\nLas naves producidas se esparciranentre cada ubicación marcada para defensa.
+TERRAFORM: Terraformar
+TERRAFORM_OPTION: Terraformar...
+TERRAFORM_ITEM: $1 ($2, $3 Trabajo)
+BUILD_TERRAFORM: Terraformar $2 a $1
+BUILD_DRY_DOCK: Dique Seco: $1
+EXPORT_LABOR: Exportar Trabajo a $1
+WORK_DRY_DOCK: Trabajo en Dique Seco
+TT_DRY_DOCK: <<
+	[b]Construir un Dique Seco[/b]
+
+	Crea un dique seco alrededor de un planeta para construir una nave. En un dique seco, el coste de construcción de la nave puede ser financiado con múltiples presupuestos.
+
+	Pon más dinero en un dique seco al hacer doble click en la vista de galaxia. Para hacer que un planeta añada su generación de trabajo a un dique, selecciona el planeta, click derecho en el dique y selecciona "Trabajar en Dique Seco".
+
+	Construir una nave en un dique seco incrementa su coste de construcción un 25%.
+>>
+TT_REPEAT_QUEUE: <<
+	[b]Alternar Cola de Repetición[/b]
+
+	Alterna si la cola actual esta instalada en repetición infinita.
+>>
+FINANCE_OPTION: Financiar...
+FINANCE_DRY_DOCK: Financiar Dique Seco: $1
+FINANCE: Financiar
+RENAME_OPTION: Renombrar... (1 Influencia)
+AUTO_IMPORT_LEVEL: Autoimportar a Nivel $1
+AUTO_IMPORT_OPTION: Autoimportar Recurso $1
+AUTO_IMPORT_TWO_OPTION: Autoimportar Recursos $1 y $2
+CANCEL_AUTO_IMPORT: Cancelar Autoimportaciones
+QUEUED_AUTO_IMPORT: Encolar Autoimportaciones...
+DESTROY_BUILDING: Destruir $1
+CANCEL_BUILDING: Cancelar $1
+STORED_LABOR: Trabajo Almacenado: $1 / $2
+TILE_BIOME_DEVELOPED: $1 (Desarrollado)
+TILE_BIOME_UNDEVELOPED: $1 (Sin Desarrollar)
+TILE_BIOME_GROWN: $1 (Crecimiento)
+TILE_BIOME_UNGROWN: $1 (Sin Crecimiento)
+BUILD_TIME: Tiempo de Construcción
+CANCEL_CONSTRUCTION: Cancelar esta Construcción
+OPT_CANCEL_IMPORT: Parar importación $1 a $2
+OPT_CANCEL_EXPORT: Parar exportación a $1
+OPT_MAKE_IMPORT: Importar $1 a $2
+OPT_IMPORT_AUTO: Autoimportar recurso de este tipo
+OPT_IMPORT_AUTO_CANCEL: Cancelar encolado de autoimportación de este tipo
+OPT_IMPORT_AUTO_CANCEL_ALL: Cancelar todas las colas de autoimportados a este planeta
+
+EXPBLOCK_USE: [color=#f33][b]No Se Puede Usar El Recurso:[/b][/color]\n$1
+EXPBLOCK_EXPORT: [color=#f33][b]No Se Puede Exportar Recurso:[/b][/color]\n$1
+EXPBLOCK_IMPORT: [color=#f33][b]No Se Puede Importar Recurso:[/b][/color]\n$1
+EXPBLOCK_DISABLED: El planeta esta bloqueado para exportar.
+EXPBLOCK_DEEPSPACE: Solo puedes comerciar dentro de sistemas.
+EXPBLOCK_UNOWNED: Solo puedes comerciar dentro del mismo imperio.
+EXPBLOCK_UNMINED: Se necesita Base Minera.
+EXPBLOCK_UNCOLONIZED: El planeta debe ser colonizado.
+EXPBLOCK_LOWLEVEL: El planeta debe ser al menos de nivel $1.
+EXPBLOCK_POP: El planeta necesita $1 Billón de población para exportar recurso.
+EXPBLOCK_DISCONNECTED: Solo se puede comerciar a través de sistemas conectados.
+EXPBLOCK_UNUSABLE: Circunstancias especiales evitan la exportación.
+
+HINT_USE_PLANETS_TITLE: Planetas Sin Uso
+HINT_USE_PLANETS: <<|
+	Los planetas de Nivel 0 tienen un coste de mantenimiento en dinero.
+
+	Exporta los recursos de tus planetas de nivel bajo para construir planetas
+	de nivel alto, o abandona planetas sin uso para aumentar tu presupuesto.
+>>
+
+HINT_COLONIZE_TITLE: Colonización Lenta
+HINT_COLONIZE: <<|
+	La colonización requiere población y dinero. Cuando estas en deuda, la tasa de colonización
+	puede ser retrasada en gran medida.
+
+	Céntrate en la colonización de un pequeño número de planetas en primer lugar para apoyar
+	posteriores colonizaciones. Puedes cancelar una orden de colonización para acelerar las restantes.
+>>
+
+TT_MANAGE_PLANET: <<|
+	[b]Gestionar Planeta[/b]
+
+	Vista de información de la superficie, recursos y construcción de un planeta.
+>>
+
+TT_MANAGE_PLANET_SUPPORTS: <<|
+	[b]Gestionar Apoyos[/b]
+
+	Gestionas los grupos de naves de apoyo asignadas a esta ubicación.
+>>
+
+COLONIZE: Colonizar
+TT_COLONIZE: <<|
+	[b]Colonizar[/b]
+
+	Envías 1B de población del planeta a otros planetas desocupados para colonizarlos.
+>>
+TT_COLONIZE_THIS: <<|
+	[b]Colonizar Esto[/b]
+
+	Envías 1B de población de uno de tus planetas a este planeta para colonizarlo.
+>>
+
+DEFENSE_TARGET: Construir Defensa
+TT_DEFENSE_TARGET: <<|
+	[b]Construir Defensa para...[/b]
+
+	En vez de construir naves de defensa alrededor del planeta, construyes naves de defensa
+	para uso en otros sistema objetivo que tu controles.
+>>
+
+PLANET_POPULATION_TIP: <<|
+	[b]Población[/b]
+
+	La cantidad en billones de personas que viven en el planeta. A mayor población, mayor base de ingresos y capacidad de presión.
+>>
+
+PLANET_INCOME_TIP: <<
+	[b]Ingresos[/b]
+
+	La cantidad de dinero que este planeta gana o pierde en cada ciclo presupuestario.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_INFLUENCE_TIP: <<
+	[b]Influencia Apilada[/b]
+
+	Cada influencia apilada en un planeta incrementa tu porcentaje de generación de influencia.
+
+	La influencia se usa en la diplomacía, principalmente.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_ENERGY_TIP: <<
+	[b]Energía[/b]
+
+	La Energía se usa para activar artefactos alrededor de la galaxia, principalmente.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_DEFENSE_TIP: <<
+	[b]Defensa[/b]
+
+	Periódicamente construyes naves de apoyo para defensa alrededor del planeta, o en planetas
+	de cualquier otro sistema si lo configuras para ello.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_LOYALTY_TIP: <<|
+	[b]Lealtad[/b]
+
+	La lealtad indica como de entregados a tus ideas están en este planeta.
+
+	Asediar un planeta gradualmente reducirá su lealtad hasta que sea 0, tras
+	lo cual este será capturado por el imperio asediador.
+
+	A mayor lealtad en un planeta, mayor influencia cuesta anexarlo diplomáticamente.
+>>
+
+PLANET_PRESSURE_TIP: <<
+	[b]Capacidad de Presión[/b]
+
+	Muchos recursos planetarios otorgan [b]Presión[/b] al planeta en el que se encuentran.
+
+	La [b]presión[/b] causa que los civiles en un planeta dejen los edificios que generan ciertos tipos de recursos.
+
+	La cantidad de estructuras civiles que un planeta puede soportar esta limitado por su [b]Capacidad de Presión[/b]. Si se supera se construirán edificios civiles de menor eficiencia, con la consiguiente pérdida de generación de recursos.
+
+	A mayor [b]Población[/b] en un planeta, mayor [b]Capacidad de Presión[/b].
+
+	[b]Presión Importada Total:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa Total:[/b] [offset=220]$2[/offset]
+	[b]Capacidad de Presión:[/b] [offset=220]$3[/offset]
+>>
+
+PLANET_LABOR_TIP: <<
+	[b]Trabajo[/b]
+
+	El trabajo afecta la tasa de construcción del planeta.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_RESEARCH_TIP: <<
+	[b]Investigación[/b]
+
+	Genera puntos de investigación para gastar en el cuadro de investigación y desbloquear tecnologías.
+
+	[b]Presión Importada:[/b] [offset=220]$1[/offset]
+	[b]Presión Activa:[/b] [offset=220]$2[/offset]
+>>
+
+PLANET_REQUIREMENTS_TIP: <<|
+	[b]Requisitos de Nivel[/b]
+
+	Importar estos tipos de recursos a este planeta causará que su nivel
+	suba.
+>>
+
+STATUS_HAPPY: Feliz
+STATUS_HAPPY_DESC: <<|
+	Todos los recursos imperiales producidos en este planeta ganan 1 de producción extra.
+>>
+
+STATUS_VIRILE: Viril
+STATUS_VIRILE_DESC: <<|
+	La población crece al doble de la tasa normal.
+>>
+
+COND_NATIVE_FISH: Pesca Nativa
+COND_NATIVE_FISH_DESC: <<
+	Deliciosas, pero perecederas formas de vida acuáticas. No exportable.
+>>
+NATIVE_FISH: Pesca Nativa
+NATIVE_FISH_DESC: <<
+	Aumenta el tiempo de vida de los recursos temporales consumidos un 30%.
+
+	[color=#ff7070][b]No puede ser exportado.[/b][/color]
+>>
+
+COND_EXTRA_MONEY: Depósito de Metales Preciosos
+COND_EXTRA_MONEY_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::0;20/] [color=#d1cb6aff]Dinero[/color][/b].
+>>
+
+COND_EXTRA_RESEARCH: Atmósfera Exótica
+COND_EXTRA_RESEARCH_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::4;20/] [color=#8c4ec9]Investigación[/color][/b].
+>>
+
+COND_EXTRA_INFLUENCE: Paraíso Tropical
+COND_EXTRA_INFLUENCE_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::1;20/] [color=#0087c7]Influencia[/color][/b].
+>>
+
+COND_EXTRA_LABOR: Gravedad Baja
+COND_EXTRA_LABOR_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::6;20/] [color=#b1b4b6]Trabajo[/color][/b].
+>>
+
+COND_EXTRA_DEFENSE: Minerales Inestables
+COND_EXTRA_DEFENSE_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::5;20/] [color=#af7926]Defensa[/color][/b].
+>>
+
+COND_EXTRA_ENERGY: Conductos Geotérmicos
+COND_EXTRA_ENERGY_DESC: <<|
+	+[b]1 a presión de [img=ResourceIcon::2;20/] [color=#42b4bd]Energía[/color][/b].
+>>
+
+COND_ANCIENT_CANNON: Defensa Planetaria Antigua
+COND_ANCIENT_CANNON_DESC: <<|
+	Un antiguo cañón planetario en la superficie, desactivado pero operativo.
+>>
+BLD_ANCIENT_CANNON: Defensa Planetaria Antigua
+BLD_ANCIENT_CANNON_DESC: <<|
+	Un antiguo cañón planetario, encontrado en este planeta y activado.
+
+	El cañón queda desactivado si hay flotas enemigas asediando el planeta, y
+	todas las defensas orbitales del planeta son destruidas.
+>>
+
+COND_ANCIENT_RUINS: Ruinas Antiguas
+COND_ANCIENT_RUINS_DESC: <<|
+	Al colonizar, se obtiene una cantidad de investigación al estudiarlas.
+>>
+BLD_ANCIENT_RUINS: Ruinas Antiguas
+BLD_ANCIENT_RUINS_DESC: <<|
+	Las ruinas antiguas de un puesto de avanzada militar construida por una raza avanzada hace eones. Cuando se coloniza por primera vez, se obtiene una cantidad de investigación.
+>>
+
+COND_HIGH_YIELD: Recursos de Alto Rendimiento
+COND_HIGH_YIELD_DESC: <<|
+	Concede doble de presión normal, pero baja el límite de presión en 3.
+>>
+
+COND_NOXIOUS_ATMOSPHERE: Atmósfera Dañina
+COND_NOXIOUS_ATMOSPHERE_DESC: <<|
+	Reduce la población máxima en 1.
+>>
+
+COND_SPARSE: Recurso Disperso
+COND_SPARSE_DESC: <<|
+	El recurso concede la mitad de su presión, pero requiere un Grado de Nivel 1 menos subir [img=ResourceClassIcons::0;18/] el nivel.
+>>
+
+COND_BARREN: Estéril
+COND_BARREN_DESC: <<|
+	Una roca estéril desprovista de atmósfera o recursos.
+>>
+
+COND_MOON: Luna
+COND_MOON_DESC: <<
+	Este planeta tiene una luna en la que se puede construir una base.
+
+	Cada luna puede contener una base. Múltiples lunas, múltiples bases.
+>>
+
+COND_EXTRA_PRESSURE: Montañas Imponentes
+COND_EXTRA_PRESSURE_DESC: <<
+	El recurso de este planeta concede [b]1 bono de presión[/b] a su tipo primario.
+>>
+
+COND_DOUBLE_REQUIREMENT: Desiertos Expansivos
+COND_DOUBLE_REQUIREMENT_DESC: <<
+	El recurso del planeta cuenta por dos para cumplir [b][img=ResourceClassIcons::0;20/]Requisitos de Grado 1[/b].
+>>
+
+COND_GROWTH: Megafauna
+COND_GROWTH_DESC: <<
+	Aumenta el crecimiento y desarrollo de la población del planeta un 25%.
+>>
+
+COND_NEG_PRESSURE: Páramo Congelado
+COND_NEG_PRESSURE_DESC: <<
+	El recurso de este planeta reduce su capacidad de presión en 2.
+>>
+
+BIOME_CRYSTALLIC: Cristal
+BIOME_DESERT: Desierto
+BIOME_FOREST: Bosque
+BIOME_ICE: Hielo
+BIOME_MOUNTAINS: Montañas
+BIOME_OCEANIC: Oceánico
+BIOME_VOLCANIC: Volcánico
+BIOME_MOON: Luna
+BIOME_SPACE: Espacio
+BIOME_ARTIFICIAL: Artificial

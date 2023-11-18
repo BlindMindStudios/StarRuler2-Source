@@ -1,0 +1,25 @@
+STATUS_DEVASTATE: Devastado
+STATUS_DEVASTATE_DESC: Este planeta esta perdiendo población con el paso del tiempo.
+
+STATUS_GRAVITARSHIP: Nave Gravitar
+STATUS_GRAVITARSHIP_DESC: Estas naves antiguas recuperan artefactos que han vagado durante mucho tiempo por el espacio profundo.
+
+STATUS_STARTING_PROTECTION: Estableciendo Protección
+STATUS_STARTING_PROTECTION_DESC: Protección completa de lealtad para los planetas en este sistema que esta siendo establecido. Llevará un tiempo su activación.
+
+STATUS_BLOCKED_COLONIZATION: Colonización Bloqueada
+STATUS_BLOCKED_COLONIZATION_DESC: Este planeta no puede ser colonizado debido a remanentes no derrotados en el sistema.
+
+STATUS_LIMITED_SIGHT: Visión Limitada
+STATUS_LIMITED_SIGHT_DESC: La nebulosa en este sistema esta limitando el rango de visión.
+
+STATUS_GATE_PACKED: Puerta Empaquetada
+STATUS_GATE_PACKED_DESC: Esta puerta esta actualmente empaquetada. Puertas empaquetadas pueden moverse lentamente, pero no pueden disparar sus armas o establecer agujeros de gusano.
+
+STATUS_GATE_UNPACKED: Puerta Activa
+STATUS_GATE_UNPACKED_DESC: Esta es una puerta activa en la cual agujeros de gusano pueden ser establecidos.
+
+STATUS_IMPROVED_PRESSURE: Presión Añadida
+STATUS_IMPROVED_PRESSURE_DESC: <<
+	Este recurso esta concediendo presión adicional de su tipo cuando es consumido.
+>>

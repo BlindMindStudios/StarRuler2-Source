@@ -1,0 +1,154 @@
+INVASION_MAP: Invasión
+INVASION_MAP_DESC: <<
+	Protege la galaxia de una gran invasión.
+>>
+INVASION_MAP_TEXT: <<
+	[i][color=#aaa]Una linea de estaciones de remanentes de defensa que protege la galaxia de la aniquilación, pero están amenazadas por las cada vez más fuertes fuerzas de invasión. ¡Protege la linea de defensa o enfréntate a la destrucción![/color][/i]
+>>
+
+REMNANT_DEFENSE_LINE: Linea de Defensa de Remanentes
+INVADER: Invasor
+VERB_COLLECT: Coleccionar
+NEXT_WAVE: Próxima Ola:
+NEXT_STRENGTH: Fuerza:
+INV_DIFFICULTY: Dificultad:
+
+INV_PICKUP_MONEY: Potenciador de Economía
+INV_PICKUP_MONEY_DESC: <<
+	[color=#afa]Permanentemente incrementa tu presupuesto por §500k.[/color]
+	[color=#faa]Incrementa la fuerza de la invasión.[/color]
+>>
+
+INV_PICKUP_LABOR: Potenciador de Trabajo
+INV_PICKUP_LABOR_DESC: <<
+	[color=#afa]Incrementa el trabajo del planeta natal en 10.[/color]
+	[color=#faa]Incrementa la fuerza de invasión.[/color]
+>>
+
+INV_PICKUP_FOOD: Generación de Comida
+INV_PICKUP_FOOD_DESC: <<
+	[color=#afa]Ganas 4 cartas de diplomacia de Cultivo.[/color]
+	[color=#faa]Incrementa la fuerza de invasión.[/color]
+>>
+
+INV_PICKUP_WATER: Generación de Agua
+INV_PICKUP_WATER_DESC: <<
+	[color=#afa]Creas 4 Cometas en este sistema.[/color]
+	[color=#faa]Incrementa la fuerza de invasión.[/color]
+>>
+
+INV_PICKUP_RESOURCE2: Recursos Exótico
+INV_PICKUP_RESOURCE2_DESC: <<
+	[color=#afa]Ganas un planeta de recurso de Grado 2.[/color]
+	[color=#faa]Incrementa la fuerza de invasión.[/color]
+>>
+
+INV_PICKUP_RESOURCE1: Recurso Valioso
+INV_PICKUP_RESOURCE1_DESC: <<
+	[color=#afa]Ganas un planeta de recurso de Grado 1.[/color]
+	[color=#faa]Incrementa la fuerza de invasión.[/color]
+>>
+
+INV_ART_PLANET: Esquirla de Materia
+INV_ART_PLANET_DESC: <<
+	Crea un nuevo planeta aleatorio.
+	[color=#f00]Fuerza Añadida:[/color] El planeta generado tiene [b]Medicamentos[/b].
+>>
+INV_ABL_PLANET: Planeta Aleatorio
+INV_ABL_PLANET_DESC: <<
+	Genera un planeta propio en la posición objetivo.
+>>
+INV_ABL_PLANET_PLUS: Planeta de Medicamentos
+INV_ABL_PLANET_PLUS_DESC: <<
+	Genera un nuevo planeta de Medicamentos en la posición objetivo.
+
+	[b][color=#f00]Incrementa la fuerza de la invasión.[/color][/b]
+>>
+
+INV_ART_MONEY: Esquirla Rara
+INV_ART_MONEY_DESC: <<
+	Incrementa tu ingreso en §300k.
+	[color=#f00]Fuerza añadida:[/color] Coste de Trabajo de Naves -10%
+>>
+INV_ABL_MONEY: Ingreso de §300k
+INV_ABL_MONEY_DESC: <<
+	Incrementa tus ingresos presupuestarios en §300k.
+>>
+INV_ABL_MONEY_PLUS: Construcción
+INV_ABL_MONEY_PLUS_DESC: <<
+	Todas las naves y estaciones cuestan un 10% menos de Trabajo construirlas.
+
+	[b][color=#f00]Incrementa la fuerza de la invasión.[/color][/b]
+>>
+
+INV_ART_STATION: Esquirla Volátil
+INV_ART_STATION_DESC: <<
+	Actualizar Estación Remanente en un tamaño de 256.
+	[color=#f00]Fuerza Añadida:[/color] Inmediatamente destruyes todos los enemigos en un sistema.
+>>
+INV_ABL_STATION: Actualizar Estación
+INV_ABL_STATION_DESC: <<
+	La Estación de Defensa remanente objetivo es incrementada en tamaño por 256.
+>>
+INV_ABL_STATION_PLUS: Destrucción
+INV_ABL_STATION_PLUS_DESC: <<
+	Todas las flotas enemigas en el sistema objetivo son inmediatamente destruidas.
+
+	[b][color=#f00]Incrementa la fuerza de la invasión.[/color][/b]
+>>
+
+INV_ART_RESEARCH: Esquirla Exótica
+INV_ART_RESEARCH_DESC: <<
+	Incrementa la presión de recurso en 4.
+	[color=#f00]Fuerza Añadida:[/color]Todas las Investigaciones Complejas dan +1 a la Presión de Investigación.
+>>
+INV_ABL_RESEARCH: Recurso
+INV_ABL_RESEARCH_DESC: <<
+	El recurso objetivo otorga 4 de presión extra de su tipo.
+>>
+INV_ABL_RESEARCH_PLUS: Laboratorio
+INV_ABL_RESEARCH_PLUS_DESC: <<
+	Todos tus Complejos de Investigación dan +1 adicional de Presión de Investigación.
+
+	[b][color=#f00]Incrementa la fuerza de la invasión.[/color][/b]
+>>
+
+INV_ART_SYSTEM: Esquirla de Singularidad
+INV_ART_SYSTEM_DESC: <<
+	Generas un nuevo sistema con protoplanetas en el.
+	[color=#f00]Fuerza Añadida:[/color] Sacrificar un planeta por Energía.
+>>
+INV_ABL_SYSTEM: Generar
+INV_ABL_SYSTEM_DESC: <<
+	Genera una nueva Estrella rodeada por protoplanetas.
+>>
+INV_ABL_SYSTEM_PLUS: Convertir Energía
+INV_ABL_SYSTEM_PLUS_DESC: <<
+	El planeta objetivo que posees es destruido. Tu Energía almacenada crece hasta 2500.
+
+	[b][color=#f00]Incrementa la fuerza de la invasión.[/color][/b]
+>>
+
+HELP_INVASION: <<
+	[font=Big]Invasión[/font][vspace=4/]
+	Has elegido jugar en un mapa de [color=#aaffaa]Invasion[/color]. ¡Aquí unos pocos consejos para antes de que comiences!
+	[color=#aaa][i]Accede a esta ventana en cualquier momento al pulsar el [img=MenuIcons::3;22/] botón del lado derecho de la pantalla.[/i][/color]
+
+	[font=Medium]Cooperativo[/font][vspace=4/]
+	[color=#ccc]La invasión es un mapa cooperativo. Los imperios no pueden declarar la guerra unos a otros. ¡Las connivencia diplomática esta bien![/color]
+
+	[font=Medium]!Defensa![/font][vspace=4/]
+	[color=#ccc]Tu sistema nativo limita con tres sistemas que contienen estaciones de defensa remanente. Estos sistemas serán atacados con olas cada vez más fuertes de invasores.[/color]
+
+	[font=Medium]Derrota[/font][vspace=4/]
+	[color=#ccc]Debes [b]proteger las Estaciones de Defensa de Remanente[/b]. Cuando las tres estaciones en un sistema desaparezcan, el sistema explotará. Cuando los tres sistemas que estas defendiendo desaparezcan, tu imperio explotará.[/color]
+
+	[font=Medium]Libre de Mantenimiento[/font][vspace=4/]
+	[color=#ccc]¡A diferencia de en los mapas normales, tus buques insignia no tienen coste de mantenimiento, así que construye cuantos quieras![/color]
+
+	[font=Medium]Esquirlas Artefacto[/font][vspace=4/]
+	[color=#ccc]Cuando derrotas una ola de Invasores, sueltan una [b]Esquirla de Artefacto[/b]. Estas pueden ser usadas para ganar varios tipos de potenciadores para tu imperio.[/color]
+
+	[font=Medium]Esquirlas Secundarias[/font][vspace=4/]
+	[color=#ccc]Cada esquirla artefacto también se puede usar de otra forma, más poderosa, pero al usarla incrementas la fuerza de las olas invasoras para todos en el juego![/color]
+>>

@@ -1,0 +1,182 @@
+BLUEPRINTS: Planos
+OPTIONS: Opciones
+TAB: Pestaña
+RESEARCH_OVERVIEW: Visión de Investigación
+DESIGN_OVERVIEW: Visión de Diseño
+GALAXY_CAMERA: Cámara Galaxia
+GALAXY: Galaxia
+STATS_TAB: Estadísticas
+SYSTEM_TAB: Sistemas
+PLANETS_TAB: Planetas
+PLANETS_MODE_NORMAL: Normal
+PLANETS_MODE_MONEY: Ingresos
+PLANETS_MODE_PRODUCTION: Producción
+PLANETS_MODE_REQS: Requisitos
+PLANETS_MODE_TILES: Superficie
+PLANETS_MODE_PRESSURE: Presión
+NOTICE: Aviso
+
+EMPIRE_ENERGY: "Energía: "
+EMPIRE_SOLARGENS: "Generadores Solares: "
+EMPIRE_SUPPLY: $1/$2
+EMPIRE_SUPPLY_OUTPUT:$1%
+
+PLANET_INFO: $1 ($2B / $3B)
+PLANET_POPULATION: $1 Mil Millón de Colonos.
+
+ANOMALY_FIELD: Anomalía
+SCAN_ANOMALY: Escanear Anomalía
+INVESTIGATE_ANOMALY: Investigar Anomalía
+
+BACK_TO_OVERVIEW: Volver a la Vista General
+
+CONCEPT: Concepto
+CONSTRUCTION: Construcción
+MISSION_GOALS: Objetivos de Misión
+REVIEW: Revisión
+
+BUILT_NOTIFICATION: Finalizada Construcción de $1.
+BUILT_AT_NOTIFICATION: Finalizada Construcción de $1 en $2.
+BUILT_ON_NOTIFICATION: Finalizada Construcción de $1 en $2.
+
+QUEUE_SIZE: $1 más a la cola.
+BUILDING_THING: Construyendo $1 ($2%)
+BUILDING_NOTHING: Nada esta siendo construido
+
+DESIGN_SIZE: Tam. $1
+CREATE_DESIGN: Crear Diseño
+CREATE_DESIGN_CLASS: Crear Clase
+IMPORT_DESIGNS: Importar
+SEARCH_DESIGNS: Buscar Diseños...
+DESIGN_CLASS_NAME: Diseñar Nombre de Clase:
+
+DESIGN_NAME_INPUT: Nombre:
+DESIGN_CLASS_INPUT: Clase:
+DESIGN_SIZE_INPUT: Tam:
+DESIGN_HULL_INPUT: Casco:
+MINSIZE_SUPPORT: Tamaño $1+, Apoyo
+MINSIZE_FLAGSHIP: Tamaño $1+, Buque Insignia
+MINSIZE_STATION: Tamaño $1+, Estación
+DESIGN_FLAGSHIP: Buque Insignia
+DESIGN_SUPPORT: Nave de Apoyo
+DESIGN_STATION: Estación
+DESIGN_SATELLITE: Satélite de Apoyo
+
+DESIGN_SHOW_ARCS: Alternar si mostrar los [b]Arcos de Disparo[/b] de las armas torreta en todo momento.
+DESIGN_SHOW_HULL: Alternar si mostrar el modelo de casco de tu diseño bajo el plano.
+DESIGN_CENTER: Centrar el diseño en la cuadrícula.
+DESIGN_RANDOMIZE: Generar un diseño completamente aleatorio para este tipo de nave.
+DESIGN_RANDOMIZE_CONFIGURE: Configura los parámetros para la generación de naves aleatorias.
+DESIGN_CONFIGURE: Configurar Aleatorizador
+DESIGN_UNDO: Deshacer último cambio. ($1)
+DESIGN_REDO: Rehacer último cambio deshecho. ($1)
+DESIGN_PAINT_TOOL: <<
+	[b]Brocha ($1)[/b]
+	[color=#0f0]Mantén click izquierdo para pintar hexes con el tipo de subsistema seleccionado.[/color]
+	[color=#f00]Mantén click derecho para eliminar hexes de subsistemas.[/color]
+	Modificadores, núcleos y torretas pueden ser movidos al arrastrar con click izquierdo.
+
+	[i]Mantén control mientras haces click izquierdo para crear un nuevo núcleo en vez de añadir un subsistema existente. [/i]
+
+	[i]Mantén alt o click en medio para usar el gotero.[/i]
+>>
+DESIGN_MOVE_TOOL: <<
+	[b]Mover ($1)[/b]
+	Mueve el hex seleccionado actualmente.
+
+	[i]Mantén shift para mover es subsistema entero.[/i]
+
+	[i]Mantén control para duplicar el subsistema arrastrado.[/i]
+>>
+DESIGN_DROP_TOOL: <<
+	[b]Gotero ($1)[/b]
+	Click Izquierdo para seleccionar el tipo de subsistema del hex clicado.
+>>
+DESIGN_REPLACE_TOOL: <<
+	[b]Reemplazar ($1)[/b]
+	Clica un subsistema para reemplazarlo enteramente con un subsistema de tipo seleccionado.
+>>
+DESIGN_CLEAR: Limpia los contenidos del diseño. Puede ser deshecho.
+
+DESIGN_RND_WEAPONCOUNT: Contador de Armas
+DESIGN_RND_ENGINESIZE: Tamaño de Motor
+DESIGN_RND_HYPERSIZE: Tamaño de Hipermotor
+DESIGN_RND_SUPPLIES: Genera alm. de reservas
+DESIGN_RND_SUPPORT: Genera Control de Apoyo
+
+GRAPHICS_EDITOR: Editor de Gráficos
+MODULES: Modulos
+
+WEAPONS: Armas
+DEFENSES: Defensas
+
+SAVE_GAME_DATA: Salvar a Datos de Juego
+SAVE_GAME_DATA_CONFIRM: ¿Estas seguro que deseas sobrescribir los datos del juego?
+RESET_GAME_DATA: Reiniciar los datos del juego
+RESET_GAME_DATA_CONFIRM: ¿Estas seguro que deseas reiniciar los datos del juego?
+MUTATION_CHANCE: Probabilidad de Mutación:
+NAME_COUNT: $1 nombres
+
+CONFIRM_OVERWRITE: ¿Estas seguro de que deseas sobrescribir '$1'?
+CONFIRM_DELETE_FILES: ¿Estás seguro que deseas eliminar los siguientes archivos/directorios y cualquier archivo que puedan contener?
+FILENAME_LABEL: Nombre de Archivo:
+NEW_DIRECTORY: Directorio Nuevo
+CREATE_DIRECTORY: Crear Directorio
+DIRECTORY_LABEL: Directorio:
+
+PLAY_EMPIRE_TITLE: Seleccionar Imperio
+SPECTATE: Observar
+PLAY_EMPIRE: Jugar Imperio
+
+FREE_RESOURCES: Recursos Sin Usar
+DISABLED_RESOURCES: Recursos Desactivados
+NO_POP_RESOURCES: Insuficiente Población para Producir
+DECAYING_PLANETS: Planetas Que Han Bajado de Nivel
+LABOR_PLANETS: Planetas/Orbitales con Trabajo
+COLONIZING_PLANETS: Parcialmente Colonizado
+INFLUENCE_STACK: Regatear Influencia
+WONDER_PLANETS: Maravillas Poseidas
+UNDER_SIEGE_PLANETS: Planetas Bajo Asedio
+DEFENSE_TARGETS: Localizaciones Usando Defensa
+ALL_FLEETS: Buques Insignia Militares
+CIVILIAN_FLEETS: Buques Insignia Civiles
+MOTHERSHIPS: Naves Nodrizas
+DEFENSE_STATIONS: Estaciones de Defensa
+COMBAT_FLEETS: Flotas en Combate
+FLEETS_LOW_SUPPLY: Flotas con Bajos Reservas
+AVAIL_ARTIFACTS: Artefactos Disponibles
+COLONIZE_SAFE_PLANETS: Población Suficiente para Colonizar
+AUTO_IMPORTS: Autoimportaciones Pendientes
+TT_AUTO_IMPORTS: Planetas que están actualmente esperando [img=$3;20/] [b]$1 $2 recurso(s)[/b] para estar disponibles para la autoimportación.
+OVERPRESSURE_PLANETS: Planetas Excediendo la Presión de Capacidad
+
+ASTEROID_UNOWNED: <<
+	Selecciona un planeta y haz click derecho para construir [b][color=#8c4ec9]Base Minera[/color][/b] y acceder a un recurso.
+>>
+ASTEROID_OWNED: <<
+	Este asteroide tiene una base minera. Si el imperio propietario pierde el acceso comercial, esta es eliminada.
+>>
+ASTEROID_MINING: <<
+	Este asteroide debe ser minado por una [color=#91692c][b]Nave minera[/b][/color] para su uso en un planeta.
+>>
+MOVE_TO_OBJ: Mover a $1
+
+GO_RESOURCE: $1
+GO_RESOURCE_TYPE: Encontrar Recurso
+
+TT_GAMETIME: <<|
+	Muestra el tiempo del juego actual desde que empezó.
+
+	[i]Clicv para alternar con el tiempo real actual.[/i]
+>>
+TT_REALTIME: <<|
+	Muestra la hora real del dia.
+
+	[i]Click para alternar al tiempo del juego.[/i]
+>>
+TT_PAUSE: Alterna pausas del juego.
+TT_SLOWER: Reduce la velocidad del juego.
+TT_FASTER: Incrementa la velocidad del juego.
+PAUSED: PAUSA
+WAITING: ESPERANDO
+NOTIFICATION_LOG: Log de Eventos

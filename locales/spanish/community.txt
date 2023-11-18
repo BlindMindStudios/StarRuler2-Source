@@ -1,0 +1,36 @@
+COMMUNITY_TITLE: (Comunidad) $1
+COMMUNITY_HOME_TITLE: Comunidad
+COMMUNITY_WIKI: Wiki: Página Principal
+UPLOAD: Subir
+FEATURED_DESIGNS: Diseños Destacados
+COMMUNITY_DESIGN_SPEC: Tamaño $1,por $2 en $3
+COMMUNITY_DESIGN_CURLINE: [color=#aaa][img=ThumbsUp;20x20/] [b][color=#0f0]$1[/color][/b] [hspace=100/] [img=MenuIcons::6;20/] [b]$2[/b] Comentario(s)[/color]
+DOWNLOAD_DESIGN_CLASS: Descargar
+DOWNLOAD_TO_PROFILE: Descargar al Perfil
+TT_DOWNLOAD_TO_PROFILE: <<|
+	Descarga el diseño mostrado a tu perfil donde serás capaz de importarlo en este o futuros juegos.
+>>
+SUCCESS_DOWNLOAD_TO_PROFILE: Diseño descargado con éxito al perfil.
+DOWNLOAD_TO_EMPIRE: Descargar a Juego
+TT_DOWNLOAD_TO_EMPIRE: <<|
+	Descargar el diseño mostrado a tu actual partida solo, para uso inmediato en tu imperio.
+>>
+TT_DOWNLOAD_ERRORS: <<|
+	Este diseño no puede ser descargado en tu imperio actual, porque tiene errores:
+>>
+SUCCESS_DOWNLOAD_TO_EMPIRE: Diseño descargado con éxito a la partida actual.
+DOWNLOAD_EDIT: Cargar en Editor
+TT_DOWNLOAD_EDIT: Abrir este diseño en el editor para hacer cambios antes de salvar.
+VOTES_BUTTON: $1
+TT_VOTES_BUTTON: Votar este diseño.
+COMMENTS_BUTTON: Comentario(s) $1
+COMMENT_TEXT: Escribe tu comentario....
+COMMENT_SUBMIT: Subir Comentario
+COMMUNITY_CONFIRM_DELETE_DESIGN: ¿Estas seguro de que deseas eliminar este diseño de la comunidad online? Esto no puede ser deshecho.
+UPLOAD_DESIGN: Subir Diseño
+RECENT_DESIGNS: Diseños Recientes
+TOPRATED_DESIGNS: Diseños Más Votados
+SEARCH_DESIGNS_PROMPT: Buscar Diseños...
+DESIGN_DESCRIPTION_PROMPT: Escribir una descripción para tu diseño...
+DESIGN_CHOOSE_PROMPT: Elegir un diseño...
+DESIGN_LINK_TIP: Puedes conectar a este diseño escribiendo [[design:$1]]

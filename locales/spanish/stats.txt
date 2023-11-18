@@ -1,0 +1,21 @@
+STAT_Ships: Naves
+STAT_ShipsBuilt: Naves Construidas
+STAT_ShipsLost: Naves Perdidas
+STAT_ShipsDestroyed: Naves Destruidas
+
+STAT_Planets: Planetas
+STAT_Planets_EVT_Lost: $1 Perdidos
+STAT_Planets_EVT_Colonized: $1 Colonizados
+STAT_Planets_EVT_Conquered: $1 Conquistados
+STAT_Planets_EVT_Glassed: $1 Acristalados
+
+STAT_SupplyGen: Generación de Reservas
+STAT_SupplyUse: Consumo de Reservas
+STAT_MetalsGen: Generación de Metales
+STAT_MetalsUse: Consumo de Metales
+
+STAT_NET_BUDGET: Presupuesto Neto
+STAT_ENERGY_INCOME: Energía/s
+STAT_INFLUENCE_INCOME: Influencia/m
+STAT_RESEARCH_INCOME: Investigación/s
+STAT_RESEARCH_TOTAL: Investigación

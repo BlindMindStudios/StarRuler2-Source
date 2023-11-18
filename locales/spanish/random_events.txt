@@ -1,0 +1,80 @@
+EVT_REACTOR: Un Reactor
+EVT_REACTOR_TEXT: <<
+	Un equipo de exploración en [target=Location/] ha descubierto un reactor remanente antiguo, enterrado durante muchos años bajo tierra y plantas nativas.
+
+	El reactor fue construido para extraer increíbles cantidades de energía del subespacio, pero fue desactivado y abandonado por los remanentes después de una primera prueba, por razones desconocidas.
+	
+	Uno de tus científicos cree que puede sobrecargar lo protocolos de seguridad del sistema y reactivar el reactor, mientras se escuda el complejo de las partículas exóticas y su radiación.
+>>
+EVT_REACTOR_ACTIVATE: Permitir a tus científicos sobrescribir los protocolos de seguridad y activar el reactor.
+EVT_REACTOR_IGNORE: Ignorar el reactor y dejarlo en paz - los protocolos de seguridad estaban ahí por una razón.
+EVT_REACTOR_SUCCESS: <<
+	¡La reactivación ha sido un éxito! El planeta es ahora de capaz de producir vastas cantidades de energía cuando se le otorga la infraestructura adecuada.
+
+	El planeta ahora tiene [b]+2 de producción de energía[/b] además de [b]+10 de presión de energía[/b].
+>>
+EVT_REACTOR_FAILURE: <<
+	¡El aislamiento insuficiente de las partículas exóticas liberadas por la reacción ha causado una fusión de sistemas catastróficos!
+
+	Increíbles cantidades astronómicas están siendo emitidas sin control, causando una casi detonación simultanea de cinco sextos de toda la materia del sistema solar en que se encontraba.
+
+	Tu equipo de científicos se cuentan como uno de los millones de muertos. Esperas que esto sirva de acicate a futuros científicos a ser más cuidadosos con la tecnología remanente, la próxima vez.
+>>
+STATUS_EVT_REACTOR: Reactor Remanente
+STATUS_EVT_REACTOR_DESC: <<
+	Un reactor remanente fue activado con éxito en este planeta, dando [b]+2 de producción de energía[/b] y +10 de presión de energía[/b].
+>>
+
+EVT_CLIQUE: Un Pueblo Mecánico
+EVT_CLIQUE_TEXT: <<
+	Los detectores sísmicos en [target=Location/] han localizado un fenómeno extraño en una posición no destacable de la superficie. Examinando el lugar, el equipo han encontrado una diminuta salida hiperespacial. Un ser [target=race;Other/] logró pasar a través de ella antes de que se cerrara.
+
+	El solitario ciudadano mecanoide de [target=Other/] pregunto por una audiencia:
+
+	[offset=20][color=#aaa]Esfuerzos de [targer=Other/] para descubrir su propósito parecen insuficientes.
+	Propósito: Construir más unidades para establecer nuevo grupo de [target=race;Other/].
+	Dispositivo dañado FTL en un salto largo.
+	Solicitud de ayuda y refugio. A cambio de trabajo.[/color][/offset]
+>>
+EVT_CLIQUE_ALLOW: <<
+	Permites a [target=race;Other/] establecer una nueva comunidad en [target=Location/], dejándole claro sobre la cantidad máxima de unidades mecanoides extra que se le permite construir.
+>>
+EVT_CLIQUE_SUCCESS: <<
+	La pequeña comunidad ha florecido y se ha integrado cordialmente con tu industria en el planeta. Los mecanoides parecen lo suficientemente pacíficos, utilizando su tiempo de procesamiento libre para analizar telemetría espacial en un esfuerzo por descubrir algo sobre su raza.
+
+	El planeta ahora tiene [b]+5 de Trabajo por minuto[/b], y su velocidad de [b]Construcción de Edificios Imperiales[/b] aumenta un 100%[/b].
+>>
+EVT_CLIQUE_FAILURE: <<
+	La solitaria unidad rápidamente comienza a construir más y más unidades, minando los depósitos de metal del planeta y multiplicándose exponencialmente, mucho más allá del pequeño limite que le impusistes.
+
+	[offset=20][color=#aaa]Más mecanoides son necesarios. El procesamiento de energía debe ser elevado para descubrir propósito.[/color][/offset]
+
+	Todos los intentos de convencerlos de que paren han fallado, y sin otra opción tus tropas se enfrentan a ellos en una guerra sangrienta. Muchos civiles son asesinados, pero eventualmente todos los invasores mecanoides son exitosamente destruidos.
+>>
+EVT_CLIQUE_STUDY: <<
+	Matar y diseccionar [target=race;Other/], estudiar sus partes e intentar adivinar como su tecnología de miniaturización funciona.
+>>
+EVT_CLIQUE_STUDY_R: <<
+	Matas y diseccionas la unidad extraviada, pero la mayoría de sus partes internas están demasiado dañadas para operar correctamente. Deduces una pequeña cantidad de investigación de aquellas que no lo están.
+>>
+EVT_CLIQUE_STUDY_F: <<
+	Matas y diseccionas la unidad apartada, encontrando un dispositivo almacén de Energía FTL muchas veces más pequeños y más denso del que posees. Estudias los principios que permiten contener tanta FTL sin fugarse a sus alrededores y el proceso expande tu propia capacidad.
+
+	Ganas [b]+200 de Almacenamiento FTL[/b].
+>>
+EVT_CLIQUE_RETURN: <<
+	Contienes a la unidad y forzosamente le envías de vuelta a su imperio origen, el [target=Other/], explicando que tiene problemas de funcionamiento y que felizmente retornaras a su lugar planeado.
+>>
+EVT_CLIQUE_RETURN_R: <<
+	Retornas la unidad con problemas a su imperio origen, quien envía un corto mensaje en respuesta.
+
+	[offset=20][color=#aaa]Gratitud. La unidad será reparada y retornará a su lugar.[/color][/offset]
+
+	Ganas [b]+5 de Influencia[/b].
+>>
+STATUS_EVT_CLIQUE: Grupo Mecanoide
+STATUS_EVT_CLIQUE_DESC: <<
+	Una pequeña comunidad de población mecanoide de otro imperio que vive aquí.
+
+	El planeta tiene [b]+5 de Trabajo por minuto[/b], y un [b]100% de velocidad de construcción  de Edificios Imperiales[/b].
+>>

@@ -1,0 +1,428 @@
+BCAT_Production: Producción
+BCAT_Resource: Recursos
+BCAT_Military: Militar
+BCAT_Storage: Almacenamiento
+BCAT_Infrastructure: Infraestructuras
+BCAT_ControlHubs: Hubs de Control
+BCAT_Enhancing: Mejoras
+
+CANNOT_BUILD_CONFLICT: No se puede, $1 presente.
+CANNOT_BUILD_REQUIRE:  No se puede, se requiere $1.
+CANNOT_BUILD_LEVEL: No se puede, se requiere recurso nativo grado $1 o superior.
+
+BLD_TT_AFFINITY_BUILD: [img=$4;22]Coste de construcción reducido en biomas [color=$2]$3[/color].[/img]
+BLD_TT_AFFINITY_MAINT: [img=$4;22]Mantenimiento reducido en biomas [color=$2]$3[/color].[/img]
+BLD_TT_AFFINITY_BUILD_NEG: [img=$4;22][color=#f00]Coste de construcción incrementado en biomas [color=$2]$3[/color] [b]sin desarrollar[/b][/img]
+BLD_TT_AFFINITY_MAINT_NEG: [img=$4;22][color=#f00]Mantenimiento incrementado en biomas [color=$2]$3[/color] [b]sin desarrollar[/b].[/img]
+BLD_TT_DEV: [i][color=#aaa]Los edificios tienen coste de construcción y mantenimiento reducido en teselas [b]Desarrolladas[/b].[/color][/i]
+BLD_TT_SIZE: [b]Tamaño:[/b] [offset=120]$1x$2[/offset]
+BLD_TT_COST: [b]Coste Base:[/b] [offset=120]$1[/offset]
+
+BLD_BASE: Base
+BLD_BASE_DESC: <<
+	Produce 1 de defensa/min. Utiliza 1 de presión de defensa.
+
+	[img=$Defense;22/] [bbloc=#PRESSURE_Defense/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+BLD_BAZAAR: Bazar
+BLD_BAZAAR_DESC: <<
+	Actualización de Mercado.
+	Ganas §110k por ciclo presupuestario. Utiliza 2 de presión de dinero.
+
+	[img=$Money;22/] [bbloc=#PRESSURE_Money/]
+
+	[bbloc=#TIP_PRESSURE/]
+
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_BROADCAST: Centro de Emisión
+BLD_BROADCAST_DESC: <<
+	Actualización de Centro de Medios.
+	Concede 1.5 de Influencia apilable. Utiliza 2 de presión de influencia.
+
+	[img=$Influence;22/] [bbloc=#PRESSURE_Influence/]
+
+	[bbloc=#TIP_PRESSURE/]
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_CITY: Ciudad
+BLD_CITY_DESC: <<
+	Construida para que viva la población.
+>>
+
+BLD_ENTERPRISE: Empresa
+BLD_ENTERPRISE_DESC: <<
+	Actualización de Industria.
+	Genera 3 de trabajo por minuto. Utiliza 4 de presión de trabajo.
+
+	[img=$Labor;22/] [bbloc=#PRESSURE_Labor/]
+
+	[bbloc=#TIP_PRESSURE/]
+
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_FACTORY: Fábrica
+BLD_FACTORY_DESC: <<
+	Añade generación de trabajo al planeta.
+>>
+
+BLD_FTLSTORE: Almacén FTL
+BLD_FTLSTORE_DESC: <<
+	Una gran cámara construida dentro de un campo subespacial para almacenar cristales FTL.
+
+	Almacena 250 de Energía FTL.
+	El almacen dobla su capacidad en un planeta con cristales FTL nativos.
+>>
+
+TIP_PRESSURE: <<
+	[i][color=#aaa]La presión es generada por los recursos importados a este planeta. Los tipos y cantidades de presión presentes dictan los tipos de construcción y recursos generados por tu población civil.[/color][/i]
+>>
+
+TIP_CIV_UPGRADES: <<
+	[i][color=#baa]La construcción de actualizaciones civiles usan más presión por producción, pero usan menos espacio y capacidad de presión en el planeta. Automáticamente las estructuras se actualizan dependiendo de la capacidad de presión máxima.[/color][/i]
+>>
+
+BLD_FARM: Megagranja
+BLD_FARM_DESC: <<
+	Genera un recurso de comida básico no exportable.
+>>
+
+BLD_HYDROGENATOR: Hidrogenador
+BLD_HYDROGENATOR_DESC: <<
+	Genera un recurso de agua básico no exportable.
+>>
+
+BLD_GENERATOR: Generador
+BLD_GENERATOR_DESC: <<
+	Generas energía en función de tu tasa de penalización por almacenamiento de energía. Usa 1 de presión de energía.
+
+	[img=$Energy;22/] [bbloc=#PRESSURE_Energy/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+BLD_INDUSTRY: Industría
+BLD_INDUSTRY_DESC: <<
+	Genera 2 de trabajo por minuto. Utiliza 2 de presión de trabajo.
+
+	[img=$Labor;22/] [bbloc=#PRESSURE_Labor/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+BLD_LAUNCHPAD: Plataforma de Lanzamiento
+BLD_LAUNCHPAD_DESC: <<
+	Actualización de Base.
+	Produces 1.5 de defensa/min. Usa 2 de presión de defensa.
+
+	[img=$Defense;22/] [bbloc=#PRESSURE_Defense/]
+
+	[bbloc=#TIP_PRESSURE/]
+
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_MARKET: Mercado
+BLD_MARKET_DESC: <<
+	Ganas §75k por ciclo presupuestario. Usa 1 de presión de dinero.
+
+	[img=$Money;22/] [bbloc=#PRESSURE_Money/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+BLD_MEDIACENTER: Centro de Medios
+BLD_MEDIACENTER_DESC: <<
+	Concede 1 de Influencia apilable. Usa 1 de presión de influencia.
+
+	[img=$Influence;22/] [bbloc=#PRESSURE_Influence/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+BLD_POWERPLANT: Planta de Energía
+BLD_POWERPLANT_DESC: <<
+	Actualización de Generador.
+	Generas energía en función de tu tasa de penalización de almacenamiento de energía. Usa 2 de presión de energía.
+
+	[img=$Energy;22/] [bbloc=#PRESSURE_Energy/]
+
+	[bbloc=#TIP_PRESSURE/]
+
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_RESEARCHCOMPLEX: Complejo de Investigación
+BLD_RESEARCHCOMPLEX_DESC: <<
+	Genera puntos de Investigación para el imperio, y suministra entrenamiento y recursos a científicos.
+
+	Concede 1 a la generación de investigación.
+	Añade 1 a la presión de investigación.
+>>
+
+BLD_TECHCENTER: Centro Tecnológico
+BLD_TECHCENTER_DESC: <<
+	Actualización de Universidad.
+	Concede generación de Investigación. Usa 2 de presión de Investigación.
+
+	[img=$Research;22/] [bbloc=#PRESSURE_Research/]
+
+	[bbloc=#TIP_PRESSURE/]
+
+	[bbloc=#TIP_CIV_UPGRADES/]
+>>
+
+BLD_UNIVERSITY: Universidad
+BLD_UNIVERSITY_DESC: <<
+	Concede generación de Investigación. Usa 1 de presión de Investigación.
+
+	[img=$Research;22/] [bbloc=#PRESSURE_Research/]
+
+	[bbloc=#TIP_PRESSURE/]
+>>
+
+
+BLD_FORGE: Forja
+BLD_FORGE_DESC: <<|
+	Incrementas la generación de trabajo un 25%.
+
+	Cuantas más forjas construyes, más grandes y caras se vuelven.
+>>
+
+STATUS_HAS_DEFENSES: Tiene Defensas
+STATUS_HAS_DEFENSES_DESC: Este planeta tiene armas defensivas construidas en su superficie o en órbita baja que pueden disparar a enemigos.
+BLD_DEFENSE_GRID: Matrix de Defensa
+BLD_DEFENSE_GRID_DESC: <<|
+	Un campo masivo de silos de misiles localizado en el planeta capaz de disparar a las flotas enemigas cercanas.
+
+	Esta compuesto de 10 lanzadores de misiles llegando a hacer 250 de DPS en un rango de 450.
+
+	[i]Si hay flotas enemigas en órbita y no tienes naves de apoyo restantes para proteger el sistema guía satelital, los silos quedan deshabilitados.[/i]
+>>
+BLD_PLANET_CANNON: Cañón de Artillería
+BLD_PLANET_CANNON_DESC: <<|
+	Un enorme cañón de rail en la superficie del planeta propulsa grandes proyectiles hacia las flotas, infringiendo daños devastadores.
+
+	El cañón hace 200 de daño cada 5 segundo en un rango de 1500.
+
+	[i]Si hay flotas enemigas en órbita y no tienes ninguna nave de apoyo en órbita para proteger el sistema guía satelital, el cañón queda deshabilitado.[/i]
+>>
+
+BLD_WAREHOUSE: Almacén
+BLD_WAREHOUSE_DESC: <<|
+	Añade 100 al Almacenamiento de Trabajo.
+
+	El almacenamiento de trabajo se llena cuando no se construye nada, y se vacía como trabajo extra para la construcción.
+>>
+
+BLD_METROPOLIS: Metrópolis
+BLD_METROPOLIS_DESC: <<|
+	Una gran área urbana cubriendo y conectando centros de población múltiples más pequeños.
+
+	Reemplaza hasta 5 ciudades regulares.
+
+	Incrementa la capacidad de presión total del planeta por 5.
+>>
+
+BLD_MEGACITY: Megaciudad
+BLD_MEGACITY_DESC: <<|
+	Un enorme grupo de edificios, apilados desde un subterráneo hasta el cielo. El uso más eficiente del espacio permite más productividad.
+
+	Reemplaza hasta 16 ciudades regulares.
+
+	Incrementa la capacidad de presión del planeta total en 9.
+
+	Incrementa la producción civil de energía, influencia e investigación en este planeta un 25%.
+>>
+
+BLD_SPIRE: Pináculo
+BLD_SPIRE_DESC: <<|
+	Un pináculo habitable que atraviesa el cielo y se estira hasta el espacio.
+
+	Reemplaza hasta 20 ciudades regulares.
+
+	Cada tipo de presión que esta ya presente en el planeta es incrementado en 3.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]La construcción de un pináculo requiere una gran cantidad de minerales.[/color][/b][/img]
+>>
+
+BLD_REFINERY: Refinería
+BLD_REFINERY_DESC: <<|
+	Genera 1 de presión del principal recurso nativo, pero reduce la capacidad de presión total por 1.
+
+	La presión es añadida en este planeta solo, y no puede ser exportado o eliminado cuando el recurso nativo es exportado.
+
+	[i]No puede ser construido en planetas sin recursos nativos, o cuyo único tipo de presión sea el dinero.[/i]
+>>
+
+BLD_MUSEUM: Museo
+BLD_MUSEUM_DESC: <<
+	Cuando se construye, inmediatamente concede 10 puntos de influencia.
+
+	Incrementa la generación de influencia del planeta por 1 y se amontona.
+
+	No se puede eliminar una vez construido.
+>>
+
+BLD_PLANET_ENGINE: Propulsor Planetario
+BLD_PLANET_ENGINE_DESC: <<
+	Un propulsor ridiculamente grande construido en la superficie del planeta para acelerar ligeramente el planeta.
+
+	Da al planeta 0.5 u/s² de aceleración al movimiento. Múltiples propulsores planetarios incrementan más la aceleración.
+>>
+
+BLD_FTLBREEDER: FTL Reactor Cultivador
+BLD_FTLBREEDER_DESC: <<
+	Un gran reactor que usa energía FTL para excitar y extraer más energía FTL del hipercampo, emitiendo radiación mortal a toda vida orgánica en el proceso.
+
+	[b]Solo puede ser construido por razas Mecanoides.[/b]
+
+	[b][color=#ff8080]Cuando se complete 1B de población mecanoide será gastada en ser integrada en la masiva instalación.[/color][/b]
+>>
+
+BLD_SPACE_ELEVATOR: Elevador Espacial
+BLD_SPACE_ELEVATOR_DESC: <<
+	Un cable en forma de cinta que se extiende verticalmente al espacio y puede ser usado para incrementar la eficiencia del transporte de materiales.
+
+	Incrementa la velocidad de construcción de naves de apoyo en este planeta un 40%.
+
+	Solo un Elevador Espacial puede ser construido por planeta.
+>>
+
+BLD_BARRACKS: Cuarteles
+BLD_BARRACKS_DESC: <<
+	Añade 15 de Reserva de Defensa a tu equipo global.
+
+	Cuando tu reserva de defensa esta llena, puede ser desplegada a tus planetas para generar naves de defensa.
+>>
+
+TIP_CONTROL_HUB: <<
+	[color=#aaa][i]Solo un Hub de Control puede ser construido por planeta.  Planetas con Hubs de Control permanecerán bajo tu control aunque muevas el Replicador Orbital lejos.[/i][/color]
+>>
+
+REPLICATORS: Planetas con Replicadores Orbitales
+ABL_ANCIENT_BUILD_MINER: Intentar construir Mina a Cielo Abierto
+ABL_ANCIENT_BUILD_MINER_DESC: Mover al planeta objetivo e intentar construir un Mina a Cielo Abierto. La construcción falla sino tienes suficientes fondos.
+BLD_ANCIENT_MINER: Minero a Cielo Abierto
+BLD_ANCIENT_MINER_DESC: <<
+	Convierte el recurso del planeta en un recurso Mineral que puede ser exportado y genera [b] 60 de Mineral por min.[/b] en su destino.
+
+	[bbloc=#TIP_CONTROL_HUB/]
+>>
+ABL_ANCIENT_BUILD_TRANSMUTER: Intentar Construir Transmutador
+ABL_ANCIENT_BUILD_TRANSMUTER_DESC: Mover al planeta objetivo e intentar construir un Transmutador. La construcción falla sino tienes suficientes fondos.
+BLD_ANCIENT_TRANSMUTER: Transmutador
+BLD_ANCIENT_TRANSMUTER_DESC: <<
+	Convierte el recurso del planeta en un recurso Material Base que puede ser exportado y genera [b]10 de Material Base por min.[/b] en su destino.
+
+	[bbloc=#TIP_CONTROL_HUB/]
+>>
+ABL_ANCIENT_BUILD_CORE: Intentar Construir Núcleo
+ABL_ANCIENT_BUILD_CORE_DESC: Mover al planeta objetivo e intentar construir un Núcleo. La construcción falla sino dispones de suficientes fondos.
+BLD_ANCIENT_CORE: Núcleo
+BLD_ANCIENT_CORE_DESC: <<
+	Produce el 50% de la presión que el recurso nativo del planeta obtiene.
+
+	Impide al recurso nativo del planeta ser exportado.
+
+	La presión de asteroides importados a este planeta es automáticamente producido.
+
+	[bbloc=#TIP_CONTROL_HUB/]
+>>
+
+TIP_CONSUME_BASE_MATERIAL: <<
+	[b][img=ResourceIconsSmall::81;20/] [color=#cda33d]Material Base Utilizado:[/color][/b][offset=210]$1 / min.[/offset]
+
+	[i][color=#aaa]Este edificio requiere que una cierta cantidad de materiales sean consumidos cada min. para estar activo.[/color][/i]
+>>
+
+STATUS_ANCIENT_REQUIRE_BASE_MAT: Requiere Materiales Base
+STATUS_ANCIENT_REQUIRE_BASE_MAT_DESC: <<
+	Este planeta requiere una o más fuentes de Materiales Base para que sus edificios sean completamente operacionales.
+>>
+
+BLD_ANCIENT_REFINERY: Refinería
+BLD_ANCIENT_REFINERY_DESC: <<
+	Produce un 30% de la presión que el recurso nativo del planeta obtiene.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:10/]
+>>
+
+BLD_ANCIENT_DOCK: Muelle
+BLD_ANCIENT_DOCK_DESC: <<
+	Naves creadas en este planeta tiene incrementada un 10% su salud.
+
+	Incrementa la capacidad de apoyo del planeta por 100.
+>>
+
+BLD_ANCIENT_NETWORK: Red
+BLD_ANCIENT_NETWORK_DESC: <<
+	Automáticamente produce satélites de defensa en el planeta.
+
+	Incrementa la lealtad del planeta por 3.
+>>
+
+TIP_CONSUME_ORE: <<
+	[b][img=ResourceIconsSmall::65;20/] [color=#91692c]Minerales Usados:[/color][/b][offset=150]$1 / min.[/offset]
+
+	[i][color=#aaa]Este edificio requiere que minerales sean consumidos cada minuto para estar activo.[/color][/i]
+>>
+
+BLD_ANCIENT_FOUNDRY: Fundición
+BLD_ANCIENT_FOUNDRY_DESC: <<
+	Incrementa la generación de trabajo de este planeta. Se beneficia de la investigación Fábrica.
+
+	2 Minerales por seg. son consumidos cuando el planeta esta usando trabajo para construir.
+
+	[b][img=ResourceIconsSmall::65;20/] [color=#91692c]Minerales usados:[/color][/b][offset=150]2 / seg.[/offset]
+>>
+
+BLD_ANCIENT_LAB: Laboratorio
+BLD_ANCIENT_LAB_DESC: <<
+	Incrementa la producción de investigación de este planeta por 1.
+
+	[bbloc=#TIP_CONSUME_ORE:30/]
+>>
+
+BLD_ANCIENT_COMPRESSOR: Compresor
+BLD_ANCIENT_COMPRESSOR_DESC: <<
+	Todas tus naves tienen un 8% menos de Masa.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:10/]
+>>
+
+BLD_ANCIENT_REINFORCER: Reforzador
+BLD_ANCIENT_REINFORCER_DESC: <<
+	En todas tus naves, Torretas, subsistemas Núcleo y el Núcleo de Control tiene un 25% más de Salud y Masa.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:10/]
+>>
+
+BLD_ANCIENT_DEVELOPER: Desarrollador
+BLD_ANCIENT_DEVELOPER_DESC: <<
+	El Control de Apoyo de tus naves se incrementa un 5%, pero tiene un 25% más de Masa.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:10/]
+>>
+
+BLD_ANCIENT_INFUSER: Infusor
+BLD_ANCIENT_INFUSER_DESC: <<
+	Puede solo ser construido en recursos Escalables. Incrementa el nivel de este planeta por 1.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:30/]
+>>
+
+BLD_ANCIENT_DEPOT: Depósito
+BLD_ANCIENT_DEPOT_DESC: <<
+	Añade 100 al Almacén de Trabajo de este planeta.
+
+	Añade 10 de Reserva de Defensa al total global.
+
+	[bbloc=#TIP_CONSUME_BASE_MATERIAL:10/]
+>>

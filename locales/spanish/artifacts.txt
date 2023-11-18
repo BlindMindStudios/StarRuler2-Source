@@ -1,0 +1,283 @@
+ABL_HOTKEY_SPEC: [color=#aaa](Hotkey: [b][color=#00c0ff]$1[/color][/b])[/color]
+
+ART_COMET: Cometa
+ART_COMET_DESC: Un cometa gigante que puede ser minado para otorgar agua a un planeta.
+ABL_GENERATE_WATER: Generar Agua
+ABL_GENERATE_WATER_DESC: <<|
+	Añade un recurso de agua al planeta objetivo.
+
+	El agua no puede ser exportada o compartida con otras existentes.
+>>
+
+ART_COMMAND_COMPUTER: Ordenador de Control
+ART_COMMAND_COMPUTER_DESC: Un sistema ordenador que incrementa el control de apoyo máximo de una flota.
+ABL_EXPAND_FLEET: Equipar Ordenador de Control
+ABL_EXPAND_FLEET_DESC: <<|
+	Expande el control de apoyo de la flota en 300
+
+	Un buque insignia equipado con el tiene una alta posibilidad de dejar el ordenador cuando es destruido.
+>>
+STATUS_COMMAND_COMPUTER: Ordenador de Control
+STATUS_COMMAND_COMPUTER_DESC: <<|
+	Portas el artefacto Ordenador de Control
+
+	Control de apoyo la de flota incrementada en 300.
+	Puede ser dejado si el buque insignia es destruido.
+>>
+
+ART_POWER_CELL: Célula de Energía
+ART_POWER_CELL_DESC: Una fuente de energía que incrementa la efectividad de una flota de combate en un 20%.
+ABL_OVERCHARGE_FLEET: Equipar Célula de Energía
+ABL_OVERCHARGE_FLEET_DESC: <<|
+	Incrementa la efectividad de la flota objetivo por un 20%.
+
+	Solo se puede equipar una celda por flota.
+	Un buque insignia equipado con ella tiene una alta posibilidad de destruir la célula cuando es destruido
+>>
+STATUS_POWER_CELL: Célula de Energía
+STATUS_POWER_CELL_DESC: <<|
+	Portas el artefacto Célula de Energía.
+
+	Efectividad de la flota incrementada un 20%.
+	Puede ser dejado si el buque insignia es destruida.
+>>
+
+ART_ARCOLOGY: Arca
+ART_ARCOLOGY_DESC: Un hábitat orbital abandonado que se puede mover a un planeta para incrementar la población máx.
+ABL_DEVELOP_PLANET: Mover Arca
+ABL_DEVELOP_PLANET_DESC: <<|
+	Incrementa la población máxima en el planeta objetivo en 10.
+>>
+
+ART_TELESCOPE: Telescopio
+ART_TELESCOPE_DESC: Un telescopio cuántico desechable que puede proveer visión a vastas distancias.
+ABL_TELESCOPE: Usar Telescopio
+ABL_TELESCOPE_DESC: <<|
+	Concede vision sobre sistemas objetivos y todos los sistemas adyacentes durante
+	15 minutos.
+>>
+
+ART_BUSTER_MACHINE: Máquina Destructora
+ART_BUSTER_MACHINE_DESC: Una nave activable con un rayo destructor de planetas.
+ABL_BUSTER_MACHINE: Activar Máquina Destructora
+ABL_BUSTER_MACHINE_DESC: Reactivar la Máquina Destructora durmiente, una antigua nave con un rayo destructor de planetas.
+ABL_BUSTER_BEAM: Alternar Rayo Destructor
+ABL_BUSTER_BEAM_DESC: <<
+	Alternar la activación de un Rayo Destructor en un planeta.
+
+	El rayo matará a la población y agotará la Salud de un planeta. Cuando la salud del planeta llega a 0, el planeta explotará. Algunos asteroides pueden aparece trás su destrucción.
+>>
+ABL_BUST_PLANET: Planeta Destruido
+ABL_BUST_PLANET_DESC: <<|
+	Planeta objetivo de nivel 0 destruido, dejando detrás varios asteroides.
+>>
+NOTIFY_BUST_PLANET: [color=$2]$1[/color] ha activado una [b]Máquina Destructora[/b] y [color=$4]$3[/color] voló en pedazos!
+
+ART_SPY_PROBE: Sonda de Espionaje
+ART_SPY_PROBE_DESC: Una sonda activable con escáners sofisticados que puede espiar a cambio de ventajas diplomáticas.
+ABL_SPAWN_SPY_PROBE: Activar Sonda de Espionaje
+ABL_SPAWN_SPY_PROBE_DESC: <<
+	Reactivar la sonda de espionaje durmiente. La sonda tiene escáners sofisticados para espiar a cambio de ventajas diplomáticas.
+>>
+STATUS_SPY_PROBE: Sonda Espiando
+STATUS_SPY_PROBE_DESC: Este nave es una sonda espía Remanente renovada y esta recogiendo inteligencia para un imperio. Es imposible saber que imperio ha enviado la sonda.
+ABL_GAIN_LEVERAGE: Ganar Ventajas
+ABL_GAIN_LEVERAGE_DESC: <<|
+	Ganas cartas de influencia contra todos los imperios que controlan planetas en el
+	sistema objetivo.
+>>
+
+ART_ANCIENT_EMBASSY: Embajada Antigua
+ABL_ANCIENT_EMBASSY: Reactivar Embajada
+ABL_ANCIENT_EMBASSY_DESC: <<|
+	Colocas una Antigua Embajada orbital en el sistema objetivo.
+>>
+
+ART_GENESIS_DEVICE: Dispositivo Génesis
+ART_GENESIS_DEVICE_DESC: Un dispositivo terraformador que cambia los recursos de un planeta a un recurso de Grado 2 aleatorio.
+ABL_GENESIS_DEVICE: Terraformar Planeta
+ABL_GENESIS_DEVICE_DESC: <<|
+	Terraformas el planeta poseído objetivo a un recurso aleatorio de Tipo 2.
+
+	Suprimes todos los recursos nativos actuales.
+>>
+
+ART_MIND_CONTROL: Dispositivo de Control Mental
+
+ART_REVENANT_ENGINE: Motor Fantasma
+ART_REVENANT_ENGINE_DESC: <<|
+	El sistema motor Fantasma.
+	Activar otorga a los diseños [b]empuje aumentado un 100%[/b].
+>>
+ORB_REVENANT_ENGINE: Motor Fantasma
+ORB_REVENANT_BLURB: <<
+	Una parte del Fantasma. Concede un potenciador cuando se activa, tener las 4 partes activas engendra Fantasma. Se puede destruir para desactivar sus efectos.
+>>
+ABL_REVENANT_ENGINE: Activar Motor Fantasma
+ABL_REVENANT_ENGINE_DESC: <<
+	Activar el motor Fantasma, una nave misteriosa de leyenda.
+
+	Mientras esta activo, el motor suministra a todos tus diseños [b]doble empuje/aceleración[/b] y con hipermotores un [b]50% extra de velocidad de hipermotor[/b].
+
+	Cuando el motor activado pierde todos sus PS, volverá a su estado desactivado.
+
+	[b]Tener las 4 partes Fantasma activado al mismo tiempo te concederá el control de la nave más poderosa del universo.[/b]
+>>
+NOTIFY_REVENANT_ENGINE: [color=$2]$1[/color] ha activado el [b]Motor Fantasma[/b].
+
+ART_REVENANT_CANNON: Cañón Fantasma
+ART_REVENANT_CANNON_DESC: <<|
+	El sistema de armas Fantasma.
+	Activar otorga a los diseños un [b]rango disparo extra del 75%[/b].
+>>
+ORB_REVENANT_CANNON: Cañón Fantasma
+ABL_REVENANT_CANNON: Activar Cañón Fantasma
+ABL_REVENANT_CANNON_DESC: <<
+	Activas el cañón Fantasma, una nave misteriosa de leyenda
+
+	Mientras esta activo, el cañón otorga a todos los diseños un [b] 75% de rango/velocidad en armas[/b].
+
+	Cuando el cañón activado pierde todos tus PS, volverá a su estado desactivado.
+
+	[b]Tener las 4 partes Fantasma activado al mismo tiempo te concederá el control de la nave más poderosa del universo.[/b]
+>>
+NOTIFY_REVENANT_CANNON: [color=$2]$1[/color] ha activado el [b]Cañón Fantasma[/b].
+
+ART_REVENANT_CHASSIS: Chasis Fantasma
+ART_REVENANT_CHASSIS_DESC: <<|
+	El chasis Fantasma.
+	Activar otorga a los diseños un [b]50% de costes de const. reducido[/b].
+>>
+ORB_REVENANT_CHASSIS: Chasis Fantasma
+ABL_REVENANT_CHASSIS: Activar Chasis Fantasma
+ABL_REVENANT_CHASSIS_DESC: <<
+	Activas el chasis Fantasma, una nave misteriosa de leyenda.
+
+	Mientras esta activo, el chasis otorga a los diseños un [b]50% de costes de construcción reducidos[/b].
+
+	Cuando el chasis activado pierde todos sus PS, volverá a su estado desactivado.
+
+	[b]Tener las 4 partes Fantasma activado al mismo tiempo te concederá el control de la nave más poderosa del universo.[/b]
+>>
+NOTIFY_REVENANT_CHASSIS:[color=$2]$1[/color] ha activado el [b]Chasis Fantasma[/b].
+
+ART_REVENANT_CORE: Núcleo Fantasma
+ART_REVENANT_CORE_DESC: <<|
+	El módulo de mando Fantasma.
+	Activar otorga a los diseños [b]un extra de capacidad de apoyo del 25%[/b]
+>>
+ORB_REVENANT_CORE: Núcleo Fantasma
+ABL_REVENANT_CORE: Activar Núcleo Fantasma
+ABL_REVENANT_CORE_DESC: <<
+	Activas el núcleo del Fantasma, una nave misteriosa de leyenda.
+
+	Mientras esta activo, el núcleo otorga a tus diseños un [b]25% extra de capacidad de apoyo[/b].
+
+	Cuando el núcleo activado pierde todos sus PS, volverá a su estado desactivado.
+
+	[b]Tener las 4 partes Fantasma activado al mismo tiempo te concederá el control de la nave más poderosa del universo.[/b]
+>>
+NOTIFY_REVENANT_CORE: El [color=$2]$1[/color] ha activado el [b]Núcleo Fantasma[/b].
+
+ART_PLANET_GENERATOR: Generador de planetas
+ART_PLANET_GENERATOR_DESC: Un generador de masa acelerada que ensambla planetas usando energía.
+ABL_GENERATE_PLANET: Generar Planeta
+ABL_GENERATE_PLANET_DESC: <<
+	Espontáneamente crea un planeta aleatorio nuevo en la posición objetivo.
+>>
+
+ART_STELLAR_GENERATOR: Generador Estelar
+ART_STELLAR_GENERATOR_DESC: Canaliza ingente energía en un punto para crear una estrella.
+ABL_GENERATE_STAR: Generar Estrella
+ABL_GENERATE_STAR_DESC: <<
+	Espontáneamente creas una nueva estrella en la posición objetivo.
+>>
+
+ART_SKIP_DRIVE: Motor de Salto
+ART_SKIP_DRIVE_DESC: Un sistema motor experimental equipable de un uso que permite saltar distancias en FTL.
+ABL_EQUIP_SKIP_DRIVE: Equipar Motor de Salto
+ABL_EQUIP_SKIP_DRIVE_DESC: Equipar un motor de salto en la flota objetivo. Los Motores de salto crean un teletransporte instantáneo, pero gasta gran cantidad de energía.
+STATUS_SKIP_DRIVE: Saltar
+STATUS_SKIP_DRIVE_DESC: Este buque insignia tiene un motor de salto. Estos saltos equivalen a un teletransporte instantáneo, pero usa gran cantidad de energía. Pierdes 1 valor por uso.
+ABL_BLINK: Teletransporte
+ABL_BLINK_DESC: Instantáneamente teletransporta la flota a una posición cercana. Cuesta más energía cuanto más lejos es el teletransporte.
+
+ART_ION_CANNON: Cañón de Iones
+ART_ION_CANNON_DESC: Un cañón de rayos que deshabilita motores y FTL enemigos. 1 uso.
+ABL_EQUIP_ION_CANNON: Equipar Cañón de Iones
+ABL_EQUIP_ION_CANNON_DESC: Equipa un cañón de iones en la flota objetivo. Disparar un cañón de iones evita temporalmente a la nave objetivo moverse o usar FTL.
+STATUS_ION_CANNON: Cañón de Iones
+STATUS_ION_CANNON_DESC: Este buque insignia tiene un cañón de iones equipado. Disparar un cañón de iones evita temporalmente a la nave objetivo moverse o usar FTL. Pierde 1 valor por uso.
+ABL_ION_CANNON: Disparar Cañón de Iones
+ABL_ION_CANNON_DESC: <<
+	Disparar el cañón de iones equipado en el buque insignia objetivo enemigo. Será incapaz de mover o usar FTL por un tiempo tras ser golpeado.
+
+	El disparo de cañón cuesta más energía cuanto más grande la nave enemiga es respecto a la nave del cañón.
+>>
+
+ART_PROTO_PLANET: Protoplaneta
+ART_PROTO_PLANET_DESC: Un planeta todavía en el proceso de formación. Gastar una cantidad de energía para regular su formación.
+ABL_PROTO_LEVEL0: Formar Planeta (Nivel 0)
+ABL_PROTO_LEVEL0_DESC: Manipular la formación del planeta gastando una cantidad de energía. El planeta producirá un recurso de grado 0 aleatorio.
+ABL_PROTO_LEVEL1: Formar Planeta (Nivel 1)
+ABL_PROTO_LEVEL1_DESC: Manipular la formación del planeta gastando una cantidad de energía. El planeta producirá un recurso de grado 1 aleatorio.
+ABL_PROTO_LEVEL2: Formar Planeta (Nivel 2)
+ABL_PROTO_LEVEL2_DESC: Manipular la formación del planeta gastando una cantidad de energía. El planeta producirá un recurso de grado 2 aleatorio.
+
+ART_FRAME_CONSTRUCTOR: Marco Orbital
+ART_FRAME_CONSTRUCTOR_DESC: <<
+	Crea un marco orbital, para naves que reduce los costes de trabajo y contrucción.
+>>
+ABL_ORBITAL_FRAME: Construir Marco Orbital
+ABL_ORBITAL_FRAME_DESC: <<
+	Creas un marco orbital en la localización objetivo.
+
+	Puedes construir cualquier orbital encima del marco para reemplazarlo. Los orbitales construidos encima del marco reducen un 50% los costes de construcción y trabajo, además de no sufrir penalizaciones a la distancia del trabajo.
+>>
+
+ART_SUPPORT_STATION: Estación de Respaldo
+ART_SUPPORT_STATION_DESC: <<
+	Una estación de apoyo activable que fortalece y reabastece una flota cercana en combate.
+>>
+ABL_SPAWN_SUPPORT_STATION: Estación de Respaldo
+ABL_SPAWN_SUPPORT_STATION_DESC: <<
+	Activar la estación de respaldo en una posición particular.
+
+	Las estaciones de respaldo dan respaldo a la flota aliada más cercana con un rayo de respaldo, otorgando reparación, incrementando su eficiencia y reabasteciendo en combate.
+
+	Las estaciones de respaldo tardan 60 segundos en construirse trás su activación.
+>>
+ABL_SUPPORT_BEAM: Enfocar Rayo de Respaldo
+ABL_SUPPORT_BEAM_DESC: <<
+	Enfocar el rayo de estación de respaldo en una flota particular.
+
+	El rayo de respaldo repara la buque insignia de la flota en un 1% de sus ps por segundo, reabasteciendo al buque insignia un 1% de su capacidad total por segundo, aún en combate, y mejora la fuerza de la flota un 20% mientras esta activo.
+>>
+STATUS_CONSTRUCTING: Construyendo...
+STATUS_SUPPORTED: Respaldado
+STATUS_SUPPORTED_DESC: <<
+	Esta flota esta siendo fortalecida por un rayo de respaldo.
+
+	Rayo de respaldo que repara el buque insignia de la flota que está enfocado en un 1% de sus PV por segundo, reabasteciendo al buque insignia un 1% de su capacidad total por segundo, aún en combate, y mejora la fuerza de la flota un 20% mientras esta activo.
+>>
+ORB_SUPPORT_STATION: Estación de Respaldo
+ORB_SUPPORT_STATION_BLURB: Respalda las flotas cercanas y estaciones con un rayo de reparación y reabastecimiento.
+
+ART_FLOATING_CONTINENT: Continente Flotante
+ART_FLOATING_CONTINENT_DESC: <<
+	Añade un gran nuevo continente a la superficie del planeta que puede ser movido entre planetas.
+>>
+ABL_ADD_FLOATING_CONTINENT: Reclamar Continente Flotante
+ABL_ADD_FLOATING_CONTINENT_DESC: <<
+	Reclamar el continente flotante y unirlo a uno de tus planetas para construir en él.
+
+	Por un coste de energía dependiente en la distancia, el continente flotante y todos los edificios en el pueden ser movidos a otro de tus planetas.
+>>
+ABL_TRANSFER_FLOATING_CONTINENT: Mover Continente Flotante
+ABL_TRANSFER_FLOATING_CONTINENT_DESC: <<
+	Mover el continente flotante y todos los edificios en él de este planeta a otro de tus planetas.
+
+	El coste de energía de mover el continente flotante depende de la distancia entre los dos planetas.
+
+	Esta capacidad no puede ser activada mientras el planeta con el continente flotante esta actualmente asediado.
+>>

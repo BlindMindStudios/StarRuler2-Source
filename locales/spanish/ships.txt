@@ -1,0 +1,309 @@
+COLONY_SHIP: Nave Colonia
+SPORE_SHIP: Nave Espora
+CRUISER: Crucero
+TRANSFER_SUPPORT_SHIPS: Transferir Naves de Apoyos
+CREATE_SUPPORT_SHIPS: Crear Más Naves de Apoyo
+SCUTTLE_SUPPORT_SHIPS: Eliminar/Destruir Naves de Apoyo
+MANAGE_SUPPORTS: Gestionar Naves de Apoyo
+ORDER_SUPPORT_COUNT: Ordenar $1x $2
+ORDER_SUPPORT_CUSTOM: Ordenar cantidad específica...
+ORDER_SUPPORT_DESIGN: Diseño de Nave de Apoyo:
+ORDER_SUPPORT_AMOUNT: Cantidad:
+ORDER_SUPPORT_COST: Coste:
+ADD_SUPPORTS: Añadir Apoyo
+SHIP_ORDERS: Ordenes
+SHIP_FORMATIONS: Formaciones
+CONSTRUCTOR_CONSTRUCT: Construir $1
+CONSTRUCTOR_CONSTRUCT_COST: Construir $1 ($2)
+SUPPLY: Reservas
+STRENGTH: Fuerza
+PIRATE_HOARD: Reservas Pirata
+REBUY_GHOSTS: Reh. ($1)
+FREIGHTER: Carguero
+TT_REBUY_GHOSTS: <<
+	Reemplaza las naves de apoyo perdidas recientemente comprando nuevas.  La flota necesitará moverse a un sistema con instalaciones de trabajo antes de que las naves sean construidas.
+>>
+CLEAR_GHOSTS: Olvidar
+TT_CLEAR_GHOSTS: <<
+	Olvida las naves de apoyo perdidas recientemente en la flota.
+>>
+AUTO_FILL_SUPPORTS: Autoreh.
+TT_AUTO_FILL_SUPPORTS: <<
+	Cuando se marca, la flota automáticamente recogerá naves de apoyo perdidas de los planetas cercanos.
+>>
+ALLOW_FILL_FROM_SUPPORTS: Completar Desde
+TT_ALLOW_FILL_FROM_SUPPORTS: <<
+	Cuando se marca, la flota con "Auto Completar" marcado automáticamente recogerá naves de apoyo de este planeta.
+>>
+AUTO_BUY_SUPPORTS: AutoComp.
+TT_AUTO_BUY_SUPPORTS: <<
+	Cuando se marca, la flota automáticamente comprará nuevas naves de apoyo cuando este en sistemas con instalaciones de trabajo, hasta que la flota este completa.
+>>
+REFRESH_SUPPORTS: Refrescar Flota de Apoyo Desde $1
+ABILITY_TRIGGER: $1
+ABILITY_ENERGY: "Energía $1"
+ABILITY_COOLDOWN: " [refresco: $1]"
+ABILITY_CD: " [cd: $1 restantes]"
+BUILD_RETROFIT: Modernizar Flota: $1
+RETROFIT_OPTION: Modernizar Flota ($1, Trabajo $2)
+CAPTURE_OPTION: Capturar Planeta (Reservas $1, $2)
+PROTECTED_OPTION: No Se Puede Capturar - Protegido por Puesto de Avanzada o Decreto
+REV_SPEC: " r$1"
+SUPPORT_CAPACITY: Capacidad de Apoyo
+SLIPSTREAM_TEAR: Grieta Estela
+ODDITY_GATE: Deformar A Través
+EFFECTIVENESS: Efectividad
+SHIP_CARGO: Carga:
+SHIP_CARGO_WORTH: [right][b][color=#0f0]$1[/color][/b] valor[/right]
+CARGO_GOODS: [img=ResourceIconsSmall::32;21;#888/] [color=#aaa]Mercancias[/color]
+CIVILIAN_MERCHANT: Mercader Civil
+CIVILIAN_FREIGHTER: Carguero Civil
+CIVILIAN_CARAVAN: Caravana Civil
+CIVILIAN_STATION: Estación Comercial  Civil
+CIVILIAN: Civil
+STATUS_BLOCKADED: ¡Bloqueado!
+STATUS_BLOCKADED_DESC: <<|
+	Alguna de las naves de comercio importando a este planeta fue derribada. Como resultado, el planeta produce 1 menos de un recurso del imperio aleatorio por cada "¡Bloqueado!.
+>>
+PICKUP_PROTECTING: Protegido
+PICKUP_UNPROTECTED: Sin Protección
+VERB_PICKUP: Recoger $1
+VERB_ACTIVATE: Activar $1
+JUMPDRIVE_SAFETY_WARNING: Aviso: Causa daños a la flota.
+JUMPDRIVE_SAFETY_WARNING_SEVERE: AVISO: Causa daños catastróficos.
+
+STATUS_INTERDICT_FTL: FTL Desactivado
+STATUS_INTERDICT_FTL_DESC: <<|
+	Las capacidades FTL del buque insignia han sido desactivadas.
+>>
+SHIELD_STRENGTH: Escudos
+
+PICKUP_RESEARCH: Datos de Investigación
+PICKUP_RESEARCH_DESC: Ganas puntos de Investigación al recogerlo.
+
+PICKUP_INFLUENCE: Información Influyente
+PICKUP_INFLUENCE_DESC: Ganas puntos de influencia al recogerlo.
+
+PICKUP_DRYDOCK: Astillero Antiguo
+PICKUP_DRYDOCK_DESC: Ganas 120 puntos de investigación y deja 3 naves antiguas a terminar.
+
+PICKUP_ASTEROID: Base Minera
+PICKUP_ASTEROID_DESC: Una base minera de recursos activable y lista para ser usada.
+
+PICKUP_ENERGY: Alijo de Energía
+PICKUP_ENERGY_DESC: Ganas una cantidad de energía al recogerlo.
+
+PICKUP_CARD: Souvenirs de Lujo
+PICKUP_CARD_DESC: Ganas cartas Negociar al recogerlo.
+
+PICKUP_ANCIENT_KNOWLEDGE: Conocimiento Antiguo
+PICKUP_ANCIENT_KNOWLEDGE_DESC: Ganas una carta "Conocimiento Antiguo" al recogerlo.
+
+PICKUP_DEFENSE_MEDIUM: Sistema de Defensa
+PICKUP_DEFENSE_MEDIUM_DESC: Ganas 5 de Reserva de Defensa global al recogerlo.
+
+PICKUP_HPBOOST: Matrix Estructural
+PICKUP_HPBOOST_DESC: El buque insignia que destruya esta flota gana un 25% de salud inmediatamente.
+
+PICKUP_FLEETBOOST: Matrix Aegis
+PICKUP_FLEETBOOST_DESC: El buque insignia que destruye esta flota gana un 50% de Salud y +25% de Salud para las naves de Apoyo.
+STATUS_PICKUP_FLEETBOOST: Matrix Aegis
+STATUS_PICKUP_FLEETBOOST_DESC: La salud de este buque insignia es potenciado un 50%, y todas las naves de apoyo es esta flota tiene potenciada su salud un 25%.
+
+PICKUP_FREEFOOD: Repositorio de Semillas
+PICKUP_FREEFOOD_DESC: Ganas una carta de "Cultivo" al recogerlo.
+
+PICKUP_MUCHINFLUENCE: Equipamiento de Inteligencia
+PICKUP_MUCHINFLUENCE_DESC: Ganas un bono de 2 Influencia Apilada al recogerlo.
+
+HOLD_POSITION: Mantener Posición
+HOLD_POSITION_DESC: No persigues a las flotas hostiles.
+AREA_BOUND: Enfrentarse a Enemigos Cercanos
+AREA_BOUND_DESC: Persigues las flotas hostiles en las inmediaciones.
+REGION_BOUND: Enfrentarse a Enemigos en el Sistema
+REGION_BOUND_DESC: Persigues a los enemigos que se encuentren en este sistema.
+HOLD_FIRE: Alto el Fuego
+HOLD_FIRE_DESC: Dejas de disparar y atacar a cualquier objetivo.
+
+BEH_CLOSE_IN: Acercarse A Enemigos
+BEH_CLOSE_IN_DESC: Cerca de los enemigos en ataques.
+BEH_KEEP_DISTANCE: Mantener Distancia
+BEH_KEEP_DISTANCE_DESC: Mantienes una distancia lejana en ataques.
+
+ENG_FLAGSHIP_MIN: Buque Insignia Rango Cercano
+ENG_FLAGSHIP_MIN_DESC: Mueve el Buque a rango de disparo de armas cortas.
+ENG_FLAGSHIP_MAX: Buque Insignia Rango Lejano
+ENG_FLAGSHIP_MAX_DESC: Mueve el Buque a rango de disparo de armas largas.
+ENG_SUPPORT_MIN: Apoyo Rango Cercano
+ENG_SUPPORT_MIN_DESC: Mueve el apoyo a rango de disparo de armas cortas.
+ENG_RAIDING_ONLY: Apoyo Rango Lejano
+ENG_RAIDING_ONLY_DESC: Mueve el apoyo a rango  de disparo de armas largas.
+
+ABL_FULLBURST: Ráfaga Completa
+ABL_MISSILE_STORM: Tormenta de Misiles
+ABL_RELOCATE_ALL: Relocalizar Transistencial
+ABL_CHARGE_ALL: Pulso de Suministro Hiperespacial
+ABL_MIGRATE_ALL: Migración Acelerada
+ABL_UNPACK_GATE: Desplegar Puerta
+ABL_UNPACK_GATE_DESC: Desplegar esta nave como puerta FTL, coste 100 FTL.
+ABL_PACK_ORBITAL: Empaquetar Orbital
+
+TT_OPEN_CONSTRUCTION: <<|
+	[b]Cola de Construcción[/b]
+
+	Abre la cola de construcción y su menú.
+>>
+
+TT_MANAGE_SHIP_SUPPORTS: <<|
+	[b]Gestionar Apoyos[/b]
+
+	Gestiona los grupos de naves de apoyo actualmente asignados a esta flota.
+>>
+
+TT_HYPERDRIVE: <<|
+	[b]Hipermotor[/b]
+
+	Usar el hipermotor equipado para moverse en FTL.
+>>
+
+TT_JUMPDRIVE: <<|
+	[b]Motor de Salto[/b]
+
+	Usa el motor de salto equipado para moverse en FTL.
+>>
+
+TT_FLING: <<|
+	[b]Lanzamiento[/b]
+
+	Usa la baliza de lanzamiento para moverse en FTL.
+>>
+
+TT_SLIPSTREAM: <<|
+	[b]Generar Grieta Estela[/b]
+
+	Usa el generador de estelas para crear una nueva grieta en el destino objetivo.
+>>
+
+TT_SHIP_HEALTH: <<
+	[font=Medium]Salud[/font]
+	La salud total restante de la nave mostrada. Las naves puede ser destruidas antes de que su salud se agote si todos los hexes puente son destruidos.
+
+	[b]Salud[/b] [offset=230]$1[/offset]
+	[b]Salud Máxima[/b] [offset=230]$2[/offset]
+
+	[b]Reparación (En Combate)[/b] [offset=230]$3/sec[/offset]
+	[b]Reparación (Normal)[/b] [offset=230]$4/sec[/offset]
+>>
+
+TT_SHIP_SHIELD: <<
+	[font=Medium]Escudo[/font]
+	Cualquier daño entrante es primero bloqueado por los escudos. Cuando más bajos están los escudos más daños al no ser bloqueados.
+
+	[b]Escudos Actuales[/b] [offset=230]$1[/offset]
+	[b]Escudos al Máximo[/b] [offset=230]$2[/offset]
+
+	[b]Regeneración de Escudos[/b] [offset=230]$3/sec[/offset]
+>>
+
+TT_SHIP_SUPPLY: <<
+	[font=Medium]Reservas de Flota[/font]
+	Los reservas totales restantes almacenadas en esta flota. Los reservas son utilizados para disparar armas y capturar planetas. Las flota son reabastecidas fuera de combate. Con pocas reservas se reduce la eficiencia y DPS de la flota.
+
+	[b]Reservas Actuales[/b] [offset=230]$1[/offset]
+	[b]Almacenamiento de Reservas[/b] [offset=230]$2[/offset]
+
+	[b]Reabastecimiento (Espacio Neutro)[/b] [offset=230]$3/sec[/offset]
+	[b]Reabastecimiento (Espacio Aliado)[/b] [offset=230]$4/sec[/offset]
+>>
+
+TT_SHIP_STRENGTH: <<
+	[font=Medium]Fuerza de Flota de Combate[/font]
+	Un indicador estimado de la fuerza de la flota total de combate. Las flotas con más fuerza son más probable que ganen. La eficiencia incrementa los DPS totales y la fuerza.
+
+	[b]Fuerza Actual[/b] [offset=230]$1[/offset]
+	[b]Fuerza Original[/b] [offset=230]$2[/offset]
+
+	[b]PS Total de Flota Actual[/b] [offset=230]$3[/offset]
+	[b]DPS Total de Flota Actual[/b] [offset=230]$4/sec[/offset]
+
+	[b]Eficiencia de Flota[/b] [offset=230]$5[/offset]
+>>
+TT_SHIP_EFF_BONUS: [b]Bono a Fuerza de Flota[/b] [offset=230]$1[/offset]
+
+TT_SHIP_EXPERIENCE: <<
+	[font=Medium]Veteranía[/font]
+	La flota gana experiencia cuando derrota a buques insignia enemigos, permitiendo ganar niveles de veteranía que incrementan su fuerza y mando de apoyo.
+
+	[b]Veteranía Actual[/b] [offset=230]Nivel $3[/offset]
+
+	[b]Experiencia[/b] [offset=230]$4 / $2[/offset]
+>>
+
+TT_SHIP_LEADER: <<
+	[font=Medium]$1[/font]
+
+	Buque Insignia.
+>>
+
+TT_SHIP_GROUP: <<
+	[font=Medium]$1 ($2)[/font]
+
+	[b]Activo[/b] [offset=120]$3x[/offset]
+	[b]Muerto[/b] [offset=120]$4x[/offset]
+	[b]Ordenado[/b] [offset=120]$5x[/offset]
+>>
+
+TT_EXPLORE: <<|
+	[b]Autoexplorar[/b]
+
+	Automáticamente exploras sistemas.
+>>
+
+TT_EXPLORE_FTL: <<|
+	[b]Autoexplorar con FTL[/b]
+
+	Automáticamente exploras sistemas.
+	Usas hasta la mitad del FTL almacenado del imperio para explorar rápidamente.
+>>
+
+STATUS_PIRATESHIP: Nave Pirata
+STATUS_PIRATESHIP_DESC: <<
+	Esta nave es una nave pirata y atacará a los comerciantes por su carga.
+
+	Periódicamente traerá su botín a la estaciones de "Reservas Piratas", ocultas en el espacio profundo.
+>>
+
+SUPPORT_BEH: Comportamiento
+BEH_Brawler: Matón
+BEH_Brawler_DESC: Cuando tiene oportunidad ataca apoyos, atacará flotas enemigas si tiene equipados almacenes de munición.
+BEH_Shield: Escudar
+BEH_Shield_DESC: Protege al buque insignia y apoyos de las flotas enemigas.
+BEH_Cavalry: Caballería
+BEH_Cavalry_DESC: Encuentra aberturas en los que atacar a los valiosos apoyos enemigos.
+BEH_Artillery: Artillería
+BEH_Artillery_DESC: Se oculta detrás de flotas aliadas y lanza descargas a objetivos enemigos claves.
+BEH_Bombardment: Bombardeos
+BEH_Bombardment_DESC: Asedia planetas enemigos (Todavía no implementado)
+BEH_Cannon: Cañón
+BEH_Cannon_DESC: Destruye naves de apoyo en la ruta de los objetivos enemigos valiosos.
+BEH_Support: Flota de Apoyo
+BEH_Support_DESC: Se oculta detrás de la flota aliada sin intentar atacar objetivos.
+BEH_Bomber: Cazabombardero
+BEH_Bomber_DESC: Se centra en buques insignia enemigos, que atacarán si almacenes de munición estan equipados
+
+SUPPORT_RANGE: Rango de Ataque
+RANGE_Auto: Auto
+RANGE_Far: Lejano
+RANGE_Close: Cercano
+
+STATUS_FLUX_COOLDOWN: Refresco de Flujo
+STATUS_FLUX_COOLDOWN_DESC: <<
+	Esta flota ha utilizado recientemente el campo de flujo para viajar, y no puede usarse otra vez durante un periodo corto de tiempo.
+>>
+
+STATUS_SHIPLEVEL: Veteranía
+STATUS_SHIPLEVEL_DESC: <<
+	La tripulación de este buque insignia consiste en veteranos expertos, incrementando su salud y efectividad de combate en un 20% y su mando de apoyo en un 10% por cada nivel de veteranía.
+
+	Destruye buques insignia enemigos o usa un simulador para entrenar a tu tripulación e incrementar su nivel de veteranía.
+>>

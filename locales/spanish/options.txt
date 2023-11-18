@@ -1,0 +1,187 @@
+OPT_GAME: Juego
+OPT_GALAXY_BG: Mostrar Galaxia en Fondo
+OPT_ROTATE_OBJS: Rotar Objetos en la Pantalla UI
+OPT_MENU_BG_SCREENSHOT: Mirar Ultimo Salvado en Menú de Fondo
+OPT_ICONIFY_NOTIFICATIONS: Iconificar Notificaciones
+OPT_MAX_NOTIFICATIONS: Máx. Visibilidad
+OPT_AUTOPAUSE: Automáticamente Pausar Cuando Veas Otras Pestañas
+OPT_HOLD_FOR_POPUP: Mantener Botón Izq Ancla Ayuda
+OPTTT_HOLD_FOR_POPUP: Cuando se marca, mantener el botón izquierdo del ratón durante un momento mientras se pasa por encima anclará el consejo en la pantalla.
+
+OPT_KEYBINDS: Vinculaciones
+OPT_RESET_KEYBINDS: Reinicias las Vinculaciones Por Defecto
+OPT_RESET_SURE: ¿Estás seguro que deseas reiniciar todas las vinculaciones por defecto?
+
+OPT_AUDIO: Audio
+OPT_MASTER_VOLUME: Volumen Principal
+OPT_SFX_VOLUME: Volumen SFX
+OPT_MUSIC_VOLUME: Volumen de Música
+
+OPT_LANGUAGE: Lenguaje*
+LOC_english: Ingles
+LOC_japanese: Japones
+LOC_spanish: Español
+
+OPT_MAX_FPS: Límite FPS
+OPT_AUTOSAVE: Intervalo de Autosalvado (Min)
+OPT_AUTOSAVE_COUNT: Contador de Autosalvados
+
+KG_Global: Vinculaciones Globales
+KB_WORLD_FORWARD: Adelante en el Mundo
+KB_WORLD_LEFT: Izquierda en el Mundo
+KB_WORLD_BACKWARD: Atrás en el Mundo
+KB_WORLD_RIGHT: Derecha en el Mundo
+KB_WORLD_UP: Arriba en el Mundo
+KB_WORLD_DOWN: Abajo en el Mundo
+
+KB_CAM_FORWARD: Adelante en Cámara
+KB_CAM_LEFT: Izquierda en Cámara
+KB_CAM_BACKWARD: Atrás en Cámara
+KB_CAM_RIGHT: Derecha en Cámara
+KB_CAM_UP: Arriba en Cámara
+KB_CAM_DOWN: Abajo en Cámara
+
+KB_ZOOM_IN: Hacer Zoom
+KB_ZOOM_OUT: Deshacer Zoom
+KB_ZOOM_LOCK_OBJECT: Zoom a objeto
+
+KB_RESET_CAM: Reiniciar Cámara
+KB_TAKE_SCREENSHOT: Tomar Captura de Pantalla
+KB_TOGGLE_FIREARCS: Alterar Mostrar Arcos de Disparos
+KB_STOP: Parar/Cancelar las Ordenes
+
+KB_TAB_NEXT: Pestaña Sig.
+KB_TAB_PREVIOUS: Pestaña Pre.
+KB_TAB_NEW: Abrir Nueva Pestaña
+KB_TAB_NEW_BG: Abrir Nueva Pestaña de Fondo
+KB_TAB_REOPEN: Reabrir Pestaña Cerrada
+KB_TAB_CLOSE: Cerrar Pestaña
+KB_TAB_HOME: Pestaña de Inicio
+KB_TAB_1: Cambiar A Pestaña 1
+KB_TAB_2: Cambiar A Pestaña 2
+KB_TAB_3: Cambiar A Pestaña 3
+KB_TAB_4: Cambiar A Pestaña 4
+KB_TAB_5: Cambiar A Pestaña 5
+KB_TAB_6: Cambiar A Pestaña 6
+KB_TAB_7: Cambiar A Pestaña 7
+KB_TAB_8: Cambiar A Pestaña 8
+KB_TAB_9: Cambiar A Pestaña 9
+
+KB_UI_ZOOM_IN: Hacer Zoom en UI
+KB_UI_ZOOM_OUT: Deshacer Zoom en UI
+KB_UI_ZOOM_RESET: Reiniciar Escala UI
+
+KB_MP_CHAT: Abrir Chat MP
+
+KB_PAUSE: Alternar Pausa
+KB_SPEED_SLOWER: Reducir Velocidad de Juego
+KB_SPEED_DEFAULT: Velocidad de Juego Por Defecto
+KB_SPEED_FASTER: Acelerar Velocidad de Juego
+
+KB_TOGGLE_CONSOLE: Alternar Consola
+KB_TOGGLE_MENU: Cambiar a Menú Principal
+KB_GO_MENU: Abrir Menú Ir
+KB_CHANGE_EMPIRE: Cambiar Imperio
+
+KG_Objects: Objetos
+
+KB_GROUP_1: Grupo de Objetos 1
+KB_GROUP_2: Grupo de Objetos 2
+KB_GROUP_3: Grupo de Objetos 3
+KB_GROUP_4: Grupo de Objetos 4
+KB_GROUP_5: Grupo de Objetos 5
+KB_GROUP_6: Grupo de Objetos 6
+KB_GROUP_7: Grupo de Objetos 7
+KB_GROUP_8: Grupo de Objetos 8
+KB_GROUP_9: Grupo de Objetos 9
+
+KB_FTL: Naves Seleccionadas en FTL
+KB_HOLD_POSITION: Mantener Posición
+KB_PIN: Apuntar a Objeto
+KB_PIN_FLOATING: Apuntar a Objeto Flotante
+KB_PING: Llamar a Aliados
+KB_PING_ALL: Llamar a Todos los Imperios
+
+KB_OPTIONS_MENU: Abrir Opciones
+
+OPT_GRAPHICS: Gráficos
+OPT_TEX_QUALITY: Calidad de Textura*
+OPT_RESOLUTION: Resolución*
+OPT_RES_ENTRY: $1x$2 $3Hz
+OPT_FULLSCREEN: Pantalla Completa*
+OPT_RESTART: * Requiere reiniciar el programa.
+OPT_GUI_SCALE: Escalar GUI
+
+OPT_SHADER_LEVEL: Calidad de Shader
+SHADER_LEVEL_1: Baja
+SHADER_LEVEL_2: Medio
+SHADER_LEVEL_3: Alto
+SHADER_LEVEL_4: Extremo
+
+MONITOR: Monitor a Pantalla Completa*
+MONITOR_PRIMARY: Monitor Primario
+
+ANTIALIASING: Antialiasing*
+AA_None: Apagado
+AA_2x: 2x MSAA
+AA_4x: 4x MSAA
+AA_8x: 8x MSAA
+AA_Super: 2x FSAA
+
+VSYNC: VSync
+VSYNC_Off: Apagado
+VSYNC_On: Encendido
+VSYNC_OnHalf: Encendido (Tasa de Frames Media)
+VSYNC_Adaptive: Adaptativo
+
+AUDIO_DEVICE: Dispositivo de Audio*
+AUDIO_DEVICE_DEFAULT: Por Defecto
+
+OPT_CAMERA: Camera
+OPT_ZOOM_SPEED: Velocidad de Zoom
+OPT_INVERT_ZOOM: Invertir Zoom
+OPT_PAN_SPEED: Velocidad de Paneo
+OPT_INVERT_PAN_X: Invertir Paneo Horizontal
+OPT_INVERT_PAN_Y: Invertir Paneo Vertical
+OPT_INVERT_ROTATION_X: Invertir Rotación Horizontal
+OPT_INVERT_ROTATION_Y: Invertir Rotación Vertical
+OPT_FREE_CAMERA: Habilitar Roll de Cámara
+OPT_CURSOR_ZOOM_IN: Zoom Al Cursor
+OPT_CURSOR_ZOOM_OUT: Zoom Fuera del Cursor
+OPT_MOD_SPEED_PAN: Mantener Cambios de Velocidad de Panel
+OPT_SHOW_GAS: Mostrar Gas en Galaxia
+OPT_EDGE_PAN: Habilitar Paneo Lateral
+OPT_RESEARCH_EDGE_PAN: Activar Paneo de  Investigación
+OPT_ESCAPE_GALAXY_TAB: Tecla Esc Retorna a Galaxia
+OPT_DELAY_TOP_EDGE: Retrasar Paneo Lateral Encima
+OPT_CAPTURE_CURSOR: Capturar Cursor
+
+OPT_BLOOM: Bloom
+OPT_VIGNETTE: Vignette
+OPT_CHROMATIC_ABERRATION: Aberración Cromática
+OPT_FILM_GRAIN: Granulado de Película
+OPT_GOD_RAYS: Rayos de Dios
+OPT_SKYCUBE_STARS: Estrellas de Caja de Cielo
+
+KG_DesignEditor: Editor de Diseño
+KB_DESIGN_UNDO: Deshacer
+KB_DESIGN_REDO: Rehacer
+KB_DESIGN_TOOL_PAINT: Seleccionar Pintar
+KB_DESIGN_TOOL_MOVE: Seleccionar Mover
+KB_DESIGN_TOOL_DROP: Seleccionar Cuentagotas
+KB_DESIGN_SAVE: Salvar Diseño
+KB_DESIGN_SAVE_CLOSE: Salvar y Cerrar Diseño
+KB_DESIGN_DUPLICATE: Duplicar Diseño
+KB_DESIGN_EXPORT: Exportar Diseño
+KB_MANAGE: Abrir Gestión de Planeta
+KB_MANAGE_SUPPORT: Abrir Gestor de Apoyo
+KB_DEPLOY_DEFENSE: Desplegar Reserva de Defensa
+
+
+KB_EXPORT: Exportar Recurso
+KB_CANCEL_EXPORT: Cancelar Exportación
+KB_AUTO_IMPORT: Autoimportar
+KB_COLONIZE: Colonizar
+KB_ATTACK: Atacar
+KB_HOMEWORLD: Zoom al Planeta Nativo
+KB_TRANSFER_SUPPORTS: Transferir Apoyos

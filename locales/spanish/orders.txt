@@ -1,0 +1,8 @@
+MOVE_TO: Mover A
+ATTACK: Atacar
+ATTACK_TARGET: Atacar a $1
+ONLY_ATTACKABLE: Solo puede atacar naves, orbitales y planetas.
+ONLY_WAR: Se debe estar en guerra.
+PICK_UP: Recoger
+RALLY_TO: Reunirse en $1
+STOP_RALLY: Parar reunión.

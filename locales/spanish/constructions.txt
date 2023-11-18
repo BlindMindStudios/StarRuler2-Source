@@ -1,0 +1,26 @@
+BCAT_Actions: Acciones
+BCAT_Beacons: Balizas
+BCAT_Upgrades: Actualizaciones
+
+CONS_MOON_BASE: Base Lunar
+CONS_MOON_BASE_DESC: <<
+	Construir una gran cantidad de infraestructura en una de las lunas del planeta, creando más áreas disponibles para construir e incrementar la población máx. del planeta en 2.
+
+	Solo una base lunar puede ser construida por cada luna presente en la órbita del planeta.
+>>
+
+CONS_FLARE_BOMB: Bomba Destello
+CONS_FLARE_BOMB_DESC: <<
+	Construir una bomba destello usando planos de artefactos remanentes.
+
+	Las bombas cegadoras se pueden usar en estrellas. Tras un periodo canalizado de 60 segundos, la estrella emite un destello crítico, borrando la población en el sistema solar pero dejando el resto intacto. Los planetas en el sistema son irradiados durante lo próximos 5 min. y no puede ser colonizado.
+
+	La bomba destello es destruida en el proceso.
+>>
+
+CONS_ARTIFICIAL_MOON: Luna Artificial
+CONS_ARTIFICIAL_MOON_DESC: <<
+	Construir una luna artificial en órbita en este planeta. Solo una puede ser construida alrededor del planeta.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Construir una luna requiere Minerales minados de asteroides.[/color][/b][/img]
+>>

@@ -1,0 +1,131 @@
+ATTITUDES_TAB: Actitudes
+ATT_MAX_LEVEL: Actitud a nivel máximo.
+ATT_TAKE_ATT: [b]Elegir $1[/b] [color=$Influence]([vspace=-2][img=$Influence;20/][/vspace] $2)[/color]
+ATT_TAKE_COST: Elegir Actitud Extra: [color=$Influence][img=$Influence;22/] $1[/color]
+ATT_DISCARD: Eliminar: [color=$Influence][vspace=-3][img=$Influence;22/][/vspace] $1[/color]
+ATT_CONFIRM_DISCARD: ¿Estas seguro que deseas eliminar la actitud [b]$1[/b]?
+ATT_HEADER_DESC: <<
+	[font=Medium][color=#63ebdb]Actitudes[/color][/font]
+	[vspace=6/][offset=8][i][color=#aaa]Puedes influenciar las actitudes de tu gobierno y tu gente. Cada actitud puede ser aumentada de nivel ejecutando acciones específicas, y que otorgan varios bonus dependiendo del nivel.  La influencia puede ser gastada para elegir actitudes extras o eliminar las existentes[/color][/i][/offset]
+>>
+ATT_HAVE_ATTITUDE: Ya tienes esta Actitud.
+ATT_CANNOT_ATTITUDE: No se puede elegir esta actitud.
+
+ATT_DELINQUENT: Delincuente
+ATT_DELINQUENT_PROGRESS: Destruye [b]$1 Flota(s) Remanentes[/b].
+ATT_DELINQUENT_L1: Ganas 10 a la Reserva de Defensa.
+ATT_DELINQUENT_L2: Ganas el doble de efectos de las recogidas Remanentes.
+ATT_DELINQUENT_L3: Incrementas todas las armas de las naves un 10%.
+ATT_DELINQUENT_L4: Doblas la salud y masa de todos los hexes de armas de tipo torreta.
+ATT_DELINQUENT_L5: Todos los buques insignias construidos empiezan con Nivel 1 de Veteranía.
+
+ATT_REVERENT: Reverente
+ATT_REVERENT_PROGRESS: Activa [b]$1 Artefacto(s)[/b].
+ATT_REVERENT_L1: Incrementa tu almacenamiento de energía libre en 100.
+ATT_REVERENT_L2: Incrementa la capacidad de escudo de tus naves un 20%.
+ATT_REVERENT_L3: Genera un artefacto aleatorio en uno de tus sistemas cada 5 minutos.
+ATT_REVERENT_L4: Reduce todos los Costes FTL un 30%.
+ATT_REVERENT_L5: Por cada 500 de Energía almacenado, incrementas la producción de Defensa un 30%. Ganas la "Sobrecarga Reverente".
+ABL_REVERENT_OVERCHARGE: Sobrecarga Reverente
+ABL_REVERENT_OVERCHARGE_DESC: <<
+	Activar la Sobrecarga Reverente baja tu nivel de actitud Reverente a Nivel 0, perdiendo todos los beneficios aportados.
+
+	Otorga un potenciador a todas tus naves actuales durante los próximos 6 minutos.
+
+	Todas las flotas potenciadas tienen su salud temporalmente doblada, su fuerza de combate incrementada un 25% y no gastan reservas al reparar o disparar.
+>>
+STATUS_REVERENT_OVERCHARGE: Sobrecarga Reverente
+STATUS_REVERENT_OVERCHARGE_DESC: <<
+	Una sobrecarga temporal otorgada por la actitud Reverente.
+
+	Dobla la salud de tu flota, incrementas la fuerza de combate un 25% y no gastas ningún suministro al reparar o disparar.
+>>
+
+ATT_MATERIALISM: Materialismo
+ATT_MATERIALISM_PROGRESS: Invierte §$1k en esta actitud.
+ABL_SPEND_ATTITUDE_MONEY: Invierte §500k
+ABL_SPEND_ATTITUDE_MONEY_DESC: <<
+	Gastas §500k del presupuesto en actualizar el nivel de la actitud.
+>>
+ATT_MATERIALISM_L1: Incrementa la aceleración de las naves colonia un 50%.
+ATT_MATERIALISM_L2: Ganas un 25% de Fondos Especiales extras en cada presupuesto.
+ATT_MATERIALISM_L3: Los préstamos del próximo presupuesto no acarrean ningún costo adicional.
+ATT_MATERIALISM_L4: Reduce el coste de trabajo de Orbitales y Estaciones en un 33%.
+ATT_MATERIALISM_L5: Todos los recursos de Grado 2 o superior producen 2 de presión extra.
+
+ATT_GENEROSITY: Generosidad
+ATT_GENEROSITY_PROGRESS: Compra [b]$1 Cartas de diplomacia[/b] de la fifo.
+ATT_GENEROSITY_L1: Ganas hasta 3 de Interés de Influencia, 1 por cada imperio contactado.
+ATT_GENEROSITY_L2: Incrementas la velocidad de construcción de edificios un 33%.
+ATT_GENEROSITY_L3: Todas las cartas 'Negociar' que juegas en votos te dan 1 extra de apoyo u oposición.
+ATT_GENEROSITY_L4: Inmediatamente ganas +5 de Apoyo en cada voto Zeitgeist que es empezado.
+ATT_GENEROSITY_L5: Ganas una estrella de calidad extra en cada carta de diplomacía comprada de la fifo.
+
+ATT_INDIVIDUALISM: Individualismo
+ATT_INDIVIDUALISM_PROGRESS: Construye [b]$1 Edificio(s) del Imperio u Orbital(es)[/b].
+ATT_INDIVIDUALISM_L1: Incrementas la capacidad de presión de tu mundo inicial en 6.
+ATT_INDIVIDUALISM_L2: Ciudades, Metrópolis y Megaciudades se construyen en superficie inmediatamente.
+ATT_INDIVIDUALISM_L3: Ganas 1 de Interés de Influencia por cada 15 de población en tu imperio.
+ATT_INDIVIDUALISM_L4: Incrementas el rango de las armas basadas en misiles un 50%.
+ATT_INDIVIDUALISM_L5: Todos los buques insignias construidos empiezan con un nombre.
+
+ATT_COLLECTIVISM: Colectivismo
+ATT_COLLECTIVISM_PROGRESS: Construye [b]$1 Base(s) Minera(s) en Asteroides[/b].
+ATT_COLLECTIVISM_L1: Incrementas la capacidad de presión de todos tus planetas en 1.
+ATT_COLLECTIVISM_L2: Incrementas el trabajo generado por tus Fábricas en 2.
+ATT_COLLECTIVISM_L3: Doblas los efectos positivos de las[b]Condiciones Planetarias[/b].
+ATT_COLLECTIVISM_L4: Descubres un nuevo asteroide en uno de tus sistemas cada 5 minutos.
+ATT_COLLECTIVISM_L5: Cada fábrica en un planeta añade a las naves construidas en el un 10% de salud.
+CONS_HP_BONUS: Bono De PS de Nave
+
+ATT_WARMONGERING: Belicismo
+ATT_WARMONGERING_PROGRESS: Conquista [b]$1 Planeta(s)[/b] mediante un asedio.
+ATT_WARMONGERING_L1: Doblas el tiempo que toma a tus planetas decaer a niveles más bajos.
+ATT_WARMONGERING_L2: Permanentemente ganas un 1% extra de fuerza de combate a tus flotas cuando destruyes un buque insignia imperial enemigo.
+ATT_WARMONGERING_L3: Incrementas la capacidad de apoyo máximo de los buques insignias un 15%.
+ATT_WARMONGERING_L4: Reduces el coste de trabajo de construir buques insignias y estaciones un 15%.
+ATT_WARMONGERING_L5: La generación de Defensa y Energía se incrementa hasta un 50% dependiendo los imperios con los que estas en guerra.
+
+ATT_SCHEMING: Conspirador
+ATT_SCHEMING_PROGRESS: Gana [b]$1 Voto(s) de Anexión[/b].
+ATT_SCHEMING_L1: Cuando un voto de anexión que empezaste empieza a fallar, ganas de nuevo la carta usada.
+ATT_SCHEMING_L2: Las votaciones empezadas por tu imperio empiezan con 1 de apoyo extra.
+ATT_SCHEMING_L3: Ganas 3 de Influencia cuando alguien empieza una votación.
+ATT_SCHEMING_L4: Doblas los Reservas y el tiempo requerido de otros imperios en usar asedio en tus planetas.
+ATT_SCHEMING_L5: Cuando alguien compra una carta de influencia de la fifo, tienes un 50% de probabilidad. de obtener una copia de esa carta.
+
+ATT_STABLE: Estabilidad
+ATT_STABLE_PROGRESS: Desarrolla [b]$1 Planeta(s)[/b] a level 3 o superior.
+ATT_STABLE_L1: Incrementas la tasa por la cual los buques recobran reservas un 20%.
+ATT_STABLE_L2: Incrementas la Lealtad de todos tus planetas en 2.
+ATT_STABLE_L3: Reduce el coste de construcción de estructuras de superficie un 50%.
+ATT_STABLE_L4: Doblas el efecto del estado [b]Feliz[/b] en tus planetas.
+ATT_STABLE_L5: Cuando uno de tus naves es destruida en combate, ganas un 20% de su coste de construcción.
+
+ATT_PROGRESSIVE: Progresividad
+ATT_PROGRESSIVE_PROGRESS: Desbloquea [b]$1 Investigacion(es)[/b].
+ATT_PROGRESSIVE_L1: Ganas 1 de generación base extra de investigación.
+ATT_PROGRESSIVE_L2: Incrementa la tasa de generación FTL por 1/s.
+ATT_PROGRESSIVE_L3: Cuando gastas energía FTL, ganas investigación proporcional a los FTLs gastados.
+ATT_PROGRESSIVE_L4: Doblas el efecto de convertir el dinero en opciones de prestaciones.
+ATT_PROGRESSIVE_L5: Incrementa el tamaño de todos los buques insignias en 14 hexes.
+
+ATT_TOLERANT: Tolerante
+ATT_TOLERANT_PROGRESS: Explora otros imperios durante [b]$1 Minuto(s) * Sistema(s)[/b].
+ATT_TOLERANT_L1: Incrementa el empuje de Motores de Cohete un 25%.
+ATT_TOLERANT_L2: Incrementa el crecimiento de población en tus planetas un 30%.
+ATT_TOLERANT_L3: Todos los votos comenzados por imperios no aliados comienzan con -1 de Apoyo.
+ATT_TOLERANT_L4: Cualquier carta dirigida a tu imperio es eliminada de las cartas de diplomacia fifo.
+ATT_TOLERANT_L5: Los imperios que entren en guerra contigo pierden un 50% de Influencía y Energía almacenada, y su generación de Influencia, Energía e Investigación es reducida un 50% durante 6 mins.
+TOLERANT_EFFECT: Tolerante y Amistoso
+TOLERANT_EFFECT_DESC: <<
+	A todo el mundo le gusta este imperio. Si entras en guerra con ellos, perderás un 50% de tu Influencia y Energía, y tienes la generación de Influencia, Energía e Investigación durante 6 mins.
+>>
+
+ATT_XENOPHOBIC: Xenofóbico
+ATT_XENOPHOBIC_PROGRESS: Mantén [b]$1 Puesto(s) de Avanzada[/b] en sistemas frontera.
+ATT_XENOPHOBIC_L1: Incrementa la salud de todos los orbitales un 50%.
+ATT_XENOPHOBIC_L2: Incrementa la capacidad de apoyo de los puestos en 128.
+ATT_XENOPHOBIC_L3: Las naves de apoyo asignadas a los puestos se mueven independientemente a través del sistema para atacar flotas enemigas.
+ATT_XENOPHOBIC_L4: Reduces costes de construcción de naves de apoyo un 30%.
+ATT_XENOPHOBIC_L5: Cuando destruyes una nave enemiga en combate, ganas un 20% de su costo de mantenimiento como Fondos Especiales.
