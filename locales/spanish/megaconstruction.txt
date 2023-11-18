@@ -1,0 +1,71 @@
+ARTIFICIAL_PLANETOID: Planetoide Artificial
+ARTIFICIAL_PLANETOID_DESC: <<
+	Un planetoide construido artificialmente con su propia atmósfera y campo gravitatorio.
+
+	Los planetoides artificiales producen toda su comida, no necesitan importarla y pueden construir grandes plantas de procesamiento para satisfacer otros requerimientos de subida de nivel. El planetoide puede también ser actualizado para añadir mayor superficie.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Construir un planetoide artificial o cualquier mejora requiere grandes cantidades de Minerales minados de asteroides.[/color][/b][/img]
+>>
+CONS_PLANETOID_UPGRADE: Capa de Planetoide Extra
+CONS_PLANETOID_UPGRADE_DESC: <<
+	Añade una capa extra superficial al planetoide artificial, expandiéndolo y permitiendo que mas edificios sean construidos.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>
+BLD_PLANETOID_LV1: Planta de Procesamiento de Grado 1
+BLD_PLANETOID_LV1_DESC: <<
+	Una planta de procesamiento especializada que puede reemplazar uno de los requisitos de recursos de grado 1 del planetoide artificial.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>
+BLD_PLANETOID_LV2: Planta de Procesamiento de Grado 2
+BLD_PLANETOID_LV2_DESC: <<
+	Una planta de procesamiento especializada que puede reemplazar uno de los requisitos de recursos de grado 2 del planetoide artificial.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>
+
+STARFORGE: Forja Estelar
+ STARFORGE_BLURB: Troceas y absorbes porciones de la estrella del sistema para generar trabajo.
+STARFORGE_DESC: <<
+	Una construcción altamente avanzada de campo que arranca energía y material de las capas externas de la estrella.
+
+	Genera 25 de trabajo por minuto a costa de lentamente dañar la estrella en el sistema en el que te encuentras. Actualizaciones pueden ser construidas en la forja estelar para incrementar la generación de trabajo a costa de incrementar la tasa de daños a la estrella.
+
+	Todas las construcciones en una Forja Estelar tienen una reducción del 50% de costes de construcción.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Construir una forja estelar o cualquiera de sus mejoras requieren grandes cantidades de Minerales minados de asteroides.[/color][/b][/img]
+>>
+CONS_STARFORGE_UPGRADE: Actualizar Forja Estelar
+CONS_STARFORGE_UPGRADE_DESC: <<
+	Incrementas la tasa a la cual la Forja Estelar genera 25 de trabajo por minuto. Esto también incrementa el daño a la estrella del sistema cuando se usa ese trabajo.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>
+CONS_CANNIBALIZE_PLANET: Canibalizar Planeta
+CONS_CANNIBALIZE_PLANET_DESC: <<
+	Usas el rayo de adquisición de materia de la Forja Estelar para completamente desgarrar un planeta abandonado o no poseído en este sistema, ganando minerales y trabajo almacenado en el proceso.
+
+	El planeta sin colonizar objetivo es destruido, ganando 5000 de minerales y 250 de Trabajo almacenado.
+>>
+
+VACUUM_TELESCOPE: Telescopio del Vacío
+VACUUM_TELESCOPE_BLURB: Da visión sobre todas las flotas actualmente en cualquier lugar del espacio profundo.
+VACUUM_TELESCOPE_DESC: <<
+	Al detectar fluctuaciones de minutos en el hipercampo correspondiente a cambios en la energía del vacío del espacio real, cúmulos de masa concentradas pueden ser precisados. Esto tiene poco uso en las fuentes de gravedad de los sistemas solares, ya que las apabullantes masas de las estrellas crean demasiado ruido para detectar cualquier otros objetos, pero puede muy precisamente detectar flotas viajando a través del vasto alcance del espacio profundo, donde no otros cúmulos significantes de masa existen.
+
+	Da visión sobre todas las flotas que están actualmente en cualquier lugar del espacio profundo.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>
+
+RINGWORLD: Mundo Anillo
+RINGWORLD_DESC: <<
+	Un enorme anillo construido alrededor de un sistema estelar, con espacio habitable en la superficie de anillo interno enfrentado a la estrella.
+
+	Los mundo anillos tienen [levels=$1;#ffb4b6]+0/+10/+20/+30/+40/+50[/levels] de población máxima incrementada.
+
+	Por cada tipo de recurso, si el mundo anillo esta recibiendo cualquier presión de ese recurso, gana [levels=$1;#ffb4b6]2/4/6/8/10/12[/levels] de presión extra de ese recurso.
+
+	[img=ResourceIconsSmall::11;22;#91692c][b][color=#91692c]Requiere extremadamente grandes cantidades de Minerales de asteroides.[/color][/b][/img]
+>>

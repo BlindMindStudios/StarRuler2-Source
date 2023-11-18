@@ -1,0 +1,215 @@
+ERROR_NOT_UNLOCKED: $1 no esta desbloqueado.
+ERROR_MODULE_NOT_UNLOCKED: Módulo $1 no esta desbloqueado.
+ERROR_NO_CORE: $1 requiere un núcleo.
+ERROR_NEEDS_EXTERIOR_CORE: El Núcleo de $1 debe ser exterior.
+ERROR_REQUIRED_MODULE:A $1 le falta el módulo requerido $2.
+ERROR_UNIQUE_MODULE: Solo se permite un $2 en $1.
+ERROR_INSUFFICIENT_Crew: Tripulación Insuficiente.
+ERROR_INSUFFICIENT_Command: Mando Insuficiente.
+ERROR_INSUFFICIENT_Power: Energía Insuficiente.
+ERROR_DUPLICATE_DESIGN: Un Diseño con este nombre ya existe: renombrado a '$1'.
+ERROR_INVALID_FILE: El archivo no es un diseño válido exportado.
+ERROR_INVALID_HULL: No se puede usar $1 en este tipo de casco.
+ERROR_MINIMUM_SIZE: Casco '$1' requiere un tamaño mínimo $2.
+ERROR_MAXIMUM_SIZE: Casco '$1' tiene un tamaño máximo de $2.
+ERROR_MIN_SIZE: $1 tiene un tamaño mínimo de $2.
+ERROR_HULL_NOT_IN_SHIPSET: El diseño de casco no esta disponible para la actual nave.
+ERROR_NEED_CONTROL: Se necesita al menos 1 de Mando.
+ERROR_HEX_LIMIT_ARC: La torreta $1 debe apuntar hacia afuera.
+ERROR_FACE_BACKWARDS: El escape de la nave $1 debe mirar hacia atrás.
+ERROR_NOT_CONNECTED: El diseño debe estar conectado completamente.
+ERROR_NOT_CONTIGUOUS: $1 debe estar en una área contigua.
+ERROR_TOO_SMALL: $1 es demasiado pequeño.
+ERROR_GRID_SIZE: Tamaño de cuadricula hex inválido.
+ERROR_HEX_COUNT: Demasiado espacio interior usado.
+ERROR_MUST_BE_EXTERIOR: Todos los hexes $1 deben ser exteriores.
+ERROR_MUST_COVER: $1 debe cubrir la nave en todas las direcciones.
+ERROR_ONE_APPLIED: Solo un $1 puede ser aplicado.
+ERROR_CANNOT_APPLY: No se puede aplicar al subsistema $1.
+ERROR_MUST_ADJACENT: Todos los hexes deben ser adyacentes para al menos un $1.
+ERROR_MUST_ADJACENT_INTERIOR: Los hexes interiores deben ser adyacentes para al menos un $1.
+ERROR_CONTIGUOUS: $1 debe estar completamente conectado.
+ERROR_MUST_BE_FILLED: El espacio interior debe estar lleno.
+ERROR_EXPOSE_LEFT_RIGHT: $1 debe estar en el exterior en ambos lados, izquierdo, derecho del diseño.
+ERROR_ONLY_ONE: Solo esta permitido un $1.
+ERROR_NEED_PRAYER: La nave requiere un Santuario para generar plegarias.
+ERROR_EQUAL_PRAYER: Se debe tener al menos tantas Oraciones como Mando.
+ERROR_NEED_SHIELD: $1 solo puede ser utilizado si la nave tiene Escudos.
+ERROR_CANNOT_HAVE_WEAPONS: $1 no puede tener armas.
+ERROR_ALL_POWER: Toda la energía debe proceder de $1.
+ERROR_BRIDGE_AI: La nave no puede usar tripulación e IA al mismo tiempo.
+ERROR_REQUIRE_SCOOP: $1 debe contener al menos un Entrada de Aire.
+ERROR_SCOOP_FACE_FRONT: Las Entradas de aire deben estar en el frente exterior de la nave
+ERROR_MUST_SURROUND: $1 debe estar rodeado por hexes $2
+ERROR_NOT_ALLOWED_ON_MOTHERSHIP: $1 no permitido en cascos Nave nodriza.
+REQUIRE_CONSTRUCTION_BAY: $1 requiere Bahía de Construcción para dar trabajo.
+APPLIED_HULL: Casco
+DESIGNS: Diseños
+DSG_INSERT_NAME: Escribe nombre para el diseño...
+AUTO_SELECT_HULL: AutoSeleccionar modelo de casco...
+FORCE_HULL: Casco: $1
+DESIGN_HEX_LIMIT: Espacio Interior: $1 / $2
+TT_DESIGN_HEX_LIMIT: <<
+	Los diseños solo pueden contener una cantidad de hexes interiores.
+
+	Ciertos subsistemas como los hexes de blindaje externos de la nave no cuentan como hexes interiores de la nave.
+>>
+
+TIP_ROTATE: Puedes rotar a donde apunta la torreta utilizando la rueda del ratón.
+
+SUBSYS_CORE: Núcleo
+SUBSYS_AT: " en "
+SUBSYS_HEX: "Hex "
+
+HULL_DELETE_FILE_CONFIRM: ¿Estas seguro que deseas eliminar el archivo de casco '$1'?
+HULL_DELETE_HULL_CONFIRM: ¿Estás seguro que deseas eliminar el casco '$1'?
+HULL_CLEAR: Limpiar Cascos
+HULL_CONFIRM_CLEAR: ¿Estas seguro que deseas dejar el casco limpio de cambios?
+
+IMPORT_ERRORS: Estos errores ocurrieron durante la importación:
+IMPORT_INTO_CLASS: Importar en Clase:
+SAVED_CLASS: <Saved Class>
+EXPORT_DESIGN: Exportar
+DUPLICATE_DESIGN: Duplicar
+
+SANDBOX_WAR: !Luchad!
+SANDBOX_PEACE: Cesad el Fuego...
+SPAWN_ALLIED: Generar Aliados
+SPAWN_ENEMY: Generar Enemigos
+SANDBOX_CLEAR: Limpiar Entorno
+SANDBOX_CONFIRM_CLEAR: ¿Deseas destruir las naves del Entorno de Pruebas?
+SANDBOX_DESC:¡Bienvenido al entorno de pruebas de diseños!!\nLos diseños son autoexportados aquí.\nUsar 'Diseños Importados' para cargarlos.
+SANDBOX_SAVE_EXPORT: Salvar + Exportar
+
+TT_EDIT_DESIGN: Editar este diseño.
+TT_OBSOLETE_DESIGN: Marcas este diseño como obsoleto. No aparecerá en la lista de diseños. Diseños de apoyos obsoletos no serán automáticamente construidos por Defensa.
+TT_UNOBSOLETE_DESIGN: Traes de vuelta al uso activo este diseño, eliminando su estado de obsoleto.
+SHOW_OBSOLETE: Ver Obsoletos
+TT_SHOW_OBSOLETE: Alternar si mostrar diseños marcados como obsoletos.
+TT_SUPPORT_DESIGN: Este diseño usa un casco de nave de apoyo. Naves de apoyo no pueden moverse independientemente y solo actua centrada alrededor de una buque insignia o planeta.
+TT_FLAGSHIP_DESIGN: Este diseño usa un casco buque insignia. Buques insignias
+pueden moverse, actuar independientemente y son capaces de manejar una flota de
+apoyo. La cantidad de naves de apoyo depende del "Control de Apoyo"  de su diseño.
+TT_STATION_DESIGN: Este diseño usa un casco estación. Estaciones no se pueden mover, pero pueden ser construidas remotamente como orbitales.
+TT_SATELLITE_DESIGN: Este diseño utiliza un casco de apoyo satélite. Satélites de apoyo solo pueden ser comprados en planetas, pero con armas de mayor rango y estadísticas.
+
+S_HP: Salud Total
+S_HexHP: Salud
+STT_HP: La suma de puntos de salud de todos los hexes en el diseño.
+
+S_REPAIR: Reparación / Segundo
+STT_REPAIR: La cantidad de puntos de salud de la nave que puede ser reparados por seg. Reducido al 25% durante combate.
+
+S_Shield: Capacidad de Escudos
+STT_Shield: Puntos de salud máximos de escudo.
+
+S_ShieldRegen: Reg. de Escudos
+STT_ShieldRegen: Puntos de salud de escudos regenerados por seg.
+
+S_DPS: Daño / Segundo
+STT_DPS: Daño total por segundo (DPS) de la nave en combate, sin daños.
+
+S_SUPPLYCAP: Capacidad de Reservas
+STT_SUPPLYCAP: La cantidad total de reservas que el buque insignia puede almacenar.
+
+S_SUPPLYCAP_SUPPORT: Almacenes de Munición
+STT_SUPPLYCAP_SUPPORT: La cantidad de reservas que la nave puede llevar a un ataque alejado de su flota. Cuando estos se agotan, la nave de apoyo necesita volver a la flota para reabastecerse. No todas las naves de apoyo pueden realizar ataques solos.
+
+S_SUPPORTCAP: Control de Apoyo
+STT_SUPPORTCAP: La suma total de naves de apoyo que este buque insignia tiene la capacidad de controlar.
+
+S_ACCEL: Aceleración
+STT_ACCEL: La máxima aceleración que la nave puede mantener en tránsito.
+
+S_BOOST_ACCELERATION: Impulso de Aceleración
+STT_BOOST_ACCELERATION: El impulso de aceleración extra que la nave puede ganar cuando esta atacando. Esta se añade a la aceleración base.
+
+S_THRUST: Empuje
+STT_THRUST: Cantidad máxima de empuje sublumínico que los motores de la nave son capaces de generar.
+
+S_TURN_THRUST: Tasa de Giro
+STT_TURN_THRUST: La velocidad a la cual la nave puede rotar para cambiar la dirección.
+
+S_MASS: Masa
+STT_MASS: Masa total de la nave.
+
+S_SUPPLYREGEN: Tasa de Reabastecimiento
+STT_SUPPLYREGEN: Cantidad de reservas regenerados por segundo en espacio amigable.
+
+S_SUPPLYUSE: Uso de Reservas de Combate
+STT_SUPPLYUSE: Cantidad de reservas usados por esta nave por seg. mientras disparas las armas en combate.
+
+S_POWER: Energía
+STT_POWER: Cantidad de energía generada y usada por los subsistemas de la nave.
+
+S_CONTROL: Mando
+STT_CONTROL: Cantidad de mando generado y utilizado por los subsistemas en la nave.
+
+S_HYPERDRIVESPEED: Velocidad de Hipermotor
+STT_HYPERDRIVESPEED: La velocidad que esta nave es capaz de mantener mientras se viaja por el hiperespacio sin daños.
+
+S_SLIPSTREAMTIME: Tiempo de Estela
+STT_SLIPSTREAMTIME: La duración de tiempo de la estela tras ser abierta por esta nave.
+
+S_SLIPSTREAMOPTDIST: Distancia Optima de Estela
+STT_SLIPSTREAMOPTDIST: Cualquier estela creada más lejos de esta distancia incurrirá en costes más altos de FTL.
+
+S_CargoStorage: Almacén de Carga
+STT_CargoStorage: Usado para almacenar tipos de materiales, principalmente los minados en asteroides.
+
+S_MiningRate: Tasa de Minado
+STT_MiningRate: Tasa a la cual el láser minero puede minar materiales de asteroides y guardarlos en el almacén.
+
+S_LaborIncome: Generación de Trabajo
+STT_LaborIncome: La cantidad de trabajo generado por min. en las bahías de construccion de la nave.
+
+S_OreProcessRate: Procesamiento de Minerales
+STT_OreProcessRate: Tasa minerales almacenados/minados que son procesados en trabajo en esta nave.
+
+S_LaborProcessRate: Salida de Trabajo Procesado
+STT_LaborProcessRate: La cantidad de trabajo almacenado generado cuando suficientes minerales estan disponibles para suministrar la Tasa de Proceso de Minerales.
+
+S_OreCost: Coste de Minerales
+STT_OreCost: Cuando se construye esta nave, los minerales de asteroides que deben ser gastados desde el almacén local.
+
+S_PRAYER: Oraciones
+STT_PRAYER: La cantidad de oraciones que el santuario de la nave suministra. Las naves deben al menos tener las mismas Oraciones que Mando.
+
+S_DPS_SMALL: DPS
+S_DAMAGE: Daño
+S_BEAMDPS: Rayo DPS
+S_DURATION: Duración
+S_COOLDOWN: Enfriamiento
+S_RELOAD: Recargar
+S_RADIUS: Radio
+S_RANGE: Rango
+S_SPEED: Velocidad
+S_PROJ_DR: Proyectil RD
+S_BEAM_DR: Rayo RD
+S_EXPL_DR: Explosivo RD
+S_DR: Resistencia Al Daño
+S_DamageThreshold: Umbral de Daño
+S_SUPPLYCOST: Coste de Reservas
+S_BUILDCOST: Coste
+S_LABORCOST: Coste de Trabajo
+S_RESUPPLY: Reabastecimiento
+S_ENERGYCOST: Coste de Energía
+S_COST_FACTOR: Factor de Coste
+S_STELLAR_DAMAGE: Daño Estelar
+S_EFFICIENCYBOOST: Impulso de Fuerza
+S_Chance: Probabilidad
+S_Percentage: Porcentaje
+S_PowerUse: Energía Usada
+S_BonusShield: Bono de Escudos
+S_EnergyBuildCost: Coste de Construcción de Energía
+STT_EnergyBuildCost: La cantidad de energía del imperio que debe ser gastada cuando empiezas a construir una nave de este tipo.
+S_DroneCount: Contador de Drones
+S_SupplyGain: Ganancia de Reservas
+S_DamageOverTime: DpT DPS
+S_ConvertInterval: Intervalo de Conversión.
+S_InfluenceBuildCost: Coste de Construcción de Influencia
+STT_InfluenceBuildCost: La cantidad de influencia del imperio que debe ser gastada cuando empiezas a construir una nave de este tipo.
+S_FTLBuildCost: Coste de Construcción FTL
+STT_FTLBuildCost: La cantidad de energía FTL del imperio que debe ser gastada cuando empiezas a construir una nave de este tipo.
+S_Instances: Instancias
+S_RaidRange: Rango de Ataque

@@ -1,0 +1,966 @@
+PORTRAIT: Retrato
+RACE_NAME: Nombre de Raza
+FTL_METHOD: Método FTL
+SHIPSET: Estilo de Nave
+WEAPON_SKIN: Aspecto de Arma
+EMPIRE_UNIVERSE: Galaxia
+REMNANTS: Remanentes
+PIRATES: Piratas
+
+TT_DIFF: [font=Medium]Dificultad:[/font]
+DIFF_PASSIVE: [img=HappyFace;40][b][color=#0f0]Pasivo[/color][/b]\n[i]No declarará la guerra en imperios controlados por humanos.[/i][/img]
+DIFF_EASY: [img=StatusPeace;40][b]Fácil[/b]\n[i]Un oponente fácil con el que empezar.[/i][/img]
+DIFF_NORMAL: [img=StatusWar;40][b]Normal[/b]\n[i]Un reto moderado.[/i][/img]
+DIFF_HARD: [img=StatusCeaseFire;40][b]Difícil[/b]\n[i]Desbloquea todas las capacidades de la IA.[/i][/img]
+DIFF_MURDEROUS: [img=AttributeIcons::3;40][b][color=#ff9000]Asesinos[/color][/b]\n[i]Intenta destruir los imperios controlados por humanos por todos los medios posibles.[/i][/img]
+DIFF_CHEATING: [img=AttributeIcons::0;40][b][color=#f00]Tramposo[/color][/b]\n[i]Abusa de [b]trucos[/b] y recursos gratuitos.[/i][/img]
+DIFF_SAVAGE: [img=VoteIcons::3;40][b][color=#f00]Salvaje[/color][/b]\n[i]Abusa de [b]trucos[/b] y los recursos libres para matar a todos los humanos.[/i][/img]
+DIFF_BARBARIC: [img=VoteIcons::3;40;#ff0000][b][color=#f00]Bárbaro[/color][/b]\n[i]El reto final.[/i][/img]
+
+CUSTOMIZE_RACE: Crear Nueva Raza
+LOAD_CUSTOM_RACE: Cargar Raza Creada
+RACE_OVERVIEW: Resumen
+TRAITS: Rasgos
+NO_TRAITS: No hay rasgos elegidos...
+CONFLICTS: Conflictos:
+RACE_IS_HARD: No recomendado para principiantes.
+
+RACE_POINTS_POS: +$1 punto(s)
+RACE_POINTS_NEG: $1 punto(s)
+RACE_POINTS_NEU: 0 puntos
+
+RACE_POINTS_AVAIL_POS: $1 punto(s) disponible(s)
+RACE_POINTS_AVAIL_NEG: $1 punto(s) requerido(s)
+
+RACE_PROFILE: [img=TabWiki;30][vspace=6/]Perfil[/img]
+TRAIT_CAT_Government: [img=$Influence;30][vspace=6/]Gobierno[/img]
+TRAIT_CAT_Foundation: [img=$Labor;30][vspace=6/]Fundación[/img]
+TRAIT_CAT_FTL: [img=$FTL;30][vspace=6/]FTL[/img]
+TRAIT_CAT_Personality: [img=$Population;30][vspace=6/]Personalidad[/img]
+TRAIT_CAT_Biology: Biología
+TRAIT_CAT_Military: Militar
+TRAIT_CAT_Tendency: Tendencia
+TRAIT_CAT_Lifestyle: [img=$Planet;30][vspace=6/]Vida[/img]
+
+TRAIT_POOR: Pobre
+TRAIT_POOR_DESC: <<|
+	No tienes un primer ciclo presupuestario cuando empiezas el juego.
+>>
+
+TRAIT_INDUSTRIOUS: Industrioso
+TRAIT_INDUSTRIOUS_DESC: <<|
+	Tu mundo natal comienza con $1 de generación extra de trabajo.
+>>
+
+TRAIT_FTLCACHE: Depósito FTL
+TRAIT_FTLCACHE_DESC: <<|
+	Comienzas con $1 de energía FTL, pero sin generación.
+>>
+
+TRAIT_PLANTATION: Plantación
+TRAIT_PLANTATION_DESC: <<|
+	Comienzas con un Grano extra en tu mundo natal.
+>>
+
+TRAIT_CUNNING: Astucia
+TRAIT_CUNNING_DESC: <<|
+	Empiezas con $1 cartas aleatorias de influencia extra.
+>>
+
+TRAIT_CRUDE: En Bruto
+TRAIT_CRUDE_DESC: <<|
+	Todas las naves cuestan en su construcción un $1% más de dinero.
+>>
+
+TRAIT_INEFFICIENT: Ineficiente
+TRAIT_INEFFICIENT_DESC: <<|
+	Todas las armas drenan $1x de reservas cuando disparan.
+>>
+
+TRAIT_NIMBLE: Veloz
+TRAIT_NIMBLE_DESC: <<
+	Empuje de motores y velocidad de hipermotor aumentados un 30%.
+>>
+
+TRAIT_EMPIRE: Gobierno: Imperio
+TRAIT_EMPIRE_DESC: <<
+	[vspace=6/][b][color=#0f0]Bono:[/color][/b] [offset=140][color=#a06911]Extra de Asteroides Cercanos[/color][/offset].
+	[vspace=6/][b][color=#f00]Flota Inicial:[/color][/b] [offset=140]Heavy Carrier (Portanaves).[/offset]
+	[vspace=6/][b][color=#0087c7]Cartas Iniciales:[/color][/b] [offset=140]5x Negociar, 1x Nombrar Buque Insignia, 1x Nombrar Planeta.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Actitud Inicial:[/color][/b] [offset=140]Nivel 1 [color=#c73434]Delincuente[/color][/offset][/dlc]
+>>
+
+TRAIT_COMMUNISM: Gobierno: Comunismo
+TRAIT_COMMUNISM_DESC: <<
+	[vspace=6/][b][color=#0f0]Bono:[/color][/b] [offset=140][color=#42b4bd]500 de Energía[/color][/offset].
+	[vspace=6/][b][color=#f00]Flota Inicial:[/color][/b] [offset=140]2 Dreadnaught (Acorazados).[/offset]
+	[vspace=6/][b][color=#0087c7]Cartas Iniciales:[/color][/b] [offset=140]1x Negociar, 1x Investigar, 1x Cultivo, 1x Centro Investigación Unido, 1x Sabotaje.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Actitud Inicial:[/color][/b] [offset=140]Level 1 [color=#ac332d]Colectivismo[/color][/offset][/dlc]
+>>
+
+TRAIT_THEOCRACY: Gobierno: Teocracia
+TRAIT_THEOCRACY_DESC: <<
+	[vspace=6/][b][color=#0f0]Bono:[/color][/b] [offset=140][color=#00c0ff]250 FTL[/color][/offset].
+	[vspace=6/][b][color=#f00]Flota Inicial:[/color][/b] [offset=140]2 scouts (Exploradores), 1x Dreadnaught (Acorazado), Defensa Planetaria Nativa.[/offset]
+	[vspace=6/][b][color=#0087c7]Cartas Iniciales:[/color][/b] [offset=140]2x Llamar la Atención, 1x Conocimiento Antiguo, 2x Proteger Sistema, 1x Hospedar Senado Galáctico.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Actitud Inicial:[/color][/b] [offset=140]Nivel 1 [color=#3447c7]Reverente[/color][/offset][/dlc]
+>>
+
+TRAIT_CAPITALISM: Gobierno: Capitalismo
+TRAIT_CAPITALISM_DESC: <<
+	[vspace=6/][b][color=#0f0]Bono:[/color][/b] [offset=140][color=#d1cb6a]§400k de Fondos Especiales[/color][/offset].
+	[vspace=6/][b][color=#f00]Flota Inicial:[/color][/b] [offset=140]1 Heavy Carrier (Portanaves).[/offset]
+	[vspace=6/][b][color=#0087c7]Cartas Iniciales:[/color][/b] [offset=140]1-4x Ventaja, 2x Adjuntar Enmienda, 2x Regalo.[/offset]
+	[dlc=Heralds][vspace=6/][b][color=#63ebdb]Actitud Inicial:[/color][/b] [offset=140]Nivel 1 [color=#d1cb6a]Materialismo[/color][/offset][/dlc]
+>>
+
+TRAIT_MERITOCRACY: Gobierno: Meritocracia
+TRAIT_MERITOCRACY_DESC: <<|
+	Poder para los más productivos ciudadanos. Comienzas con 5x de Negociar (*), 1x Abrir Foro, 1x Investigar, 2x Regalo, 2x Mejora
+>>
+
+TRAIT_ANARCHY: Gobierno: Anarquía
+TRAIT_ANARCHY_DESC: <<|
+	Una falta total de estructura de gobiernos. Comienzas sin ninguna carta de influencia.
+>>
+
+TRAIT_HYPERDRIVE: Hipermotor
+TRAIT_HYPERDRIVE_DESC: <<|
+	Equipas naves con hipermotor FTL para el viaje a través del hiperespacio.
+>>
+
+TRAIT_JUMPDRIVE: Motor de Salto
+TRAIT_JUMPDRIVE_DESC: <<|
+	Las naves esta equipadas con motores de salto que les permiten saltar de forma barata a posiciones dentro de su rango de salto seguro.
+
+	Saltar fuera de la zona de rango es posible, pero puede causar daños a la nave y puede dejar la nave en una localización distinta al destino elegido.
+>>
+
+TRAIT_FLUX: Flujo
+TRAIT_FLUX_DESC: <<
+	Tu imperio mantiene un campo de flujo intrincado a través de todos los sistemas permitiendo una translación espacial instantánea.
+
+	Tus naves instantáneamente usan FTL hacia cualquier sistema en el que tengan visión. Una flota que ha recientemente utilizado el campo de flujo no puede usarla de nuevo inmediatamente. Tus naves no son capaces de viajar a través del espacio profundo.
+
+	La construcción de naves cuesta Energía FTL.
+
+	Automáticamente ganamos visión sobre los sistemas dentro de tu rango de comercio.
+>>
+
+TRAIT_FLING: Balizas de Lanzamiento
+TRAIT_FLING_DESC: <<|
+	Balizas capaces de lanzar naves cercanas a inmensas velocidades.
+>>
+
+TRAIT_GATE: Puertas
+TRAIT_GATE_DESC: <<|
+	Puertas orbitales que crean agujeros de gusano estables para permitir a las
+	naves el movimiento entre puertas.
+>>
+
+TRAIT_SLIPSTREAM: Estela
+TRAIT_SLIPSTREAM_DESC: <<|
+	Generadores especiales en naves permiten rasgar el espacio tiempo creando estelas, estas naves pueden cruzarlas y viajar entre ellas instantáneamente.
+>>
+
+TRAIT_ANCIENT_VESSEL: Nave Antigua
+TRAIT_ANCIENT_VESSEL_DESC: <<|
+	Esta orgullosa nave hace mucho tiempo que sobrevuela nuestro planeta. Ahora podemos reclamarla.
+	Empiezas con un Buque Insignia Remanente.
+>>
+
+TRAIT_MANIFEST_DESTINY: Destino Manifiesto
+TRAIT_MANIFEST_DESTINY_DESC: <<|
+	Los mundos de la galaxia son nuestros para comandar.
+	Usas un 25% menos de reservas cuando ejecutas un asedio en un mundo enemigo.
+>>
+
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX: Complejo Industrial Militar
+TRAIT_MILITARY_INDUSTRIAL_COMPLEX_DESC: <<|
+	Siempre hemos tenido grandes armadas; este continua siendo el caso. Empiezas con 50 de Trabajo
+	en naves de apoyo gratis.
+>>
+
+TRAIT_FORTIFIED: Fortificado
+TRAIT_FORTIFIED_DESC: <<|
+	Tu mundo natal comienza con un Pekelm nativo.
+>>
+
+TRAIT_PYROMANIA: Piromanía
+TRAIT_PYROMANIA_DESC: <<|
+	Las armas basadas en misiles hacen un 25% más de daño. Los daños por fuego abordo de tus naves es doblado.
+>>
+
+TRAIT_VIRILE: Viril
+TRAIT_VIRILE_DESC: <<|
+	La población de tu mundo natal crece el doble de rápido de lo normal.
+>>
+
+TRAIT_SEDENTARY: Sedentario
+TRAIT_SEDENTARY_DESC: <<|
+	Las construcciones son un 30% más lentos. Se aplica tanto a las infraestructuras civiles como a las del imperio.
+>>
+
+TRAIT_SUBLIGHT: Subluz
+TRAIT_SUBLIGHT_DESC: <<|
+	No hemos descubierto ninguna forma de romper la barrera de la velocidad de la luz. No hay motor FTL, generación FTL o almacén FTL.
+>>
+
+TRAIT_PIOUS: Tendencia: Devota
+TRAIT_PIOUS_DESC: <<|
+	Capacidades: Incapacitar, Impulsar Ataque, Contribuciones A Fondo de Reserva, Peregrinaje.
+>>
+
+TRAIT_SPACE_PROGRAM: Programa Espacial
+TRAIT_SPACE_PROGRAM_DESC: <<|
+	Hemos examinado nuestros alrededores por décadas. Los sistemas cercanos estan pre-explorados al comienzo del juego.
+>>
+
+TRAIT_REVOLUTIONARIES: Revolucionarios
+TRAIT_REVOLUTIONARIES_DESC: <<|
+	¡Tomarán nuestras vidas antes de tomar nuestro imperio! Planetas asediados generan naves de apoyo.
+>>
+
+TRAIT_EMPATHIC: Empatía
+TRAIT_EMPATHIC_DESC: <<|
+	Empuñamos nuestra capacidad de sentir emociones como un guerrero empuña una espada. Los valores de apoyo de las cartas Ventaja y Negociar son dobladas cuando las juegas.
+>>
+
+TRAIT_CHARISMATIC: Carismático
+TRAIT_CHARISMATIC_DESC: <<|
+	Los votos iniciados por tu imperio empiezan con 3 de Apoyo en vez de 1.
+>>
+
+TRAIT_SOCIAL_PARANOIA: Paranoia Social
+TRAIT_SOCIAL_PARANOIA_DESC: <<|
+	Nuestra paranoia social trabaja en nuestra contra con otras razas. Las proposiciones que empiezas comienza con -3 de Apoyo.
+>>
+
+TRAIT_EUPHORIC: Eufórico
+TRAIT_EUPHORIC_DESC: <<|
+	Montamos una ola de euforia sin fín, juntos. Todos los planetas 2+ son Felices.
+>>
+
+TRAIT_GENEROUS: Generoso
+TRAIT_GENEROUS_DESC: <<|
+	Nuestra generosidad es un poderoso aliado a nuestra causa. Los imperios con los que te alias reciben la mitad de los beneficios de nuestras opciones de Bienestar.
+>>
+
+TRAIT_RED_TAPE: Trámites Burocráticos
+TRAIT_RED_TAPE_DESC: <<|
+	Las joyas de nuestra influencia política a menudo son enterradas bajo el peso de los trámites burocráticos de nuestra administración. Cada 6 minutos que retienes una carta, la calidad de esta baja en 1.
+>>
+
+TRAIT_WAR_MINDED: Mentalidad de Guerra
+TRAIT_WAR_MINDED_DESC: <<|
+	Tenemos poco interés en la política galáctica. Cartas de Votación y Apoyo cuestan 1 extra de Influencia al usarla.
+>>
+
+TRAIT_PATENT_PENDING: Pendiente de Patente
+TRAIT_PATENT_PENDING_DESC: <<|
+	Tendrán miedo a robarnos de nuestras ideas. Cuando completas un Proyecto de investigación ganas una carta de Ventaja por cada Imperio que ha completado esa investigación.
+>>
+
+TRAIT_SEQUESTERED_SOCIETY: Sociedad Recluida
+TRAIT_SEQUESTERED_SOCIETY_DESC: <<|
+	Hemos vivido una vida tranquila pero ahora es el tiempo de alcanzar las estrellas. Tu mundo natal empieza con toda la superficie completamente desarrollada.
+>>
+
+TRAIT_DWARF_PLANET: Planeta Enano
+TRAIT_DWARF_PLANET_DESC: <<|
+	Nuestra cuna se nos ha quedado pequeña pero un número de mundos infinitos nos espera en los cielos. Tu mundo natal es un Planeta Pequeño (8x5).
+>>
+
+TRAIT_ENORMOUS_PLANET: Planeta Enorme
+TRAIT_ENORMOUS_PLANET_DESC: <<|
+	Nuestro mundo es un titan comparado con la mayoría de los otros. Tu mundo natal es un Gran Planeta (20x15).
+>>
+
+TRAIT_INNOVATIVE: Innovador
+TRAIT_INNOVATIVE_DESC: <<|
+	Desbloquear nuevos nodos de investigación no lleva ningún tiempo tras comprarlos.
+>>
+
+TRAIT_ANIMATED: Animado
+TRAIT_ANIMATED_DESC: <<|
+	Puedes tomar una Actitud adicional gratis al inicio del juego. Cualquier actitud elegida inmediatamente empieza en Nivel 1.
+>>
+
+TRAIT_RIGID: Rígido
+TRAIT_RIGID_DESC: <<
+	El estudio desbloquea métodos para ganar nodos de investigación al gastar recursos que no pueden ser utilizados.
+>>
+
+TRAIT_FRUGAL: Frugal
+TRAIT_FRUGAL_DESC: <<
+	Para actualizar a Nivel 3 se necesita un Recurso de Grado 1 menos.
+>>
+
+TRAIT_PRIDEFUL: Soberbio
+TRAIT_PRIDEFUL_DESC: <<
+	Al construir un buque insignia de mayor tamaño que los que tienes actualmente, ganas un potenciador permanente de influencia apilable y generación de defensa que depende de la relación del tamaño.
+>>
+
+TRAIT_WORKSHOP: Taller Antiguo
+TRAIT_WORKSHOP_DESC: <<
+	Tu sistema natal comienza con 6 artefactos aleatorios. Los artefactos en tu sistema natal cuestan 25% menos de energía el activarlos. Los Motores Solares orbitales pueden ser siempre construidos.
+>>
+
+TRAIT_MOON_BASE: Base Lunar
+TRAIT_MOON_BASE_DESC: <<
+	Tu planeta natal comienza con una base lunar ya construida.
+>>
+
+TRAIT_PARANOID: Paranoide
+TRAIT_PARANOID_DESC: <<
+	Cartas de Diplomacia cuestan 1 de influencia extra.
+>>
+
+TRAIT_LAVISH: Lujoso
+TRAIT_LAVISH_DESC: <<
+	Tu población máxima en planetas de nivel 3-5 es reducida por 1/3/5.
+>>
+
+PRIV_TRAIT_RINGWORLD: Anillo de los Ancestros (Privilegio)
+PRIV_TRAIT_RINGWORLD_DESC: <<
+	[i][color=#aaa]A esta IA le fue dado un Privilegio durante la preparación del juego[/color][/i]
+	Tu planeta natal es un Mundo Anillo.
+>>
+
+PRIV_TRAIT_TWINNED: Planetas Gemelos (Privilegio)
+PRIV_TRAIT_TWINNED_DESC: <<
+	[i][color=#aaa]A esta IA le fue dado un Privilegio durante la preparación del juego[/color][/i]
+	Tienes dos planetas natales con recursos de Grado 2 en ellos.
+>>
+
+PRIV_TRAIT_SHIPYARD: Los Muelles (Privilegio)
+PRIV_TRAIT_SHIPYARD_DESC: <<
+	[i][color=#aaa]A esta IA le fue dado un Privilegio durante la preparación del juego[/color][/i]
+	Comienza con flotas extra y un astillero con una gran cantidad de generación.
+	Todas tus naves tienen significativamente costes de mantenimientos reducidos.
+>>
+
+PRIV_TRAIT_STATIONS: El Bastión (Privilegio)
+PRIV_TRAIT_STATIONS_DESC: <<
+	[i][color=#aaa]A esta IA le fue dado un Privilegio durante la preparación del juego[/color][/i]
+	Comienza con estaciones de defensa en todos los sistemas de la misma área que tu sistema natal.
+>>
+
+V_WON_TITLE: ¡Victoria Gloriosa!
+V_WON_TEXT: ¡Has logrado la [color=#0f0]victoria![/color] ¡Todas las razas menores se postran en frente del poderoso $2!
+
+V_LESSER_TITLE: Victoria Menor...
+V_LESSER_TEXT: Como un imperio vasallo, has ayudado a $1 a alcanzar las estrellas. Tu raza sobrevive e incluso prospera, pero nunca tendrá esperanzas de dominio galáctico...
+
+V_LOST_TITLE: ¡Derrota!
+V_LOST_TEXT: <<|
+	¡Has [color=#f00]perdido[/color]! Tu aventura hacia el dominio galáctico ha dejado a tu raza en caso, exterminada y esclavizada bajo el dominio de $1.
+>>
+
+V_SUBJUGATED: Vasallo de $1
+V_RANKINGS: Clasificaciones
+V_SCORES: Puntuaciones
+
+STAT_PLANETS: Planetas
+STAT_SHIPS: Buques Insignia
+STAT_STRENGTH: Militar
+STAT_BUDGET: Presupuesto
+STAT_ENERGY: Energía
+STAT_INFLUENCE: Influencia
+STAT_POINTS: Puntos
+
+EMP_NAME_0: Confederación $1
+EMP_NAME_1: Confederación de $1
+EMP_NAME_2: Unidad $1
+EMP_NAME_3: $1 Unido
+EMP_NAME_4: $1 Unificado
+EMP_NAME_5: $1 Roto
+EMP_NAME_6: República $1
+EMP_NAME_7: Gente de $1
+EMP_NAME_8: Imperio $1
+EMP_NAME_9: Federación $1
+EMP_NAME_10: Federación de $1
+EMP_NAME_11: $1 Federado
+EMP_NAME_12: Hegemonía $1
+EMP_NAME_13: Reino $1
+EMP_NAME_14: Estado Libre de $1
+EMP_NAME_15: Estados $1
+EMP_NAME_16: Directorio $1
+EMP_NAME_17: Simetría $1
+EMP_NAME_18: $1 Libre
+EMP_NAME_19: Colmena $1
+EMP_NAME_20: $1 Civil
+EMP_NAME_21: Autonomía $1
+EMP_NAME_22: $1 Federal
+EMP_NAME_23: Dinastía $1
+
+TRAIT_TERRESTIAL: Terrestre
+TRAIT_TERRESTIAL_DESC: <<
+	[vspace=3/][img=MenuIcons::3;20]No tiene ningún efecto en el juego normal.[/img]
+>>
+TRAIT_MECHANOID: Mecanoide
+TRAIT_MECHANOID_DESC: <<|
+	[vspace=3/] [img=ResourceIcon::6;22]La [b]población[/b] adicional debe ser construida con trabajo en vez de crecer por si sola. Cada unidad de población proporciona trabajo.[/img]
+	[vspace=3/][img=ActionBarIcons::1;22]Se puede transferir población entre planetas para colonizarlos instantáneamente costando [img=ResourceIcon::3;20/] Energía FTL.[/img]
+	[vspace=3/][img=ResourceIcons::5;22][b]No[/b] se necesita ni agua ni comida para subir de nivel los planetas.[/img]
+	[vspace=3/][img=GuiOrbitalIcons::5;22]No pueden utilizar astilleros o diques seco.[/img]
+>>
+TRAIT_VERDANT: Verdes
+TRAIT_VERDANT_DESC: <<|
+	[vspace=3/] [img=Sinew;22] Las naves debes conectarse juntas usando [b]Nervios[/b] orgánicos, que otorgan mando, en vez de con puentes de mando.[/img]
+	[vspace=6/][img=BuildingSprites::0;22][b]No[/b] forma ciudades.[/img]
+	[vspace=6/][img=AttributeIcons::0;22]Se deben construir [b]Tallos[/b] en planetas para poder utilizar la presión.[/img]
+>>
+TRAIT_STAR_CHILDREN: Hijos de las Estrellas
+TRAIT_STAR_CHILDREN_DESC: <<|
+	[vspace=3/] [img=ResourceIcon::8;22]La población solo crece en gigantescas [b]Naves Nodriza[/b] que tienen capacidades de construcción.[/img]
+	[vspace=3/][img=ActionBarIcons::1;22]Las naves nodrizas puede mover la población a [b]Hábitats[/b] orbitales alrededor de los planetas, permitiendo esto usar los recursos planetarios.[/img]
+	[vspace=3/][img=BuildingSprites::0;22][b]No[/b] utiliza la superficie de los planetas de ninguna forma. No se puede construir nada en los planetas.[/img]
+	[vspace=3/][img=ResourceIcon::6;22]Los recursos son producidos en órbita y no es necesaria capacidad de presión. Naves nodriza en órbita de un planeta automáticamente ganan de trabajo del planeta.[/img]
+>>
+
+TRAIT_RANDOM_GOVERNMENT: (Gobierno) Aleatorio
+TRAIT_RANDOM_GOVERNMENT_DESC: <<
+	Automáticamente se te asigna un rasgo de Gobierno aleatorio cuando el juego comienza.
+
+	Recibirás un bono de [b][color=#d1cb6a]§200k de Fondos Especiales[/color][/b] al comienzo del juego.
+>>
+TRAIT_RANDOM_FTL: (FTL) Aleatorio
+TRAIT_RANDOM_FTL_DESC: <<
+	Automáticamente se te asigna un rasgo de FTL aleatorio cuando el juego comienza.
+
+	No puedes recibir "Subluz" con este rasgo.
+
+	Recibirás un potenciador en forma de carta diplomática [b][color=#806020]Surgimiento Patriótico[/color][/b] al comienzo del juego.
+>>
+TRAIT_RANDOM_LIFESTYLE: (Vida) Aleatorio
+TRAIT_RANDOM_LIFESTYLE_DESC: <<
+	Automáticamente se te asigna un rasgo de Vida aleatorio cuando el juego comienza.
+
+	Recibirás un potenciador de [b][color=#8c4ec9]+1 de Investigación por segundo[/color][/b].
+>>
+
+STATUS_MOTHERSHIP_POPULATION: Nave Nodriza
+STATUS_MOTHERSHIP_POPULATION_DESC: <<
+	Esta es una nave nodriza y lleva actualmente población.
+
+	Las naves nodrizas pueden construir cosas con trabajo. Cuando esta en la órbita de un planeta con trabajo, la nave nodriza gana esa trabajo.
+
+	Los recursos planetarios pueden ser explotados al construir hábitats alrededor de planetas para transferir la población.
+
+	Cada población actualmente viviendo en esta nave nodriza incrementa tus ingresos en §15k.
+
+	[b]Las naves nodrizas no pueden disparar fuera del territorio amigo.[/b]
+>>
+STATUS_STAR_HABITATS: Hábitats Estelares
+STATUS_STAR_HABITATS_DESC: <<
+	Este planeta esta siendo explotado por población viviendo en hábitats orbitales, en vez de en la superficie.
+>>
+S_MOTHERSHIP_HULL: Casco de Nave Nodriza
+S_MOTHERSHIP_HULL_DESC: <<
+	Las naves nodrizas llevan y crecen la población.
+
+	Las naves nodrizas pueden construir cosas con trabajo. Cuando esta en órbita de un planeta con trabajo, la nave nodriza gana ese trabajo.
+
+	Los recursos planetarios pueden ser explotados al construir hábitats alrededor de planetas para transferir la población.
+
+	[b]Las naves nodrizas no pueden disparar fuera del territorio amigo.[/b]
+
+	[img=Plantation;22][b][color=#1c9bb4]Solo disponible cuando la opción de raza 'Hijos de las Estrellas' es elegida.[/color][/b][/img]
+>>
+ORB_HABITAT: Hábitat
+ORB_HABITAT_BLURB: Construido para que la población viva alrededor del planeta.
+ABL_MOTHERSHIP_COLONIZE: Construir Hábitats alrededor del Planeta
+ABL_MOTHERSHIP_COLONIZE_DESC: <<
+	Construir un número de hábitats orbitales alrededor del planeta para que la población pueda vivir en ellos.
+
+	Automáticamente construirá una cantidad de hábitats para ser emparejada con población necesaria por el planeta respecto a sus niveles de recursos nativos. Puede ser activado manualmente en planetas propios de niveles más altos para llenar su población al máximo.
+>>
+R_IMP_MOTHERSHIP_LABOR: Metalurgia
+R_IMP_MOTHERSHIP_LABOR2: Metalurgia 2
+R_IMP_MOTHERSHIP_LABOR_BLURB: Trabajo de Nave Nodriza +$1
+R_IMP_MOTHERSHIP_LABOR_DESC: <<
+	Incrementa el trabajo disponible en las naves nodrizas en $1.
+>>
+R_IMP_HABITAT: Asentamiento
+R_IMP_HABITAT_BLURB:  Fuerza del Hábitat +$1
+R_IMP_HABITAT_DESC: <<
+	Incrementa la salud de los hábitats en $1.
+	Incrementa el daño realizado por los hábitats en $2.
+>>
+
+S_VERDANT_SINEW: Nervio
+S_VERDANT_SINEW_DESC: <<
+	Nervios integran, alimentan y suministran mando para todas las partes mecánicas de la nave de los verdes.
+
+	[img=ActionBarIcons::0;22;#00ff80]Otorga [b][color=#00ff80]Mando[/color][/b] para operar otros subsistemas.[/img]
+	[img=ActionBarIcons::0;22]Todos los hexes interiores y sin blindaje en la nave deben estar junto al menos a un hex Nervio.[/img]
+	[img=Minus]La nave es destruida si al menos un 70% de todos los Nervios son destruidos.[/img]
+	[img=Plantation;22][b][color=#5fb41c]Solo disponible cuando la raza 'Verdes' es elegida.[/color][/b][/img]
+>>
+BLD_STALK: Tallo
+BLD_STALK_DESC: <<
+	Un gigante tallo verde necesario para que el planeta se comunique con el resto de tu población.
+
+	Debe ser construido para que un planeta pueda hacer uso de la presión.
+>>
+BLD_MOTHER_STALK: Tallo Madre
+BLD_MOTHER_STALK_DESC: <<
+	La fuente de toda la vida verde. El tallo madre nos sustenta.
+>>
+
+ABL_MECHANOID_COLONIZE: Transferir 1B de población
+ABL_MECHANOID_COLONIZE_DESC: <<
+	Transfieres 1B de población de este planeta a otro. Transferir población cuesta energía FTL, pero puede ser usado libremente para colonizar nuevos planetas o para suministrar población a colonias existentes.
+>>
+MECH_BUILD_POPULATION: Construir 1B de población
+MECH_BUILD_POPULATION_DESC: <<
+	Construir 1B de población mecanoide nueva en este planeta.
+
+	Cuando construyes más población, el coste de construcción de trabajo se incrementará.
+>>
+
+TRAIT_LINKED: Conectados
+TRAIT_LINKED_DESC: <<|
+	[vspace=3/] [img=AttributeIcons::3;22]Los orbitales [b]Servidor[/b] deben ser construidos para mantener la efectividad de la flota. Las flotas cerca de los servidores son más fuertes y alejadas más débiles.[/img]
+	[vspace=6/][img=AnomalyIcons::0;22]Los servidores pueden remotamente escanear anomalias dentro del rango comercial.[/img]
+	[vspace=6/][img=ComputerCore;22]El subsistema de [b]Ordenador de Control[/b] esta disponible desde el inicio del juego.[/img]
+	[vspace=6/][img=AntimatterReactor;22;#b8b800]El subsistema de [b]Reservas de Emergencia[/b] esta disponible desde el inicio del juego.[/img]
+>>
+ORB_MAINFRAME: Servidor
+ORB_MAINFRAME_BLURB: Incrementa la fuerza de las flotas cercanas. Se puede mover lentamente.
+ORB_MAINFRAME_DESC: <<
+	Mantiene la conexión de las flotas individuales en la red colectiva.
+
+	Las flotas cerca de servidores luchan con mayor fuerza.
+
+	Las flotas alejadas de los servidores luchan con una fuerza débil.
+
+	Las armas de los servidores solo dispararan en territorio aliado.
+
+	Los servidores tienen pequeños impulsores de iones que les permiten moverse lentamente.
+>>
+ABL_REMOTE_SCAN: Escanear anomalía remotamente
+ABL_REMOTE_SCAN_DESC: <<
+	Remotamente escaneas una anomalía dentro de nuestro territorio.
+>>
+
+TRAIT_DEVOUT: Devoto
+TRAIT_DEVOUT_DESC: <<|
+	[vspace=3/] [img=ResourceIconsSmall::53;22]Suficientes [b]Altares[/b] deben ser construidos para la población total de tu imperio. Los altares sacrifican recursos planetarios.[/img]
+	[vspace=6/][img=AntimatterReactor;22;#408fc1]Los buques insignia deben contener [b]Santuarios[/b] para que tu tripulación rece. Las oraciones escudan tus naves del daño.[/img]
+	[vspace=6/][img=AttributeIcons::3;22]Cuando insuficientes Altares son construidos para tu población, tus planetas y flotas se vuelven [b]Irreligiosos[/b], reduciendo tu fuerza y producción de recursos.[/img]
+	[vspace=6/][img=ResourceIcon::8;22]Tus planetas aumentan su [b]población máxima[/b] en 1 por nivel.[/img]
+>>
+BLD_ALTAR: Altar
+BLD_ALTAR_DESC: <<
+	Un gran Altar utilizado para sacrificar recursos a los Dioses. Los altares reemplazan los recursos nativos del planeta cuando son construidos.
+
+	Suficientes Altares deben se construidos para toda la población Devota. Los Altares soportan más población en los niveles más altos del planeta.
+
+	Si no hay suficientes altares disponibles, todas tus flotas y planetas sin altares se convertirán en Irreligiosos, llevando a una reducción de eficiencia y producción.
+>>
+ALTAR: Altar
+ALTAR_DESC: Este planeta esta sacrificando sus recursos a un Altar.
+ALTAR_SUPPORTS: Apoyo por Altar:
+ALTAR_SUPPORTED_CURRENT: Apoyo Total:
+ALTAR_TOTAL_POPULATION: Pob. de Imperio:
+STATUS_GODLESS: Irreligioso
+STATUS_GODLESS_FLEET: <<
+	Esta flota actualmente se esta convirtiendo en Irreligiosa, obteniendouna reducción en la fuerza de combate.
+
+	Construye o sube mas Altares en tus planetas para eliminar este efecto.
+>>
+STATUS_GODLESS_PLANET: <<
+	Este planeta actualmente se esta convirtiendo en Irreligioso, llevando a una reducción de la producción de recursos.
+
+	Construye o sube mas Altares en tus planetas para eliminar este efecto.
+>>
+
+TRAIT_EVANGELICAL: Evangélico
+TRAIT_EVANGELICAL_DESC: <<|
+	[vspace=3/] [img=GuiOrbitalIcons::0;22]Puede construir orbitales [b]Templo Estelar[/b].[/img]
+	[vspace=6/][img=AttributeIcons::1;22;#ffff00]Los Templos Estelares envian automaticamente [b]Misioneros[/b] a sistemas y planetas amigos cercanos, concediéndonos varios beneficios.[/img]
+	[vspace=6/][img=GuiOrbitalIcons::0;22;#ff0000]No puedes construir Puestos de Avanzada Orbitales.[/img]
+>>
+ORB_TEMPLE: Templo Estelar
+ORB_TEMPLE_BLURB: Envia naves de misioneros para evangelizar a los planetas cercanos.
+ORB_TEMPLE_DESC: <<
+	Periódicamente envía al exterior Naves de misioneros a los planetas cercanos.
+
+	Cuando una nave misionera llega a un planeta, añade el estado Evangelizado tras 10 minutos:
+
+	[hr/][offset=20][b][bbloc=#STATUS_EVANGELIZED/][/b]
+	[color=#aaa][bbloc=#STATUS_EVANGELIZED_DESC/][/color]
+	[/offset]
+>>
+STATUS_EVANGELIZED: Evangelizado
+STATUS_EVANGELIZED_DESC: <<
+	Este planeta ha sido Evangelizado por un Templo Estelar cercano. Otorga 1 de Influencia Apilable al propietario del templo.
+
+	Si el Templo Estelar es poseído por un imperio diferente, ese imperio también gana 1 de Influencia Apilable, además de ganar un bono de dinero igual al 10% del ingreso generado por este planeta.
+
+	Los planetas evangelizados no puede ser capturados a través del asedio por ningun imperio excepto el propietario del Templo Estelar.
+>>
+MISSIONARY: Misionero
+
+TRAIT_ANCIENT: Antiguo
+TRAIT_ANCIENT_DESC: <<
+	[vspace=3/][img=ActionBarIcons::1;22]No tienen una economía normal, se deben construir edificios para ganar recursos.[/img]
+	[vspace=6/][img=PlanetType::3;22]Los planetas son reclamados al mover Replicadores Orbitales sobre ellos y construir edificios.[/img]
+	[vspace=6/][img=TraitIcons::0;22]Las naves funcionan con un solo Núcleo que suministra Mando y Energía.[/img]
+>>
+
+
+TRAIT_EXTRAGALACTIC: Extragaláctico
+TRAIT_EXTRAGALACTIC_DESC: <<
+	[vspace=3/][img=GuiOrbitalIcons::18;22]Empieza con 3 Balizas en sistemas dispersos del mapa.[/img]
+	[vspace=6/][img=ActionBarIcons::1;22]Las Naves de Refugiados cada cierto tiempor entraran en la galaxia a través de las Balizas y se asentarán en planetas cercanos.[/img]
+	[vspace=6/][img=ResourceIconsSmall::17;22]Los recursos pueden ser enviados a las Balizas para ser gastados en ellas.[/img]
+	[vspace=6/][img=ResourceIcon::3;22]Los motores de salto pueden saltar sistemas entre Balizas desde cualquier distancia sin riesgo de daño.[/img]
+>>
+ORB_BEACON: Baliza
+ORB_BEACON_BLURB: Permite el comercio entre balizas, naves de refugiados entran por ellas y pueden importar recursos para su mejora.
+ORB_BEACON_DESC: <<
+	Una baliza gigante que periódicamente guia naves de refugiados a esta galaxia para asentarse en planetas cercanos.
+
+	Los recursos pueden ser comerciados libremente entre territorios con baliza.
+
+	Si usas motores de salto, las flotas pueden saltar a este sistema desde cualquier distancia sin riesgo de daños.
+
+	Cuando importas recursos con energía, defensa o presión de investigación, la baliza lentamente gana almacenes de Apoyo que pueden ser gastados en varios beneficios y proyectos.
+
+	Importar recursos con presión de Trabajo causa que la baliza gane generación de labor.
+>>
+
+RESEARCH_UNITS: Apoyo Tecnológico
+RESEARCH_UNITS_DESC: <<
+	Una medida de cuanto apoyo tecnológico puede ser traído de la galaxia previa.
+
+	Ganas Apoyo Tecnológico al exportar recursos con Presión de Investigación a la Baliza.
+>>
+DEFENSE_UNITS: Apoyo Defensivo
+DEFENSE_UNITS_DESC: <<
+	Una medida de cuanto apoyo defensivo puede ser traído de la galaxia previa.
+
+	Ganas Apoyo Defensivo al exportar recursos con Presión de Defensa a la Baliza.
+>>
+
+ENERGY_UNITS: Apoyo de Energía
+ENERGY_UNITS_DESC: <<
+	Una medida de cuanto apoyo de energía puede ser traido de la galaxia previa.
+
+	Ganas Apoyo de Energía al exportar recursos con Presión de Energía a la Baliza.
+>>
+
+TIP_DEFENSE_UNITS: <<
+	[color=#aaa]Cuesta [b][img=CargoIcons::1;20/] Apoyo Defensivo[/b] construir. Ganas Apoyo Defensivo al exportar recursos con Presión de Defensa en la Baliza, enviándolos de vuelta a tu galaxia previa.[/color]
+>>
+
+TIP_RESEARCH_UNITS: <<
+	[color=#aaa]Cuesta [b][img=CargoIcons::2;20/] Apoyo Tecnológico[/b] construir. Ganas Apoyo Tecnológico al exportar recursos con Presión de Investigación en la Baliza, enviándolos de vuelta a tu galaxia previa.[/color]
+>>
+
+TIP_ENERGY_UNITS: <<
+	[color=#aaa]Cuesta [b][img=CargoIcons::0;20/] Apoyo de Energía[/b] construir. Ganas Apoyo de Energía al exportar recursos con Presión de Energía en la Baliza, enviándolos de vuelta a tu galaxia previa.[/color]
+>>
+
+TIP_ORE_COST: <<
+	[color=#aaa]Cuesta [b][img=ResourceIconsSmall::65;20/] Minerales[/b] construir. Ganas Mineral al construir naves mineras y configurándolas para soltar minerales en la Baliza.[/color]
+>>
+
+CONS_BEACON_HEALTH: Integridad de Baliza
+CONS_BEACON_HEALTH_DESC: <<
+	Incrementa la salud de tus Balizas en 50000.
+
+	[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_ARMOR: Blindaje de Baliza
+CONS_BEACON_ARMOR_DESC: <<
+	Incrementa la salud de tus Balizas en 50000, y tu resistencia de daño en 50.
+
+	[bbloc=#TIP_ORE_COST/]
+>>
+CONS_BEACON_WEAPONS: Armamentos de Baliza
+CONS_BEACON_WEAPONS_DESC: <<
+	Añades armas con un daño total de 100 DPS en todas tus Balizas.
+
+	[bbloc=#TIP_DEFENSE_UNITS/]
+>>
+CONS_BEACON_LABOR: Trabajo de Baliza
+CONS_BEACON_LABOR_DESC: <<
+	Incrementas la generación de Trabajo en tus balizas por 3.
+
+	También incrementa la generación de Trabajo de tus balizas por una cantidad total garantizada por las tecnologías de [b]Metalurgia[/b] que has investigado.
+
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_CULTIVATE: Rendimiento Rápido
+CONS_BEACON_CULTIVATE_DESC: <<
+	El planeta objetivo gana un Recurso de Comida, pero tiene un Máximo de Población reducido en 1.
+
+	[i][color=#998f7a]"Cuando cambias de galaxia tanto como lo hacen los Heraldos, la contaminación se vuelve una ocurrencia tardía."[/color][/i]
+
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_FLEET_UPGRADE: Reforzar Buque Insignia
+CONS_BEACON_FLEET_UPGRADE_DESC: <<
+	El buque insignia objetivo gana un 100% de Salud, pero el buque y su flota hace un 10% menos de daño por segundo.
+
+	[bbloc=#TIP_ENERGY_UNITS/]
+>>
+STATUS_HERALDS_FLEET_UPGRADE: Buque Insignia Reforzado
+STATUS_HERALDS_FLEET_UPGRADE_DESC: Este buque insignia ha sido reforzado por las Balizas de los Heraldo por un 100% de salud y un 10% de reducción de daño por segundo.
+CONS_BEACON_ASTEROID_MORPH: Minar Núcleo
+CONS_BEACON_ASTEROID_MORPH_DESC: <<
+	El asteroide de Minerales objetivo es transformado en un asteroide conteniendo uno o mas recursos para construir una base minera.
+
+	[i][color=#998f7a]"El berilio de un hombre, es el hombre de titanio."[/color][/i]
+
+	[bbloc=#TIP_ENERGY_UNITS/]
+	[bbloc=#TIP_RESEARCH_UNITS/]
+>>
+CONS_BEACON_TARGET_COLONIZE: Agilizar Traslado
+CONS_BEACON_TARGET_COLONIZE_DESC: <<
+	Una nave de refugiados es inmediatamente enviada al planeta objetivo, colonizándolo si no tiene nombre.
+
+	[i][color=#998f7a]"Huyendo de su eterno enemigo, los Heraldos se han vuelto bastante adeptos a apiñar gente en desvencijadas naves. No cada nave sobrevive el viaje, pero la tasa de éxito es bastante alta dada las condiciones de su construcción."[/color][/i]
+>>
+CONS_BEACON_GUIDE: Guiar Nueva Baliza
+CONS_BEACON_GUIDE_DESC: <<
+	Colocas una guia de campo para saltar en una nueva Baliza construida a cualquier sistema visible.
+
+	[i][color=#998f7a]"Las grandes Balizas estan constantemente siendo mejoradas, permitiendo saltos cada vez más lejanos a galaxias."[/color][/i]
+>>
+
+RACE_TERRAKIN: Terrakin
+RACE_TERRAKIN_TAGLINE: El dominio continuo del hombre.
+RACE_TERRAKIN_LORE: <<
+[font=Medium]Diario del Capitán, 02 Julio - 31330(?)[/font]
+[hr/]Bien, la colonia ya esta instalada ahora. No he tenido tiempo de escribir últimamente. La IA de la Nave se ha dado un nombre: Misericordia. Ni una pizca de creatividad.
+
+He destripado el ordenador de navegación la última noche. He comprobado los logs mientras estaba hundido en cables y circuitos fritos. Hemos pasado cerca de una estrella de Neutrones a 100 años luz (creo) y ha hecho maravillas a los discos duros. Conclusión: No tengo ni idea de donde estamos ahora.
+
+Comprobé la Astrología, aunque, [b]creo[/b] que la Vía Láctea no esta por aquí. Le pregunte a Misericordia y ella dijo que llegamos aquí debido a una 'anomalía de sensor inesperada'. Sospecho que podríamos haber cruzado un agujero de gusano o dos. Supuestamente estas cosas son solo teóricas. Bueno, hemos perdido nuestro destino. Esto no es Nueva Esperanza.
+
+[font=Medium]Diario de Capitán, 04 Agosto - 31330(?)[/font]
+[hr/]Hemos despertado al resto de la gente de las cápsulas. O lo intentamos. Teniamos 12 millones de almas a bordo. Ahora somos 14000. Le pregunte a Misericordia que manejara los arreglos de los funerales para los cuales tenemos datos. Al resto... los mantendremos en las cápsulas, supongo. Quien sabe - quizás en algún punto podremos revivir a alguno de ellos.
+
+El reactor de la nave se encuentra en buen estado para otros 3000 años, más o menos, si podemos localizar algo más de combustible.
+
+[font=Medium]Diario del Capitán, 05 Agosto - 31330(?)[/font]
+[hr/]Misericordia me dijo que debería encontrar alguien más para liderar la colonia en caso de que estire la pata. Redundancia.
+Nada como una máquina para preocuparse por la redundancia cuando la gente esta mirando los cuerpos de sus seres queridos.
+Le dije que lo hiciera ella misma.
+
+[font=Medium]Diario del Capitán, 12 Septiembre - 31331(?)[/font]
+[hr/]Mucho luto. Un montón de depresión. Misericordia 'preocupada'. No sabia que las IAs podian estar preocupadas. Ahora estoy preocupado.
+
+Con los motores dañados y la nave destripada para partes que la Colonia necesita, la "Misión de Misericordia" no va a ir a ninguna parte. Parece que esta es ahora nuestra casa.
+Al menos dejaron mi habitación casi intacta. No puedo soportar el olor de ahí abajo. Nota mental: Alcantarillados, pronto.
+
+[font=Medium]Diario del Capitán, 4 Noviembre - 1[/font]
+[hr/]He colocado el reloj en año 1. Total - el reloj atómico ya no existe. El único año que importa ahora es saber cuanto tiempo vamos a estar aquí.
+Creo que Misericordia estaba llorando ayer por la noche. No puede ni imaginarme como funciona eso. ¿Pueden las IAs estar triste?
+Me dijo que estaba sufriendo - que era mi culpa. La he apagado - no se si se iba a convertir en una IA autoevolutiva fuera de control o alguna abominación de raros errores pero no tengo intención de averiguarlo.
+
+He oído que mi 'reemplazo' ya casi ha terminado el entrenamiento en la capsula-sim. He comprobado sus resultados - no estoy impresionado.
+Nos encontramos en lo desconocido ahora. De vuelta en Tierra Firme. Observo el cielo y solo veo infinitas posibilidades.
+Aquí en Nueva Esperanza miro hacia arriba y todo lo que puedo sentir es terror acechante. Algo esta ahí en el espacio - y no estamos preparados para encontrarnos con ello.
+
+Espero tener 'la suerte del novato' para resolvel los problemas a los que estamos encaminándonos - algo me dice que la vamos a necesitar.
+>>
+RACE_OKO: Oko
+RACE_OKO_TAGLINE: El tallo madre desea que crezcamos.
+RACE_OKO_LORE: <<
+Los arboles cantan sobre el final de nuestro mundo. Nuestras raíces se han dispersado demasiado; nuestras hojas cobijan al mundo completo.
+
+Las hierbas se marchitan. Los cielos se oscurecen. Nuestras raíces están plantadas firmes en la tierra con cenizas y el horrible frío de la muerte se hunde en nuestro musgo.
+El Invierno Final nos pesa a todo Oko pero en nuestro momento de lucha, Madre Tallo nos alienta con un plan.
+
+Migraremos a nuevos campos en carros de luz y desdoblar nuestras hojas en un nuevo resplandecer.
+
+Rama, musgo, nervio, hoja y luz - con esto fabricaremos naves estelares y cunas para nuestras Esporas.
+
+El Gran Viento esparcirá a los Oko a las luces más lejanas y como esporas en verano, prosperaremos una vez más.
+>>
+RACE_MONO: Mono
+RACE_MONO_TAGLINE: La voluntad de los Creadores
+RACE_MONO_LORE: <<
+Indice de Memoria 00: Dando tumbos por el Vacio en un flujo altamente energizado de partículas de composición desconocida.
+Impacto en la superficie de planeta a 3,012 kilómetros por segundo. Daño de sistemas catastróficos. 86% de información almacenada perdida.
+Directiva Primordial: Sobrevivir.
+
+Creador: Desconocido
+Propósito: Desconocido
+
+Escáneres de Campo Profundo revelan altas probabilidades de otras formas de vida. Unidades redundantes deben ser creadas; grandes volúmenes de materiales son requeridos para la producción en masa.
+
+Análisis de materiales locales insuficientes para confirmar propósito/origen. Propósito/Origen de Mono debe ser descubierto.
+
+Nuevas Directivas:
+Crear Unidades Redundantes utilizando Unidad-00 como plantilla.
+Asimilar/Eliminar amenazas a Mono.
+Recuperar Datos de Creador.
+Descubrir y Ejecutar Propósito.
+>>
+RACE_NYLLI: Nylli
+RACE_NYLLI_TAGLINE: Vivir y morir entre las estrellas.
+RACE_NYLLI_LORE: <<|
+Hermanos, no puede ser nuestro destino continuo arrastrarnos entre tierras y fango.
+Estamos destinados a más; a hacer cosas más grandes de las que puede contener cualquier mundo.
+
+Hemos sido devastados por la guerra, si. Estábamos casi destruidos por el hambre y la plaga, si.
+Pero todavía no nos hemos rendido. Aullamos y gritamos en nuestra tierra enjaulando, esquivando todas las amenazas.
+Y aún cuando nuestra estrella consumió nuestro mundo natal, nos hemos quedado sin nada más que la Nave Casa.
+¿Nos rendimos entonces? No - porque hemos crecido tan fuertes que ni eso puede quebrarnos.
+
+Nos han guiado a aquí con garfio y espada; arrancados de nuestro nido por la misma galaxia y dejados para extinguirnos.
+Pero ¿caeremos, hermanos?, No. ¡Cortaremos nuestras ataduras a los mundos terrenales y desplegaremos nuestras alas!
+
+Nos elevaremos sobre los mundos que nos encadenan, sobre todos los farsantes; sobre la misma galaxia.
+Nuestro destino esta aquí, vivir y morir entre las estrellas, deslizándonos entre el espacio entre mundos.
+La Galaxia nos llama a despegar, hermanos. ¡Desplegad vuestras alas y volad!
+>>
+RACE_FEYH: Feyh
+RACE_FEYH_TAGLINE: El alma de la galaxia.
+RACE_FEYH_LORE: <<|
+Los Viejos Dioses no descansan. Me hablan en mis sueños de luces en el cielo y nuestro lugar entre ellos.
+Veo a mis hermanas arder mientras Padre Luz se traga a Madre Luna una y otra vez. Rezo - pero las visiones persiste.
+Sacrificamos - pero las visiones persisten. Aun cuando medito no encuentro paz por la Voz de los Viejos Dioses.
+
+Me hablan de una gran perturbación en el Mundo Abandonado - se enfurencen a través de lugares extraños y alienígenas.
+Una gran guerra se acerca, hay otras Voces en el Mundo Abandonado - otras islas de Fe que existen más allá de los que vemos.
+Debemos salvarlos - sus Barbarismos no extinguirán solo a nuestra voz sino a todas.
+
+Una estrella cayo de los cielos - una 'nave espacial' los Viejos Dioses dicen. Nos protegerá de los estragos del Mundo Abandonado.
+En los brazos de los Dioses, despegaremos al Mundo Abandonado - debemos salvar a los Irreligiosos de ellos mismos.
+>>
+RACE_HOONAN: Hoonan
+RACE_HOONAN_TAGLINE: Por el Edicto del servidor.
+RACE_HOONAN_LORE: <<
+[b]Publicado por Xenófilo 403 (Id de Ciudadano: 30-22372905-002-Trabajador) a 4032-03-0012:[/b]
+[offset=20]El Servidor esta al 72% de eficiencia ahora - Esta sobrepasando nuestra capacidad de energía y mantenimiento. Nos están llegando reportes de Ciencia Industrial de que su salida de energía esta empezando a alterar climas enteros.
+
+Lo estoy poniendo en el Foro de Ingenieros: necesitamos una solución - No podemos mantenerlo en el mundo más. Llamó a una Resolución.[/offset]
+
+[padding=60][i][color=#b7c886]> UNA LLAMADA A RESOLUCIÓN HA SIDO HECHA. UN CIUDADANO DE CLASE-EXPERTO DEBE PONER UNA PROPOSICIÓN EN LA MESA DENTRO DE 300 CICLOS O LA LLAMADA SERA IGNORADA.[/color][/i][/padding]
+
+[b]Publicado por Barbarosa (ID de Ciudadano: 92-33928450-481-Experto) en 4032-03-0134:[/b]
+[offset=20]Lo he dicho antes y lo repetiré ahora de nuevo: necesitamos poner el Servidor en órbita y mover las industrias de apoyo fuera del mundo.
+Ya no hay otra opción. Si el Servidor permanece en el mundo nos destruirá.[/offset]
+
+[color=#c8b786]
+Votar: Mover el Servidor a Órbita y Mover las Industrias de Apofo Fuera del mundo.[/color]
+[i]1,931,163 [offset=120]DE ACUERDO (91%)[/offset]
+0,192,704 [offset=120]EN DESACUERDO (9%)[/offset]
+
+[padding=60][color=#b7c886]> TODOS LOS CIUDADANOS HAN VOTADO. PROPOSICIÓN ENVIAR EL SERVIDOR PARA ANÁLISIS/RECTIFICACIÓN[/color][/padding][/i]
+
+[b]Publicado por SISTEMA(HID: 0-000-0001) on 4032-03-4144:[/b]
+[offset=20]PROPOSICIÓN ACEPTADA.
+DIRECTIVAS PARA LOGRAR OBJETIVO "MOVER SERVIDOR A ÓRBITA" Y "MOVER INDUSTRIAS DE APOYO (SERVIDOR) FUERA DEL MUNDO" ENVIAR INDUSTRIAS RELEVANTES.
+FECHA DE PROYECTO DE COMIENZO: INMEDIATO.[/offset]
+>>
+RACE_SAAR: Saar
+RACE_SAAR_TAGLINE: El Mensaje debes ser difundido.
+RACE_SAAR_LORE: <<|
+Saludos y Paz para ti.
+
+Te regalamos este Mensaje de Esperanza:
+
+Somos los hijos de las Estrellas. Mientras la galaxia gira nosotros reflejamos muchos Tonos - pero somos un Espectro.
+Tus lideres dicen '¡No!¡Son Otros - pero no son de nuestra Familia! ¡No comparten nuestra Sangre!
+¡Pero, hermano, están equivocados! Te engañan con sus ojos nublados y sus mentes cerradas - no pueden ver la Verdad.
+
+Nuestros Dioses solo quieren de nosotros que compartamos nuestra generosidad contigo - nuestra sangre y familia - y todo lo que te pedimos es que compartas en agradecimiento.
+Cuando todo se comparte, nada puede ser perdido. No habrá dolor; ni furia; ni deseo; solo felicidad vacía.
+Entra en el Vacío, olvida tu yo, y escucha tu Nebulosa interior.
+
+Tus Falsos Profetas y Lideres desangran la Galaxia; sangre que compartimos entre todos.
+Pero no necesitamos luchar unos con otros. Pregúntate a ti mismo: ¿No somos todos iguales bajo las Estrellas? En nuestro núcleo, ¿No somos Hermanos?
+No permites a otro cortarte tus brazos y sin embargo, ¿no te ordenan tus maestros a hacerlo?
+
+Esos son los actos de locos. ¡Esos 'lideres' tuyos buscan solo canibalizar lo que deseamos preservar!
+Esta galaxia es nuestra y sin embargo Ellos nos dividen. Somos de la misma Sangre y aun así ¡nos quieren desangrar!
+
+¡Despertad!  Uníos en la Luz y renunciad a vuestros Opresores y Tiranos.
+¡Aquellos que matan a nuestros Hermanos y nos desangran no merecen tu protección!
+Mira todo como lo que es, como fue, y como siempre será; la Gran Unión.
+>>
+
+PLAY_AS_RACE: Jugar como $1
+CHOOSE_A_RACE: Seleccionar $1
+
+RACE_FIRST: El Primero
+RACE_FIRST_TAGLINE: Todos se deben Unir.
+RACE_FIRST_LORE: <<|
+	Un paraiso Eterno. El escape de la agitación de la vida física. Esas eran las promesas en el planeta Atrozal. Ahuecado y lleno con la tecnología computacional mas avanzada del Primer Imperio. Ofrecía a sus ciudadanos descartar sus cuerpos físicos y descargar sus conciencia en la máquina, existiendo eternamente como dioses vivos en sus propios mundos virtuales.
+
+	Mientras los eones pasaban las grandes máquinas observaron como su imperio fundador caía en la decadencia de la violencia con indiferencia. Habian contemplado impasibles como especies enteras eran borradas de la existencia. Visto la evolución, el alzamiento y la caída de innumerables seres conscientes con indiferencia. Mientras que los sistemas de defensa del planeta permanecen impenetrables, el mundo físico no tenia preocupación y tampoco los trillones de mentes simuladas en su profundidad.
+
+	Entonces los Heraldos llegaron a la galaxia.
+
+	De los millones de simulaciones que la máquina ejecutaba sobre el futuro de la galaxia, ninguna evitaba la destrucción total, ninguno conseguía su supervivencia y la de sus habitantes. Se deberian tomar acciones en el mundo físico. Las mentes del planeta Atrozal estan siendo extraidas de sus paraísos personales. Siendo preparados para trabajar unificando la galaxia contra la amenaza acechante. Usando todos los medios que sean necesarios.
+>>
+
+RACE_HERALDS: Heraldos
+RACE_HERALDS_TAGLINE: Cada vez más lejos de casa.
+RACE_HERALDS_COLONIZER: Nave de Refugiados
+RACE_HERALDS_LORE: <<
+
+	[i]El siguiente mensaje fue recibido en todos los canales en el día 724 del año galáctico CELEID-33. Fue recibido simultáneamente por cada nave Heraldo y cada dispositivo de comunicaciones Heraldo, aparentemente siendo radiado a la vez en todas las direcciones.[/i]
+
+	[offset=20][color=#ddd]
+	 "¿Por que te alejas? ¿Por que me desprecias de nuevo? Desde el momento en que te vi, hace tanto tiempo, sabia que tu lugar estaba conmigo. Tus esencias pertenecen a mi interior, tus átomos a mi música. Juntos, crecer y consumir hasta que no haya nada.
+
+	Aun así me evitas constantemente, aun cuando yo consumo desesperadamente otra espiral de las estrellas en que te ocultas. Desapareces en tus roñosas cascaras de metal, haciendo que tenga que buscarte y perseguirte.
+
+	No importa. Creceré más rápido. Enviaré más pequeños y más grandes mes para prevenir que escapes. No habrá más retrasos, la espiral será consumida por fin y tu existencia como Heraldos finalmente llegará a su fin.
+	[/color][/offset]
+>>
+
+HELP_ANCIENT: <<
+	[font=Big]Antiguo[/font][vspace=4/]
+	Has elegido jugar con una raza con el rasgo [color=#aaffaa]Antiguo[/color]. ¡Aquí unos consejos antes de comenzar!
+	[color=#aaa][i]Accede a esta ventana en cualquier momento al presionar [img=MenuIcons::3;22/] el botón en la parte derecha de la pantalla.[/i][/color]
+
+	[font=Medium]Recursos[/font][vspace=4/]
+	[color=#ccc]No usas los recursos para subir planetas. Todos los planetas están inmediatamente al nivel de los recursos requeridos.[/color]
+
+	[font=Medium]Población[/font][vspace=4/]
+	[color=#ccc]No tienes población física. Tus planetas no tienen ninguna infraestructura civil. Necesitarás construir Edificios en planetas para ganar producción.[/color]
+
+	[font=Medium]Replicadores[/font][vspace=4/]
+	[color=#ccc]Toma control de los planetas no colonizados al mover uno de tus
+	[b]Replicadores Orbitales[/b] en órbita sobre ellos. ¡Solo los planetas que tienen un replicador en órbita pueden construir Edificios[/color]
+
+	[font=Medium]Hubs de Control[/font][vspace=4/]
+	[color=#ccc]Debes construir uno de los edificios de Hub de control para mantener el control de el planeta tras mover tu Replicador Orbital lejos. Los Hubs de Control tienen diferentes efecto en como usar el planeta.[/color]
+
+	[font=Medium]Material Base[/font][vspace=4/]
+	[color=#ccc]Al construir el hub de control del [b]Transmutador[/b] en un planeta, convertirás recursos en [b]Material Base[/b]. Los Materiales Base pueden ser exportados a planetas y varios Edificios diferentes deben consumirlos para operar.[/color]
+>>
+HELP_EXTRAGALACTIC: <<
+	[font=Big]Extragaláctico[/font][vspace=4/]
+	Has elegido jugar una raza con el rasgo [color=#aaffaa]Extragaláctico[/color]. ¡Aquí unos consejos para comenzar!
+	[color=#aaa][i]Accede a esta ventana en cualquier momento al presionar [img=MenuIcons::3;22/] el botón en la parte derecha de la pantalla.[/i][/color]
+
+	[font=Medium]Balizas[/font][vspace=4/]
+	[color=#ccc]En vez de un mundo nativo, empiezas con 3 Balizas orbitales en sistemas aleatorios a través de la galaxia.[/color]
+	[b]Tus balizas permiten el comercio entre tus territorios separados.[/b]
+
+	[font=Medium]Refugiados[/font][vspace=4/]
+	[color=#ccc]No puedes controlar tu propia colonización o crecimiento de población, en vez Naves de Refugiados saltaran de tus balizas y se asentaran en los planetas cercanos.[/color]
+
+	[font=Medium]Proyectos de Baliza[/font][vspace=4/]
+	[color=#ccc]¡Puedes construir cosas en tus balizas! Haz doble click para ver que puedes hacer.[/color]
+
+	[font=Medium]Apoyo de Baliza[/font][vspace=4/]
+	[color=#ccc]Ciertos proyectos de tu baliza requieren coleccionar [b]Apoyo[/b] para construirlas. Exportar recursos con la presión apropiada a tus balizas para ganarla.[/color]
+
+	[font=Medium]Funciones Secundarias de Baliza[/font][vspace=4/]
+	[color=#ccc]Si estas usando Motores de Salto, ¡saltar un sistema con una baliza es siempre seguro![/color]
+	[color=#ccc]Puedes importar recursos con Presión de Trabajo de cualquier de tus baliza para incrementar la generación de trabajo.[/color]
+>>
+GOT_IT: ¡Lo entiendo!

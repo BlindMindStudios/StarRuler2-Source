@@ -1,0 +1,119 @@
+Sobrecarga de Flota
+ABL_FLEET_EFFICIENCY_DESC: <<|
+	Permanentement incrementa la eficiencia de la flota un 30%.
+>>
+
+STATUS_OVERCHARGED: Sobrecargado
+STATUS_OVERCHARGED_DESC: <<|
+	La efectividad de combate se incrementa un 30%.
+>>
+
+STATUS_PLANET_GROWTH: Energizado
+STATUS_PLANET_GROWTH_DESC: <<|
+	El crecimiento de población y la tasa de desarrollo se dobla temporalmente.
+>>
+
+ABL_FLEET_SUPPORT: Expandir Apoyo
+ABL_FLEET_SUPPORT_DESC: <<|
+	Expande la capacidad de apoyo de la flota a 300.
+>>
+
+STATUS_EXPANDED: Expandido
+STATUS_EXPANDED_DESC: <<|
+	La capacidad de la flota de apoyo se expandió por 300 usando energía.
+>>
+
+STATUS_DEFENDED: Defendido
+STATUS_DEFENDED_DESC: <<|
+	Tiene cañones gattling de corto alcance para defensa, instalados mediante energía.
+>>
+
+STATUS_PRESS_ATTACK: Presionar el Ataque
+STATUS_PRESS_ATTACK_DESC: <<|
+	Efectividad de base doblada. La flota curará 50 de salud por segundo.
+>>
+
+ABL_FLOAT_BUDGET: Contribuciones A Fondo de Guerra
+ABL_FLOAT_BUDGET_DESC: <<|
+	Gastas todo el presupuesto actual y ganas en el siguiente presupuesto un
+	bono de dinero superior.
+
+	Cuanto más cercano al ciclo presupuestario y más energía de carga estés
+	actualmente reteniendo, más dinero recibirás.
+>>
+
+STATUS_ENTANGLED: Incapacitado
+STATUS_ENTANGLED_DESC: <<|
+	El buque insignia no puede moverse o usar FTL.
+>>
+
+OT_Ship: Nave
+OT_Planet: Planeta
+OT_Orbital: Orbital
+OT_Star: Estrella
+OT_Artifact: Artefacto
+OT_Anomaly: Anomalía
+OT_Asteroid: Asteroide
+
+NTRG_NOT_SPACE: No se puede apuntar al espacio.
+NTRG_SPACE: Debe ser un objetivo no poseído.
+NTRG_NOT_SELF: No puede apuntarse a si mismo.
+NTRG_TRADE_PRESENCE: Requiere presencia comercial.
+NTRG_NOT_WAR: No se puede usar en enemigos.
+NTRG_TYPE: Debe apuntar a $1.
+NTRG_ORBITAL_CORE: Debe apuntar a $1.
+NTRG_FLAGSHIP: Debe apuntar a un Buque insignia.
+NTRG_STATION: Debe apuntar a una estación.
+NTRG_VISION: Requiere visión.
+NTRG_OWNED: Debe apuntarse a si mismo.
+NTRG_ALLIED: Debe apuntarse a si mismo o aliados.
+NTRG_NOT_ALLIED: No se puede apuntar a objetivos aliados.
+NTRG_UNNAMED: No se puede apuntar a un objetivo ya nombrado.
+NTRG_STATUS: Ya tiene estado.
+NTRG_FTL: No se puede apuntar a naves en FTL.
+NTRG_TERRITORY: Debe apuntar al mismo territorio.
+NTRG_SAME_REGION: Debe apunta al mismo sistema.
+NTRG_PLLEV: Debe apuntar a nivel $1 o inferior.
+NTRG_PLLEVA: Debe apuntar a nivel $1 o superior.
+NTRG_PLLEVE: Debe apuntar a nivel $1.
+NTRG_RSLEV: Debe ser de grado $1 o inferior.
+NTRG_RSLEVA: Debe ser de grado $1 o superior.
+NTRG_RSLEVE: Debe ser de grado $1.
+NTRG_REGION: Debe apuntar a una región.
+NTRG_TERRAFORM: Debe ser capaz de terraformar.
+NTRG_NOT_NATURAL: No se puede apuntar a un artefacto natural.
+NTRG_NATURAL: Debe apuntar a un artefacto natural.
+NTRG_OWN_SYSTEM: Debes poseer todos los planetas.
+NTRG_CONTACT: Debe estar en contacto con otros imperios.
+NTRG_IN_SYSTEM: Debe colocarse dentro del sistema.
+NTRG_NOT_SYSTEM: Debe colocarse fuera del sistema.
+NTRG_IN_UNIVERSE: Debe colocarse en los limites del universo.
+NTRG_NEED_WAR: Debe apuntar a enemigos.
+NTRG_CONSTRUCTION: Debe ser capaz de usar trabajo.
+NTRG_UNIQUE: No puedes apuntar a recursos únicos.
+NTRG_ARTIFICIAL: No puedes apuntar a recursos artificiales.
+NTRG_NO_COLONIZE: El planeta esta bloqueado por remanentes.
+NTRG_CARGO: Debes apuntar a un objetivo con almacén de carga.
+NTRG_NO_HOME: No puedes apuntar al sistema nativo.
+NTRG_REQUIRE: Requiere $1
+NTRG_CANNOT: No puedes apuntar $1
+NTRG_STORAGE_FULL: Almacén de carga de $1 lleno.
+NTRG_LOYALTY_MAX: Lealtad demasiado alta.
+NTRG_MIN_MAXPOP: Población Máxima Requerida $1
+
+ABL_ENSLAVE: Esclavizar
+ABL_ENSLAVE_DESC: <<|
+	Generas un recurso de Trabajo Esclavo temporal.
+	Puede ser solo utilizado una vez por planeta.
+>>
+
+STATUS_ENSLAVED: Esclavizado
+
+STATUS_SEEDSHIP: Nave Semilla de Artefactos
+STATUS_SEEDSHIP_DESC: <<|
+	Esta nave antigua viaja de galaxia a galaxia, fabricando artefactos y
+	dejándolos para que razas jóvenes los encuentren.
+>>
+
+ENERGY_COST: Coste de Energía
+COOLDOWN: Refresco

@@ -1,0 +1,2 @@
+SYSTEM_STAR: Estrella $1
+SYSTEM_BLACKHOLE: Agujero Negro $1

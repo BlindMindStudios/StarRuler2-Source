@@ -1,0 +1,101 @@
+ACCEPT: Aceptar
+DECLINE: Rechazar
+APPLY: Aplicar
+YES: Si
+NO: No
+OK: OK
+CANCEL: Cancelar
+NAME: Nombre
+DESCRIPTION: Descripción
+SAVE: Salvar
+LOAD: Cargar
+OVERWRITE: Sobrescribir
+IMPORT: Importar
+EXPORT: Exportar
+CREATE: Crear
+ADD: Añadir
+DELETE: Eliminar
+SET: Configurar
+RESET: Reiniciar
+NONE: Ninguno
+BACK: Volver
+DESIGN: Diseñar
+PLANET: Planeta
+SYSTEM: Sistema
+SYSTEMS: Sistemas
+SHIP: Nave
+DEBRIS: Campo de Restos
+ANOMALY: Anomalía
+RESEARCH: Investigación
+TECHNOLOGY: Tecnología
+REMOVE: Eliminar
+UNDO: Deshacer
+REDO: Rehacer
+ERROR: Error
+WARNING: Aviso
+CHOOSE: Elegir
+GENERATE: Generar
+TIME_S: $1s
+TIME_M: $1m
+TIME_MS: $1m $2s
+TIME_HM: $1h $2m
+TIME_MS_SHORT: $1:$2
+TIME_PERS: $1/s
+ETA: ETA
+ELLIPSIS: ...
+SHORT_ELLIPSIS: .
+NEVER: Nunca
+HP: PS
+COST: Coste
+ALL: Todo
+BUILD: Construir
+QUEUE: Cola
+UPGRADE: Actualización
+UPGRADES: Actualizaciones
+CONSOLE: Consola
+AMOUNT: Cantidad
+DETAILS: Detalles
+SEND: Enviar
+LEAVE: Abandonar
+WITHDRAW: Retirar
+VIEW: Vista
+OLDER: Más Viejo
+NEWER: Más Nuevo
+PASSED: Aprobada
+FAILED: Fallada
+PROPOSE: Proponer
+USE: Usar
+HEALTH: Salud
+ENERGY: Energía
+FLEET_STRENGTH: Fuerza de Flota
+SCUTTLE: Desechar
+AVAILABLE: Disponible
+MANAGE: Gestionar
+SUPPORTS: Apoyos
+CONSTRUCTION: Construcción
+ASTEROID: Asteroide
+RENAME: Renombrar
+PERCENTAGE: Porcentaje
+REFRESH: Refrescar
+CUSTOMIZE: Personalizar
+PASSWORD: Contraseña
+CHAT: Chat
+DISCONNECT: Desconectar del Servidor
+WORMHOLE: Agujero de Gusano
+NEXT: Siguiente
+PREVIOUS: Previo
+CLOSE: Cerrar
+SIZE: Tamaño
+VS: vs
+START: Empezar
+ACTIVATE: Activar
+ENABLED: Habilitado
+DISABLED: Deshabilitado
+NEW: Nuevo
+ZOOM: Zoom
+ZOOM_TO: Zoom a $1
+DURATION: Duración
+EASY: Fácil
+NORMAL: Normal
+HARD: Difícil
+DISCARD: Descartar

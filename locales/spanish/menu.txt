@@ -1,0 +1,349 @@
+START_GAME: Iniciar Juego
+GAME_SETTINGS: Opciones
+ADD_AI: Añadir IA
+MENU_EMPIRES: Imperios
+MENU_GAME_SETTINGS: Opciones
+MENU_GALAXIES: Galaxias
+MENU_GAMES: Juegos
+HANDICAP: Desventaja
+MODS_MENU: Mods
+DISABLED_MOD: Desactivado
+DISABLE_MOD: Desactivar Mod
+ENABLE_MOD: Activar Mod
+NEW_MOD: Crear Nuevo Mod
+EDIT_MOD: Editar Mod
+MENU_CONTINUE_MAIN: Ir al Menú Principal
+MENU_MOD_COUNTS: $1 Mod(s) Instalados, $2 Mod(s) Activados
+MANAGE_MODS: Gestionar Mods
+OPEN_WORKSHOP: Ver Taller Steam
+MOD_INCOMPATIBLE: No se puede activar, mod no compatible con '$1'.
+MOD_CONFLICT_BASE: Solo se puede activar un mod base a la vez.
+MOD_CONFLICT: Archivos Conflictivos:
+MOD_COMPATIBILITY_WARN: [b][color=#f00][center]Advertencia: No marcado como compatible con la versión del juego.[/center][/color][/b]\n\n
+MOD_COMPATIBILITY: <<
+	[font=Medium][color=#f00]ADVERTENCIA[/color][/font]
+	Este mod no indica que sea compatible con la versión del juego. Activarlo puede romper varios aspectos del juego hasta que sea desinstalado.
+
+	¿Activar mod de todas formas?
+>>
+MENU_LOADING: Cargando...
+CHOOSE_RACE: Elegir Raza
+AI_CANNOT_PLAY: <<
+	La IA no puede usar esta raza en este momento.
+>>
+ENABLE_INTERNET: Permitir Acceso a Internet
+
+MAIN_MENU: Menu Principal
+PAUSED_MENU: En Pausa
+RESUME_GAME: Reanudar
+END_GAME: Terminar Juego
+RETURN_TO_GAME: Volver al Juego
+NEW_GAME: Juego Nuevo
+CAMPAIGN: Campaña
+SAVE_GAME: Salvar Juego
+LOAD_GAME: Cargar Juego
+MULTIPLAYER: Multijugador
+DISCONNECT: Desconectar
+MP_JOIN: Unirse
+MENU_BACK: Volver
+MENU_OPTIONS: Opciones
+QUIT_GAME: Salir
+OPEN_IRC: Abrir IRC Chat
+CLOSE_IRC: Desconectar IRC Chat
+IRC_NICKNAME: Nick: $1
+NICKNAME: Nombre de Nick:
+CHANGE_NICK: Cambiar
+SAVE_NO_COMPAT: <<|
+	El salvado que estas intentando cargar pertenece a una versión más vieja del juego,
+	y no puede desafortunadamente ser cargado.
+
+	El equipo de desarrollo te pide disculpas.
+>>
+SAVE_NO_MODS: <<
+	No se puede cargar el salvado: uno o más mods utilizado es este salvado no están instalados.
+>>
+
+MP_OPTIONS: Opciones de Multijugador
+MP_HOST_OPTIONS: Opciones de Anfitrión
+MP_HOST: Anfitrión
+MP_SERVER_NAME: Nombre de Servidor
+MP_IP: IP
+MP_PORT: Puerto
+MP_HOST_LOAD: Ser Anfitrión & Cargar
+MP_PUBLIC: Juego Público
+MP_PUNCHTHROUGH: Traversal NAT
+MP_VERSION_MISMATCH: (VERSIÓN INCOMPATIBLE)
+MP_MISSING_MODS: (FALTAN MODS)
+MP_ENTER_PASSWORD: Contraseña Requerida
+MP_CHAT_INTRO: [i][color=#aaa]Pulsa Shift+Return para reabrir ventada de chat tras cerrarla...[/color][/i]
+MP_CHAT_ALL: A Todos
+MP_CHAT_ALLIES: A Aliados
+MP_CHAT_PEACE: A Pacíficos
+MP_CHAT_TO: A $1
+MP_NOT_READY: En preparación
+MP_READY: Preparado
+MP_PLAYER_READY: Jugador esta preparado para iniciar el juego.
+MP_PLAYER_NOT_READY: Jugador no esta preparado para iniciar el juego.
+MP_CONFIRM_NOT_READY: No todos los jugadores han indicado que están preparados para iniciar el juego. ¿Empezar de todas formas?
+MP_CANNOT_CONNECT: Incapaz de conectarse con el servidor
+MP_WAITING_START: Esperando a que el anfitrión comience el juego
+MP_WAITING_TRANSFER: Transferir Juego
+MP_IRC_CHAT: Abrir Chat Lobby de IRC
+MP_JOIN_IP: Unir via IP
+MP_NO_GAMES: No hay partidas multijugadores activas...
+INVITE_FRIEND: Invitar amigos
+MP_CONNECT_EVENT: $1 se ha conectado al juego.
+MP_DISCONNECT_EVENT: $1 se ha desconectado.
+MP_PLAY_EVENT: $1 esta ahora jugando como imperio $2.
+MP_SPECTATING_EVENT: $1 esta de observador.
+MP_CHEATS_ENABLED: Los trucos se han [color=#0f0]activado[/color].
+MP_CHEATS_DISABLED: Los trucos se han [color=#f00]desactivado[/color].
+MP_QUEUE: Cola de Partida
+MP_QUEUE_ACTIVE: En Cola...
+MP_QUEUE_ACTIVE_PLAYERS: En Cola... (Jugadores $1)
+MP_QUEUE_READY: Partida Lista
+MP_QUEUE_ACCEPT: Aceptar
+MP_QUEUE_REJECT: Rechazar
+MP_QUEUE_LEAVE: Dejar la Cola
+MP_QUEUE_WAITING: Esperando por jugadores ($1/$2)
+
+CHOOSE_MAP: Elegir Mapa...
+ADD_GALAXY: Añadir Galaxia
+SYSTEM_COUNT: Sistemas
+SYSTEM_SPACING: Espacios
+CONNECT_ENDS: Bucle con Agujero de Gusano
+TEAM: Equipo
+TEAM_TEXT: Equipo $1
+NO_TEAM: Sin Equipo
+
+NG_GAME_OPTIONS: Opciones
+
+NGTT_MAP_HW: Determina si los mundos nativos de imperio pueden ser creados en esta galaxia.
+NG_UNIVERSE_GENERATION: Generación de Universo
+NG_ANOMALY_OCCURANCE: Ocurrencia de Anomalías
+NG_REMNANT_OCCURANCE: Ocurrencia de Remanentes
+NG_ASTEROID_OCCURANCE: Asteroides de Minerales
+NG_RESOURCE_ASTEROID_OCCURANCE: Recursos de Asteroides
+NG_UNIQUE_SYSTEM_OCCURANCE: Ocurrencia de Sistemas Únicos
+NG_UNIQUE_RESOURCE_OCCURANCE: Ocurrencia de Recursos Únicos
+NG_PLANET_FREQUENCY: Frecuencía de Planetas
+NG_ARTIFACT_FREQUENCY: Frecuencía de Artefactos
+NG_SYSTEM_SIZE: Tamaño de Sistemas
+NG_RESET: Reiniciar Valores por Defecto
+NG_EMPIRE_OPTIONS: Opciones de Imperio
+NG_ENABLE_CIVILIAN_TRADE: Habilitar Naves de Comercio Civiles
+NG_CIVILIAN_TRADE: Actividad de Comercio Civil
+NGTT_CIVILIAN_TRADE: La cantidad de actividad de las naves de comercio civiles en tu imperio. La actividad civil más alta crea mas naves de comercio, pero puede tener un impacto en el rendimiento y framerate del juego.
+NG_VICTORY_OPTIONS: Opciones de Victoria
+NG_RANDOM_EVENTS: Eventos Aleatorios
+NG_TIME_LIMIT: Limite de Tiempo
+NGTT_TIME_LIMIT: <<|
+	Colocas un limite de tiempo para el juego. Después de que expire el tiempo, el imperio con más puntos es declarado el ganador.
+>>
+NG_REMNANT_AGGRESSION: Agresión de Remanentes
+NGTT_REMNANT_AGGRESSION: Permitir a las flotas remanentes moverse e interceptar flotas enemigas cercanas.
+NG_DISABLE_STARTING_FLEETS: Desactivar Flotas Iniciales
+NGTT_DISABLE_STARTING_FLEETS: Desactivar flotas iniciales que cada imperio consigue con el rasgo de su Gobierno.
+NG_ENABLE_REVENANT_PARTS: Activar Partes del Fantasma
+NGTT_ENABLE_REVENANT_PARTS: <<|
+	Cuando este activado, las 4 partes del artefacto de El Fantasma se esparcirán alrededor del universo.
+
+	Activar una parte de El Fantasma te da un bono, y tener las 4 de ellas activas te da el control sobre la nave de guerra más poderosa en el universo.
+>>
+NG_ALLOW_TEAM_SURRENDER: Permitir Rendición para Romper Equipos
+NGTT_ALLOW_TEAM_SURRENDER: <<
+	Si esta activado, los jugadores en equipos serán capaces de rendirse a otros imperios de otros equipos, y convertirse en vasallos del equipo de su Señor.
+>>
+NG_ENABLE_DREAD_PIRATE: Activar Terror Pirata
+NGTT_ENABLE_DREAD_PIRATE: <<
+	Cuando el Terror Pirata este activado, una nave pirata deambulará la galaxia cazando naves de comercio civiles desarmadas.
+
+	El pirata almacena su botín en múltiples estaciones pirata de provisiones en el espacio profundo. Destruye las provisiones o el terror pirata para obtener su dinero robado como fondos especiales.
+>>
+NG_RESOURCE_SCARCITY: Escasez de Recursos
+NGTT_RESOURCE_SCARCITY: <<
+	Cuando esta activado, grandes mapas contendrán planetas estériles para mantener la cantidad de los recursos disponibles a imperios con escasez y a un nivel manejable.
+
+	Porcentajes superiores al 100% reducirá la cantidad de recursos en el universo, mientras porcentajes por debajo del 100% limitará el efecto de escasez y generará más recursos.
+>>
+NG_ENABLE_INFLUENCE_EVENTS: Activar Eventos Diplomáticos
+NGTT_ENABLE_INFLUENCE_EVENTS: <<
+	Cuando esta activado, las cartas de evento se colocan entre las cartas de influencia que se lanzan.
+
+	Desactivar esto prevendrá la aparición de Zeitgeists y otros eventos de diplomacia.
+>>
+NG_START_EXPLORED_MAP: Total del Mapa Explorado
+NGTT_START_EXPLORED_MAP: <<
+	Cuando esta activado, todos los sistemas en el mapa empiezan explorado y todos los imperios saben donde están.
+
+	De otra manera, los imperios necesitarán exploradores para que los sistemas sean revelados.
+>>
+NG_ENABLE_TERRAFORMING: Activar Terraformación
+NGTT_ENABLE_TERRAFORMING: <<
+	Cuando terraformar esta activado, los imperios serán capaces de cambiar los recursos en sus planetas a cualquier recurso de Grado 1 a voluntad.
+
+	Para terraformar un recurso, selecciona un planeta con trabajo y click derecho en otro planeta para terraformar.
+>>
+NG_ENABLE_INFLUENCE_VICTORY: Activar Victoria de Influencia
+NGTT_ENABLE_INFLUENCE_VICTORY: <<
+	Activas la Victoria de Influencia que puede ser lograda al convertirte en líder del senado, construir un Palacio de Senado, y comprar y activar las cartas de Superpotencia Galáctica y Utopía Galáctica.
+>>
+
+FLATTEN: Aplanar
+
+TEX_QUAL_2: Triste
+TEX_QUAL_3: Medio
+TEX_QUAL_4: Alto
+TEX_QUAL_5: Ultra
+
+RESOLUTION: Resolución
+RES_DESKTOP: Escritorio
+FULLSCREEN: Pantalla Completa
+
+NG_DISABLE_TRADE: Desactivar Naves de Comercio Civiles
+NGTT_DISABLE_TRADE: <<|
+	Desactivas que se creen naves de comercio civiles en este juego. Eliminará todas las mecánicas de asalto, pero mejorará el rendimiento del juego en galaxias muy grandes.
+>>
+
+
+NG_WARN_PEREMP: <<|
+	[b][color=#f00]Aviso:[/color][/b] Estas creando un gran mapa con más de 25 sistemas por imperio,
+	tu experiencia de juego puede ser negativamente afectada al moverse el juego más
+	lentamente.
+
+	Recomendamos que se juegue con entre 10-20 sistemas por imperio para que
+	los resultados de jugar sean óptimos en rendimiento.
+
+	[b]¿Continuar de todas formas?[/b]
+>>
+NG_WARN_OPTIMAL: <<|
+	[b][color=#f00]Aviso:[/color][/b] Estas creando un gran mapa de más de 150
+	sistemas. Juegos con tantos sistemas pueden no funcionar en PCs de bajo
+	rendimiento y pueden funcionar lentamente conforme avance el juego.
+
+	Adicionalmente, tu experiencia de juego puede ser negativamente afectada por
+	el funcionamiento más lento del juego. Recomendamos jugar el juego con
+	alrededor de entre 10-20 sistemas por imperio para resultados óptimos.
+
+	[b]¿Continuar de todas formas?[/b]
+>>
+NG_WARN_BAD: <<|
+	[b][color=#f00]Aviso:[/color][/b] Estas creando un enorme mapa de más de 400
+	sistemas. Juegos con tantos sistemas solo podrán funcionar óptimamente en PCs de gran
+	rendimiento y pueden funcionar lentamente conforme avanza el juego.
+
+	Adicionalmente, tu experiencia de juego puede ser negativamente afectado por
+	el funcionamiento más lento del juego. Recomendamos jugar el juego con
+	alrededor de entre 10-20 sistemas para resultados óptimos.
+
+	[b]¿Continuar de todas formas?[/b]
+>>
+NG_WARN_OHGOD: <<|
+	[b][color=#f00]Aviso:[/color][/b] Estas creando un ridículamente gran mapa de más de 1000 sistemas.
+
+	A menos que tu seas del [b]fuuuuuturo[/b] y estés ejecutando Star Ruler 2 en
+	un Core i42 en el 2038, [b]experimentarás[/b] lag y funcionará lentamente
+	conforme avanza el juego.
+
+	Adicionalmente, tu experiencia de juego puede ser negativamente afectado por
+	el funcionamiento más lento del juego. Recomendamos jugar el juego con
+	alrededor de entre 10-20 sistemas para resultados óptimos.
+
+	[b]¿Continuar de todas formas? (Estas loco)[/b]
+>>
+
+IRC_HELP: <<
+	Comandos Disponibles:
+
+	/msg <usuario> <mensaje> - Envías un mensaje privado.
+	/me <mensaje> - Envías un mensaje de acción.
+	/join #<channel> - Unir a un canal diferente.
+	/part - Parte el canal actual.
+	/close - Cerrar el canal actual/pm window.
+	/nick <nuevo_nick> - Cambia tu nick.
+
+	Comandos que requieren privilegios extras:
+
+	/topic <nuevo_tema> - Cambiar el tema en el canal actual.
+	/mode <parametros> - Cambiar a modo canal.
+	/umode <parametros> - Cambiar a modo usuario.
+	/kick <nick> - Echas a un usuario del canal.
+>>
+
+IRC_JOIN: [color=$3]$1[/color] se ha unido a $2
+IRC_PART: [color=$3]$1[/color] ha dejado $2
+IRC_QUIT: [color=$3]$1[/color] se ha ido
+IRC_ACTION: [color=$3]$1[/color] $2
+IRC_NICK: [color=$3]$1[/color] es ahora conocido como [color=$4]$2[/color]
+IRC_KICK: [color=$3]$1[/color] ha echado [color=$4]$2[/color]
+IRC_TOPIC: [color=$3]$1[/color] ha cambiado el tema a '$2'
+IRC_TOPIC_IS: El tema para $1 es: $2
+IRC_MODE: [color=$3]$1[/color] coloca el modo a $2
+IRC_UMODE: [color=$3]$1[/color] coloca tu modo usuario a $2
+IRC_DISCONNECT: [color=#f00]Desconectado del servidor.[/color]
+
+DISCONNECT_0: Tiempo de Conexión Agotado
+DISCONNECT_1: Error de Conexión
+DISCONNECT_2: Conexión Cerrada
+DISCONNECT_3: Echado por el servidor
+DISCONNECT_4: Versión incompatible
+DISCONNECT_5: Contraseña incorrecta
+
+SANDBOX: Probar Diseños
+PROMPT_QUIT: El juego no salvado se perderá. ¿Estás seguro de salir del juego?
+PROMPT_END: El juego no salvado se perderá. ¿Estás seguro de terminar el juego?
+PROMPT_START_NEW: El juego no salvado se perderá. ¿Estás seguro de terminar tu juego actual y empezar uno nuevo?
+PROMPT_DISCONNECT: ¿Estás seguro que quieres desconectarte?
+PROMPT_TUTORIAL: Empezar el tutorial finalizará tu juego actual. El progreso no salvado se perderá.¿Continuar?
+PROMPT_SANDBOX: Cargar diseños en el entorno de pruebas finalizará tu juego actual. El progreso no salvado se perderá. ¿Continuar?
+
+CHECK_FOR_UPDATES: Buscar actualizaciones
+CHECKING_UPDATES: Buscando actualizaciones...
+CHECK_UPDATE_FAIL: Fallo al buscar actualizaciones.
+CHECK_UPDATE_UPTODATE: ¡La versión del juego esta actualizado a la última versión!
+UPDATE_PROGRESS: Descargando Actualización... $1%
+UPDATE_FAIL: Descargar actualización fallo... (Código $1)
+
+AI_DIFF_EASY: Fácil
+AI_DIFF_NORMAL: Normal
+AI_DIFF_HARD: Difícil
+
+AI_DIFF_EASY_DESC: Un oponente fácil.
+AI_DIFF_NORMAL_DESC: Un reto moderado.
+AI_DIFF_HARD_DESC: Desbloquea la IA al máximo.
+
+AI_BEHAVIOR: Comportamiento
+AI_CHEATS: Trucos
+
+AI_AGGRESSIVE: Agresivo
+AI_AGGRESSIVE_DESC: <<
+	Las IAs en modo agresivo siempre intentaran conquistar otros imperios inmediatamente si observan ventajas en hacerlo.
+>>
+
+AI_PASSIVE: Pasiva
+AI_PASSIVE_DESC: <
+	Las IAs en modo pasivo nunca declararán la guerra por si mismos, y solo luchará contra quien les declare la guerra en primer lugar.
+>>
+
+AI_BIASED: Partidista
+AI_BIASED_DESC: <<
+	Las IAs en modo partidista siempre odian a los imperios humanos, y los atacarán más a menudo que otras IAs.
+>>
+
+AI_WEALTH: Rica
+AI_WEALTH_DESC: <<
+	Das a la IA  una cantidad estática de recursos libres de todos los tipos durante todo el juego.
+>>
+
+AI_STRENGTH: Fuerza
+AI_STRENGTH_DESC: Incrementa la fuerza de las flotas de combate de IA a través del juego completo.
+
+AI_ABUNDANCE: De Sobra
+AI_ABUNDANCE_DESC: Incrementas la cantidad de recursos iniciales que la IA obtiene de sus planetas.
+
+AI_PRIVILEGED: Privilegiada
+AI_PRIVILEGED_DESC: Das a la IA un Privilegio seleccionado aleatoriamente, significativamente mejorando su posición inicial en el juego.
+
+AI_LEGACY: IA Legado
+AI_LEGACY_DESC: Usas la versión previa de la IA Star Ruler 2. La IA de legado no
+soporta todas las nuevas razas y características.

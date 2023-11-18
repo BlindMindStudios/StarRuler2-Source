@@ -1,0 +1,925 @@
+SC_Hulls: [hspace=4/][img=DesignationIcons::16;32x32/][hspace=6/] [color=#cc6a3a]Cascos[/color]
+SC_Control: [vspace=-14][img=Bridge;42x42/][/vspace]  [color=#2fd6b3]Mando[/color]
+SC_Weapons: [vspace=-18][hspace=-22/][img=Railgun::2;70x53/][/vspace][hspace=-10/] [color=#f9464d]Armas[/color]
+SC_Propulsion: [hspace=-10/][vspace=-56][img=RocketEngine;84x84/][/vspace][hspace=-32/] [color=#f9e146]Propulsión[/color]
+SC_Defense: [vspace=-14][img=PlateArmor;42x42/][/vspace]  [color=#a9a9a9]Defensa[/color]
+SC_FTL: [img=HexagonSubsystems::10;42x21;#f00/]  [color=#67a7ad]FTL[/color]
+SC_Modifiers: [img=HexagonSubsystems::0;42x21;#cf00ff/] [color=#eda1ff]Modificadores[/color]
+SC_Support: [vspace=-14][img=SupportCommand;42x42/][/vspace] [color=#eda1ff]Apoyo[/color]
+SC_Equipment: [vspace=-22][hspace=-29/][img=TractorGun::2;100x76/][/vspace][hspace=-29/] [color=#8bb800]Equipamiento[/color]
+SC_Misc: Misc
+
+CREWCONTROL_NAME: Puente y Equipo
+CREWCONTROL_DESC: <<
+	Un puente, alojamientos e instalaciones para tripular una nave.
+
+	[img=ActionBarIcons::0;22;#00ff80]Proporciona [b][color=#00ff80]Mando[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Lentamente repara la nave.[/img]
+	[img=Minus]La nave es destruida sino queda ningún mando.[/img]
+>>
+
+CREWDECK_NAME: Cubierta de Mando
+CREWDECK_DESC: <<
+	Cubierta mínima e instalaciones para Mando.
+
+	[img=ActionBarIcons::0;22;#00ff80]Proporciona [b][color=#00ff80]Mando[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Lentamente repara la nave.[/img]
+	[img=Minus]La nave es destruida sino queda ningún mando.[/img]
+>>
+
+SHIPCOMPUTER_NAME: Ordenador de Mando
+SHIPCOMPUTER_DESC: <<
+	Un ordenador autónomo capaz de controlar numerosos sistemas de nave.
+
+	[img=ActionBarIcons::0;22;#00ff80]Proporciona una gran cantidad de [b][color=#00ff80]Mando[/color][/b] para operar otros subsistemas.[/img]
+	[img=QuickbarIcons::6;22]Durante los primeros 30 segundos de cualquier combate, la fuerza de la flota entera es potenciada por un porcentaje dependiente del tamaño del Ordenador de Mando.[/img]
+	[img=Plus]Lentamente repara la nave.[/img]
+	[img=Minus]Requiere energía para funcionar[/img]
+	[img=Minus]La nave es destruida si no queda mando.[/img]
+>>
+
+STATUS_COMPUTER_BOOST: Potenciado por Ordenador
+STATUS_COMPUTER_BOOST_DESC: El cómputo pesado por el ordenador de mando del buque insignia incrementa la eficiencia de la flota y la fuerza de combate durante los primeros 30 segundo de cualquier combate.
+
+SUPPLYMODULE_NAME: Almacen de Reservas
+SUPPLYMODULE_DESC: <<
+	Almacen de reservas y munición para uso en combate y asedios de planetas.
+
+	[img=AttributeIcons::4;22]Proporciona [b][color=#fefc61]Capacidad de Reservas[/color][/b].[/img]
+	[img=Minus]Los hexes de almacenamiento de reservas destruidos pierden suministro con el paso de tiempo.[/img]
+>>
+
+SUPPORTCAPMODULE_NAME: Control de Apoyo
+SUPPORTCAPMODULE_DESC: <<
+	Infraestructura Técnica para controlar una flota de naves de apoyo.
+
+	[img=ActionBarIcons::2;22]Proporciona [b][color=#00cffe]Control de Apoyo[/color][/b].[/img]
+	[img=Minus]Puedes perder control de naves de apoyo si es destruido.[/img]
+>>
+
+SHIELDGEN_NAME: Generador de Escudo
+SHIELDGEN_DESC: <<
+	Crea un escudo alrededor de la nave, bloqueando el daño entrante.
+
+	[img=Plus]Crea una barrera regenerativa contra daños.[/img]
+	[img=Minus]Los escudos débiles permiten el paso mayor de daños.[/img]
+>>
+
+S_SHIELD_HARDENER: Reforzador de Escudo
+S_SHIELD_HARDENER_DESC: <<
+	Apoya y refuerza el escudo de la nave, permitiendo resistir el daño entrante sin perder fuerza.
+
+	[img=Plus]Mientras los escudos están elevados, concede un porcentaje de oportunidad de ignorar completamente en daño por armas entrantes.[/img]
+	[img=Minus]Cuando los escudos están débiles, la oportunidad de bloqueo total de daño se reduce.[/img]
+>>
+
+FISSIONGEN_NAME: Generador de Fisión
+FISSIONGEN_DESC: <<
+	Un generador de energía basado en la fisión atómica.
+
+	[img=ResourceIcon::2;22]Proporciona [b][color=#42b4bd]Energía[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Muy barato de construir y mantener.[/img]
+	[img=Minus]Requiere un montón de espacio suministrar grandes cantidades de energía.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Perder generación de energía requerida en combate reduce la efectividad total de la nave.[/color][/i][/img]
+>>
+
+FUSIONGEN_NAME: Generador de Fusión
+FUSIONGEN_DESC: <<
+	Genera energía a través de la fusión nuclear.
+
+	[img=ResourceIcon::2;22]Proporciona [b][color=#42b4bd]Energía[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Proporciona una gran cantidad de energía en una pequeña cantidad de espacio.
+	[img=Minus]Caro de construir y mantener.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Perder poder de regeneración de energía en combate reduce la efectividad de naves total de la nave.[/color][/i][/img]
+>>
+
+AMGEN_NAME: Generador de Antimateria
+AMGEN_DESC: <<
+	Una reacción de aniquilación materia-antimateria sostenida que suministra energía continua a la nave.
+
+	[img=ResourceIcon::2;22]Proporciona [b][color=#42b4bd]Energía[/color][/b] para operar a otros subsistemas.[/img]
+	[img=Plus]Suministra una gran cantidad de energía en una cantidad pequeña de espacio.[/img]
+	[img=Plus]Barato de mantener.[/img]
+	[img=Minus]Caro de construir.[/img]
+	[img=Minus]Si el núcleo generador de antimateria recibe daños, la nave explotará.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Perder la generación de energía requerida en combate reduce la efectividad total de la nave.[/color][/i][/img]
+>>
+
+S_MARENIUMGEN: Generador de Marenio
+S_MARENIUMGEN_DESC: <<
+	Genera energía usando entramados de marenio de estado sólido solo encontrados en planetas específicos.
+
+	[img=ResourceIcon::2;22]Proporciona [b][color=#42b4bd]Energía[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Reactor que no ocupa ningún espacio interno.[/img]
+	[img=Plus]Incrementa la fuerza de combate de la nave dependiendo del nivel del planeta con Marenio.[/img]
+	[img=Plus]Incrementa la aceleración dependiendo del nivel del planeta con Marenio.[/img]
+	[img=Minus]Si el planeta con Marenio se pierde, la nave pierde casi toda su efectividad y su fuerza de combate.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Perder la generación de energía en combate reduce la eficiencia total de la nave.[/color][/i][/img]
+>>
+
+RAILBATTERY_NAME: Batería de Raíl
+RAILBATTERY_DESC: <<
+	Una bateria de cañones magnéticos que dispara pequeños proyectiles a velocidades inmensas.
+
+	[img=Plus]Tasa de fuego rápido.[/img]
+	[img=Minus]Proyectiles imprecisos.[/img]
+	[img=Minus]Arco de disparo de torreta limitado.[/img]
+>>
+
+MUONBATTERY_NAME: Batería de Muon
+MUONBATTERY_DESC: <<
+	Dispara tandas de muones recién creados a velocidades relativistas.
+
+	Se beneficia de tecnologías que mejoran las baterías de raíl.
+
+	[img=Plus]Tasa de fuego rápido.[/img]
+	[img=Plus]Penetra a través de blindajes e ignora la resistencia a daños.[/img]
+	[img=Minus]Daños más bajos.[/img]
+	[img=Minus]Proyectiles imprecisos.[/img]
+	[img=Minus]Arco de disparo de torreta limitado.[/img]
+>>
+
+RAILGUN_NAME: Arma de Raíl
+RAILGUN_DESC: <<
+	Un cañón magnético que dispara relativamente pequeños proyectiles a inmensas velocidades.
+
+	[img=Plus]Daños Altos por golpe.[/img]
+	[img=Minus]Proyectiles imprecisos.[/img]
+	[img=Minus]Arco de disparo de torreta limitado.[/img]
+>>
+
+MUON_CANNON_NAME: Cañón de Muones
+MUON_CANNON_DESC: <<
+	Dispara tandas de muones recién creados a velocidades relativistas.
+
+	Se beneficia de tecnologías que mejoran las armas de raíl.
+
+	[img=Plus]Tasa de fuego rápido.[/img]
+	[img=Plus]Penetra a través de blindajes e ignora resistencia a daños.[/img]
+	[img=Minus]Daños más bajos.[/img]
+	[img=Minus]Proyectiles imprecisos.[/img]
+	[img=Minus]Arco de disparo de torreta limitado.[/img]
+>>
+
+LASER_NAME: Laser
+LASER_DESC: <<
+	Un rayo altamente concentrado de luz que inflige daños a través de las subsecciones de las naves.
+
+	[img=Plus]Rayo preciso e instantáneo al fijar.[/img]
+	[img=Plus]Bajo [b][color=#fefc61]costo de reservas[/color][/b].[/img]
+	[img=Minus]No efectivo contra blindaje.[/img]
+	[img=Minus]Arco de disparo de torreta muy limitado.[/img]
+>>
+
+MISSILELAUNCHER_NAME: Lanzador de Misiles
+MISSILELAUNCHER_DESC: <<
+	Misiles cargados con explosivos y propelente suficiente son lanzados fuera de la nave y fijados al objetivo primario.
+
+	[img=Plus]Daño [b][color=#ff8080]alto[/color][/b].[/img]
+	[img=Plus]No hay limitaciones al arco del disparo.[/img]
+	[img=Plus]Muy efectivo para penetrar blindaje.[/img]
+	[img=Minus]Tasa de fuego lento.[/img]
+	[img=Minus][b][color=#fefc61]Coste de reservas[/color][/b] muy alto.[/img]
+>>
+
+S_SELF_DESTRUCT: Dispositivo de Autodestrucción
+S_SELF_DESTRUCT_DESC: <<
+	Una cabeza nuclear masiva diseñada para detonar cuando la nave que lo alberga se vuelve inestable.
+
+	[img=Plus]Daños extremos en una gran zona.[/img]
+	[img=Minus]Muerto.[/img]
+>>
+ABL_SELF_DESTRUCT: Activar Autodestrucción
+ABL_SELF_DESTRUCT_DESC: <<
+	Activar el dispositivo de autodestrucción contenido en esta nave, detonando la nave en un infierno feroz.
+>>
+
+PLATEARMOR_NAME: Blindaje de Placas
+PLATEARMOR_DESC: <<
+	Pesadas placas de metal entrelazadas que protegen la nave del daño.
+
+	[img=Plus]Salud [b][color=#80ff80]alta[/color][/b].[/img]
+	[img=Plus]Resiste y reduce el daño entrante.[/img]
+	[img=Plus]Blindaje externo, no usar en interiores.[/img]
+	[img=Minus]Pesado.[/img]
+>>
+
+NANOMESH_NAME: Nanomalla
+NANOMESH_DESC: <<
+	Una fina malla tejida de nanorobots refuerzan la integridad de los sistemas cercanos.
+
+	[img=Plus]Incrementa la [b][color=#80ff80]salud[/color][/b] de los hexes cercanos.[/img]
+	[img=Plus]El bono de salud se mejora con la investigación de salud de blindaje.[/img]
+	[img=Minus]Siempre usa espacio interno.[/img]
+	[img=Minus]La nanomalla en si misma no tiene salud.[/img]
+>>
+
+S_CRYSTALARMOR: Blindaje Cristalino
+S_CRYSTALARMOR_DESC: <<
+	Una placa de blindaje construida con capas de microestructuras cristalinas complejas que se rompen cuando se impacta que absorbe una gran cantidad de daño. La complicada construcción de las placas cristalinas desaconseja su reparación en el campo.
+
+	[img=Plus]Salud muy alta.[/img]
+	[img=Plus][b][color=#c6c33a]Resistencia a daño[/color] alta[/b].[/img]
+	[img=Minus]No puede ser reparado.[/img]
+	[img=Minus]Cuando un hex de Blindaje Cristalino es destruido, es permanentemente eliminado de la nave.[/img]
+>>
+
+ABLATIVEARMOR_NAME: Blindaje Ablativo
+ABLATIVEARMOR_DESC: <<
+	Una espuma de metal rígida diseñada para absorber daños de forma ablativa.
+
+	[img=Plus][b][color=#c6c33a]Resistencia a daños[/color] alta[/b].[/img]
+	[img=Plus]Blindaje exterior, no usar en interiores.[/img]
+	[img=MenuIcons::3;20]Efectivo contra muchos pequeños golpes.[/img]
+>>
+
+REACTIVEARMOR_NAME: Blindaje Reactivo
+REACTIVEARMOR_DESC: <<
+	Una hoja de explosivos independiente que detona casi instantáneamente en respuesta a fuego enemigo entrante.
+
+	[img=Plus]Golpes de daños que exceden el [b][color=#c33ac6]umbral de daño[/color][/b] son reducidos significativamente.[/img]
+	[img=Plus]Blindaje exterior, no usar en interiores.[/img]
+	[img=MenuIcons::3;20]Efectivo contra impactos de daño masivos.[/img]
+>>
+
+S_NILINGARMOR: Blindaje de Fibra Niling
+S_NILINGARMOR_DESC: <<
+	Hebras de fibras reactivas cuanticas conectan el blindaje externo a un agujero de tamaño cero en el espaciotiempo, permitiendo que la energía entrante fluye de forma segura para ser redirigida y almacenada. Cuando suficiente energía ha sido almacenada, es canalizad de vuelta al espacio tiempo normal, creando un fuerte pulso EM que daña los enemigos circundantes.
+
+	[img=Plus]Niega completamente el daño entrante de armas de energía.[/img]
+	[img=Plus]Tras cruzar el umbral de cantidad de daño absorbido, una ráfaga de efecto de área es liberada, dañando a todos los enemigos cercanos por valor de la cantidad almacenada.[/img]
+	[img=Minus]No suministra protección alguna contra otros tipos de armas, y no otorga Salud.[/img]
+>>
+
+NEUTRONARMOR_NAME: Blindaje de Neutronio
+NEUTRONARMOR_DESC: <<
+	Bolas microscópicas de metal dopado con neutronio están mezcladas con blindaje de placas.
+
+	[img=Plus][b][color=#80ff80]Salud[/color] muy alta[/b].[/img]
+	[img=Plus]Blindaje externo, no usar en interiores.[/img]
+	[img=Minus]Extremadamente pesado.[/img]
+	[img=Minus]Coste caro de construcción.[/img]
+>>
+
+ROCKETENGINE_NAME: Motor Cohete
+ROCKETENGINE_DESC: <<
+	Expulsa grandes cantidades de masa a altas velocidades para producir empuje.
+
+	[img=Plus]Suministra un Empuje muy alto.[/img]
+	[img=Minus]Tasa de giro bajo.[/img]
+>>
+
+IONENGINE_NAME: Motor de Iones
+IONENGINE_DESC: <<
+	Propele pequeñas cantidades de iones a extremadamente altas velocidades.  Los tubos de escape de los impulsores de iones son muy pequeños y puede ser rotados fácilmente para suministrar giro angular.
+
+	[img=Plus]Tasa de giro muy alto.[/img]
+	[img=Minus]Suministra un bajo Empuje.[/img]
+	[img=Minus]Requiere Energía para funcionar.[/img]
+>>
+
+GRAVITYENGINE_NAME: Motor Graviton
+GRAVITYENGINE_DESC: <<
+	Una ola densa de gravedad artificial que permite a los motores sin reacción propulsar naves espaciales.
+
+	[img=Plus]Se puede usar en el interior.[/img]
+	[img=Plus]Si solo motores graviton están presentes en la nave, esta no necesitará rotar para moverse.[/img]
+	[img=Minus]Suministra un bajo Empuje.[/img]
+	[img=Minus]Caro de construir.[/img]
+	[img=Minus]Tiene unas necesidades de energía alta.[/img]
+>>
+
+S_RAMJET: Estatoreactor Buitre
+S_RAMJET_DESC: <<
+	Colecciona partículas perdidas en el vacío mientras se mueve por medio de un campo magnético hacia una entrada en el frente de la nave, para usar esas partículas como empuje.
+
+	[img=Plus]Reduce en gran manera el coste de mantenimiento de la nave.[/img]
+	[img=Plus]Restaura [b]Reservas[/b] de la nave cuando se mueve a gran velocidad. La tasa máxima de Ganancia de Reservas se alcanza a velocidades de 100 u/s o superiores.[/img]
+	[img=Minus]Proporciona un Empuje menor que los motores convencionales.[/img]
+
+	El Estatoreactor debe contener al menos una [color=#da8a9f][b]Entrada de aire[/b][/color], apuntando hacia fuera de la nave. Puedes encontrar el Estatoreactor bajo la categoría de [color=#eda1ff][b]Modificadores[/b][/color].
+>>
+
+S_RAMJET_SCOOP: Entrada de Aire
+S_RAMJET_SCOOP_DESC: <<
+	Debe ser ubicado en un subsistema [b]Estatoreactor Buitre[/b] apuntando hacia fuera al frente de la nave.
+
+	Incrementa la tasa a la cual la nave gana [B]Reservas[/b] cuando se encuentra a alta velocidad.
+>>
+
+BULKHEAD_NAME: Manparo
+BULKHEAD_DESC: <<
+	Placas reforzadas en las paredes de un subsistema hacen su estructura interna significativamente más resistente al daño entrante.
+
+	[img=Plus;22;#cf00ff]Puede ser ubicado en subsistemas no blindaje que tienen núcleos o torretas. No puede ser colocar en puente o subsistemas sin núcleos.[/img]
+	[img=Plus]Incrementa la salud de todos los hexes del subsistema.[/img]
+	[img=Minus]Incrementa el coste de construcción del subsistema.[/img]
+	[i][color=#aaa]Colocar más de un mamparo en un subsistema continuará incrementado la salud de todos los hexes, pero disparará los costes de construcción.[/color][/i]
+>>
+
+TARGETINGSENSOR_NAME: Sensor de Objetivos
+TARGETINGSENSOR_DESC: <<
+	Sensores de rastreo y de búsqueda sofisticados que permiten a un arma más precisamente encontrar su destino, incrementado su rango efectivo.
+
+	[img=Plus;22;#cf00ff]Puede ser colocado en un subsistema de armas.[/img]
+	[img=Plus]Incrementa el [b][color=#80ffea]rango[/color][/b] del arma.[/img]
+	[img=Minus]Incrementa el coste de construcción del arma.[/img]
+	[img=Minus]Incrementa el [b][color=#fefc61]coste de reserva[/color][/b] al disparar el arma.[/img]
+	[i][color=#aaa]Ubicar más de un sensor de objetivos incrementará más el rango pero su coste se disparará.[/color][/i]
+>>
+
+SUPPORTSUPPLY_NAME: Contenedor de Reservas
+SUPPORTSUPPLY_DESC: <<
+	Una instalación de almacenamiento de reservas secundarias que puede ser ubicado en naves de apoyo particulares, incrementado la cantidad de munición y materiales de combate general disponibles en la nave.
+
+	[img=AttributeIcons::4;22]Proporciona [b][color=#fefc61]Capacidad de Reservas[/color][/b] a la flota.[/img]
+	[img=Minus]Añade un coste de mantenimiento a las naves de apoyo.[/img]
+	[img=Minus]Los hexes de almacenamiento de reservas destruidos pierden reservas con el paso del tiempo.[/img]
+	[img=MenuIcons::3;20;#f00][i][color=#faa]Las naves de apoyo con costes de mantenimiento no se crearán con Defensa.[/color][/i][/img]
+>>
+
+S_EMERGENCY_SUPPLIES: Reservas de Emergencia
+S_EMERGENCY_SUPPLIES_DESC: <<
+	Un nodo de salida de energía del imperio. Permite que reservas se produzcan instantáneamente en cualquier lugar de la galaxia con un gran coste.
+
+	[img=AttributeIcons::4;22]Inmediatamente genera reservas.[/img]
+	[img=Minus]Cuesta energía.[/img]
+	[img=Minus]Refresco de 30 segundos.[/img]
+>>
+ABL_EMERGENCY_SUPPLIES: Crear Reservas
+ABL_EMERGENCY_SUPPLIES_DESC: Repone las reservas de la nave.
+
+S_HYPERLASER: Laser Hiperdenso
+S_HYPERLASER_DESC: <<
+	Un laser corto de gran energía que casi puede generar materia.
+
+	[img=Plus]Rayo preciso y con tiempo de fijado en objetivo instantáneo.[/img]
+	[img=Plus]Hace daño rápidamente.[/img]
+	[img=Minus]DPS total bajo.[/img]
+	[img=Minus]Arco de disparo de torreta muy limitado.[/img]
+>>
+
+S_TRACTOR_BEAM: Rayo Tractor
+S_TRACTOR_BEAM_DESC: <<
+	Emisor de gravitones sofisticado combinado con un campo amortiguador inercial que permite a la nave aplicar empuje a otros objectos. Los objetos quedan suspendidos, permitiendo a la nave moverlos.
+
+	[img=MenuIcons::3;20][color=#aaa]Puedes usar un rayo tractor en artefactos, asteroides, orbitales y otras naves.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]Otras naves usarán su propio empuje para intentar romper el rayo tractor.[/color][/img]
+	[img=ResourceIcon::3;20;#f00][color=#aaa]Las naves bajo el efecto de un rayo tractor no puede usar sus motores FTL.[/color][/img]
+>>
+ABL_TRACTOR_BEAM: Alternar Rayo Tractor
+ABL_TRACTOR_BEAM_DESC: Enciende o apaga el rayo tractor.
+ABL_TRACTOR_NO: No se puede remolcar
+
+S_BUSTER_BEAM: Rayo Destructor
+S_BUSTER_BEAM_DESC: Una arma de rayos inmensa capaz de destruir planetas enteros.
+
+S_ION_CANNON: Cañón de Iones
+S_ION_CANNON_DESC: <<
+	Un rayo de energía altamente cargado que sobrecarga temporalmente los sistemas de motores enemigos.
+
+	[img=Plus]Desactiva los motores subluz enemigos y las capacidades FTL.[/img]
+	[img=ResourceIcon::2;22]Cuesta [b][color=#42b4bd]Energía[/color][/b] dispararlo.[/img]
+	[img=MenuIcons::3;20][color=#aaa]Puedes disparar el cañón de iones en naves enemigas.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]La duración del efecto incapacitante depende del tamaño de cañón de iones.[/color][/img]
+>>
+
+S_SKIP_DRIVE: Motor de Salto
+S_SKIP_DRIVE_DESC: <<
+	Un sistema de salto que gasta energía pura para perforar a través de dimensiones cuánticas y lograr un teletrasporte instantáneo.
+
+	[img=Plus]Instantáneamente se teletransporta a lugares cercanos.[/img]
+	[img=ResourceIcon::2;22]Cuesta [b][color=#42b4bd]Energía[/color][/b] activarlo.[/img]
+	[img=MenuIcons::3;20][color=#aaa]Cuanto más lejos la nave se teletransporta, más energía es requerida.[/color][/img]
+	[img=MenuIcons::3;20][color=#aaa]Cuanto más grande sea el motor de salto, menor el coste de energía al usarlo.[/color][/img]
+>>
+
+S_GRAVITON_CONDENSER: Condensador de Gravitones
+S_GRAVITON_CONDENSER_DESC: <<
+	Un generador de rayo inmenso que colapsa la gravedad propia de un objeto celestial en si mismo, llevando a su compresión y eventualmente detonación.
+
+	[img=Plus]El rayo puede ser activado para hacer daño con el paso de tiempo a estrellas y planetas.[/img]
+>>
+ABL_GRAVITON_CONDENSER: Disparar Condensador de Gravitones
+ABL_GRAVITON_CONDENSER_DESC: Dispara un rayo que colapsa la gravedad propia de un objeto celestial en si mismo, llevando a su compresión y eventualmente detonación.
+
+S_CLOAKPLATING: Malla de Camuflaje
+S_CLOAKPLATING_DESC: <<
+	Cubrir una nave completamente en una malla de un material hiperabsorbente evita que los enemigos detecten tu nave fuera del rango visual.
+
+	[img=Plus]Cuando se activa, la flota no puede ser vista a distancia.[/img]
+	[img=ResourceIcon::2;22]El camuflaje lentamente drena [b][color=#42b4bd]Energía[/color][/b] cuando se activa.[/img]
+	[img=Minus]El camuflaje se pierde cuando la flota entra en combate.[/img]
+	[img=MenuIcons::3;20][color=#aaa]El exterior de la nave debe estar completamente cubierta de la malla para camuflarse con éxito.[/color][/img]
+>>
+ABL_CLOAK: Alternar Camuflaje
+ABL_CLOAK_DESC: <<
+	Alternas si la nave esta en camuflaje.
+
+	Mantener el Camuflaje cuesta una pequeña cantidad de energía por segundo y el camuflaje se rompe tan pronto como la flota entra en combate.
+>>
+STATUS_CLOAKED: Camuflada
+STATUS_CLOAKED_DESC: <<
+	Esta flota esta actualmente camuflada.
+
+	Mantener el Camuflaje cuesta una pequeña cantidad de energía por segundo y el camuflaje se rompe tan pronto como la flota entra en combate.
+>>
+
+S_TITAN_HULL: Casco Titan
+S_TITAN_HULL_DESC: <<
+	Un armazón de casco extremadamente pesado que permite que grandes naves puedan ser construidas más eficientemente.
+
+	[img=Plus]Mayor espacio interno disponible.[/img]
+	[img=Plus]Reduce el coste de construcción hasta un 50% mientras que el casco de la nave se vuelve más grande.[/img]
+	[img=Plus]La construcción rigurosa incrementa el arco potencial de disparo de torreta.[/img]
+	[img=Minus]Masa extrema incrementada.[/img]
+	[img=Minus]Velocidad de hipermotor muy reducida.[/img]
+	[img=Minus]Se puede utilizar en naves de 500 o más de tamaño.[/img]
+>>
+
+S_COLOSSUS_HULL: Casco Colosal
+S_COLOSSUS_HULL_DESC: <<
+	La cima de la construcción de naves gigantes, el casco colosal necesita de un campo de integridad estructural sostenido para prevenir su colapso sobre si mismo.
+
+	[img=Plus]Mucho mayor espacio interno.[/img]
+	[img=Minus]Requiere una gran cantidad de Mando y Energía.[/img]
+	[img=Minus]Puede solo ser usado en naves de 3000 o más de tamaño.[/img]
+>>
+
+S_AMMOSTORAGE: Almacen de Munición
+S_AMMOSTORAGE_DESC: <<
+	Modulos de almacen de munición pequeños que puede tener y temporalmente almacenar reservas para la flota mientras la naves de apoyo despegan para hacer ataques independientes contra el enemigo.
+
+	[img=Plus]Permite a las naves de apoyo dejar la flota para hacer asaltos.[/img]
+	[img=Minus]Las naves de apoyo desplegadas sin reservas almacenadas no pueden disparar hasta que vuelven a la flota a reabastecerse.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Las naves de apoyo deben tener un comportamiento de asaltos para ejecutar asaltos en combate.[/color][/i][/img]
+>>
+
+S_GATE_MODULE: Puerta
+S_GATE_MODULE_DESC: <<
+	Un modulo de puerta FTL que puede ser añadido a una estación.
+
+	[img=Plus]Permite a las naves moverse entre puertas.[/img]
+	[img=Plus]Puede ser empaquetada, movida a una nueva ubicación y desempaquetada.[/img]
+	[img=Minus]Debe cubrir al menos un tercio de la estación.[/img]
+	[img=$FTL]Cuesta 0.15 FTL/s mantenerla. Las puertas se desactivan cuando se agota el FTL.[/img]
+>>
+
+ABL_GATE_PACK: Empaquetar Puerta
+ABL_GATE_PACK_DESC: <<
+	Desactivas y empaquetas la puerta. Las puerta empaquetadas no estan activas, pero puede moverse lentamente usando sus propulsores de maniobra.
+>>
+
+ABL_GATE_UNPACK: Puerta Desempaquetada
+ABL_GATE_UNPACK_DESC: <<
+	Desempaquetas la puerta a la localización objetivo. La puerta se movera usando sus propulsores de maniobra, se desempaquetará y se reactivará a si misma. Activar una puerta tiene un coste FTL.
+>>
+
+S_MINING_LASER: Laser Minero
+S_MINING_LASER_DESC: <<
+	Una herramienta precisa de corte y perforación utilizada para extraer materiales de asteroides.
+
+	[img=Plus]Minas minerales especiales de asteroides.[/img]
+	[img=MenuIcons::3;20]Solo asteroides particulares tienen minerales especiales como [b]Mineral[/b]. Muchos asteroides tienen recursos que pueden ser minados con láser de minería, pero requieren que un planeta construya una base minera en el asteroide.[/img]
+>>
+
+S_CARGO_STORAGE: Almacenamiento de Carga
+S_CARGO_STORAGE_DESC: <<
+	Cajas de contenedores especializadas e instalaciones para almacenar materiales minados de asteroides hasta que pueden ser depositados o usados.
+>>
+
+ABL_AUTO_MINE: Minar Asteroides (Automáticamente)
+ABL_AUTO_MINE_DESC: <<
+	Empieza a minar este asteroide y automáticamente retorna a minar después de depositar los materiales recogidos en el punto de entrega.
+>>
+
+ABL_DROPOFF_POINT: Colocar Punto de Entrega
+ABL_DROPOFF_POINT_DESC: <<
+	Alternar el punto de entrega de los materiales minados. Cuando el almacén de carga esta lleno, automáticamente deja la carga en el objecto indicado.
+>>
+
+ABL_MINE_ASTEROID: Minar Asteroide (Una vez)
+ABL_MINE_ASTEROID_DESC: <<
+	Mina un asteroide por una carga completa, pero no retorna después de entregarlos.
+>>
+
+ABL_TRANSFER_CARGO: Transferir Carga
+ABL_TRANSFER_CARGO_DESC: <<
+	Ordenas a la nave transferir toda la carga de sus almacenes.
+>>
+
+ABL_PICKUP_CARGO: Recoger Carga
+ABL_PICKUP_CARGO_DESC: <<
+	Ordenas a la nave recoger tanta carga en el objetivo como sea posible.
+>>
+
+S_CONSTRUCTION_BAY: Bahía de Construcción
+S_CONSTRUCTION_BAY_DESC: <<
+	Equipamiento y espacio para construcción de nuevas naves en el campo.
+
+	[img=$Labor;22]Proporciona trabajo para construir nuevas naves.[/img]
+>>
+
+S_ORE_PROCESSOR: Procesador de Minerales
+S_ORE_PROCESSOR_DESC: <<
+	Instalaciones para refinar y fundir minerales minados de asteroides en materiales usables.
+
+	[img=$Labor;22]Automáticamente convierte Minerales del almacén de carga o siendo minados en trabajo almacenado.[/img]
+	[img=ComputerCore;22;#fca404]Requiere una Bahía de Construcción para poder usar el trabajo.[/img]
+>>
+
+S_LIQUIDARMOR: Blindaje Líquido
+S_LIQUIDARMOR_DESC: <<
+	Una darsena de hidrometal líquido suspendido en el casco de la nave que absorbe los impactos y se expande equitativamente, llenado cualquier hueco creado.
+
+	[img=Plus]Alta [b][color=#80ff80]salud[/color][/b].[/img]
+	[img=Plus]La salud fluye desde los hexes de salud alto para conectar los hexes de salud bajo igualando la densidad.[/img]
+	[img=Plus]Blindaje externo, no usar en interiores.[/img]
+	[img=Minus]No proporciona ninguna Resistencia al Daño.[/img]
+>>
+
+S_AUGMENT_RELOAD: Sistema de Refrigeración
+S_AUGMENT_RELOAD_DESC: <<
+	Aumenta el mecanismo del arma para recargar y refrigerarse, tasas de disparo más rápidos a costa de mayor fragilidad.
+
+	[img=Plus]Incrementa [b][color=#c680ff]la velocidad de recarga[/color][/b] un 20%.[/img]
+	[img=Minus]Reduce la [b][color=#80ff80]salud[/color][/b] un 50%.[/img]
+>>
+
+S_AUGMENT_DAMAGE: Amplificador de Carga
+S_AUGMENT_DAMAGE_DESC: <<
+	Aumenta la carga o energía del arma para permitir hacer más daño a costa de un menor rango.
+
+	[img=Plus]Incrementa el [b][color=#ff8000]daño[/color][/b] un 25%.[/img]
+	[img=Minus]Reduce el [b][color=#c680ff]rango[/color][/b] un 50%.[/img]
+>>
+
+S_AUGMENT_SUPPLY: Mecanismo Pulido
+S_AUGMENT_SUPPLY_DESC: <<
+	Aumenta los sistemas de fijado y descarga para reducir el coste de reserva de disparar a costa de la flexibilidad y velocidad.
+
+	[img=Plus]Reduce los [b][color=#fefc61]costes de reserva[/color][/b] de disparar un 30%.[/img]
+	[img=Minus]Reduce el [b]arco de disparo de la torreta[/b] un 50%, cuando sea apropiado.[/img]
+	[img=Minus]Reduce la [b]velocidad de proyectil[/b] un 50%, cuando sea apropiado.[/img]
+>>
+
+S_SHRINE: Altar
+S_SHRINE_DESC: <<
+	Un altar para honrar a los Dioses Viejos, construida de acuerdo a los planos que nos otorgaron. Rezos en el altar protegen a la nave del daño.
+
+	[img=Plus]Añade un Escudo a la nave.[/img]
+	[img=Minus]Se tiene que generar al menos tantos Rezos como Mando tiene la nave.[/img]
+	[img=ResourceIconsSmall::53;22][b][color=#408fc1]Solo disponible cuando la opción raza 'Devota' es elegida..[/color][/b][/img]
+>>
+
+S_QUANTUM_BATTERY: Batería Cuántica
+S_QUANTUM_BATTERY_DESC: <<
+	Las baterías cuánticas pueden almacenar parte de las vastas cantidades de energía recolectadas por un imperio en el punto cero de energía de una región diminuta del subespacio plegado. Esta energía es entonces lentamente liberada para suplementar requisitos de energía.
+
+	[img=Plus]Baja a la mitad los requisitos del subsistema donde se coloca.[/img]
+	[img=Minus]Si una Batería Cuántica es destruida en combate, el subsistema deja de funcionar hasta que es reparada.[/img]
+	[img=$Energy;20]Cuesta [b]Energía[/b] de tus almacenes globales construirla.[/img]
+>>
+
+S_QUANTUM_COMPRESSOR: Compresor Cuántico
+S_QUANTUM_COMPRESSOR_DESC: <<
+	Usas una región estabilidada del subespacio plegable incrementando el tamaño de almacén sin aumentar el espacio exterior.
+
+	[img=MenuIcons::3;20][i][color=#aaa]Puede ser solo colocado en subsistemas de Almacén de Carga o Reservas, y debe estar completamente rodeado por hexes almacén.[/color][/i][/img]
+	[img=Plus]Añade una capacidad de almacenamiento equivalente a 6 extra hexes.[/img]
+	[img=$Energy;20]Cuesta [b]Energía[/b] de tus almacenes globales construirlo.[/img]
+>>
+
+S_DISRUPTOR: Disruptor
+S_DISRUPTOR_DESC: <<
+	Dispara un rayo de pulsos disruptor EM a un buque insignia opuesto, creando sobrecargas en su reactor de generación de energía que daña los subsistemas cercanos. Las naves de apoyo no son afectadas por el pulso debido a sus requerimientos de energía más bajos.
+
+	[img=Plus]Directamente daña los hexes cercanos de los subsistemas de generador de energía enemiga.[/img]
+	[img=Minus]Daño total bajo.[/img]
+	[img=Minus]El rayo puede ser solo disparado a corto rango.[/img]
+	[img=Minus]Daño reducido significativamente por escudos.[/img]
+	[img=MenuIcons::3;20]No hace daño a las naves de apoyo.[/img]
+>>
+
+S_DRONELAUNCHER: Lanzador de drones
+S_DRONELAUNCHER_DESC: <<
+	Lanzas un enjambre de drones controlados que rastrean naves enemigas, dando vueltas alrededor de ellas mientras hacen daño a cualquier cosa que atraviesan.
+
+	[img=Plus]Los drones perforan a través de las naves enemigas, permitiendo que el daño aumente muchas veces por dron.[/img]
+	[img=Plus]Rango largo de ataque.[/img]
+	[img=Minus]Los drones se mueven lentamente.[/img]
+	[img=Minus]Cantidades significativas de [b][color=#00ff80]Control[/color][/b] son requeridas para comandar los drones.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Los drones tienen una vida limitada antes de que sus fuentes de energía fallen y un nuevo dron necesite ser lanzado. Cuanto más cerca dispara esta un dron de su objetivo, mayor tiempo tendrá para asaltar a los enemigos, incrementando su daño.[/color][/i][/img]
+>>
+
+S_PARTICLELANCE: Lanza de Partículas
+S_PARTICLELANCE_DESC: <<
+	Dispara un rayo concentrado de partículas cargadas a la flota enemiga, creando agujero candentes a través de todo lo que atraviesa.
+
+	[img=Plus]Hace daño en cada hex que el rayo atraviesa.[/img]
+	[img=Plus]Atraviesa las naves y puede golpear a múltiples naves.[/img]
+	[img=Minus]Daño total bajo.[/img]
+	[img=Minus]Daño reducido significativamente por escudos.[/img]
+>>
+
+S_SHOCKMISSILES: Misiles de Impacto
+S_SHOCKMISSILES_DESC: <<
+	[color=#aaa][i]Los Misiles de Impacto solo pueden ser colocados en naves de apoyo.[/i][/color]
+
+	Los misiles equipados con cargas de impacto son disparados para impactar en escudos y desestabilizar la integridad de la burbuja de plasma.
+
+	[img=Plus]Hace mucho daño a la fuerza de los escudos de las naves que golpea.[/img]
+	[img=Minus]No hace daños a naves sin escudos.[/img]
+>>
+
+S_TORPEDOLAUNCHER: Lanzador de Torpedos
+S_TORPEDOLAUNCHER_DESC: <<
+	Lanza bombas guiadas masivas lentas. Estas bombas explotan en un área cercana a su objetivo.
+
+	[img=Plus][b][color=#ff8080]Daños[/color][/b] extremos.[/img]
+	[img=Plus]Arco de disparo sin limitaciones.[/img]
+	[img=Plus]Daño de area.[/img]
+	[img=Minus]Tasa de disparo muy lenta.[/img]
+	[img=Minus][b][color=#ff8080]DPS[/color][/b] muy bajo.[/img]
+>>
+
+S_HYPERDRIVE: Hipermotor
+S_HYPERDRIVE_DESC: Permite la navegación por hipermotor. Cuanto más grande el hipermotor más rápido la velocidad FTL.
+
+S_JUMPDRIVE: Motor de Salto
+S_JUMPDRIVE_DESC: <<
+	Permite a la nave hacer saltos subespaciales a otras ubicaciones dentro de rango. Cuanto más grande sean los subsistemas de motor de salto más largo la distancia de los saltos serán.
+
+	Saltar fuera del rango de salto seguro es posible, pero puede causar daños a la nave y puede dejar la nave fuera del destino planeado.
+
+	Los motores de salto requieren una gran cantidad de [b]Mando[/b] para los cálculos de salto.
+>>
+S_JUMP_RANGE: Rango de Salto Seguro
+STT_JUMP_RANGE: <<
+	La distancia máxima segura a la que esta nave puede saltar en FTL. Los saltos más allá de este rango será imprecisos y causaran daños a las naves.
+>>
+
+S_SHIELD_HARMONIZER: Harmonizador de Escudos
+S_SHIELD_HARMONIZER_DESC: <<
+	[color=#aaa][i]Los Harmonizadores de Escudo solo pueden ser ubicados en naves de apoyo.[/i][/color]
+
+	Harmonizar las naves de apoyo con las frecuencia de escudos del buque insignia, contribuye a su fuerza y permite redireccionar parcialmente los daños.
+
+	[img=Plus]Redirecciona un porcentaje de daño entrante a los escudos de buque insignia cuando estos estan altos.[/img]
+	[img=Plus]Incrementa la capacidad de escudos del buque insignia.[/img]
+>>
+
+S_FLARE_BOMB: Bomba Destello
+S_FLARE_BOMB_DESC: <<
+	Desencadena en una estrella una emisión de destello crítico, aniquilando a toda la población en el sistema solar pero dejando todo intacto.
+
+	La bomba destello es destruida en el proceso.
+>>
+
+ABL_FLARE_BOMB: Calibrar Bomba Destello
+ABL_FLARE_BOMB_DESC: <<
+	Después de un periodo de canalización de 60 segundos, la estrella desencadena una emisión de destello crítico, aniquilando a toda la población en el sistema solar pero dejando todo intacto. Los planetas en el sistema son irradiados por los próximos 5 minutos y no pueden ser colonizados.
+
+	La bomba destello es destruida en el proceso.
+>>
+
+STATUS_FLARE_RADIATION: Radiación Destello
+STATUS_FLARE_RADIATION_DESC: <<
+	Este planeta ha sido irradiado por un destello solar, no permitiendo la colonización.
+>>
+
+
+S_ANCIENT_CORE: Núcleo de Mando
+S_ANCIENT_CORE_DESC: <<
+	Mantiene la conexión de la Primera red, suministrando tanto energía como mando para la nave.
+
+	[img=AncientIcon;22][b][color=#8953f7]Solo disponible cuando la opción raza 'Antigua' es elegida.[/color][/b][/img]
+>>
+
+S_WARHEAD: Cabeza Nuclear
+S_WARHEAD_DESC: <<
+	Una cabeza nuclear fuertemente armada que detona en la flota enemiga, creando una explosión de radiación potente que bombardea a todas las naves enemigas en el área.
+
+	[img=Plus]Daña todos los hexes de las naves afectadas.[/img]
+	[img=Minus]Almacenamiento limitado de cabezas nucleares.[/img]
+	[img=Minus]Las cabezas nucleares son caras y deben ser construidas manualmente en un planeta con trabajo.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]El almacenamiento de cabezas nucleares puede ser expandido al añadir modificadores de Tubo de Cabeza Nuclear al subsistema.[/color][/i][/img]
+>>
+STATUS_WARHEAD: Cabezas Nucleares
+STATUS_WARHEAD_DESC: <<
+	Esta nave actualmente tiene cabezas nucleares listas para disparar.
+>>
+CONS_WARHEAD: Construir Cabeza Nuclear
+CONS_WARHEAD_DESC: <<
+	Construye una nueva cabeza nuclear para reemplazar una que haya sido disparada desde la nave.
+>>
+S_WARHEAD_TUBE: Tubo de Cabeza Nuclear
+S_WARHEAD_TUBE_DESC: <<
+	Almacenamiento adicional para una cabeza nuclear. La nave empezará con una cabeza nuclear extra en almacenamiento, y puede mantener una más.
+
+	Debe ser colocado dentro del subsistema existente de Cabeza Nuclear.
+>>
+
+S_TROOPPODS: Cápsulas de Tropas
+S_TROOPPODS_DESC: <<
+	Un array de cápsulas de descenso de tropas que pueden ser lanzadas a un planeta enemigo para tomarlo si tener que estacionar un buque insignia en órbita.
+
+	[img=Plus]Puede tomar un planeta sin mantener una flota en órbita y sin coste de reservas.[/img]
+	[img=Minus]Solo los planetas con cierta cantidad de lealtad pueden ser capturados, dependiendo del tamaño de la nave y la cantidad de capsulas de tropa instaladas.[/img]
+	[img=Minus]Las tropas deben ser entrenadas manualmente en un planeta con trabajo, solo un lote de tropas pueden ser entrenado al mismo tiempo, suficiente para conquistar un planeta.[/img]
+	[img=Minus]Significativa cantidades de [b][color=#00ff80]Control[/color][/b] son necesarias para apoyar a las tropas.[/img]
+	[img=Minus]El enemigo puede prevenir el asedio al estacionar una flota en órbita.[/img]
+>>
+STATUS_TROOPS: Llevando Tropas
+STATUS_TROOPS_DESC: <<
+	Esta nave esta llevando tropas preparadas para invadir un planeta enemigo.
+>>
+STATUS_TROOP_INVASION: Invasión en Curso
+STATUS_TROOP_INVASION_DESC: <<
+	Una Invasión de tropas lanzada en cápsulas esta en curso en este planeta. Estaciona un buque insignia en órbita para detener su progreso.
+>>
+CONS_TROOPS: Entrenar Tropas
+CONS_TROOPS_DESC: <<
+	Entrena un nuevo lote de tropas para ocupar cápsula de tropas en el buque insignia objetivo.
+>>
+S_MaxLoyalty: Lealtad Máxima
+ABL_TROOPPODS: Lanzar Cápsulas de Tropas
+ABL_TROOPPODS_DESC: <<
+	Lanzas las tropas ocupando las cápsulas de tropas en el buque insignia para invadir el planeta objetivo enemigo.
+>>
+
+S_CARRIER_HULL: Casco Portanaves
+S_CARRIER_HULL_DESC: <<
+	Un casco específicamente diseñado para controlar y mantener una larga flota de naves de apoyo.
+
+	[img=Plus]Dobla cualquier capacidad de apoyo.[/img]
+	[img=Plus]Incrementa la capacidad de reservas un 50%.[/img]
+	[img=Minus]No se pueden llevar ningún tipo de armas en el buque insignia.[/img]
+	[img=Minus]Menor espacio interno disponible.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Los Cascos Portanaves pueden solo ser utilizados en naves de tamaño 300 o mayor.[/color][/i][/img]
+>>
+ERROR_CANNOT_HAVE_WEAPONS: $1 no puede llevar armamento.
+
+S_DESTROYER_HULL: Casco de Destructor
+S_DESTROYER_HULL_DESC: <<
+	Un casco optimizado para encajar diferentes torretas de armas al coste de ser incapaz de llevar una flota de apoyo.
+
+	[img=Plus]Incrementa la salud un 500%.[/img]
+	[img=Plus]Incrementa la resistencia del blindaje un 50%.[/img]
+	[img=Plus]Reduce la masa un 50%.[/img]
+	[img=Plus]Mayor espacio interno disponible.[/img]
+	[img=Minus]No se puede tener ningún apoyo en el buque insignia.[/img]
+	[img=Minus]El rango de las armas se reduce un 30%.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Los Cascos de Destructor puede solo ser utilizados en naves de tamaño 300 o mayor.[/color][/i][/img]
+>>
+ERROR_CANNOT_HAVE_SUPPORT: $1 no puede tener ningún apoyo.
+
+S_SPINAL_MOUNT_HULL: Casco Montaje Espinal
+S_SPINAL_MOUNT_HULL_DESC: <<
+	Un casco construido completamente alrededor de una torreta de armas masiva, permitiendo al arma disparar en cualquier dirección.
+
+	[img=Plus]El arma torreta puede disparar en cualquier dirección.[/img]
+	[img=Plus]Incrementa la salud de los hexes de armas un 50%.[/img]
+	[img=Plus]Masivamente incrementa la saludo de los hexes de torretas armas.[/img]
+	[img=Minus]Solo se puede tener un arma.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]El Casco Montaje Espinal puede ser solo utilizado en naves de tamaño 300 o mayor.[/color][/i][/img]
+>>
+ERROR_WEAPON_LIMIT: $1 solo puede tener 1 arma.
+
+S_SUPERSTRUCTURE_HULL: Casco Superestructura
+S_SUPERSTRUCTURE_HULL_DESC: <<
+	Un casco reforzado con materiales superduros que derivan de minerales de asteroides para más fácilmente construir y mantener la nave.
+
+	[img=Plus]Reduce los costes de mantenimiento, trabajo y construcción de la nave.[/img]
+	[img=Minus]Añades coste de Minerales a la construcción de la nave.[/img]
+>>
+
+S_SIMULATOR: Simulador
+S_SIMULATOR_DESC: <<
+	Un simulador de combate realista que la tripulación de la nave puede usar para entrenarse cuando no se siguen otras ordenes.
+
+	[img=Plus]La nave lentamente gana niveles de veteranía cuando se encuentra estacionada en sistemas amigos. A mayor tamaño de simulador, más rápido se gana experiencia.[/img]
+>>
+
+S_AICORE: Núcleo IA
+S_AICORE_DESC: <<
+	Equipas la nave de apoyo para ser controlada completamente por una IA inteligente eliminando las instalaciones de tripulación y escotillas de acceso. Hace más fácil su producción en masa rápidamente, pero usas partes más caras.
+
+	[img=Plus]Reduce el coste de [b]Trabajo[/b] de la nave de apoyo en un 25%.[/img]
+	[img=Minus]Incrementa el coste [b]Construcción[/b] de la nave de apoyo un 25%.[/img]
+	[img=ActionBarIcons::0;22;#00ff80]Proporciona [b][color=#00ff80]Mando[/color][/b] para operar otros subsistemas.[/img]
+	[img=Plus]Lentamente repara la nave.[/img]
+	[img=Minus]La nave es destruida si no queda ningún control.[/img]
+>>
+
+S_FLEETCOMPUTER: Ordenador de Flota
+S_FLEETCOMPUTER_DESC: <<
+	Actúa como un centro de control y ordenes para la coordinación de apoyo de la flota, permitiendo que las naves de apoyo se muevan independientemente más lejos del buque insignia.
+
+	[img=Plus]Incrementa el rango a la que las naves de apoyo pueden llevar asaltos lejos del buque insignia.[/img]
+	[img=Plus]Incrementa la tasa de reparación del buque insignia.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Solo las naves de apoyo equipadas con almacenes de munición y configurado con comportamiento apropiado podrán atacar.[/color][/i][/img]
+>>
+
+S_SOLARPANEL: Panel Solar
+S_SOLARPANEL_DESC: <<
+	Los Paneles Solares son una manera fácil y eficiente de suministrar energía para subsistemas, pero dependen de encontrarse cerca de una estrella para poder operar.
+
+	[img=ResourceIcon::2;22]Proporciona [b][color=#42b4bd]Energía[/color][/b] para operar otros subsistemas..[/img]
+	[img=Plus]Incrementa la fuerza de combate cuando se lucha cerca de las estrellas con alta luminosidad.[/img]
+	[img=Minus]Reduce significativamente la fuerza de combate cuando se lucha en el espacio profundo.[/img]
+	[img=Minus]Los Paneles Solares deben ser colocados en el exterior de las naves.[/img]
+>>
+
+S_ROCKETPOD: Cápsula Cohete
+S_ROCKETPOD_DESC: <<
+	Una tubo de cohetes ocultados que se extiende rápidamente, y lanza una salva de cohetes de corto alcance para recargarse.
+
+	[img=Plus]Daño [b][color=#ff8080]alto[/color][/b].[/img]
+	[img=Plus]No tiene limitaciones de disparo de arco.[/img]
+	[img=Plus]Muy efectivo en la penetración de blindaje.[/img]
+	[img=Minus]Debe recargarse tras varios disparos.[/img]
+	[img=Minus]Alto [b][color=#fefc61]coste de reservas[/color][/b].[/img]
+>>
+
+S_PLASMATHROWER: Lanzador de Plasma
+S_PLASMATHROWER_DESC: <<
+	Lanza nubes concentradas de plasma denso a las naves enemigas. El plasma cubre el exterior de la naves, haciendo daño en un área amplia.
+
+	[img=Plus]Hace daño con el paso de tiempo por una duración fija en el lado de la nave que recibio el golpe.[/img]
+	[img=Minus]Arco de disparo limitado.[/img]
+	[img=Minus]Los proyectiles de plasma puede errar.[/img]
+>>
+
+S_BROADCAST_ANTENNA: Antena de Transmisión
+S_BROADCAST_ANTENNA_DESC: <<
+	Equipa una nave con una enorme antena de transmisión electrónica que puede hackear canales de comunicaciones civiles para expandir propaganda en los planetas y las naves cercanas.
+
+	[img=Plus]Cuando se estaciona en un sistema los planetas enemigos ganan el estado [b]Propaganda[/b] con el paso del tiempo.[/img]
+	[img=Plus]Si hay [b]Capacidad de Apoyo[/b] disponible, periódicamente convierte en aliadas las naves de apoyo enemigas en el sistema y se unen a esta flota.[/img]
+	[img=Minus]Requiere un coste de [b][img=$Influence;22/][color=$Influence]Influencia[/color][/b] su construcción en una nave.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Los planetas afectados por la Propagada producen un punto menos de Presión de su recurso nativo.[/i][/img]
+	[img=MenuIcons::3;20][i][color=#aaa]No tiene efecto en planetas o naves del imperio que tienen un tratado de Alianza contigo.[/color][/i][/img]
+>>
+STATUS_PROPAGANDA: Propaganda
+STATUS_PROPAGANDA_DESC: <<
+	Este planeta esta afectado por [b]Propaganda[/b] opositora, y causa 1 punto menor de Presión de su recurso nativo.
+>>
+
+S_BOOSTERENGINE: Motor Potenciado
+S_BOOSTERENGINE_DESC: <<
+	Un motor cohete avanzado que masivamente potencia la aceleración de las naves de apoyo cuando se mueven lejos de la flota para atacar.
+
+	[img=Plus]Añade una gran cantidad de empuje cuando la nave esta atacando.[/img]
+	[img=Minus]No afecta a la aceleración fuera de combate.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Las naves de apoyo tienen que ser equipadas con Almacenes de Munición y colocadas en una configuración de comportamiento de ataque para ejecutar asaltos en combate.[/color][/i][/img]
+>>
+
+S_PULSE_BOLT: Rayo de Pulsos
+S_PULSE_BOLT_DESC: <<
+	Un arma de rayos modificada que renuncia a su forma de rayo para intercambiarlo a una salida de energía cruda.
+
+	[img=Plus]DPS de Rayo muy altos cuando se dispara.[/img]
+	[img=Minus]Rango extremadamente corto.[/img]
+	[img=Minus]Gasta reservas a una tasa más rápida.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Recomendado para uso en naves de apoyo con Almacenes de munición y configuración de comportamiento de Ataque.[/color][/i][/img]
+>>
+
+S_FLAK_BATTERY: Batería Antiaérea
+S_FLAK_BATTERY_DESC: <<
+	Un batería de armas de corto alcance que puede dañar masivamente a las naves de apoyo enemigas cercanas en ataque.
+
+	[img=Plus]Dispara rápidos, proyectiles de alto daños a enemigos de apoyo cercanos.[/img]
+	[img=Plus]No tiene limitaciones de arco de disparo.[/img]
+	[img=Minus]Rango muy corto.[/img]
+	[img=Minus]Se beneficia muy poco de las actualizaciones de investigación de rango.[/img]
+>>
+
+S_DEFLECTOR_ARRAY: Matriz Reflectora
+S_DEFLECTOR_ARRAY_DESC: <<
+	Una matriz de platos reflectora en un lado particular de la nave puede contrarrestar una cantidad limitada de disparos entrantes.
+
+	[img=Plus]Niega completamente una cantidad limitada de daño por segundo.[/img]
+	[img=Minus]Solo niega daños entrantes de la dirección a la que la matriz esta apuntada.[/img]
+	[img=Minus]Usa un montón de [b]Energía[/b].[/img]
+>>
+
+S_SUBSPACE_SHREDDER: Triturador Subespacial
+S_SUBSPACE_SHREDDER_DESC: <<
+	Amplifica las microroturas del subespacio natural a niveles peligrosos y envía una gran cantidad de energía a través de linea de falla creada.
+
+	[img=Plus]Crea daños masivos a las naves que atraviesa.[/img]
+	[img=Minus]Rango extremadamente corto.[/img]
+	[img=Plus]La rotura continua moviéndose lentamente y daña a las naves por un tiempo hasta que se disipa.[/img]
+	[img=MenuIcons::3;20][i][color=#aaa]Recomendado su uso de naves de apoyo con Almacenamiento de Munición y configuración de comportamiento de Ataque.[/color][/i][/img]
+>>
+
+S_SLIPSTREAM_GENERATOR: Generador de Deslizamiento de flujo
+S_SLIPSTREAM_GENERATOR_DESC: <<
+	Concede la capacidad de generar portales de deslizamiento de flujo.
+>>
+
+S_CARPETBOMB: Bomba Alfombra
+S_CARPETBOMB_DESC: <<
+	Un arma compuesta de múltiples bombas nucleares potentes diseñadas para devastar la superficie de un planeta y su población.
+>>

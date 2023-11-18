@@ -1,0 +1,730 @@
+FTL: FTL
+FTL_COST: $1 FTL
+INSUFFICIENT_FTL: FTL Insuficiente
+NEED_FLING_BEACON: Requiere Baliza de Lanzamiento
+OUT_OF_BEACON_RANGE: Demasiado lejos de la Baliza
+PER_SECOND: /s
+PER_MINUTE: /min
+PER_MIN: /m
+BUILD_FOR: Construido en: $1
+BUILD_TIME: Construido en
+EST_BUILD_TIME: Aprox. Construido en
+EST_COOLDOWN: Aprox. Refresco
+BUILD_TIME_S: $1s
+BUILD_TIME_MS: $1m $2s
+CONSTRUCTION: Construcción
+RESOURCES_OF: $1x de
+TYPES_OF: $1 tipo(s) de
+NEED_BORROW: No puedes permitírtelo con el presupuesto actual.[color=#ff0]$1[/color] será prestado, costando [color=#ff0]$2[/color] del próximo presupuesto.
+CANNOT_BORROW: No puedes permitírtelo con el presupuesto actual. El próximo presupuesto no es suficiente para cubrir el coste restante.
+CANNOT_EXPORT: \n[right]No Exportable[/right]
+BUILD_ASTEROID: $1 Base Minera
+BUILD_ASTEROID_OPTION: Construir Base Minera $1 (Trabajo $2)
+VANISH_TIP: Se agotará en $1.
+VANISH_TIP_NOUSE: Se agotará después de $1 usos.
+RESOURCE: Recurso
+RES_PROVIDES_PRESSURE: Presión:
+
+WELFARE_TT: <<|
+	Cualquier fondo del presupuesto que no se gaste al termino del ciclo, será
+	invertido en el recurso elegido del menú desplegable.
+>>
+
+WELFARE_INFLUENCE: <<
+	Dar Prestaciones
+	Invierte cada $1 del presupuesto finalizado en generar influencia.
+>>
+
+WELFARE_ENERGY: <<
+	Subsidiar Energía
+	Invierte cada $1 del presupuesto finalizado en generar energía.
+>>
+
+WELFARE_RESEARCH: <<
+	Becas de Investigación
+	Invierte cada $1 del presupuesto finalizado en generar investigación.
+>>
+
+WELFARE_LABOR: <<
+	Crear trabajos Públicos
+	Invierte cada $1 del presupuesto finalizado en trabajo en el mundo nativo.
+>>
+
+WELFARE_DEFENSE: <<
+	Preparación de Combate
+	Invierte cada $1 del presupuesto finalizado en generar defensa global.
+>>
+
+GTT_MONEY: <<
+	[font=Medium]Dinero[/font]
+	[i]Cada ciclo presupuestario de 3 minutos genera nuevo dinero a gastar.	Cualquier suma no gastada antes del final del ciclo es gastado en [img=$4;20/] prestaciones.[/i]
+
+	Presupuesto Restante: [right]$1[/right]
+	Tiempo Restante: [right]$3[/right]
+	Próximo Presupuesto: [right]$2[/right]
+>>
+
+GTT_BONUS_MONEY: <<|
+	[font=Subtitle][b]Fondos Especiales:[/b] [right][color=#0f0]$1[/color][/right][/font]
+
+	[i]Los fondos Especiales son recolectados de varias fuentes una sola vez, un ejemplo
+	son las cartas de Mercantilismo o Anomalías y estos se transfieren entre ciclos
+	si no se gastan.[/i]
+>>
+
+GTT_DEBT_PENALTY: <<
+	[color=#f00][b]Penalización al Crecimiento por Deuda:[/b] [right]$1[/right][/color]
+	[i]Estar en deuda reduce el crecimiento de la población de tus planetas.[/i]
+>>
+
+GTT_FLEET_PENALTY: <<
+	[color=#f00][b]Penalización a Fuerza de Flota por Deuda:[/b] [right]$1[/right][/color]
+	[i]Estar con una deuda masiva reduce la fuerza de tus flotas.[/i]
+>>
+
+GTT_INFLUENCE: <<
+	[font=Medium]Influencia[/font]
+	[i]Los puntos de influencia son utilizados para activar acciones diplomáticas y ganar votos en el senado galáctico. Si tienes más puntos que tu almacenamiento óptimo (basado en tu generación total), tu tasa de generación se reducirá.[/i]
+
+	Puntos Disponibles: [right]$1[/right]
+	Almacenamiento Óptimo: [right]$2[/right]
+	Tasa de Generación: [right]$3[/right]
+
+	Influencia Apilable: [right]$5[/right]
+	Porcentaje Apilable Galáctico: [right]$4[/right]
+
+	[i]La Influencia Apilable es suministrada por edificios de influencia. Los porcentajes de influencia apilada de todos los imperios que controlas determinarán la tasa de generación de influencia.[/i]
+>>
+
+GTT_ENERGY: <<
+	[font=Medium]Energía[/font]
+	[i]La energía se usa para activar las habilidades de los artefactos encontrados a través de la  galaxia. Cuanto más Energía sobrepase tu almacenamiento óptimo, mayor se reducirá tu tasa de generación.[/i]
+
+	Energía Disponible: [right]$1[/right]
+	Tasa de Generación: [right]$2[/right]
+	Almacenamiento Libre: [right]$3[/right]
+	Penalización Por Exceso: [right]$4[/right]
+>>
+
+GTT_FTL: <<
+	[font=Medium]Energía FTL[/font]
+	[i]La Energía FTL se usa en activar motores "más rápidos que la luz" en tus naves.[/i]
+
+	FTL Disponible: [right]$1[/right]
+	Almacenamiento Máximo: [right]$2[/right]
+	Tasa de Generación: [right]$3[/right]
+>>
+
+GTT_RESEARCH: <<
+	[font=Medium]Investigación[/font]
+	[i]Las puntos de investigación se usan para desbloquear varias tecnologías del cuadro de investigación. Su generación se reduce con el paso del tiempo al generar más puntos.[/i]
+
+	Puntos de Inv. Disponibles: [right]$1[/right]
+	Tasa de Generación: [right]$2[/right]
+>>
+
+GTT_RESEARCH_TECH: <<
+	Actualmente Investigando: [right][b][color=$3]$1[/color][/b] (ETA: $2)[/right]
+>>
+
+GTT_DEFENSE: <<
+	[font=Medium]Defensa Global[/font]
+	[i]La defensa global automáticamente crea naves de apoyo en planetas o sistemas en los que has indicado su uso. Click derecho en una estrella del sistema para marcar su uso. Cada punto de defensa cuenta como 2 de trabajo en la creación de naves de apoyo.[/i]
+
+	Tasa de Defensa Global: [right]$1[/right]
+	Reserva de Defensa: [right]$3 / $2[/right]
+
+	[i]La reserva de defensa es rellenada antes de que las naves de defensa sean creadas automáticamente. Si la reserva se llena, puede ser desplegada en cualquier planeta para crear naves. Cuando este llena automáticamente creará naves como siempre.[/i]
+>>
+TT_DEPLOY: Desplegar Reserva de Defensa
+
+RESOURCE_BUDGET: Presupuesto
+RESOURCE_MONEY: Dinero
+RESOURCE_INFLUENCE: Influencia
+RESOURCE_ENERGY: Energía
+RESOURCE_FTL: FTL
+RESOURCE_RESEARCH: Investigación
+RESOURCE_DEFENSE: Defensa
+RESOURCE_LABOR: Trabajo
+LOYALTY: Lealtad
+
+PRESSURE_Money: <<|
+	El [b]Dinero[/b] genera ingresos para el imperio.
+>>
+PRESSURE_Influence: <<|
+	La [b]Influencia Apilable[/b] genera un ingreso de influencia y capacidad.
+>>
+PRESSURE_Defense: <<|
+	La [b]Defensa[/b] genera naves de apoyo en el planeta.
+>>
+PRESSURE_Labor: <<|
+	El [b]Trabajo[/b] aumenta la vel. de construcción de naves y orbitales.
+>>
+PRESSURE_Energy: <<|
+	La [b]Energía[/b] se genera para activar artefactos.
+>>
+PRESSURE_Research: <<|
+	La [b]Investigación[/b] se produce para desbloquear mejoras y subsistemas.
+>>
+
+MONEY_TYPE_0: Misc.
+MONEY_TYPE_1: Construcción
+MONEY_TYPE_2: Orbitales
+MONEY_TYPE_3: Edificios
+MONEY_TYPE_4: Naves
+MONEY_TYPE_5: Mantenimiento de Planeta
+MONEY_TYPE_6: Ingreso de Planeta
+MONEY_TYPE_7: Colonizadores
+MONEY_TYPE_8: Desventaja
+MONEY_TYPE_9: Comercio
+MONEY_TYPE_10: Vasallos
+
+MOD_SPEED: Velocidad
+MOD_TIME: Tiempo
+
+EFFECT_ADDPRESSURECAP: Capacidad de Presión
+EFFECT_MODCIVRESOURCE: $1 Civiles
+EFFECT_ADDRESOURCE: $1
+EFFECT_ADDPRESSURE: Presión $1
+EFFECT_EFFICIENCY: Presión
+EFFECT_OVERPOPULATION: Sobrepoblación
+EFFECT_BLDMAINTREFUND: Mantenimiento de Edificios
+EFFECT_VANISHBONUS: Recursos Temporales
+EFFECT_POPRESEARCH: Generando Investigación por $1 billón de personas.
+
+WATER: Agua
+WATER_BLURB: [img=ResourceClassIcons::4;20/] Agua para subir a Nivel 1
+FOOD_BLURB: [img=ResourceClassIcons::3;20/] Comida para subir niveles.
+FOOD: Comida
+
+GRAIN: Grano (Comida)
+GRAIN_EFFECT: Crecimiento de Población
+
+MEAT: Carne (Comida)
+MEAT_EFFECT: Construcción de Edificio
+
+FRUIT: Fruta (Comida)
+FRUIT_EFFECT: Mantenimiento No Desarrollado.
+
+FISH: Pescado (Comida)
+FISH_EFFECT: Superficies Desarrolladas
+
+HYPER_OATS: Trigo Nillin (Comida)
+HYPER_OATS_DESC: <<
+	Cuenta como dos recursos de comida para requísitos de nivel de planeta.
+>>
+
+ALUMINUM: Aluminio
+ALUMINUM_DESC: <<
+	Aumenta capacidad de presión en 1.
+>>
+
+IRON: Hierro
+IRON_EFFECT: Construcción de Apoyo
+IRON_DESC: <<
+	Aumenta la velocidad al construir naves de apoyo un 30%.
+>>
+
+COAL: Carbón
+COAL_EFFECT: Trabajo Civil
+COAL_DESC: <<
+	Aumenta la generación de trabajo en estructuras civiles un 30%.
+>>
+
+SALTS: Sales (Comida)
+SALTS_DESC: <<
+	Usable como comida. Suma presión a producción de todos los recursos.
+>>
+
+PHASITE: Fasita
+PHASITE_DESC: <<
+	+1 de investigación cada 5 de población.
+>>
+
+FULRATE: Fulrato
+FULRATE_DESC: <<
+	Añade 4 de presión a los recursos de planeta consumidor.
+>>
+
+GEMS: Gemas
+GEMS_DESC: <<
+	El planeta consumidor se vuelve feliz cuando comercian con gemas.
+>>
+
+PEKELM: Pekelm
+PEKELM_EFFECT: Aceleración de Naves Colonia
+PEKELM_DESC: <<
+	Aumenta en un 100% la Aceleración de las naves colonia.
+>>
+
+SPICE: Especia
+SPICE_EFFECT: Lealtad
+SPICE_DESC: <<
+	Aumenta la lealtad del planeta en 6.
+>>
+
+UNOBTANIUM: Unobtenio
+UNOBTANIUM_EFFECT: Transformar:\n[right]Esperando importación...[/right]
+UNOBTANIUM_DESC: <<
+	No exportable. Permite copiar cualquier recurso que controlas.
+>>
+ABL_MORPH_UNOBTANIUM: Transformar Unobtenio
+ABL_MORPH_UNOBTANIUM_DESC: <<|
+	Transforma el unobtenio del planeta en una copia de un recurso que controlas.
+>>
+
+TEXTILES: Textiles
+TEXTILES_DESC: <<
+>>
+
+ELECTRONICS: Electrónica
+ELECTRONICS_DESC: <<
+>>
+
+GLASS: Cristal
+GLASS_EFFECT: Energía
+GLASS_DESC: +1 [img=ResourceIcon::2;20/] a generación de Energía.
+
+NATIVE_GOLD: Oro Nativo
+NATIVE_GOLD_EFFECT: Influencia
+NATIVE_GOLD_DESC: +1 [img=ResourceIcon::1;20/] a generación de Influencia.
+
+DEUTERIUM: Deuterio
+DEUTERIUM_DESC: <<
+>>
+
+CHEMICALS: Productos Químicos
+CHEMICALS_DESC: <<
+>>
+
+RARE_METALS: Metales Raros
+RARE_METALS_DESC: <<
+>>
+
+OIL: Petróleo
+OIL_DESC: <<
+>>
+
+NATURAL_GAS: Gas Natural
+NATURAL_GAS_DESC: <<
+>>
+
+PLASTICS: Plásticos
+PLASTICS_DESC: <<
+>>
+
+LUXURY_MATERIALS: Mat. de Lujo
+LUXURY_MATERIALS_DESC: <<
+	El planeta consumidor se vuelve Feliz.
+>>
+
+TITANIUM: Titanio
+TITANIUM_DESC: <<
+>>
+
+LOCAL_ASTEROID_FIELD: Campo de Asteroides
+LOCAL_ASTEROID_FIELD_DESC: <<
+	La generación de trabajo civil se incrementa un 50%.
+
+	[color=#ff7070][b]No Exportable.[/b][/color]
+>>
+
+EXPLOSIVES: Explosivos
+EXPLOSIVES_DESC: <<
+>>
+
+HADOCITE: Hadocita
+HADOCITE_DESC: <<
+>>
+
+PLUTONIUM: Plutonio
+PLUTONIUM_DESC: <<
+>>
+
+THORIUM: Torio
+THORIUM_DESC: <<
+>>
+
+URANIUM: Uranio
+URANIUM_DESC: <<
+>>
+
+MEDICINES: Medicinas
+MEDICINES_DESC: <<
+>>
+
+JEWELRY: Joyeria
+JEWELRY_DESC: <<
+>>
+
+NEUTRONIUM: Neutronio
+NEUTRONIUM_DESC: <<
+>>
+
+DEGENERATE_MATTER: Mat. Degenerada
+DEGENERATE_MATTER_DESC: <<
+>>
+
+PSIONIC_REAGENTS: Catalizadores Psiónicos
+PSIONIC_REAGENTS_EFFECT: Protege la Lealtad
+PSIONIC_REAGENTS_DESC: <<
+	Las planetas del sistema consumidor están protegidos de perder la lealtad.
+
+	Lleva 3 minutos activarlo en un nuevo sistema.
+>>
+STATUS_PSIONIC_PROTECTED: Protegido Psionicamente
+STATUS_PSIONIC_PROTECTED_DESC: <<
+	Este planeta esta protegido contra su captura por catalizadores psiónicos importados en uno de los planetas de este sistema.
+>>
+
+ANCIENT_CITY: Ciudad Antigua
+ANCIENT_CITY_DESC: [color=#ff7070][b]No Exportable.[/b][/color]
+
+SUPERCARBONS: Supercarbonos
+SUPERCARBONS_DESC: <<
+>>
+
+HYDROCONDUCTORS: Hidroconductores
+HYDROCONDUCTORS_EFFECT: Efectos Duplicados
+HYDROCONDUCTORS_DESC: <<|
+	Aumenta toda la generación de trabajo en el planeta consumidor un 50%.
+>>
+
+ANTIMATTER: Antimateria
+ANTIMATTER_DESC: <<|
+	+2048 de capacidad de apoyo. El apoyo en órbita opera al 400% de efectividad.
+>>
+
+EXOTIC_MATTER: Mat. Exótica
+EXOTIC_MATTER_DESC: <<
+	Los edificios en el planeta consumidor se construyen instantáneamente.
+>>
+
+CORINIUM: Corinio
+CORINIUM_DESC: <<
+	Dobla la capacidad de presión base del planeta consumidor.
+>>
+
+ILLINIUM: Ilinio
+ILLINIUM_DESC: <<
+	Dobla la presión de los recursos de Grado 0 en el planeta consumidor.
+>>
+
+KALSUNIM: Kalsunim
+KALSUNIM_DESC: <<
+	La generación de trabajo en el planeta consumidor aumenta su Defensa.
+>>
+
+DRUGS: Drogas
+DRUGS_EFFECT: [b]1[/b] a Requisitos Negados
+DRUGS_DESC: <<|
+	Reemplaza un requerimiento de recurso único. Uno por planeta.
+>>
+
+FTL_CRYSTALS: Cristales FTL
+FTL_CRYSTALS_EFFECT: Generación FTL
+FTL_CRYSTALS_BLURB: <<
+	Genera [levels=$1;#00c0ff]0.1/0.5/1/2/3/8[/levels] [img=ResourceIcon::3;20/] FTL/s.
+	Efectos especiales a[b] nivel 4 y 5[/b].
+>>
+FTL_CRYSTALS_DESC: <<
+	Genera [levels=$1;#00c0ff]0.1/0.5/1/2/3/8[/levels] [img=ResourceIcon::3;20/] FTL por segundo.
+
+	[b]Si este planeta es Nivel 4 o mayor:[/b]
+	[offset=30]Concede visión sobre todas las flotas actualmente en FTL en cualquier lugar.[/offset]
+
+	[b]Si este planeta es de Nivel 5:[/b]
+	[offset=30]Todos los saltos FTLs hacia fuera del sistema son gratuitos.[/offset]
+
+	[i][color=#aaa]Este recurso es un recurso escalable y no puede ser exportado o utilizado para subir de nivel. Sus bonos dependen del nivel del planeta.[/color][/i]
+>>
+
+UNIQUE_RESEARCH: Errita
+UNIQUE_RESEARCH_DESC: <<|
+	[b]Único[/b]. 10 de presión de [img=$Research;20/] [color=$Research]Investigación[/color].
+>>
+
+UNIQUE_INFLUENCE: Irita
+UNIQUE_INFLUENCE_DESC: <<|
+	[b]Único[/b]. 10 de presión de [img=$Influence;20/] [color=$Influence]Influencia[/color].
+>>
+
+UNIQUE_DEFENSE: Kalita
+UNIQUE_DEFENSE_DESC: <<|
+	[b]Único[/b]. 10 de presión de [img=$Defense;20/] [color=$Defense]Defensa[/color].
+>>
+
+UNIQUE_ENERGY: Rulita
+UNIQUE_ENERGY_DESC: <<|
+	[b]Único[/b]. 10 de presión de [img=$Energy;20/] [color=$Energy]Energía[/color].
+>>
+
+MARENIUM: Marenium
+MARENIUM_BLURB: [b]Único[/b]. Desbloquea el [b]Reactor Marenio[/b] para naves.
+MARENIUM_DESC: <<|
+	[b]Único[/b]. Desbloquea el [b]Reactor Marenio[/b] para suministrar energía a naves.
+
+	Las naves usando reactores de marenio ganan [levels=$1;#ff8000]5%/10%/15%/20%/25%/30%[/levels] de fuerza extra de combate.
+
+	Las naves usando reactores de marenio ganan [levels=$1;#ff8000]0.1/0.2/0.4/0.7/1.5/4.0[/levels] de aceleración extra.
+
+	Si este planeta es perdido, cualquier nave usando reactores de marenio tendrá su fuerza de combate significativamente reducida.
+>>
+
+
+ASTEROID_FTL: Esquirlas FTL
+ASTEROID_FTL_DESC: <<|
+	Genera 0.5 FTL por segundo.
+
+	No necesita ser exportado.
+>>
+
+ASTEROID_GROWTH: Mat. Simples
+ASTEROID_GROWTH_EFFECT: Crecimiento
+ASTEROID_GROWTH_DESC: <<|
+	Aumenta un 100% la vel. de construcción de edificios (civiles e imperiales).
+
+	Aumenta la población máxima del planeta en 2.
+>>
+
+ASTEROID_INFLUENCE: Bolitas Psiónicas
+ASTEROID_INFLUENCE_EFFECT: Influencia Extra
+ASTEROID_INFLUENCE_DESC: <<|
+	Genera influencia proporcional a la cantidad de investigación
+	siendo conducida en el planeta consumidor.
+>>
+
+ASTEROID_LABOR: Mat. de Construcción
+ASTEROID_LABOR_EFFECT: Trabajo Civil
+ASTEROID_LABOR_DESC: <<
+	Añade 10 de generación de trabajo base al planeta consumidor cuando esta activo.
+
+	Solo funciona cuando el planeta tiene construcciones activas.
+>>
+
+ASTEROID_DEFENSE: Mat. Volátiles
+ASTEROID_DEFENSE_DESC: <<
+	Concede un arsenal de armas de corto alcance cuando se consume.
+
+	Se se puede exportar solo una vez ya que se bloquea en el destino.
+
+	Solo funciona cuando se usa en combate.
+>>
+
+ASTEROID_AFFINITY: Mat. Mórficos
+ASTEROID_AFFINITY_DESC: <<
+	Añade 2 de presión del recurso nativo del planeta consumidor.
+>>
+
+SOYLENT1: Soylent Azulado
+SOYLENT1_DESC: <<
+	Esto podría ser comida.
+>>
+
+SOYLENT2: Soylent Magenta
+SOYLENT2_DESC: <<
+	La gente lo come, así que supongo esta bien.
+>>
+
+SOYLENT3: Soylent Infrarrojo
+SOYLENT3_DESC: <<
+	Agradable y caliente.
+>>
+
+SOYLENT4: Soylent Verde
+SOYLENT4_DESC: <<
+	Definitivamente no gente.
+>>
+
+HEAVY_WATER: Agua Pesada
+HEAVY_WATER_DESC: <<|
+	Añade $1 de presión aleatoria con el paso del tiempo.
+	El Tipo de presión cambia cada 3 minutos.
+>>
+
+BOOST_WATER: Agua Reactiva
+BOOST_WATER_DESC: <<|
+	Creada por la unión de 4 de Agua.
+
+	[b]Potencia el recurso nativo con:[/b]
+	[nl/][offset=30]+$1 de presión extra concedida.[/offset]
+>>
+
+CLEAR_WATER: Agua Clara
+CLEAR_WATER_DESC: <<|
+	Creada por la unión de 8 de Agua.
+
+	Convierte toda la producción de Influencia, Defensa, Investigación y Energía
+	en generación de dinero.
+>>
+
+AWESOME_WATER: Agua Fénix
+AWESOME_WATER_DESC: <<|
+	Creada por la unión de 16 de Agua.
+
+	Toda la producción civil aumenta en +$1.
+>>
+
+SYNTHETICS: Sintéticos
+SYNTHETICS_DESC: <<|
+	Concede una carta de afinidad. No Exportable.
+>>
+
+MICROCLINE: MICROCLINE
+MICROCLINE_DESC: <<|
+	Un recurso completamente inútil que parece ocurrir en grandisimas cantidades.
+
+	De alguna manera todo lo que toca se convierte en microcline. Raro.
+>>
+
+SLAVE_LABOR: Trabajo Esclavo
+SLAVE_LABOR_DESC: <<
+	Añade 5 de generación de trabajo base.
+
+	Solo funciona cuando se esta construyendo.
+>>
+
+PLAINS: Vastas Llanuras
+PLAINS_BLURB: <<
+	El planeta es enorme. Reduce el mantenimiento de edificios por nivel.
+>>
+PLAINS_DESC: <<
+	Este planeta tiene una superficie enorme.
+
+	El desarrollo de la velocidad de superficie se incrementa en [levels=$1;#ffb4b6]100%/150%/200%/250%/300%/350%[/levels].
+
+	El mantenimiento total del coste de edificios en este planeta se reduce en [levels=$1;#d1cb6a]§50k/§150k/§300k/§500k/§750k/§1.1M[/levels].
+>>
+
+QUARTZ: Cuarzo
+QUARTZ_BLURB: <<
+	Ganas [levels=$1;#ffb4b6]10/25/50/80/120/200[/levels] trabajo almacenado por artefacto activado.
+>>
+QUARTZ_DESC: <<
+	Cada vez que activas un artefacto, este planeta gana [levels=$1;#ffb4b6]10/25/50/80/120/200[/levels] de trabajo almacenado, suponiendo que tienes suficiente almacenamiento de trabajo disponible.
+
+	Este planeta tiene [levels=$1;#ffb4b6]10/110/210/310/410/510[/levels] de bono de trabajo de almacenamiento.
+
+	[i][color=#aaa]Este recurso es un recurso escalable y no puede ser exportado o usado para subir de nivel. Sus bonos dependen del nivel del planeta.[/color][/i]
+>>
+
+ALLONDIUM: Alondio
+ALLONDIUM_BLURB: <<
+	Aumenta generación de influencia y concede mejoras a la diplomacia.
+>>
+ALLONDIUM_DESC: <<
+	La generación de influencia en este planeta se incrementa en [levels=$1;#ffb4b6]10%/20%/30%/40%/50%/60%[/levels].
+
+	El coste de comprar cartas de diplomacia de la fifo se reduce en [levels=$1;#ffb4b6]0/0/1/1/2/2[/levels] de Influencia.
+
+	[b]Si este planeta es de Nivel 4 o mayor:[/b]
+	[offset=30]Este planeta gana capacidades de comprar cartas 'Nombrar Buque Insignia' o 'Anexar Planeta' a voluntad.[/offset]
+
+	[b]Si este planeta es de Nivel 5:[/b]
+	[offset=30]El coste de jugar cartas en un voto es reducido hasta 3 de influencia.[/offset]
+
+	[i][color=#aaa]Este recurso es un recurso escalable y no puede ser exportado o usado para subir de nivel. Sus bonos dependen del nivel del planeta.[/color][/i]
+>>
+ABL_BUY_NAME_FLAGSHIP: Comprar 'Nombrar Buque Insignia'
+ABL_BUY_NAME_FLAGSHIP_DESC: <<
+	Comprar una carta de diplomacia 'Nombrar Buque Insignia' usando la capacidad del planeta.
+
+	[i][color=#aaa]El refresco es compartido con la capacidad "Comprar 'Anexar planeta'".[/color][/i]
+>>
+ABL_BUY_ANNEX_PLANET: Comprar 'Anexar Planeta'
+ABL_BUY_ANNEX_PLANET_DESC: <<
+	Comprar una carta de diplomacia 'Anexar Planeta' usando la capacidad del planeta.
+
+	[i][color=#aaa]El refresco es compartido con la capacidad "Comprar 'Nombrar Buque Insignia'".[/color][/i]
+>>
+
+PHOSPHATE: Fosfatos
+PHOSPHATE_BLURB: <<
+	Aumenta la fuerza de flota en sistemas aliados un [levels=$1;#ffb4b6]5%/10%/15%/25%/40%/60%[/levels].
+>>
+PHOSPHATE_DESC: <<
+	Las flotas luchando en cualquier sistema que controles ganarán [levels=$1;#ffb4b6]5%/10%/15%/25%/40%/60%[/levels] de fuerza extra.
+
+	[i][color=#aaa]Este recurso es un recurso escalable y no puede ser exportado o usado para subir de nivel. Sus bonos dependen del nivel del planeta.[/color][/i]
+>>
+
+CYLLIUM: Cilio
+CYLLIUM_BLURB: <<
+	Aumenta la generación energía y genera artefactos con el paso del tiempo.
+>>
+CYLLIUM_DESC: <<
+	La generación de energía en este planeta es incrementada en [levels=$1;#ffb4b6]10%/20%/30%/40%/50%/60%[/levels].
+
+	Genera una nuevo artefacto aleatorio en el sistema cada 2 minutos. Hasta [levels=$1;#ffb4b6]1/2/3/5/8/15[/levels] artefactos se mantendrán en el sistema, los artefactos más viejos expirarán.
+
+	[b]Si este planeta es de Nivel 4 o más alto:[/b]
+	[offset=30]La activación de artefactos en este sistema es un 25% más barato.[/offset]
+
+	[i][color=#aaa]Este recurso es un recurso escalable y no puede ser exportado o usado para subir de nivel. Sus bonos dependen del nivel del planeta.[/color][/i]
+>>
+
+R_SPACEFERNS: Helechos Cremin
+R_SPACEFERNS_BLURB: <<
+	[font=Small]Mantenimiento de motores reducidos en [levels=$1;#ffb4b6]5% / 10% / 25% / 50% / 75% / 90%[/levels]. Gana presión por nivel.[/font]
+>>
+R_SPACEFERNS_DESC: <<|
+	Los helechos omnívoros de este planeta han evolucionado para cubrir completamente su superficie y tienen una infinidad de propiedades interesantes. Además sus tallos son exquisitos para varias especies y emiten un combustible gaseoso extremadamente potente como producto de su metabolismo.
+
+	Este planeta solo requiere grandes cantidades de comida y agua para subir.
+
+	Mantener este planeta reduce el coste de mantenimiento de todos los motores en tus naves en [levels=$1;#ffb4b6]5%/10%/25%/50%/75%/90%[/levels].
+
+	El planeta gana varias veces presión extra mientras sube, gana 2 de presión de energía a Nivel 1, 3; presión de Dinero a Nivel 2, 4; presión de Influencia a Nivel 3, 5; presión de Energía a Nivel 4, 6 y presión de Influencia a Nivel 5.
+>>
+
+C_ORE: Mineral
+C_ORE_DESC: <<
+	Materiales minados de asteroides usados para en construcción.
+>>
+
+R_SILICON: Silicio
+R_SILICON_DESC: <<
+	Aumenta un 30% la tasa de crecimiento de la población.
+>>
+
+R_MARBLE: Mármol
+R_MARBLE_DESC: <<
+	Aumenta un 50% la velocidad de construcción de edificios.
+>>
+
+R_ATIUM: Atio
+R_ATIUM_DESC: <<
+	Concede visión sobre todas las flotas que se dirigen al sistema en el que el planeta con Atio se encuentra.
+>>
+
+R_SYRUP: Sirope
+R_SYRUP_DESC: <<
+	Puede ser utilizado como comida. Aumenta la presión de influencia un 30%.
+>>
+
+R_LATTICES: Redes Cristalinas
+R_LATTICES_DESC: <<
+	Aumenta la presión de Investigación un 40%. Reduce presión de Energía un 40%.
+>>
+
+R_HYPERVOLATILES: Hipervolatiles
+R_HYPERVOLATILES_DESC: <<
+	Aumenta la presión de Defensa un 40%. Reduce la presión de influencia un 40%.
+>>
+
+R_ORE_RATE: Mineral
+R_ORE_RATE_DESC: <<
+	Generas 60/min de Mineral. Puede ser exportado a otros planetas.
+>>
+
+C_BASE_MATERIAL: Material Base
+C_BASE_MATERIAL_DESC: <<
+	Material básico para edificios consumidores que generan muchas cosas diferentes.
+
+	Consumido por ciertos edificios para producir.
+>>
+
+R_BASE_MATERIAL: Material Base
+R_BASE_MATERIAL_DESC: <<
+	Genera 10/min de Material Base. Puede ser exportado a otros planetas.
+>>

@@ -1,0 +1,439 @@
+ANOMALY_DEBRIS_FIELD Campo de Escombros
+ANOMALY_NOTIFICATION: La anomalía en $1 ha sido completamente escaneada.
+SCAN_PROGRESS: Escanear con una nave para acceder a las opciones ...
+ANOMALY_CHOICES: Opciones
+
+ANOMALY_DEBRIS_FIELD: Campo de Escombros
+ANOMALY_NAR_DEBRIS: <<|
+	Entre las vastas cantidades de antiguas ruinas, una señal solitaria parpadea
+	dentro y fuera de nuestro rango de detección.
+>>
+
+ANOMALY_NAR_DERELICT_BROKEN: <<|
+	Localizas la fuente y encuentras los restos de una antigua nave de guerra.
+
+	La nave parece estar muy dañada, pero quizás puedas encontrar algo útil a bordo.
+>>
+ANOMALY_DERELICT_SCRAP: <<|
+	Desguazar la nave de guerra y vender la tecnología en el mercado negro.
+
+	[b][color=#d1cb6a][right]Ganas §$1k[/right][/color][/b]
+>>
+ANOMALY_DERELICT_RESEARCH: <<|
+	Enviar un equipo de científicos y estudiar alguno de los subsistemas intactos.
+
+	[b][color=#842cdb][right]Ganas una cantidad de puntos de investigación.[/right][/color][/b]
+>>
+ANOMALY_NAR_DERELICT_INTACT: <<|
+	Localizas la fuente y encuentras una casi intacta nave de guerra antigua.
+
+	Ya que la programación de la nave es desconocida, reactivarla puede tener
+	 consecuencias indeseadas.
+>>
+ANOMALY_DERELICT_ACTIVATE: <<|
+	Intentas activar y ganar el control de la nave de guerra.
+
+	[b][color=#ff0000][right]Resultados Desconocidos.[/right][/color][/b]
+>>
+ANOMALY_DERELICT_CAMP: <<|
+	Despues de algunas reparaciones al núcleo del sistema motor, la nave de guerra
+	se activa con un zumbido y vuelve a la vida.
+
+	Desafortunadamente, la programación de IA avanzada rechaza a tus ingenieros
+	expulsándolos al espacio y retomando sus tareas de defensa automatizada.
+>>
+ANOMALY_DERELICT_DRYDOCK: <<|
+	El interior de la nave de guerra parece haber sido dañada mucho más de lo que
+	anticipamos y requerirá un intensivo reacondicionamiento.
+
+	Afortunadamente, hemos sido capaces de decodificar la programación de la nave
+	mientras tanto. Seremos capaces de operar completamente la nave una vez la
+	reconstrucción haya sido completada.
+>>
+ANOMALY_DERELICT_SUPPORTS: <<|
+	Después de activar el núcleo del ordenador de la nave, su programación de IA
+	detecta el estado crítico del sistema del motor y automáticamente lanza sus
+	naves de apoyo desde el hangar.
+
+	Nuestros ingenieros logran la evacuación a tiempo para evitar el estallido de
+	la destrucción de la nave, pero no después de obtener los códigos de control
+	de las naves de apoyo automatizadas.
+>>
+
+ANOMALY_NAR_ANCIENT_GATE: <<|
+	Una anomalía gravitacional menor ha llegado al descubrimiento de un masivo y desgastado
+	anillo flotante en el espacio. La estructura externa del dispositivo ha decaído a
+	una mera carcasa, resultado de eones de años de radiación estelar y microimpactos.
+
+	El anillo interior esta compuesto de varios materiales desconocidos, aunque los
+	campos detectables de restos son reminiscentes de distorsiones hiperlumínicas.
+>>
+ANOMALY_GATE_ACTIVATE: <<|
+	El anillo se encuentra lo suficientemente intacto para poder ser reactivado.
+
+	[b][color=#d1cb6a][right]Crea una puerta FTL.[/right][/color][/b]
+>>
+ANOMALY_GATE_HARVEST: <<|
+	La aplicación de pequeñas cantidades relativas de energía causan que el
+	anillo emita partículas hiperlumínicas utilizables.
+
+	[b][color=#d1cb6a][right]Añade $1 a la generación de FTL por segundo.[/right][/color][/b]
+>>
+ANOMALY_GATE_REPURPOSE: <<|
+	El núcleo de la puerta puede ser desmantelado y usarse para almacenar partículas
+	hiperlumínicas para su uso futuro.
+
+	[b][color=#d1cb6a][right]Añade $1 de almacenamiento FTL.[/right][/color][/b]
+>>
+
+ANOMALY_NAR_NAVBUOY: <<|
+	Una vieja boya de navegación va a la deriva a través de un campo desértico de
+	restos, su energía se ha agotado pero su banco de datos todavía estará lleno de información.
+>>
+ANOMALY_NAVBUOY_SCRAP: <<|
+	Desguazar la boya por partes y vender la tecnología en el mercado negro.
+
+	[b][color=#d1cb6a][right]Ganas §$1k[/right][/color][/b]
+>>
+ANOMALY_NAVBUOY_VISION: <<|
+	Desmantelar la boya y descargar la información contenida dentro de su memoría.
+
+	[b][color=#96d16a][right]Obtienes inteligencia sobre los planetas de los sistemas cercanos.[/right][/color][/b]
+>>
+
+ANOMALY_NAR_MINING_OUTPOST: <<|
+	Un puesto minero abandonado que se asienta inactivo sobre un gran asteroide. Sus
+	sistemas todavía radian una petición de ordenes, pero su equipamiento minero ha
+	sido dañado más allá de la posible reparación por el fuego de armas.
+>>
+ANOMALY_NAR_MINING_OUTPOST_VOLAT: <<|
+	Un puesto de avanzada minero abandonado se asienta inactivo sobre un gran asteroide.
+	Sus sistemas todavía radian una petición de ordenes, pero su equipamiento minero ha
+	sido dañado más allá de la posible reparación por el fuego de armas.
+
+	Tus sensores detectan una débil lectura de un material reactivo desconocido bajo
+	la capa de minerales que estaba siendo minada.
+>>
+ANOMALY_MINING_OUTPOST_MINE: <<|
+	Prepara el equipo de minería para repararse y continuar las operaciones mineras.
+
+	[b][color=#72cbe0][right]Minar [template=resource_ref;Iron/], [template=resource_ref;AsteroidLabor/], o [template=resource_ref;Water/].[/right][/color][/b]
+>>
+ANOMALY_MINING_OUTPOST_CONVERT: <<|
+	Preparar algunos equipos de minería para obtener y filtrar los materiales presente de mayor valor.
+
+	[b][color=#e072c9][right]Minar [template=resource_ref;RareMetals/] o [template=resource_ref;NativeGold/].[/right][/color][/b]
+>>
+ANOMALY_MINING_OUTPOST_EXPLODE: <<|
+	Detonar las capas der asteroide para acceder al material reactivo interno.
+
+	[b][color=#ff0000][right]Minar por el recurso oculto.[/right][/color][/b]
+>>
+
+ANOMALY_NAR_RIFT: <<|
+	Te encuentras una estación extraña que periódicamente emite pulsos de taquiones
+	hacia una anomalía espacial cercana. El sistema de energía de la estación parece
+	funcionar pero el mecanismo de concentración del emisor esta dañado.
+
+	Si reparamos el emisor, podría ser posible ampliar el tamaño de la anomalía
+	espacial lo suficientemente para poder atravesarla.
+>>
+ANOMALY_RIFT_PULSE: <<|
+	Reparar el mecanismo de concentración del emisor.
+
+	[b][color=#96d16a]Abre una grieta permanente a un espacio desconocido en la galaxia.[/color][/b]
+>>
+ANOMALY_RIFT_DESTROY: <<|
+	[b][color=#ff0000]Destruir la estación y colapsar la anomalía.[/color][/b]
+>>
+
+ANOMALY_NAR_PLANT: <<|
+	Dentro del campo de restos detectas una estación con un diseño intrigante.
+
+	Controlando docenas de drones, la estación automáticamente divide y colecciona
+	partes de los restos, utilizando un proceso desconocido para nosotros y refina
+	un material parecido a los geles químicos.
+
+	Pasado un tiempo durante tus estudios, la estación lanza una capsula conteniendo
+	algunos de estos químicos hacia el sistema a gran velocidad. El estudio de la
+	trayectoria de la capsula reveló su curso orbital a través de uno de los planetas
+	hacia el espacio interestelar.
+>>
+ANOMALY_PLANT_SIPHON: <<|
+	Rápidamente taladras un pequeño agujero en el casco de uno de los almacenes
+	químicos y realizas un sifón para estudiar su potencial uso.
+
+	[b][color=#ff0000][right]Resultados desconocidos.[/right][/color][/b]
+>>
+ANOMALY_PLANT_SIPHON_SUCCESS: <<|
+	Tu tripulación exitosamente obtiene una muestra de uno de los químicos.
+	Pruebas iniciales sugieren su uso como un extremadamente potente fertilizador,
+	capaz de incrementar la producción de alimentos de uno de tus planetas.
+
+	[color=#96d16a]Has ganado una carta de influencia de [b]Cultivación[/b].[/color]
+
+	Desafortunadamente, intentos posteriores de realizar el sifón a otros químicos
+	fueron detectados y la estación activó su mecanismo de autodestrucción en
+	respuesta a tu interferencia.
+>>
+ANOMALY_PLANT_SIPHON_FAIL: <<|
+	El químico al que hicisteis un sifón resulto ser altamente explosivo y detonó
+	con el intento de perforación. La estación no pudo sostener la integridad de
+	su casco y fue destruido.
+
+	Afortunadamente, tus científicos calcularon la posibilidad, y nadie de tu
+	tripulación murió en la explosión.
+>>
+ANOMALY_PLANT_CATCH: <<|
+	Esperar a que otra cápsula sea lanzada e interceptarla antes de que deje el
+	sistema.
+
+	[b][right][color=#842cdb]Ganas puntos de investigación.[/color][color=#ff0000] Puede ser peligroso [/color][/right][/b]
+>>
+ANOMALY_PLANT_CATCH_SUCCESS: <<|
+	La estación no parece haber detectado tu intercepción de su cargamento, y
+	continua refinando materiales del campo de restos.
+>>
+ANOMALY_PLANT_CATCH_FAIL: <<|
+	Detectando tu interferencia con sus envíos, la estación llama a sus drones y
+	prepara sus armas. ¡Prepárate para el combate!
+>>
+ANOMALY_PLANT_BOARD: <<|
+	Abordar la estación e intentar identificar la naturaleza de los químicos que contiene.
+
+	[b][color=#ff0000][right]Resultados desconocidos.[/right][/color][/b]
+>>
+ANOMALY_PLANT_BOARD_FAIL: <<|
+	La presencia de nuestro equipo de abordaje fue detectada por el sistema de
+	sensores internos de la estación. Después de prender fuego a su atmósfera y
+	purgar a nuestros científicos, la estación llama a sus drones y prepara sus armas. ¡Prepárate para el combate!
+>>
+ANOMALY_PLANT_BOARDED: <<|
+	Tu equipo de abordaje se ha infiltrado en la estación con éxito.
+
+	La estación parece contener un tipo de atmósfera alienígena, consistente en una
+	gran cantidad de elementos reactivos.
+
+	Explorando los interiores de la estación, tus científicos descubren una gran
+	cantidad de distintos almacenes químicos, pero las lecturas de la mayoría de ellos
+	no sugieren usos viables para nuestra especie.
+>>
+ANOMALY_PLANT_BOARD_HAPPY: <<|
+	Lecturas sugieren que un químico particular almacenado en la estación es
+	extremadamente benéficioso para el consumo de nuestra especie, induciendo
+	un gran aumento en la esperanza de vida.
+
+	[b][color=#72cbe0][right]El planeta objetivo se vuelve Feliz.[/right][/color][/b]
+>>
+ANOMALY_PLANT_HAPPY_BLURB: Da felicidad
+ANOMALY_PLANT_BOARD_CULTIVATION: <<|
+	Uno de los químicos parece ser un extremadamente potente fertilizador, siendo
+	capaz de incrementar enormemente la producción de alimentos en uno de tus planetas.
+
+	[b][color=#e072c9][right]Has ganado una carta de influencia de Cultivación.[/right][/color][/b]
+>>
+ANOMALY_PLANT_BOARD_STATION: <<|
+	Ignoras todo los procesos químicos y tomas el control de las capacidades defensivas
+	significativas de la estación para ayudar a defender al sistema de invasores.
+
+	[b][color=#e0ba72][right]Ganas control de un Núcleo de Defensa.[/right][/color][/b]
+>>
+ANOMALY_PLANT_DESTROY: <<|
+	[b][color=#ff0000]Destruir la estación desde la distancia antes de que pueda responder.[/color][/b]
+>>
+
+
+ANOMALY_NAR_PROTO_WARES: <<|
+	Una estación de carga decrépita erosionada por el paso del tiempo.
+	Dentro de la estación, incontables artefactos en varios estados de entereza
+	y en reparación se encuentran inmóviles.
+>>
+ANOMALY_PROTO_WARES_INSIGHT: <<|
+	Con seguridad desmontas, catalogas, y estudias los artefactos.
+
+	[b][color=#842cdb][right]Ganas un conocimiento aleatorio.[/right][/color][/b]
+>>
+ANOMALY_PROTO_WARES_ACTIVATE: <<|
+	Activar cualquier artefacto ensamblado para ver que hacen.
+
+	[b][color=#db2c84][right]Puedes ganar un proyecto especial de investigación.[/right][/color][/b]
+>>
+ANOMALY_PROTO_WARES_ACTIVATE_FAIL: <<|
+	Uno de los dispositivos se volvio altamente inestable y destruyó la instalación.
+	Solo pequeños trozos pudieron ser recuperados para su investigación.
+>>
+ANOMALY_PROTO_WARES_ACTIVATE_PASS: <<|
+	El entendimiento que nuestros científicos han extraído de estas antiguas rarezas
+	nos ayudará inmensamente.
+>>
+ANOMALY_PROTO_WARES_SCRAP: <<|
+	Casi todo lo almacenado aquí puede ser vendido por un precio justo.
+
+	[b][color=#d1cb6a][right]Ganas §$1k[/right][/color][/b]
+>>
+
+
+ANOMALY_OBELISK: Obelisco
+ANOMALY_MORPH_NAR: <<|
+	Un inmenso obelisco flota en la órbita de la estrella del sistema, emitiendo
+	débiles lecturas de energía en todas las direcciones.
+>>
+ANOMALY_MORPH_BLUE_NAR: <<|
+	El dispositivo antiguo resplandece con un brillo zafiro, las lecturas de energía
+	han detectado una gran célula de energía dentro.
+
+	El exterior del obelisco esta cubierto de vapor, fluyendo a través de los lados,
+	casi como si orbitara la máquina.
+>>
+ANOMALY_MORPH_BLUE: <<|
+	Activar el dispositivo para ver su propósito, el que sea.
+
+	[b][color=#008eff][right]Transformar recursos planetarios.[/right][/color][/b]
+>>
+ANOMALY_MORPH_RED_NAR: <<|
+	El dispositivo antiguo resplandece con un brillo rubí, las lecturas de energía
+	han detectado una gran célula de energía dentro.
+
+	El exterior del obelisco esta cubierto con espinas de metal grandes y amenazantes
+	vibrando lentamente.
+>>
+ANOMALY_MORPH_RED: <<|
+	Activar el dispositivo para ver su propósito, el que sea.
+
+	[b][color=#8d5d69][right]Transformar recursos planetarios.[/right][/color][/b]
+>>
+ANOMALY_MORPH_GREEN_NAR: <<|
+	El dispositivo antiguo resplandece con un brillo esmeralda, las lecturas de
+	energía han detectado una gran célula de energía interna.
+
+	El exterior del obelisco esta cubierto por biomateria preservada, verde y
+	viscosa, casi vivo en su movimiento.
+>>
+ANOMALY_MORPH_GREEN: <<|
+	Activar el dispositivo para ver su propósito, el que sea.
+
+	[b][color=#80ff00][right]Transformar recursos planetarios.[[/right][/color][/b]
+>>
+ANOMALY_MORPH_HARVEST: <<|
+	Desmantelar el obelisco y drenar la célula de energía para tu propio uso.
+
+	[b][color=#42b4bd][right]Ganas Energía.[/right][/color][/b]
+>>
+ANOMALY_MORPH_RESPONSE: <<|
+	En respuesta a su activación, el obelisco emite una inmensa onda de partículas
+	a cada uno de los planetas y asteroides en el sistema, excitando la morfología
+	del material de ellos y rápidamente alterando su completa ecología.
+>>
+
+ANOMALY_NAR_DATACENTER: <<|
+	Un asteroide ahuecado sirve como lugar para un centro de datos.
+	Cientos de miles de nodos de memoria descansan con una cantidad funcional.
+>>
+ANOMALY_DATACENTER_READ: <<|
+	Copiar y analizar que datos están todavía en los bancos de memoría activos.
+
+	[b][color=#96d16a][right]Obtienes inteligencia sobre planetas en sistemas aleatorios.[/right][/color][/b]
+>>
+ANOMALY_DATACENTER_RECOVER: <<|
+	Intentar revitalizar el sistema para restaurar algunos de los registros dañados.
+
+	[b][color=#d1966a][right]Puedes perder algunos datos.[/right][/color][/b]
+>>
+ANOMALY_DATACENTER_RECOVER_FAIL: <<|
+	El antiguo sistema falló en la recuperación, y la corriente quemó la mayoría de lo almacenado.
+>>
+ANOMALY_DATACENTER_RECOVER_SUCCEED: <<|
+	El centro de datos se reactivó sin incidentes. Nuestros científicos fueron capaz de aprender conceptos que nos estaban deteniendo nuestro avance.
+>>
+
+ANOMALY_NAR_SYSREACTOR: <<|
+	Esta instalación reviste un gran generador. Parece que ha sido la fuente de energía para este sistema en el pasado.
+>>
+ANOMALY_SYSREACTOR_DISASSEMBLE: <<|
+	Estudiar la construcción del reactor puede enseñarnos como replicarlo.
+
+	[b][color=#842cdb]Desbloquea y mejora los Generadores de Antimatería.[/color][/b]
+>>
+ANOMALY_SYSREACTOR_REACTIVATE: <<|
+	Con la condición actual de la estación, podríamos reactivarla para producir grandes cantidades de energía.
+
+	[b][color=#e0ba72][right]Crea energía desde una orbita.[/right][/color][/b]
+>>
+
+ANOMALY_NAR_LIQUIDTANKS: <<|
+	Hemos identificado los pedazos rotos de una nave de carga masiva.
+	Un tanque particular con un líquido sin identificar ha persistido.
+>>
+ANOMALY_LIQUIDTANKS_INFUSE: <<|
+	El material ha impregnado su contenedor, convirtiéndolo en anormalmente fuerte.
+	Podríamos aplicarlo a una de nuestra naves.
+
+	[b][color=#96d196][right]Incrementa la efectividad de la flota un 20%.[/right][/color][/b]
+>>
+ANOMALY_LIQUIDTANKS_STUDY: <<|
+	Este material puede ser único en su tipo. Estudiarlo puede avanzar nuestra comprensión en ciencia de materiales.
+>>
+ANOMALY_NAR_BEAUTY: El equipo de estudio esta siendo sin conocerlo arrastrado hacia un cristal masivo. Casi una hora pasa antes de que cualquiera de ellos piense en reportar cualquier cosa de interés. Después de retirarse a una distancia segura y observarla de lejos, nada más puede ser determinado.
+ANOMALY_BEAUTY_DESTROY: El cristal claramente tiene algún poder sobre nuestra especie, destruirlo antes de que algo pueda ir mal.
+ANOMALY_BEAUTY_VOLUNTEER: Un científico particular, desea estudiar el artefacto y se presenta volutario para experimentar sus efectos.
+ANOMALY_BEAUTY_SUCCESS: <<
+	El voluntario pasa varios días estudiando el cristal, progresando desde la ignorancia, balbuceante confusión, a una impresionante claridad. Seremos capaces de utilizar esto en nuestra ventaja.
+
+	[b][color=#4141ff]Generación de Influencia +$1[/color]
+	[color=#af0baf]+$2 de Investigación Fija[/color][/b]
+>>
+ANOMALY_BEAUTY_FAIL: <<
+	El voluntario se obsesiona completamente con el cristal, llegando a corromperse por su influencia.
+
+	[b][color=#ff2121]Una nueva nave pirata atacará tu espacio.[/color][/b]
+>>
+ANOMALY_NAR_NEUTRONPLATE: Todos los trozos de metal y roca en el área han sido muy irradiados. Una roca en particular es la fuente. Un cuidadoso estudio con una sonda remota revela que la roca es un fragmento de la detonación de una estrella antigua. Dentro de su núcleo una pequeña cantidad de neutronio es descubierto.
+ANOMALY_NEUTRONPLATE_INFUSE: <<
+	El suministro de neutronio es suficiente para mejorar el blindaje usado por nuestras flotas.
+
+	[b][color=#96d196][right]Incrementa los PSs del blindaje por $1%.[/right][/color][/b]
+>>
+ANOMALY_NEUTRONPLATE_STUDY: <<
+	Esta muestra puede dar a nuestros científicos conocimiento de valor incalculable replicando este material artificialmente.
+	[right][b][color=#80ff80]Desbloquea [/color] [template=subsys_ref;NeutronArmor/][/b][/right]
+>>
+
+ANOMALY_NAR_HIDDEN_OUTPOSTS: <<
+	Encuentras un pequeño puesto de avanzada cubierto en una malla de camuflaje y casi indetectable a tus sensores. Afortunadamente, los protocolos de abandono del puesto de avanzada estaban activados y emitiendo una señal de ayuda desde entonces.
+
+	Descargando algunos datos iniciales de los bancos de memoria del puesto de avanzada, encuentras que era una estación de control para un gran grupo de estaciones de investigación ilegales, creadas por un gobierno alienígena hace mucho tiempo desaparecido.
+
+	Todavía camuflado e indetectable, manteniendo cuales secretos querian proteger, el puesto tiene información de como encontrar esas estaciones de investigación.
+>>
+ANOMALY_HIDDEN_ACTIVATE: <<
+	Descargar los datos del puesto de avanzada y detectar las localizaciones de las estaciones de investigación camufladas.
+>>
+ANOMALY_HIDDEN_STUDY: <<
+	Desmantelar la malla de camuflaje del puesto y aprender de el como ocultar naves de intentos de detección.
+
+	[right][b][color=#5186e6]Desbloquea[/color] [template=subsys_ref;CloakPlating/][/b][/right]
+>>
+
+ANOMALY_NAR_HIDDEN: <<
+	Encuentras un puesto de investigación camuflado, todavía conteniendo secretos investigados por un gobierno alienígena hace mucho tiempo desaparecido.
+>>
+ANOMALY_HIDDEN_1_TAKE: <<
+	Descargar los datos de la investigación del puesto.
+
+	[b][color=#96d196][right]Incrementas el empuje de motores por un 25%.[/right][/color][/b]
+>>
+ANOMALY_HIDDEN_2_TAKE: <<
+	Descargar los datos de la investigación del puesto.
+
+	[b][color=#96d196][right]Incrementas la capacidad de almacenamiento de reservas de tu buque insignia un 25%.[/right][/color][/b]
+>>
+ANOMALY_HIDDEN_3_TAKE: <<
+	Descargar los datos de la investigación del puesto.
+
+	[b][color=#96d196][right]Incrementas la capacidad de apoyos del planeta y el puesto por 128.[/right][/color][/b]
+>>
+ANOMALY_HIDDEN_4_TAKE: <<
+	Descargar los datos de la investigación del puesto.
+
+	[b][color=#96d196][right]Incrementa el trabajo generado por las fábricas por 3.[/right][/color][/b]
+>>

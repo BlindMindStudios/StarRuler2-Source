@@ -1,0 +1,1021 @@
+RESEARCH_COST_OR: o
+RESEARCH_COST_JOIN: ", "
+RESEARCH_STUDY: Estudiar
+RESEARCH_COST: Coste de Investigación
+RESEARCH_TIME: Tiempo de Investigación
+QUEUE_RESEARCH: Añadir a Cola
+UNQUEUE_RESEARCH: Quitar de Cola
+QUEUED: En Cola
+NOT_RESEARCHING: Sin Investigación Activa...
+RESEARCH_SECRET: [b][color=#0ff]Proyecto Secreto:[/color][/b] [color=#aaa][i]Este es un proyecto secreto de Investigación que tiene unos requisitos extras para ser investigado y no aparecerá en cada partida.[/i][/color]
+RESEARCH_AFFECTS: [i][color=#aaa]Afecta: [offset=100]$1[/offset][/color][/i]
+
+RESEARCH_REQ: [b]Requisitos:[/b]\n[offset=30][color=$2]$1[/color][/offset]
+RESEARCH_REQ_BUILDSHIPS: Construir naves $1 con $2. [b]( $3 / $1 )[/b]
+RESEARCH_REQ_MEGACITIES: Construir $2 megaciudades. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_ARTIFACTS: Activa $2 artefactos. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_LABS: Opera $2 edificios Lab. de Investigación. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_FTLSPENT: Gasta un total de $2 Energía FTL. [b]( $1 / $2 )[/b]
+RESEARCH_REQ_RING_HABITATS: Construye $2 Hábitats Anillo. [b]( $1 / $2 )[/b]
+
+ALT_UNLOCK_ENERGY: [color=#42b4bd][b]Desbloquear Estudio:[/b] Gastar $1 de energía.[/color]
+ALT_UNLOCK_INFLUENCE: [color=#0087c7][b]Desbloquear Estudio:[/b] Gastar $1 de puntos de Influencia.[/color]
+ALT_UNLOCK_MONEY: [color=#d1cb6a][b]Desbloquear Estudio:[/b] Gastar $1.[/color]
+ALT_UNLOCK_FTL: [color=$FTL][b]Desbloquear Estudio:[/b] Gastar $1 de Energía FTL.[/color]
+
+R_SCIENCE: Ciencia
+R_SCIENCE_DESC: [i]La raíz de todo el conocimiento. Desbloqueado por defecto como punto inicial.[/i]
+
+R_DEV_ENERGY: Ciencia de la Energía
+R_DEV_ENERGY_DESC: <<
+	[i][color=#aaa]Mejora la captura y el uso de energía.[/color][/i]
+
+	Generas un bono de $1 de energía tras ser investigado. La energía ganada es reducida cuanto más tienes almacenada.
+
+	[offset=40][color=#f88][i]No se gana bono de energía al investigar cuando se usa el desbloqueo alternativo.[/i][/color][/offset]
+>>
+
+R_DEV_MONEY: Economia
+R_DEV_MONEY_BLURB: Fondos Especiales §$1
+R_DEV_MONEY_DESC: <<
+	[i][color=#aaa]Mejora la visión en el comportamiento a gran escala de los mercados.[/color][/i]
+
+	Tras ser desbloqueado, te concede §$1 extra en fondos especiales.
+>>
+
+R_DEV_BUDGET: Comercio
+R_DEV_BUDGET_SMALL: Negocio
+R_DEV_BUDGET_BLURB: +§$1 Presupuesto
+R_DEV_BUDGET_DESC: <<
+	[i][color=#aaa]Mejora la eficiencia de mercado y comercio.[/color][/i]
+
+	Tras ser desbloqueado, permanentemente incrementas en §$1 tus ingresos presupuestarios.
+>>
+
+R_DEV_FTL: Contención FTL
+R_DEV_FTL_BLURB: $1 FTL, Almacenamiento
+R_DEV_FTL_DESC: <<
+	[i][color=#aaa]Nueva tecnologia para almacenar y transportar energía FTL.[/color][/i]
+
+	Tras ser desbloqueado, incrementa el ftl almacenado y su capacidad de almacenaje en $1.
+>>
+
+R_DEV_FTL_INCOME: Afinado FTL
+R_DEV_FTL_INCOME_BLURB: +$1 FTL/s
+R_DEV_FTL_INCOME_DESC: <<
+	[i][color=#aaa]Control Mejorado en la captura y refinamiento de energía FTL.[/color][/i]
+
+	Incrementa el FTL del imperio en $1/s.
+>>
+
+R_DEV_SURGE: Utilización de Medios
+R_DEV_SURGE_BLURB: 1x Surgimiento Patriótico
+R_DEV_SURGE_DESC: <<
+	[i][color=#aaa]Investigación de control sobre formas eficaces de incitar a población a la lucha.[/color][/i]
+
+	Ganas una carta de "Surgimiento Patriótico" tras desbloquear esta tecnologia.
+>>
+
+R_DEV_NEGOTIATE: Ciencia Política
+R_DEV_NEGOTIATE_BLURB: 1x Negociar (*)
+R_DEV_NEGOTIATE_DESC: <<
+	[i][color=#aaa]Usas grupos de reflexión sobre como hacer un mejor uso del capital en beneficio político.[/color][/i]
+
+	Ganas una carta de "Negociar" de calidad incrementada tras desbloquear esta tecnologia.
+>>
+
+R_DEV_ENHANCE: Sinérgia
+R_DEV_ENHANCE_BLURB: 1x Mejora
+R_DEV_ENHANCE_DESC: <<
+[	i][color=#aaa]Desarrollas mejoras formas de usar las estrategias existentes.[/color][/i]
+
+	Ganas una carta de "Mejora" tras desbloquear esta tecnologia.
+>>
+
+R_DEV_INFLUENCE: Diplomacia
+R_DEV_INFLUENCE_BLURB: 5 Influencia
+R_DEV_INFLUENCE_DESC: <<
+	[i][color=#aaa]Estudios focalizados en el comportamiento de varias facciones.[/color][/i]
+
+	Tras ser desbloqueado, ganas $1 puntos de influencia.
+>>
+
+R_SYS_ANTIMATTER: Generador de Antimateria
+
+R_SYS_ANTIMATTER: Generador de Antimateria
+R_SYS_ANTIMATTER_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Generador de Antimateria.[/i][/color]
+
+	[bbloc=#AMGEN_DESC/]
+>>
+
+R_SYS_EMERGENCY_SUPPLIES: Reservas de Emergencia
+R_SYS_EMERGENCY_SUPPLIES_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Reservas de Emergencia.[/i][/color]
+
+	[bbloc=#S_EMERGENCY_SUPPLIES_DESC/]
+>>
+
+R_SYS_CONSTRUCTION_BAY: Bahia de Construccion
+R_SYS_CONSTRUCTION_BAY_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Bahia de Construccion.[/i][/color]
+
+	[bbloc=#S_CONSTRUCTION_BAY_DESC/]
+>>
+
+R_SYS_ORE_PROCESSOR: Procesador de Minerales
+R_SYS_ORE_PROCESSOR_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Procesador de Minerales.[/i][/color]
+
+	[bbloc=#S_ORE_PROCESSOR_DESC/]
+>>
+
+R_SYS_GRAVITY_ENGINE: Motor Graviton
+R_SYS_GRAVITY_ENGINE_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Motor Graviton.[/i][/color]
+
+	[bbloc=#GRAVITYENGINE_DESC/]
+>>
+
+R_SYS_HYPERLASER: Laser Hiperdenso
+R_SYS_HYPERLASER_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Laser Hiperdenso.[/i][/color]
+
+	[bbloc=#S_HYPERLASER_DESC/]
+>>
+
+R_SYS_NEUTRON_ARMOR: Blindaje de Neutronio
+R_SYS_NEUTRON_ARMOR_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Blindaje de Neutronio.[/i][/color]
+
+	[bbloc=#NEUTRONARMOR_DESC/]
+>>
+
+R_SYS_NILINGARMOR: Blindaje de Fibra Niling
+R_SYS_NILINGARMOR_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Blindaje de Fibra Niling.[/i][/color]
+
+	[bbloc=#S_NILINGARMOR_DESC/]
+>>
+
+R_SYS_LIQUID_ARMOR: Blindaje Líquido
+R_SYS_LIQUID_ARMOR_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Blindaje Líquido.[/i][/color]
+
+	[bbloc=#S_LIQUIDARMOR_DESC/]
+>>
+
+R_SYS_SELF_DESTRUCT: Dispositivo de Autodestrucción
+R_SYS_SELF_DESTRUCT_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Dispositivo de Autodestrucción.[/i][/color]
+
+	[bbloc=#S_SELF_DESTRUCT_DESC/]
+>>
+
+R_SYS_SHIP_COMPUTER: Ordenador de Control
+R_SYS_SHIP_COMPUTER_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Ordenador de Control.[/i][/color]
+
+	[bbloc=#SHIPCOMPUTER_DESC/]
+>>
+
+R_SYS_ION_CANNON: Cañón de Iones
+R_SYS_ION_CANNON_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Cañón de Iones.[/i][/color]
+
+	[bbloc=#S_ION_CANNON_DESC/]
+>>
+
+R_SYS_SKIP_DRIVE: Motor de Salto
+R_SYS_SKIP_DRIVE_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Motor de Salto.[/i][/color]
+
+	[bbloc=#S_SKIP_DRIVE_DESC/]
+>>
+
+R_SYS_GRAVITON_CONDENSER: Condensador Graviton
+R_SYS_GRAVITON_CONDENSER_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema de Condensador Graviton.[/i][/color]
+
+	[bbloc=#S_GRAVITON_CONDENSER_DESC/]
+>>
+
+R_SYS_CLOAKPLATING: Malla de Camuflaje
+R_SYS_CLOAKPLATING_DESC: <<
+	[color=#aaa][i]Desbloquea el subsistema Malla de Camuflaje.[/i][/color]
+
+	[bbloc=#S_CLOAKPLATING_DESC/]
+>>
+
+R_MOD_TARGET_SENSOR: Sensor de Objetivos
+R_MOD_TARGET_SENSOR_DESC: <<
+	[color=#aaa][i]Desbloquea Sensor de Objectivos[/i][/color]
+
+	[bbloc=#TARGETINGSENSOR_DESC/]
+>>
+
+R_MOD_BULKHEAD: Manparo
+R_MOD_BULKHEAD_DESC: <<
+	[color=#aaa][i]Desbloquea Mamparo[/i][/color]
+
+	[bbloc=#BULKHEAD_DESC/]
+>>
+
+R_MOD_AUGMENT_RELOAD: Sistema de Refrigeración
+R_MOD_AUGMENT_RELOAD_DESC: <<
+	[color=#aaa][i]Desbloquea el mod de armas 'Sistema de Refrigeración'.[/i][/color]
+
+	[bbloc=#S_AUGMENT_RELOAD_DESC/]
+>>
+
+R_MOD_AUGMENT_DAMAGE: Amplificador de Carga
+R_MOD_AUGMENT_DAMAGE_DESC: <<
+	[color=#aaa][i]Desbloque el mod de armas 'Amplificador de Carga'.[/i][/color]
+
+	[bbloc=#S_AUGMENT_DAMAGE_DESC/]
+>>
+
+R_MOD_AUGMENT_SUPPLY: Mecanismo Pulido
+R_MOD_AUGMENT_SUPPLY_DESC: <<
+	[color=#aaa][i]Desbloque el mod de armas 'Mecanismo Pulido'.[/i][/color]
+
+	[bbloc=#S_AUGMENT_SUPPLY_DESC/]
+>>
+
+R_MOD_QUANTUM_BATTERY: Bateria Cuántica
+R_MOD_QUANTUM_BATTERY_DESC: <<
+	[color=#aaa][i]Desbloquea el mod 'Bateria Cuántica'.[/i][/color]
+
+	[bbloc=#S_QUANTUM_BATTERY_DESC/]
+>>
+
+R_MOD_QUANTUM_COMPRESSOR: Compresor Cuántico
+R_MOD_QUANTUM_COMPRESSOR_DESC: <<
+	[color=#aaa][i]Desbloquea el mod 'Compresor Cuántico'.[/i][/color]
+
+	[bbloc=#S_QUANTUM_COMPRESSOR_DESC/]
+>>
+
+R_IMP_DAMAGE: Cinética
+R_IMP_DAMAGE2: Cinética 2
+R_IMP_DAMAGE_SMALL: Impacto
+R_IMP_DAMAGE_BLURB: Daño de Arma +$1
+R_IMP_DAMAGE_DESC: <<
+	[i][color=#aaa]Investigar como aumentar el daño, detonar y destruir naves enemigas.[/color][/i]
+
+	Incrementa en $1 el daño de armas de todas las naves.
+>>
+
+R_IMP_PLANET_DAMAGE: Balística
+R_IMP_PLANET_DAMAGE2: Balística 2
+R_IMP_PLANET_DAMAGE_BLURB: Daño Planetario +$1
+R_IMP_PLANET_DAMAGE_DESC: <<
+	Incrementa en $1 los DPS planetarios y las armas de defensa estática.
+>>
+
+R_IMP_FLAG_DAMAGE: Armamento
+R_IMP_FLAG_DAMAGE2: Armamento 2
+R_IMP_FLAG_DAMAGE_BLURB: Daño de Buque Insignia +$1
+R_IMP_FLAG_DAMAGE_DESC: <<
+	Incrementa en $1 el daño de armas de los buques insignia.
+>>
+
+R_IMP_SUPPORT_DAMAGE: Destrucción
+R_IMP_SUPPORT_DAMAGE2: Destrucción 2
+R_IMP_SUPPORT_DAMAGE_BLURB: Daño de Apoyo +$1
+R_IMP_SUPPORT_DAMAGE_DESC: <<
+	Incrementa en $1 el daño de armas de las naves de apoyo.
+>>
+
+R_IMP_ALL_HEALTH: Ciencia de Materiales
+R_IMP_ALL_HEALTH2: Ciencia de Materiales 2
+R_IMP_ALL_HEALTH_BLURB: Subsistema Salud +$1
+R_IMP_ALL_HEALTH_DESC: <<
+	[i][color=#aaa]Investigar como mejorar la integridad estructural de los subsistemas de las naves, permitiéndoles soportar más daño.[/color][/i]
+
+	Incrementa en $1 la salud de los subsistemas en naves.
+>>
+
+R_IMP_REPAIR: Reparar
+R_IMP_REPAIR2: Reparar 2
+R_IMP_REPAIR_BLURB: Reparar +$1
+R_IMP_REPAIR_DESC: <<
+	Incrementa en $1 la tasa de reparación de naves.
+>>
+
+R_IMP_CIV_HEALTH: Producción en Masa
+R_IMP_CIV_HEALTH2: Blindaje Civil
+R_IMP_CIV_HEALTH_BLURB: Salud Civil +$1
+R_IMP_CIV_HEALTH_DESC: <<
+	[i][color=#aaa]El diseño y desarrollo de blindajes y sistemas militares asequibles, incrementan la salud de los civiles.[/color][/i]
+
+	Incrementa en $1 la salud de los civiles.
+>>
+
+R_IMP_DECAY: Reservas
+R_IMP_DECAY2: Almacén Denso
+R_IMP_DECAY_BLURB: Declive de Planetas $1 más lento
+R_IMP_DECAY_DESC: <<
+	[i][color=#aaa]Capacidades de almacenaje mejoradas y nuevos métodos permiten a los planetas aguantar mayor tiempo sin recursos vitales.[/color][/i]
+
+	El declive de planetas es $1 más lentos cuando se quedan sin recursos necesarios.
+>>
+
+R_IMP_ALL_RANGE: Selección de Objetivo
+R_IMP_ALL_RANGE2: Selección de Objetivo 2
+R_IMP_ALL_RANGE_BLURB: Armas de Rango +$1
+R_IMP_ALL_RANGE_DESC: <<
+	[i][color=#aaa]Mejoras en la selección de objetivos de las armas, su rastreo y la miniaturización permiten un mejor rango.[/color][/i]
+
+	Incrementa en $1 los rangos de todas las armas.
+>>
+
+R_IMP_ARMOR_HEALTH: Blindaje
+R_IMP_ARMOR_HEALTH2: Blindaje 2
+R_IMP_ARMOR_HEALTH_BLURB: Salud de Blindaje +$1
+R_IMP_ARMOR_HEALTH_DESC: <<
+	[i][color=#aaa]Investigar mejores formas de reforzar el blindaje de placas.[/color][/i]
+
+	Incrementa en $1 la salud del blindaje.
+>>
+
+R_IMP_ARMOR_DR: Refuerzo
+R_IMP_ARMOR_DR2: Refuerzo 2
+R_IMP_ARMOR_DR_BLURB: RD de Blindaje +$1
+R_IMP_ARMOR_DR_DESC: <<
+	Incrementa en $1 toda la resistencia a daños del blindaje.
+>>
+
+R_IMP_FACTORY_LABOR: Metalurgía
+R_IMP_FACTORY_LABOR2: Metalurgía 2
+R_IMP_FACTORY_LABOR_BLURB: Trabajo de Fábrica +$1
+R_IMP_FACTORY_LABOR_DESC: <<
+	[i][color=#aaa]Mejoras en uso de materiales y división del trabajo en las fábricas.[/color][/i]
+
+	Incrementa en $1 el trabajo generado en Fábricas.
+>>
+
+R_IMP_PLANET_SUPPORT: Control Orbital
+R_IMP_PLANET_SUPPORT2: Control Orbital 2
+R_IMP_PLANET_SUPPORT_BLURB: Apoyo Puesto Avanzado +$1
+R_IMP_PLANET_SUPPORT_DESC: <<
+	[i][color=#aaa]Mejoras en el mando concentrado y efectivo en las naves de defensa orbital.[/color][/i]
+
+	Incrementa en $1 la capacidad de apoyo máximo de todos tus [b][img=GuiOrbitalIcons::0;20/]Puestos de Avanzada[/b] orbitales.
+
+	Incrementa en $2 por cada [b][img=PlanetType::2;20/]Planeta[/b] la capacidad de apoyo máximo.
+
+	También incrementa la[img=Plus;20/] Salud y la tasa de producción de naves de defensa locales de [b][img=GuiOrbitalIcons::0;20/]Puestos de Avanzada[/b] orbitales.
+>>
+
+R_IMP_SUPPLY_STORAGE: Logística
+R_IMP_SUPPLY_STORAGE2: Logística 2
+R_IMP_SUPPLY_STORAGE_BLURB: Reservas de Buque Insignia +$1
+R_IMP_SUPPLY_STORAGE_DESC: <<
+	[i][color=#aaa]Mejora el empaquetado y la eficiencia del almacenamiento las reservas de los Buques Insignia.[/color][/i]
+
+	Incrementa en $1 la capacidad máxima de reservas en los buques insignia.
+>>
+
+R_IMP_SUPPORT_CAP: Organización
+R_IMP_SUPPORT_CAP2: Organización 2
+R_IMP_SUPPORT_CAP_SMALL: Control
+R_IMP_SUPPORT_CAP_BLURB: Apoyo de Buque Insignia +$1
+R_IMP_SUPPORT_CAP_DESC: <<
+	[i][color=#aaa]Mejoras en las comunicaciones y la coordinación entre un buque insignia y sus naves de apoyo.[/color][/i]
+
+	Incrementa en $1 el control máximo de apoyo de los buques insiginia.
+>>
+
+R_IMP_THRUST: Propulsión
+R_IMP_THRUST2: Propulsión 2
+R_IMP_THRUST_BLURB: Empuje +$1
+R_IMP_THRUST_DESC: <<
+	[i][color=#aaa]Estudios y experimentos para mejorar el empuje de salida de los motores, convencionales y de otros tipos.[/color][/i]
+
+	Incrementa en $1 el empuje de los motores.
+
+	Si usas Hipermotor, incrementa en $1 la velocidad también.
+>>
+
+R_IMP_CIV_CONSTRUCT: Infraestructura
+R_IMP_CIV_CONSTRUCT2: Infraestructura 2
+R_IMP_CIV_CONSTRUCT_BLURB: Construccion Civ. +$1
+R_IMP_CIV_CONSTRUCT_DESC: <<
+	Incrementa en $1 la tasa de construccion de edificios.
+>>
+
+R_IMP_IMP_CONSTRUCT: Construccion
+R_IMP_IMP_CONSTRUCT2: Construccion 2
+R_IMP_IMP_CONSTRUCT_BLURB: Construcción Imperial +$1
+R_IMP_IMP_CONSTRUCT_DESC: <<
+	Incrementa en $1 la tasa de construccion de edificios imperiales.
+>>
+
+R_IMP_TILE_DEVELOPMENT: Desarrollo
+R_IMP_TILE_DEVELOPMENT2: Desarrollo 2
+R_IMP_TILE_DEVELOPMENT_BLURB: Desarrollo en Superficie +$1
+R_IMP_TILE_DEVELOPMENT_DESC: <<
+	Incrementa en $1 la tasa de desarrollo de la superficie civil de planetas.
+>>
+
+R_IMP_TRACKING: Hidraulica
+R_IMP_TRACKING2: Hidraulica 2
+R_IMP_TRACKING_BLURB: Rastreo de Torretas +$1
+R_IMP_TRACKING_DESC: <<
+	Incrementa en $1 la tasa de rastreo de torretas.
+>>
+
+R_IMP_FIRE_RATE: Refrigeración
+R_IMP_FIRE_RATE2: Refrigeración 2
+R_IMP_FIRE_RATE_BLURB: Recarga de Arma +$1
+R_IMP_FIRE_RATE_DESC: <<
+	Incrementa en $1 la tasa de disparo de todos los sistemas armas.
+>>
+
+R_IMP_PROJ_SPEED: Proyectiles
+R_IMP_PROJ_SPEED2: Proyectiles 2
+R_IMP_PROJ_SPEED_BLURB: Velocidad de Proyectil +$1
+R_IMP_PROJ_SPEED_DESC: Incrementa en $1 la velocidad de los proyectiles y misiles.
+
+R_IMP_SUPPLY_USE: Ordenanza
+R_IMP_SUPPLY_USE2: Ordenanza 2
+R_IMP_SUPPLY_USE_BLURB: Uso de Reservas de Buque Insignia -$1
+R_IMP_SUPPLY_USE_DESC: Reduce en $1 el uso de reservas de las armas de buque insignia.
+
+R_IMP_SUPPLY_REGEN: Reabastecimiento
+R_IMP_SUPPLY_REGEN2: Reabastecimiento 2
+R_IMP_SUPPLY_REGEN_BLURB: Tasa de Reabastecimiento +$1
+R_IMP_SUPPLY_REGEN_DESC: Incrementa en $1 la tasa de reabastecimiento de reservas del buque insignia.
+
+R_IMP_SUPPORT_SUPPLY_USE: Eficiencia
+R_IMP_SUPPORT_SUPPLY_USE2: Eficiencia 2
+R_IMP_SUPPORT_SUPPLY_USE_BLURB: Uso de Reservas de Apoyo -$1
+R_IMP_SUPPORT_SUPPLY_USE_DESC: Reduces en $1 el uso de reservas de las armas de las naves de apoyo.
+
+R_IMP_ENERGY_STORAGE: Capacitancia
+R_IMP_ENERGY_STORAGE2: Capacitancia 2
+R_IMP_ENERGY_STORAGE_BLURB: Almacenamiento de Energía +$1
+R_IMP_ENERGY_STORAGE_DESC: <<
+	Incrementa en $1 tu almacenamiento de energía libre.
+
+	Cualquier energía almacenada bajo el almacenamiento de energía libre no reduce la tasa de generación.
+>>
+
+R_IMP_AOE: Explosivos
+R_IMP_AOE2: Explosivos 2
+R_IMP_AOE_BLURB: Zona de Explosivos +$1
+R_IMP_AOE_DESC: Incrementa en $1 el área de efecto de las armas explosivas como los torpedos.
+R_SYS_SHIELDGEN_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Generador de Escudos.[/i][/color]
+
+	[bbloc=#SHIELDGEN_DESC/]
+>>
+R_SYS_SHIELDGEN: Generador de Escudo
+R_SYS_SHIELD_HARDENER: Reforzado de Escudo
+R_SYS_SHIELD_HARDENER_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Reforzado de Escudo.[/i][/color]
+
+	[bbloc=#S_SHIELD_HARDENER_DESC/]
+>>
+
+R_SHRINE: Santuario
+R_SHRINE_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema de Santuario.[/i][/color]
+
+	[bbloc=#S_SHRINE_DESC/]
+>>
+
+R_BLD_MEGACITY: Megaciudades
+R_BLD_MEGACITY_DESC: <<
+	[color=#aaa][i]Desbloquea el edificio Megaciudad.[/i][/color]
+
+	[bbloc=#BLD_MEGACITY_DESC/]
+>>
+R_IMP_SHIELDCAP: Contención de Fase
+R_IMP_SHIELDCAP2: Contención de Fase 2
+R_IMP_SHIELDCAP_BLURB: PS de Escudo +$1
+R_IMP_SHIELDCAP_DESC: Incrementa en $1 la capacidad de escudo.
+R_IMP_SHIELDREG_BLURB: Regeneración de Escudo +$1
+R_IMP_SHIELDREG: Harmónicos de Fase
+R_IMP_SHIELDREG2: Harmónicos de Fase 2
+R_IMP_SHIELDREG_DESC: Incrementa en $1 la tasa de regeneración de escudos.
+
+R_ORB_ARTIFICIAL_PLANETOID: Planetoides Artificiales
+R_ORB_ARTIFICIAL_PLANETOID_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Planetoide Artificial.[/i][/color]
+
+	[bbloc=#ARTIFICIAL_PLANETOID_DESC/]
+>>
+
+R_ORB_STARFORGE: Forja Estelar
+R_ORB_STARFORGE_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Forja Estelar.[/i][/color]
+
+	[bbloc=#STARFORGE_DESC/]
+>>
+
+R_ORB_VACUUM_TELESCOPE: Telescopio del Vacío
+R_ORB_VACUUM_TELESCOPE_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Telescopio del Vacío.[/i][/color]
+
+	[bbloc=#VACUUM_TELESCOPE_DESC/]
+>>
+
+R_ORB_RINGWORLD: Mundo Anillo
+R_ORB_RINGWORLD_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Mundo Anillo.[/i][/color]
+
+	[bbloc=#RINGWORLD_DESC/]
+>>
+
+R_BLD_PLANET_ENGINE: Propulsor Planetario
+R_BLD_PLANET_ENGINE_DESC: <<
+	[color=#aaa][i]Desbloquea el edificio Propulsor Planetario.[/i][/color]
+
+	[bbloc=#BLD_PLANET_ENGINE_DESC/]
+>>
+R_SYS_MUON_CANNON: Cañón de Muones
+R_SYS_MUON_CANNON_DESC: <<
+	[color=#aaa][i]Desbloquea subsistemas de Cañón y Batería de Muones.[/i][/color]
+
+	[bbloc=#MUONBATTERY_DESC/]
+>>
+
+R_SYS_TITAN_HULL: Casco Titan
+R_SYS_TITAN_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Casco Titan .[/i][/color]
+
+	[bbloc=#S_TITAN_HULL_DESC/]
+>>
+
+R_SYS_COLOSSUS_HULL: Casco Colosal
+R_SYS_COLOSSUS_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Casco Colosal.[/i][/color]
+
+	[bbloc=#S_COLOSSUS_HULL_DESC/]
+>>
+
+R_DEV_ENERGY_INCOME: Ionización
+R_DEV_ENERGY_INCOME2: Ionización 2
+R_DEV_ENERGY_INCOME_BLURB: +$1 de Energía
+R_DEV_ENERGY_INCOME_DESC: <<
+	Incrementa en $1 tu ingreso de energía por segundo.
+>>
+
+R_DEV_INFLUENCE_INCOME: Política
+R_DEV_INFLUENCE_INCOME2: Política 2
+R_DEV_INFLUENCE_INCOME_BLURB: Influencia Apilable +$1
+R_DEV_INFLUENCE_INCOME_DESC: <<
+	Incrementa en $1 tu influencia apilable.
+
+	La influencia apilable incrementa tu ingreso de influencia relativa a los otros imperios.
+>>
+
+R_DEV_DEFENSE: Defensa
+R_DEV_DEFENSE_BLURB: +$1 Defensa Instantánea
+R_DEV_DEFENSE_DESC: <<
+	Inmediatamente genera $1 de trabajo válido para naves de defensa esparcidas sobre localizaciones marcadas para uso de defensa.
+>>
+
+R_DEV_DEFENSE_INCOME: Milicia
+R_DEV_DEFENSE_INCOME2: Milicia 2
+R_DEV_DEFENSE_INCOME_BLURB: +$1 Defensa/min
+R_DEV_DEFENSE_INCOME_DESC: <<
+	Incrementa en $1 trabajo/min tu generación de defensa global.
+>>
+
+R_IMP_SPREAD: Precisión
+R_IMP_SPREAD2: Precisión 2
+R_IMP_SPREAD_BLURB: Precisión +$1
+R_IMP_SPREAD_DESC: <<
+	Incrementa en $1 la precisión de los disparos de armas de rail y las armas cinéticas.
+>>
+
+R_KEY_RAILGUN_KNOCKBACK: Empuje Proyectil
+R_KEY_RAILGUN_KNOCKBACK_DESC: <<
+	Añade un efecto de empuje en las baterías del buque de insignia. Las naves golpeadas por los proyectiles se desplazaran con el impacto.
+
+	Incrementa la precisión de las armas de rail, pero elimina la penetración en hexes de los impactos.
+>>
+
+R_KEY_BUILD_COST: Construcción Descentralizada
+R_KEY_BUILD_COST_DESC: <<
+	Reduce a la mitad los costes de construcción de los buques insignia.
+
+	Dobla los costes de trabajo de los buques insignia.
+
+	Los Diques secos ya no incrementan los costes de construcción y pueden ser utilizados sin penalizaciones.
+>>
+
+R_KEY_EMERGENCY_SHIELDS: Escudos de Emergencia
+R_KEY_EMERGENCY_SHIELDS_DESC: <<
+	Cuando activas un subsistema "Reservas de Emergencia", la regeneración de escudos is temporalmente potenciada a niveles extremos.
+
+	La duración del potenciador depende del tamaño de los subsistemas de reservas de emergencia.
+>>
+STATUS_EMERGENCY_SHIELDS: Escudos de Emergencia
+STATUS_EMERGENCY_SHIELDS_DESC: <<
+	La nave esta experimentando temporalmente un potenciador de regeneración de escudo debido a la activación y mejora de las "Reservas de Emergencia".
+>>
+
+R_SYS_DISRUPTOR: Disruptor
+R_SYS_DISRUPTOR_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Disruptor.[/i][/color]
+
+	[bbloc=#S_DISRUPTOR_DESC/]
+>>
+
+R_SYS_DRONELAUNCHER: Lanzador de Drones
+R_SYS_DRONELAUNCHER_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Lanzador de Drones.[/i][/color]
+
+	[bbloc=#S_DRONELAUNCHER_DESC/]
+>>
+
+R_SYS_PARTICLELANCE: Lanza de Partículas
+R_SYS_PARTICLELANCE_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Lanza de Partículas.[/i][/color]
+
+	[bbloc=#S_PARTICLELANCE_DESC/]
+>>
+
+R_SYS_SHOCKMISSILES: Misiles de Choque
+R_SYS_SHOCKMISSILES_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Misiles de Choque.[/i][/color]
+
+	[bbloc=#S_SHOCKMISSILES_DESC/]
+>>
+
+R_SYS_SHIELD_HARMONIZER: Harmonizador de Escudos
+R_SYS_SHIELD_HARMONIZER_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Harmonizador de Escudos.[/i][/color]
+
+	[bbloc=#S_SHIELD_HARMONIZER_DESC/]
+>>
+
+R_BLD_SPIRE: Pináculo
+R_BLD_SPIRE_DESC: <<
+	[color=#aaa][i]Desbloquea el edificio Pináculo.[/i][/color]
+
+	[bbloc=#BLD_SPIRE_DESC/]
+>>
+
+R_FLARE_BOMB: Bomba Destello
+R_FLARE_BOMB_DESC: <<
+	El estudio de los restos de artefactos remanentes recolectados han recuperado planes de un proyecto de superarma remanente.
+
+	Desbloquea la construcción Bombas de Destello, costando grandes cantidades de Minerales y Energía construirla.
+
+	Las bombas destello pueden ser utilizadas en estrellas. Pasados 60 segundos de canalización, la estrella emite un destello crítico, exterminando la población en el sistema solar, dejando todo lo demás intacto. Los planetas del sistema quedan irradiados durante 5 minutos sin poder ser colonizados.
+
+	La nave bomba destello es destruida en el proceso.
+>>
+
+R_HYPERFIELD_SEQUENCING: Secuencia de Hipercampo
+R_HYPERFIELD_SEQUENCING_DESC: <<
+	Elimina el tiempo de carga al usar hipermotores, pero incrementa en 150 FTL de energía el coste de realizar un salto.
+
+	Las naves necesitan encarar la dirección a la que van a saltar antes de poder activar el hipersalto.
+>>
+
+R_ORB_RING_HABITAT: Hábitat Anillo
+R_ORB_RING_HABITAT_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Hábitat Anillo.[/i][/color]
+
+	[bbloc=#ORB_RING_HABITAT_DESC/]
+>>
+
+R_ORB_SOLAR_SATELLITE: Satélite Solar
+R_ORB_SOLAR_SATELLITE_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Satélite Solar.[/i][/color]
+
+	[bbloc=#ORB_SOLAR_SATELLITE_DESC/]
+>>
+
+R_ORB_DEFENSE_SATELLITE: Satélite Táctico
+R_ORB_DEFENSE_SATELLITE_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Satélite Táctico.[/i][/color]
+
+	[bbloc=#ORB_DEFENSE_SATELLITE_DESC/]
+>>
+
+R_ORB_HYDROPONICS_SATELLITE: Satélite Hidropónico
+R_ORB_HYDROPONICS_SATELLITE_DESC: <<
+	[color=#aaa][i]Desbloquea el orbital Satélite Hidropónico.[/i][/color]
+
+	[bbloc=#ORB_HYDROPONICS_SATELLITE_DESC/]
+>>
+
+R_SYS_CARRIER_HULL: Casco Portanaves
+R_SYS_CARRIER_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea el Casco Portanaves para buques insignia.[/i][/color]
+
+	[bbloc=#S_CARRIER_HULL_DESC/]
+>>
+
+R_SYS_DESTROYER_HULL: Casco Destructor
+R_SYS_DESTROYER_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea el Casco Destructor para buques insignia.[/i][/color]
+
+	[bbloc=#S_DESTROYER_HULL_DESC/]
+>>
+
+R_SYS_SUPERSTRUCTURE_HULL: Casco Superestructura
+R_SYS_SUPERSTRUCTURE_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea el Casco Superestructura para buques insignia.[/i][/color]
+
+	[bbloc=#S_SUPERSTRUCTURE_HULL_DESC/]
+>>
+
+R_SYS_SPINAL_MOUNT_HULL: Casco Montaje Espinal
+R_SYS_SPINAL_MOUNT_HULL_DESC: <<
+	[color=#aaa][i]Desbloquea el Casco de Montaje Espinal para buques insignia.[/i][/color]
+
+	[bbloc=#S_SPINAL_MOUNT_HULL_DESC/]
+>>
+
+R_SYS_FLEET_COMPUTER: Ordenador de Flota
+R_SYS_FLEET_COMPUTER_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Ordenador de Flota para buques insignia.[/i][/color]
+
+	[bbloc=#S_FLEETCOMPUTER_DESC/]
+>>
+
+R_SYS_SOLARPANEL: Panel Solar
+R_SYS_SOLARPANEL_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Panel Solar para buques insignia.[/i][/color]
+
+	[bbloc=#S_SOLARPANEL_DESC/]
+>>
+
+R_SYS_FLAK_BATTERY: Batería de Artillería
+R_SYS_FLAK_BATTERY_DESC: <<
+	[color=#aaa][i]Desbloquea arma Batería de Artillería para buques insignia.[/i][/color]
+
+	[bbloc=#S_FLAK_BATTERY_DESC/]
+>>
+
+R_SYS_WARHEAD: Cabeza Nuclear
+R_SYS_WARHEAD_DESC: <<
+	[color=#aaa][i]Desbloquea arma Cabeza Nuclear para buques insignia.[/i][/color]
+
+	[bbloc=#S_WARHEAD_DESC/]
+>>
+
+R_SYS_PLASMA_THROWER: Lanzador de Plasma
+R_SYS_PLASMA_THROWER_DESC: <<
+	[color=#aaa][i]Desbloquea arma Lanzador de Plasma para buques insignia y naves de apoyo.[/i][/color]
+
+	[bbloc=#S_PLASMATHROWER_DESC/]
+>>
+
+R_SYS_PULSE_BOLT: Rayo de Pulsos
+R_SYS_PULSE_BOLT_DESC: <<
+	[color=#aaa][i]Desbloquea arma de Rayo de Pulsos para naves de apoyo.[/i][/color]
+
+	[bbloc=#S_PULSE_BOLT_DESC/]
+>>
+
+R_SYS_SUBSPACE_SHREDDER: Triturador de Subespacio
+R_SYS_SUBSPACE_SHREDDER_DESC: <<
+	[color=#aaa][i]Desbloquea arma Triturador de Subespacio para naves de apoyo.[/i][/color]
+
+	[bbloc=#S_SUBSPACE_SHREDDER_DESC/]
+>>
+
+R_SYS_RAMJET: Estratoreactor Buitre
+R_SYS_RAMJET_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Estratoreactor Buitre para buques insignia.[/i][/color]
+
+	[bbloc=#S_RAMJET_DESC/]
+>>
+
+R_SYS_BOOSTER_ENGINE: Potenciador de Motor
+R_SYS_BOOSTER_ENGINE_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Potenciador de Motor para naves de apoyo.[/i][/color]
+
+	[bbloc=#S_BOOSTERENGINE_DESC/]
+>>
+
+R_SYS_BROADCAST_ANTENNA: Antena de Transmisión
+R_SYS_BROADCAST_ANTENNA_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema de Antena de Transmisión para buques insignia.[/i][/color]
+
+	[bbloc=#S_BROADCAST_ANTENNA_DESC/]
+>>
+
+R_SYS_SIMULATOR: Simulador
+R_SYS_SIMULATOR_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Simulador para buques insignia.[/i][/color]
+
+	[bbloc=#S_SIMULATOR_DESC/]
+>>
+
+R_SYS_TROOP_PODS: Capsulas de Tropas
+R_SYS_TROOP_PODS_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema de Capsulas de Tropa para buques insignia.[/i][/color]
+
+	[bbloc=#S_TROOPPODS_DESC/]
+>>
+
+R_SYS_CRYSTAL_ARMOR: Blindaje Cristalino
+R_SYS_CRYSTAL_ARMOR_DESC: <<
+	[color=#aaa][i]Desbloquea Blindaje Cristalino para buques insignia y naves de apoyo.[/i][/color]
+
+	[bbloc=#S_CRYSTALARMOR_DESC/]
+>>
+
+R_SYS_NANOMESH: Nanomalla
+R_SYS_NANOMESH_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Nanomalla para buques insignia y naves de apoyo.[/i][/color]
+
+	[bbloc=#NANOMESH_DESC/]
+>>
+
+R_SYS_DEFLECTOR_ARRAY: Matriz Deflectora
+R_SYS_DEFLECTOR_ARRAY_DESC: <<
+	[color=#aaa][i]Desbloquea subsistema Matriz Deflectora para buques insignia.[/i][/color]
+
+	[bbloc=#S_DEFLECTOR_ARRAY_DESC/]
+>>
+
+R_MISSILE_RANGE: Minituarización de Empuje
+R_MISSILE_RANGE_DESC: <<
+	Incrementa en $1 el rango de las armas de tipo misil.
+>>
+
+R_DRONE_COUNT: Control de Drones
+R_DRONE_COUNT_DESC: <<
+	Incrementa un 50% la cantidad de drones lanzados por el subsistema de Lanzador de Drones.
+>>
+
+R_FLAG_HEALTH: Salud de Buque Insignia
+R_FLAG_HEALTH2: Integridad de Buque Insignia
+R_FLAG_HEALTH_DESC: <<
+	Incrementa en $1 la salud de los diseños buque insignia y estación.
+>>
+
+R_ENERGY: Flujo de Energía
+R_ENERGY_DESC: Incrementa en $1 tu generación de energía.
+
+R_DEFENSE: Militar
+R_DEFENSE_DESC: Incrementa en $1/min tu generación de defensa.
+
+R_POWER_GENERATION: Generación de Energía
+R_POWER_GENERATION_DESC: <<
+	Incrementa en $1 la Energía generada por los generadores de buques insignia.
+>>
+
+R_BEAM_CYCLING: Ciclos de Rayos
+R_BEAM_CYCLING_DESC: <<
+	Incrementa en $1 la Duración de las armas de rayos.
+>>
+
+R_ADVANCED_TRACKING: Rastreo Avanzado
+R_ADVANCED_TRACKING_DESC: <<
+	Incrementa en $1 la precisión de las armas tipo proyectil.
+
+	Reduce en $1 el coste de reservas de los disparos de armas tipo proyectil.
+>>
+
+R_FTL_COST: Estabilización de Hipercampo
+R_FTL_COST_DESC: <<
+	Reduce en $1 todos los Costes FTL.
+>>
+
+R_LABORATORIES: Laboratorios
+R_LABORATORIES_DESC: <<
+	Los complejos de investigación conceden $1 de Presión de Investigación adicional.
+>>
+
+R_FTL_JAMMER_COMBAT: Disruptor FTL de Corto Alcance
+R_FTL_JAMMER_COMBAT_DESC: <<
+	Equipas tus orbitales Disruptor FTL con un sistema que permite sobrecargar y cortocircuitar las naves enemigas.
+
+	Buques Insignia enemigos en los sistemas que tienen un Disruptor FTL tienen una reducción de un 25% en efectividad en combate.
+>>
+STATUS_FTL_JAMMER_COMBAT: Reductor Disruptor FTL
+STATUS_FTL_JAMMER_COMBAT_DESC: <<
+	Un Disruptor FTL enemigo esta cortocircuitando esta nave, reduciendo un 25% su fuerza de combate.
+>>
+
+R_WEALTH: Riqueza
+R_WEALTH_DESC: Incrementa los ingresos totales de tu imperio en $1.
+
+R_PROSPERITY: Prosperidad
+R_PROSPERITY_DESC: Incrementa en $1 la efectividad al gastar excesos de tus ingresos en prestaciones.
+
+R_OBEDIENCE: Obediencia
+R_OBEDIENCE_DESC: Incrementa en $1 la Lealtad de todos tus planetas.
+
+R_ABUNDANCE: Abundancia
+R_ABUNDANCE_DESC: Incrementa en $1 la Presión dada por los recursos de Grado 3.
+
+R_GRAVITON_CHANNELING: Canalización de Graviton
+R_GRAVITON_CHANNELING_DESC: <<
+	Incrementa en $1 el Empuje de los [b]Motores Gravitón[/b], doblando su uso de energía.
+>>
+
+R_SUPPORT_SIZE: Construcción Compacta
+R_SUPPORT_SIZE_DESC: <<
+	Incrementa el tamaño de todos los diseños de naves de apoyo en $1 hexes.
+>>
+
+R_STATION_MAINTENANCE: Sustento de Estaciones
+R_STATION_MAINTENANCE_DESC: <<
+	Reduce en $1 el coste de mantenimiento de los diseños estación.
+>>
+
+R_TACTICS: Tácticas
+R_TACTICS_DESC: <<
+	Incrementa toda la Experiencia ganada por las naves en un 10%.
+>>
+
+R_POPULATION: Infraestructura
+R_POPULATION_DESC: <<
+	Incrementa la población máxima de todos los planetas de Nivel 3 o mayor por $1.
+>>
+
+R_CONSTRUCTION: Construcción
+R_CONSTRUCTION2: Construcción 2
+R_CONSTRUCTION_DESC: <<
+	Reduce en $1 el coste y tiempo de construcción de edificios imperiales superficiales.
+>>
+
+R_ORBITAL_CONSTRUCTION: Construcción Orbital
+R_ORBITAL_CONSTRUCTION2: Construcción Orbital 2
+R_ORBITAL_CONSTRUCTION_DESC: <<
+	Reduce en $1 la construcción y costes de trabajo de orbitales y estaciones.
+>>
+
+R_INFINITE_HEALTH: Fuerza de Chasis
+R_INFINITE_HEALTH_DESC: <<
+	Incrementa la salud de los diseños de nave y estación en $1.
+
+	Puede ser investigado múltiples veces. Tras cada investigación, el coste y tiempo se incrementan.
+>>
+
+R_INFINITE_DAMAGE: Letalidad de Arma
+R_INFINITE_DAMAGE_DESC: <<
+	Incrementa en $1 el daño realizado por tus naves y estaciones.
+
+	Puede ser investigado múltiples veces. Tras cada investigación, el coste y tiempo se incrementan.
+>>
+
+R_INFINITE_THRUST: Potencia de Motor
+R_INFINITE_THRUST_DESC: <<
+	Incrementa en $1 la salida de empuje de tus motores.
+
+	Puede ser investigado múltiples veces. Tras cada investigación, el coste y tiempo se incrementan.
+>>
+
+R_INFINITE_SUPPORT: Coordinación de Flotas
+R_INFINITE_SUPPORT_DESC: <<
+	Incrementa la capacidad de apoyo de tus diseños en $1.
+
+	Puede ser investigado múltiples veces. Tras cada investigación, el coste y tiempo se incrementan.
+>>
+
+R_INFINITE_SHIELDS: Modulación de Escudos
+R_INFINITE_SHIELDS_DESC: <<
+	Incrementa en $1 la capacidad y regeneración de escudos de tus diseños.
+
+	Puede ser investigado múltiples veces. Tras cada investigación, el coste y tiempo se incrementan.
+>>
+
+R_FTL_HURDLE: Comprensión FTL
+R_FTL_HURDLE_DESC: <<
+	Para progresar más, debemos comprender mejor los principios detrás de la Energía y la operación del Hipercampo.
+
+	[i]Esta tecnologia no da ningun beneficio, y debe gastarse Energía FTL para su estudio.[/i]
+>>
+
+R_ENERGY_HURDLE: Experimentos de Energía
+R_ENERGY_HURDLE_DESC: <<
+	Para progresar más, debemos comprender mejor la interacciones de partículas extremadamente de energía altas.
+
+	[i]Esta tecnologia no da ningun beneficio, y debe gastarse Energía para su estudio.[/i]
+>>
+
+R_INFLUENCE_HURDLE: Estudios Sociológicos
+R_INFLUENCE_HURDLE_DESC: <<
+	Para progresar más, debemos comprender mejor el comportamiento de grandes poblaciones y sus respuestas.
+
+	[i]Esta tecnologia no da ningun beneficio, y debe gastarse Influencia para su estudio.[/i]
+>>
+
+R_ARTIFICIAL_MOON: Lunas Artificiales
+R_ARTIFICIAL_MOON_DESC: <<
+	Desbloquea la construcción de lunas artificiales:
+
+	[bbloc=#CONS_ARTIFICIAL_MOON_DESC/]
+>>
+
+R_IMP_FOUNDRY_LABOR: Metalurgía
+R_IMP_FOUNDRY_LABOR2: Metalurgía 2
+R_IMP_FOUNDRY_LABOR_DESC: <<
+	[i][color=#aaa]Mejoras en el uso de materiales y la división del trabajo en las fábricas de superficie planetarias.[/color][/i]
+
+	Incrementa el trabajo generado por el edificio Fundición en $1.
+>>

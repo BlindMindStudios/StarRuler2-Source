@@ -1,0 +1,311 @@
+ORBITAL_REPACK: Empaquetar Orbital
+PROMPT_SCUTTLE: ¿Destruir $1?
+ORB_TT_COST: Coste: $1, $2 Trabajo
+ORBITAL_MODULES: Módulos
+TRADE: Comercio
+OERR_SYSTEM: No puedes construir orbitales fuera de sistemas.
+OERR_TRADE: Debes construir dentro de las fronteras comerciales.
+OERR_VISION: No puedes construir fuera de tu visión.
+OERR_LIMIT: Solo se permite una por sistema.
+OERR_BLACKHOLE: Debe ser construido cerca de un agujero negro.
+OERR_PLANET_ORBIT: Debe ser construido en órbita planetaria.
+OERR_CLOSE_TO_STAR: Debe ser colocado cerca de una estrella.
+OERR_PLANET_LIMIT: Solo se permite una por órbita de planeta.
+
+LAB_RESOURCES: Recursos Importados:
+LAB_AVAIL_AFFINITIES: Tendencias Disponibles:
+
+ORB_REQ_AFFINITY: Requiere [b]$1[/b] [img=$3;24/] $2 recurso(s).
+ORB_REQ_RESOURCE: Requiere [img=$2;24/] $1.
+
+TT_MANAGE_ORBITAL: <<|
+	[b]Gestionar Orbital[/b]
+
+	Visualiza y modifica los modulos instalados en este orbital.
+>>
+
+TT_PACKUP_ORBITAL: <<|
+	[b]Empaquetar Orbital[/b]
+
+	Empaquetas el orbital de vuelta a una nave para moverla.
+>>
+
+DRY_DOCK: Dique Seco
+DRY_DOCK_NAME: Dique Seco: $1
+
+FLING_BEACONS: Balizas de Lanzamiento
+ORB_FLING_CORE: Baliza de Lanzamiento
+ORB_FLING_CORE_BLURB: Permite a las naves cercanas usar un lanzamiento FTL a cualquier parte de la galaxía.
+ORB_FLING_CORE_DESC: <<|
+	Permite el uso de lanzamientos FTL cerca de la baliza.
+
+	Naves dentro de 12.500 unidades de distancia de una baliza de lanzamiento
+	pueden usar FTL para ir a cualquier lugar de la galaxia.
+
+	[b][color=#00c0ff]Balizas de Lanzamiento cuestan 250 de energía FTL como coste de construcción y 0.15 de FTL/s en mantenimiento.[/color][/b]
+>>
+
+ORB_GATE_CORE: Puerta
+ORB_GATE_CORE_BLURB: Permite el viaje instantáneo a otra puerta.
+ORB_GATE_CORE_DESC: <<|
+	Permite viaje instantáneo a cualquier otra puerta.
+
+	Las puertas cuestan 0.15 FTL/s de mantenimiento.
+	La puertas pueden ser empaquetadas en un constructor.
+	Desempaquetar una puerta de un constructor cuesta 150 FTL.
+>>
+
+ORB_DRY_DOCK: Dique Seco
+ORB_DRY_DOCK_BLURB: Sirve para construir un solo buque insignia en el espacio.
+ORB_DRY_DOCK_DESC: <<|
+	Puedes construir un buque insignia en el espacio, permitiendo a otros planetas
+	facilmente contribuir su trabajo a la construcción.
+>>
+
+ORB_REMNANT_DEFENSE_CORE: Estación de Defensa Remanente
+ORB_REMNANT_DEFENSE_CORE_BLURB: <<
+	Dispara a naves enemigas cercanas.
+>>
+
+ORB_REMNANT_ENERGY_CORE: Núcleo de Reactor
+ORB_REMNANT_ENERGY_CORE_BLURB: Produce grandes cantidades de energía.
+ORB_REMNANT_ENERGY_CORE_DESC: <<|
+	Produce 36 de energía por minuto.
+>>
+
+ORB_ANCIENT_EMBASSY: Embajada Antigua
+ORB_ANCIENT_EMBASSY_BLURB: Una maravilla de ingeniería, respetada por todos.
+ORB_ANCIENT_EMBASSY_DESC: <<|
+	Incrementa la lealtad de todos los planetas propios en el sistema por 5.
+	Las acciones de influencia sobre objetivos en este sistema por cualquier
+	imperio cuesta 5 menos de influencia al activarse.
+
+	Si este orbital es destruido, el propietario y todos los imperios amistoso
+	al propietario ganan [b]mayores[/b] ventajas contra el imperio destructor.
+
+	Protege todos los planetas poseídos en el sistema de este orbital de ser capturados.
+
+	Tienes 500 de apoyo de mando, permitiendo mantener de naves de apoyo.
+
+	Puede comerciar libremente con los núcleos comerciales.
+>>
+
+ORB_SHIPYARD: Astillero
+ORB_SHIPYARD_BLURB: Puede construir buques insignia y naves de apoyo. Los planetas pueden ser ordenados que exporten su trabajo a este astillero.
+ORB_SHIPYARD_DESC: <<|
+	Un astillero masivo orbital capaz de construir flotas en el espacio.
+
+	Las construcción de naves en un astillero tiene un costo de trabajo un 20% más barato.
+
+	Otorga 6 de generación de Trabajo innato por minuto. Los planetas pueden
+	exportar su trabajo a astilleros dentro del rango a una tasa reducida del 75%.
+
+	Gana Trabajo al investigar Metalurgia a un 75% de tasa reducida.
+>>
+ORB_ARTILLERY_PLATFORM: Plataforma de Artillería
+ORB_ARTILLERY_PLATFORM_BLURB: Cañón de artillería de gran alcance.
+ORB_ARTILLERY_PLATFORM_DESC: <<|
+	Un cañón de artilleria orbital independiente, capaz de disparar a enemigos a
+	través del sistema.
+>>
+ORB_DEFENSE_PLATFORM: Plataforma de Defensa
+ORB_DEFENSE_PLATFORM_BLURB: Plataforma de Defensa de armas de corto alcance.
+ORB_DEFENSE_PLATFORM_DESC: <<|
+	Una plataforma de defensa orbital equipada con un arsenal de armas de corto
+	alcance para defender sus inmediaciones.
+>>
+ORB_TRADE_OUTPOST: Puesto de Avanzada
+ORB_TRADE_OUTPOST_BLURB: Permite el comercio a través de su sistema. Genera naves de defensa y protege planetas en el sistema de ser capturados.
+ORB_TRADE_OUTPOST_DESC: <<|
+	Un pequeño puesto de avanzada que permite a tus naves civiles comerciar a
+	través del sistema en el que se encuentra.
+
+	Los puestos de avanzada generan hasta [b]3 de Defensa[/b] de valor en naves de defensa
+	locales, dependiendo de cuantos sistemas adyacentes tienen un puesto en ellos.
+
+	Si todo el mando de apoyo de los puestos de avanzada esta siendo usado y tiene
+	sus naves de defensa complementarias, se empezará a añadir su generación de defensa
+	al conjunto de tu imperio global.
+
+	Planetas en sistemas que contienen un puesto por al menos 2 minutos estarán
+	[b]Protegidos[/b] de ser capturados hasta que el puesto avanzado sea destruido.
+
+	[i]Puede ser construida en sistemas en los que no posees planetas, expandiendo la
+	frontera de tu imperio. Solo se puede construir un puesto por sistema.[/i]
+>>
+
+ORB_TRADE_STATION: Estación de Comercio
+ORB_TRADE_STATION_BLURB: Permite el comercio global con otras estaciones de comercio y la compra de recursos con dinero.
+ORB_TRADE_STATION_DESC: <<|
+	Una gran y atestada estación de comercio que permite el comercio de recursos
+	globales entre cualquier territorio con Estaciones de Comercio.
+
+	Además, en cada estación de comercio puedes comprar una cantidad de
+	investigación, energía, influencia o trabajo a cambio de dinero cada 3 minutos.
+
+	[i]Normalmente, los planetas en territorios separados no pueden exportar
+	recursos entre ellos. Construir una Estación Comercial en ambos territorios
+	permite la importación y exportación de recursos desde planetas en tus
+	distintos territorios.[/i]
+>>
+ABL_BUY_ENERGY: Comprar Energía
+ABL_BUY_ENERGY_DESC: Compras una cantidad de energía del mercado. Comparte tiempo de refresco con otras capacidades de compra.
+ABL_BUY_INFLUENCE: Comprar Influencia
+ABL_BUY_INFLUENCE_DESC: Compras unos pocos puntos de influencia. Comparte tiempo de refresco con otras capacidades de compra.
+ABL_BUY_RESEARCH: Comprar Investigación.
+ABL_BUY_RESEARCH_DESC: Inviertes en algunas investigaciones de terceros.Comparte tiempo de refresco con otras capacidades de compra.
+ABL_BUY_LABOR: Comprar Trabajo
+ABL_BUY_LABOR_DESC: Comprar trabajo de un planeta objetivo o astillero. Comparte tiempo de refresco con otras capacidades de compra.
+
+ORB_SUPPLY_DEPOT: Deposito de Reserva
+ORB_SUPPLY_DEPOT_BLURB: Incrementas la tasa de reabastecimiento de reservas en el sistema.
+ORB_SUPPLY_DEPOT_DESC: <<|
+	Infraestructura preparada para reabastecer flotas a una tasa acelerada.
+
+	Las flotas en el sistema con el Deposito de Reserva se reabastecen rápidamente.
+>>
+STATUS_FAST_RESUPPLY: Recibiendo Reservas
+STATUS_FAST_RESUPPLY_DESC: <<|
+	Estas recibiendo reservas de un Deposito de Reserva en el sistema. Regenera
+	reservas más rapidamente si no te encuentras en combate.
+>>
+ORB_FTL_JAMMER: Inhibidor FTL
+ORB_FTL_JAMMER_BLURB: Impide que imperios hostiles puedan usar sus motores FTL en este sistema.
+ORB_FTL_JAMMER_DESC: <<|
+	Un array preciso de excitadores de hipercampo calibrados a frecuencias
+	especificas que pueden bloquear el uso particular de motores FTL.
+
+	Los imperios con los que estas en guerra no pueden usar FTL dentro de este sistema.
+
+	[b][color=#00c0ff]Cuesta 0.15 FTL/s mantenerlo.[/color][/b]
+>>
+ORB_SCAFFOLDING: Andamio
+ORB_SCAFFOLDING_BLURB: Un casco orbital esta bajo construcción aquí.
+ORB_SCAFFOLDING_DESC: <<|
+	Un orbital esta bajo construcción en esta localización.
+>>
+NAME_SCAFFOLDING: $1 (Andamio)
+
+ORB_SOLAR_ORBITAL: Motor Solar
+ORB_SOLAR_ORBITAL_BLURB: Genera energía por segundo dependiendo de la temperatura de la estrella del sistema.
+ORB_SOLAR_ORBITAL_DESC: <<
+	Genera energía extra por segundo. A mayor temperatura de la estrella de este sistema, mayor energía es generada.
+
+	Solo se puede construir uno por sistema.
+>>
+
+ORB_FRAME: Marco Orbital
+ORB_FRAME_BLURB: Un orbital puede ser construido en este marco con un coste de construcción reducido.
+ORB_FRAME_DESC: <<
+	Un marco andamio preconstruido que puede ser readaptado en otros tipos de orbitales.
+
+	Los orbitales construidos en el marco reducen los costes de construcción un 50% y no sufren de penalizaciones a la distancia del trabajo.
+>>
+
+ORB_SINGULARITY_LAB: Laboratorio de Singularidad
+ORB_SINGULARITY_LAB_BLURB: <<
+	Aprovechas las propiedades únicas de estar cerca de una singularidad para generar energía y ganar conocimiento científico.
+>>
+ORB_SINGULARITY_LAB_DESC: <<
+	Aprovechas las propiedades únicas de estar cerca de una singularidad para generar energía y ganar conocimiento científico.
+
+	Solo puede ser construido en sistemas que tiene un agujero negro. Solo se puede construir uno por sistema.
+>>
+
+ORB_FTL_STORAGE: Almacén FTL
+ORB_FTL_STORAGE_DESC: <<
+	Almacena 300 de Energía FTL.
+>>
+
+ORB_SENATORIAL_PALACE: Palacio del Senado
+ORB_SENATORIAL_PALACE_BLURB: <<
+	Un gran palacio para que miembros del senado galáctico hagan diplomacia. Permite la compra de cartas para lograr la victoria por influencia.
+>>
+ORB_SENATORIAL_PALACE_DESC: <<
+	Un gran palacio para que miembros del senado galáctico hagan diplomacia.
+
+	Solo puede ser construido si en la actualidad eres el Líder del Senado.
+
+	Todos los otros imperios ganan visión sobre el sistema en el que se encuentra el Palacio del Senado.
+
+	Puedes usar influencia para comprar cartas de Elección, Superpotencia Galáctica y Utopía Galáctica en el Palacio del Senado, lo que permite una victoria por influencia.
+>>
+NOTIFY_SENATORIAL_PALACE: El [color=$2]$1[/color] ha construido un [b]Palacio del Senado[/b].
+ABL_BUY_ELECTION: Comprar "Elección"
+ABL_BUY_ELECTION_DESC: <<
+	Usar influencia para comprar una carta "Elección" para un futuro uso.
+>>
+ABL_BUY_GALACTIC_UTOPIA: Comprar "Utopia Galáctica"
+ABL_BUY_GALACTIC_UTOPIA_DESC: <<
+	Usar influencia para comprar una carta "Utopia Galáctica" para un futuro uso.
+
+	Utopía Galáctica otorg múltiples beneficios. Si además tienes Superpotencia Galáctica activa al mismo tiempo, ganas el juego.
+>>
+ABL_BUY_GALACTIC_SUPERPOWER: Comprar "Superpotencia Galáctica"
+ABL_BUY_GALACTIC_SUPERPOWER_DESC: <<
+	Usar influencia para comprar una carta "Superpotencia Galáctica" para un futuro uso.
+
+	Superpotencia Galáctica suministra múltiples beneficios. Si tienes además Utopía Galáctica al mismo tiempo, has ganado el juego.
+>>
+
+ORB_RING_HABITAT: Habitat Anillo
+ORB_RING_HABITAT_BLURB: Incrementa la población que puede vivir alrededor del planeta.
+ORB_RING_HABITAT_DESC: <<
+	Un habitat anillo construido en baja órbita planetaria incrementa la población que puede vivir dentro y alrededor, permitiendo un estilo de vida lujoso mantenido en el espacio para aquellos que pueden permitírselo.
+
+	Debe ser construido en la órbita de un planeta. Incrementa la población máxima del planeta por 2.
+
+	2 de población del planeta se reubican al construir el Hábitat Anillo para vivir en el mismo.
+
+	Cuesta 10 de Influencia construirlo adicional a su coste de construcción.
+
+	Solo un hábitat anillo puede ser construido en la órbita de cada planeta.
+>>
+
+ORB_SOLAR_SATELLITE: Satélite Solar
+ORB_SOLAR_SATELLITE_BLURB: Incrementa la presión de los recursos nativos del planeta en 1.
+ORB_SOLAR_SATELLITE_DESC: <<
+	Un satélite de energía solar construido en bajo órbita planetaria enviando energía hacia la superficie para su uso domestico, mejorando la eficiencia de las operaciones económicas en tierra.
+
+	Debe ser construido en la órbita de un planeta. Incrementa la presión de los recursos nativos del planeta en 1 cuando sea posible.
+
+	Cuesta 500 de Energía construirlo adicional a su coste de construcción.
+
+	Solo un satélite solar puede ser construido en la órbita de cada planeta.
+>>
+
+ORB_DEFENSE_SATELLITE: Satélite Táctico
+ORB_DEFENSE_SATELLITE_BLURB: Incrementa la fuerza de apoyo, dispara misiles y permite acciones de apoyo independientes.
+ORB_DEFENSE_SATELLITE_DESC: <<
+	Un satélite militar  construido en baja órbita planetaria que garantiza capacidades defensivas mejoradas en el planeta y sus naves de apoyo.
+
+	Debe ser construido en la órbita de un planeta.
+
+	Las naves de apoyo asignada a este planeta luchan con una fuerza de combate incrementada, y puede independientemente cruzar el sistema para atacar a flotas enemigas. Las naves de apoyo en modo Defensa, Apoyo o Artillería no dejaran la órbita del planeta.
+
+	Cuesta 500 de Energía construirlo adicional a sus costes de construcción.
+
+	Solo un satélite táctico puede ser construida en órbita en cada planeta.
+>>
+
+ORB_HYDROPONICS_SATELLITE: Satélite Hidropónico
+ORB_HYDROPONICS_SATELLITE_BLURB: Añade 1 de Comida al planeta en su órbita.
+ORB_HYDROPONICS_SATELLITE_DESC: <<
+	Un satélite equipado con con bahías Hidropónicas de zero-G de alto rendimiento creciendo cultivos genéticamente modificadas para la exposición directa a la luz solar.
+
+	Debe ser construida en la órbita de un planeta.
+
+	El planeta que contiene el satélite en órbita gana 1 de recurso de comida.
+
+	Cuesta 100 puntos de investigación además de su coste de construcción.
+>>
+
+ORB_ANCIENT_REPLICATOR: Replicador Orbital
+ORB_ANCIENT_REPLICATOR_BLURB: Construye edificios en la superficie del planeta que órbita. Genera satélites de defensa.
+ORB_ANCIENT_REPLICATOR_DESC: <<
+	Una gran estación de baja órbita que puede replicar materiales y transferirlos a superficie. Los edificios solo pueden ser construidos en planetas con un Replicador en órbita.
+
+	Las estaciones replicador pueden ser movidas entre planetas para construir instalaciones en otros planetas.
+
+	Si el planeta con el replicador en órbita tiene capacidad de apoyo libre, automáticamente construirá satélites de defensa con el paso del tiempo.
+>>

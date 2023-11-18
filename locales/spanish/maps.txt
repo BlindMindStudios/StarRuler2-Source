@@ -1,0 +1,29 @@
+SPIRAL_GALAXY: Galaxía Espiral
+SPIRAL_GALAXY_DESC: Una galaxia con múltiples brazos en un patrón espiral.
+
+CORKSCREW_GALAXY: Galaxía Sacacorchos
+CORKSCREW_GALAXY_DESC: Las estrella se tuercen hacia dentro en una sola línea.
+
+CLUSTERS_MAP: Cúmulos
+CLUSTERS_MAP_DESC: Varias pequeños cúmulos conectados por corredores estrechos.
+
+DUMBBELL_MAP: Galaxía Mancuerna
+DUMBBELL_MAP_DESC: Dos largos cúmulos conectados por una larga barra de sistemas en el medio.
+
+PERFECT_MIRROR: Espejo Perfecto
+TT_PERFECT_MIRROR: <<|
+	Hace que ambos lados de la galaxia sean un espejo perfecto a cada lado, incluyendo todos los planetas generados, artefactos, anomalías, remanentes, etc.
+
+	Destinado a uso en juegos de equipos balanceados 1v1.
+>>
+
+EXPANSE_MAP: La Expansión
+EXPANSE_MAP_DESC: <<|
+	Captura el mundo nativo de los remanentes o desarróllate en el infinito vacío.
+>>
+EXPANSE_MAP_TEXT: <<
+	[i][color=#aaa]Los imperios rodean el mundo nativo de los remanentes. Las flotas remanentes pueden ser derrotadas para permitir la colonización de los planetas internos. Las flotas remanentes también pueden proteger los sistemas cercanos al límite de la galaxia, defendiendo estas flotas permitiendo la expansión y descubrimiento de sistemas previamente no detectados.[/color][/i]
+>>
+
+RINGS_MAP: Anillos
+RINGS_MAP_DESC: Grandes anillos de sistemas entrelazados

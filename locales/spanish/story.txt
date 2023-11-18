@@ -1,0 +1,159 @@
+SCEN1_NAME: Conquista Inevitable
+SCEN1_DESC: <<|
+	[b]3277 CE:[/b]
+	Una nueva coalición - la Iniciativa Gevron - se ha recientemente formado con
+	la meta de proteger sus miembros de la hostilidad de las nuevas razas
+	descubiertas. Su deseo por la seguridad ha torcido sus interacciones de la 
+	autodefensa a la destrucción proactiva.
+
+	La Iniciativa descubrió un nuevo y poderoso enemigo, el Imperio Nevillin.
+	Aunque es una raza pacífica, los intentos Nevillin de comunicación fueron
+	ignorados, y la guerra fue llevada a su espacio.
+	
+	El Imperio Nevillin descubrió un agujero de gusano inestable y lo ha estado
+	utilizando para expandirse a una región del espacio distante y aislada. La
+	paranoia de la Iniciativa rehúsa permitir a cualquier colonia sobrevivir fuera
+	de su control.
+>>
+
+SCEN1_PLAYER_EMP: Iniciativa Gevron
+SCEN1_ENEMY_EMP: Imperio Nevillin
+
+SCEN1_INTRO_TITLE: Conquista Inevitable
+SCEN1_INTRO_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	Almirante, se te ha asignado el control de un batallón, la 5ª Armada.
+	Hemos ganado recientemente el control de un agujero de gusano inestable que los
+	Nevillin han estado usando para enviar naves militares y civiles. Vas a
+	liderar la 5ª a través del agujero para determinar sus fuerzas y conquistar
+	las zonas ocupadas civiles.
+>>
+SCEN1_INTRO2_TITLE: Refuerzos
+SCEN1_INTRO2_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	Hemos desplegado un explorador y una pequeña flota a través del agujero de
+	gusano. Acudirán más cuando podamos enviarlas. No confíes en que lleguen
+	repuestos - intente minimizar sus bajas.
+>>
+SCEN1_CONQUER_TITLE: Conquistar y Destruir
+SCEN1_CONQUER_TEXT: <<|
+	Debes destruir los militares Nevillin y capturar sus colonias.
+	
+	Ataca las fuerzas menores para minimizar daños y perdidas, mientras mantienes
+	los reservas necesarios para asediar sus mundos.
+	
+	Las nuevas flotas llegaran periódicamente a través del agujero en Varkus.
+>>
+SCEN1_CONQUER_ACT1_TITLE: Conquista las Colonias Nevillin
+SCEN1_CONQUER_ACT1_TEXT: Captura las colonias y derrota a los buques insignia y estaciones.
+
+SCEN1_COMPLETE_TITLE: ¡Victoria!
+SCEN1_COMPLETE_TEXT: <<|
+	[i]General Kollo:[/i]
+	
+	Excelente trabajo, Almirante. Ya no tenemos que preocuparnos de que los
+	Nevillin se escabullan por la retaguardia en medio de la guerra.
+	Desafortunadamente,la guerra no va tan bien.
+	
+	Debes volver inmediatamente, junto a la 5ª. Con tus refuerzos las cosas debería
+	tornarse hacia nuestro favor.
+	
+	[center][b]¡"Conquista Inevitable" Completada![/b][/center]
+>>
+
+SEC1_PLAYER_EMP: Imperio Nevillin
+SEC1_ENEMY_EMP: Imperio Desconocido
+
+SEC1_INTRO_TITLE: Un Nuevo Hogar
+SEC1_INTRO_TEXT: <<|
+	[i]Alto Mando:[/i]
+	
+	Bienvenido a Varkus, Comandante.
+	Hasta que el agujero de gusano este estabilizado, las comunicaciones serán 
+	poco frecuentes y cortas. Comandarás la nueva colonia en Varkus III, un planeta
+	extraño perfectamente adaptado a nuestra especie.
+	
+	Necesitamos establecer una infraestructura considerable en este sistema.
+	Hay una gran cantidad de metales disponibles en Varkus,
+	y los sistemas cercanos probablemente tengan otros recursos valiosos.
+>>
+
+SEC1_GOAL1_TITLE: Primeros Pasos
+SEC1_GOAL1_TEXT: <<|
+	[b]Varkus III[/b] servirá como el centro neurálgico para este sector.
+>>
+SEC1_GOAL1_ACT1_TITLE: Establece Varkus III como una nueva base
+SEC1_GOAL1_ACT1_TEXT: <<|
+	Sube [b]Varkus III[/b] a nivel 2 y consigue que genere 9 de trabajo por min.
+>>
+
+SEC1_GOAL1_DONE_TITLE: Progresando
+SEC1_GOAL1_DONE_TEXT: <<|
+	[i]Alto Mando:[/i]
+	
+	Las cosas parecen ir bien. Varkus III parece ser completamente capaz de construir
+	las instalaciones necesarias para estabilizar el agujero de gusano.
+	Esperamos ansiosos su éxito.
+>>
+
+SEC1_GOAL2_TITLE: Desvio Interestelar
+SEC1_GOAL2_TEXT: <<|
+	[i]Alto Mando:[/i]
+	
+	Hemos enviados los componentes para el estabilizador a través de Varkus.
+	Asigna a las fábricas de Varkus su construcción tan rápido como sea
+	posible para que podamos abrir las lineas comerciales civiles.
+>>
+SEC1_GOAL2_ACT1_TITLE: Construir Estabilizador
+SEC1_GOAL2_ACT1_TEXT: <<|
+	Selecciona Varkus III, click derecho en el Estabilizador de Hipercampo en
+	Varkus, y elegir "Trabajar en" para empezar la construcción.
+>>
+SEC1_STABILIZER: Estabilizador de Hipercampo
+
+SEC1_TWIST_TITLE: Cambio de Planes
+SEC1_TWIST_TEXT: <<|
+	[i]Alto Mando:[/i]
+	
+	Comandante, estamos en guerra. Un imperio desconocido ha empezado a atacar
+	nuestras colonias periféricas, y una gran acumulación de fuerzas ha
+	sido detectada. Sus exploradores conocen del agujero de gusano y ya no
+	podemos considerar segura la linea de comercio. Estamos cancelando el 
+	proyecto de estabilización hasta que la región sea asegurada.
+>>
+
+SEC1_BUILDUP_TITLE: Preparaciones
+SEC1_BUILDUP_TEXT: <<|
+	[i]Consejero:[/i]
+	
+	Señor, no podemos saber como será la guerra en nuestra casa con la limitada
+	información. Debemos construir una flota considerable para ayudar a protegernos
+	de cualquier cosa que pueda ir mal.
+>>
+SEC1_BUILDUP_ACT1_TITLE: Construir una Flota
+SEC1_BUILDUP_ACT1_TEXT: Construye naves militares en Varkus III hasta que su fuerza sea al menos de 3000.
+
+SEC1_COMBAT_TITLE: ¡Guerra!
+SEC1_COMBAT_TEXT: <<|
+	[i]Consejero:[/i]
+
+	¡Una flota desconocida ha aparecido! Encaja con las descripciones transmitidas por el Alto Mando, considérela como hostil.
+
+	[b]La flota transmite un feroz y urgente mensaje repetido, pero somos incapaz de traducirlo.[/b]
+>>
+SEC1_COMBAT_ACT1_TITLE: Derrotar a los Invasores
+SEC1_COMBAT_ACT1_TEXT: Destruye la flota de ataque para proteger el sistema.
+
+SEC1_COMPLETE_TITLE: Aislamiento
+SEC1_COMPLETE_TEXT: <<|
+	[i]Consejero:[/i]
+	
+	Comandante, mi enhorabuena y gracias. Por ahora estamos a salvo, aunque
+	necesitamos prepararnos en caso de que vuelvan. Por ahora, nuestra pequeña
+	población debe intentar encontrar su estabilidad en esta nueva región del
+	espacio.
+	
+	[center][b]!"Un nuevo Hogar" Completado![/b][/center]
+>>
