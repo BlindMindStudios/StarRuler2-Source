@@ -1,62 +1,118 @@
-# Angelscript makefile for linux (based on MingW makefile)
-# Type 'make' then 'make install' to complete the installation of the library
+# Modern AngelScript Makefile for Linux/Unix-like systems
+# Usage samples:
+#   make                      # Release static lib (default)
+#   make SHARED=1 VERSION=2.37.0        # Build shared lib with SONAME + symlinks
+#   make BUILD=debug V=1                  # Debug build, verbose output
+#   make LTO=1 SHARED=1                   # Shared lib with LTO (uses gcc-ar/gcc-ranlib)
+#   make install PREFIX=/usr DESTDIR=/pkgroot
+#   make uninstall PREFIX=/usr
 
-# For 'make install' to work, set LOCAL according to your system configuration
-LOCAL = /usr/local
+# -----------------------
+# Configuration (tweak here or via env)
+# -----------------------
+# Back-compat: allow LOCAL to override PREFIX if provided
+PREFIX ?= /usr/local
+ifneq ($(origin LOCAL), undefined)
+  PREFIX := $(LOCAL)
+endif
 
-# If you want to build a shared library, then run make with SHARED=1 and VERSION=version
-ifdef SHARED
-	LIB = libangelscript-$(VERSION).so
-	DEVLIB = libangelscript.so
+DESTDIR ?=
+INCLUDEDIR ?= $(PREFIX)/include
+LIBDIR ?= $(PREFIX)/lib
+PKGCONFIGDIR ?= $(LIBDIR)/pkgconfig
+
+# Source tree layout (relative to this Makefile)
+SRCDIR ?= ../../source
+INCDIR ?= ../../include
+INC     = angelscript.h
+
+# Build layout (out-of-tree)
+OBJDIR ?= build/obj
+OUTDIR ?= build/lib
+
+# Build mode: release|debug
+BUILD ?= release
+
+# Build type: static (default) or shared if SHARED=1
+SHARED ?= 0
+# Optional version, e.g. 2.37.0. Enables SONAME and symlinks for shared libs.
+VERSION ?=
+
+# Optional features
+LTO ?= 0
+PTHREAD ?= 1
+
+# Toolchain
+CXX ?= g++
+AR  ?= ar
+RANLIB ?= ranlib
+INSTALL ?= install
+LN ?= ln -sf
+MKDIR ?= mkdir -p
+RM ?= rm -f
+
+# Quiet vs verbose (V=1 for verbose)
+V ?= 0
+ifeq ($(V),1)
+  Q :=
 else
-	LIB = libangelscript.a
-	DEVLIB = libangelscript.a
+  Q := @
 endif
-INC = angelscript.h
 
-SRCDIR = ../../source
-INCDIR = ../../include
-ifeq ($(TARGETPLATFORM), iphone)
-	IPHONEBIN =  /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin
-	OBJDIR = obj-iphone
-	LIBDIR = ../../lib-iphone
-	CXX = $(IPHONEBIN)/clang++
-	CXXFLAGS += -O2 -Wall -fPIC -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -miphoneos-version-min=3.0
-else ifeq ($(TARGETPLATFORM), iphonesimulator)
-	IPHONEBIN =  /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
-	OBJDIR = obj-iphone
-	LIBDIR = ../../lib-iphone
-	CXX = $(IPHONEBIN)/clang++
-	CXXFLAGS += -O2 -Wall -fPIC -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -miphoneos-version-min=3.0
-else ifeq ($(TARGETPLATFORM), android)
-	ANDROIDNDKROOT = /cygdrive/c/android/android-ndk-1.6_r1
-	ANDROIDBIN = $(ANDROIDNDKROOT)/build/prebuilt/windows/arm-eabi-4.2.1/bin
-	SYSROOT = $(ANDROIDNDKROOT)/build/platforms/android-4/arch-arm
-	OBJDIR = obj-android
-	LIBDIR = ../../lib-android
-	CXX = $(ANDROIDBIN)/arm-eabi-gcc
-	CXXFLAGS += -g -Wall -I$(SYSROOT)/usr/include \
-	-Wall \
-	-DANDROID \
-	-fno-exceptions \
-	-march=armv6 -mthumb-interwork \
-	-mfloat-abi=softfp -fno-rtti
+# -----------------------
+# Flags
+# -----------------------
+CPPFLAGS += -I$(INCDIR)
+CXXFLAGS += -fPIC -Wall -Wextra -fno-strict-aliasing
+LDFLAGS  +=
+
+# Build mode flags
+ifeq ($(BUILD),debug)
+  CPPFLAGS += -DDEBUG
+  CXXFLAGS += -O0 -g
 else
-	OBJDIR = obj
-	LIBDIR = ../../lib
-	CXX ?= gcc
-	# On i686 architecture you may need to add -march=i686 if you get 
-	# an undefined symbol for __sync_sub_and_fetch_4 in as_atomic.cpp.
-	CXXFLAGS += -Wall -fPIC -fno-strict-aliasing
+  CPPFLAGS += -DNDEBUG
+  CXXFLAGS += -O2
 endif
 
-ifeq ($(origin AR), default)
-	AR = gcc-ar
+# Threads (AngelScript uses threading on POSIX)
+ifeq ($(PTHREAD),1)
+  CXXFLAGS += -pthread
+  LDFLAGS  += -pthread
 endif
-RANLIB = gcc-ranlib
-DELETER = rm -f
-COPIER = cp -a
 
+# LTO
+ifeq ($(LTO),1)
+  CXXFLAGS += -flto
+  LDFLAGS  += -flto
+  AR := gcc-ar
+  RANLIB := gcc-ranlib
+endif
+
+# Shared/static selection
+LIBNAME := angelscript
+ifeq ($(SHARED),1)
+  # Shared library
+  ifneq ($(strip $(VERSION)),)
+    MAJOR := $(firstword $(subst ., ,$(VERSION)))
+    LIB     := lib$(LIBNAME).so.$(VERSION)
+    SONAME  := lib$(LIBNAME).so.$(MAJOR)
+  else
+    LIB     := lib$(LIBNAME).so
+    SONAME  := $(LIB)
+  endif
+  LDFLAGS += -shared -Wl,-soname,$(SONAME)
+else
+  # Static library
+  LIB := lib$(LIBNAME).a
+endif
+
+OUT := $(OUTDIR)/$(LIB)
+
+# -----------------------
+# Sources
+# (Preserve original explicit list; safer than wildcard for arch-specific files)
+# -----------------------
 SRCNAMES = \
   as_atomic.cpp \
   as_builder.cpp  \
@@ -93,63 +149,114 @@ SRCNAMES = \
   as_thread.cpp \
   as_tokenizer.cpp \
   as_typeinfo.cpp \
-  as_variablescope.cpp \
+  as_variablescope.cpp
 
-OBJ = $(addprefix $(OBJDIR)/, $(notdir $(SRCNAMES:.cpp=.o)))
-BIN = $(LIBDIR)/$(LIB)
+SRCS := $(addprefix $(SRCDIR)/,$(SRCNAMES))
+OBJS := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS))
+DEPS := $(OBJS:.o=.d)
 
-ifeq ($(TARGETPLATFORM), iphone)
-	OBJ += $(OBJDIR)/as_callfunc_arm_xcode.o
-else ifeq ($(TARGETPLATFORM), android)
-	OBJ += $(OBJDIR)/as_callfunc_arm_gcc.o
-endif
+# -----------------------
+# Top-level targets
+# -----------------------
+.PHONY: all clean distclean install uninstall help
+all: $(OUT)
 
-all: $(BIN)
+help:
+	@echo "Targets:"
+	@echo "  make [SHARED=0|1] [VERSION=X.Y.Z] [BUILD=release|debug] [LTO=0|1] [V=0|1]"
+	@echo "  make install PREFIX=/usr/local [DESTDIR=/staging]"
+	@echo "  make uninstall PREFIX=/usr/local"
+	@echo "Notes:"
+	@echo "  - SHARED=1 builds a shared library with proper SONAME if VERSION is set."
+	@echo "  - LTO=1 uses gcc-ar/gcc-ranlib automatically."
+	@echo "  - Headers are installed from $(INCDIR)/$(INC)."
 
-$(BIN): $(OBJDIR) $(LIBDIR) $(OBJ)
-ifdef SHARED
-	$(CXX) -shared -Wl,-soname,$(LIB) -o $(BIN) $(OBJ)
-	( cd $(LIBDIR); ln -s $(LIB) $(DEVLIB) )
+# -----------------------
+# Build rules
+# -----------------------
+$(OUT): $(OUTDIR) $(OBJDIR) $(OBJS)
+ifeq ($(SHARED),1)
+	$(Q)$(CXX) $(LDFLAGS) -o $@ $(OBJS)
 else
-	$(AR) r $(BIN) $(OBJ)
-	$(RANLIB) $(BIN)
+	$(Q)$(AR) rcs $@ $(OBJS)
+	$(Q)$(RANLIB) $@
 endif
-	@echo -------------------------------------------------------------------
-	@echo Done. As root, type 'make install' to install the library.
+	@echo "-------------------------------------------------------------------"
+	@echo "Built: $@"
+	@echo "Run 'make install' to install the library."
 
 $(OBJDIR):
-	mkdir $(OBJDIR)
+	$(Q)$(MKDIR) $(OBJDIR)
 
-$(LIBDIR):
-	mkdir $(LIBDIR)
+$(OUTDIR):
+	$(Q)$(MKDIR) $(OUTDIR)
 
+# C++ sources -> objects with depfiles
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -o $@ -c $<
+	$(Q)$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF $(@:.o=.d) -c $< -o $@
 
+# (Optional) Assembly sources
 $(OBJDIR)/%.o: $(SRCDIR)/%.S
-	$(CXX) $(CXXFLAGS) -o $@ -c $<
-
+	$(Q)$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF $(@:.o=.d) -c $< -o $@
 $(OBJDIR)/%.o: $(SRCDIR)/%.s
-	$(CXX) $(CXXFLAGS) -o $@ -c $<
+	$(Q)$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF $(@:.o=.d) -c $< -o $@
 
+# Auto-include depfiles if present
+-include $(DEPS)
 
-clean:
-	$(DELETER) $(OBJ) $(BIN) $(LIBDIR)/$(DEVLIB)
-
-install: $(BIN)
-	@echo Installing to: $(LOCAL)/lib and $(LOCAL)/include...
-	@echo -------------------------------------------------------------------
-ifdef SHARED
-	$(COPIER) $(LIBDIR)/$(DEVLIB) $(LOCAL)/lib
+# -----------------------
+# Install / Uninstall
+# -----------------------
+install: $(OUT)
+	@echo "Installing to: $(DESTDIR)$(LIBDIR) and $(DESTDIR)$(INCLUDEDIR)"
+	$(Q)$(MKDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCLUDEDIR)
+	# Install library
+	$(Q)$(INSTALL) -m 755 -D $(OUT) $(DESTDIR)$(LIBDIR)/$(notdir $(OUT))
+ifeq ($(SHARED),1)
+ifneq ($(strip $(VERSION)),)
+	# Create SONAME and devel symlinks: .so.$(MAJOR) and .so
+	$(Q)cd $(DESTDIR)$(LIBDIR) && $(LN) lib$(LIBNAME).so.$(VERSION) lib$(LIBNAME).so.$(MAJOR)
+	$(Q)cd $(DESTDIR)$(LIBDIR) && $(LN) lib$(LIBNAME).so.$(MAJOR) lib$(LIBNAME).so
+else
+	# Ensure libangelscript.so devel link exists
+	$(Q)cd $(DESTDIR)$(LIBDIR) && [ -e lib$(LIBNAME).so ] || $(LN) $(notdir $(OUT)) lib$(LIBNAME).so
 endif
-	$(COPIER) $(BIN) $(LOCAL)/lib
-	$(COPIER) $(INCDIR)/$(INC) $(LOCAL)/include
-	@echo -------------------------------------------------------------------
-	@echo Angelscript library installed. Enjoy!
+endif
+	# Install header
+	$(Q)$(INSTALL) -m 644 -D $(INCDIR)/$(INC) $(DESTDIR)$(INCLUDEDIR)/$(INC)
+	# Install pkg-config file
+	$(Q)$(MKDIR) $(DESTDIR)$(PKGCONFIGDIR)
+	$(Q)echo "prefix=$(PREFIX)"                                  >  $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "exec_prefix=\$${prefix}"                          >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "libdir=\$${exec_prefix}/lib"                      >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "includedir=\$${prefix}/include"                   >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo ""                                                 >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "Name: AngelScript"                                >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "Description: AngelScript scripting library"       >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "Version: $(if $(strip $(VERSION)),$(VERSION),0.0)" >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "Libs: -L\$${libdir} -l$(LIBNAME)"                 >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)echo "Cflags: -I\$${includedir}"                        >> $(OUTDIR)/lib$(LIBNAME).pc
+	$(Q)$(INSTALL) -m 644 -D $(OUTDIR)/lib$(LIBNAME).pc $(DESTDIR)$(PKGCONFIGDIR)/lib$(LIBNAME).pc
+	@echo "-------------------------------------------------------------------"
+	@echo "AngelScript library installed."
 
 uninstall:
-	$(DELETER) $(LOCAL)/include/$(INC) $(LOCAL)/lib/$(LIB) $(LOCAL)/lib/$(DEVLIB)
-	@echo -------------------------------------------------------------------
-	@echo Angelscript library uninstalled.
+	@echo "Uninstalling from: $(DESTDIR)$(LIBDIR) and $(DESTDIR)$(INCLUDEDIR)"
+	$(Q)$(RM) $(DESTDIR)$(INCLUDEDIR)/$(INC)
+	$(Q)$(RM) $(DESTDIR)$(PKGCONFIGDIR)/lib$(LIBNAME).pc
+ifeq ($(SHARED),1)
+ifneq ($(strip $(VERSION)),)
+	$(Q)$(RM) $(DESTDIR)$(LIBDIR)/lib$(LIBNAME).so.$(VERSION)
+	$(Q)$(RM) $(DESTDIR)$(LIBDIR)/lib$(LIBNAME).so.$(MAJOR)
+endif
+	$(Q)$(RM) $(DESTDIR)$(LIBDIR)/lib$(LIBNAME).so
+endif
+	$(Q)$(RM) $(DESTDIR)$(LIBDIR)/lib$(LIBNAME).a
+	@echo "-------------------------------------------------------------------"
+	@echo "AngelScript library uninstalled."
 
-.PHONY: all clean install uninstall
+clean:
+	$(Q)$(RM) $(OBJS) $(DEPS)
+
+distclean: clean
+	$(Q)$(RM) -r $(OBJDIR) $(OUTDIR)
